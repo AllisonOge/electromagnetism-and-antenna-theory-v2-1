@@ -1,0 +1,222 @@
+\chapter{Propagation of electromagnetic inside  a parallel plane wave guide(2)}
+We continue with our investigation of propagation of electromagnetic wave inside a parallel plane wave guide. i.e two conducting boundary with wave moving in between them.\\
+In the previous lecture we launched a wave which had perpendicular polarization between two conducting boundaries; as a result we get a propagation which we call transverse electric propagation. \\
+We introduced the concept of mode i.e the discrete electric and magnetic fields patterns which propagates between these two conducting boundaries.\\ What if we use parallel polarized electric field instead of perpendicular polarization? What kind of propagation will take place and how does it differ from the previous case of perpendicular polarization?\\ Below we have a conductor boundary with incident and reflected wave shown as such.\\
+\\ 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{silas1}
+	\caption{}
+\end{figure}
+We take the coordinate system shown with y pointing out of the paper. The electric field is now in the plane of the paper. Since this is a transverse wave, by poynting theorem, the magnetic field for both must be in the y direction. \\
+The problem is identical to what we had in the previous case. We find out the component of electric and magnetic fields and apply the boundary conditions.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{silas2}
+	\caption{}
+\end{figure}
+At x = 0, tangential component of electric field should be zero.
+\begin{equation*}
+\bar{H_{i} = H_{i} e^{-j\beta(-xcos\theta + zsin\theta)} \hat{y}}
+\end{equation*}
+\begin{equation*}
+\bar{H_{r} = H_{r} e^{-j\beta(-xcos\theta + zsin\theta)} \hat{y}}
+\end{equation*}
+\begin{equation*}
+\bar{E_{i} = E_{i} e^{-j\beta(-xcos\theta + zsin\theta)} \hat{y}}
+\end{equation*}
+\begin{equation*}
+\bar{E_{r} = E_{r} e^{-j\beta(-xcos\theta + zsin\theta)} \hat{y}}
+\end{equation*}
+Taking the component of incident electric field in the z direction, we have $E_{i} cos\theta$ and $-E_{r}cos\theta$ for reflected electric field in z direction also.
+$E_{iz} = E_{i}cos\theta e^{-j\beta(-xcos\theta + zsin\theta)}$	for the boundary condition and x = 0
+$E_{rz} = -E_{r}cos\theta e^{-j\beta(xcos\theta + zsin\theta)}$   Sum of tangential electric field is zero.
+At x = 0, $E_{ton} = E_{iz} + E_{rz}$\\
+If we substitute, we have\\
+\begin{equation*}
+E_{i}cos\theta e^{-j\beta(-xcos\theta + zsin\theta)} - E_{r}cos\theta e^{-j\beta(xcos\theta + zsin\theta)} = 0
+\end{equation*}
+as x$\rightarrow$
+\begin{equation*}
+E_{i}cos\theta e^{-j\beta(zsin\theta)} - E_{r}cos\theta e^{-j\beta(zsin\theta)} = 0
+\end{equation*}
+\begin{equation*}
+or E_{i} = E_{r}
+\Gamma= 1 = \frac{E_{i}}{E_{r}}
+\end{equation*}
+We recall that we have a reflection coefficient $\Gamma = -1$ in the case of perpendicular polarization. This means it was behaving like a short circuit.\\
+For the parallel polarization, the transmission line analogy is an open circuit? which is not correct. The $E_{i}$ and $E_{r}$ from the diagram has direction opposite to each other. So that in the case of perpendicular polarization, the $E_{i}$ and $ E_{r}$  were initially taking to be in positive y direction. So   $\Gamma = 1$ means they are opposite to one another in direction, so and n = -1 corresponded to case of short circuit in Transmission lines.\\
+Hence the negative sign that could have been in $\Gamma$ here is already taking care of by making $E_{i}$ and $E_{i}$ have opposite direction in the case of parallel polarization considered here. Hence the reason the reflection coefficient is 1.\\
+therefore, looking at the sign of the reflection coefficient alone will not give the correct idea about the boundary.\\ 
+In summary this parallel polarized case is still behaving like a short circuit, where the conductivity is infinite.\\ 
+The electric field is zero at the boundary, you get reflection coefficient +1 because the sign is appropriately absorbed into the direction of the electric field. Once you get that and using the relationship that electric field is related to magnetic field by the intense importance,\\
+we have $\frac{E_{i}}{H_{i}} = \frac{E_{r}}{H_{r}} =\Gamma$\\
+The total electric field in medium 1 is a summation of incident and reflected field. The same is true for the magnetic field. The electric field has two components in x and z, the magnetic field has components in only y duration.\\
+The magnetic field will have only y component.
+\begin{equation*}
+E_{i}sin\theta e^{-j\beta(-xcos\theta + zsin\theta)} + E_{r}sin\theta e^{-j\beta(xcos\theta + zsin\theta)}
+\end{equation*}
+$E_{i} =E_{r}$    since $\Gamma =1$\\
+we have
+\begin{dmath*}
+E_{r}sin\theta [e^{-j\beta(-xcos\theta} + e^{-j\beta cos\theta}] e^{-j\beta(zsin\theta)} = 2E_{i}sin\theta cos(\beta xcos\theta)
+\end{dmath*}
+therefore,
+\begin{dmath*}
+E_x = 2E_{i}sin\theta cos(\beta xcos\theta)
+E_{2} is E_{i}cos\theta e^{-j\beta(-xcos\theta + zsin\theta)} - E_{r}cos\theta e^{-j\beta(xcos\theta + zsin\theta)} 
+\end{dmath*}
+\begin{dmath*}
+= E_{i}cos[e^{j\beta xcos\theta} - e^{-j\beta xcos\theta}]e^{-j\beta zsin\theta}
+=2jE_{i}e^{-j\beta zsin\theta} cos\theta \times sin(\beta xcos\theta)
+\end{dmath*}
+The magnitude field will have only y component\\
+\begin{equation*}
+H_{y} = H_{i}e^{-j\beta(-xcos\theta + zsin\theta)} + H_{r}e^{-j\beta(+xcos\theta + zsin\theta)}
+\end{equation*}
+since $\Gamma = 1 that is E_{i}=E_{r}$\\
+\begin{equation*}
+= \frac{E_{i}}{\eta} e^{-j\beta(-xcos\theta + zsin\theta)} + \frac{E_{i}}{\eta}e^{-j\beta(+xcos\theta + zsin\theta)}
+\end{equation*}
+\begin{equation*}
+=\frac{E_{i}}{\eta} e^{-j\beta(-zsin\theta)} [e^{j\beta xcos\theta} + e^{-j\beta xcos\theta}]
+\end{equation*}
+\begin{equation*}
+= 2\frac{E_{i}}{\eta} cos(\beta xcos\theta)e^{-j\beta zsin\theta}
+\end{equation*}
+So we have the three equations
+\begin{equation}
+E_x = 2 E_{i} e^{-j\beta zsin\theta} sin\theta cos(\beta xcos\theta)
+\end{equation}
+\begin{equation}
+E_2 = 2 jE_{i} e^{-j\beta zsin\theta} sin\theta cos(\beta xcos\theta)
+\end{equation}
+\begin{equation}
+H_y = 2 \frac{E_{i}}{\eta} cos(\beta xcos\theta) e^{-j\beta zsin\theta} 
+\end{equation}
+If we look at the tangential component of electric field $E_{2}$, this is going to be zero at x = 0. That is when $sin(\beta xcos\theta) =0$ or $\beta xcos\theta = m\pi$ 
+where m = 0,1,2....\\
+The angle at which the parallel polarization can be launched to propagate the wave become discrete angles given as $cos\theta = \frac{m\pi}{\beta x}$\\
+If the separation between the conducting plane 'x' is given, i.e. x = d, then we can launch the wave at discrete angle =0 for m=0,1,2,3....\\
+Whether we take a polarization which is parallel, the angles at which the wave can be launched inside the structure remain the same for either case. \\
+All the arguments we have in the previous case like you have finite number of angles in which the wave can be launched, and minimum value of frequency required, all that arguments are applicable here too. With wave guide separation 'd',$cos\theta$ = $\frac{m\pi}{\beta d}$\\
+Looking at the figure below,\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{silas2}
+	\caption{}
+\end{figure}
+the magnetic field component is always perpendicular to the plane of incidence, while electric field i.e. on the plane of paper.\\
+$cos(\beta xcos\theta)$represent an expression for standing wave in the x-direction 
+$e^{-j\beta zsin\theta}$ gives a traveling wave behavior in the z-direction. So in this case our field will travel in the z-direction, with a phase constant $\beta sin\theta$ 
+So a field parallel generated also if a conducting wave is placed at distance $d= \frac{m\lambda}{z cos\theta}$ , that is traveling with a phase constant $\beta sin\theta$ in z-direction.\\ 
+Since the wave is traveling in the z-direction and the magnetic field is now perpendicular to the direction of travel along all point within these two conducting boundary, the magnetic field is always transverse to the direction of not propagation of the electromagnetic wave. This mode is called a TRANSVERSE MAGNETIC mode or TM mode.\\ 
+Following the conversion that m defines the order of the mode i.e. tells us how many no of half cycles variation we have from x = 0 to x = d,\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{silas3}
+	\caption{transverse magnetic mode}
+\end{figure}
+ hence m = 1 means 1 half cycle variation between x = 0 and x = d, m = 2 means 2 half cycle variation between x = 0 and x = d, m = 0 the fields are constant with no variation. Putting an index for TM to have 'TM m'. For a given value of d, what value of m we choose to execute the fields, will decide the order of the mode of propagation. Now we see that we have two type of propagation inside a parallel plane waveguide. The transverse electric mode TE and the transverse magnetic mode TM for which electric and magnetic field remains transverse to the direction of net wave propagation respectively. Up till now the behavior is very identical. They have the same condition satisfied for E, but the magnetic and electric fields expressions are different. Otherwise no difference between TE or TM modes.
+With x = d,
+\begin{center}
+$cos\theta = \frac{m \pi}{\beta d} =\frac{m \pi}{\frac{2\pi d}{\lambda}} = \frac{m\lambda}{2d}$.\\
+or $\beta cos\theta = \frac{m \pi}{d}$
+\end{center} 
+We substitute for $\beta cos\theta$ in the field equations.\\
+\begin{dmath}
+E_{x} = 2 E_{i} e^{-j\beta zsin\theta} sin\theta cos(\beta xcos\theta) = 2 E_{i} e^{-j\beta zsin\theta} sin\theta cos(\frac{m\pi x}{d})
+\end{dmath}
+\begin{dmath}
+E_{2} = 2 jE_{i} e^{-j\beta zsin\theta} sin\theta cos(\beta xcos\theta) = 2 jE_{i} e^{-j\beta zsin\theta} sin\theta cos(\frac{m\pi x}{d})
+\end{dmath}
+\begin{dmath}
+H_{y} = 2 \frac{E_{i}}{\eta} cos(\beta xcos\theta) e^{-j\beta zsin\theta} =2 \frac{E_{i}}{\eta} cos(\frac{m\pi x}{d}) e^{-j\beta zsin\theta} 
+\end{dmath}
+m gives the number of half cycle variation between x = 0 and x = d.\\
+In the transverse electric case with m = 0, ALL THE FIELDS BECAME ZERO.\\
+The TEo mode cannot exist inside a parallel plane wave guide.
+In this case if we put m = 0, then $cos\theta =0$,$\theta =90$ That means $sin\theta =1$.
+The wave will move parallel to the conducting boundary. In this case of m = 0, $cos\theta =0$ and $sin\theta =1$ and $\theta=\frac{\pi}{2}$ , we have for TMo as $E_{x} =2E_{i} e^{-j\beta z}$, $E_{z}= 0$, $H_{y} =\frac{2E_{i}}{\eta} e^{-j\beta z}$. So here the phase constant is the same as we have for the intrinsic medium filling the parallel plane waveguide. We notice that when m = 0, all the fields do not identically go to zero. That means TMo mode does exist so contrary to TEo mode which does not exist, and subsequently we have $TM_{1}$,$TM_{2}$,....and so on and so forth.\\
+Phase constant in z-direction\\
+\begin{equation*}
+\bar{\beta} = \beta sin\theta = \beta \sqrt{1- cos^{2}\theta} =\sqrt{\beta^{2} -\beta^{2}cos\theta}
+\end{equation*}
+$=\sqrt{\beta^{2} -\frac{m\pi}{d}^{2}}$
+this is the phase constant for the transverse magnetic case, with m = 0,$\bar{\beta}$ reduces to $\beta$ here. With $m\neq 0$ we can ask with what velocity this particular mode will be travelling. Thus we define velocity by group velocity $v_{g}$ or by phase velocity $v_{p}$.\\
+phase velocity= $v_{p}$=$\frac{\omega}{\beta}$ =$\frac{\omega}{\beta \sqrt{1- \frac{m \pi}{\beta d}^{2}}}$\\
+$\beta$ is the phase constant in the medium filling the two conducting planes\\
+$\frac{\omega}{\beta}$ = velocity of a wave in an unbound medium having the same property\\
+$\frac{\omega}{\beta}$ =c\\
+where c is the velocity of light\\
+\begin{equation*}
+v_{p} =\frac{c}{\sqrt{1-(\frac{m\lambda}{2d})^{2}}}
+\end{equation*}
+$\beta =\frac{2\pi}{\lambda}$, $\frac{\pi}{\beta} =\frac{\lambda}{2}$\\
+but $v_{p} v_{g}= c^{2}$\\
+$v_{g}$ =group velocity\\
+Or in the parallel plane wave guide shown below, with the wave going at an angle $\theta$, the component of the wave in the z-direction gives the group velocity of the wave in the z-direction in the parallel plane waveguide.\\
+The velocity of the wave in the $\theta$ direction is c. So that $c\times cos(\frac{\pi}{2} - \theta)= c\times sin\theta= v_{gz}$
+The group velocity which is the component of the velocity in z-direction\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{silas4}
+	\caption{}
+\end{figure}
+$v_{g}$ substituting for $sin\theta$\\
+$v_{g} =c\sqrt{1-cos^{2}\theta} =c\sqrt{1-(\frac{m\lambda}{2d})^{2}}$\\ 
+$v_{p}= \frac{c}{\sqrt{1-(\frac{m\lambda}{2d})^{2}}}$
+The group velocity is the velocity of the energy. We note two things from these expression.
+Thus if $m \neq 0$, the phase velocity is a function of wavelength. For a given mode,$m \neq 0$, when the frequency changes, the phase velocity of that particular mode changes.\\
+The property of velocity of wave changing as a function of frequency is called DISPERSION. What we find is when we have about medium like this parallel plane waveguide, the structure has become a dispersive structure. This is when electromagnetic wave tires to move in the structure, the velocity becomes a function of frequency, or a function of wavelength. So though the medium feeling this waveguide is not dispersive, the conducting boundary or dial conductors we talked about are not also dispersive, but this bound medium has become a dispersive medium.\\ 
+When we have a bound structure, in general we may expect dispersion on the bound structure i.e. their velocity varies as a function of frequency.\\
+Hence, neither the medium within the conductor or the conducting plane itself is dispersive, but the BOUND STRUCTURE formed with all these have become DISPERSIVE.
+\begin{equation}
+\bar{\beta = \sqrt{\beta^{2} -(\frac{m\pi}{d})^{2}}}
+\end{equation} is called the DISPERSION RELATION for a particular mode, it tells the variation of velocity as a function of frequency or wavelength.\\ The conclusion is that whenever we have a bound structure, the velocity varies as a function of frequency or wavelength.\\
+$(\frac{m\lambda}{2d})^{2} -1=0$ gives the cut-off wavelength, and at $\beta^{2} -(\frac{m\pi}{d})^{2}$, the wave propagation will stop.\\
+For a frequency lower, wave propagation does not take place and for higher frequency than $f_{cut-off}$,the wave propagates.
+As we approach cut-off frequency, $v_{p}\Rightarrow \infty$i.e $v_{p}= \frac{c}{\beta \sqrt{1- \frac{m \lambda}{2d}^{2}}}$ , at cut-off $1 - (\frac{m\lambda}{2d})^{2}=0$ $v_{p} =\frac{c}{0} =\infty$\\
+$v_{g} =c \sqrt{1-(\frac{m\lambda}{2d})^{2}}$ $\Rightarrow 0$
+With $v_{g} = 0$ it means at cut-off, the energy flow stops. At frequencies very high compared to cut-off frequencies, $\lambda$ becomes very very small compared to cut-off, $\frac{m\lambda}{2d} \rightarrow 0$ becomes negligibly small,$v_{g} \approx c$, $v_{p} \approx c$. so at higher frequencies compared to cut-off frequency, $v_{g}$ and $v_{p}$ approaches the intrinsic velocity in the medium.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{silas5}
+	\caption{}
+\end{figure}
+A plot of group and phase velocity for different frequencies is shown below:\\
+$f_{c1}$ = cut-ff frequency for mode m=1\\
+$f_{c2}$ = cut-ff frequency for mode m=2\\
+$f_{c3}$ = cut-ff frequency for mode m=0\\
+which exist for only TM since TEo does not exist
+\begin{equation*}
+v_{p}= \frac{c}{\beta \sqrt{1- \frac{m\lambda}{2d}^{2}}}
+\end{equation*}
+from here we can see that if m=0, $v_{p} =c$(TMo since TEo does not exist)\\
+for m=1\\
+\begin{equation*}
+v_{p}= \frac{c}{\beta \sqrt{1- \frac{\lambda}{2d}^{2}}}
+\end{equation*}
+as $v_{p} \Rightarrow c, starting from \infty at f_{c1}$\\
+$v_{g} \Rightarrow c,$
+\begin{equation*}
+v_{g}= c\sqrt{1-(\frac{\lambda}{2d})^{2}}
+\end{equation*}
+starts from 0 at $f_{c1}$ at cut-off frequency $[1-(\frac{m\lambda}{2d})^{2} = 0]$
+threfore, at every cut-off for the respective mode, $v_{p}$ starts from $\infty$ and tend to C as f increases, $v_{g}$ starts from 0 and approaches, C as f increases. $TM_{1}$, and $TE_{1}$, do exist, But TEo does not exist when TMo exist.\\ 
+For m = 0, $v_{p}=c$ $v_{g}=c$. The phase velocity is always above c and the group velocity is always below c.\\
+The graph shows the group and phase velocity plot for the different modes, were $f_{c0}$, $f_{c1}$, $f_{c2}$ are the cut-off frequencies for the different modes. For the Tm0 mode there is not cut-off frequency because $\bar{\beta}$ is always equal to $\beta$ which is the phase constant in the intrinsic medium.\\
+With this understanding we go back to all the special cases we have talked about. Recall with m = 0, $E_{x} =2E_{i} e^{-j\beta z}$,$H_{y} = \frac{2E_{i}}{\eta} e^{-j\beta z}$, $H_{z} =0$ this is the TMo mode.\\
+For the TMo mode we draw the parallel plane wave guide to illustrate it $\theta =90^{0}$ means wave is launched parallel to the interface.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{silas6}
+	\caption{}
+\end{figure}
+Electric field is x-oriented, magnetic field is y-oriented i.e. pointing out of the plane of the paper. The wave is propagating in the z-direction with phase constant $\beta$. We note that $\frac{E_{x}}{H_{y}} = \eta$. We see that in this case the electric and magnetic field is now perpendicular to direction of wave propagation z,$E_{x}\perp z$,$H_{y}\perp z$, and $E_{x}\perp H_{y}$\\
+Hence the TMo mode is a case of TRANSVERSE ELECTROMAGNETIC WAVE and so we can called it a TEM mode (Transverse Electromagnetic mode). TMo mode from here makes the electric and magnetic field becomes transverse to direction of propagation hence the reason it is called Transverse Electromagnetic mode (TEM). With $\frac{E_{x}}{H_{y}} = \eta$ it means we are having a transverse electromagnetic wave posing in between the two planes. It has all the property a uniform plane wave had in an unbound medium.\\
+A question that comes to mind is if the conducting boundary still have any effect on the wave propagation, since if the boundaries are not there the wave would have traveled like a transverse electromagnetic wave.\\
+When the wave is launched the way it is shown above with the electric field perpendicular to the boundary, there is no boundary condition on normal components of electric field. The normal component of electric field always tends to be balanced by surface charges on the conducting boundary.\\ Similarly, if we have a tangential component of magnetic field we can have surface circuits on the conducting boundary. This balances out the tangential magnetic field in the conducting boundary.\\
+Now we can have uniform magnetic and electric field, the wave passes through the parallel plane waveguide as if the boundaries are not modifying the electric and magnetic fields. whichever electric and magnetic field we have, they can induce appropriate surface changes and current, and this field do not get modified. Hence this $TM_o$ mode propagates in a parallel plane waveguide, and since m = 0, this mode is NON DISPERSIVE. That means for this mode, the velocity $V_{p}=V_{g}=c$.\\
+The cut-off frequency for this mode is zero as we have seen when m = 0. That means this mode can propagate down to the zero frequency.\\
+Precisely, this is what we see when we are having a two conductor plane system, any lowest possible frequency voltage can be applied to the system and the energy would still be transferred or transported. However of higher order modes, the require a minimum frequency for transporting the energy. So we find that in a parallel plane waveguide, this TMo mode also called a TEM mode is the mode that propagates at the lowest frequency. As we go to higher frequencies, we require higher other modes or we get higher order modes in the energy propagation\\

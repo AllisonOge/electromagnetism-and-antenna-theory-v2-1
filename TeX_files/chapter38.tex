@@ -1,0 +1,157 @@
+\chapter{Rectangular waveguide(1)}
+Our previous chapter dealt with the propagation of electromagnetic wave through rectangular and cylindrical waveguide. it took a general approach in analyzing waveguide, where derivations for equations for the propagation of electromagnetic wave in cylindrical waveguide were considered in lossless condition. Illustration for two special cases , the transverse electrical mode (TE) and the transverse magnetic modes (TM) were made. We had the following formulas derived for the TE and TM modes.
+\begin{align*}
+	E_x = -\frac{j\omega\mu}{h^2}.\frac{\partial H_z}{\partial y} - \frac{j\beta}{h^2}.\frac{\partial E_z}{\partial x}\\
+	E_y = \frac{j\omega\mu}{h^2}.\frac{\partial H_z}{\partial x} - \frac{j\beta}{h^2}.\frac{\partial E_z}{\partial y}\\
+	H_x = \frac{j\omega\epsilon}{h^2}.\frac{\partial E_z}{\partial y} - \frac{j\beta}{h^2}.\frac{\partial H_z}{\partial x}\\
+	H_y = -\frac{j\omega\epsilon}{h^2}.\frac{\partial E_z}{\partial x} - \frac{j\beta}{h^2}.\frac{\partial H_z}{\partial y}
+\end{align*}
+
+\section{Rectangular waveguide}
+In this chapter we are concerned with the propagation and derivation of these parallel waves in a rectangular waveguide referred to as TE and TM modes, using the same general approach in waveguide analysis.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"threej"}
+	\caption{rectangular wave guide}
+	\label{fig:three}
+\end{figure}
+The waveguide shows the x, y and z coordinates in which the electromagnetic wave is propagated. It is propagated along the z direction. 'a' is the width of the guide while the 'b' is the breath of the guide, a\{less than or equal to\} not a\{greater than or equal to\}.\\
+Considering the transverse magnetic (TM mode); \\
+$ E_{z} = 0$, $H_{z} = 0 $\\ longitudinal components.\\
+\\
+
+For a transverse field to exist, either $ E_{z} $ or $ H_{z} $ has to be zero. $ H_{z} $ is oriented on the transverse plane and $ E_{z} $ on the longitudinal plane.\\
+\\
+
+Now we first find the solution of the longitudinal component $ E_{Z} $ and then find the transverse component $ H_{z} $, then we apply initial condition to it.
+Let us consider the wave equation.\\
+\begin{equation}
+\nabla^{2}\bar{E_{z}} + \omega^{2}\mu\epsilon_{o}\bar{E_{z}} = 0
+\end{equation}
+where;  
+$ \omega $   = the frequency of the wave
+$ \mu $   = the permeability of the medium
+$ \epsilon $ = the permittivity of the medium filling the waveguide
+We expand $ \nabla^{2} $ in the cartesian coordinate system.
+\begin{equation}
+\frac{\partial ^{2} E_z}{\partial x^2} + \frac{\partial ^2 E_z}{\partial y^2} + \frac{\partial ^2 E_z}{\partial z^2}+ \omega^2\mu\epsilon {E_{z}} = 0
+\end{equation}
+We now solve by separation of variables.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"onej"}
+	\caption{wave propagation along z}
+	\label{fig:one}
+\end{figure}
+
+\begin{equation}
+E_z (x,y,z) = X(x)Y(y)Z(z)
+\end{equation}
+Substitute equation 38.3 into equation 38.2
+\begin{align}
+YZ \frac{\partial ^{2} X}{\partial x^2} + XZ \frac{\partial ^2 Y}{\partial y^2} + XY \frac{\partial ^2 Z}{\partial z^2}+ \omega^2\mu\epsilon {XYZ} = 0
+\end{align}
+Divide through by XYZ.
+\begin{align}
+\frac{1}{X}\frac{\partial ^{2} E_z}{\partial x^2} + \frac{1}{Y}\frac{\partial ^2 E_z}{\partial y^2} + \frac{1}{Z} \frac{\partial ^2 E_z}{\partial z^2} + \omega^2\mu\epsilon {E_{z}} = 0
+\end{align}
+This tells us that the wave is propagated in both the x, y and z directions inside the waveguide.\\
+Let,  
+\begin{align*}
+\frac{1}{X}\frac{\partial^2 X}{\partial x^2} = -A^2\\
+\frac{1}{Y}\frac{\partial^2 Y}{\partial y^2} = -B^2\\
+\frac{1}{Z}\frac{\partial^2 Z}{\partial z^2} = -\beta^2\\
+\textnormal{a constant}   
+\end{align*}
+
+Being a second order homogeneous equation,   
+\begin{align*}
+X(x) = C_{1}cos A_{x} + C_{2}sin A_{x}\\
+Y(x) = C_{3}cos B_{x} + C_{4}sin B_{x}\\
+Z(x) = C_{5} e^{-j \beta(z)} + C_{6} e^{+j \beta(z)}
+\end{align*}                                  
+The cosine and sine functions show amplitude variation which is a standing wave kind of behaviour. The $C_{5}e^{+j\beta(z)}$ and $C_{6}e^{-j\beta(z)}$ are traveling waves in the positive and negative z direction respectively. 
+Which indicates their forward and backward traveling waves.
+Therefore,by substituting the above equations into equation 38.3 we can then write the general equation for the component $E_{z}$.
+\begin{equation*}
+E_{z} = C_{5}(C_{1}cos A_{x} + C_{2}sin A_{x})(C_{3}\cos B_{y} + C_{4}sin B_{y}) e^{-j\beta(z)
+\end{equation*}
+Now we apply the boundary condition on $E_{z}$ to obtain the constants. $E_{z}$ = 0 at  
+
+\begin{description}
+	\item[] x = 0, x = a
+	\item[] y = 0, y = b
+	\item[] x = 0, $ c_{1} $ = 0
+	\item[] y = 0, $ C_{3} $ = 0
+\end{description}     
+\begin{align*}
+E_{z} = C_{5}C_{2}C_{4}\sin A_{x}\sin B_{y} e^{-j\beta(z)}
+\end{align*}
+Let C = $ C_{5}C_{2}C_{4} $
+\begin{equation}
+E_{z} = C\sin A_{x}\sin B_y e^{-j\beta(z)}
+\end{equation}
+for x = a, y = b we get
+\begin{align*}
+Aa = m\pi\\
+A = \frac{m\pi}{a}\\
+Bb = n\pi\\
+B = \frac{n\pi}{b}
+\end{align*}
+Substitute A and B into equation 38.6.
+\begin{align*}
+E_{z} = C sin\frac{m\pi}{a} sin\frac{n\pi}{b} e^{-j\beta(z)}
+\end{align*}
+m index, is field variation in broader (a) dimension.
+n index, is field variation in shorter (b) dimension.
+If m is taken as 1, we have one circle variation. If two , we have two circles variation. Tmn values tells us the number of half circles in the magnetic field.
+When m = n = 0, then the field goes to zero, as such the field does not exist.
+Substitute equation 38.6 into equation 38.1.
+\begin{align*}
+-\frac{m\pi}{a} - \frac{n\pi}{b} - beta^{2} + {\omega^2\mu\epsilon} = 0\\
+\beta = \sqrt{({\omega^2\mu\epsilon} - \frac{m\pi}{a} - \frac{n\pi}{a})}
+\end{align*}
+
+This equation is called the dispersion relation.It tells us how the velocity of the phase constant varies as the function of the frequency on the structure. by this we can say that if either m or n are made zero.
+\begin{align*}
+h^{2} = \omega^2\mu\epsilon - \beta^{2}\\
+h^{2} = -\frac{m\pi}{a} - \frac{n\pi}{b}
+\end{align*} 
+\section{TM  MODE}
+Considering the various modes of transmission of electromagnetic wave, the $TM_{00}$ mode does not exist and also the $TM_{mo}$ does not exist still. $TM_{11}$ is the lowest order of TM mode which can exist on the waveguide. The $TM_{00}$ and $TM_{m0}$ are zero because if they are substituted into the general wave equation the transverse field cannot exist. 
+\\
+\\
+Now we substitute, $H_{z} = 0$, into equation 38.1 and then we substitute
+$\frac{\partial E_{z}}{\partial{x}}$ for $\frac{m \pi}{a}$ in the case of $TM_{11}$. 
+
+\begin{align*}
+E_x = -\frac{j \beta}{h^2}.\frac{\partial E_{z}}{\partial{x}} = -\frac{j \beta}{h_{2}}.(\frac{m\pi}{a}) C \cos (\frac{m\pi x}{a})\sin (\frac{n\pi y}{b})e^{-j \beta z}
+\end{align*}
+
+\begin{align*}
+E_y = -\frac{j \beta}{h^2}\frac{\partial E_{x}}{\partial{y}} = -\frac{j \beta}{h_{2}}(\frac{n\pi}{b}) C \sin (\frac{m\pi x}{a})\cos (\frac{n\pi y}{b})e^{-j \beta z}
+\end{align*}
+
+\begin{align*}
+H_x = \frac{j \omega\epsilon}{h^2}.\frac{\partial E_{z}}{\partial{y}} = \frac{j \omega\epsilon}{h_{2}}.(\frac{n\pi}{a}) C \sin (\frac{m\pi x}{a})\cos (\frac{n\pi y}{b})e^{-j \beta z}
+\end{align*}
+
+\begin{align*}
+H_y =-\frac{j \omega\epsilon}{h^2}\frac{\partial E_{z}}{\partial{x}} = -\frac{j \omega\epsilon}{h_{2}}(\frac{m\pi}{b}) C \cos (\frac{m\pi x}{a})\sin (\frac{n\pi y}{b})e^{-j \beta z}
+\end{align*}		      
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"fivej"}
+	\caption{TM mode patterns}
+	\label{fig:five}
+\end{figure}
+
+If we these on a waveguide plot, we will have both the electric field, $E_{y}$, and the magnetic wave field, $H_{x}$, which is x oriented. $H_{y}$ component is maximum on y-axis when tangential to the boundary. Similarly, when the magnetic field $H_{x}$ is maximum on the x-axis, when the magnetic field is maximum and tangential to the conducting boundary, that is where the electric field is zero when it is tangential to the conducting boundary.
+\section{Transverse Electric mode (TE)}
+For $E_{z} = 0$ and $H_{z}$, we substitute $E_{z} = 0$ into equation 36.1, still and solve and solve the routine same algebra as usual to obtain the magnetic field.
+\begin{equation}
+H_{z} = C \cos (\frac{m\pi x}{a})\cos (\frac{n\pi y}{b})e^{-j\beta}
+\end{equation}
+This is the equation we are looking for because we can verify when x is equal zero (x = 0), the fields are maximum also when the y is equal to zero and to the value of b respectively, i.e. y = 0 and y = b, again the fields  are maximum. This is what we are looking for, that the tangential component of electromagnetic field must be maximum.
+
+
