@@ -13,12 +13,11 @@ Therefore,
 Which is the reflection co-efficient at load point when $l = 0$.\\\\
 We see immediately that when  $Z_L = Z_0$, then there is no reflection from the load and hence maximum power is delivered to the generator.
 \begin{align*}
-\Gamma_L = \frac{V^-}{V^+} = 0
-(when Z_L = Z_0.) 
+\Gamma_L = \frac{V^-}{V^+} = 0\ (\text{when }Z_L = Z_0.) 
 \end{align*}
 Although $Z_0$ cannot be located on the transmission line, it does govern power flow in the transmission line. This condition that $Z_L = Z_0$ is called the \textbf{Matched condition} of the transmission line. The terminating impedance of the line is matched to the characteristic impedance. This condition is similar to the maximum power transfer theorem in a circuit, where if the load impedance is equal to the conjugate of the generator impedance, maximum power is transferred from the generator to the load. 
 \begin{align*}
-Z_L = Z_0 \quad (Matched Load Condition)
+Z_L = Z_0 \quad (\text{Matched Load Condition})
 \end{align*}
 As the wave moves along the line, it sees $Z_0$. At $Z_L$, it suddenly sees an impedance discontinuity from $Z_0$ to $Z_L$ which is like a steep change because of that part of the energy that tends to get reflected by the generator on the transmission line. So, for maximum power transfer, the terminating load impedance must be equal to the characteristics impedance; otherwise, maximum power transfer will not take place and there will always be reflection.\\
 
@@ -68,7 +67,7 @@ $V^+$ cancels out to give,
 Z(l) = Z_0[\frac{1 + \Gamma(l)}{1 - \Gamma(l)}]
 \end{align}
 
-$Z(l)$ is the impedance measured at any location of the transmission line. It is related to the reflection coefficient at any point and the characteristics impedance.
+$Z(l)$ is the impedance measured at any location of the transmission line. It is related to the reflection coefficient at any point and the characteristic impedance.
 $\Gamma(l)$ is the reflection coefficient at any point on the transmission line.
 Hence $Z(l)$ and $\Gamma(l)$ have a one-to-one relationship at any point along the transmission line.\\\\
 \section{Impedance Transform Relationship}
@@ -88,28 +87,28 @@ Z(l) = Z_0[\frac{1 + \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}}}{1 - \frac{V^-e^{-
 \end{align*}
 Where $\Gamma_L = \frac{V^-}{V^+}$ and $\frac{e^{-\gamma l}}{e^{\gamma l}} = e^{-2\gamma l}$
 \begin{align}
-Z(l)=  Z_0[\frac{1 + \Gamma_L e^{-2\gamma l}}{1 - \Gamma_L e^{-2\gamma l}}]
+Z(l)=  Z_0\left[\frac{1 + \Gamma_L e^{-2\gamma l}}{1 - \Gamma_L e^{-2\gamma l}}\right]
 \end{align}
 But $\Gamma_L
 = \frac{Z_L - Z_0}{Z_L + Z_0}$,
 \begin{align*}
-Z(l) = Z_0 [\frac{1 + (\frac{Z_L - Z_0}{Z_L + Z_0})e^{-2\gamma l}}{1 - (\frac{Z_L - Z_0}{Z_L + Z_0})e^{-2\gamma l}}]
+Z(l) = Z_0 \left[\frac{1 + (\frac{Z_L - Z_0}{Z_L + Z_0})e^{-2\gamma l}}{1 - (\frac{Z_L - Z_0}{Z_L + Z_0})e^{-2\gamma l}}\right]
 \end{align*}
 Multiplying the numerator and denominator by $Z_L + Z_0 $\\
 which gives
 \begin{align*}
-Z(l) = Z_0 [\frac{(Z_L + Z_0) + (Z_L - Z_0)e^{-2\gamma l}}{(Z_L + Z_0) - (Z_L - Z_0)e^{-2\gamma l}}]
+Z(l) = Z_0 \left[\frac{(Z_L + Z_0) + (Z_L - Z_0)e^{-2\gamma l}}{(Z_L + Z_0) - (Z_L - Z_0)e^{-2\gamma l}}\right]
 \end{align*}
 \begin{align*}
-Z(l) = Z_0 \frac{e^{-\gamma l}}{e^{-\gamma l}}[\frac{(Z_L + Z_0)e^{\gamma l} + (Z_L - Z_0)e^{-\gamma l}}{(Z_L + Z_0)e^{\gamma l} - (Z_L - Z_0)e^{-\gamma l}}]
+Z(l) = Z_0 \frac{e^{-\gamma l}}{e^{-\gamma l}}\left[\frac{(Z_L + Z_0)e^{\gamma l} + (Z_L - Z_0)e^{-\gamma l}}{(Z_L + Z_0)e^{\gamma l} - (Z_L - Z_0)e^{-\gamma l}}\right]
 \end{align*}
 $e^{-\gamma l}$ cancels out, and we open the bracket
 \begin{align*}
-Z(l) = Z_0 [\frac{Z_Le^{\gamma l} + Z_0e^{\gamma l} + Z_Le^{-\gamma l} - Z_0e^{-\gamma l}}{Z_L e^{\gamma l} + Z_0e^{\gamma l} - Z_Le^{-\gamma l} + Z_0e^{-\gamma l}}]
+Z(l) = Z_0 \left[\frac{Z_Le^{\gamma l} + Z_0e^{\gamma l} + Z_Le^{-\gamma l} - Z_0e^{-\gamma l}}{Z_L e^{\gamma l} + Z_0e^{\gamma l} - Z_Le^{-\gamma l} + Z_0e^{-\gamma l}}\right]
 \end{align*}
 Collect like terms
 \begin{align*}
-Z(l) = Z_0 [\frac{Z_L(e^{\gamma l} + e^{-\gamma l}) + Z_0(e^{\gamma l} - e^{-\gamma l})}{Z_L (e^{\gamma l} - e^{-\gamma l}) + Z_0(e^{\gamma l} + e^{-\gamma l})}]
+Z(l) = Z_0 \left[\frac{Z_L(e^{\gamma l} + e^{-\gamma l}) + Z_0(e^{\gamma l} - e^{-\gamma l})}{Z_L (e^{\gamma l} - e^{-\gamma l}) + Z_0(e^{\gamma l} + e^{-\gamma l})}\right]
 \end{align*}
 Recall; 
 \begin{align*}
@@ -122,40 +121,43 @@ sinh\gamma l = \frac{e^{\gamma l} - e^{-\gamma l}}{2}\\
 \end{align*}
 Therefore,
 \begin{align*}
-Z(l) = Z_0[\frac{2(Z_Lcosh\gamma l + Z_0sinh\gamma l)}{2(Z_Lsinh\gamma l + Z_0cosh\gamma l)}]
+Z(l) = Z_0\left[\frac{2(Z_Lcosh\gamma l + Z_0sinh\gamma l)}{2(Z_Lsinh\gamma l + Z_0cosh\gamma l)}\right]
 \end{align*}
 \begin{align}
-Z(l) = Z_0[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}]
+Z(l) = Z_0\left[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}\right]
+\label{eqn:imp}
 \end{align}
 The impedance at any point $l$ is related to the load impedance $Z_L$ and the characteristics impedance $Z_0$ by the above relationship. This enables us to move $Z_L$ to any point along the transmission line. Hence at $l = 0$, we have $Z_L$ but at $l = L$, the input impedance measured at the generator end will not be $Z_L$. It will depend on $Z_L$ and also the length of the line. So, if the length of the line keeps varying, the impedance you measure at the input end of the line will keep varying. 
 
 Hence, if we design a circuit at high frequency and connect a load to the end, depending on the length of the transmission line, the input impedance will keep varying with length. From a circuit perspective, the input impedance is very important. So at high frequencies, the length connecting the load to the circuit matters as the input impedance seen by the generator varies with length.\\\\
-From Equation 4.5:
+From Equation~\ref{eqn:imp}:
 \begin{align*}
-Z(l) = Z_0[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}]
+Z(l) = Z_0\left[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}\right]
 \end{align*}
 Now normalized with respect to $Z_0$ such that if,
-$\frac{Z(l)}{Z_0} = \overline{Z(l)}$ and $\frac{Z_L}{Z_0} = \overline{Z}_L$ that is, normalized values.\\\\
+$\frac{Z(l)}{Z_0} = \bar{Z}(l)$ and $\frac{Z_L}{Z_0} =\bar{Z}_L$ that is, normalized values.\\\\
 Therefore, dividing both sides by $Z_0$
 \begin{align*}
 \frac{Z(l)}{Z_0} = \frac{Z_0}{Z_0}[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}] 
 \end{align*}
 Divide Numerator and Denominator by $Z_0$
 \begin{align*}
-\overline{Z(l)} = [ \frac{\frac{Z_L}{Z_0}cosh\gamma l + \frac{Z_0}{Z_0}sinh\gamma l}{\frac{Z_L}{Z_0}sinh\gamma l + \frac{Z_0}{Z_0}cosh\gamma l}]
+\bar{Z}(l) =\left [ \frac{\frac{Z_L}{Z_0}cosh\gamma l + \frac{Z_0}{Z_0}sinh\gamma l}{\frac{Z_L}{Z_0}sinh\gamma l + \frac{Z_0}{Z_0}cosh\gamma l}\right]
 \end{align*}
 \begin{align*}
-\overline{Z(l)} = \frac{\frac{Z_L}{Z_0}cosh\gamma l + sinh\gamma l}{\frac{Z_L}{Z_0}sinh\gamma l + cosh\gamma l}
+\bar{Z}(l) = \frac{\frac{Z_L}{Z_0}cosh\gamma l + sinh\gamma l}{\frac{Z_L}{Z_0}sinh\gamma l + cosh\gamma l}
 \end{align*}
 \begin{align}
-\overline{Z(l)} = \frac{\overline{Z_L}cosh\gamma l + sinh\gamma l}{\overline{Z_L}sinh\gamma l + cosh\gamma l}
-\end{align} \\written in terms of normalized impedance. That is, $\overline{Z} = \frac{Z}{Z_0}$ .
+\bar{Z}(l) = \frac{\bar{Z}_Lcosh\gamma l + sinh\gamma l}{\bar{Z}_Lsinh\gamma l + cosh\gamma l}\ \text{(normalized impedance)}
+\end{align} 
+That is, $\bar{Z} = \frac{Z}{Z_0}$ .
 Once again we see that on transmission line calculation, the absolute impedance does not mean anything; Rather it is the normalized impedance that matters most. Hence, $Z_0 = 50\Omega$ and $Z_L = 100\Omega$ gives same reflection as $Z_0 = 300\Omega$ and $Z_L =600\Omega$. Hence the reason why before starting any transmission line calculation, we ask ourselves what the characteristic impedance is, every impedance we have is then normalized to the characteristic impedance. So every calculation done in the transmission line is always done with respect to normalized impedances.\\
 We then see that characteristic impedance which is not located anywhere or seen anywhere is always governing the energy flow of the transmission line.\\
-Now if $\overline{Z_L} = 1$, then \begin{align*}
-\overline{Z(l)} = {\frac{\overline{Z_L}cosh\gamma l + sinh\gamma l}{\overline{Z_L}sinh\gamma l + cosh\gamma l}} = 1
+Now if $\bar{Z}_L = 1$, then 
+\begin{align*}
+\bar{Z}(l) = {\frac{\bar{Z}_Lcosh\gamma l + sinh\gamma l}{\bar{Z}_Lsinh\gamma l + cosh\gamma l}} = 1
 \end{align*}
-Recall: $\frac{Z(l)}{Z_0} = \overline{Z(l)}$ and $\frac{Z_L}{Z_0} = \overline{Z}_L$\\
+Recall: $\frac{Z(l)}{Z_0} = \bar{Z}(l)$ and $\frac{Z_L}{Z_0} = \bar{Z}_L$\\
 \begin{align*}
 \frac{Z(l)}{Z_0} = 1,\frac{Z_L}{Z_0} = 1
 \end{align*}
@@ -174,29 +176,30 @@ Now we can generalize the impedance transformation relationship. Till now, we ha
 
 recall from Equation 4.5: 
 \begin{align*}
-Z(l) = Z_0[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}]
+Z(l) = Z_0\left[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}\right]
 \end{align*}
 Here, $Z_L = Z_1$ and $Z(l) = Z_2$.\\
 \begin{align}
-Z_2 = Z_0[\frac{Z_1cosh\gamma l + Z_0sinh\gamma l}{Z_1 sinh\gamma l + Z_0 cosh\gamma l}]
+Z_2 = Z_0\left[\frac{Z_1cosh\gamma l + Z_0sinh\gamma l}{Z_1 sinh\gamma l + Z_0 cosh\gamma l}\right]
+\label{eqn:z2norm}
 \end{align}
 Dividing both sides by $Z_0$
 \begin{align*}
-\frac{Z_2}{Z_0} = \frac{Z_0}{Z_0} [\frac{Z_1cosh\gamma l + Z_0sinh\gamma l}{Z_1 sinh\gamma l + Z_0 cosh\gamma l}]
+\frac{Z_2}{Z_0} = \frac{Z_0}{Z_0} \left[\frac{Z_1cosh\gamma l + Z_0sinh\gamma l}{Z_1 sinh\gamma l + Z_0 cosh\gamma l}\right]
 \end{align*}
 Divide the numerator and denominator by $Z_0$
 \begin{align*}
-\frac{Z_2}{Z_0} = [\frac{\frac{Z_1}{Z_0}cosh\gamma l + \frac{Z_0}{Z_0}sinh\gamma l}{\frac{Z_1}{Z_0}sinh\gamma l + \frac{Z_0}{Z_0}cosh\gamma l}]
+\frac{Z_2}{Z_0} = \left[\frac{\frac{Z_1}{Z_0}cosh\gamma l + \frac{Z_0}{Z_0}sinh\gamma l}{\frac{Z_1}{Z_0}sinh\gamma l + \frac{Z_0}{Z_0}cosh\gamma l}\right]
 \end{align*}
 \begin{align*}
-\overline{Z_2} = [\frac{\frac{Z_1}{Z_0}cosh\gamma l + sinh\gamma l}{\frac{Z_1}{Z_0}sinh\gamma l + cosh\gamma l}]
+\bar{Z}_2 = \left[\frac{\frac{Z_1}{Z_0}cosh\gamma l + sinh\gamma l}{\frac{Z_1}{Z_0}sinh\gamma l + cosh\gamma l}\right]
 \end{align*}
 \begin{align*}
-\overline{Z_2} = [\frac{\overline{Z_1}cosh\gamma l + sinh\gamma l}{\overline{Z_1}sinh\gamma l + cosh\gamma l}]
+\bar{Z}_2 = \left[\frac{\bar{Z}_1cosh\gamma l + sinh\gamma l}{\bar{Z}_1sinh\gamma l + cosh\gamma l}\right]
 \end{align*}
-From Equation 4.7 we can also invert the relationship to get $Z_1$ from $Z_2$ by cross multiplying.
+From Equation~\ref{eqn:z2norm} we can also invert the relationship to get $Z_1$ from $Z_2$ by cross multiplying.
 \begin{align*}
-Z_2 = Z_0[\frac{Z_1cosh\gamma l + Z_0sinh\gamma l}{Z_1 sinh\gamma l + Z_0 cosh\gamma l}]
+Z_2 = Z_0\left[\frac{Z_1cosh\gamma l + Z_0sinh\gamma l}{Z_1 sinh\gamma l + Z_0 cosh\gamma l}\right]
 \end{align*}
 \begin{align*}
 Z_2[Z_1sinh\gamma l + Z_0cosh\gamma l] = Z_0[Z_1cosh\gamma l + Z_0sinh\gamma l]
@@ -211,11 +214,12 @@ Z_1[Z_2sinh\gamma l - Z_0cosh\gamma l] = Z_0[Z_0sinh\gamma l - Z_2cosh\gamma l]
 \end{align*}
 Make $Z_1$ the subject of the formula
 \begin{align}
-Z_1 = Z_0[\frac{Z_0sinh\gamma l - Z_2cosh\gamma l}{Z_2sinh\gamma l - Z_0cosh\gamma l}]
+Z_1 = Z_0\left[\frac{Z_0sinh\gamma l - Z_2cosh\gamma l}{Z_2sinh\gamma l - Z_0cosh\gamma l}\right]
+\label{eqn:z2norminv}
 \end{align}
-Multiply the numerator and denominator of Equation 4.8 by $-1$.
+Multiply the numerator and denominator of Equation~\ref{eqn:z2norminv} by $-1$.
 \begin{align*}
-Z_1 = Z_0[\frac{Z_2cosh\gamma l - Z_0sinh\gamma l}{Z_0cosh\gamma l - Z_2sinh\gamma l}]
+Z_1 = Z_0\left[\frac{Z_2cosh\gamma l - Z_0sinh\gamma l}{Z_0cosh\gamma l - Z_2sinh\gamma l}\right]
 \end{align*}
 Recall:
 \begin{align*}
@@ -228,7 +232,7 @@ So that,
 \begin{align*}
 sinh(-\gamma l) = -sinh\gamma l
 \end{align*}
-So, equation (4.5) can be used to transform impedance between $Z_1$ and $Z_2$ knowing the positive $l$ direction is from load towards the generator.\\\\
+So, equation~\ref{eqn:imp} can be used to transform impedance between $Z_1$ and $Z_2$ knowing the positive $l$ direction is from load towards the generator.\\\\
 Now we go to a special case of the transmission lines.
 
 \section{Lossless Transmission Line}
