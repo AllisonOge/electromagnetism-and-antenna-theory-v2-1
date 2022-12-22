@@ -20,6 +20,9 @@
 \usepackage{enumerate}
 \usepackage[margin=1.5cm]{geometry}
 
+\usepackage{imakeidx}
+\makeindex
+
 
 \begin{document}
 
@@ -75,9 +78,9 @@
 
 %	%waveguide section part 2
 
-%	\include{./TeX_files/chapter35}%missing file
+\include{./TeX_files/chapter35}
 \include{./TeX_files/chapter36}
-%	\include{./TeX_files/chapter37}
+\include{./TeX_files/chapter37}
 %	\include{./TeX_files/chapter38}
 %	\include{./TeX_files/chapter39}
 %	\include{./TeX_files/chapter40}
@@ -110,6 +113,6 @@
 \backmatter
 
 %bibliography, glossary and index would go here.
-
+\printindex
 
 \end{document}

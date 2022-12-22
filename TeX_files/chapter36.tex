@@ -1,4 +1,4 @@
-\chapter{Propagation of electromagnetic inside a parallel plane waveguide(2)}
+\chapter{Propagation of electromagnetic wave inside a parallel plane waveguide (2)}
 We continue with our investigation of the propagation of electromagnetic waves inside a parallel plane waveguide. i.e two conducting boundaries with waves moving in between them. In the previous chapter, we launched a wave which had perpendicular polarization between two conducting boundaries; as a result, we get a propagation which we call transverse electric propagation.
 
 We introduced the concept of mode i.e the discrete electric and magnetic field patterns which propagate between these two conducting boundaries. What if we use a parallel polarized electric field instead of perpendicular polarization? What kind of propagation will take place and how does it differ from the previous case of perpendicular polarization? Figure~\ref{fig:silas1} shows a conductor boundary with the incident and reflected wave. The coordinate system is shown with y pointing out of the paper and as such the electric field is directed in the plane of the paper. Since this is a transverse wave, by Poynting theorem, the magnetic field for both must be in the y direction.
@@ -99,7 +99,7 @@ If we look at the tangential component of the electric field $E_{2}$, this is go
 %\end{figure}
 From figure~\ref{fig:silas2}, the magnetic field component is always perpendicular to the plane of incidence, while the electric field i.e. on the plane of the paper. $cos(\beta xcos\theta)$ represents an expression for a standing wave in the x-direction and $e^{-j\beta zsin\theta}$ gives a travelling wave behaviour in the z-direction. So in this case our field will travel in the z-direction, with a phase constant $\beta sin\theta$. So a field parallel is generated also if a conducting wave is placed at distance $d= \frac{m\lambda}{z cos\theta}$, that is travelling with a phase constant $\beta sin\theta$ in the z-direction. Since the wave is travelling in the z-direction and the magnetic field is now perpendicular to the direction of travel along all points within these two conducting boundaries, the magnetic field is always transverse to the direction of no propagation of the electromagnetic wave. This mode is called a \textbf{Transverse Magnetic} mode or TM mode.
 
-\section{Tranverse Magnetic  Modes ($TM_m$)}
+\section{Tranverse Magnetic  Modes ($TM_m$)}\index{Transverse Magnetic Modes}
  Following the convention, $m$ defines the order of the mode i.e. tells us how many no of half cycles variation we have from $x = 0$ to $x = d$.
 \begin{figure}[h]
 \centering
@@ -133,7 +133,7 @@ $E_{x} =2E_{i} e^{-j\beta z}$, $E_{z}= 0$, $H_{y} =\frac{2E_{i}}{\eta} e^{-j\bet
 
 Here the phase constant is the same as we have for the intrinsic medium filling the parallel plane waveguide. We notice that when $m = 0$, all the fields do not identically go to zero. That means $TM_0$ mode does exist so contrary to $TE_0$ mode which does not exist, and subsequently, we have $TM_{1}$, $TM_{2}$, and so on. 
 
-\section{Phase Constant in a parallel waveguide}
+\section{Phase and Group Velocities}\index{Phase and Group Velocities}
 Phase constant in the z-direction is
 \begin{dmath*}
 \bar{\beta} = \beta sin\theta = \beta \sqrt{1- cos^{2}\theta} =\sqrt{\beta^{2} -\beta^{2}cos\theta} = \sqrt{\beta^{2} -\frac{m\pi}{d}^{2}}
@@ -157,8 +157,6 @@ v_{p} v_{g}= c^{2}
 \label{eqn:grpvel}
 \end{align}
 $v_{g}$ is the group velocity. In the parallel plane waveguide shown in figure~\ref{fig:silas4}, with the wave going at an angle $\theta$, the component of the wave in the z-direction gives the group velocity of the wave in the z-direction in the parallel plane waveguide. The velocity of the wave in the $\theta$ direction is $c$. So that $c\times cos(\frac{\pi}{2} - \theta)= c\times sin\theta= v_{gz}$. The group velocity is the component of the velocity in the z-direction.
-
-\section{Group Velocity}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{./graphics/silas4}
@@ -169,7 +167,10 @@ From equation~\ref{eqn:grpvel}, we can derive the group velocity as:
 \begin{dmath*}
 v_g = \frac{c^2}{v_p} = \frac{c^2}{\frac{c}{sin\theta}}= c\sqrt{1-cos^{2}\theta} =c\sqrt{1-(\frac{m\lambda}{2d})^{2}}
 \end{dmath*}
-The group velocity is the velocity of the energy. We note two things from these expressions, if $m \neq 0$, the phase velocity is a function of wavelength. For a given mode,$m \neq 0$ when the frequency changes, the phase velocity of that particular mode changes. The property of velocity of a wave changing as a function of frequency is called \textbf{Dispersion}. What we find is when we have a medium like this parallel plane waveguide, the structure has become a dispersive structure. This is when electromagnetic wave tires move in the structure, the velocity becomes a function of frequency or function of wavelength. So though the medium feeling this waveguide is not dispersive, the conducting boundary or dial conductors we talked about are not also dispersive, but this bound medium has become a dispersive medium. When we have a bounded structure, in general, we may expect dispersion on the bound structure i.e. their velocity varies as a function of frequency. Hence, neither the medium within the conductor nor the conducting plane itself is dispersive, but the \textbf{Bounded Structure} formed with all these have become \textbf{Dispersive}.
+The group velocity is the velocity of the energy. We note two things from these expressions, if $m \neq 0$, the phase velocity is a function of wavelength. For a given mode,$m \neq 0$ when the frequency changes, the phase velocity of that particular mode changes. The property of velocity of a wave changing as a function of frequency is called \textbf{Dispersion}\index{Dispersion}. 
+
+\subsection{Dispersion}
+What we find is when we have a medium like this parallel plane waveguide, the structure has become a dispersive structure. This is when electromagnetic wave tires move in the structure, the velocity becomes a function of frequency or function of wavelength. So though the medium feeling this waveguide is not dispersive, the conducting boundary or dial conductors we talked about are not also dispersive, but this bound medium has become a dispersive medium. When we have a bounded structure, in general, we may expect dispersion on the bound structure i.e. their velocity varies as a function of frequency. Hence, neither the medium within the conductor nor the conducting plane itself is dispersive, but the \textbf{Bounded Structure} formed with all these have become \textbf{Dispersive}.
 \begin{equation}
 \bar{\beta} = \sqrt{\beta^{2} -\left(\frac{m\pi}{d}\right)^{2}}
 \end{equation} 
@@ -178,8 +179,6 @@ This is called the \textbf{Dispersion Relation} for a particular mode, it tells 
 $(\frac{m\lambda}{2d})^{2} -1=0$ gives the cut-off wavelength, and at $\beta^{2} -(\frac{m\pi}{d})^{2}$, the wave propagation will stop. For a frequency lower, wave propagation does not take place and for a higher frequency than $f_{cut-off}$, the wave propagates. As we approach cut-off frequency, $v_{p}\Rightarrow \infty$ i.e $v_{p}= \frac{c}{\beta \sqrt{1- \frac{m \lambda}{2d}^{2}}}$ at cut-off $1 - (\frac{m\lambda}{2d})^{2}=0$ $v_{p} =\frac{c}{0} =\infty$
 
 $v_{g} =c \sqrt{1-(\frac{m\lambda}{2d})^{2}}$ $\Rightarrow 0$. With $v_{g} = 0$ it means at cut-off, the energy flow stops. At frequencies very high compared to cut-off frequencies, $\lambda$ becomes very very small compared to cut-off, $\frac{m\lambda}{2d} \rightarrow 0$ becomes negligibly small,$v_{g} \approx c$, $v_{p} \approx c$. so at higher frequencies compared to cut-off frequency, $v_{g}$ and $v_{p}$ approaches the intrinsic velocity in the medium.
-
-\section{Cut-off frequencies}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{./graphics/silas5}
@@ -194,11 +193,11 @@ v_{p}= \frac{c}{\beta \sqrt{1- \frac{\lambda}{2d}^{2}}}
 \end{equation*}
 As $v_{p} \Rightarrow c$, starting from $\infty$ at $f_{c1}$, $v_{g} \Rightarrow c$ starting from 0 at $f_{c1}$.
 \begin{equation*}
-v_{g}= c\sqrt{1-(\frac{\lambda}{2d})^{2}}
+v_{g}= c\sqrt{1-\left(\frac{\lambda}{2d}\right)^{2}}
 \end{equation*}
 At cut-off frequency, 
 \begin{align*}
-1-(\frac{m\lambda}{2d})^{2} = 0
+1-\left(\frac{m\lambda}{2d}\right)^{2} = 0
 \end{align*}
 Therefore, at every cut-off for the respective mode, $v_{p}$ starts from $\infty$ and tends to $c$ as $f$ increases, $v_{g}$ starts from 0 and approaches $c$ as f increases. $TM_{1}$, and $TE_{1}$, do exist, But $TE_0$ does not exist when $TM_0$ exists. For $m = 0$, $v_{p}=c$ $v_{g}=c$. The phase velocity is always above $c$ and the group velocity is always below $c$.
 
@@ -209,16 +208,14 @@ H_{y} = \frac{2E_{i}}{\eta} e^{-j\beta z}\\
 H_{z} =0
 \end{align*}
 This is the $TM_0$ mode. For the $TM_0$ mode, we draw the parallel plane waveguide to illustrate it $\theta =90^{0}$ means the wave is launched parallel to the interface as shown in figure~\ref{fig:silas6}
+
+\section{Transverse Electromagnetic Mode $TEM$}\index{Transverse Electromagnetic Mode}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/silas6}
 \caption{Wave propagation in $TM_0$}
 \label{fig:silas6}
 \end{figure}
-The electric field is x-oriented, and the magnetic field is y-oriented i.e. pointing out of the plane of the paper. The wave is propagating in the z-direction with a phase constant $\beta$. We note that $\frac{E_{x}}{H_{y}} = \eta$. We see that in this case, the electric and magnetic field is now perpendicular to the direction of wave propagation z, $E_{x}\perp z$,$H_{y}\perp z$, and $E_{x}\perp H_{y}$\\
-Hence the TMo mode is a case of TRANSVERSE ELECTROMAGNETIC WAVE and so we can call it a TEM mode (Transverse Electromagnetic mode). $TM_o$ mode from here makes the electric and magnetic field becomes transverse to the direction of propagation hence the reason it is called Transverse Electromagnetic mode (TEM). With $\frac{E_{x}}{H_{y}} = \eta$ it means we are having a transverse electromagnetic wave posing in between the two planes. It has all the properties a uniform plane wave has in an unbound medium.\\
-A question that comes to mind is if the conducting boundary still has any effect on the wave propagation, since if the boundaries are not there the wave would have travelled like a transverse electromagnetic wave.\\
-When the wave is launched the way it is shown above with the electric field perpendicular to the boundary, there is no boundary condition on normal components of the electric field. The normal component of the electric field always tends to be balanced by surface charges on the conducting boundary.\\ Similarly, if we have a tangential component of the magnetic field we can have surface circuits on the conducting boundary. This balances out the tangential magnetic field in the conducting boundary.\\
-Now we can have a uniform magnetic and electric field, the wave passes through the parallel plane waveguide as if the boundaries are not modifying the electric and magnetic fields. whichever electric and magnetic field we have, they can induce appropriate surface changes and current, and this field does not get modified. Hence this $TM_o$ mode propagates in a parallel plane waveguide, and since m = 0, this mode is NON-DISPERSIVE. That means for this mode, the velocity $V_{p}=V_{g}=c$.\\
-The cut-off frequency for this mode is zero as we have seen when m = 0. That means this mode can propagate down to the zero frequency.\\
-Precisely, this is what we see when we are having a two-conductor plane system, any lowest possible frequency voltage can be applied to the system and the energy would still be transferred or transported. However, higher-order modes require a minimum frequency for transporting the energy. So we find that in a parallel plane waveguide, this $TM_o$ mode also called a TEM mode is a mode that propagates at the lowest frequency. As we go to higher frequencies, we require higher other modes or we get higher order modes in the energy propagation\\
+The electric field is x-oriented, and the magnetic field is y-oriented i.e. pointing out of the plane of the paper. The wave is propagating in the z-direction with a phase constant $\beta$. We note that $\frac{E_{x}}{H_{y}} = \eta$. We see that in this case, the electric and magnetic field is now perpendicular to the direction of wave propagation z, $E_{x}\perp z$,$H_{y}\perp z$, and $E_{x}\perp H_{y}$. Hence the $TM_0$ mode is a case of \textbf{Transverse Electromagnetic Wave} and so we can call it a $TEM$ mode (Transverse Electromagnetic mode). $TM_0$ mode from here makes the electric and magnetic field becomes transverse to the direction of propagation hence the reason it is called Transverse Electromagnetic mode (TEM). With $\frac{E_{x}}{H_{y}} = \eta$ it means we are having a transverse electromagnetic wave posing in between the two planes. It has all the properties a uniform plane wave has in an unbound medium.
+
+A question that comes to mind is if the conducting boundary still has any effect on the wave propagation, since if the boundaries are not there the wave would have travelled like a transverse electromagnetic wave. When the wave is launched the way it is shown in figure~\ref{fig:silas6} with the electric field perpendicular to the boundary, there is no boundary condition on normal components of the electric field. The normal component of the electric field always tends to be balanced by surface charges on the conducting boundary. Similarly, if we have a tangential component of the magnetic field we can have surface circuits on the conducting boundary. This balances out the tangential magnetic field in the conducting boundary. Now we can have a uniform magnetic and electric field, the wave passes through the parallel plane waveguide as if the boundaries are not modifying the electric and magnetic fields. whichever electric and magnetic field we have, they can induce appropriate surface changes and current, and this field does not get modified. Hence this $TM_0$ mode propagates in a parallel plane waveguide, and since $m = 0$, this mode is \textbf{Non-dispersive}. That means for this mode, the velocity $v_{p}=v_{g}=c$. The cut-off frequency for this mode is zero as we have seen when m = 0. That means this mode can propagate down to zero frequency. Precisely, this is what we see when we are having a two-conductor plane system, any lowest possible frequency voltage can be applied to the system and the energy would still be transferred or transported. However, higher-order modes require a minimum frequency for transporting the energy. So we find that in a parallel plane waveguide, this $TM_0$ mode also called a TEM mode is a mode that propagates at the lowest frequency. As we go to higher frequencies, we require higher other modes or we get higher order modes in the energy propagation.
