@@ -1,5 +1,5 @@
 \chapter{Rectangular Waveguide (1)}
-In the previous chapter, we developed a general approach for analysing wave propagation inside a waveguide. In this chapter, we will consider a waveguide whose cross section is rectangular. This is called a \textbf{Rectangular Waveguide}\index{Rectangular Waveguide}. This rectangular pipe is assumed to be made of ideal conductor $\sigma = 0$ and the medium filling this waveguide is an ideal dielectric $\sigma = 0$. We are concerned with the propagation and derivation of these parallel waves in a rectangular waveguide referred to as TE and TM modes, using the same general approach in waveguide analysis.
+In the previous chapter, we developed a general approach for analysing wave propagation inside a waveguide. In this chapter, we will consider a waveguide whose cross section is rectangular. This is called a \textbf{Rectangular Waveguide}\index{rectangular waveguide}. This rectangular pipe is assumed to be made of ideal conductor $\sigma = 0$ and the medium filling this waveguide is an ideal dielectric $\sigma = 0$. We are concerned with the propagation and derivation of these parallel waves in a rectangular waveguide referred to as TE and TM modes, using the same general approach in waveguide analysis.
 
 The waveguide in figure~\ref{fig:lec38fig1} shows the x, y and z coordinates in which the electromagnetic wave is propagated. It is propagated along the z direction. $a$ is the width of the guide while the $b$ is the breadth of the guide. In this guide $a \geq b$.
 
@@ -10,7 +10,7 @@ The waveguide in figure~\ref{fig:lec38fig1} shows the x, y and z coordinates in 
 \label{fig:lec38fig1}
 \end{figure}
 
-\section{Transverse Magnetic ($TM$) mode}
+\section{Transverse Magnetic ($TM$) mode}\index{transverse magnetic mode}
 Considering the transverse magnetic (TM mode), $ E_{z} = 0$, $H_{z} = 0 $ longitudinal components. For a transverse field to exist, either $ E_{z} $ or $ H_{z} $ has to be zero. $ H_{z} $ is oriented on the transverse plane and $ E_{z} $ on the longitudinal plane.
 
 Now we first find the solution of the longitudinal component $ E_{z} $ and then find the transverse component $ H_{z} $, and then we apply an initial condition to it. We can use the equations~\ref{eqn:transverseex}-\ref{eqn:transversehy} derived for the TE and TM modes, rewritten as:
@@ -45,12 +45,12 @@ Substitute equation~\ref{eqn:electricwave} into equation~\ref{eqn:maxwellele}
 \begin{align}
 YZ \dv[2]{X}{x} + XZ \dv[2]{Y}{y} + XY \dv[2]{Z}{z}+ \omega^2\mu\epsilon {XYZ} = 0
 \end{align}
-The partial derivatives have been converted to full derivatives since $X$, $Y$, and $Z$ are functions of $x$, $y$, and $z$ only. Dividing through the expression by $XYZ$ gives
+The partial derivatives have been converted to full ones since $X$, $Y$, and $Z$ are only functions of $x$, $y$, and $z$. Dividing through the expression by $XYZ$ gives
 \begin{align}
 \frac{1}{X}\dv[2] {X}{x} + \frac{1}{Y}\dv[2]{Y}{y} + \frac{1}{Z} \dv[2]{Z}{z} + \omega^2\mu\epsilon = 0
 \label{eqn:diffeqn}
 \end{align}
-From the equation, $\frac{1}{X}\dv[2] {X}{x}$ is only a function of $x$, $\frac{1}{Y}\dv[2]{Y}{y}$ is only a function of $y$ and $\frac{1}{Z} \dv[2]{Z}{z}$ is only a function of $z$. So this equation that we have written is a \textbf{Point relation}\index{Point Relation} that should be valid at every point in space. The equation must be satisfied by every point ($x$, $y$, $z$) in the 3D space. That can only happen if $\frac{1}{X}\dv[2] {X}{x}$, $\frac{1}{Y}\dv[2]{Y}{y}$, and $\frac{1}{Z} \dv[2]{Z}{z}$ are constant quantities.
+From the equation, $\frac{1}{X}\dv[2] {X}{x}$ is only a function of $x$, $\frac{1}{Y}\dv[2]{Y}{y}$ is only a function of $y$ and $\frac{1}{Z} \dv[2]{Z}{z}$ is only a function of $z$. So this equation that we have written is a \textbf{Point relation}\index{point relation} that should be valid at every point in space. The equation must be satisfied by every point ($x$, $y$, $z$) in the 3D space. That can only happen if $\frac{1}{X}\dv[2] {X}{x}$, $\frac{1}{Y}\dv[2]{Y}{y}$, and $\frac{1}{Z} \dv[2]{Z}{z}$ are constant quantities.
 
 Let,  
 \begin{align*}
@@ -145,7 +145,7 @@ This equation is similar to that of the parallel plane waveguide $\bar{\beta} = 
 \begin{dmath*}
 v_p = \frac{\omega}{\beta} = \frac{\omega}{\sqrt{{\omega^2\mu\epsilon} - \frac{m\pi}{a} - \frac{n\pi}{a}}}
 \end{dmath*}
-Equation~\ref{eqn:dispersionrelatn} is called the \textbf{dispersion relation}\index{Dispersion Relation} for a transverse magnetic mode on a rectangular waveguide. So this is the dispersion relation for $TM_{mn}$ mode when either $m$ or $n$ is not zero. 
+Equation~\ref{eqn:dispersionrelatn} is called the \textbf{dispersion relation}\index{dispersion relation} for a transverse magnetic mode on a rectangular waveguide. So this is the dispersion relation for $TM_{mn}$ mode when either $m$ or $n$ is not zero. 
 
 Comparing eqaution~\ref{eqn:hrec} with equation~\ref{eqn:h}.
 \begin{dmath*}
@@ -209,7 +209,7 @@ The number of half-cycles depends on order n. Hence, this explanation is based o
 
 Whatever magnetic field on the tangential surface is balanced by the surface current so that the boundary conditions of the tangential component of the magnetic field can hold. So the magnetic field is maximum on the conducting boundary and having understood that the solution gives a sinusoidal variation in the transverse direction. The same inference can be made for the \textbf{transverse electric} mode without going through the same analysis to derive the solution of the transverse fields.
 
-\section{Transverse Electric mode ($TE$) mode}\index{Transverse Electric Mode}
+\section{Transverse Electric mode ($TE$) mode}\index{transverse electric mode}
 For the transverse electric mode, $E_{z} = 0$ and $H_{z}$, with $H$ always maximum on the boundary and $E$ minimum on the boundary, we can write the solution to the $TE$ mode without going through the rigorous analysis as we did in the $TM$ mode.
 \begin{equation}
 H_z = C\cos\left(\frac{m\pi x}{a}\right) \cos\left(\frac{n\pi y}{b}\right)e^{-j\beta z}
@@ -217,4 +217,4 @@ H_z = C\cos\left(\frac{m\pi x}{a}\right) \cos\left(\frac{n\pi y}{b}\right)e^{-j\
 \end{equation}
 This is the solution we would derive if we go through the same routine of finding the general solution for $H_z$, then finding out the transverse components of $H$ that are tangential to the boundary and then applying the boundary conditions on those components. It is important to note that the longitudinal components of magnetic fields $H_z$ do not have boundary conditions, so fo the $TE$ case if we go through the routine analysis, there will be two stops involved. First, finding the general solution of the $H_z$ from the wave equation and second, getting the transverse components $H_x$ and $H_y$ for which we apply the boundary conditions. \textbf{No boundary condition for} $\boldsymbol{H_z}$.
 
-However without going through the same analysis, the understanding which we developed that the tangential component of the magnetic field to the conducting surface of the waveguide is maximum, thus we get the solution for $H_z$ as in equation~\ref{eqn:wavesolnhz}. Theses fields are maximum with $x=0$, $x=a$ and $y=0$ and $y=b$. So these fields have a variation which we are looking for, that those tangential components of the magnetic field must be maximum at the boundary surface. Using this expression for $H_z$. Now we could investigate the transverse electric mode and see the characteristics of $TE$ mode and then compare the behaviour of this mode with the $TM$ mode.
+However, without going through the same analysis, we developed the understanding that the tangential component of the magnetic field to the conducting surface of the waveguide is maximum. Thus, we get the solution for $H_z$ as in equation~\ref{eqn:wavesolnhz}. Theses fields are maximum with $x=0$, $x=a$ and $y=0$ and $y=b$. So these fields have a variation which we are looking for, that those tangential components of the magnetic field must be maximum at the boundary surface. Using this expression for $H_z$. Now we could investigate the transverse electric mode and see the characteristics of $TE$ mode and then compare the behaviour of this mode with the $TM$ mode.
