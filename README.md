@@ -1,0 +1,2 @@
+# Electromagnetism and antenna theory v2
+A book for undergrads at the department of electrical and electronic engineering, University of Benin for the course code EEE 473. The book is written in latex and the next section gives the setup guide
