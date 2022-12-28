@@ -1,4 +1,6 @@
 *.log
+*.txt
+*.rar
 *.toc
 *.aux
 main.synctex.gz
