@@ -18,7 +18,7 @@ At high frequency, inductor does not behave only as an inductor, but as a capaci
 At short circuit length $l_{sc}$ and\ open\ circuit\ length\ $l_{oc}$\ ,\ it\ is\ used \ as\ a\ capacitor\ and \ as \ an\ inductor\ by\ varying\ its\ length.\\
 Recall from chapter 10,\\
 For an inductor: $0 \textless l_{sc} \textless 
-\frac{\lambda}{\small 4}$\\
+\frac{\lambda}{4}$\\
 For\ a\ capacitor: $\frac{\lambda}{4} \textless l_{sc} \textless \frac{\lambda}{2} $
 
 
@@ -125,7 +125,7 @@ Z_{sc}=Z_{o}\left(\frac{j}{j\alpha l}\right)=Z_{o}\left(\frac{1}{\alpha l}\right
 Therefore, this means that the input impedance of a short circuit line, if the length is $ \frac{\lambda}{4} $ is $ \frac{Z_{o}}{\alpha l} $, which is not infinity. Recall:$ Z_{sc} $ = $ \infty $ for lossless line scenario, but $ \alpha l << 1 $ means $ Z_{sc} $ is large but not infinity.\\
 
 Similarly,\\
- $ Z_{oc}=Z_{o}\coth\gamma l=\frac{Z_{o}}{\tanh\gamma l} $\\\\
+$ Z_{oc}=Z_{o}\coth\gamma l=\frac{Z_{o}}{\tanh\gamma l} $\\\\
 $ Z_{oc}=Z_{o}\coth\gamma l=Z_{o}\coth(\alpha+j\beta) l $\\\\
 For low loss transmission line $ \alpha<<\beta $ \\\\Recall,\\
 $ \tanh(\alpha+j\beta)l=\frac{\tanh (\alpha l) + \tanh (j\beta l)}{1 +j \tanh (\alpha l)\tanh (j\beta l)} $\\\\
@@ -156,7 +156,7 @@ $ \frac{1}{\infty}=0, \frac{\alpha l}{\infty}=0 $\\
 \begin{equation}
 \boxed{	Z_{oc}=Z_{o}\left(\frac{j \alpha l}{j}\right)=Z_{o}(\alpha l)}\end{equation}\\
 Therefore, for low loss condition:\\
- $ Z_{sc}\simeq \frac{Z_{o}}{\alpha l} $\\
+$ Z_{sc}\simeq \frac{Z_{o}}{\alpha l} $\\
 $ Z_{oc} \simeq Z_{o} \alpha l $\\ 
 
 Ideally $ Z_{oc}=0 $, but this is not the case with low loss line where we have  $ Z_{oc} = Z_{o} \alpha l $. What we note here is that, the input impedance of the resonance section of a transmission line is ideally zero or infinity for series or parallel resonance circuit. In practice, we see that we have small input impedance for a series resonance circuit and large input impedance for parallel resonance circuit.\\
@@ -164,21 +164,22 @@ Ideally $ Z_{oc}=0 $, but this is not the case with low loss line where we have 
 With $ Z_{oc} =  Z_{o} \alpha l $ and  
 $ Z_{sc}= \frac{Z_{o}}{\alpha l} $, we can vary the frequency and measure the variation of $ Z_{sc} $ or $ Z_{oc} $ with frequency. Recall that $ \alpha $ depends on frequency; length $(l)$ depends on frequency too since  $ l=\frac{\lambda}{4} $. The variation of $ Z_{sc} $  or  $ Z_{oc} $ with frequency gives us what is called the \textbf{frequency response of the circuit}.\\
 
-Quality factor can be calculated in two ways:\\
-1. From the frequency response of the circuit\\
-2. From the basic definition of quality factor.\\
-
+Quality factor can be calculated in two ways:
+\begin{enumerate}[(i)]
+\item From the frequency response of the circuit
+\item From the basic definition of quality factor.
+\end{enumerate}
 By definition,
 \begin{dmath}
-Quality factor(Q) =2\pi\left(\frac{ energy\ stored\ in\ the\ circuit  }{Energy\ lost\ per\ cycle}\right) 
+\text{Quality factor, }Q =2\pi\left(\frac{\text{Energy stored in the circuit}}{\text{Energy lost per cycle}}\right) 
 \end{dmath}  
-If the resonant frequency is $ f_{o} $, the energy lost per cycle is $ f_{o} $ cycles per seconds. Since in 1 seconds, we have $ f_{o} $ number of cycles;\\
+If the resonant frequency is $ f_{o} $, the energy lost per cycle is $ f_{o} $ cycles per seconds. Since in 1 seconds, we have $ f_{o} $ number of cycles;
 \begin{dmath}
-Quality factor Q=2 \pi f_{o}\left(\frac{energy\ stored\ in\ the\ circuit }{Energy\ lost\ per\ second}\right)
+\text{Quality factor, }Q = 2\pi f_{o}\left(\frac{\text{Energy stored in the circuit}}{\text{Energy lost per second}}\right)
 \end{dmath}
- Energy lost per second = Power loss in the circuit  
+Energy lost per second = Power loss in the circuit  
 \begin{dmath}
-Quality factor (Q)=2 \pi f_{o}\left(\frac{energy\ stored\ in\ the\ circuit }{Power\ loss\ in\ the\ circuit}\right)
+\text{Quality factor, }Q=2 \pi f_{o}\left(\frac{\text{Energy stored in the circuit}}{\text{Power loss in the circuit}}\right)
 \end{dmath}
 
 So to calculate the quality factor, we calculate the energy stored in a section of the transmission line and the power loss in the transmission line. Then we can easily find out the value for the quality factor for that section of transmission line.\\
@@ -195,7 +196,7 @@ Hence, the quality factor can be calculated from the impedance calculation as th
 Alternatively, take a section of transmission line, find the voltage distribution and current distribution in the transmission line, then calculate the power loss. Use this information to calculate the quality factor.\\
 Recall,
 \begin{equation}
-Q=2\pi f_{o}\left(\frac{Energy\ stored\ in\ circuit}{Power\ loss\ in\ circuit}\right)
+Q=2\pi f_{o}\left(\frac{\text{Energy stored in circuit}}{\text{Power loss in circuit}}\right)
 \end{equation}
 Using this method to calculate quality factor(Q),
 lets consider a section of transmission line of $ l=\frac{\lambda}{4} $ and say the line is short circuited for this specific case.\\
@@ -265,23 +266,9 @@ U = \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}(\sin^{2} \beta l) dl +
 \end{equation}
 Recall from trigonometry:\\       
 $\sin^{2} \beta l = \frac{1 - \cos2\beta l}{2}$, $\cos^{2} \beta l = \frac{1 + \cos2\beta l}{2}$
-{\small \begin{equation}
- U = \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\int_{0}^{\frac{\lambda_{o}}{4}} \left
-(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl    
-\end{equation}}
-\begin{equation}
-= \frac{1}{2}CV_{o}^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}}  + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}}
-\end{equation}
-{\smal
-l\begin{equation}
-= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right]
-\end{equation}}
-\begin{equation}
-= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} -  \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin \pi}{4 \beta}\right]
-\end{equation}
-\begin{equation}
-= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[ \frac{\lambda_{o}}{8} \right]
-\end{equation}
+{\small \begin{dmath}
+U = \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\int_{0}^{\frac{\lambda_{o}}{4}} \left(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl    = \frac{1}{2}CV_{o}^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}}  + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right]= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} -  \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin \pi}{4 \beta}\right] = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[ \frac{\lambda_{o}}{8} \right]
+\end{dmath}}
 Where: $\frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] $ = energy stored in line capacitance;\\
 and  $ \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[ \frac{\lambda_{o}}{8} \right] $ = energy stored in line inductance.\\
 We see that the two quantities are equal since:
@@ -290,9 +277,9 @@ Z_{o} = \sqrt{\frac{L}{C}}
 \end{equation*}
 \begin{equation*}
 CZ_{o}^{2} = L,
- C= {\frac{L}{Z_{o}^{2}}}
+C= {\frac{L}{Z_{o}^{2}}}
 \end{equation*}
-  
+
 \begin{equation}
 U= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] +\frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right]
 \end{equation}
@@ -320,12 +307,10 @@ $ V_{o} $ is the supplied voltage:
 \begin{equation}
 V_{o} = \frac{V_{o}^{2}}{Z_{o}}*\alpha *\frac{\lambda_{o}}{4}
 \end{equation}
-Recall,
-  
-Q = $ 2 \pi f_{o} \left(\frac{\ energy\ stored\ in\ a\ circuit}{power\ loss\ in\ the\ circuit}\right)$
+Recall, $Q = 2 \pi f_{o} \left(\frac{\text{Energy stored in a circuit}}{\text{Power loss in the circuit}}\right)$
 \begin{equation}
-Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}*CV_{o}^{2}*\frac{\lambda_{o}}{4}}{ \frac{V_{o}^{2}}{Z_{o}}*\alpha *\frac{\lambda_{o}}{4}}\right)
-end{equation}
+Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}*CV_{o}^{2}*\frac{\lambda_{o}}{4}}{\frac{V_{o}^{2}}{Z_{o}}*\alpha *\frac{\lambda_{o}}{4}}\right)
+\end{equation}
 \begin{equation}
 Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_{o}}}\right)
 \end{equation}
@@ -342,7 +327,7 @@ Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_{o}}}\right) =  \frac{\
 \begin{equation}
 \boxed{ Q = \frac{\beta}{2 \alpha}}
 \end{equation}
-This is the same expression we would have obtained by finding out the frequency response of the transmission line and measuring  the input and it's variation as a function of frequency. We can also find out the change in bandwidth and then use the definition that Q = $\frac{f_{o}}{\Delta f}$ and we would get some expression for the quality factor.\\ Q = $ \frac{\beta}{2\alpha}$ implies that the quality factor is related to the phase and amplitude constant or attenuation constant $ \alpha$ of the transmission line. For a low loss line, since $ \alpha << \beta$, Q is very large. This means that Q $>>$ 1 for a low loss line. This is very important because when you go to high frequencies, a section of a transmission line can give you a high quality factor circuit. Since quality factor is related to 3dB bandwidth, the higher the quality factor, the smaller the 3dB bandwidth or more tuned the circuit is. The frequency selectivity of the circuit is very good if the quality factor of the circuit is very large. We can get few hundreds to few thousands of quality factor value for some low loss transmission line and a very good frequency sensitivity by sections of a transmission line used as a resonant circuits. This is another important application of transmission line in high frequency circuits.
+This is the same expression we would have obtained by finding out the frequency response of the transmission line and measuring  the input and it's variation as a function of frequency. We can also find out the change in bandwidth and then use the definition that Q = $\frac{f_{o}}{\Delta f}$ and we would get some expression for the quality factor.\\ Q = $ \frac{\beta}{2\alpha}$ implies that the quality factor is related to the phase and amplitude constant or attenuation constant $ \alpha$ of the transmission line. For a low loss line, since $ \alpha \ll \beta$, Q is very large. This means that $Q \gg 1$ for a low loss line. This is very important because when you go to high frequencies, a section of a transmission line can give you a high quality factor circuit. Since quality factor is related to 3dB bandwidth, the higher the quality factor, the smaller the 3dB bandwidth or more tuned the circuit is. The frequency selectivity of the circuit is very good if the quality factor of the circuit is very large. We can get few hundreds to few thousands of quality factor value for some low loss transmission line and a very good frequency sensitivity by sections of a transmission line used as a resonant circuits. This is another important application of transmission line in high frequency circuits.
 
 Another application of transmission line is the voltage or current step up transformers. 
 \section{As A Step Up Transformer}
@@ -357,9 +342,9 @@ Considering a small section of transmission line shorted at the end shown in fig
 $ \Gamma_{L} = \frac{Z_{L} - Z_{o}}{Z_{L} + Z_{o}} =  \frac{1 - \frac{Z_{o}}{Z_{L}}}{1 + \frac{Z_{o}}{Z_{L}}}$\\
 
 $ Z_{L} = \infty $ At open circuit.\\
-  
+
 $ \Gamma_{L} =  \frac{1 - \frac{Z_{o}}\infty}{1 + \frac{Z_{o}}\infty} = \frac{1 - 0}{1 + 0} = 1$
-   
+
 Hence for open circuit $\Gamma_{L} = 1 $.
 
 And N wave reverses with $\pi$ phase change, it gets to open circuit with a reflection coefficient of  1, turn around and start moving  toward point XX'. Hence at XX' N traveled  a total distance of $ \frac{\lambda}{2} (\frac{\lambda}{8} + \frac{\lambda}{4} + \frac{\lambda}{8})$ and has  gone through a phase change of $2\pi$.
@@ -382,5 +367,5 @@ In practice, when the losses are small, one may generate a very large  voltage a
 The phenomena used here for voltage step up could be harmful in many cases. Consider a situation where a small energy source get unknowingly coupled to a small section of the transmission line. If the section of transmission line is of resonance length, then the voltage developed on this line will be much larger than the circuit can handle and this can damage the circuit. While doing the design of a high frequency circuit, we should be careful not to couple some sections to transmission line especially if they are of resonance length. Else, we develop a large voltage in that section that the circuit can barely handle .  
 
 The phenomenon of stepping up voltage and current in a resonance length when a signal is coupled to it can be used for stepping up voltage or current.
-  
+
 For high frequency circuit, when sections of transmission line are used, we rarely see capacitors and inductors at high frequency since they have been replaced by section of transmission line. What we see instead are active devices like transistors and FETs with reactive component completely realized by sections of transmission line. So most microwave circuits will appear as transmission line  across active devices.   
