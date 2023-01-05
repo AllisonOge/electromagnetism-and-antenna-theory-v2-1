@@ -31,78 +31,84 @@ The groove in the slotted transmission line is used for measuring amplitude of t
 \caption{Measurement using the Slotted Transmission Line}
 \end{figure}
 
-The distance between two voltage maxima or minima is $\lambda/2$ and by measuring the separation between two maxima or minima on the transmission line, we can estimate the value of the wavelength. Using the wavelength, we can also find the phase constant $\beta$ since $\beta = 2\pi/\lambda$. The first step in the measurement of unknown impedance is to plot the voltage standing wave pattern, identify the location of two consecutive maxima and minima, measure the distance to estimate $\lambda$, since the distance is $\lambda/2$.\newline 
+The distance between two voltage maxima or minima is $\lambda/2$ and by measuring the separation between two maxima or minima on the transmission line, we can estimate the value of the wavelength. Using the wavelength, we can also find the phase constant $\beta$ since $\beta = 2\pi/\lambda$. The first step in the measurement of unknown impedance is to plot the voltage standing wave pattern, identify the location of two consecutive maxima and minima, measure the distance to estimate $\lambda$, since the distance is $\lambda/2$.
 
 After that, estimate $\beta$ from $\beta$ = $2\pi/\lambda$ . Hence, we measure $l_{min}$, which is the location of the voltage minimum from the the load end of the transmission line. Also we measure $V_{max}$ and $V_{min}$ from the line i.e $|V|_{max}$ and $|V|_{min}$. Since we have measured phase constant $\beta$, $V_{max}$, $V_{min}$, and $l_{min}$. Then we can find out the parameters for impedance calculation. After, we calculate Voltage Standing Wave Ratio (VSWR) for the load.[footnote]
 \begin{align}
 \rho = \frac{|V|_{max}}{|V|_{min}}
 \end{align}
 
-Once we take measurement of $|V|_{max}$ and $|V|_{min}$, then we calculate for $ \rho $. We then find the maximum and minimum impedance which one can see in the Transmission Line. So at $l_{min}$ we have $R_{min}$ at that point and $R_{min}$ = $\frac{Z_{o}}{\rho}$. Once $R_{min}$ is known at $l_{min}$, the calculation of unknown impedance is simply an impedance transformation problem. We recall that once the impedance at any point on the transmission line is known, the impedance at any other point can be calculated using the impedance transformation relationship.
+Once we take measurement of $|V|_{max}$ and $|V|_{min}$, then we calculate for $ \rho $. We then find the maximum and minimum impedance which one can see in the Transmission Line. So at $l_{min}$ we have $R_{min}$ at that point and $R_{min}$ = $\frac{Z_o}{\rho}$. Once $R_{min}$ is known at $l_{min}$, the calculation of unknown impedance is simply an impedance transformation problem. We recall that once the impedance at any point on the transmission line is known, the impedance at any other point can be calculated using the impedance transformation relationship.
 
-Since we know $R_{min}$ = $\frac{Z_{o}}{\rho}$ at $l_{min}$ from load, we can transform this impedance by a distance $l_min$ away from the generator, so that its impedance is equal to terminating impedance $Z_{L}$. So the unknown impedance is nothing but the transformation of $R_{min}$ = $\frac{Z_{o}}{\rho}$ by $l_{min}$ to the load side of the generator. 
+Since we know $R_{min}$ = $\frac{Z_o}{\rho}$ at $l_{min}$ from the load, we can transform this impedance by a distance $l_min$ away from the generator, so that its impedance is equal to terminating impedance $Z_{L}$. So the unknown impedance is nothing but the transformation of $R_{min}$ = $\frac{Z_o}{\rho}$ by $l_{min}$ to the load side of the generator. 
 \begin{align}
-Z_{L} = Z_{O}\{\frac{R_{min}\cos(-\beta l_{min}) + jZ_{O}\sin(-\beta l_{min})}{Z_{O}\cos(-\beta l_{min}) + jR_{min}\sin(-\beta l_{min})}\}
+Z_{L} = Z_o\frac{R_{min}\cos(-\beta l_{min}) + jZ_o\sin(-\beta l_{min})}{Z_o\cos(-\beta l_{min}) + jR_{min}\sin(-\beta l_{min})}
 \end{align}
 $l_{min}$ is negative since we are moving away from the generator. Finding $Z_{min}$ is a matter of separating the real and imaginary parts, we get the value of resistance and reactance as shown below.\\
-\textbf{NOTE:} We are dealing with a lossless transmission line unless otherwise stated.\newline
-\begin{align}
-Z_{L} = Z_{O}\{\frac{R_{min}\cos\beta l_{min} - jZ_{O}\sin\beta l_{min}}{Z_{O}\cos\beta l_{min} - jR_{min}\sin\beta l_{min}}\}
-\end{align}
-Rationalize into proper form by multiplying by conjugate of denominator at top and bottom.
+\textbf{NOTE:} We are dealing with a lossless transmission line unless otherwise stated.
+\begin{dmath}
+Z_{L} = Z_o\frac{R_{min}\cos\beta l_{min} - jZ_o\sin\beta l_{min}}{Z_o\cos\beta l_{min} - jR_{min}\sin\beta l_{min}}
+\end{dmath}
+Rationalize into proper form by multiplying the top and bottom by the conjugate of the denominator.
 {\footnotesize 
-\begin{align}
-Z_{L} =\\ Z_{O}\\ 
-\left[\frac{(R_{min}\cos\beta l_{min} - jZ_{O}\sin\beta l_{min})(Z_{O}\cos\beta l_{min} + jR_{min}\sin\beta l_{min})}{(Z_{O}\cos\beta l_{min} - jR_{min}\sin\beta l_{min})(Z_{O}\cos\beta l_{min} + jR_{min}\sin\beta l_{min})}\right]
-\end{align}} 
-\hspace{-20pt}{\footnotesize \begin{dmath}
-Z_{L} =\\ Z_{O}
-\left[\frac{(Z_{O}R_{min}\cos^{2}\beta l_{min} + Z_{O}R_{min}\sin^{2}\beta l_{min})+j((R_{min}^{2}-Z_{O}^{2})\cos\beta l_{min}\sin\beta l_{min})}{(Z_{O}^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}\right]
+\begin{dmath}
+Z_{L} = Z_o\left(\frac{R_{min}\cos\beta l_{min} - jZ_o\sin\beta l_{min}}{Z_o\cos\beta l_{min} - jR_{min}\sin\beta l_{min}}\right)\times\left(\frac{Z_o\cos\beta l_{min} + jR_{min}\sin\beta l_{min}}{Z_o\cos\beta l_{min} + jR_{min}\sin\beta l_{min}}\right)
+\end{dmath}} 
+{\footnotesize 
+\begin{dmath}
+Z_{L} = Z_o
+\frac{Z_oR_{min}\cos^{2}\beta l_{min} + Z_oR_{min}\sin^{2}\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}} +j\frac{R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}}
 \end{dmath}}
 Recall $ \cos^{2}(A) + \sin^{2} = 1 $ and $ \frac{\cos(A)}{\sin(A)} = \tan(A) $
-\begin{align}
-Z_{L} = Z_{O}\frac{Z_{O}R_{min} + j(R_{min}^{2}-Z_{O}^{2})\cos\beta l_{min}\sin\beta l_{min})}{(Z_{O}^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}
-\end{align}
+\begin{dmath}
+Z_{L} = Z_o\frac{Z_oR_{min} + j(R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min})}{(Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}
+\end{dmath}
 Divide numerator and denominator by $\cos^{2}\beta l_{min}$:
 \begin{align*}
-Z_{L} = Z_{O}\frac{\frac{Z_{O}R_{min}}{\cos^{2}\beta l_{min}} + \frac{j(R_{min}^{2}-Z_{O}^{2})\cos\beta l_{min}\sin\beta l_{min})}{\cos^{2}\beta l_{min}}}{\frac{(Z_{O}^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}{\cos^{2}\beta l_{min}}}
+Z_{L} = Z_o\frac{\frac{Z_oR_{min}}{\cos^{2}\beta l_{min}} + \frac{j(R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min})}{\cos^{2}\beta l_{min}}}{\frac{(Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}{\cos^{2}\beta l_{min}}}
 \end{align*}
 Recall $ \frac{1}{\cos(A)} = \sec(A) $
 \begin{align}
-Z_{L} = Z_{O}\{\frac{Z_{O}R_{min}\sec^{2}\beta l_{min} + j(R_{min}^{2}-Z_{O}^{2})\tan\beta l_{min}}{Z_{O}^{2}+ R_{min}^{2}\tan^{2}\beta l_{min}}\}
+Z_{L} = Z_o\{\frac{Z_oR_{min}\sec^{2}\beta l_{min} + j(R_{min}^{2}-Z_o^{2})\tan\beta l_{min}}{Z_o^{2}+ R_{min}^{2}\tan^{2}\beta l_{min}}\}
 \end{align}
-$\frac{Z_{O}}{R_{min}} = \rho$ , Divide numerator and denominator by $R_{min}^{2}$ to have numerator as:
+$\frac{Z_o}{R_{min}} = \rho$ , Divide numerator and denominator by $R_{min}^{2}$ to have numerator as:
 \begin{align*}
-Z_{L} = Z_{O}\{\frac{Z_{O}R_{min}}{R_{min}^{2}}\sec^{2}\beta l_{min} + \frac{j(R_{min}^{2}-Z_{O}^{2})}{{R_{min}^{2}}}\tan\beta l_{min}\}
+Z_{L} = Z_o\{\frac{Z_oR_{min}}{R_{min}^{2}}\sec^{2}\beta l_{min} + \frac{j(R_{min}^{2}-Z_o^{2})}{{R_{min}^{2}}}\tan\beta l_{min}\}
 \end{align*}
 \begin{align*}
-Z_{L} = Z_{O} [\rho \sec^{2}\beta l_{min} + j(1-\rho^{2})\tan\beta l_{min}] =
+Z_{L} = Z_o [\rho \sec^{2}\beta l_{min} + j(1-\rho^{2})\tan\beta l_{min}] =
 \end{align*}
 \begin{align*}
-Z_{L} = Z_{O} [ \rho (1 + \tan^{2}\beta l_{min}) + j(1-\rho^{2})\tan\beta l_{min}]
+Z_{L} = Z_o [ \rho (1 + \tan^{2}\beta l_{min}) + j(1-\rho^{2})\tan\beta l_{min}]
 \end{align*}
 Denominator changes thus:
 \begin{align*}
-\frac{1}{R_{min}^{2}}{(Z_{O}^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})} = \rho^{2} + \tan^{2}\beta l_{min}
+\frac{1}{R_{min}^{2}}{(Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})} = \rho^{2} + \tan^{2}\beta l_{min}
 \end{align*}
 We have:
-\begin{align}
-Z_{L} = Z_{O} [\frac{\rho (1 + \tan^{2}\beta l_{min}) + j(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}} ]
-\end{align}
-\begin{align*}
-\overline{Z_{L}} = \frac{Z_{L}}{Z_{O}} =  \frac{\rho (1 + \tan^{2}\beta l_{min})}{\rho^{2} + \tan^{2}\beta l_{min}} + \frac{j(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}}
-\end{align*}
+{\footnotesize
+\begin{dmath}
+Z_{L} = Z_o \left[\frac{\rho (1 + \tan^{2}\beta l_{min}) + j(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}} \right]
+\end{dmath}}
+\begin{dmath*}
+\overline{Z_{L}} = \frac{Z_{L}}{Z_o} =  \frac{\rho (1 + \tan^{2}\beta l_{min})}{\rho^{2} + \tan^{2}\beta l_{min}} + \frac{j(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}}
+\end{dmath*}
 
-Real Part: $R = Z_{O}[\frac{\rho (1 + \tan^{2}\beta l_{min})}{\rho^{2} + \tan^{2}\beta l_{min}}]$\\
+Real Part: $R = Z_o[\frac{\rho (1 + \tan^{2}\beta l_{min})}{\rho^{2} + \tan^{2}\beta l_{min}}]$\\
 
-Imaginary Part: $ X = Z_{O}[\frac{(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}}]  $\\
+Imaginary Part: $ X = Z_o[\frac{(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}}]  $\\
 
 Hence $Z_{L}$ = R +jX can easily be calculated from all parameters that we have measured viz; $|V|_{max}$,$|V|_{min}$, Voltage Standing Wave Ratio $\rho = \frac{|V|_{max}}{|V|_{min}}$, $l_{min}$, $\beta$ from $\beta = 2\pi/\lambda$. Hence, we have transformed $R_{min}$ to $Z_{L}$ without necessarily knowing the value of $R_{min}$, as seen in our expression for X i.e. reactance and R i.e. resistance, where it is not required for the calculation. 
 However, in practice, when connecting the unknown impedance to the slotted line section, we use conductors as well as other forms of connectors. This means the location of the impedance is not accurately known, so measurement of $l_{min}$, sometimes become inaccurate. If we know $l_{min}$ precisely, then the solution is straightforward and very accurate in finding out what the unknown impedance is. If $l_{min}$ is not known, there would be error in the unknown impedance.\\
 
-To avoid error, we define the location of the load by replacing it with a short circuit. Carry out the measurement of the transmission line, and find out the location of $l_{min}$ with the line terminated with a short circuit. Then replace the short circuit by a load and find out the new standing wave pattern with the load. So we have two standing wave patterns on our transmission line. \\(i) With the line terminated with a short circuit and \\(ii) with the unknown load terminating the line.\\ For short circuit, we identify the exact location of minimum voltage by the standing wave, that becomes our origin for the unknown load impedance measurement of $l_{min}$.\\
+To avoid error, we define the location of the load by replacing it with a short circuit. Carry out the measurement of the transmission line, and find out the location of $l_{min}$ with the line terminated with a short circuit. Then replace the short circuit by a load and find out the new standing wave pattern with the load. So we have two standing wave patterns on our transmission line. 
+\begin{enumerate}[(i)]
+\item With the line terminated with a short circuit and 
+\item with the unknown load terminating the line.
+\end{enumerate}
+For short circuits, we identify the exact location of minimum voltage by the standing wave, which becomes our origin for the unknown load impedance measurement of $l_{min}$.
 
-Hence the superposition of the load standing wave pattern on the the short circuit standing wave is shown below.
+Hence the superposition of the load standing wave pattern on the short circuit standing wave is shown below.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/group10diagram2}
