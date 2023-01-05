@@ -1,7 +1,7 @@
 \chapter{Identifying Types of Load from Standing Wave Pattern}
 
 In the previous chapter, we discussed how to get the VSWR circle from the smith chart and how to solve transmission line problems, which are in the form of parallel connections using admittance and characteristics admittance instead of impedances.\\
-In this chapter, we will discuss how to identify the types of load from standing wave pattern.\\
+In this chapter, we will discuss how to identify the types of load from standing wave pattern.
 
 Standing wave pattern has two important characteristics which are:\\
 (i) The Location of Maximum and Minimum (Current/Voltage)\\
@@ -18,46 +18,46 @@ When $|V|_{max}$ ${\approx}$ $|V|_{min}$, then $VSWR = 1$\\
 To identify a load, let's look at the smith chart to see how the impedance varies on the line and then come back to standing wave pattern and identify the loads.\\
 Figure 9.1 and 9.2 are smith charts showing VSWR circle for inductance and capacitance load at the top and bottom respectively.\\
 \begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.4]{Group91}
-	\caption{A Smith chart representation of Inductive Load}
+\centering
+\includegraphics[scale=0.4]{./graphics/Group91}
+\caption{A Smith chart representation of Inductive Load}
 \end{figure}
 
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.4]{Group92}
-	\caption{A Smith chart representation of Capacitive Load}
+\centering
+\includegraphics[scale=0.4]{./graphics/Group92}
+\caption{A Smith chart representation of Capacitive Load}
 \end{figure}From Figure 9.1, If we move from load towards the generator i.e. clockwise rotation, for the inductive load we encounter $V_{max}$ first before another $\frac{\lambda}{4}$ or $\pi rad$ movement to encounter ${V_{min}}$.\\
 If we move from $\bar{Z_L}$ in clockwise direction for capacitive load, we encounter $V_{min}$ first before another $\frac{\lambda}{4}$ or $\pi rad$ movement to encounter $V_{max}$. $V_{min}\neq0$ means it is not a pure reactive load i.e $VSWR\neq\infty$\\
 Now, let's analyze some standing wave graph and determine the type of load which they represent.
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.5]{Group93}
+\includegraphics[scale=0.5]{./graphics/Group93}
 \caption{Standing wave pattern variation of a complex Inductive load}
 \end{figure}\\In Figure 9.3, the standing wave pattern moves from load towards the generator from right to left. It gets to a maximum first and its minimum is not zero as it does not touch the real axis. This indicates a complex inductance load which is similar to being on the upper half of the smith chart.\\
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{Group94}
-	\caption{Standing wave pattern variation of a complex Capacitive load}
+\centering
+\includegraphics[scale=0.5]{./graphics/Group94}
+\caption{Standing wave pattern variation of a complex Capacitive load}
 \end{figure}\\In Figure 9.4, $V_{min}\neq0$ which means it is not purely reactive, we encounter $V_{min}$ first before $V_{max}$ indicating a complex capacitive load similarly to being on the lower half of the smith chart. The movement is towards the generator.\\
 
 If the load is neither capacitive nor inductive, then it must lie on the real horizontal axis of the smith chart. So the location of the load itself will be at either voltage minimum point or voltage maximum point.\\
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{Group95}
-	\caption{Standing wave pattern variation of a pure Resistive load}
+\centering
+\includegraphics[scale=0.5]{./graphics/Group95}
+\caption{Standing wave pattern variation of a pure Resistive load}
 \end{figure}\\
 If the load is purely reactive as in Figure 9.5. On the smith chart, the intersection of the VSWR circle on the real axis will be the location of the voltage maximum and minimum. So the load will have either the maximum or minimum voltage at the load end as shown in Figure 9.5. The thick curve has ${V_{max}}$ at load end meaning ${R>Zo}$. If ${V_{min}}$ is at load end, it means ${R<Z_o}$, ${Z_o}$ is the characteristics impedance.\\
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{Group96}
-	\caption{Standing wave pattern variation of a pure Inductive load}
+\centering
+\includegraphics[scale=0.5]{./graphics/Group96}
+\caption{Standing wave pattern variation of a pure Inductive load}
 \end{figure}\\
 In Figure 9.6, we observe that the voltage minimum is zero or it touches the horizontal axis i.e ${VSWR=\dfrac{V_{max}}{V_{min}}=\infty}$ as ${V_{min}=0}$. i.e purely reactive loads. As we move from the load end we meet ${V_{max}}$ first indicating it is purely inductive and lies on the upper half of the smith chart.\\
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{Group97}
-	\caption{Standing wave pattern variation of a pure Capacitive load}
+\centering
+\includegraphics[scale=0.5]{./graphics/Group97}
+\caption{Standing wave pattern variation of a pure Capacitive load}
 \end{figure}\\
 In Figure 9.7, the voltage minimum is also zero, but we encounter a minimum first as we go from the load end towards the generator indicating a purely capacitive load. So it lies in the lower half of the smith chart and $VSWR=\infty$.\\
 
@@ -66,14 +66,14 @@ So looking at the standing wave pattern, one can quickly identify the types of l
 Now we solve some simple problems based on the theory we have developed from the transmission line.\\
 
 \begin{center}
-	\textbf{PROBLEM 1}
+\textbf{PROBLEM 1}
 \end{center}
 
 A voltage wave at ${1GH}z$ is traveling on a transmission line in ${+x}$ direction. The primary constants of the line are ${R=0.5\Omega/m}$, ${L=0.2\mu H/m}$, ${G=0.1\upsilon/m}$, ${C=100pF/m}$. Calculate the attenuation constant in ${nepers/m}$ and ${dB/m}$. If the voltage of the forward traveling wave at ${t=0}$ and ${x=0}$ ${v}=0.866V$. Find the voltage at ${x=1m}$ and time ${t=100nsec}$. What is the peak voltage at ${x=1m?}$ Take initial phase as ${30^0}$.
 
 
 \begin{center}
-	\textbf{Solution to Problem 1}
+\textbf{Solution to Problem 1}
 \end{center}
 $ \omega = 2\pi\times 10^{9} $ rad/sec\\
 Propagation constant $\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}$
@@ -120,11 +120,11 @@ Peak value happens when $cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2(1)}) = 1$\
 $ V_{(1,t)_{max}} = 10e^{-2.23} = 1.07528V $\\\\
 This is one of the simplest problem of a Transmission Line, where the primary constants are given and voltage at some instant of time and location is also given. We are then asked to find out the voltage at some other location and at some other instant of time.\\
 \begin{center}
-	\textbf{PROBLEM 2}
+\textbf{PROBLEM 2}
 \end{center}
 If the wave in the previous example is traveling in the negative ${-x}$ direction, wish all other things same. Find the instantaneous  voltage at the same time and at the same location?\\
 \begin{center}
-	\textbf{SOLUTION}
+\textbf{SOLUTION}
 \end{center}
 For the wave travelling in the negative direction, we have\\
 $V_{(x,t)} = Re(V^{-}e^{\gamma x}e^{j\omega t})$ for backward wave.\\\\
@@ -141,17 +141,17 @@ At ${t=100nsec}$ and ${x=1m}$\\\\
 $V_({x,t}) = 10e^{2.23} cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} + 28.2})\\\\
 = -83.7701V$\\\\
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{Group98}
-	\caption{Diagram for Problem 2}
+\centering
+\includegraphics[scale=0.5]{./graphics/Group98}
+\caption{Diagram for Problem 2}
 \end{figure}
 So what we note here is, if we look at the transmission line with ${x=0}$ and ${x=1m}$. If the wave travels in forward direction, then the wave will attenuate in the direction of propagation. The variation is from ${8.66V}$ to ${-0.88V}$. In the backward direction, the wave will attenuate in the reverse direction so it has to  have a higher amplitude at ${x=1m}$ and ${x=100nsec}$ from were it attenuates from ${-83.7701V}$ to ${8.66V}$ in the other direction. The direction of propagation of the wave is very important.\\
 \begin{center}
-	\textbf{PROBLEM 3}
+\textbf{PROBLEM 3}
 \end{center}
 A transmision line has $L = 0.25muH/m$, $C=100pF/m$ and ${G=0}$. What should be the value of ${R}$ for the line so that the line can be travelled as a low loss line? The frequency of operation is ${100MHz}$.\\
 \begin{center}
-	\textbf{SOLUTION}
+\textbf{SOLUTION}
 \end{center}
 For low loss line ${\alpha\ll\beta}$ say ${100\alpha=\beta}$ at 1 percent of ${\beta}$ value\\\\
 ${\beta=\omega\sqrt{LC}} = {2\pi\times100\times10^6\sqrt{0.25\times10^{-6}\times100\times10^{-12}}}$\\\\
@@ -171,6 +171,6 @@ ${\pi = R}$\\\\
 So for this transmission line taking a resistance of ${3\Omega /m}$. It can be treated as a low loss transmission line. If ${R>\pi}$ say ${4\Omega}$, it is no more a lossless transmission line and it slowly become a lossy transmission line. When ${R}$ increases to the point that ${\alpha\approx\beta}$, then the line becomes extremely lossy.\newpage
 
 \begin{center}
-	\textbf{SUMMARY}
+\textbf{SUMMARY}
 \end{center}
 So in this section, we have shown how to identify the load by looking at standing wave patterns. Next we solved some simple problems for transmission line based on voltage equations which we have derived for the transmission line. Next we go to applications of transmission line since we make use of sections of transmission line in realizing various circuit elements in high frequency circuits.\\		
