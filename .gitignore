@@ -3,5 +3,8 @@
 *.rar
 *.toc
 *.aux
+*.idx
+*.ind
+*.ilg
 main.synctex.gz
 main.pdf
