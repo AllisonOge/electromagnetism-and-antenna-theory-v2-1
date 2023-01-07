@@ -4,7 +4,7 @@ Transmission lines are special cases of electromagnetic waves that deal solemnly
 In this chapter, we will still be working with the concept of voltage and current which everyone is familiar with and then gradually introduce the concept of space into the circuit analysis. 
 
 \section{Structures of transmission lines}
-Transmission lines can best be defined as a medium of power transfer from one point to another, this transmission is done through a variety of structures, some of which are explained below;
+Transmission lines can best be defined as a medium of power transfer from one point to another. This transmission is done through a variety of structures, some of which are explained below;
 
 \subsection{Co-axial cable}	
 \begin{figure}[h]
@@ -67,15 +67,15 @@ The finite time it takes the voltage at X to appear at Y is called transit time.
 \begin{align}
  t_{r} = \frac{L}{v}\ \ \ \ \ \ (\text{Transit  Time})
 \end{align}
-$v$ is the velocity of the signal. So when a time-varying signal is applied at X, it requires a finite time to travel from X to Y.  $ V_{A} $  at X will not remain constant as it is a time-varying sinusoidal so that in the transit time it takes $ V_{A} $ to appear at Y, $ V_{A} $ would have changed to another value say $ V_{B} $, so when a voltage at Y is $ V_{B} $ say, the voltage at X is $ V_{A} $. In other words, there is a potential difference between X and Y. This difference is related to the length of the cable, the more the length the more the difference, with L very small. $ V_{x} $ is close to $ V_{y} $ as the points A and B will be close to each other and the voltage difference will not be substantial. The important thing here is no matter how small the length we take, there will always be that voltage difference $ V_{x} – V_{y} = 0 $ if $ L \rightarrow 0 $.
+$v$ is the velocity of the signal. So when a time-varying signal is applied at X, it requires a finite time to travel from X to Y.  $ V_{A} $  at X will not remain constant as it is a time-varying sinusoidal so that in the transit time it takes $ V_{A} $ to appear at Y, $ V_{A} $ would have changed to another value say $ V_{B} $, so when a voltage at Y is $ V_{B} $ say, the voltage at X is $ V_{A} $. In other words, there is a potential difference between X and Y. This difference is related to the length of the cable, the more the length the more the difference. With L very small, $ V_{x} $ is close to $ V_{y} $ as the points A and B will be close to each other and the voltage difference will not be substantial. The important thing here is no matter how small the length we take, there will always be that voltage difference $ V_{x} – V_{y} = 0 $ if $ L \rightarrow 0 $.
 
 As we increase the frequency, the role of the transit time effect becomes more and more important. So now to the big question; \textit{When do you neglect transit time effect and when do you incorporate it in your design?}
 
-If $ V_{x} – V_{y} $ is small, the transit time effect can be neglected otherwise it should be taken into consideration. Generally, if  $ t_{r} \ll T $ (period of signal) neglects transit time effect but if $ t_{r} $ is comparable to T (signal period), then we have to incorporate the effect of transit time in other words, when carrying out circuit analysis, the size of the structures has started playing a role in the analysis.
+If $ V_{x} – V_{y} $ is small, the transit time effect can be neglected otherwise it should be taken into consideration. Generally, if  $ t_{r} \ll T $ (period of signal), neglect transit time effect but if $ t_{r} $ is comparable to T (signal period), then we have to incorporate the effect of transit time in other words, when carrying out circuit analysis, the size of the structures will play a role in the analysis.
 $$ T \gg t_{r}\ \ \ \ \ \ (\text{neglect transit time})$$\\\\
- Recall T = $   \frac{1}{f}  $, $ t_{r} = \frac{L}{v} $ and $ \lambda = \frac{v}{f} $\ \ \ \ \ \ hence; 
+ Recall, T = $   \frac{1}{f}  $, $ t_{r} = \frac{L}{v} $ and $ \lambda = \frac{v}{f} $\ \ \ \ \ \ hence; 
 
-$ \frac{1}{f} \gg \frac{L}{v} $ or $ \frac{v}{f} \gg L $ \\\\
+if \hspace{0.05in}  $ \frac{1}{f} \gg \frac{L}{v} $ or $ \frac{v}{f} \gg L $ \\\\
 Thus, $ \lambda \gg L $ \ as a result, the transit time effect is neglected.
 
 \section{Analysis of Transmission line}
@@ -190,7 +190,7 @@ By differentiating equations \ref{eqn:deltav} and \ref{eqn:deltai} again, we hav
 \frac{d^{2}I}{dx^{2}} = - (G + j\omega C)\frac{dv}{dx}
 \label{eqn:delta2i}
 \end{align}
-Substituting equation \ref{eqn:delta2v} into \ref{eqn:delta2i} we have,
+Substituting equation \ref{eqn:deltai} into \ref{eqn:delta2} we have,
 \[ 	\frac{d^{2}V}{dx^{2}} = - (R + j\omega L)\times {- (G + j\omega C)V} \]
 \begin{align}
  \frac{d^{2}V}{dx^{2}} = (R + j\omega L)(G + j\omega C)V 

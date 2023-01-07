@@ -130,7 +130,7 @@ Z(l) = Z_0\left[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0co
 The impedance at any point $l$ is related to the load impedance $Z_L$ and the characteristics impedance $Z_0$ by the above relationship. This enables us to move $Z_L$ to any point along the transmission line. Hence at $l = 0$, we have $Z_L$ but at $l = L$, the input impedance measured at the generator end will not be $Z_L$. It will depend on $Z_L$ and also the length of the line. So, if the length of the line keeps varying, the impedance you measure at the input end of the line will keep varying. 
 
 Hence, if we design a circuit at high frequency and connect a load to the end, depending on the length of the transmission line, the input impedance will keep varying with length. From a circuit perspective, the input impedance is very important. So at high frequencies, the length connecting the load to the circuit matters as the input impedance seen by the generator varies with length.\\\\
-From Equation~\ref{eqn:imp}:
+From Equation \ref{eqn:imp}:
 \begin{align*}
 Z(l) = Z_0\left[\frac{Z_Lcosh\gamma l + Z_0sinh\gamma l}{Z_Lsinh\gamma l + Z_0cosh\gamma l}\right]
 \end{align*}
@@ -311,17 +311,17 @@ $(1 + x)^{\frac{1}{2}} = \frac{1}{2}C_0(1)^{\frac{1}{2}}x^0 + \frac{1}{2}C_1(1)^
 $\frac{1}{2}C_0(1)^{\frac{1}{2}}x^0 = 1$\\\\
 $\frac{1}{2}C_1(1)^{\frac{1}{2} - 1}x = \frac{1}{2}C_1(1)x$\\\\
 Note that 1 to the power of any value is 1 provided it is not infinity.\\\\
-$\frac{1}{2}C_1 = \frac{\frac{1}{2}! x}{[\frac{1}{2} - 1]! 1!} = \frac{[\frac{1}{2}]!x}{[-\frac{1}{2}]1!} = \frac{[\frac{1}{2}][1 - \frac{1}{2}]!x}{[-\frac{1}{2}]!} = \frac{1}{2}x$\\\\
+$\frac{1}{2}C_1 = \frac{\frac{1}{2}! x}{[\frac{1}{2} - 1]! 1!} = \frac{[\frac{1}{2}]!x}{[-\frac{1}{2}]!1!} = \frac{[\frac{1}{2}][\frac{1}{2} - 1]!x}{[-\frac{1}{2}]!} = \frac{1}{2}x$\\\\
 $n! = n(n - 1)!$\\\\
 $(1 + x)^{\frac{1}{2}} = 1 + \frac{1}{2}x + .....$\\\\
 $(1 - x)^{\frac{1}{2}} = 1 - \frac{1}{2}x + .....$\\\\
 Hence from the equation
 $jw\sqrt{LC}(1 - \frac{\jmath R}{wL})^{\frac{1}{2}}(1 - \frac{\jmath G}{wC})^{\frac{1}{2}}$\\\\
-Let $x = \frac{\jmath R}{\omega L}$ and $x^1 = \frac{\jmath G}{\omega C}$\\\\
-$(1 - \frac{\jmath R}{\omega L})^{\frac{1}{2}} =[1 - \frac{1}{2}\frac{\jmath G}{\omega C} - ....]$\\\\
-$(1 - \frac{jG}{\omega C})^{\frac{1}{2}} =[1 - \frac{1}{2}\frac{\jmath R}{\omega L} - ....]$\\\\
-$= jw\sqrt{LC}(1 - \jmath \frac{R}{2\omega L} - ...)(1 - j\frac{G}{2\omega C} - ...)$\\\\
-$= jw\sqrt{LC} [1- [\frac{\jmath R}{2\omega L}] - [\frac{\jmath G}{2\omega C}] -  [\frac{\jmath R}{2\omega L}][\frac{\jmath G}{2\omega C}]]$\\\\
+Let $x = \frac{\jmath R}{\omega L}$ and $x_1 = \frac{\jmath G}{\omega C}$\\\\
+$(1 - \frac{\jmath R}{\omega L})^{\frac{1}{2}} =[1 - \frac{1}{2}\frac{\jmath G}{\omega C} + ....]$\\\\
+$(1 - \frac{jG}{\omega C})^{\frac{1}{2}} =[1 - \frac{1}{2}\frac{\jmath R}{\omega L} + ....]$\\\\
+$= jw\sqrt{LC}(1 - \jmath \frac{R}{2\omega L} + ...)(1 - j\frac{G}{2\omega C} + ...)$\\\\
+$= jw\sqrt{LC} [1- [\frac{\jmath R}{2\omega L}] - [\frac{\jmath G}{2\omega C}] + [\frac{\jmath R}{2\omega L}][\frac{\jmath G}{2\omega C}]]$\\\\
 Recall that two combination terms were used earlier because of the complex variable $\frac{jR}{wL}$ and $\frac{\jmath G}{\omega C}$, the product of $\frac{\jmath R}{2\omega C}$ and $\frac{\jmath G}{2\omega L}$ tends to zero since $R \ll wL$ and $G \ll \omega C$ for a low loss transmission line.\\\\
 $= \jmath\omega\sqrt{LC} [1- [\frac{\jmath R}{2\omega L}] - [\frac{\jmath G}{2\omega C}]]$\\\\
 Expanding we have,
@@ -330,7 +330,7 @@ Expanding we have,
 \end{align*}
 Where L = $\sqrt{L} \times \sqrt{L}$ and C = $\sqrt{C} \times \sqrt{C}$, we have
 \begin{align*}
-= \jmath\omega\sqrt{LC} + \frac{R\sqrt{L}\sqrt{C}}{2\omega\sqrt{L}\sqrt{L}} + \frac{G\sqrt{L}\sqrt{C}}{2\omega\sqrt{C}\sqrt{C}}
+= \jmath\omega\sqrt{LC} + \frac{R\sqrt{L}\sqrt{C}}{2\sqrt{L}\sqrt{L}} + \frac{G\sqrt{L}\sqrt{C}}{2\sqrt{C}\sqrt{C}}
 \end{align*}
 \begin{align*}
 = \jmath\omega\sqrt{LC} + \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} 
@@ -360,10 +360,10 @@ $jw$ will cancel out, leaving us with
 \end{align*}
 From Binomial expansion, we have that:
 \begin{align*}
-Z_0 = \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} - ...\right)\left(1 - \jmath\frac{G}{2\omega C} - ...\right)
+Z_0 = \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} + ...\right)\left(1 - \jmath\frac{G}{2\omega C} + ...\right)
 \end{align*}
 \begin{align*}
-= \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} - \jmath\frac{G}{2\omega C} - \text{...smaller terms}\right)
+= \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} - \jmath\frac{G}{2\omega C} + \text{...smaller terms}\right)
 \end{align*}
 The characteristic impedance is no more real but complex. Its real value is the same as that of a lossless line. We have a small imaginary part which implies the presence of losses in the transmission line.\\
 
