@@ -78,7 +78,8 @@ A voltage wave at ${1GH}z$ is traveling on a transmission line in ${+x}$ directi
 $ \omega = 2\pi\times 10^{9} $ rad/sec\\
 Propagation constant $\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}$
 \begin{dmath*}
-\gamma = \sqrt{(0.5 + \jmath( 2\pi\times 10^{9} \times 0.2\times 10^{-6}))(0.1 + \jmath (2\pi\times 10{9} \times 10^{-12}))} \quad
+\gamma=\\
+ \sqrt{(0.5 + \jmath( 2\pi\times 10^{9} \times 0.2\times 10^{-6}))(0.1 + \jmath (2\pi\times 10{9} \times 10^{-12}))} \quad
 \end{dmath*}
 
 $ = 2.23 + \jmath 28.2$ per metre\\ 
@@ -86,17 +87,17 @@ $\gamma = \alpha + \jmath\beta$\\
 where $\alpha$ = Attenuation constant and $\beta$ = Phase constant\\
 
 $\Rightarrow \alpha$ = 2.23 \emph{Nepers/m} and $\beta$ = 28.2 \emph{rad/m}\\
-but 1 Nepers = 8.68\emph{dB/m}\\
-$\Rightarrow$ 2.23 \emph{Nepers/m} = 2.23$\times$8.68= 19.36 \emph{dB}\\\\
+but 1 Nepers/m = 8.68\emph{dB/m}\\
+$\Rightarrow$ 2.23 \emph{Nepers/m} = 2.23$\times$8.68= 19.36 \emph{dB/m}\\\\
 Now to find $V_{(x,t)}$, we shall express $V_{(x,t)}$ in general as \\\\
 $V_{(x,t)} = (V^{+}e^{-\gamma x} + V^{-}e^{+\gamma x})e^{j\omega t}$ for forward and backward wave.\\\\
 Since we are dealing with only forward wave $ V^{-} = 0 $.\\\\
 $V_{(x,t)} = V^{+}e^{-\gamma x}e^{j\omega t}$\\\\
-$V_{(x,t)} = Re({V^{+}e^{-(\alpha +j\beta)x}e^{-j\omega t}})$\\\\
-$V_{(x,t)} = Re({V^{+}e^{-\alpha x}e^{-j\beta x}e^{-j\omega t}})$\\\\
-$V_{(x,t)} = Re({V^{+}e^{-\alpha x}e^{-j(\omega t + \beta x)}})$\\\\The real or imaginary part is sufficient to characterize the sinusoidal variation with time, ${e^{j\omega t}}$ is very general.\\\\
+$V_{(x,t)} = Re({V^{+}e^{-(\alpha +j\beta)x}e^{j\omega t}})$\\\\
+$V_{(x,t)} = Re({V^{+}e^{-\alpha x}e^{-j\beta x}e^{j\omega t}})$\\\\
+$V_{(x,t)} = Re({V^{+}e^{-\alpha x}e^{j(\omega t - \beta x)}})$\\\\The real or imaginary part is sufficient to characterize the sinusoidal variation with time, ${e^{j\omega t}}$ is very general.\\\\
 ${V^+}$ has an amplitude and initial phase. Hence, it is a complex quality expressed as $ V^{+} = |V^{+}|e^{\jmath\phi} $, $ |V^{+}| =$ Amplitude and $ \phi =$ initial phase\\\\
-$V_{(x,t)} = Re({|V^{+}|e^{-j\phi}e^{+(\omega t - \beta x)}})$\\\\
+$V_{(x,t)} = Re({|V^{+}|e^{-\alpha x}e^{j\phi}e^{j(\omega t - \beta x)}})$\\\\
 $V_{(x,t)} = Re({|V^{+}|e^{-\alpha x}e^{j(\phi+\omega t - \beta x)}})$\\\\
 $V_{(x,t)} = Re({|V^{+}|e^{-2.23x}e^{(\phi+2\pi10^9t-28.2x)}})$\\\\
 At $ x = 0, t = 0, \quad \quad V(x,t) = 8.66V $ then at these values\\\\ 
@@ -122,7 +123,7 @@ This is one of the simplest problem of a Transmission Line, where the primary co
 \begin{center}
 \textbf{PROBLEM 2}
 \end{center}
-If the wave in the previous example is traveling in the negative ${-x}$ direction, wish all other things same. Find the instantaneous  voltage at the same time and at the same location?\\
+If the wave in the previous example is traveling in the negative ${x}$ direction, with all other things same. Find the instantaneous  voltage at the same time and at the same location.\\
 \begin{center}
 \textbf{SOLUTION}
 \end{center}
@@ -145,7 +146,7 @@ $V_({x,t}) = 10e^{2.23} cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-
 \includegraphics[scale=0.5]{./graphics/Group98}
 \caption{Diagram for Problem 2}
 \end{figure}
-So what we note here is, if we look at the transmission line with ${x=0}$ and ${x=1m}$. If the wave travels in forward direction, then the wave will attenuate in the direction of propagation. The variation is from ${8.66V}$ to ${-0.88V}$. In the backward direction, the wave will attenuate in the reverse direction so it has to  have a higher amplitude at ${x=1m}$ and ${x=100nsec}$ from were it attenuates from ${-83.7701V}$ to ${8.66V}$ in the other direction. The direction of propagation of the wave is very important.\\
+So what we note here is, if we look at the transmission line with ${x=0}$ and ${x=1m}$. If the wave travels in forward direction, then the wave will attenuate in the direction of propagation. The variation is from ${8.66V}$ to ${-0.88V}$. In the backward direction, the wave will attenuate in the reverse direction so it has to  have a higher amplitude at ${x=1m}$ and ${t=100nsec}$ from were it attenuates from ${-83.7701V}$ to ${8.66V}$ in the other direction. The direction of propagation of the wave is very important.\\
 \begin{center}
 \textbf{PROBLEM 3}
 \end{center}
@@ -167,8 +168,8 @@ Remember
 ${\alpha = \frac{\beta}{100}}$\\\\
 Since ${\beta = \pi}$\\\\
 ${\alpha = \frac{\beta}{100} = \frac{\pi}{100} = \frac{R}{100}}$\\\\
-${\pi = R}$\\\\ 
-So for this transmission line taking a resistance of ${3\Omega /m}$. It can be treated as a low loss transmission line. If ${R>\pi}$ say ${4\Omega}$, it is no more a lossless transmission line and it slowly become a lossy transmission line. When ${R}$ increases to the point that ${\alpha\approx\beta}$, then the line becomes extremely lossy.\newpage
+${R = \pi\Omega/m}$\\\\ 
+So for this transmission line taking a resistance of ${3\Omega /m}$. It can be treated as a low loss transmission line. If ${R>\pi}$ say ${4\Omega}$, it is no more a low loss transmission line and it slowly become a lossy transmission line. When ${R}$ increases to the point that ${\alpha\approx\beta}$, then the line becomes extremely lossy.\newpage
 
 \begin{center}
 \textbf{SUMMARY}

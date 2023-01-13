@@ -56,7 +56,7 @@ Therefore,  $\frac{1}{2} (\frac{R}{\omega L} + \frac{G}{\omega C}) \ll 1$\\
 
 $\alpha = \beta \;\; \times$ (something far smaller than 1).\\
 Hence, for a low-loss transmission line, $\alpha \ll \beta$ where $\beta = \frac{2 \pi}{\lambda}$.
-Considering a wave which travels a distance of 1 wavelength along the transmission line, its phase change$(\beta)$ becomes $2\pi$ i.e $\beta= 2 \pi$, then the amplitude of the wave varies by:
+Considering a wave which travels a distance of one wavelength along the transmission line, its phase change$(\beta)$ becomes $2\pi$ i.e $\beta= 2 \pi$, then the amplitude of the wave varies by:
 \begin{equation*}
 e^{-\alpha x} = e^{-\alpha \lambda}	
 \end{equation*}
@@ -68,7 +68,7 @@ Since for a low-loss transmission line $\alpha<<\beta$, therefore the quantity $
 Hence, amplitude reduction is very small as the original amplitude is close to the final amplitude. So, a line can be treated as a low-loss transmission line if the change in amplitude over one wavelength is negligibly small. Let our negligibly small be 1 per cent.\\\\ 
 $\frac{\alpha 2 \pi}{\beta} \approx \frac{1}{100}$, $ e^{-0.01} = 0.99005$ of the initial value.\\\\
 The wave amplitude only reduces by $1-0.99005=0.00995$ or 1 per cent. That means the wave amplitude only reduces by 1 per cent after a distance of 1 wavelength.\\\\
-A line can be treated as a low-loss transmission line if $\alpha \ll \beta$ depending on the given frequency but if the frequency changes such that $\alpha \geq \beta$, the line can not be treated as a low-loss transmission line.\\
+A line can be treated as a low-loss transmission line if $\alpha \ll \beta$ depending on the given frequency but if the frequency changes such that $\alpha \geq \beta$, the line cannot be treated as a low-loss transmission line.\\
 
 \begin{exmp}
 Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G = 0$, what is the resistance of the transmission line so that the line can be treated as a low-loss transmission line given the frequency of operation as $100MHz$ ?\\\\
@@ -78,7 +78,7 @@ $\beta = 2\pi \ f {\sqrt{LC}}$
 \begin{equation*}
 =2 \pi \times 10^8 \sqrt{(0.25 \times 10^{-6}) \times (100 \times 10^{-12})}  = \pi rad/m
 \end{equation*}\\
- For a low-loss transmission line, taking 1 per cent of $\beta$,
+ For a low-loss transmission line, taking 1 percent of $\beta$,
 $ \alpha= \frac{1}{100} \beta = \frac{\pi}{100}$.\\\\
 Also,
 \begin{equation*}
@@ -205,7 +205,7 @@ The magnitude $( 1+|\Gamma_L|  e^{j(\phi_L -2 \beta l)})$ varies as we move alon
  From figure 5.3 \footnote{\includegraphics[scale=0.15]{./graphics/picture4} 
 
 Argand Diagram refers to a geometric plot of complex numbers as points z = x+iy using the x-axis as the real axis and the y-axis as the imaginary axis. Such plots are named after Jean-Robert Argand(1768-1822), although they were first described by Norwegian-Danish land surveyor and mathematician Casper Wessel (1745-1818.)}Argand Diagram below, \\
-$ A =| 1+| \Gamma_L| e^{j (\phi_L - 2\beta l)}|$ \quad \quad$, B=| \Gamma_L|$\\\\
+$ A =| 1+| \Gamma_L| e^{j (\phi_L - 2\beta l)}|$ \quad$, B=| \Gamma_L|$\\\\
 $Phase\ angle = \phi_L - 2 \beta l$.\\\\
 If $ \phi_L - 2 \beta l = 2 \pi n$, where n is an integer, then $ e^{j(\phi_L - 2 \beta l)} = 1$. This is the right side of the dot on the real axis.\\\\ 
 Also, if $\phi_L - 2 \beta l=(2 n + 1) \pi$, then $e^{j (\phi_L - 2 \beta l)} = -1$. This is the left side of the dot on the real axis.
@@ -279,7 +279,7 @@ So, $	|\Gamma_L| = \frac{Z_L-Z_o}{Z_L+Z_o}$ is always less than 1 i.e
 \begin{equation*}
 |\Gamma_L|\leq 1\Longrightarrow \ for \ a \ passive\ load.
 \end{equation*}
-This makes sense because $|\Gamma_L|$ is the relative amplitude of the reflected wave with respect to the incident wave. Since we do not have any energy source at the load point, part of the energy can only be reflected (energy supplied by the generator). So the amplitude of the reflected wave has to always be less than or equal to the incident wave.\\\\
+This makes sense because $|\Gamma_L|$ is the relative amplitude of the reflected wave with respect to the incident wave. Since we do not have any energy source at the load point, part of the energy can only be reflected (energy supplied by the generator). So the amplitude of the reflected wave has to always be less than or equal to the amplitude of the incident wave.\\\\
 Conditions for which $|\Gamma_L|=1$ :\\\\
 \textbf{Case 1}:$Z_L=0$ (the line is short-circuited at the load end)
 \begin{equation*}	

@@ -33,7 +33,7 @@ From the Equation \ref{eqn3.2}, we see that as the wave propagates i.e as the va
 
 Named after Leonhard Euler (15 April 1707 - 18 September 1783). He was a Swiss mathematician, physicist, astronomer, logician and engineer who made important and influential discoveries in many branches of mathematics like infinitesimal calculus and graph theory. He was a friend of Daniel Bernoulli.
 } 
-$e^{-\jmath\beta x} = \cos{x} - \jmath \sin{ \beta x}$. Hence phase (space phase) is obtained from $e^{-\jmath\beta x}$.\\
+$e^{-\jmath\beta x} = \cos{\beta x} - \jmath \sin{ \beta x}$. Hence phase (space phase) is obtained from $e^{-\jmath\beta x}$.\\
 
 We now see that the equation 
 \begin{equation}
@@ -75,9 +75,9 @@ From Figure~\ref{fig:VversusXcurve}, $\alpha$ is a parameter that measures how f
 If $\alpha$ = 1(Nepers/meter)\footnote{
 \includegraphics[scale=0.2]{./graphics/johnnapier2}
 
-The unit's name is derived from the name of John Napier. John Napier of Merchiston (1550 – 4 April 1617); also signed as Neper, Nepair; nicknamed Marvellous Merchiston, was a Scottish landowner known as a mathematician, physicist, and astronomer. He is best known as the discoverer of logarithms, he also invented the so-called "Napier's bones"}, then the voltage value will reduce from its initial value to $\frac{1}{e}$ for a distance x = 1 meter. So $\alpha$ relates the distance over which the amplitude drops to $\frac{1}{e}$ of its initial value. This length at which we get $\frac{1}{e}$ is called the \textbf{Characteristic Length}. 
+The unit's name is derived from the name of John Napier. John Napier of Merchiston (1550 – 4 April 1617); also signed as Neper, Nepair; nicknamed Marvellous Merchiston, was a Scottish landowner known as a mathematician, physicist, and astronomer. He is best known as the discoverer of logarithms, he also invented the so-called \textquotesingle\textquotesingle Napier's bones\textquotesingle\textquotesingle}, then the voltage value will reduce from its initial value to $\frac{1}{e}$ for a distance x = 1 meter. So $\alpha$ relates the distance over which the amplitude drops to $\frac{1}{e}$ of its initial value. This length at which we get $\frac{1}{e}$ is called the \textbf{Characteristic Length}. 
 
-So, a distance $x = \frac{1}{\alpha}$ tells you the effective travel distance in the transmission line beyond which the amplitude drops below $\frac{1}{e}$ of its initial value. Since the wave is reducing to $\frac{1}{e}$ of its initial value, the power of the wave also reduces. Taking the ratio of the initial amplitude and final amplitude after the effective travel distance we have the;
+So, a distance $x = \frac{1}{\alpha}$ tells you the effective travel distance in the transmission line beyond which the amplitude drops below $\frac{1}{e}$ of its initial value. Since the wave is reducing to $\frac{1}{e}$ of its initial value, the power of the wave also reduces. Taking the ratio of the initial amplitude and final amplitude after the effective travel distance we have;
 \begin{align*}
  \frac{\lvert V^+\rvert}{\lvert V^+\rvert e ^{-\alpha x}} \quad \text{because the initial amplitude at } x = 0
 \end{align*}
@@ -161,7 +161,7 @@ $ \phi + \omega t - \beta x $ gives the phase (including the initial phase $ \ph
 
 Substituting x = 0, t = 0, and $\phi = 30^o$ into equation~\ref{eqn:voltagesoln},
 \begin{align*}
-V(x,t) = V(0,0) = 8.66v \\
+V(x,t) = V(0,0) &= 8.66v \\
 V(x,t) &= \lvert V^+\rvert cos(\phi + \omega (0) - \beta (0)e^{-\alpha (0)}\\
 8.66 &= \lvert V^+\rvert cos(\phi)\\
 8.66 &= \lvert V^+\rvert cos(30)\\
@@ -183,7 +183,7 @@ V_{max} &= 1.07v
 We observe from the solution that attenuation took place since the amplitude reduced from 8.66v to -0.88v.\\ \\
 If the wave travels from right to left
 \begin{align*}
-V(x,t) &= Re{[V^+ e^{+\alpha x}.e^{+\jmath\beta x + \jmath\omega t}e^{+\jmath\phi}]}\\
+\hspace{-0.25in}V(x,t) &= Re{[V^+ e^{+\alpha x}.e^{+\jmath\beta x + \jmath\omega t}e^{+\jmath\phi}]}\\
 &= \lvert V^+\rvert cos(\phi + \omega t + \beta x)e^{+\alpha x}\\
 &= 10 cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} + 28.18\times 1)e^{+2.235\times 1}\\
 &= 10 \times -0.9093 \times e^{+2.235}\\
@@ -202,8 +202,8 @@ V = V^+e^{-\gamma x}+V^-e^{+\gamma x}\quad and \quad I = I^+e^{-\gamma x}+I^-e^{
 \end{align*}
 Substituting $V$ and $I$ into the differential equation,
 \begin{align*}
-\frac{d}{dx}(V^+e^{-\gamma x}+V^-e^{+\gamma x}) &= -(R+\jmath\omega L)\{I^+e^{-\gamma x}+I^-e^{+\gamma x}\}\\
--\gamma V^+e^{-\gamma x}+\gamma V^-e^{+\gamma x} &= -(R+\jmath\omega L)\{I^+e^{-\gamma x}+I^-e^{+\gamma x}\}
+\frac{d}{dx}(V^+e^{-\gamma x}+V^-e^{+\gamma x}) &= -(R+\jmath\omega L)(I^+e^{-\gamma x}+I^-e^{+\gamma x})\\
+-\gamma V^+e^{-\gamma x}+\gamma V^-e^{+\gamma x} &= -(R+\jmath\omega L)(I^+e^{-\gamma x}+I^-e^{+\gamma x})
 \end{align*}
  $(V^+,I^+)$ represent forward traveling waves, while $(V^-,I^-)$ represent backward traveling waves for voltage and current respectively. The relationship between voltage and current has to be satisfied at every point along the transmission line. This will happen if and only if
 \begin{align*}
