@@ -184,12 +184,12 @@ V_{max} &= 1.07v
 We observe from the solution that attenuation took place since the amplitude reduced from 8.66v to -0.88v.\\ \\
 If the wave travels from right to left
 \begin{dmath*}
-V(x,t) &= \mathfrak{Re}{[V^+ e^{+\alpha x}.e^{+\jmath\beta x + \jmath\omega t}e^{+\jmath\phi}]}
+V(x,t) = \mathfrak{Re}{[V^+ e^{+\alpha x}.e^{+\jmath\beta x + \jmath\omega t}e^{+\jmath\phi}]}
 = \lvert V^+\rvert cos(\phi + \omega t + \beta x)e^{+\alpha x}
 = 10 cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} + 28.18\times 1)e^{+2.235\times 1}
 = 10 \times -0.9093 \times e^{+2.235}
-&= -84.99v
-\end{align*} 	
+= -84.99v
+\end{dmath*} 	
 \end{exmp}
 
 \section{The Characteristic Impedance}
@@ -208,11 +208,14 @@ Substituting $V$ and $I$ into the differential equation,
 \end{align*}
  $(V^+,I^+)$ represent forward traveling waves, while $(V^-,I^-)$ represent backward traveling waves for voltage and current respectively. The relationship between voltage and current has to be satisfied at every point along the transmission line. This will happen if and only if
 \begin{align*}
--\gamma V^+e^{-\gamma x} &= -(R+\jmath\omega L)I^+e^{-\gamma x}\quad and\quad \frac{V^+}{I^+} = \frac{R+\jmath\omega L}{\gamma}\\
-Also,    \ \ \ \ \                &\\
+-\gamma V^+e^{-\gamma x} &= -(R+\jmath\omega L)I^+e^{-\gamma x}\quad and\quad \frac{V^+}{I^+} = \frac{R+\jmath\omega L}{\gamma}
+\end{align*}
+Also, 
+\begin{align*}
 \gamma V^-e^{+\gamma x} &= -(R+\jmath\omega L)I^-e^{+\gamma x}\quad and\quad \frac{V^-}{I^-} = -\frac{R+\jmath\omega L}{\gamma}
 \end{align*}
-The expressions above show the relationship between forward and backward travelling waves for voltage and current.\\ \\
+The expressions above show the relationship between forward and backward travelling waves for voltage and current.
+
 Recall that $\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}$, therefore
 \begin{align*}
 \frac{V^+}{I^+} = \frac{R+\jmath\omega L}{\sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}}
