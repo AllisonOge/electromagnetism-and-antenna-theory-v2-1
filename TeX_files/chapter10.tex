@@ -40,7 +40,7 @@ After that, estimate $\beta$ from $\beta$ = $2\pi/\lambda$ . Hence, we measure $
 
 Once we take measurement of $|V|_{max}$ and $|V|_{min}$, then we calculate for $ \rho $. We then find the maximum and minimum impedance which one can see in the Transmission Line. So at $l_{min}$ we have $R_{min}$ at that point and $R_{min}$ = $\frac{Z_o}{\rho}$. Once $R_{min}$ is known at $l_{min}$, the calculation of unknown impedance is simply an impedance transformation problem. We recall that once the impedance at any point on the transmission line is known, the impedance at any other point can be calculated using the impedance transformation relationship.
 
-Since we know $R_{min}$ = $\frac{Z_o}{\rho}$ at $l_{min}$ from the load, we can transform this impedance by a distance $l_min$ away from the generator, so that its impedance is equal to terminating impedance $Z_{L}$. So the unknown impedance is nothing but the transformation of $R_{min}$ = $\frac{Z_o}{\rho}$ by $l_{min}$ to the load side of the generator. 
+Since we know $R_{min}$ = $\frac{Z_o}{\rho}$ at $l_{min}$ from the load, we can transform this impedance by a distance $l_{min}$ away from the generator, so that its impedance is equal to terminating impedance $Z_{L}$. So the unknown impedance is nothing but the transformation of $R_{min}$ = $\frac{Z_o}{\rho}$ by $l_{min}$ to the load side of the generator. 
 \begin{align}
 Z_{L} = Z_o\frac{R_{min}\cos(-\beta l_{min}) + jZ_o\sin(-\beta l_{min})}{Z_o\cos(-\beta l_{min}) + jR_{min}\sin(-\beta l_{min})}
 \end{align}
@@ -57,9 +57,9 @@ Z_{L} = Z_o\left(\frac{R_{min}\cos\beta l_{min} - jZ_o\sin\beta l_{min}}{Z_o\cos
 {\footnotesize 
 \begin{dmath}
 Z_{L} = Z_o
-\frac{Z_oR_{min}\cos^{2}\beta l_{min} + Z_oR_{min}\sin^{2}\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}} +j\frac{R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}}
+\frac{Z_oR_{min}\cos^{2}\beta l_{min} + Z_oR_{min}\sin^{2}\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}} +j\frac{(R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}}
 \end{dmath}}
-Recall $ \cos^{2}(A) + \sin^{2} = 1 $ and $ \frac{\cos(A)}{\sin(A)} = \tan(A) $
+Recall $ \cos^{2}(A) + \sin^{2}(A) = 1 $ and $ \frac{\sin(A)}{\cos(A)} = \tan(A) $
 \begin{dmath}
 Z_{L} = Z_o\frac{Z_oR_{min} + j(R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min})}{(Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}
 \end{dmath}
@@ -83,7 +83,7 @@ Z_{L} = Z_o [ \rho (1 + \tan^{2}\beta l_{min}) + j(1-\rho^{2})\tan\beta l_{min}]
 \end{align*}
 Denominator changes thus:
 \begin{align*}
-\frac{1}{R_{min}^{2}}{(Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})} = \rho^{2} + \tan^{2}\beta l_{min}
+\frac{1}{R_{min}^{2}}{(Z_o^{2} + R_{min}^{2}\tan^{2}\beta l_{min})} = \rho^{2} + \tan^{2}\beta l_{min}
 \end{align*}
 We have:
 {\footnotesize
@@ -108,10 +108,10 @@ To avoid error, we define the location of the load by replacing it with a short 
 \end{enumerate}
 For short circuits, we identify the exact location of minimum voltage by the standing wave, which becomes our origin for the unknown load impedance measurement of $l_{min}$.
 
-Hence the superposition of the load standing wave pattern on the short circuit standing wave is shown below.
+Hence the superposition of the load standing wave pattern on the short circuit standing wave is shown in figure~\ref{fig:group10diagram2}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/group10diagram2}
+\includegraphics[width=1\linewidth]{./graphics/group10diagram2}\label{fig:group10diagram2}
 \caption{Superposition of the load standing wave pattern and the short circuit standing wave}
 \end{figure}
 
@@ -140,12 +140,12 @@ Similarly, suppose we take a capacitor at low frequency, it will exhibit its ide
 \caption{An capacitor at Low frequency and then at High frequency}
 \end{figure}
 
-Hence we can reliably design an inductor at low frequencies. But at high frequencies, its reliability is very poor because the inductor is no longer ideal. Similarly for a capacitor at high frequencies, the lead inductance starts to predominate and the capacitor no longer exhibit its ideal characteristics. So at high frequency realizing a reactive element is not that easy because, we do not have a reliable circuit element which will guarantee its use as a capacitor or inductor. When the frequency is increasing, the wavelength is becoming smaller as we have seen earlier. 
+Hence we can reliably design an inductor at low frequencies. But at high frequencies, its reliability is very poor because the inductor is no longer ideal. Similarly for a capacitor at high frequencies, the lead inductance starts to predominate and the capacitor no longer exhibit its ideal characteristics. So at high frequency, realizing a reactive element is not that easy because, we do not have a reliable circuit element which will guarantee its use as a capacitor or inductor. When the frequency is increasing, the wavelength is becoming smaller as we have seen earlier. 
 If you consider a short or open circuit line, the input impedance of these lines would behave like a reactance.
 
 So as the frequency increases and the wavelength getting smaller, the size of a transection (a small lineal element) of a transmission line which can give you impedance which is reactive, becomes more physically realizable.
 Two things have become clear when working with transmission
-Line;
+Lines;
 \begin{enumerate}[(i)]
 \item The lumped circuit are becoming more difficult to realize at high frequency.
 \item Realization of reactance by using transmission lines section is becoming easier, because the wavelength is becoming smaller and sections of the transmission line are becoming more feasible.
@@ -163,11 +163,11 @@ the outermost circle which has r = 0 implies we are tracing
 out pure reactance. Moving clockwise in this outermost circle,
 shows how much length (in terms of wavelength) you move from
 the load towards the generator, so that at any point on this outer
-circle we get a pure reactance. We can assume the presence of
+circle, we get a pure reactance. We can assume the presence of
 that reactance at that point, from the open or short circuit end
 towards the signal source or generator.
-Hence for a load of open or short circuit, by using different length of transmission line, we can get different reactance at the input. So the question is what should be the length of the transmission line, so one gets a particular value of reactance at the input?\\
-Analytically...
+Hence for a load of open or short circuit, by using different length of transmission line, we can get different reactance at the input. So the question is what should be the length of the transmission line, so that one gets a particular value of reactance at the input?\\
+Analytically,
 $ l $ is the distance towards the generator.\\ Recall for a LOSSLESS Transmission Line which we assume unless stated otherwise.
 \begin{align*}
 Z_{L} = Z_o \{ \frac{Z_{L}\cos\beta l + jZ_o\sin\beta l}{Z_o\cos\beta l + jZ_{L}\sin\beta l}\}  
@@ -198,19 +198,19 @@ $ Z_{(L)} = jZ_o\tan\beta l \Rightarrow $ short circuit\\
 $ Z_{(L)} = -jZ_o\cot\beta l \Rightarrow $ open circuit
 \end{center}
 Hence the problem of realizing a given reactance from open or short circuit load is to just find $ l $ to get the appropriate $Z_{(L)}$. 
-Let $l_{SC}$ and $l_{OC}$ represent short circuit and open circuit length respectively, then we have $ X = jZ_o\tan\beta l $ and $ X = -jZ_o\cot\beta l $ for short circuit and open circuit respectively. Since the phase constant $ \beta $ is known for the transmission line, we make $ l_{SC} $ and $ l_{OC} $ the subject of the formula, we already know the reactance (X) we require, so that 
+Let $l_{SC}$ and $l_{OC}$ represent short circuit and open circuit length respectively, then we have $ X = jZ_o\tan\beta l_{sc} $ and $ X = -jZ_o\cot\beta l_{oc} $ for short circuit and open circuit respectively. Since the phase constant $ \beta $ is known for the transmission line, we make $ l_{SC} $ and $ l_{OC} $ the subject of the formula, we already know the reactance (X) we require, so that 
 \begin{align}
 l_{SC} = \frac{1}{\beta}\tan^{-1}\frac{X}{Z_o}, l_{OC} = \frac{1}{\beta}\cot^{-1}\frac{-X}{Z_o}
 \end{align}
 
 If the frequency of operation as well as velocity of the wave propagation is known, then we can find $\lambda$ and use $ \beta = \frac{2\pi}{\lambda} $. So we can realize the unknown reactance from using sections of the transmission line. For this calculation, the use of Smith Chart comes in handy. The top half of the impedance Smith Chart at the 
 outermost circle is pure inductance, and the bottom half is for capacitance.
-However, before we get into details of Smith chart usage, we have to be sure that $ X = Z_o\tan\beta l_{SC} $ and $ X = -Z_o\cot\beta l_{OC} $ for all variation of $ \beta l_{SC} $  from 0 to $ 2\pi $, either $ \tan\beta l_{SC} $ or $ \cot\beta l_{OC} $ varies from $ ?\infty$ to $\infty $.\\
+However, before we get into details of Smith chart usage, we have to be sure that $ X = Z_o\tan\beta l_{SC} $ and $ X = -Z_o\cot\beta l_{OC} $ for all variation of $ \beta l_{SC} $  from 0 to $ 2\pi $, either $ \tan\beta l_{SC} $ or $ \cot\beta l_{OC} $ varies from $ -\infty$ to +$\infty $.\\
 
-It means if we change the values of $ l_{SC} $ or $ l_{OC} $ in the Transmission line, then we can realize any arbitrarily value of the reactance, there is no limit to this. So any value of reactance between $ ?\infty$ to $\infty $ can be realized either by short circuited line or open circuited line. The choice of which one to be used whether short circuit or open circuit line, will depend upon the system you want to employ the circuit element.
+It means if we change the values of $ l_{SC} $ or $ l_{OC} $ in the Transmission line, then we can realize any arbitrary value of the reactance. There is no limit to this. So any value of reactance between $ -\infty$ to $+\infty $ can be realized either by short circuited line or open circuited line. The choice of which one to be used whether short circuit or open circuit line, will depend upon the system you want to employ the circuit element.
 For example supposing we have a parallel wire transmission line, then connecting the two ends of the transmission line is rather easy, as we can short the end of the transmission line.\\
 
-However, a transmission line like a Printed Circuit Board (PCB), with ground plane on one side and the line on top separated by a dielectric. To short circuit the line, will we have to drill holes into the Printed Circuit Board using a via, so realizing a short circuit line on that configuration is rather difficult. An open circuit line is preferred. There may be situations where the short circuit line will be preferred over the open circuit line and vice versa. Irrespective of the one used, we will be able to realize all the reactances from  $ ?\infty$ to $\infty $, i.e we can realize any capacitive or inductive reactance by using an open circuited or short circuit section of a transmission line.\\
+However, a transmission line like a Printed Circuit Board (PCB), with ground plane on one side and the line on top separated by a dielectric. To short circuit the line, we will have to drill holes into the Printed Circuit Board using a via, so realizing a short circuit line on that configuration is rather difficult. An open circuit line is preferred. There may be situations where the short circuit line will be preferred over the open circuit line and vice versa. Irrespective of the one used, we will be able to realize all the reactances from  $ -\infty$ to $+\infty $, i.e we can realize any capacitive or inductive reactance by using an open circuited or short circuit section of a transmission line.\\
 
 To find the length, the problem is the opposite of impedance calculation.  Since we know the input impedance $ Z_{in} $ at generator end  and we know terminating impedance ($ Z_{L} $) at the end of the transmission line to be 0 or $ \infty $ whether it is short circuit or open circuit point. We want to find $ l_{SC} $ or $ l_{OC} $, the impedances are known and we want to find the length.
 On the Smith chart, mark normalized impedance ($ \overline{Z_{in}} $) position, and note how much should be moved away from short circuit point $ l_{SC} $ or open circuit point $ l_{oc} $, to get to the short circuit point or open circuit point in counter clockwise direction (since we are moving away from the generator).
@@ -221,7 +221,7 @@ On the Smith chart, mark normalized impedance ($ \overline{Z_{in}} $) position, 
 \end{figure} 
 
 Moving away from the generator to reach the short circuit point, means moving counter clockwise from A till we reach B which is the short circuit point. On the Smith chart, clockwise movement is towards the generator and anticlockwise movement is away from the generator.\\Remember on the Smith chart we always use NORMALIZED values. Hence $ \overline{X} $ not X. To realize a capacitive reactance which will be located at the bottom half of the Smith chart for a start.
-So that we have.
+So that we have,
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./graphics/group10diagram7}
@@ -274,7 +274,7 @@ However in the vicinity of A, B and C the behavior is similar to a parallel LC c
 \caption{Parallel LC Circuit}
 \end{figure}
 
-(ii) At resonance frequency X will become infinity. At lower frequency $ X_{L} $ compared to $ X_{C} $. $ \frac{1}{X_{L}} $ is larger than $ \frac{1}{X_{C}} $. So $ X_{L} $ component dominates in the equivalent X. $ \frac{1}{X} = \frac{1}{X_{C}} + \frac{1}{X_{L}}$
+(ii) At resonance frequency, X will become infinity. At lower frequency, $ X_{L} $ compared to $ X_{C} $, $ \frac{1}{X_{L}} $ is larger than $ \frac{1}{X_{C}} $. So $ X_{L} $ component dominates in the equivalent X. $ \frac{1}{X} = \frac{1}{X_{C}} + \frac{1}{X_{L}}$
 \begin{align*}
 \frac{1}{X_{C}} + \frac{1}{X_{L}} = 0\\
 -jX + jX = 0 (X_{L} = X_{C})\\
@@ -296,10 +296,10 @@ length is 0, $ \frac{\lambda}{2} $ ,$ \lambda $ we see impedances at A, B and C.
 \includegraphics[scale=0.4]{./graphics/group10diagram14}
 \caption{Open Circuit Line impedance change with frequency}
 \end{figure}\\For open circuit line for length around $ \frac{\lambda}{2} $, the line will behave like a parallel resonant circuit because the input impedance will be at infinity. At about $ \frac{\lambda}{4} $, the line is like a short circuit and so behaves like a series resonant circuit. If the length of the line is $ \frac{\lambda}{2} $ the line will behave like a parallel resonant circuit.
-So depending upon whether short circuit line or open circuit line is used, the series or parallel resonance circuit can be realized at different frequencies. So invariably when we go to high frequencies, the line can be realized for getting reactive elements into the circuits. The line can also be used for realizing series or parallel resonance circuit into a high frequency circuits.\\
+So depending upon whether short circuit line or open circuit line is used, the series or parallel resonance circuit can be realized at different frequencies. So invariably, when we go to high frequencies, the line can be realized for getting reactive elements into the circuits. The line can also be used for realizing series or parallel resonance circuit into high frequency circuits.\\
 So what is the quality factor of the resonant circuit?
 
 By definition, quality factor is related to the losses of the circuit (The higher the loss, the smaller the quality factor). So whenever we have a reactive element like inductor or capacitor, the losses in these elements characterize the quality factor\footnote{Quality Factor is a parameter that describes how under-damped an oscillator or resonator is and characterizes a resonator's bandwidth relative to its center frequency. It is a dimensionless quantity.
-It is measure of the quality of a resonant circuit}. Since we are dealing with this transmission line as a lossless transmission line, the quality factor for these resonance circuits is infinite.\\
-There is no loss, however in practice, there is always a small loss in the transmission line. Up till now we have treated the transmission line as lossless transmission line, because we were not really interested in the small loss. However, if we treat the line as lossless line the quality factor will always be infinity. When we are interested in finding the quality factor of the resonance circuit, no matter how small the loss of the transmission
+It is a measure of the quality of a resonant circuit}. Since we are dealing with this transmission line as a lossless transmission line, the quality factor for these resonance circuits is infinite.\\
+There is no loss, however in practice, there is always a small loss in the transmission line. Up till now we have treated the transmission line as lossless transmission line, because we were not really interested in the small loss. However, if we treat the line as lossless line, the quality factor will always be infinity. When we are interested in finding the quality factor of the resonance circuit, no matter how small the loss of the transmission
 Line may be, we have to include the loss of the transmission line and then calculate the quality factor.

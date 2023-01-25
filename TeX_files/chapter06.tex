@@ -13,7 +13,7 @@ Recall that, the impedance transformation relationship for any point is given as
 \begin{align*}
 \footnotemark[2]\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_Lcosh\gamma l + sinh\gamma l}{\bar{Z}_Lsinh\gamma l + cosh\gamma l}\right\rbrace 
 \end{align*}
-if $Z_L = 1$ i.e $Z_L = Z_o$ and $\bar{Z}(l) = 1 \rightarrow  Z_(l) = Z_o$\\
+if $\bar{Z_L} = 1$ i.e $Z_L = Z_o$ and $\bar{Z}(l) = 1 \rightarrow  Z(l) = Z_o$\\
 for a lossless Transmission Line,$\gamma=j\beta$\\\\
 Where
 \begin{align*}
@@ -30,9 +30,9 @@ sinh\gamma l=sinh(j \beta l) = \frac{e^{j \beta l} - e^{-j \beta l}}{2}=j\left( 
 
 Therefore impedance transformation relationship for a lossless transmission line is given as;
 \begin{equation}
-\bar{Z}(l) = Z_{O}\left\lbrace \frac{\bar{Z}_Lcos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_Lsin\beta l}\right\rbrace 
+\bar{Z}(l) = Z_{o}\left\lbrace \frac{\bar{Z}_Lcos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_Lsin\beta l}\right\rbrace 
 \end{equation}
-$Z_O$ is a real quantity for a lossless transmission line same as:
+$Z_o$ is a real quantity for a lossless transmission line same as:
 \begin{equation}
 \bar{Z}(l) = \left\lbrace \frac{\bar{Z}_Lcos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_Lsin\beta l}\right\rbrace 
 \end{equation}
@@ -59,7 +59,7 @@ Since \footnote{$\beta$ represents phase constant}$\beta$ = $ \frac{2\pi}{\lambd
 \beta(l+\frac{\lambda}{2})=\frac{2\pi}{\lambda}(l+\frac{\lambda}{2})=\frac{2\pi}{\lambda}l+\pi=\beta l+\pi
 \end{dmath*}
 \begin{align*}
-\bar{Z}(l+\frac{\lambda}{2}) = \left\lbrace \frac{\bar{Z}(l)cos(\beta l+\pi) + jsin(\beta l+\pi)}{cos(\beta l+\pi) + j\bar{Z}(l)sin(\beta (l+\pi)}\right\rbrace 
+\bar{Z}(l+\frac{\lambda}{2}) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta l+\pi) + j\sin(\beta l+\pi)}{\cos(\beta l+\pi) + j\bar{Z}(l)\sin(\beta l+\pi)}\right\rbrace 
 \end{align*}
 But 
 \begin{align*} 
@@ -119,11 +119,11 @@ With this understanding of impedance transformation, now we can go to Power Tran
 Initially, our idea was to transfer power from generator to load effectively. In the lossless case, it should be that all generator power is completely transferred to the load. However, we have seen that if the impedance is not equal to the characteristics impedance, then there will always be reflection on the transmission line and whatever energy the generator supplies, part of this energy will get reflected back to the generator . Now when we talk about matching condition or maximum power transfer condition, there are two cases to consider;
 \begin{enumerate}[(i)]
 \item When the power is given by the generator, it should be maximally transfered to the load.
-\item When the reflected power comes back to generator, the generator is not capable of absorbing power, so when the reflected power comes back with a different amplitude and phase, it negatively affects the generator performance. So it is desirable that generator should not see any power coming back at it.
+\item When the reflected power comes back to generator, the generator is not capable of absorbing power, so when the reflected power comes back with a different amplitude and phase, it negatively affects the generator's performance. So it is desirable that the generator should not see any power coming back at it.
 \end{enumerate}
 For these two reasons that the generator power should be completely delivered to the load and that no reflected power should come back to the generator, we must make sure always that the impedance which the generator sees is always equal to the characteristics impedance. We will study these two issues later but let's study a general case and ask if we have a transmission line which is connected to a generator at  one end and a load at the other end. How much power will be delivered to the load. Again without going into voltage and current equation, we can write down power at the location of the load i.e Power delivered to the load will be given as follows.
 
-At load end $L=0$ therefore, $e^{-2\beta (l)} = e^{-2\beta (0)}$
+At load end, $L=0$ therefore, $e^{-2\beta (l)} = e^{-2\beta (0)}$
 
 $V(o)= V^{+} \left\lbrace {1 + \Gamma_L e^{-2\beta(0)}}\right\rbrace $ = $V^{+}\left\lbrace 1 +\Gamma_L \right\rbrace$.
 
@@ -184,7 +184,7 @@ Recall \ that\ \ \ \  \Gamma_L =\frac{V^-}{V^+}.
 \begin{align*}
 P=\frac{1}{2} \frac{{| V^+ |}^2}{Z_o} \left\lbrace 1 - { \Gamma_L }^2 \right\rbrace.
 \end{align*}
-So when we do a power calculation for transmission line , either we go by circuit concept or we go by the understanding of the wave concept. This is the story of the real part i.e the power actually supplied to the load. One then asks how do we calculate for complex power at any location $?$. If we calculate the power flow along any point on the transmission line not necessarily at the load end, what will that indicated $?$ Lets see, we can get the voltage and current at any arbitrary location on the transmission line i.e
+So when we do a power calculation for transmission line , either we go by circuit concept or we go by the understanding of the wave concept. This is the story of the real part i.e the power actually supplied to the load. One then asks how do we calculate for complex power at any location $?$. If we calculate the power flow along any point on the transmission line not necessarily at the load end, what will that indicate $?$ Lets see, we can get the voltage and current at any arbitrary location on the transmission line i.e
 \begin{align*} 
 V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace ,\\ 
 I(l) = \frac{V^+}{Z_o} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
@@ -223,17 +223,17 @@ However the reactive power is a function of $l$, which tells the energy stored a
 Let us come to the final question on transmission line analysis, everything we have done so far, impedance transformation relationship, power transfer analysis and so on, we have not obtained the absolute value of $V^+$, as we kept avoiding its absolute value by working in terms of $l$ or $\Gamma$ that was an implicit ratio of $V^+$ somehow. $V^+$ is a final arbitrary constant in the solution of the differential equation of transmission line that we are yet to evaluate. Now for power flow calculation of the transmission line, for the first time we require the absolute value of $V^+$, we cannot talk about relative quantities anymore.
 
 \section{Evaluation of \textbf{$ V ^ {+} $} } 
-Considering the Circuit below, $Z_L$ is transformed to \footnote{$Z^{'}_L$ newly transformed impedance}$Z^{'}_L$, from position B$B^{'}$ to A$A^{'}$.\\
+Considering the Circuit below, $Z_L$ is transformed to \footnote{$Z^{'}_L$ newly transformed impedance}$Z^{'}_L$, from position BB' to AA'.\\
 $Z^{'}_L$ is the impedance of the load as seen by the generator end. With $Z_L$ transformed to $Z^{'}_L$ , the whole circuit is reduced to a lump circuit as shown in the figure below.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{./graphics/qwerrtt}
-\caption{Transformation from $Z_L$ to $Z_{L}^I$}
+\caption{Transformation from $Z_L$ to $Z_{L}^'$}
 \label{fig:qwerrtt}
 \end{figure}
 
 \begin{equation}
-V_A = \frac{Z^{'_L}}{Z^{'}_L + Z_s} . V_s
+V_A = \frac{Z^'_L}{Z^{'}_L + Z_s} . V_s
 \end{equation}
 \begin{equation}
 I_A = \frac{V_A}{Z^{'}_L}
@@ -253,11 +253,11 @@ V_A = \frac{Z^{'}_L}{Z^{'}_L + Z_s} . V_s = V^+ e^{j\beta l} \left\lbrace 1 + \G
 \begin{equation}
 I_A = \frac{V_A}{Z^{'}_L} = I(l) = \frac{V^+}{Z_o} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
 \end{equation}
-So solving equation $6.6$ making $V^{+}$ the subject of the formula, we get the expression of $V^+$ below. 
+So solving equation~\eqref{eqn:va} making $V^{+}$ the subject of the formula, we get the expression of $V^+$ below. 
 \begin{equation} 
 V^+ = \frac{Z^{'}_L V_s e^{-j\beta l}}{(Z_S + Z^{'}_L)(1 + \Gamma_L e^{-j2\beta l })}, 
 \end{equation}
-$\alpha \beta , l  , \Gamma_L,$ and $Z_o$ are all known values, so now we have a known value for $V^+$\\
+$\alpha, \beta , l  , \Gamma_L,$ and $Z_o$ are all known values, so now we have a known value for $V^+$\\
 
 From here $V^+$ can be determined and then substituted into the power equation and so power delivered to the load can be calculated or power at any point along the line. This is a complete solution to voltage and current on the transmission line.
 

@@ -41,7 +41,7 @@ It was established in previous lectures that impedances possess a real part and 
 \begin{equation*}
 Z= R+jX
 \end{equation*}
-Where R  represents the real part called Resistance and $jX$ represents the complex part called Reactance. When using the graphical approach, the absolute impedance is not required but instead, normalized impedance is used. It, therefore, means that given any impedance, it must be normalized with respect to the characteristic impedance (Zo).i.e
+Where R  represents the real part called Resistance and $jX$ represents the complex part called Reactance. When using the graphical approach, the absolute impedance is not required but instead, normalized impedance is used. It therefore means that, given any impedance, it must be normalized with respect to the characteristic impedance (Zo). i.e
 \begin{equation*}
 \bar{Z}=\frac{Z_L}{Z_o}
 \end{equation*}
@@ -68,7 +68,7 @@ Graphically, the statement is represented in the figure~\ref{fig:oigvbnkliu}
 \label{fig:oigvbnkliu}
 \end{figure}
 
-Solving problems of transmission lines using the Z-plane is quite difficult; for this reason, the impedance which was normalized with respect to the characteristic impedance is transformed into another plane which we shall call the Complex Co-efficient Plane or the Gamma Plane ($ \Gamma $).\\ Doing this, expresses the impedances in a form which makes the calculation much simpler.
+Solving problems of transmission lines using the Z-plane is quite difficult. For this reason, the impedance which was normalized with respect to the characteristic impedance is transformed into another plane which we shall call the Complex Co-efficient Plane or the Gamma Plane ($ \Gamma $).\\ Doing this, expresses the impedances in a form which makes the calculation much simpler.
 The transformation from the Z plane to the $ \Gamma $ plane is made possible due to the one-to-one relationship that exists between the impedance Z and the reflection co-efficient $ \Gamma $ i.e
 \begin{equation*}
 \Gamma = \frac{Z_L - Z_o}{Z_L + Z_o}
@@ -85,7 +85,7 @@ Just as Z has real and imaginary parts, $ \Gamma\ $ also has real and imaginary 
 i.e. $ \Gamma = u + Jv$ or polar form	$\Gamma$ = $Re^{j\theta}$
 
 From previous chapters, it was established that the reflection coefficient for all passive loads is always less than or equal to one($ \Gamma\ \leq 1).$\\
-At an open or short circuit, reflection co-efficient $ \Gamma\ $ = 1; for any other impedance $ \Gamma\  < 1$.  So by plotting the reflection co-efficient($ \Gamma\ $) we have the right half Z plane mapping into a unit circle in the gamma plane as shown in figure below
+At an open or short circuit, reflection co-efficient $ \Gamma\ $ = 1; for any other impedance $ \Gamma\  < 1$.  So by plotting the reflection co-efficient($ \Gamma\ $) we have the right half Z plane mapping into a unit circle in the gamma plane as shown in figure below.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{./graphics/oiuhgvcx}
@@ -167,7 +167,7 @@ by using the method of completing the squares:
 \begin{equation}
 (u - \frac{r}{r + 1})^2+ v^2 = \frac{1}{(r + 1)^2}
 \end{equation}
-the expression obtained above represents the equation of a circle in the UV plane centered at$ (\frac{r}{r + 1}, 0) $ with radius $ (\frac{1}{r + 1}) $
+the expression obtained above represents the equation of a circle in the uv plane centered at$ (\frac{r}{r + 1}, 0) $ with radius $ (\frac{1}{r + 1}) $
 
 equation 7.8 can be compared  with  the equation of a circle of radius r, with origin at x = a and y = 0 which is $ (x - a)^2 + y^2 = r^2 $\\ 
 considering the imaginary part, we have:
@@ -182,24 +182,24 @@ v^2x - 2v + u^2x - 2ux + x = 0
 \end{equation*}
 divide through by x
 \begin{equation*}
-v^2 - \frac{2v}{x} +u^2 - 2u + 1
+v^2 - \frac{2v}{x} +u^2 - 2u + 1 = 0
 \end{equation*}
 factorising the expresssion becomes:
 \begin{equation*}
 (u - 1)^2 -1 + (v - \frac{1}{x})^2 -\frac{1}{x^2} + 1 = 0
 \end{equation*}
 \begin{equation}
-(u - 1)^2 + (v - \frac{1}{x})^2 = \frac{1}{x^2}
+(u - 1)^2 + (v - \frac{1}{x})^2 = \frac{1}{x^2}\label{eqn:circleuvplane}
 \end{equation}
-equation 7.9 represents the equation of a circle in the UV plane centered at$ (1,\frac{1}{x}) $ with radius $ (\frac{1}{x}) $
-it can also be compared to a circle centered at (a,b) and radius r
+equation~\eqref{eqn:circleuvplane} represents the equation of a circle in the UV plane centred at $ (1,\frac{1}{x}) $ with radius $ (\frac{1}{x}) $.
+It can also be compared with the equation of a circle centered at (a,b) and radius r which is $ (x - a)^2 + (y-b)^2 = r^2 $
 
-From the two expressions obtained from solving for r and x.  It can be deduced that for any value of r and x, we gets a circle on the gamma plane. The circle that corresponds to r is called the Circle of Constant Resistance while that corresponds to x is called the Circle of Constant Reactance.
+From the two expressions obtained from solving for r and x,  It can be deduced that for any value of r and x, we gets a circle on the gamma plane. The circle that corresponds to r is called the Circle of Constant Resistance while that corresponds to x is called the Circle of Constant Reactance.
 
 All points on the circle of constant resistance have the same resistance value in the Z plane and all points on the circle of constant reactance will have the same reactance in the Z plane.
 
 \section{Circle of Constant Resistance}
-This circle  obtained from the real point of normalized impedance $ \bar{Z} $, the circle lies on the real axis in the gamma plane, and its radius varies from 0 to $\infty$. Plotting the circle for different values of r we have as shown above.
+This circle  obtained from the real point of normalized impedance $ \bar{Z} $, the circle lies on the real axis in the gamma plane, and its radius varies from 0 to $\infty$. Plotting the circle for different values of r, we have as shown above;
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{./graphics/ouytre}
@@ -212,15 +212,15 @@ u^2 - 2u\left(\frac{r}{r + 1}\right) + v^2 +\left(\frac{r - 1}{r + 1}\right) = 0
 \end{equation*}
 Center = $(\frac{r}{r + 1},0)$ and radius = $\frac{1}{r + 1}$\\\\
 Lets plot for various value of r, by varying it from zero to infinity, with r = 0, Center (0,0), and radius = 1.\\
-At r = 1 which means $Z = Z_O$ we get  Center = $(\frac{1}{2},1)$ and radius = $\frac{1}{2}$\\
-From the figure above, it is seen that as the value of r increases the center shifts towards the right and the radius keeps reducing towards zero. At $r = \infty$, Center (1,0), radius = 0 Which is the dot on the real axis at. Hence for increasing r we have the following Curve.\\\\
+At $r = 1$ which means $Z = Z_o$ we get the centre as $(\dfrac{1}{2}, 0)$ and radius as $\dfrac{1}{2}$.\\
+The figure above shows that as the value of r increases, the centre shifts towards the right and the radius keeps reducing towards zero. At $r = \infty$, the centre is (1,0) and the radius is zero, which is denoted as a dot on the real axis. Hence for increasing r, we have the following set of curves.\\\\
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{./graphics/rghmgfcx}
 \caption{Circle of Increasing Resistance}
 \label{fig:rghmgfcx}
 \end{figure}
-We observe that all circle of the constant resistance circles passes through u = 1, and v  0\\
+We observe that all circle of the constant resistance circles passes through u = 1, and v = 0\\
 Complex $\Gamma$ plane, Constant x circle where center is $(1,\frac{1}{x})$, and radius = $\frac{1}{x}$\\
 For $x = \infty,Center = (1,0), radius = 0$\\
 $x = 1,Center = (1,1), radius = 1$\\
@@ -229,10 +229,10 @@ $x = 2,Center = (1,\frac{1}{2}), radius = \frac{1}{2}$\\
 \begin{align*}
 u^2+v^2-2u\left(\frac{2}{x}\right)v+1=0
 \end{align*}\\
-xCenter = $(1,\frac{1}{x})$ and radius = $\frac{1}{x}$. \\
+Center = $(1,\frac{1}{x})$ and radius = $\frac{1}{x}$. \\
 The centre of this circle lies on a vertical plane passing through the real axis at u=1 and the radius varies from $-\infty$ to $+\infty$.\\\\
-From the plot above, it can be deduced that the centre always lie on a line u = 1 and v = 0 as x increases the centre comes down along u = 1 line and the radius is decreasing.  
-From the two plots above it is seen that both circle of constant resistance and reactance pass through co-ordinate (u,v) = (1,0). This signifies a uniqueness of the points.  When these two circles are superimposed, we have figure 7.6 above.
+From the plot above, it can be deduced that the centre always lie on a line u = 1 and v = 0. As x increases, the centre comes down along u = 1 line and the radius decreases.  
+From the two plots above it is seen that both circles of constant resistance and reactance pass through co-ordinate (u,v) = (1,0). This signifies the uniqueness of the points.  When these two circles are superimposed, we have figure it as shown in figure~\ref{fig:uytrdbn}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{./graphics/uytrdbn}
@@ -240,13 +240,13 @@ From the two plots above it is seen that both circle of constant resistance and 
 \label{fig:uytrdbn}
 \end{figure}
 
-we observe that all circles of constant reactance also pass through (u,v) = (1,0). So the (u,v) = (1,0) is a special point.since both constant resistance and reactance circle passes through that point. For the constant resistance circle x =0 gives the center $(1,\infty)$ and radius $\infty$. 
+we observe that all circles of constant reactance also pass through (u,v) = (1,0). So the (u,v) = (1,0) is a special point as both constant resistance and reactance circle passes through that point. For the constant reactance circle, x = 0 gives the center $(1,\infty)$ and radius $\infty$. 
 
 In this lecture, we are not concerned with reflection co-efficients that are greater than one, we are only interested in reflection co-efficient that are less than or equal to 1 which is represented by a unit circle of radius = 1. It therefore means that any other point outside this range of reflection co-efficient ($\Gamma$) is not of practical relevance to us since it does not represent a passive load.  Although, the constant reactance circle fills the entire space, but only the portion that satisfies $ \Gamma\ \leq 1$ is practically useful to us and this lies within the unit circle of the complex gamma plane.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{./graphics/ijnbvcxw}
-\caption{Two Set of CirclesSuperimposed}
+\caption{Two Set of Circles Superimposed}
 \label{fig:ijnbvcxw}
 \end{figure}
 \begin{figure}[h]
@@ -256,20 +256,20 @@ In this lecture, we are not concerned with reflection co-efficients that are gre
 \label{fig:sddfghj}
 \end{figure}
 
-This figure above is a superposition of constant resistance and reactance circle so, we can now identify impedance point on the gamma plane.  The outermost circle of radius= 1 is called the Limit Circl for gamma plane for which $ \Gamma\ \leq 1$.\\
+This figure above is a superposition of constant resistance and reactance circles so, we can now identify the impedance point on the gamma plane.  The outermost circle of radius, $r= 1$, is called the limit circle for the gamma plane for which $\Gamma\ \leq 1$.\\
 
 \section{Characteristics of the set of Circle}
 \begin{enumerate}[(i)]
 \item All constant resistance circles have their centre lying on the positive axis and complex gamma plane.
 \item All the circles passes through the point u=1, v = 0
-\item As the value of r increases the centre shift towards the right from the origin to u=1 and the radius decreases.
+\item As the value of r increases, the centre shift towards the right from the origin to point u = 1 and the radius decreases.
 \item The constant reactance circle has a vertical line passing through u=1 and the upper half represents the positive reactance and the lower half negative reactance.
-\item As the reactance value increases, the centre of the circle approaches the u-axis and the radius of the circle decreases and the size of the circle reduces.
+\item As the reactance value increases, the centre of the circle approaches the u-axis, the radius of the circle decreases and the size of the circle reduces.
 \item When x = $\infty$, the size of the circle = 0  and this  becomes just a point at (u,v) = (1,0).
 \end{enumerate}
 
-The superposition of the two circles is now a coordinate system for impedance on the complex gamma plane. This is called the Smith Chart.  This will be elaborated on in  the next section.
-\section{\textbf{The Smith Chart}}
+The superposition of the two circles is now a coordinate system for impedance on the complex gamma plane. This is called the \textbf{Smith Chart}.  This will be elaborated on in  the next section.
+\section{The Smith Chart}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{"./graphics/smith_chart (2)"}
@@ -277,10 +277,10 @@ The superposition of the two circles is now a coordinate system for impedance on
 \label{fig:smithchart-2}
 \end{figure}
 
-\footnote{\includegraphics[scale=0.09]{./graphics/a21}PHILIP HAGAR SMITH (April 29, 1905  August 29, 1987) was an electrical engineer who became famous for his invention of the SMITH CHART. He graduated from Tufts College in 1928 with a BS degree in electrical engineering while working for Bell Telephone Laboratories. He invented his eponymous smith chart during the period of being faced with the challenge of how to show and evaluate multiple complex impedance parameters which can range from zero to infinity. When asked why he invented the chart, Smith explained "From the time I could operate a slide rule, I've been interested in graphical representations of mathematical relationship". This interest in representing mathematical relationships in graphical form is what led to the invention of the smith chart.}
+\footnote{\includegraphics[scale=0.09]{./graphics/a21}PHILIP HAGAR SMITH (April 29, 1905 - August 29, 1987) was an electrical engineer who became famous for his invention of the SMITH CHART. He graduated from Tufts College in 1928 with a BS degree in electrical engineering while working for Bell Telephone Laboratories. He invented his eponymous smith chart during the period of being faced with the challenge of how to show and evaluate multiple complex impedance parameters which can range from zero to infinity. When asked why he invented the chart, Smith explained \textquotedblleft From the time I could operate a slide rule, I've been interested in graphical representations of mathematical relationship\textquotedblright. This interest in representing mathematical relationships in graphical form is what led to the invention of the smith chart.}
 
 The smith chart is a graphical aid designed for electrical and electronics engineers to assist in solving problems of the transmission lines and matching circuits. It is a product of superimposing the circle of constant resistance and the circle of constant reactance. It can be used to simultaneously display multiple parameters such as the impedances, admittances, reflection co-efficient e.t.c.
-It is plotted on the complex reflection co-efficient plane in two dimensions and is scaled in normalized impedance (which is most common), normalized admittance or both. It has circumstantial scaling of wavelengths and degrees. The wave lengths scale is used in distributed component problems and represents the distance measured along the transmission line connected between the generator and the load to the point under consideration.
+It is plotted on the complex reflection co-efficient plane in two dimensions and is scaled in normalized impedance (which is most common), normalized admittance or both. It has circumstantial scaling of wavelengths and degrees. The wavelengths scale is used in distributed component problems and represents the distance measured along the transmission line connected between the generator and the load to the point under consideration.
 Let us mark out some important points on the simplified smith chart below.
 \begin{figure}[h]
 \centering
@@ -290,12 +290,12 @@ Let us mark out some important points on the simplified smith chart below.
 \end{figure}
 
 \begin{enumerate}[(i)]
-\item The point A or any other point lying on the outermost circle correspond to r=0 while any point lying on the horizontal axis represents x=0
-\item The intersection of this horizontal axis and the outermost circle corresponds to r=0,x=0 at A which corresponds to a load that is short circuited from the impedance point of the line. It therefore means that point A is a short circuit.
-\item At point B where the two set of circles degenerate into, corresponds to r= infinity and x= infinity which is nothing but an open circuit.\item Any point between A and B on the outermost circle represents pure reactance. Above the u axis inside the limit circle , we have the inductive loads while below the u axis in the limit circle we have the capacitive load( it therefore means we can tell what kind of load we have by where it lies on the smith chart).
-\item At point C where r=0 and x=+1, corresponds to purely inductive reactance whose magnitude is equal to the characteristic impedance of the line.
-\item At point D where r=- and x=-1 represents a purely capacitive reactance whose magnitude is equal to the characteristic impedance of the line.
-\item The centre of the limit circle has one more special point M which is the origin, it is the intersection of r=1 circle and x=0 line.
+\item The point A or any other point lying on the outermost circle correspond to r = 0 while any point lying on the horizontal axis represents x = 0
+\item The intersection of this horizontal axis and the outermost circle corresponds to r = 0,x = 0 at A which corresponds to a load that is short circuited from the impedance point of the line. It therefore means that point A is a short circuit.
+\item At point B where the two set of circles degenerate into, corresponds to $r=\infty$ and $x=\infty$ which is nothing but an open circuit.\item Any point between A and B on the outermost circle represents pure reactance. Above the u axis inside the limit circle , we have the inductive loads while below the u axis in the limit circle we have the capacitive load( it therefore means we can tell what kind of load we have by where it lies on the smith chart).
+\item At point C where r = 0 and x = +1, corresponds to purely inductive reactance whose magnitude is equal to the characteristic impedance of the line.
+\item At point D where r = -1 and x = -1 represents a purely capacitive reactance whose magnitude is equal to the characteristic impedance of the line.
+\item The centre of the limit circle has one more special point M which is the origin, it is the intersection of r = 1 circle and x = 0 line.
 
 At M the impedance equal to the characteristic impedance of the line and that is the point of greatest interest to us because that point represents the matched condition of the transmission line.
 \end{enumerate}
@@ -303,9 +303,9 @@ These points if properly understood can be used to solve transmission line probl
 
 To solve transmission line problems using the smith chart, it should be held such that the most clustered portion of the circle should be held with the right hand of the user because the real axis at the complex gamma plane is in that direction and the complex imaginary plane is in the vertical direction.
 
-With this understanding
+With this understanding,
 \begin{enumerate}[(i)]
 \item Calculation on conversion from the complex reflection co-efficient plane to the impedance plane and vice versa can be done easily.
 \item Impedance points on the smith chart can be marked and used to find co-ordinates of the point which gives the reflection co-efficient easily.
 \end{enumerate}
-The smith chart is a handy tool for solving very complex impedance transformation problems
+The smith chart is a handy tool for solving very complex impedance transformation problems.
