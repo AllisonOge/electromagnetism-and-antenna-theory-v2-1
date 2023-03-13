@@ -164,7 +164,7 @@ Recall: $\frac{Z(l)}{Z_0} = \bar{Z}(l)$ and $\frac{Z_L}{Z_0} = \bar{Z}_L$\\
 That means impedance at every point = $Z_0$ if $Z_L = Z_0$ therefore $Z(l) = Z_0$. So, in this matched condition, the impedance $Z(l)$ measured at any point no longer depend on the length of the line. So if a line is terminated by its characteristic impedance, there is no need to bother about the length of the line as every point along the line has an impedance equal to the characteristic impedance and this takes away all the worry about the line length.
 The relationship of impedance transform will help us give a proper definition of characteristics impedance $Z_0$ which we know was related to the primary constants of the transmission line.
 \section{Characteristic Impedance}  
-Characteristic Impedance is defined as the impedance which is used to terminate the line, the impedance measured at all points along the line will be the same and equal to that terminating impedance.
+Characteristic Impedance is defined as that impedance which if used to terminate the line, the impedance measured at all points along the line will be the same and equal to that terminating impedance.
 
 At matched conditions, there is no reflected wave. With infinite line length, there can be no reflection as the incident wave never gets to the end to get reflected. Hence, the reflection is zero. However, reflection is zero when the line is terminated with the characteristic impedance. Hence, the characteristic impedance can also be defined as the input impedance measured with infinite line length; since with infinite line length, we always have a forward wave and never a reflected wave.\\\\
 Now we can generalize the impedance transformation relationship. Till now, we have transformed impedance $Z_L$ which is at the load end to $Z(l)$. Nothing special about the load end other than we defining our origin to be at that point. So, the load point was used as our reference point. In general, look at the transmission line below:
@@ -243,7 +243,7 @@ Once we have this condition in practice, then we can make some simplification to
 
 The transmission line has four parameters $R, L, G$ and $C$ all in per unit length. $R$ and $G$ are ohmic values in the primary constant, that is, the resistance between the two ends of the conductors and the leakage current in the dielectric separating the two conductors respectively. Hence, power-losing elements exist because of the resistance and conductance. The inductance and capacitance exchange energy between themselves but does not result in any loss. Ideally, a line will be lossless if $R = G = 0$.\\
 
-Substituting $R$ and $G$ as Zero in the Telegrapher's equation.
+Substituting $R$ and $G$ as Zero in the propagation constant equation,
 \begin{align*}
 \gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}
 \end{align*}
@@ -294,7 +294,7 @@ That is, power somewhere is going to get dumped. So if we have a real quantity f
 
 Now, we go to a case where little loss is accepted in the transmission line and then find the derivations for $\gamma$ and $Z_0$.
 \section{Low-loss Transmission Line}
-$R \ll \omega L$, $G \ll \omega C$ are the two conditions for a low-loss transmission line. Using the Telegrapher's equation, we have:
+$R \ll \omega L$, $G \ll \omega C$ are the two conditions for a low-loss transmission line. Using the propagation constant equation, we have:
 \begin{align*}
 \gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}
 \end{align*}
@@ -311,7 +311,7 @@ $(1 + x)^{\frac{1}{2}} = \frac{1}{2}C_0(1)^{\frac{1}{2}}x^0 + \frac{1}{2}C_1(1)^
 $\frac{1}{2}C_0(1)^{\frac{1}{2}}x^0 = 1$\\\\
 $\frac{1}{2}C_1(1)^{\frac{1}{2} - 1}x = \frac{1}{2}C_1(1)x$\\\\
 Note that 1 to the power of any value is 1 provided it is not infinity.\\\\
-$\frac{1}{2}C_1 = \frac{\frac{1}{2}x!}{(x - 1)!1!} = \frac{\frac{1}{2}x(x-1)!}{(x-1)!1!} = \frac{1}{2}x$\\\\
+$\frac{1}{2}C_1 x = \frac{\frac{1}{2}x!}{(x - 1)!1!} = \frac{\frac{1}{2}x(x-1)!}{(x-1)!1!} = \frac{1}{2}x$\\\\
 $n! = n(n - 1)!$\\\\
 $(1 + x)^{\frac{1}{2}} = 1 + \frac{1}{2}x + .....$\\\\
 $(1 - x)^{\frac{1}{2}} = 1 - \frac{1}{2}x + .....$\\\\
@@ -368,3 +368,12 @@ Z_0 = \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} + ...\right)\left(1 
 The characteristic impedance is no more real but complex. Its real value is the same as that of a lossless line. We have a small imaginary part which implies the presence of losses in the transmission line.\\
 
 From now on, when given a transmission line problem, we assume it to be lossless unless we are told specifically that the line is lossy.
+
+
+\newpage
+\section*{QUESTIONS}
+\begin{enumerate}
+	\item Show that for a lossless transmission line, the velocity of the wave is a function of L and C$( v = \frac{1}{\sqrt{LC}})$.
+	
+	\item Prove that for both a lossless and a low-loss transmission line, the phase constant remains the same while the attenuation constant changes.
+\end{enumerate}

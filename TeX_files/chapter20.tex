@@ -9,7 +9,7 @@ We would now go back to the integral form of the maxwell's equations, take a sha
 Whenever we solve the phenomenon of electromagnetics, generally these media constitute discrete boundaries and we require the relationship of electric and magnetic fields across this boundary called \textbf{Boundary Conditions}. These boundary conditions are essential in solving the electromagnetic problems in physical structures.
 
 \subsection{Boundary Conditions 1 and 2}
-Let us say we have a media interface and the two sides have different material properties i.e medium 1 with permittivity $\epsilon_1$, conductivity $\rho_1$ and permeability $\mu_1$, and medium 2 with $\epsilon_2$, $\rho_2$ and $\mu_2$ respectively. Now we can write the different integral equations in the form of maxwell's equation across the boundary. Consider a box and the boundary shown, if we apply Gauss's law across the boundary,
+Let us say we have a media interface and the two sides have different material properties i.e medium 1 with permittivity $\epsilon_1$, conductivity $\sigma_1$ and permeability $\mu_1$, and medium 2 with $\epsilon_2$, $\sigma_2$ and $\mu_2$ respectively. Now we can write the different integral equations in the form of maxwell's equation across the boundary. Consider a box and the boundary shown, if we apply Gauss's law across the boundary,
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/diemedium1}
@@ -108,7 +108,7 @@ i.e the tangential component of the magnetic field is continuous between the bou
 
 Using the four Maxwell's equations in integral form for two media interface, we get the so called boundary conditions. What we have done is to start with the four basic laws in integral form and we convert to differential form using Stoke's and divergence theorems. We had Maxwell's equations in both integral and differential forms. The differential form of Maxwell's equations are the point relations.
 
-However, the differential form cannot be used in situations where you have media discontinuities because they require space derivatives and at discontinuity, these space derivative is undefined. In these cases, we apply the integral form. When we apply the integral form to the media interfaces, we get the boundary conditions. With $\overline{H}_1$ and $\overline{H}_2$ shown in the figure below.
+However, the differential form cannot be used in situations where you have media discontinuities because they require space derivatives and at discontinuity, these space derivative are undefined. In these cases, we apply the integral form. When we apply the integral form to the media interfaces, we get the boundary conditions. With $\overline{H}_1$ and $\overline{H}_2$ shown in the figure below.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/diemedium4_2_2}
@@ -133,10 +133,10 @@ with $\overline{a} = \hat{n}$ and $ b = \overline{H}_1$
 \end{align*}
 With this we can summarize the four boundary conditions for the dielectric media as we have been discussing. We will do this in the next section.
 \section{Dielectric - Dielectric Interface}
-When we have a medium on both sides of a dielectric.
+We have a medium on both sides of a boundary.
 \begin{figure}[h]
 \centering
-\includegraphics[width=.6\linewidth]{./graphics/diemedium5}
+\includegraphics[width=1\linewidth]{./graphics/dielectric_dielectric}
 \caption{Dielectric - Dielectric boundary Interface.}
 \end{figure}
 
@@ -182,7 +182,7 @@ So if we have a time varying electric field which is identically zero in the con
 Similarly, it is possible that when we have time varying fields, there might be current flowing across the surface of the conductor. Therefore, for an ideal conductor the field inside it is zero, but we can have surface charges and surface current. The situation is as we have it in the figure below.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium5_2_2}
+\includegraphics[width=1.2\linewidth]{./graphics/diemedium5_2_2}
 \caption{Dielectric - Conductor Interface.}
 \end{figure}
 
@@ -211,7 +211,7 @@ Two charges $Q_A$ and $Q_B$ are separated by a distance of 10m. $Q_A = 10cos\ome
 Let P be the point at which to find $\overline{E}$. At $t = 0$, $Q_A = +10C$ and $Q_B = -10C$ and that shows the direction of the $\overline{E}$ field also by $\overline{E}_{A}$ and $\overline{E}_{B}$. Let $Q_A$ and $Q_B$ lie on the $Z$ axis as shown .
 \begin{figure}[h]
 \centering
-% \includegraphics[width=1\linewidth]{./graphics/fig2010}
+\includegraphics[width=1\linewidth]{./graphics/fig20.10}
 \caption{Diagram showing charges $Q_A$, $Q_B$ and point $P$.}
 \end{figure}
 
@@ -221,13 +221,13 @@ E_B &= \frac{-10cos\omega t}{4\pi\epsilon_o r^2}
 \end{align*}
 $E_A$ and $E_B$ are same in magnitude and are resolved into $E_T$
 \begin{align*}
-E_T &= E_Asin\theta - E_Bsin\theta = \frac{20cos\omega t}{4\pi\epsilon_o r^2} \\
-since \theta &= \frac{5}{10} = \frac{1}{2}, \quad \theta = \angle {30} \ or \ \frac{\pi}{6}
+E_T &= E_Asin\theta - E_Bsin\theta = \frac{20cos\omega t}{4\pi\epsilon_o r^2}sin\theta \\
+since \hspace{0.05in} \theta &= \frac{5}{10} = \frac{1}{2}, \quad \theta = \angle {30} \ or \ \frac{\pi}{6}
 \end{align*}
 \begin{align*}
 E_T = \frac{-20cos\omega t}{4\pi\epsilon_o r^2}\hat{z}.\frac{1}{2} = \frac{-10cos\omega t}{4\pi\epsilon_o r^2}\hat{z}
 \end{align*}
-Now we know the total magnetic field, we can apply Maxwell's equation and find out the magnetic field due to the charges.
+Now we know the total electric field, we can apply Maxwell's equation and find out the magnetic field due to the charges.
 \begin{align*}
 \overline{H} = \frac{-1}{\jmath\omega\mu_o}\nabla\times\overline{E}
 \end{align*}
@@ -239,6 +239,7 @@ or,
 \begin{align*}
 \overline{H} = \frac{-1}{\mu_o}\int(\nabla\times\overline{E})dt
 \end{align*}
+Recall, $ e^{\jmath\omega t} = cos\omega t + \jmath sin\omega t $
 \begin{align*}
 \overline{E} = \frac{-10}{4\pi\epsilon_o r^2}Re(e^{\jmath\omega t})
 \end{align*}
@@ -279,11 +280,11 @@ so
 \begin{align*}
 \overline{H} &=  \frac{100\sqrt{3}sin\omega t}{40000\pi\epsilon_o\mu_o\omega}\hat{y}\\
 &= \frac{3sin\omega t}{400\sqrt{3}\pi\epsilon_o\mu_o\omega}\hat{y} \\
-&= \frac{3\sqrt{3}sin\omega t}{1200\pi\epsilon_o\mu_o\omega}
+&= \frac{3\sqrt{3}sin\omega t}{1200\pi\epsilon_o\mu_o\omega}\hat{y}
 \end{align*}
 \end{exmp}
 
-From this, we see that when we have a time varying charge, they produce electric and magnetic fields and as we have seen from Maxwell's equations. Whenever we have time varying fields, electric and magnetic fields coexist.
+From this, we see that when we have a time varying charge, they produce electric and magnetic fields and as we have seen from Maxwell's equations, whenever we have time varying fields, electric and magnetic fields coexist.
 
 Let us consider a problem based on the boundary conditions. Boundary condition is nothing but application of Maxwell's equation in integral form across a boundary. It means if the laws are expressed in differential form, we get the point form of Maxwell's equation.
 \begin{exmp}
@@ -293,7 +294,7 @@ A medium has infinite conductivity for $Z<0$, and $E_r=5$, $\mu_r = 20$, $\sigma
 \end{align*}
 Find the surface charge density and the surface current density at the location (2,3,0) at the time $t = 0.5nsec$.\\
 \subsubsection*{Solution}
-With infinite conductivity for $Z>0$, that is an ideal conductor, electric and magnetic field cannot exist inside it. Electric field is normal to the surface as shown in the diagram.
+With infinite conductivity for $Z<0$, that is an ideal conductor, electric and magnetic field cannot exist inside it. Electric field is normal to the surface as shown in the diagram.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/diemedium7}
@@ -309,7 +310,7 @@ Substituting location (2,3,0) at x = 2m and $t = 0.5\times 10^-9sec$,
 \rho_s = \epsilon_o(5)10cos(3\times 10^8\times 0.5\times10^{-9} - 10\times 2) = 2.389\times 10^-11 C/m^2
 \end{dmath*}
 Next we find the surface current density at that location. As we know, for a conducting boundary, the surface current density is related to the magnetic field. \\
-So, if we know the tangential component of the magnetic field at the conducting boundary, then we can find out what is the surface current at that boundary. We use the curl equation to find out what will be the magnetic field on the surface of the boundary. So,
+So, if we know the tangential component of the magnetic field at the conducting boundary, then we can find out what the surface current density is at that boundary. We use the curl equation to find out what will be the magnetic field on the surface of the boundary. So,
 \begin{align*}
 \nabla\times \overline{E} = \begin{vmatrix}
 \hat{x} &\hat{y} &\hat{z}\\
@@ -335,7 +336,6 @@ Substituting into the $\overline{H}$ expression,
 \begin{align*}
 \overline{H} &= \frac{-1}{\mu_o\mu_r}\int-100cos(3\times 10^8t - 10x)\hat{y}dt \\
 &=\frac{100}{\mu_o\mu_r}\int cos(3\times 10^8t - 10x)\hat{y}dt \\
-&=\frac{100}{3\times 10^8}sin(3\times 10^8t - 10x)\hat{y}\\
 \overline{H} &= \frac{100}{\mu_o\mu_r}\frac{sin(3\times 10^8t -10x)}{3\times 10^8}\hat{y} A/m
 \end{align*}
 Now we have a magnetic field which is $y$ oriented, so the $y$ oriented magnetic field is now tangential to the surface of the conducting boundary. We can find $\nabla\times\overline{H}$ to get the surface current as
@@ -351,6 +351,6 @@ The surface current density at (2,3,0) which is at x = 2m and t = 0.5ns.
 \overline{J}_s = \frac{100}{\mu_o\mu_r}\frac{sin(3\times 10^8\times 0.5 \times 10^{-9} - 10\times 2)}{3\times 10^8}\hat{x} = 1.116\times 10^{-2} A/m
 \end{dmath*}
 \end{exmp} 
-Here's what we did. From the knowledge of electric field we found out the magnetic field. We then found out the tangential component of the magnetic field. Then, using the boundary condition $\hat{n}\times\overline{H} = \overline{J}_s$, we found out the surface current on the conducting boundary and at location $x = 2m$ and $t = 0.5nsec$. Finally, we found the surface current on the conducting boundary.
+Here's what we did. From the knowledge of electric field we found out the magnetic field. We then found out the tangential component of the magnetic field. Then, using the boundary condition $\hat{n}\times\overline{H} = \overline{J}_s$, we found out the surface current on the conducting boundary and at location $x = 2m$ and $t = 0.5nsec$.
 
 For time varying cases, one can specify either the electric field or the magnetic field near the conducting boundary or dielectric boundary and then by applying the same physical laws in the integral form and applying boundary conditions, we can get the quantities on the surface.

@@ -23,7 +23,7 @@ comparing equation~\ref{eqn:refcoeffient1} with equation~\ref{eqn:refcoeffient2}
 \begin{align}
 \beta = \omega\sqrt{LC}
 \end{align}
-Since we have expressed equation~\ref{eqn:refcoeffient1} in terms of secondary constants, let's find out under what condition the transmission line can be treated as low-loss.\\
+Since we have expressed equation~\ref{eqn:refcoeffient1} in terms of primary constants, let's find out under what condition the transmission line can be treated as low-loss.\\
 From equation~\ref{eqn:attenconst} we have,
 
 \begin{equation*}
@@ -64,8 +64,8 @@ Where $\lambda = \frac{2 \pi}{\beta}$
 \begin{equation*}
 e^{- \alpha x} = e^{-\alpha \frac{2 \pi}{\beta}}
 \end{equation*}
-Since for a low-loss transmission line $\alpha<<\beta$, therefore the quantity $e^{-\alpha \frac{2 \pi}{\beta}} \ll 1$.\\\\
-Hence, amplitude reduction is very small as the original amplitude is close to the final amplitude. So, a line can be treated as a low-loss transmission line if the change in amplitude over one wavelength is negligibly small. Let our negligibly small be 1 per cent.\\\\ 
+Since for a low-loss transmission line $\alpha\ll\beta$, therefore the quantity $e^{-\alpha \frac{2 \pi}{\beta}} \approx 1$.\\\\
+Hence, amplitude reduction is very small as the original amplitude is close to the final amplitude. So, a line can be treated as a low-loss transmission line if the change in amplitude over one wavelength is negligibly small. Let our negligibly small be 1 percent change from the original or starting amplitude. Then;\\\\ 
 $\frac{\alpha 2 \pi}{\beta} \approx \frac{1}{100}$, $ e^{-0.01} = 0.99005$ of the initial value.\\\\
 The wave amplitude only reduces by $1-0.99005=0.00995$ or 1 per cent. That means the wave amplitude only reduces by 1 per cent after a distance of 1 wavelength.\\\\
 A line can be treated as a low-loss transmission line if $\alpha \ll \beta$ depending on the given frequency but if the frequency changes such that $\alpha \geq \beta$, the line cannot be treated as a low-loss transmission line.\\
@@ -125,7 +125,7 @@ I= \frac{V^+}{Z_o} e^{- \gamma x} - \frac{V^-}{Z_o} e^{\gamma x}
 \end{equation}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/11111111}
+\includegraphics[width=0.9\linewidth]{./graphics/11111111}
 \caption{Wave moving towards the Generator}
 \label{fig:11111111}
 \end{figure}
@@ -185,10 +185,10 @@ I(l) = \frac{V^+}{Z_o}e ^{j \beta l}( 1 - |\Gamma_L|e^{\jmath\phi_L} . e^{-\jmat
 \begin{equation}
 I(l) = \frac{V^+}{Z_o}e ^{j \beta l}( 1 -|\Gamma_L|  e^{j(\phi_L -2 \beta l)})
 \end{equation}
-As we move from load to generator, $l$ increases positively, making $\phi_L -2 \beta l$ more and more negative. In the complex plane, when a phase gets more negative, it means we are moving in a clockwise direction.
+As we move from load to generator, $l$ increases positively, making $\phi_L -2 \beta l$ more and more negative. In the complex plane, when a phase gets more negative, it means we are moving in a clockwise direction as shown in figure~\ref{fig:473-drawings}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{./graphics/"473 drawings"}
+\includegraphics[width=1\linewidth]{./graphics/"473 drawings"}
 \caption{Clockwise and Anticlockwise movement of l}
 \label{fig:473-drawings}
 \end{figure}
@@ -196,7 +196,7 @@ As we move from load to generator, $l$ increases positively, making $\phi_L -2 \
 So by moving towards the generator, the phase becomes more and more negative, while the amplitude of $|\Gamma_L|$ remains constant. The total voltage is scaled by the vector sum of the real term (1) and complex term $|\Gamma_L|  e^{j(\phi_L -2 \beta l)}$. Hence, we have a summation of a real vector, whose magnitude is 1, plus a complex term shown below. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{./graphics/kjhgfdwert}
+\includegraphics[width=0.8\linewidth]{./graphics/kjhgfdwert}
 \caption{Argand Diagram}
 \label{fig:kjhgfdwert}
 \end{figure}
@@ -218,7 +218,7 @@ This is opposite to the behaviour of the current relationship, when 1 and  $-|\G
 The maximum voltage and current does not occur at the same point on the transmission line, they are staggered in space. Whenever there is a maximum voltage, there is a minimum current and vice versa. So the standing wave of voltage and current are shifted with respect to each other in space on the transmission line. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{./graphics/asdfghjhgfdsa}
+\includegraphics[width=0.7\linewidth]{./graphics/fig5.4modified}
 \caption{Voltage and Current Plot, with Increasing l to the left}
 \label{fig:asdfghjhgfdsa}
 \end{figure}
@@ -226,7 +226,7 @@ From figure 5.4, we observe that maximum voltage corresponds to minimum current 
 \section{Concept of Voltage Standing Wave Ratio(VSWR)}
 Recall that ;
 \begin{align*}
-\frac{V(l)}{I(l)} = Z_o \frac{V^{+}e^{j\beta l}(1+ |\Gamma_L|e^{j(\phi_L- 2 \beta l)})}{\frac{V^{+}}{Z_o}(1- |\Gamma_L|e^{j(\phi_L- 2\beta l)})}
+\frac{V(l)}{I(l)} = \frac{V^{+}e^{j\beta l}(1+ |\Gamma_L|e^{j(\phi_L- 2 \beta l)})}{\frac{V^{+}}{Z_o}(1- |\Gamma_L|e^{j(\phi_L- 2\beta l)})}
 \end{align*}
 Therefore,
 \begin{equation*}
@@ -235,12 +235,12 @@ Therefore,
 For maximum voltage: $\phi_L-2\beta l=$ Even multiples of $\pi$ $i.e\ 0, 2\pi, 4\pi,  6\pi,...$\\
 For minimum voltage:  $\phi_L-2\beta l=$ Odd multiples of $\pi. \ i.e\ \pi, 3\pi,\ 5\pi,\ ...$\\\\
 $e^{j(\phi_L - 2 \beta l)} = cos(\phi_L - 2 \beta l) + jsin(\phi_L - 2 \beta l)$ , $sin(\phi_L - 2 \beta l) = 0$ for all multiples of $\pi$ or n$\pi$ , where n is an integer. So that $e^{j(\phi_L - 2 \beta l)} $ is always real.\\
-So when a voltage is maximum, $\frac{V(l)}{I(l)} = Z_o \times$(real quantity).\\\\ 
+So when a voltage is maximum or minimum, $\frac{V(l)}{I(l)} = Z_o \times$(real quantity).\\\\ 
 So irrespective of what the line is terminated in at maximum voltage, the impedance at that point is always real, even if the line is terminated in a complex impedance. If we move to the point of maximum voltage, the impedance that will be measured at that point will always be real. Similarly, at the location where the voltage is minimum, the impedance will again be real.\\ In conclusion, on a transmission line, wherever there is a maximum voltage the impedance measured at that point will be real, same for the point of minimum voltage.\\\\
 Mathematically,\\\\
 Maximum Impedance, 
 \begin{equation}
-Z_{max} = \frac{|V_{max}|}{|I_{min|}}
+Z_{max} = \frac{|V_{max}|}{|I_{min|}} = R_{max}
 \end{equation}
 \begin{equation}
 R_{max}= Z_o\{\frac{1+|\Gamma_L|}{1-|\Gamma_L|}\}
@@ -248,20 +248,20 @@ R_{max}= Z_o\{\frac{1+|\Gamma_L|}{1-|\Gamma_L|}\}
 At the location of minimum voltage\\
 Minimum Impedance,
 \begin{equation}
-Z_{min}=\frac{|V_{min}|}{|I_{max}|}
+Z_{min}=\frac{|V_{min}|}{|I_{max}|} = R_{min}
 \end{equation}
 \begin{equation}
 \\R_{min} =Z_o\{\frac{1-|\Gamma_L|}{1+|\Gamma_L|}\}
 \end{equation}
 Once load impedance is known, characteristic impedance $Z_o$ is known as well as the reflection coefficient $\Gamma_L$, then we can calculate the maximum and minimum value of impedance that we will see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance. The lowest being :
 \begin{equation*}
-Z_{min} = \frac{|V_{min}|}{|I_{max|}}
+Z_{min} = \frac{|V_{min}|}{|I_{max|}} = R_{min}
 \end{equation*}
 and the highest being :
 \begin{equation*}
-Z_{max} = \frac{|V_{max}|}{|I_{min|}}
+Z_{max} = \frac{|V_{max}|}{|I_{min|}} = R_{max}
 \end{equation*}
-Now, once we have the voltage standing wave on the transmission line, at high frequencies the measurement of phase is very difficult and complicated. One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase not in a direct manner, but in an indirect manner by measuring only the magnitude kind of quantities, we would like to estimate the phase of the signal. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time or the phase relationship between the two waves, the forward and backward wave which is related to the time phase and the space phase ($\omega t + \beta x$) where $\omega t$ = time phase and $\beta x$ = space phase. Since the total phase governs the location of maximum and minimum on the standing wave, noting the location of maximum and minimum on the transmission line, one can estimate the phase of the signal. Now we define a parameter for the standing wave which is a parameter of only amplitude variation of the transmission line. This quantity is called the \textbf{Voltage Standing Wave Ratio(VSWR)} which is the measure of the relative contribution of the reflected wave with respect to the incident wave. If the reflected wave is zero, there is no standing wave but only a travelling wave and if the reflected wave is full, then we have a completely developed standing wave. So the interference of the two waves, the forward and backward wave is going to give the variation of $R_{max}$ to $R_{min}$ and $R_{min}$ to $R_{max}$. So we define a quantity relating $V_{max}$ and $V_{min}$, then $\frac{V_{max}}{V_{min}}$ $= VSWR$. It is a very important quantity because without carrying out phase measurements, we can measure this quantity on a transmission line. Recall that the reflection coefficient is a complex quantity. So, if you want to have complete knowledge of the reflection coefficient, then you have to get its amplitude and phase. However, the quantity which we are defining is known as VSWR $(\rho)$ which is measured only by amplitude.\\
+\textbf{Once we have the voltage standing wave on the transmission line, at high frequencies the measurement of phase is very difficult and complicated.} One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase not in a direct manner, but in an indirect manner by measuring only the magnitude kind of quantities, we would like to estimate the phase of the signal. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time on the phase relationship between the two waves, the forward and backward wave which is related to the time phase and the space phase ($\omega t + \beta x$) where $\omega t$ = time phase and $\beta x$ = space phase. Since the total phase governs the location of maximum and minimum on the standing wave, noting the location of maximum and minimum on the transmission line, one can estimate the phase of the signal. Now we define a parameter for the standing wave which is a parameter of only amplitude variation of the transmission line. This quantity is called the \textbf{Voltage Standing Wave Ratio(VSWR)} which is the measure of the relative contribution of the reflected wave with respect to the incident wave. If the reflected wave is zero, there is no standing wave but only a travelling wave and if the reflected wave is full, then we have a completely developed standing wave. So the interference of the two waves, the forward and backward wave is going to give the variation of $R_{max}$ to $R_{min}$ and $R_{min}$ to $R_{max}$. So we define a quantity relating $V_{max}$ and $V_{min}$, then $\frac{V_{max}}{V_{min}}$ $= VSWR$. It is a very important quantity because without carrying out phase measurements, we can measure this quantity on a transmission line. Recall that the reflection coefficient is a complex quantity. So, if you want to have complete knowledge of the reflection coefficient, then you have to get its amplitude and phase. However, the quantity which we are defining is known as VSWR $(\rho)$ which is measured only by amplitude.\\
  Therefore, by measuring the maximum and minimum values of the standing wave, we get;
 \begin{equation*}
 VSWR = \rho =\frac{|V|_{max}}{|V|_{min}} = \frac{|V^+|\{1+|\Gamma_L|\}}{|V^+|\{1-|\Gamma_L|\}}
@@ -314,13 +314,13 @@ So the three cases under which $|\Gamma_L|=1$ is;
 \item When the line is open-circuited.
 \item When the line is terminated in a pure reactance, there will be a full reflection from the load end.
 \end{enumerate}
-Since there is no energy-absorbing circuit at the load end of the line, short circuits, open circuits and ideal reactance cannot absorb power. So, whatever power the generator takes to the load end, it has no option but to return all the power to the reflected waveform.
+Since there is no energy-absorbing circuit at the load end of the line, short circuits, open circuits and ideal reactance cannot absorb power. So, whatever power the generator takes to the load end, it has no option but to return all the power in the reflected waveform.
 \begin{align*}
 VSWR  = \frac{1+|\Gamma_L|}{1-|\Gamma_L|}
 \end{align*}
 The $VSWR$ will always be greater than 1, the best case is $|\Gamma_L|=0$ and $VSWR=1$.
 $|\Gamma_L|=1$, $\rho= \infty$. So $1\leq\rho\leq\infty$\\\\
-$|\Gamma_L|=0$ represents no reflected wave on the transmission line i.e full power is transferred to the load which means VSWR=1 which is the best case for power transfer on the line. As the VSWR increases, it creates a higher value of $|\Gamma_L|$, which means more reflection on the transmission line or less efficiency of power transfer to the load. So, every circuit design tries to make VSWR as small as possible or as close to 1 as possible. A higher value of VSWR indicates more mismatch on the transmission line or a higher value of the reflected wave on the transmission line.\\
+$|\Gamma_L|=0$ represents no reflected wave on the transmission line i.e full power is transferred to the load which means VSWR=1 which is the best case for power transfer on the line. As the $|\Gamma_L|$ increases, it creates a higher value of VSWR, which means more reflection on the transmission line or less efficiency of power transfer to the load. So, every circuit design tries to make VSWR as close to 1 as possible. A higher value of VSWR indicates more mismatch on the transmission line or a higher value of the reflected wave on the transmission line.\\
 So VSWR is one of the most important quantities at high frequency. When designing a circuit, we try to make sure the $VSWR$ on the transmission line is close to one as possible, making sure the circuit is efficiently transferring power to the load end of the line. Once $\rho$ or VSWR is defined, we can relate it to the maximum and minimum impedance that can be seen on the transmission line.\\
 Relating $\rho$ to $R_{max}$ and  $R_{min}$\\\\
 Recall that $\rho =  (\frac{1 + |\Gamma_L|}{1 - |\Gamma_L|})$
@@ -340,4 +340,4 @@ R_{min} = \frac{Z_o}{\rho}
 So for any line terminated with an arbitrary impedance, if we move to a point where the voltage is maximum or minimum, then we know the value of the impedance at that location. Because measuring $V_{max}$ and $V_{min}$ gives us $\rho$ or VSWR. $Z_o$ is known beforehand, hence $R_{max}$ = $Z_o \rho$ and $R_{min} = \frac{Z_o}{\rho}$. \\
 We know that the impedance known at any point in a transmission line can always be transformed to any other point using the impedance transformation relation. Hence knowing the location at voltage maximum or minimum, since the impedance value is known there, we can transform the impedance value towards the load so that we can get the load impedance. This essentially opens up a measurement technique for unknown impedance. \\
 At high frequency, if we have a complex impedance, its measurement is quite tedious because we cannot measure phase accurately. Now we have a mechanism for measuring the phase indirectly. As we have mentioned, the phase gets reflected into the standing wave pattern on the location of voltage maximum and minimum. So if we measure VSWR and the location of $V_{max}$ and $V_{min}$ we can always transform $R_{max}$ or $R_{min}$ to the location of the load which is nothing but the load impedance. So if we transform from the load impedance to the voltage maximum or minimum we would get $R_{max}$ and $R_{min}$. So if we know the location of $V_{max}$ from the load, we know the value of impedance at that location, and the distance of the load from that point, so the transformation of $R_{max}$ or $R_{min}$ to load end should give load impedance.\\
-When we go to the application of transmission line we will see that the technique is used for measuring the complex impedances. Then we will explicitly derive the expression for the unknown impedance which is terminated to a transmission line. 
+When we go to the application of transmission line we will see that the technique is used for measuring complex impedances. Then we will explicitly derive the expression for the unknown impedance which is terminated to a transmission line. 
