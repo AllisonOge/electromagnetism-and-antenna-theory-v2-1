@@ -1,10 +1,10 @@
 \chapter{The Basic Laws To Maxwell's Equation (1)}\label{lec:lec18}
 It was established in the previous chapter that, the origin of the electric and magnetic field is the charge. The effect of this charge is measured by a quantity called the \textbf{\emph{electric field}}. However, when the same charge is kept in motion, it constitutes a current and the presence of this current is felt by a quantity called \textbf{\emph{magnetic field}}. So we can take current as the origin of the magnetic field. 
 
-In this chapter we will be looking at some laws like ohms law and other laws of electromagnetism and see how we can formulates these laws in mathematical form called \footnote[1]{James Clerk Maxwell, a Scottish mathematician and physicist. He was born on June 13, 1831 in Scotland and died on Nov 5, 1879 in Edinburgh. He studied electromagnetic radiation, electricity, light and gas. He is known for his formulation of electromagnetic theory and he's regarded by most modern physicists as the scientist of the 19th century who has the greatest influence on 20th century physics, for the nature of his contribution.} maxwell's equations. And also see the relationship between current and magnetic field, magnetic flux density and magnetic field.
+In this chapter we will be looking at some laws like ohms law and other laws of electromagnetism and see how we can formulate these laws in mathematical form called \footnote[1]{James Clerk Maxwell, a Scottish mathematician and physicist. He was born on June 13, 1831 in Scotland and died on Nov 5, 1879 in Edinburgh. He studied electromagnetic radiation, electricity, light and gas. He is known for his formulation of electromagnetic theory and he's regarded by most modern physicists as the scientist of the 19th century who has the greatest influence on 20th century physics, for the nature of his contribution.} maxwell's equations. And also see the relationship between current and magnetic field, magnetic flux density and magnetic field.
 \begin{figure}[h]
 \centering
-\includegraphics[height=5cm]{./graphics/f}
+\includegraphics[height=7cm]{./graphics/currentElement}
 \caption{Current carrying element(wire)}
 \label{}
 \end{figure}
@@ -18,7 +18,7 @@ The magnetic field due to the current element $Id\bar{l}$ is given by; \\
 This is the \emph{Magneto-motive force (MMF) at that point P}\index{magneto-motive force (mmf)}. Analysis From Equation 18.1
 \begin{enumerate}[(i)]
 \item The expression shows that the magnetic field is proportional to the current I and the length of the wire through which the current flows but inversely proportional to the square of the distance r from the current element (wire).
-\item By applying right hand rule for the cross product of $d\bar{l}$ and $\hat{r}$, magnetic fields ($d\bar{H}$ ) points inward, that is why the point P takes the symbol $\otimes$.
+\item By applying right hand rule, the direction of the magnetic field ($d\bar{H}$ ) points in the clockwise direction looking in the direction of the current.
 \end{enumerate}
 
 The quantity related to the medium parameters is the magnetic flux density ($\bar{B}$) and not magnetic field ($\bar{H}$). So no matter the medium, $ d\bar{H} $ depends on I, $ d\bar{l} $ and r which are not the medium parameters. 
@@ -36,7 +36,7 @@ So the magnetic flux at point P, is related to the permeability of the medium an
 \begin{enumerate}[(i)]
 \item The magnetic flux density $\bar{B}$ tells us the density of magnetic lines of forces at that particular location. Meaning it is essentially showing you some kind of vectors which are oriented and hence the reason it is a vector quantity.
 \item As we define electric field as the  \emph{force per unit charge due to presence of charges}, we can also define for magnetic field as the \emph{force experienced by a unit magnetic pole placed in the vicinity of the current}, making $\bar{B}$ and $\bar{H}$ vector quantities.
-\item In the case of magnetic field, if the medium is \footnote[2]{An isotropic medium is a medium that has uniform permeability in all directions of the medium }\emph{Isotropic} $\bar{B}$ and $\bar{H}$ will be in the same direction. Whereas if it is an \footnote[3]{Anisotropic medium is one such that the permeability and permittivity of the medium are not uniform }\emph{Anisotropic} medium $\bar{B}$ and $\bar{H}$ will not be in the same direction. The next we are looking at is Ohms law.
+\item In the case of magnetic field, if the medium is \footnote[2]{An isotropic medium is a medium that has uniform permeability in all directions of the medium }\emph{Isotropic}, $\bar{B}$ and $\bar{H}$ will be in the same direction. Whereas if it is an \footnote[3]{Anisotropic medium is one such that the permeability and permittivity of the medium are not uniform }\emph{Anisotropic} medium $\bar{B}$ and $\bar{H}$ will not be in the same direction. The next we are looking at is Ohms law.
 \end{enumerate}
 
 \section{Ohms Law} 
@@ -48,7 +48,7 @@ We know that \footnote[4]{Ohms law was formulated by a German physicist and a ma
 \label{}
 \end{figure}
 
-So if we take a medium where the conductivity of the medium is not constant, then it is not meaningful to define the total current for the medium. Normally what we do is, we define a quantity called the conduction current density $ \bar{J} $ (i.e \emph{current flowing per unit area in this conductor}). It has direction which is the direction the current is flowing as seen in fig 18.2. 
+So if we take a medium where the conductivity of the medium is not constant, then it is not meaningful to define the total current for the medium. Normally what we do is, we define a quantity called the conduction current density $ \bar{J} $ (i.e \emph{current flowing per unit area in this conductor}). It has direction which is the direction the current is flowing. 
 
 This current is flowing due to electric field because it has some electric potential. We have seen that the electric field is related to the gradient of potential difference.
 
@@ -59,14 +59,14 @@ Mathematically,
 \begin{align*}
 I\quad\alpha\quad V \quad\Rightarrow I = \frac{V}{R}
 \end{align*} 
-Making 'R' subject of the formula, we have that; 
+Making `R' subject of the formula, we have that; 
 \begin{align}
-R =  \frac{V}{I}
+R =  \frac{V}{I} 
 \end{align}
 \begin{center}
 Where R = The introduced constant of proportionality called the resistance.
 \end{center}
-For a conductor of length $\ell$ and the cross sectional area 'A'. The resistance is directly proportional to the length and inversely proportional to the cross sectional area of the conductor. \\
+For a conductor of length $\ell$ and the cross sectional area `A' The resistance is directly proportional to the length and inversely proportional to the cross sectional area of the conductor. \\
 Mathematically, 
 \begin{align*}
 R \alpha \frac{\ell}{A}\quad R = \frac{\rho\ell}{A}
@@ -79,26 +79,26 @@ Rearranging the equation we have that;
 \begin{align}
 \frac{V}{\ell} = \frac{I\rho}{A}
 \end{align}
-Substitute equation 18.5 into 18.4, we have that;
+Substitute equation $\vec{E} = \frac{V}{\ell}$ into 18.4, we have that;
 \begin{align*}
 \vec{E} = \frac{I\rho}{A}
 \end{align*}
 But the ratio of current to area is given by a quantity called conduction current density J, Hence
 \begin{align*}
-\vec{E} = \vec{J}\rho \quad \Rightarrow \frac{1}{\rho}\vec{E}
+\vec{E} = \vec{J}\rho \quad \Rightarrow \vec{J}=\frac{1}{\rho}\vec{E}
 \end{align*}
 
 Where the conductivity $ \sigma $ is the the inverse of resistivity and verse versa $ \rho $  (i.e $ \frac{1}{\rho} $ ), Hence, 
 \begin{align}
 \boxed{\vec{J} = \sigma \vec{E}}\quad (A/m^{2})
 \end{align}
-This is the \emph{Conduction current density- The general form of Ohm's law}\index{conduction current density}. Mathematically, it is the product of electric field intensity $\vec{E}$ and the distance$(\ell)$ from a reference point where $\sigma$ is the conductivity of the medium(proportionality constant).
+This is the \emph{Conduction current density- The general form of Ohm's law}\index{conduction current density}. Mathematically, it is the product of electric field intensity $\vec{E}$ and $\sigma$ from a reference point where $\sigma$ is the conductivity of the medium(proportionality constant).
 
 As seen in the previous case, the relative permeability of the medium $ \mu_r $ and the conductivity of the medium $ \sigma $ (sigma) in general, could be 3 $ \times $ 3 matrix.
 
 So if we take a medium that is isotropic, the quantity $ \mu_r$ and sigma are scalar quantities. Whereas if the media is Anisotropic such that the media property depends on the direction in general, $ \mu_r $ gets a 3$ \times $3 matrix,  and the conductivity $ \sigma $ gets a 3$ \times $3 matrix.
 
-This is exactly the case, like we saw in the electric field where if the medium is isotropic, the direction of the displacement vector and electric field are the same. Same thing will happen in the case of magnetic field, where if the medium is isotropic, $ \bar{B}$ and $ \bar{H}$ will be in the same direction. If the medium is Anisotropic, the direction will not be the same. Some are true for conduction current density and electric field . If the medium is Anisotropic, the direction of electric and conduction current density are not the same, and $ \bar{J} $ and $\bar{E}$ are in the same direction  for isotropic medium. 
+This is exactly the case, like we saw in the electric field where if the medium is isotropic, the direction of the displacement vector and electric field are the same. Same thing will happen in the case of magnetic field, where if the medium is isotropic, $ \bar{B}$ and $ \bar{H}$ will be in the same direction. If the medium is Anisotropic, the direction will not be the same. Some is true for conduction current density and electric field . If the medium is Anisotropic, the direction of electric and conduction current density are not the same, and $ \bar{J} $ and $\bar{E}$ are in the same direction  for isotropic medium. 
 
 \section{The Physical Laws To Maxwell's Equation}
 Now from this basic introduction of the parameters, we are set to establish the physical laws mathematically, which when compiled gives Maxwell's equation and these physical laws are the experimental verification of the postulates. There are two ways to get Maxwell's equation
@@ -107,27 +107,27 @@ Now from this basic introduction of the parameters, we are set to establish the 
 \item Try to represent these mathematical laws in appropriate mathematical form to give us Maxwell's equation.
 \end{enumerate}
 
-Both ways have merits, that is, if we say maxwell's equation are mathematical postulates, then they are very exact. However one could ask a question, how do you get this postulates? one cannot simply come up with these mathematical formulaes, without having a background. So suddenly the background was in the physical laws. First the physical laws came by curiosity towards the relationship between electrical and magnetic field. So if we go by the picture that maxwell's equations were guided by the experimented laws, then the advantage is that we always try to see the phenomenon in physical terms. So if we have any electromagnetic phenomenon, and accept that the origin lies in the physical laws, it will always be useful to look at every phenomenon of electromagnetic physically.
+Both ways have merits, that is, if we say maxwell's equation are mathematical postulates, then they are very exact. However one could ask a question, how do you get this postulates? one cannot simply come up with these mathematical formulae, without having a background. So the background are in the physical laws. First the physical laws came by curiosity towards the relationship between electrical and magnetic field. So if we go by the picture that maxwell's equations were guided by the experimented laws, then the advantage is that we always try to see the phenomenon in physical terms. So if we have any electromagnetic phenomenon, and accept that the origin lies in the physical laws, it will always be useful to look at every phenomenon of electromagnetics physically.
 
 However, if you treat these equations more like mathematical postulates then one may get lost in the mathematical manipulation of these equations. So from the exactness point of view, the mathematical postulates has merit, but seeing what is happening physically, first understanding the physical laws and then getting maxwell's equation.
 
-What we will be doing in this chapter is that, we would state first the physical laws and then using the vector identities and theorems such as divergence and stokes theorems. We would try to get the mathematical form and then finally we get maxwell's equation.
+What we will be doing in this chapter is that, we would state first the physical laws and then using the vector identities and theorems such as divergence and stokes theorems, we would try to get the mathematical form and then finally we get maxwell's equation.
 
 \section{Gauss Law}
-This law states that the total displacement coming out of a close surface is equal to the net charge enclosed by the closed surface.\\
+This law states that the total displacement(electric flux) coming out of a close surface is equal to the net charge enclosed by the closed surface.\\
 Mathematically, 
 \begin{align}
 \boxed{\oiint_s\bar{D}\cdot{d\bar{a}} = \iiint_v\rho dv}
 \end{align}
-This is  \emph{Gauss law in integral form}\index{gauss law} where $\oiint_s\bar{D}\cdot d\bar{a}$ is the total outward displacement from the total surface. Meaning we can find \footnote[5]{Guass law was formulated by a German mathematician, Carl Friedrich Gauss (30 April 1777 - 23 February 1855)who developed the divergence theorem. He was the first physicist to measure  electric  and magnetic  quantities in absolute  units.He began his scientific research in university of Gottingen on mathematics and physics as his field where Johann Friedrich Ptaff and Johann Christian Martins were his doctoral advisor. He won Lalande prize in 1810 and Copley Medal in 1838. some of his own doctoral students includes Carl Wolfgang Benjamin Goldschmidt(A co-author with J.C Eduard on Analytical Optics), Johann Benedict Listing(He discovered properties of the half twisted strip in 1858, his known also by listing's law in Ophthalmology.)}Gauss law by finding out the total outward displacement from the total surface and the total charge integrated over the volume.
+This is  \emph{Gauss law in integral form}\index{gauss law} where $\oiint_s\bar{D}\cdot d\bar{a}$ is the total outward displacement from the total surface. Meaning using Guass' law \footnote[5]{Guass law was formulated by a German mathematician, Carl Friedrich Gauss (30 April 1777 - 23 February 1855)who developed the divergence theorem. He was the first physicist to measure  electric  and magnetic  quantities in absolute  units.He began his scientific research in university of Gottingen on mathematics and physics as his field where Johann Friedrich Ptaff and Johann Christian Martins were his doctoral advisor. He won Lalande prize in 1810 and Copley Medal in 1838. some of his own doctoral students includes Carl Wolfgang Benjamin Goldschmidt(A co-author with J.C Eduard on Analytical Optics), Johann Benedict Listing(He discovered properties of the half twisted strip in 1858, his known also by listing's law in Ophthalmology.)} to find out the total outward displacement from the total surface from the total charge integrated over the volume.
 \begin{figure}[h]
 \centering
-\includegraphics[height=5cm]{./graphics/g}
+\includegraphics[height=6cm]{./graphics/g}
 \caption{A closed surface showing the direction of displacement vector}
 \label{fig:g}
 \end{figure}
 
-The total displacement shown by each arrow = the net charge enclosed by the surface. In general, the displacement vector will be varying as a function of the location on the surface, also it will be oriented in different directions. How ever the net displacement which is coming out of the surface will be the component of each arrow normal to the surface at that location.
+The total displacement shown by each arrow = the net charge enclosed by the surface. In general, the displacement vector will be varying as a function of the location on the surface, also it will be oriented in different directions. However the net displacement which is coming out of the surface will be the component of each arrow normal to the surface at that location.
 
 Hence considering a small incremental area $ d\bar{a} $ on the surface as shown in figure 18.3. $ d\bar{a} $ has a direction defined by a unit normal $ \hat{n} $ with the direction of the displacement vector given by $ \bar{D} $. The outward displacement coming out from the area is the dot product of $ \bar{D} $ and $ d\bar{a} $. If that is gotten, add all the contributions from others around the surface, then we have the total displacement coming out of the close surface. Let us say in general, we have charges which are distributed inside this surface and is characterized by a charge density. This is denoted by volume charge density $ \rho $ (which is representing the density of charges inside the volume. It's S.I unit of measurement is in coulomb per cubic metres, $ C/m^{3} $).
 
@@ -346,7 +346,7 @@ We know that $\bar{B} = \mu \bar{H}$ $\quad$ Substituting $\bar{B}$ into the dif
 \begin{enumerate}[(i)]
 \item Note that the integral form of all the physical laws discussed in this chapter are applicable in all situations.
 
-\item The origin of the electric and magnetic field is the charge. It effect of the charge is measured by a quantity called the \textbf{\emph{electric field}}.
+\item The origin of the electric and magnetic field is the charge. The effect of the charge is measured by a quantity called the \textbf{\emph{electric field}}.
 
 \item Electric field can be defined as the \emph{force per unit charge due to presence of charges} 
 

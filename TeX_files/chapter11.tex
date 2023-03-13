@@ -77,7 +77,7 @@ $ \frac{1}{\tanh\theta}=\frac{\cosh\theta}{\sinh\theta}=\coth\theta $
 \boxed{Z(l)_{oc}=Z_{o}\coth\gamma l}	
 \end{equation}
 
-$ Z(l)_{sc}=Z_{o}\tanh\gamma l $ and $ Z(l)_{oc}=Z_{o}\coth\gamma l $, but with $ \gamma=\alpha +j\beta $, we have $ \alpha<<\beta $ for low loss line (not lossless in this case), i.e $ \gamma\neq j\beta $ only, the $ \alpha $ part must be taken into consideration also. We know that at $ l=\frac{\lambda}{4} $, the input impedance of a short circuit line is an open circuit and that of an open circuit line is a short circuit. However, in the presence of a loss, that will not be true. The impedance will neither be infinity for $ Z_{sc} $ and zero for $ Z_{oc} $. If the loss is present, the input impedance will give:\\
+$ Z(l)_{sc}=Z_{o}\tanh\gamma l $ and $ Z(l)_{oc}=Z_{o}\coth\gamma l $, but with $ \gamma=\alpha +j\beta $, we have $ \alpha<<\beta $ for low loss line (not lossless in this case), i.e $ \gamma\neq j\beta $ only, the $ \alpha $ part must be taken into consideration also. We know that at $ l=\frac{\lambda}{4} $, the input impedance of a short circuit line is an open circuit and that of an open circuit line is a short circuit. However, in the presence of a loss, that will not be true. The impedance will neither be infinity for $ Z_{sc} $ nor zero for $ Z_{oc} $. If the loss is present, the input impedance will give:\\
 \begin{equation}
 Z_{sc}=Z_{o}\tanh\gamma l=Z_{o}\tanh(\alpha+j\beta)l
 \end{equation}
@@ -128,7 +128,7 @@ Similarly,\\
 $ Z_{oc}=Z_{o}\coth\gamma l=\frac{Z_{o}}{\tanh\gamma l} $\\\\
 $ Z_{oc}=Z_{o}\coth\gamma l=Z_{o}\coth(\alpha+j\beta) l $\\\\
 For low loss transmission line $ \alpha<<\beta $ \\\\Recall,\\
-$ \tanh(\alpha+j\beta)l=\frac{\tanh (\alpha l) + \tanh (j\beta l)}{1 +j \tanh (\alpha l)\tanh (j\beta l)} $\\\\
+$ \tanh(\alpha+j\beta)l=\frac{\tanh (\alpha l) + \tanh (j\beta l)}{1 + \tanh (\alpha l)\tanh (j\beta l)} $\\\\
 $ \frac{1}{\tanh(\alpha+j\beta)l}=\frac{1 + j\tanh (\alpha l)\tanh (j\beta l)}{\tanh (\alpha l) + \tanh (j\beta l)} $\\\\
 $ \tanh jA= j \tan A $\\\\
 $ \tanh(\alpha+j\beta)l=\frac{\tanh \alpha l+j\tan \beta l}{1+j\tanh \alpha l\tan \beta l} $\\\\
@@ -305,11 +305,11 @@ P_{loss} = \frac{V_{o}^{2}}{Z_{sc}} = \frac{V_{o}^{2}}{\frac{Z_{o}}{\alpha l}}
 \end{equation}
 $ V_{o} $ is the supplied voltage:
 \begin{equation}
-V_{o} = \frac{V_{o}^{2}}{Z_{o}}*\alpha *\frac{\lambda_{o}}{4}
+P_{loss} = \frac{V_{o}^{2}}{Z_{o}}\times\alpha \times\frac{\lambda_{o}}{4}
 \end{equation}
 Recall, $Q = 2 \pi f_{o} \left(\frac{\text{Energy stored in a circuit}}{\text{Power loss in the circuit}}\right)$
 \begin{equation}
-Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}*CV_{o}^{2}*\frac{\lambda_{o}}{4}}{\frac{V_{o}^{2}}{Z_{o}}*\alpha *\frac{\lambda_{o}}{4}}\right)
+Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}\times CV_{o}^{2}\times\frac{\lambda_{o}}{4}}{\frac{V_{o}^{2}}{Z_{o}}\times\alpha \times\frac{\lambda_{o}}{4}}\right)
 \end{equation}
 \begin{equation}
 Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_{o}}}\right)
@@ -318,7 +318,7 @@ Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_{o}}}\right)
 Quality\ factor (Q) = \frac{2 \pi f_{o} Z_{o}C}{2\alpha}
 \end{equation}
 But $ Z_{o} = \sqrt{\frac{L}{C}}$\\
-$ Z_{o}*C = \sqrt{\frac{L}{C}} * C =\sqrt{\frac{L}{C}} * \sqrt{C^{2}} = \sqrt{LC}$\\
+$ Z_{o}\times C = \sqrt{\frac{L}{C}} \times C =\sqrt{\frac{L}{C}} \times \sqrt{C^{2}} = \sqrt{LC}$\\
 $ 2\pi f_{o} = \omega_{o} $\\
 But $ \footnote{Angular velocity at resonant frequency}\omega_{o}\sqrt{LC} = \beta = $ phase constant of a transmission line
 \begin{equation}
