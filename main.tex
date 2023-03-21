@@ -1,14 +1,18 @@
 \documentclass[a4paper,10pt, two column]{book}
+
+% custom define a new command named "Comb" that takes two arguments and typesets a binomial coefficient.
+\usepackage[fleqn]{amsmath}
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}
+
+\usepackage[margin=1.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage[fleqn]{amsmath}
 \usepackage{amsfonts}
 \usepackage{diagbox}
 \usepackage{amssymb}
 \usepackage{wasysym}
 \usepackage{textcomp}
 \usepackage{times}
-\usepackage[lastexercise]{exercise}
 \usepackage{physics}
 \usepackage{float}
 \usepackage{color}
@@ -16,13 +20,31 @@
 \usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{breqn}
+
+% custom set exercises and example packages. add dependencies
+\usepackage{stackengine}
+\usepackage{multicol}
+\usepackage[lastexercise]{exercise}
 \newtheorem{example}{Example}
 \newtheorem{exmp}{Example}[section]
-\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}
+\counterwithin{Exercise}{chapter}
+\counterwithin{Answer}{chapter}
+\renewcounter{Exercise}[chapter]
+\newcommand{\QuestionNB}{\bfseries\arabic{Question}.\ }
+\renewcommand{\ExerciseName}{EXERCISES}
+\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
+    \stackunder[0pt]{\colorbox{black}{\textcolor{white}{\textbf{\LARGE\ExerciseHeaderNB\;\large\ExerciseName}}}}{\textcolor{gray}{\rule{\linewidth}{2pt}}}\medskip}
+\renewcommand{\AnswerName}{Exercises}
+\renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
+    {\bigskip\noindent\textcolor{black}{\textbf{CHAPTER \thechapter}}\newline\newline%
+        \noindent\bfseries\emph{\textcolor{black}{\AnswerName\ \ExerciseHeaderNB, page %
+                \pageref{\AnswerRef}}}\smallskip}
+    {\noindent\bfseries\emph{\textcolor{black}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
+\setlength{\QuestionIndent}{16pt}
+
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
 \setlist[enumerate]{topsep=0pt,itemsep=0pt,partopsep=1ex,parsep=1ex}
-\usepackage[margin=1.5cm]{geometry}
 
 \usepackage{imakeidx}
 \makeindex
@@ -44,25 +66,25 @@
 
 %transmission line and the wave equation
 \include{./TeX_files/chapter01}
-\include{./TeX_files/chapter02}
-\include{./TeX_files/chapter03}
-\include{./TeX_files/chapter04}
-\include{./TeX_files/chapter05}
-\include{./TeX_files/chapter06}
-\include{./TeX_files/chapter07}
-\include{./TeX_files/chapter08}
-\include{./TeX_files/chapter09}
-\include{./TeX_files/chapter10}
-\include{./TeX_files/chapter11}
-\include{./TeX_files/chapter12}
-\include{./TeX_files/chapter13}
-\include{./TeX_files/chapter14}
-\include{./TeX_files/chapter15}
-\include{./TeX_files/chapter16}
-\include{./TeX_files/chapter17}
-\include{./TeX_files/chapter18}
-\include{./TeX_files/chapter19}
-\include{./TeX_files/chapter20}
+% \include{./TeX_files/chapter02}
+% \include{./TeX_files/chapter03}
+% \include{./TeX_files/chapter04}
+% \include{./TeX_files/chapter05}
+% \include{./TeX_files/chapter06}
+% \include{./TeX_files/chapter07}
+% \include{./TeX_files/chapter08}
+% \include{./TeX_files/chapter09}
+% \include{./TeX_files/chapter10}
+% \include{./TeX_files/chapter11}
+% \include{./TeX_files/chapter12}
+% \include{./TeX_files/chapter13}
+% \include{./TeX_files/chapter14}
+% \include{./TeX_files/chapter15}
+% \include{./TeX_files/chapter16}
+% \include{./TeX_files/chapter17}
+% \include{./TeX_files/chapter18}
+% \include{./TeX_files/chapter19}
+% \include{./TeX_files/chapter20}
 %\include{./TeX_files/chapter21}
 %\include{./TeX_files/chapter22}
 %\include{./TeX_files/chapter23}
@@ -114,6 +136,10 @@
 % \include{./TeX_files/chapter58}
 % \include{./TeX_files/chapter59}
 
+\chapter*{Solution to all Problems}
+\begin{multicols}{2}\raggedcolumns
+\shipoutAnswer
+\end{multicols}
 \backmatter
 
 %bibliography, glossary and index would go here.
