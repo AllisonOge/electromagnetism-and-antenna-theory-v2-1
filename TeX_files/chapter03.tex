@@ -108,29 +108,29 @@ Therefore, 1 Neper/m = 8.68 dB/m.\\
 
 As in propagation constant $\gamma$, the attenuation constant $\alpha$ depends on the primary constant of the transmission line as well as the frequency of operation $\omega$. In general, the propagation constant $\gamma$ which is a combination of phase constant $\beta$ and attenuation constant $\alpha$ is a function of primary line parameters and frequency of operation. Hence as $\omega$ increases, $\alpha$ increases. This is the reason some structures which were satisfactorily good conductors, at low frequencies become bad conductors at high frequencies (i.e the conductor becomes a more lossy line at high frequencies).
 
-
-
 \begin{exmp}
-Let R = 0.5 $\Omega$ /m, L = 0.2$\mu$H /m, C = 100pF/m, G = 0.1 $\Omega$ /m, freq = 1GHz. \ Calculate\ the\ propagation\ constant,\ attenuation\ constant\ and\ phase\ constant\ for\ this\ line. \\\\\\\\\\
+Let R = 0.5 $\Omega$ /m, L = 0.2$\mu$H /m, C = 100pF/m, G = 0.1 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.\\
 
-$\textbf{Solution.}$\\\\
-$ \gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}$\\\\
-But,$ \ \omega = 2\pi f\quad$ and $\quad f = 1GHz = 1 \times 10^9 $ Hz\\\\
-$ \omega = 2\pi \times 10^9 $ rad/s.\\\\
-Substituting into the $ \gamma $ expression; \\\\
-$\sqrt{[0.5+\jmath (2\pi \times 10^9)\times 0.2 \times 10^{-6}][0.1 + \jmath(2\pi \times 10^9) \times 100 \times10^{-12}]}  $\\\\
-$ \gamma = \sqrt{(0.5 + \jmath 400\pi)(0.1 + \jmath 0.2\pi)} $\\\\
-Expanding,\\\\
-$ = \sqrt{0.5(0.1) + 0.5(\jmath 0.2\pi) + \jmath 400\pi(0.1) + \jmath 400\pi(\jmath 0.2\pi)} $ \\\\
-Recall  that,$ \quad \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1 $\\\\
-$ =\sqrt{0.05 + \jmath 0.31416 +\jmath 125.6637 - 789.568} $ \\\\
-$ = \sqrt{-789.518 + \jmath 125.97786} $ \\
+\textbf{Solution.}
+\[ \gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}\]
+But,$ \ \omega = 2\pi f\quad$ and $\quad f = 1\textnormal{GHz} = 1 \times 10^9 \textnormal{Hz} $ 
+\[\omega = 2\pi \times 10^9\textnormal{rad/s}\]
+Substituting into the $ \gamma $ expression;
+\[\gamma = \sqrt{(0.5 + \jmath 400\pi)(0.1 + \jmath 0.2\pi)}\]
+Expanding,
+\[ = \sqrt{0.5(0.1) + 0.5(\jmath 0.2\pi) + \jmath 400\pi(0.1) + \jmath 400\pi(\jmath 0.2\pi)}\]
+Recall  that, $ \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1 $
+\begin{dmath*}
+=\sqrt{0.05 + \jmath 0.31416 +\jmath 125.6637 - 789.568}
+= \sqrt{-789.518 + \jmath 125.97786}
+\end{dmath*}
 
 We are now faced with the challenge of finding the square root of a complex number.
 \footnotetext[3]{
 \includegraphics[scale=0.3]{./graphics/demoivre}
 
-Named after Abraham de Moivre (26 May 1667 – 27 November 1754). He was a French mathematician known for de Moivre's formula, a formula that links complex numbers and trigonometry, and for his work on the normal distribution and probability theory. He was a friend of Isaac Newton, Edmond Halley, and James Stirling.}\\
+Named after Abraham de Moivre (26 May 1667 – 27 November 1754). He was a French mathematician known for de Moivre's formula, a formula that links complex numbers and trigonometry, and for his work on the normal distribution and probability theory. He was a friend of Isaac Newton, Edmond Halley, and James Stirling.}
+
 To find the square root, we apply DeMoivre's theorem \footnotemark[3]. It states; $ \quad Z^{\frac{1}{n}} = |Z|^{\frac{1}{n}}\angle\frac{\theta}{n} $\\\\
 We first convert the complex number to polar form.\\\\
 -$ 789.518 + \jmath 125.9778 = 799.5055\angle 170.934\textdegree $\\\\
@@ -143,7 +143,6 @@ $ \alpha = 2.23467 $ Nepers/m, $ \beta = 28.1871 $ rad/m\\\\
 We now convert the attenuation constant to dB/m; \\
 1 Nepers/m = 8.68dB/m \\\\
 2.23467 Nepers/m = 19.3969 dB/m
-
 \end{exmp} 
 
 \begin{exmp}
@@ -158,83 +157,82 @@ If the wave travels from right to left, find the voltage at B.
 \textbf{Solution.} \\ 
 At x = 1, the voltage is maximum, at x = 0 i.e A, V = 8.66v. Due to the direction of wave travel, we expect its amplitude to reduce to a smaller value at B. The expression
 \begin{align}
-V(x,t) = Re{[\left| V^+\right|  e^{-\alpha x}.e^{-\jmath\beta x + \jmath\omega t}.e^{+\jmath\phi}]} 
+V(x,t) = \mathfrak{Re}{[\left| V^+\right|  e^{-\alpha x}.e^{-\jmath\beta x + \jmath\omega t}.e^{+\jmath\phi}]} 
 \label{eqn:voltagesoln}
 \end{align}
 represents the forward travelling or progressive wave moving along the +x direction.\\
 Extracting the real part and including the initial phase.
 \begin{align*}
-V(x,t) = \lvert V^+\rvert cos(\phi + \omega t - \beta x)e^{-\alpha x}
+V(x,t) = \lvert V^+\rvert\cos(\phi + \omega t - \beta x)e^{-\alpha x}
 \end{align*}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./graphics/fig3.3}
+\includegraphics[width=1\linewidth]{./graphics/fig3.3}
 \caption{Voltage versus distance with time}
 \end{figure}
 
 $\lvert V^+\rvert e^{-\alpha x} $ gives the amplitude variation with distance $ x $. \\
-$ \phi + \omega t - \beta x $ gives the phase (including the initial phase $ \phi $ ).\\
+$ \phi + \omega t - \beta x $ gives the phase (including the initial phase $ \phi $).\\
 
 Substituting x = 0, t = 0, and $\phi = 30^o$ into equation~\ref{eqn:voltagesoln},
 \begin{align*}
-V(x,t) = V(0,0) &= 8.66v \\
-V(x,t) &= \lvert V^+\rvert cos(\phi + \omega (0) - \beta (0)e^{-\alpha (0)}\\
-8.66 &= \lvert V^+\rvert cos(\phi)\\
-8.66 &= \lvert V^+\rvert cos(30)\\
-\lvert V^+\rvert &= 10v
+V(x,t) &= V(0,0) = 8.66V \\
+V(x,t) &= \lvert V^+\rvert\cos(\phi + \omega (0) - \beta (0))e^{-\alpha (0)}\\
+8.66 &= \lvert V^+\rvert\cos(\phi)\\
+8.66 &= \lvert V^+\rvert\cos(30)\\
+\lvert V^+\rvert &= 10V
 \end{align*}
 Substituting x = 1m, t = 100ns, and $\phi = 30^o$ into equation~\ref{eqn:voltagesoln},\\\\
-$ V(x,t) = 10 cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} - 28.18\times 1)e^{-2.235\times 1} $\\\\
+$ V(x,t) = 10\cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} - 28.18\times 1)e^{-2.235\times 1} $\\\\
 $ = 10 \times -0.815 \times e^{-2.235} $\\\\
-$ = -0.872v $\\
+$ = -0.872V $\\
 To find the peak voltage at x = 1,
 \begin{align*}
-V(1,t) = 10cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18)e^{-2.235}
+V(1,t) = 10\cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18)e^{-2.235}
 \end{align*}
-but the value is maximum when $cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18) = 1$, 
+but the value is maximum when $\cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18) = 1$, 
 \begin{align*}
-V_{max} &= 10e^{-2.235}\\
-V_{max} &= 1.07v
+V_{\max} &= 10e^{-2.235}\\
+V_{\max} &= 1.07V
 \end{align*}
-We observe from the solution that attenuation took place since the amplitude reduced from 8.66v to -0.88v.\\ \\
+We observe from the solution that attenuation took place since the amplitude reduced from 8.66v to -0.88v.\\\\
 If the wave travels from right to left
 \begin{dmath*}
 V(x,t) = \mathfrak{Re}{[V^+ e^{+\alpha x}.e^{+\jmath\beta x + \jmath\omega t}e^{+\jmath\phi}]}
 = \lvert V^+\rvert cos(\phi + \omega t + \beta x)e^{+\alpha x}
 = 10 cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} + 28.18\times 1)e^{+2.235\times 1}
 = 10 \times -0.9093 \times e^{+2.235}
-= -84.99v
+= -84.99V
 \end{dmath*} 	
 \end{exmp}
 This is the amplitude of the voltage at point B that will undergo attenuation in moving backwards from B to A.
 \begin{exmp}
-	Let R = 0.4 $\Omega$ /m, L = 0.3$\mu$H /m, C = 120pF/m, G = 0.08 $\Omega$ /m, freq = 1GHz. \ Calculate\ the\ propagation\ constant,\ attenuation\ constant\ and\ phase\ constant\ for\ this\ line. \\\\\\\\\\
-	
-	$\textbf{Solution.}$\\\\
-	$ \gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}$\\\\
-	But,$ \ \omega = 2\pi f\quad$ and $\quad f = 1GHz = 1 \times 10^9 $ Hz\\\\
-	$ \omega = 2\pi \times 10^9 $ rad/s.\\\\
-	Substituting into the $ \gamma $ expression; \\\\
-	$\sqrt{[0.4+\jmath (2\pi \times 10^9)\times 0.3 \times 10^{-6}][0.08 + \jmath(2\pi \times 10^9) \times 120 \times10^{-12}]}  $\\\\
-	$ \gamma = \sqrt{(0.5 + \jmath 600\pi)(0.08 + \jmath 0.24\pi)} $\\\\
-	Expanding,\\\\
-	$ = \sqrt{0.4(0.08) + 0.4(\jmath 0.24\pi) + \jmath 600\pi(0.08) + \jmath 600\pi(\jmath 0.24\pi)} $ \\\\
-	Recall  that,$ \quad \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1 $\\\\
-	$ =\sqrt{0.032 + \jmath 0.3016 +\jmath 150.7964 - 1421.2230} $ \\\\
-	$ = \sqrt{-1421.191 + \jmath 151.098} $ \\
-	
-	We first convert the complex number to polar form.\\\\
-	-$ -1421.191 + \jmath 151.098 = 1429.2006\angle 173.931\textdegree $\\\\
-	$ \sqrt{-1421.191 + \jmath 151.098} = \sqrt{1429.2006}\angle \frac{173.931}{2} $\\\\
-	$ =37.8\angle 86.9655 $\\\\
-	Converting back to cartesian form; \\\\
-	Propagation constant,$\quad\gamma=2 +\jmath 37.747 $\\\\
-	From the expression; \\
-	$ \alpha = 2 $ Nepers/m, $ \beta = 37.747 $ rad/m\\\\
-	We now convert the attenuation constant to dB/m; \\
-	1 Nepers/m = 8.68dB/m \\\\
-	2 Nepers/m = 17.36 dB/m
-	
+Let R = 0.4 $\Omega$ /m, L = 0.3$\mu$H /m, C = 120pF/m, G = 0.08 $\Omega$ /m, freq = 1GHz. \ Calculate\ the\ propagation\ constant,\ attenuation\ constant\ and\ phase\ constant\ for\ this\ line. \\
+
+\textbf{Solution.}\\\\
+$ \gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}$\\\\
+But,$ \ \omega = 2\pi f\quad$ and $\quad f = 1GHz = 1 \times 10^9 $ Hz\\\\
+$ \omega = 2\pi \times 10^9 $ rad/s.\\\\
+Substituting into the $ \gamma $ expression; \\\\
+$\sqrt{[0.4+\jmath (2\pi \times 10^9)\times 0.3 \times 10^{-6}][0.08 + \jmath(2\pi \times 10^9) \times 120 \times10^{-12}]}  $\\\\
+$ \gamma = \sqrt{(0.5 + \jmath 600\pi)(0.08 + \jmath 0.24\pi)} $\\\\
+Expanding,\\\\
+$ = \sqrt{0.4(0.08) + 0.4(\jmath 0.24\pi) + \jmath 600\pi(0.08) + \jmath 600\pi(\jmath 0.24\pi)} $ \\\\
+Recall  that,$ \quad \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1 $\\\\
+$ =\sqrt{0.032 + \jmath 0.3016 +\jmath 150.7964 - 1421.2230} $ \\\\
+$ = \sqrt{-1421.191 + \jmath 151.098} $ \\
+
+We first convert the complex number to polar form.\\\\
+-$ -1421.191 + \jmath 151.098 = 1429.2006\angle 173.931\textdegree $\\\\
+$ \sqrt{-1421.191 + \jmath 151.098} = \sqrt{1429.2006}\angle \frac{173.931}{2} $\\\\
+$ =37.8\angle 86.9655 $\\\\
+Converting back to cartesian form; \\\\
+Propagation constant,$\quad\gamma=2 +\jmath 37.747 $\\\\
+From the expression; \\
+$ \alpha = 2 $ Nepers/m, $ \beta = 37.747 $ rad/m\\\\
+We now convert the attenuation constant to dB/m; \\
+1 Nepers/m = 8.68dB/m \\\\
+2 Nepers/m = 17.36 dB/m
 \end{exmp} 
 
 \section{The Characteristic Impedance}
@@ -441,16 +439,20 @@ The reflection coefficient tells you the ratio between reflected and incident vo
 Our intention is always to deliver maximum energy to the load, we, therefore, want the reflection coefficient to be as small as possible. So we shall find the condition to deliver maximum power to the load i.e no reflection on the transmission line.
 
 \newpage
-\section*{QUESTIONS}
-\begin{enumerate}
-	\item With appropriate equation of amplitude variation along a transmission line, explain what is meant by Characteristic length.
-	
-	\item In what unit is attenuation constant stated in most data sheets?
-	
-	\item Starting from the differential equation guilding transmission lines, derive the characteristic impedance relation. What does negative impedance imply from the backward voltage to current ratio?
-	
-	\item  What are the physical significance of the propagation constant($\gamma$), attenuation constant($\alpha$) and phase constant($\beta$)?
-	
-	\item From $ V = V^+e^{+\lambda l} + V^-e^{-\lambda l} $ and $ I = \frac{V^+}{Z_0}e^{+\lambda l} - \frac{V^-}{Z_0}e^{-\lambda l}$, show that $ \Gamma_L = \frac{Z_L - Z_o}{Z_L + Z_o} $.
-	
-\end{enumerate}
+\section*{Exercises}
+\begin{ExerciseList}
+\Exercise[label={ex31}]
+With appropriate equation of amplitude variation along a transmission line, explain what is meant by Characteristic length.
+
+\Exercise[label={ex32}]
+In what unit is attenuation constant stated in most data sheets?
+
+\Exercise[label={ex33}]
+Starting from the differential equation guilding transmission lines, derive the characteristic impedance relation. What does negative impedance imply from the backward voltage to current ratio?
+
+\Exercise[label={ex34}]
+What are the physical significance of the propagation constant($\gamma$), attenuation constant($\alpha$) and phase constant($\beta$)?
+
+\Exercise[label={ex35}]
+From $ V = V^+e^{+\lambda l} + V^-e^{-\lambda l} $ and $ I = \frac{V^+}{Z_0}e^{+\lambda l} - \frac{V^-}{Z_0}e^{-\lambda l}$, show that $ \Gamma_L = \frac{Z_L - Z_o}{Z_L + Z_o} $.
+\end{ExerciseList}
