@@ -22,25 +22,9 @@
 \usepackage{breqn}
 
 % custom set exercises and example packages. add dependencies
-\usepackage{stackengine}
-\usepackage{multicol}
-\usepackage[lastexercise]{exercise}
+\usepackage[lastexercise, answerdelayed]{exercise}
 \newtheorem{example}{Example}
 \newtheorem{exmp}{Example}[section]
-\counterwithin{Exercise}{chapter}
-\counterwithin{Answer}{chapter}
-\renewcounter{Exercise}[chapter]
-\newcommand{\QuestionNB}{\bfseries\arabic{Question}.\ }
-\renewcommand{\ExerciseName}{EXERCISES}
-\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
-    \stackunder[0pt]{\colorbox{black}{\textcolor{white}{\textbf{\LARGE\ExerciseHeaderNB\;\large\ExerciseName}}}}{\textcolor{gray}{\rule{\linewidth}{2pt}}}\medskip}
-\renewcommand{\AnswerName}{Exercises}
-\renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
-    {\bigskip\noindent\textcolor{black}{\textbf{CHAPTER \thechapter}}\newline\newline%
-        \noindent\bfseries\emph{\textcolor{black}{\AnswerName\ \ExerciseHeaderNB, page %
-                \pageref{\AnswerRef}}}\smallskip}
-    {\noindent\bfseries\emph{\textcolor{black}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
-\setlength{\QuestionIndent}{16pt}
 
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
@@ -66,8 +50,8 @@
 
 %transmission line and the wave equation
 \include{./TeX_files/chapter01}
-% \include{./TeX_files/chapter02}
-% \include{./TeX_files/chapter03}
+\include{./TeX_files/chapter02}
+\include{./TeX_files/chapter03}
 % \include{./TeX_files/chapter04}
 % \include{./TeX_files/chapter05}
 % \include{./TeX_files/chapter06}
@@ -136,13 +120,11 @@
 % \include{./TeX_files/chapter58}
 % \include{./TeX_files/chapter59}
 
-\chapter*{Solution to all Problems}
-\begin{multicols}{2}\raggedcolumns
-\shipoutAnswer
-\end{multicols}
 \backmatter
-
 %bibliography, glossary and index would go here.
 \printindex
+
+%answers to exercises
+\shipoutAnswer
 
 \end{document}
