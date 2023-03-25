@@ -1,21 +1,22 @@
 \chapter{Standing Wave Pattern}\label{lec:lec5}
-In the previous chapter, we introduced the concept of a lossless transmission line ( i.e a line is lossless if $R=G=0$). We also introduced the concept of a low-loss transmission line which is a more practical line, i.e $R \ll \omega L$, $G \ll \omega C $.
+In the previous chapter, we introduced the concept of a lossless transmission line (that is a line is lossless if $R=G=0$). We also introduced the concept of a low-loss transmission line which is a more practical transmission line, that is, $R \ll \omega L$, $G \ll \omega C $.
 
-In this chapter, we would study the conditions for treating the transmission line as low-loss at a particular frequency, the variation of voltage and current along a transmission line, the concept of voltage standing wave ratio (VSWR), the condition for full reflection at the load end, the relationship between $R_{max}$ and VSWR and also the relationship between $R_{min}$ and VSWR.
+In this chapter, we would study the conditions for treating the transmission line as low-loss at a particular frequency, the variation of voltage and current along a transmission line, the concept of voltage standing wave ratio (VSWR), the condition for full reflection at the load end, the relationship between $R_{\max}$ and VSWR and also the relationship between $R_{\min}$ and VSWR.
+
 \section{Low-loss Transmission Line at a Particular Frequency.}
 From our previous chapter, we recall that,
 \begin{equation}
 \gamma = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} +\jmath\omega\sqrt{LC}
 \label{eqn:refcoeffient1}
 \end{equation}
-which states the conditions defined for a low-loss transmission line in terms of the primary constants(R, L, C and G) of the line. To treat a line as a low-loss transmission line, one will have to express these conditions ( $R \ll \omega L$ and $G \ll \omega C$ ) in terms of the secondary parameters ( $\alpha$ and $\beta $) since these parameters are readily available on the data-sheet. If we can establish a relationship between these parameters ( $\alpha$ and $\beta $) for the low-loss nature of the line, then we can find out whether a particular line is low-loss at a particular frequency.\\
+which states the conditions defined for a low-loss transmission line in terms of the primary constants (R, L, C and G) of the line. To treat a line as a low-loss transmission line, one will have to express these conditions ( $R \ll \omega L$ and $G \ll \omega C$) in terms of the secondary parameters ($\alpha$ and $\beta $) since these parameters are readily available on the data-sheet. If we can establish a relationship between these parameters ($\alpha$ and $\beta $) for the low-loss nature of the line, then we can find out whether a particular line is low-loss at a particular frequency.
+
 Recall that,
 \begin{equation}
 \gamma = \alpha + \jmath\beta
 \label{eqn:refcoeffient2}
 \end{equation}
 comparing equation~\ref{eqn:refcoeffient1} with equation~\ref{eqn:refcoeffient2}, we have that;
-
 \begin{equation}
 \alpha = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}}	
 \label{eqn:attenconst}
@@ -23,9 +24,9 @@ comparing equation~\ref{eqn:refcoeffient1} with equation~\ref{eqn:refcoeffient2}
 \begin{align}
 \beta = \omega\sqrt{LC}
 \end{align}
-Since we have expressed equation~\ref{eqn:refcoeffient1} in terms of primary constants, let's find out under what condition the transmission line can be treated as low-loss.\\
-From equation~\ref{eqn:attenconst} we have,
+Since we have expressed equation~\ref{eqn:refcoeffient1} in terms of primary constants, let's find out under what condition the transmission line can be treated as low-loss.
 
+From equation~\ref{eqn:attenconst} we have,
 \begin{equation*}
 \alpha =\frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}}	
 \end{equation*}\\
