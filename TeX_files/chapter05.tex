@@ -323,6 +323,11 @@ Since there is no energy-absorbing circuit at the load end of the line, short ci
 VSWR  = \frac{1+|\Gamma_L|}{1-|\Gamma_L|}
 \end{align*}
 The $VSWR$ will always be greater than 1, the best case is $|\Gamma_L|=0$ (zero reflection) which gives $VSWR=1$ whereas at $|\Gamma_L|=1$ (full reflection), $\rho= \infty$.
+
+So $1\leq\rho\leq\infty$, where $\rho=0$ represents no reflected wave on the transmission line i.e full power is transferred to the load and $\rho = \infty$ means so much reflection on the transmission line or less efficiency of power transfer to the load. So, every circuit design tries to make \(VSWR\) as close to 1 as possible. A higher value of \(VSWR\) indicates more mismatch on the transmission line or a higher value of the reflected wave on the transmission line.
+
+So \(VSWR\) is one of the most important quantities at high frequency. When designing a circuit, we try to make sure the \(VSWR\) on the transmission line is close to one as possible, making sure the circuit is efficiently transferring power to the load end of the line. Once $\rho$ or VSWR is defined, we can relate it to the maximum and minimum impedance that can be seen on the transmission line.
+
 Relating $\rho$ to $R_{max}$ and  $R_{min}$\\\\
 Recall that $\rho =  (\frac{1 + |\Gamma_L|}{1 - |\Gamma_L|})$
 \begin{equation*}
