@@ -80,38 +80,33 @@ Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G
 \beta = 2\pi f\sqrt{LC}
 =2 \pi \times 10^8 \sqrt{(0.25 \times 10^{-6}) \times (100 \times 10^{-12})}  = \pi rad/m
 \end{dmath*}
-For a low-loss transmission line, taking 1 percent of $\beta$,
-$ \alpha= \frac{1}{100} \beta = \frac{\pi}{100}$.\\\\
+For a low-loss transmission line, taking 1 percent of $\beta,
+\alpha= \frac{1}{100}\beta = \frac{\pi}{100}$.
+
 Also,
 \begin{equation*}
-\alpha = \beta\frac{1}{2} ( \frac{R}{\omega L} + \frac{G}{\omega C})
-\end{equation*}\\
-Given that, G=0\\
-\begin{equation*}
-\alpha = \beta\frac{1}{2} ( \frac{R}{\omega L} )
-\end{equation*}\\
-Recall that $\beta = \omega\sqrt{LC} $, now we get :
-\begin{equation*}
-\alpha = \frac{1}{2}\frac{R}{\omega L} \times \omega\sqrt{LC} 
+\alpha = \beta\frac{1}{2} \left(\frac{R}{\omega L} + \frac{G}{\omega C}\right)
 \end{equation*}
+Given that, \(G=0\)
 \begin{equation*}
-\alpha = \frac{1}{2} R \sqrt \frac{LC}{L^{2}} 
-\end{equation*}\\
-\begin{equation*}
-\alpha = \frac{1}{2} R \sqrt \frac{C}{L}
+\alpha = \beta\frac{1}{2} \left(\frac{R}{\omega L}\right)
 \end{equation*}
+Recall that $\beta = \omega\sqrt{LC} $, now we get:
+\begin{dmath*}
+\alpha = \frac{1}{2}\frac{R}{\omega L} \times \omega\sqrt{LC} = \frac{1}{2} R \sqrt \frac{LC}{L^{2}} = \frac{1}{2} R \sqrt \frac{C}{L}
+\end{dmath*}
 \begin{equation*}
 \frac{\pi}{100} = \frac{1}{2} R \sqrt{\frac{100 \times 10^{(-12)}}{0.25 \times 10^{(-6)}}}
 \end{equation*}
 \begin{equation*}
 R=\pi\Omega/m.
-\end{equation*}\\
+\end{equation*}
 If $R \leq \pi\Omega/m$, the line is low-loss at $ f= 100MHz$. If the frequency changes, the line may not satisfy this low-loss condition, hence we have to check again.
 \end{exmp}
 
 Therefore, unless you are specifically told that a line is a lossy line, we are at liberty to treat the line as a lossless line since the phase constant as we have seen for lossy and lossless lines are the same. Also, the characteristics impedance of a low-loss line is almost real and the same as the characteristics impedance of a lossless line. So unless we are specifically told the line is lossy, we shall default to treating transmission line problems as lossless and carry out all analysis for a lossless transmission line. Hence for all transmission line problems, we consider it lossless so that, 
 \begin{align*}
-Z_0 = \sqrt{{\frac{\jmath\omega L}{\jmath\omega C}}} = \sqrt{\frac{L}{C}} = real , \quad \quad \gamma= \jmath\beta = \jmath\omega\sqrt{LC}
+Z_0 = \sqrt{{\frac{\jmath\omega L}{\jmath\omega C}}} = \sqrt{\frac{L}{C}} = \textnormal{real}, \quad \quad \gamma= \jmath\beta = \jmath\omega\sqrt{LC}
 \end{align*}
 
 \section{Voltage And Current Variation on Transmission Line}
