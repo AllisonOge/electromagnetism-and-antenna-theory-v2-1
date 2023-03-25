@@ -15,7 +15,7 @@ Recall that,
 \label{eqn:refcoeffient2}
 \end{equation}
 comparing equation~\ref{eqn:refcoeffient1} with equation~\ref{eqn:refcoeffient2}, we have that;
- 
+
 \begin{equation}
 \alpha = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}}	
 \label{eqn:attenconst}
@@ -78,7 +78,7 @@ $\beta = 2\pi \ f {\sqrt{LC}}$
 \begin{equation*}
 =2 \pi \times 10^8 \sqrt{(0.25 \times 10^{-6}) \times (100 \times 10^{-12})}  = \pi rad/m
 \end{equation*}\\
- For a low-loss transmission line, taking 1 percent of $\beta$,
+For a low-loss transmission line, taking 1 percent of $\beta$,
 $ \alpha= \frac{1}{100} \beta = \frac{\pi}{100}$.\\\\
 Also,
 \begin{equation*}
@@ -102,16 +102,16 @@ Recall that $\beta = \omega\sqrt{LC} $, now we get :
 \frac{\pi}{100} = \frac{1}{2} R \sqrt{\frac{100 \times 10^{(-12)}}{0.25 \times 10^{(-6)}}}
 \end{equation*}
 \begin{equation*}
- R=\pi\Omega/m.
+R=\pi\Omega/m.
 \end{equation*}\\
- If $R \leq \pi\Omega/m$, the line is low-loss at $ f= 100MHz$. If the frequency changes, the line may not satisfy this low-loss condition, hence we have to check again.
+If $R \leq \pi\Omega/m$, the line is low-loss at $ f= 100MHz$. If the frequency changes, the line may not satisfy this low-loss condition, hence we have to check again.
 \end{exmp}
 
 Therefore, unless you are specifically told that a line is a lossy line, we are at liberty to treat the line as a lossless line since the phase constant as we have seen for lossy and lossless lines are the same. Also, the characteristics impedance of a low-loss line is almost real and the same as the characteristics impedance of a lossless line. So unless we are specifically told the line is lossy, we shall default to treating transmission line problems as lossless and carry out all analysis for a lossless transmission line. Hence for all transmission line problems, we consider it lossless so that, 
 \begin{align*}
 Z_0 = \sqrt{{\frac{\jmath\omega L}{\jmath\omega C}}} = \sqrt{\frac{L}{C}} = real , \quad \quad \gamma= \jmath\beta = \jmath\omega\sqrt{LC}
 \end{align*}
-  
+
 \section{Voltage And Current Variation on Transmission Line}
 
 Revisiting the general voltage and current expression of the transmission line with origin  at the load point, we have:
@@ -202,7 +202,7 @@ So by moving towards the generator, the phase becomes more and more negative, wh
 \end{figure}
 
 The magnitude $( 1+|\Gamma_L|  e^{j(\phi_L -2 \beta l)})$ varies as we move along the transmission line.\\
- From figure 5.3 \footnote{\includegraphics[scale=0.15]{./graphics/picture4} 
+From figure 5.3 \footnote{\includegraphics[scale=0.15]{./graphics/picture4} 
 
 Argand Diagram refers to a geometric plot of complex numbers as points z = x+iy using the x-axis as the real axis and the y-axis as the imaginary axis. Such plots are named after Jean-Robert Argand(1768-1822), although they were first described by Norwegian-Danish land surveyor and mathematician Casper Wessel (1745-1818.)}Argand Diagram below, \\
 $ A =| 1+| \Gamma_L| e^{j (\phi_L - 2\beta l)}|$ \quad$, B=| \Gamma_L|$\\\\
@@ -214,7 +214,7 @@ V(l) = V^{+}e^{j\beta l}(1 + |\Gamma_L|  e^{j(\phi_L -2\beta l)})
 \end{equation*}
 $(1 + |\Gamma_L|  e^{j(\phi_L -2\beta l)})$ add when they are in phase to give maximum V i.e at $(\phi_L -2\beta l) = 0, 2\pi, 4\pi ...$, and subtract to give minimum V i.e at  $(\phi_L -2\beta l) = \pi, 3\pi, 5\pi ...$ \\
 This is opposite to the behaviour of the current relationship, when 1 and  $-|\Gamma_L|  e^{j(\phi_L -2\beta l)}$ in $1-|\Gamma_L|  e^{j(\phi_L -2\beta l)}$ are out of phase, they add at $\pi, 3\pi, 5\pi...$ to give maximum current and they cancel when in phase at $0, 2\pi, 4\pi...$, to give minimum current.\\
- As stated earlier, when $ e^{j(\phi_L - 2 \beta l)} = 1$, the voltage is maximum and the current is minimum. When $ e^{\jmath(\phi_L - 2 \beta l)} = -1$, the voltage is minimum and the current is maximum. So at the same location along the transmission line, maximum voltage corresponds to minimum current, and minimum voltage corresponds to maximum current. This is opposite to what we observed in a lumped circuit, where the maximum voltage point corresponds to maximum current and minimum voltage corresponds to minimum current.\\
+As stated earlier, when $ e^{j(\phi_L - 2 \beta l)} = 1$, the voltage is maximum and the current is minimum. When $ e^{\jmath(\phi_L - 2 \beta l)} = -1$, the voltage is minimum and the current is maximum. So at the same location along the transmission line, maximum voltage corresponds to minimum current, and minimum voltage corresponds to maximum current. This is opposite to what we observed in a lumped circuit, where the maximum voltage point corresponds to maximum current and minimum voltage corresponds to minimum current.\\
 The maximum voltage and current does not occur at the same point on the transmission line, they are staggered in space. Whenever there is a maximum voltage, there is a minimum current and vice versa. So the standing wave of voltage and current are shifted with respect to each other in space on the transmission line. 
 \begin{figure}[h]
 \centering
@@ -263,7 +263,7 @@ Once we have the voltage standing wave on the transmission line, at high frequen
 
 These waves are related to the time phase and the space phase ($\omega t + \beta x$) where $\omega t$ is the time phase and $\beta x$ is the space phase. Since the total phase governs the location of maximum and minimum on the standing wave, noting the location of maximum and minimum on the transmission line, one can estimate the phase of the signal. Now we define a parameter for the standing wave which is a parameter of only amplitude variation of the transmission line. This quantity is called the \textbf{Voltage Standing Wave Ratio (VSWR)}\index{voltage standing wave ratio} \emph{which is the measure of the relative contribution of the reflected wave with respect to the incident wave}. If the reflected wave is zero, there is no standing wave but only a travelling wave and if the reflected wave is the same as the transmitted wave, then we have a completely developed standing wave. So the interference of the two waves, the forward and backward wave is going to give the variation of $R_{\max}$ to $R_{\min}$ and $R_{\min}$ to $R_{\max}$. So we define a quantity relating $V_{\max}$ and $V_{\min}$, then $\dfrac{V_{\max}}{V_{\min}}= VSWR$. It is a very important quantity because without carrying out phase measurements, we can measure this quantity on a transmission line. Recall that the reflection coefficient is a complex quantity, so a complete knowledge of the reflection coefficient is achieved when both its amplitude and phase are known. However, the quantity which we are defining is known as VSWR or \(\rho\) which is measured only by amplitude.
 
- Therefore, by measuring the maximum and minimum values of the standing wave, we get;
+Therefore, by measuring the maximum and minimum values of the standing wave, we get;
 \begin{dmath*}
 VSWR = \rho =\frac{|V|_{\max}}{|V|_{\min}} = \frac{|V^+|\{1+|\Gamma_L|\}}{|V^+|\{1-|\Gamma_L|\}}
 \end{dmath*}
