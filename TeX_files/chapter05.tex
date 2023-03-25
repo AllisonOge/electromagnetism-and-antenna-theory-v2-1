@@ -223,45 +223,46 @@ The maximum voltage and current does not occur at the same point on the transmis
 \label{fig:asdfghjhgfdsa}
 \end{figure}
 From figure 5.4, we observe that maximum voltage corresponds to minimum current and minimum voltage corresponds to maximum current.
-\section{Concept of Voltage Standing Wave Ratio(VSWR)}
-Recall that ;
+
+\section{Concept of Voltage Standing Wave Ratio (VSWR)}
+Recall that;
 \begin{align*}
 \frac{V(l)}{I(l)} = \frac{V^{+}e^{j\beta l}(1+ |\Gamma_L|e^{j(\phi_L- 2 \beta l)})}{\frac{V^{+}}{Z_o}(1- |\Gamma_L|e^{j(\phi_L- 2\beta l)})}
 \end{align*}
 Therefore,
 \begin{equation*}
 \frac{V(l)}{I(l)} = Z_o \frac{1+ |\Gamma_L|e^{j(\phi_L- 2 \beta l)}}{1- |\Gamma_L|e^{j(\phi_L- 2\beta l)}}
-\end{equation*}\\
-For maximum voltage: $\phi_L-2\beta l=$ Even multiples of $\pi$ $i.e\ 0, 2\pi, 4\pi,  6\pi,...$\\
-For minimum voltage:  $\phi_L-2\beta l=$ Odd multiples of $\pi. \ i.e\ \pi, 3\pi,\ 5\pi,\ ...$\\\\
-$e^{j(\phi_L - 2 \beta l)} = cos(\phi_L - 2 \beta l) + jsin(\phi_L - 2 \beta l)$ , $sin(\phi_L - 2 \beta l) = 0$ for all multiples of $\pi$ or n$\pi$ , where n is an integer. So that $e^{j(\phi_L - 2 \beta l)} $ is always real.\\
-So when a voltage is maximum or minimum, $\frac{V(l)}{I(l)} = Z_o \times$(real quantity).\\\\ 
-So irrespective of what the line is terminated in at maximum voltage, the impedance at that point is always real, even if the line is terminated in a complex impedance. If we move to the point of maximum voltage, the impedance that will be measured at that point will always be real. Similarly, at the location where the voltage is minimum, the impedance will again be real.\\ In conclusion, on a transmission line, wherever there is a maximum voltage the impedance measured at that point will be real, same for the point of minimum voltage.\\\\
-Mathematically,\\\\
-Maximum Impedance, 
-\begin{equation}
-Z_{max} = \frac{|V_{max}|}{|I_{min|}} = R_{max}
-\end{equation}
-\begin{equation}
-R_{max}= Z_o\{\frac{1+|\Gamma_L|}{1-|\Gamma_L|}\}
-\end{equation}\\
-At the location of minimum voltage\\
-Minimum Impedance,
-\begin{equation}
-Z_{min}=\frac{|V_{min}|}{|I_{max}|} = R_{min}
-\end{equation}
-\begin{equation}
-\\R_{min} =Z_o\{\frac{1-|\Gamma_L|}{1+|\Gamma_L|}\}
-\end{equation}
-Once load impedance is known, characteristic impedance $Z_o$ is known as well as the reflection coefficient $\Gamma_L$, then we can calculate the maximum and minimum value of impedance that we will see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance. The lowest being :
-\begin{equation*}
-Z_{min} = \frac{|V_{min}|}{|I_{max|}} = R_{min}
 \end{equation*}
-and the highest being :
-\begin{equation*}
-Z_{max} = \frac{|V_{max}|}{|I_{min|}} = R_{max}
-\end{equation*}
-\textbf{Once we have the voltage standing wave on the transmission line, at high frequencies the measurement of phase is very difficult and complicated.} One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase not in a direct manner, but in an indirect manner by measuring only the magnitude kind of quantities, we would like to estimate the phase of the signal. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time on the phase relationship between the two waves, the forward and backward wave which is related to the time phase and the space phase ($\omega t + \beta x$) where $\omega t$ = time phase and $\beta x$ = space phase. Since the total phase governs the location of maximum and minimum on the standing wave, noting the location of maximum and minimum on the transmission line, one can estimate the phase of the signal. Now we define a parameter for the standing wave which is a parameter of only amplitude variation of the transmission line. This quantity is called the \textbf{Voltage Standing Wave Ratio(VSWR)} which is the measure of the relative contribution of the reflected wave with respect to the incident wave. If the reflected wave is zero, there is no standing wave but only a travelling wave and if the reflected wave is full, then we have a completely developed standing wave. So the interference of the two waves, the forward and backward wave is going to give the variation of $R_{max}$ to $R_{min}$ and $R_{min}$ to $R_{max}$. So we define a quantity relating $V_{max}$ and $V_{min}$, then $\frac{V_{max}}{V_{min}}$ $= VSWR$. It is a very important quantity because without carrying out phase measurements, we can measure this quantity on a transmission line. Recall that the reflection coefficient is a complex quantity. So, if you want to have complete knowledge of the reflection coefficient, then you have to get its amplitude and phase. However, the quantity which we are defining is known as VSWR $(\rho)$ which is measured only by amplitude.\\
+For maximum voltage, $\phi_L-2\beta l = \textnormal{Even multiples of }\pi$ that is $0, 2\pi, 4\pi,  6\pi,\ldots$. For minimum voltage,  $\phi_L-2\beta l=\textnormal{Odd multiples of } \pi$ that is $\pi, 3\pi,\ 5\pi,\ \ldots$. Thus the euler formular 
+\[e^{j(\phi_L - 2 \beta l)} = \cos(\phi_L - 2 \beta l) + jsin(\phi_L - 2 \beta l)\]
+Since $\sin(\phi_L - 2 \beta l) = 0$ for all multiples of $\pi$ or $n\pi$, where n is an integer becomes real. So when a voltage is maximum or minimum, $\frac{V(l)}{I(l)} = Z_o \times$ (real quantity).
+
+So irrespective of what the line is terminated in at maximum voltage, the impedance at that point is always real. Even if the line is terminated in a complex impedance, the maximum voltage is always real. If we move to the point of maximum voltage, the impedance that will be measured at that point will always be real. Similarly, at the location where the voltage is minimum, the impedance will again be real.
+
+In conclusion, on a transmission line, wherever there is a maximum voltage the impedance measured at that point will be real, same for the point of minimum voltage.
+
+Mathematically, the maximum impedance is expressed as
+\begin{equation}
+Z_{\max} = \frac{|V_{\max}|}{|I_{\min}|} = R_{\max}
+\label{eqn:maximp}
+\end{equation}
+\begin{equation}
+R_{\max}= Z_o\left\{\frac{1+|\Gamma_L|}{1-|\Gamma_L|}\right\}
+\end{equation}
+At the location of minimum voltage, the minimum impedance is expressed as
+\begin{equation}
+Z_{\min}=\frac{|V_{\min}|}{|I_{\max}|} = R_{\min}
+\label{eqn:minimp}
+\end{equation}
+\begin{equation}
+R_{\min} =Z_o\left\{\frac{1-|\Gamma_L|}{1+|\Gamma_L|}\right\}
+\end{equation}
+Once load impedance, characteristic impedance $Z_o$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to Equation~\ref{eqn:maximp} and the lowest according to Equation~\ref{eqn:minimp}.
+
+Once we have the voltage standing wave on the transmission line, at high frequencies the measurement of phase is very difficult and complicated. One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase but in a not direct manner rather indirect by measuring only the magnitude quantities. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time relationship between the two waves, the forward and backward wave. 
+
+These waves are related to the time phase and the space phase ($\omega t + \beta x$) where $\omega t$ is the time phase and $\beta x$ is the space phase. Since the total phase governs the location of maximum and minimum on the standing wave, noting the location of maximum and minimum on the transmission line, one can estimate the phase of the signal. Now we define a parameter for the standing wave which is a parameter of only amplitude variation of the transmission line. This quantity is called the \textbf{Voltage Standing Wave Ratio (VSWR)}\index{voltage standing wave ratio} \emph{which is the measure of the relative contribution of the reflected wave with respect to the incident wave}. If the reflected wave is zero, there is no standing wave but only a travelling wave and if the reflected wave is the same as the transmitted wave, then we have a completely developed standing wave. So the interference of the two waves, the forward and backward wave is going to give the variation of $R_{\max}$ to $R_{\min}$ and $R_{\min}$ to $R_{\max}$. So we define a quantity relating $V_{\max}$ and $V_{\min}$, then $\dfrac{V_{\max}}{V_{\min}}= VSWR$. It is a very important quantity because without carrying out phase measurements, we can measure this quantity on a transmission line. Recall that the reflection coefficient is a complex quantity, so a complete knowledge of the reflection coefficient is achieved when both its amplitude and phase are known. However, the quantity which we are defining is known as VSWR or \(\rho\) which is measured only by amplitude.
+
  Therefore, by measuring the maximum and minimum values of the standing wave, we get;
 \begin{equation*}
 VSWR = \rho =\frac{|V|_{max}}{|V|_{min}} = \frac{|V^+|\{1+|\Gamma_L|\}}{|V^+|\{1-|\Gamma_L|\}}
