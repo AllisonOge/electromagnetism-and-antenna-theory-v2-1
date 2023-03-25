@@ -329,21 +329,16 @@ So $1\leq\rho\leq\infty$, where $\rho=0$ represents no reflected wave on the tra
 So \(VSWR\) is one of the most important quantities at high frequency. When designing a circuit, we try to make sure the \(VSWR\) on the transmission line is close to one as possible, making sure the circuit is efficiently transferring power to the load end of the line. Once $\rho$ or VSWR is defined, we can relate it to the maximum and minimum impedance that can be seen on the transmission line.
 
 \subsection{Relating $\rho$ to $R_{\max}$ and  $R_{\min}$}
-Recall that $\rho =  (\frac{1 + |\Gamma_L|}{1 - |\Gamma_L|})$
+Recall that $\rho =  \left(\frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}\right)$
 \begin{equation*}
-R_{max}  = Z_o  (\frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}) = Z_o    \  \rho
+R_{\max}  = Z_o  \left(\frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}\right) = Z_o    \  \rho
 \end{equation*}
 \begin{equation*}
-R_{min}  = Z_o  (\frac{1 - |\Gamma_L|}{1 + |\Gamma_L|}) =\frac{Z_o}{\rho}
+R_{\min}  = Z_o  \left(\frac{1 - |\Gamma_L|}{1 + |\Gamma_L|}\right) =\frac{Z_o}{\rho}
 \end{equation*}
-\\Therefore:
-\begin{equation}
-R_{max} = Z_o \rho
-\end{equation}
-\begin{equation}
-R_{min} = \frac{Z_o}{\rho}
-\end{equation}
-So for any line terminated with an arbitrary impedance, if we move to a point where the voltage is maximum or minimum, then we know the value of the impedance at that location. Because measuring $V_{max}$ and $V_{min}$ gives us $\rho$ or VSWR. $Z_o$ is known beforehand, hence $R_{max}$ = $Z_o \rho$ and $R_{min} = \frac{Z_o}{\rho}$. \\
-We know that the impedance known at any point in a transmission line can always be transformed to any other point using the impedance transformation relation. Hence knowing the location at voltage maximum or minimum, since the impedance value is known there, we can transform the impedance value towards the load so that we can get the load impedance. This essentially opens up a measurement technique for unknown impedance. \\
-At high frequency, if we have a complex impedance, its measurement is quite tedious because we cannot measure phase accurately. Now we have a mechanism for measuring the phase indirectly. As we have mentioned, the phase gets reflected into the standing wave pattern on the location of voltage maximum and minimum. So if we measure VSWR and the location of $V_{max}$ and $V_{min}$ we can always transform $R_{max}$ or $R_{min}$ to the location of the load which is nothing but the load impedance. So if we transform from the load impedance to the voltage maximum or minimum we would get $R_{max}$ and $R_{min}$. So if we know the location of $V_{max}$ from the load, we know the value of impedance at that location, and the distance of the load from that point, so the transformation of $R_{max}$ or $R_{min}$ to load end should give load impedance.\\
+Therefore
+\begin{align}
+R_{\max} &= Z_o \rho\label{eqn:maximprho}\\
+R_{\min} &= \frac{Z_o}{\rho}\label{eqn:minimpeho}
+\end{align}
 When we go to the application of transmission line we will see that the technique is used for measuring complex impedances. Then we will explicitly derive the expression for the unknown impedance which is terminated to a transmission line. 
