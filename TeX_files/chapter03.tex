@@ -67,7 +67,7 @@ thus,
 \begin{align*}
 2\pi = \beta\lambda \quad or \quad\beta = \frac{2\pi}{\lambda} \quad
 \end{align*}
-where, $ x = \lambda $ (distance\ travelled).\\
+where, $ x = \lambda $ (distance\ travelled).
 
 For most transmission line problems involving wave motion, $\lambda$ is not given, instead, $\gamma$ (propagation constant) is given in the complex form and $\beta$ is analyzed from the value of $\gamma$ given. The wavelength $\lambda$ is then calculated from $\beta$.
 Since $\gamma$ depends on the primary constants $R$, $L$, $G$ and $C$ at operating frequency $\omega$, we then conclude that the quantity $\beta$ called \textbf{Phase Constant} is also a function of frequency $\omega$. In other words, we conclude that the wavelength of waves on a transmission line is a function of the line parameter, phase constant, and wavelength.
@@ -109,9 +109,9 @@ Therefore, 1 Neper/m = 8.68 dB/m.\\
 As in propagation constant $\gamma$, the attenuation constant $\alpha$ depends on the primary constant of the transmission line as well as the frequency of operation $\omega$. In general, the propagation constant $\gamma$ which is a combination of phase constant $\beta$ and attenuation constant $\alpha$ is a function of primary line parameters and frequency of operation. Hence as $\omega$ increases, $\alpha$ increases. This is the reason some structures which were satisfactorily good conductors, at low frequencies become bad conductors at high frequencies (i.e the conductor becomes a more lossy line at high frequencies).
 
 \begin{exmp}
-Let R = 0.5 $\Omega$ /m, L = 0.2$\mu$H /m, C = 100pF/m, G = 0.1 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.\\
+Let R = 0.5 $\Omega$ /m, L = 0.2$\mu$H /m, C = 100pF/m, G = 0.1 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.
 
-\textbf{Solution.}
+\subsubsection*{Solution}
 \[ \gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}\]
 But,$ \ \omega = 2\pi f\quad$ and $\quad f = 1\textnormal{GHz} = 1 \times 10^9 \textnormal{Hz} $ 
 \[\omega = 2\pi \times 10^9\textnormal{rad/s}\]
@@ -154,7 +154,7 @@ If the wave travels from right to left, find the voltage at B.
 \caption{The transmission line showing points A and B.}
 \end{figure}
 
-\textbf{Solution.} \\ 
+\subsubsection*{Solution}
 At x = 1, the voltage is maximum, at x = 0 i.e A, V = 8.66v. Due to the direction of wave travel, we expect its amplitude to reduce to a smaller value at B. The expression
 \begin{align}
 V(x,t) = \mathfrak{Re}{[\left| V^+\right|  e^{-\alpha x}.e^{-\jmath\beta x + \jmath\omega t}.e^{+\jmath\phi}]} 
@@ -306,7 +306,7 @@ From the derivation of characteristic impedance, we can write
 \begin{equation}
 \frac{V^+}{I^+} = Z_o\quad and\quad \frac{V^-}{I^-} = -Z_o
 \end{equation}
-It is clear that at any point on the transmission line, the ratio of voltage to current (forward or backward) is always constant i.e equal to characteristic impedance.\\
+It is clear that at any point on the transmission line, the ratio of voltage to current (forward or backward) is always constant i.e equal to characteristic impedance.
 
 Hence a forward travelling wave sees an impedance of $Z_o$ and the reverse travelling wave sees an impedance of $-Z_o$. If $Z_o$ is real, it means the forward travelling wave sees a positive resistance while the backward travelling wave sees a negative resistance.
 
@@ -377,7 +377,9 @@ Z_L = Z_o\left[ \frac{\frac{V^+ + V^-}{V^+}}{\frac{V^+ - V^-}{V^+}}\right]
 Z_L = Z_o\left[ \frac{1+ \frac{V^-}{V^+}}{1 - \frac{V^-}{V^+}}\right] 
 \label{eqn:impedatload}
 \end{equation}
-Here we see that the absolute values of $V^+$ and $V^-$ do not matter, instead, the ratio $\frac{V^-}{V^+}$ is what's important. Hence we define a new parameter on which $Z_L$ depends. This parameter is known as the reflection coefficient.\\ \textbf{Reflection Coefficient} can be defined as the ratio of backward travelling wave to forward travelling wave on the transmission line.
+Here we see that the absolute values of $V^+$ and $V^-$ do not matter, instead, the ratio $\frac{V^-}{V^+}$ is what's important. Hence we define a new parameter on which $Z_L$ depends. This parameter is known as the reflection coefficient.
+
+\textbf{Reflection Coefficient} can be defined as the ratio of backward travelling wave to forward travelling wave on the transmission line.
 The reflection coefficient is denoted by $\Gamma$\footnote[3]{$\Gamma$ is capital Gamma, the third letter of the Greek alphabet.}.
 \begin{equation*}
 \Gamma = \frac{\text{backward travelling wave}}{\text{forward travelling wave}}
