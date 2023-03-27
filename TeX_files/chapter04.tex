@@ -27,12 +27,12 @@ The reflection co-efficient at any point on the transmission line is given as:
 \end{align*}
 Therefore we can define the voltage and current at any point on the transmission line with respect to reflection coefficient $\Gamma(l)$.
 \begin{equation}
-V(l) = V^+e^{\gamma l} + V^-e^{-\gamma l}
+V(l) = V^+e^{\gamma l} + V^-e^{-\gamma l}\label{eqn:voltagefromloadchp4}
 \end{equation}
 \begin{equation}
-I(l) =\frac{V^+}{Z_0} e^{\gamma l} - \frac{V^-}{Z_0}e^{-\gamma l}
-\end{equation}\\\\
-Dividing Equation 4.1 by $V^+e^{\gamma l}$
+I(l) =\frac{V^+}{Z_0} e^{\gamma l} - \frac{V^-}{Z_0}e^{-\gamma l}\label{eqn:currentfromloadchp4}
+\end{equation}
+Dividing Equation~\ref{eqn:voltagefromloadchp4} by $V^+e^{\gamma l}$
 \begin{align*}
 \frac{V(l)}{ V^+e^{\gamma l}} = 1 + \frac{ V^-e^{-\gamma l}}{ V^+e^{\gamma l}}
 \end{align*}
@@ -43,17 +43,14 @@ We then cross-multiply to have
 \begin{align*}
 V(l) = V^+e^{\gamma l} (1 + \Gamma(l))
 \end{align*}
-The above equation gives the voltage at any point on the line\\
-Divide Equation 4.2 by $\frac{V^+}{Z_0} e^{\gamma l}$
-\begin{align*}
+The above equation gives the voltage at any point on the line.
+
+Divide Equation~\ref{eqn:currentfromloadchp4} by $\frac{V^+}{Z_0} e^{\gamma l}$
+\begin{dmath*}
 \frac{I}{\frac{V^+}{Z_0} e^{\gamma l}} = 1 - \frac{\frac{V^-}{Z_0} e^{-\gamma l}}{\frac{V^+}{Z_0} e^{\gamma l}}
-\end{align*}
-\begin{align*}
-\frac{I}{\frac{V^+}{Z_0} e^{\gamma l}}= 1 - \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}}
-\end{align*}
-\begin{align*}
-\frac{I}{\frac{V^+}{Z_0} e^{\gamma l}} = 1 - \Gamma(l)
-\end{align*}
+= 1 - \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}}
+= 1 - \Gamma(l)
+\end{dmath*}
 We cross-multiply again to get,
 \begin{align*}
 I(l) = \frac{V^+}{Z_0} e^{\gamma l} (1 - \Gamma(l))
@@ -64,25 +61,20 @@ Z(l) = \frac{V(l)}{I(l)} = \frac{V^+e^{\gamma l} (1 + \Gamma(l))}{ \frac{V^+}{Z_
 \end{align*}
 $V^+ e^{\gamma l}$ cancels out to give,
 \begin{align}
-Z(l) = Z_0[\frac{1 + \Gamma(l)}{1 - \Gamma(l)}]
+Z(l) = Z_0\left[\frac{1 + \Gamma(l)}{1 - \Gamma(l)}\right]
 \end{align}
-
-$Z(l)$ is the impedance measured at any location of the transmission line. It is related to the reflection coefficient at any point and the characteristic impedance. $\Gamma(l)$ is the reflection coefficient at any point on the transmission line. Hence $Z(l)$ and $\Gamma(l)$ have a one-to-one relationship at any point along the transmission line.
+$Z(l)$ \emph{is the impedance measured at any location of the transmission line. It is related to the reflection coefficient at any point and the characteristic impedance}. $\Gamma(l)$ is the reflection coefficient at any point on the transmission line. Hence $Z(l)$ and $\Gamma(l)$ have a one-to-one relationship at any point along the transmission line.
 
 \section{Impedance Transform Relationship}
 Recall,
-\begin{align*}
+\begin{dmath*}
 Z(l) = \frac{V(l)}{I(l)}
-\end{align*}
-\begin{align*}
-Z(l) = \frac{V^+e^{\gamma l} + V^-e^{-\gamma l}}{\frac{V^+}{Z_0}e^{\gamma l} - \frac{V^-}{Z_0}e^{-\gamma l}}
-\end{align*}
-\begin{align*}
-Z(l) = Z_0[\frac{V^+e^{\gamma l} + V^-e^{-\gamma l}}{V^+e^{\gamma l} - V^-e^{-\gamma l}}]
-\end{align*}
+= \frac{V^+e^{\gamma l} + V^-e^{-\gamma l}}{\frac{V^+}{Z_0}e^{\gamma l} - \frac{V^-}{Z_0}e^{-\gamma l}}
+= Z_0\left[\frac{V^+e^{\gamma l} + V^-e^{-\gamma l}}{V^+e^{\gamma l} - V^-e^{-\gamma l}}\right]
+\end{dmath*}
 Dividing  the numerator and denominator by $V^+e^{\gamma l}$ 
 \begin{align*}
-Z(l) = Z_0[\frac{1 + \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}}}{1 - \frac{V^-e^{-\gamma }}{V^+e^{\gamma }}}]
+Z(l) = Z_0\left[\frac{1 + \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}}}{1 - \frac{V^-e^{-\gamma }}{V^+e^{\gamma }}}\right]
 \end{align*}
 Where $\Gamma_L = \frac{V^-}{V^+}$ and $\frac{e^{-\gamma l}}{e^{\gamma l}} = e^{-2\gamma l}$
 \begin{align}
@@ -93,42 +85,37 @@ But $\Gamma_L
 \begin{align*}
 Z(l) = Z_0 \left[\frac{1 + (\frac{Z_L - Z_0}{Z_L + Z_0})e^{-2\gamma l}}{1 - (\frac{Z_L - Z_0}{Z_L + Z_0})e^{-2\gamma l}}\right]
 \end{align*}
-Multiplying the numerator and denominator by $Z_L + Z_0 $\\
-which gives
-\begin{align*}
+Multiplying the numerator and denominator by $Z_L + Z_0 $ gives
+\begin{dmath*}
 Z(l) = Z_0 \left[\frac{(Z_L + Z_0) + (Z_L - Z_0)e^{-2\gamma l}}{(Z_L + Z_0) - (Z_L - Z_0)e^{-2\gamma l}}\right]
-\end{align*}
-\begin{align*}
-Z(l) = Z_0 \frac{e^{-\gamma l}}{e^{-\gamma l}}\left[\frac{(Z_L + Z_0)e^{\gamma l} + (Z_L - Z_0)e^{-\gamma l}}{(Z_L + Z_0)e^{\gamma l} - (Z_L - Z_0)e^{-\gamma l}}\right]
-\end{align*}
-$e^{-\gamma l}$ cancels out, and we open the bracket
-\begin{align*}
-Z(l) = Z_0 \left[\frac{Z_L e^{\gamma l} + Z_0e^{\gamma l} + Z_L e^{-\gamma l} - Z_0e^{-\gamma l}}{Z_L e^{\gamma l} + Z_0e^{\gamma l} - Z_L e^{-\gamma l} + Z_0e^{-\gamma l}}\right]
-\end{align*}
+= Z_0 \frac{e^{-\gamma l}}{e^{-\gamma l}}\left[\frac{(Z_L + Z_0)e^{\gamma l} + (Z_L - Z_0)e^{-\gamma l}}{(Z_L + Z_0)e^{\gamma l} - (Z_L - Z_0)e^{-\gamma l}}\right]
+= Z_0 \left[\frac{Z_L e^{\gamma l} + Z_0e^{\gamma l} + Z_L e^{-\gamma l} - Z_0e^{-\gamma l}}{Z_L e^{\gamma l} + Z_0e^{\gamma l} - Z_L e^{-\gamma l} + Z_0e^{-\gamma l}}\right]
+\end{dmath*}
+
 Collect like terms
 \begin{align*}
 Z(l) = Z_0 \left[\frac{Z_L(e^{\gamma l} + e^{-\gamma l}) + Z_0(e^{\gamma l} - e^{-\gamma l})}{Z_L (e^{\gamma l} - e^{-\gamma l}) + Z_0(e^{\gamma l} + e^{-\gamma l})}\right]
 \end{align*}
-Recall; 
+Before we proceed let us recall that 
 \begin{align*}
 \cosh(\gamma l) = \frac{e^{\gamma l} + e^{-\gamma l}}{2}\\
 2\cosh(\gamma l) = e^{\gamma l} + e^{\gamma l}
 \end{align*}
+ and
 \begin{align*}
 \sinh(\gamma l) = \frac{e^{\gamma l} - e^{-\gamma l}}{2}\\
 2\sinh(\gamma l) = e^{\gamma l} - e^{-\gamma l}
 \end{align*}
 Therefore,
-\begin{align*}
+\begin{dmath}
 Z(l) = Z_0\left[\frac{2(Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l))}{2(Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l))}\right]
-\end{align*}
-\begin{align}
-Z(l) = Z_0\left[\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}\right]
+= Z_0\left[\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}\right]
 \label{eqn:imp}
-\end{align}
-The impedance at any point $l$ is related to the load impedance $Z_L$ and the characteristics impedance $Z_0$ by the above relationship. This enables us to move $Z_L$ to any point along the transmission line. Hence at $l = 0$, we have $Z_L$ but at $l = L$, the input impedance measured at the generator end will not be $Z_L$. It will depend on $Z_L$ and also the length of the line. So, if the length of the line keeps varying, the impedance you measure at the input end of the line will keep varying. 
+\end{dmath}
 
-Hence, if we design a circuit at high frequency and connect a load to the end, depending on the length of the transmission line, the input impedance will keep varying with length. From a circuit perspective, the input impedance is very important. So at high frequencies, the length connecting the load to the circuit matters as the input impedance seen by the generator varies with length.
+Equation~\ref{eqn:imp} shows that the impedance at any point $l$ is related to the load impedance $Z_L$ and the characteristics impedance $Z_0$. This enables us to move $Z_L$ to any point along the transmission line. Hence at $l = 0$, we have $Z_L$ but at $l = L$, the input impedance measured at the generator end will not be $Z_L$. It will depend on $Z_L$ and also the length of the line. So, if the length of the line keeps varying, the impedance you measure at the input end of the line will keep varying. 
+
+Hence, if we design a circuit at high frequency and connect a load to the end, depending on the length of the transmission line, the input impedance will keep varying with length. From a circuit perspective, the input impedance is very important, so at high frequencies, the length connecting the load to the circuit matters as the input impedance seen by the generator varies with length.
 
 From Equation~\ref{eqn:imp}:
 \begin{align*}
@@ -141,16 +128,12 @@ Therefore, dividing both sides by $Z_0$
 \begin{align*}
 \frac{Z(l)}{Z_0} = \frac{Z_0}{Z_0}[\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}] 
 \end{align*}
-Divide Numerator and Denominator by $Z_0$
-\begin{align*}
+Dividing the numerator and denominator by $Z_0$
+\begin{dmath}
 \bar{Z}(l) =\left[ \frac{\frac{Z_L}{Z_0}\cosh(\gamma l) + \frac{Z_0}{Z_0}\sinh(\gamma l)}{\frac{Z_L}{Z_0}\sinh(\gamma l) + \frac{Z_0}{Z_0}\cosh(\gamma l)}\right]
-\end{align*}
-\begin{align*}
-\bar{Z}(l) = \frac{\frac{Z_L}{Z_0}\cosh(\gamma l) + \sinh(\gamma l)}{\frac{Z_L}{Z_0}\sinh(\gamma l) + \cosh(\gamma l)}
-\end{align*}
-\begin{align}
-\bar{Z}(l) = \frac{\bar{Z}_L\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_L\sinh(\gamma l) + \cosh(\gamma l)}\ \text{(normalized impedance)}
-\end{align} 
+= \frac{\frac{Z_L}{Z_0}\cosh(\gamma l) + \sinh(\gamma l)}{\frac{Z_L}{Z_0}\sinh(\gamma l) + \cosh(\gamma l)}
+= \frac{\bar{Z}_L\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_L\sinh(\gamma l) + \cosh(\gamma l)}\ \text{(normalized impedance)}
+\end{dmath}
 That is, $\bar{Z} = \frac{Z}{Z_0}$.
 
 Once again we see that on transmission line calculation, the absolute impedance does not mean anything; Rather it is the normalized impedance that matters most. Hence, $Z_0 = 50\Omega$ and $Z_L = 100\Omega$ gives same reflection as $Z_0 = 300\Omega$ and $Z_L =600\Omega$. Hence the reason why before starting any transmission line calculation, we ask ourselves what the characteristic impedance is, every impedance we have is then normalized to the characteristic impedance. So every calculation done in the transmission line is always done with respect to normalized impedances.
@@ -166,11 +149,12 @@ Recall,
 So,
 \[\frac{Z(l)}{Z_0} = 1\text{ and }\frac{Z_L}{Z_0} = 1
 \]
-That means impedance at every point equal to $Z_0$, if $Z_L = Z_0$ therefore $Z(l) = Z_0$. So, in this matched condition, the impedance $Z(l)$ measured at any point no longer depend on the length of the line. If a line is terminated by its characteristic impedance, there is no need to bother about the length of the line as every point along the line has an impedance equal to the characteristic impedance and this takes away all the worry about the line length.
+means the impedance at every point equal to $Z_0$, if $Z_L = Z_0$ therefore $Z(l) = Z_0$. So, in this matched condition, the impedance $Z(l)$ measured at any point no longer depend on the length of the line. If a line is terminated by its characteristic impedance, there is no need to factor in the length of the line as every point along the line has an impedance equal to the characteristic impedance and this takes away all the worry about the line length.
+
 The relationship of impedance transform will help us give a proper definition of characteristics impedance $Z_0$ which we know was related to the primary constants of the transmission line.
 
 \section{Characteristic Impedance}  
-Characteristic Impedance is defined as that impedance which if used to terminate the line, the impedance measured at all points along the line will be the same and equal to that terminating impedance.
+Characteristic Impedance\index{characteristic impedance} \emph{is defined as that impedance which if used to terminate the line, the impedance measured at all points along the line will be the same and equal to that terminating impedance}.
 
 At matched conditions, there is no reflected wave. With infinite line length, there can be no reflection as the incident wave never gets to the end to get reflected. Hence, the reflection is zero. However, reflection is zero when the line is terminated with the characteristic impedance. Hence, the characteristic impedance can also be defined as the input impedance measured with infinite line length; since with infinite line length, we always have a forward wave and never a reflected wave.
 
