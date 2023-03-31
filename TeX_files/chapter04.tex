@@ -224,19 +224,19 @@ So, equation~\ref{eqn:imp} can be used to transform impedance between $Z_1$ and 
 Now we go to a special case of the transmission lines.
 
 \section{Lossless Transmission Line}
-In practice, we want to transfer maximum power from the generator to the load. However, some losses occur in real transmission lines due to ohmic resistances. Every effort is usually made to make sure maximum power is delivered to the load by minimizing their losses. Hence, a good transmission line loss should be very small at its operating frequency. 
+In practice, we want to transfer maximum power from the generator to the load. However, some losses occur in real transmission lines due to ohmic resistances. Every effort is usually made to make sure maximum power is delivered to the load by minimizing these losses. Hence, a good transmission line loss should be very small at its operating frequency. 
 
 Once we have this condition in practice, then we can make some simplification to the transmission line problem and come up with an idea of what is called a \textbf{lossless transmission line}; whose ideal loss is zero.
 
-The transmission line has four parameters $R, L, G$ and $C$ all in per unit length. $R$ and $G$ are ohmic values in the primary constant, that is, the resistance between the two ends of the conductors and the leakage current in the dielectric separating the two conductors respectively. Hence, power-losing elements exist because of the resistance and conductance. The inductance and capacitance exchange energy between themselves but does not result in any loss. Ideally, a line will be lossless if $R = G = 0$.
+The transmission line has four parameters $R, L, G$ and $C$ all in per unit length. $R$ and $G$ are ohmic values in the primary constants which is the resistance between the two ends of the conductors and the leakage current in the dielectric separating the two conductors respectively. Hence, power-losing elements exist because of the resistance and conductance. The inductance and capacitance exchange energy between themselves but does not result in any loss. Ideally, a line will be lossless if $R = G = 0$.
 
-Substituting $R$ and $G$ as zero in the propagation constant equation,
+Substituting $R$ and $G$ as zero in the propagation constant equation given as follows simplifies to,
 \begin{dmath*}
 \gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}
 = \sqrt{(\jmath\omega L)(\jmath\omega C)}
 = \jmath\omega\sqrt{LC}
 \end{dmath*}
-Also,
+Recall that the propagation constant is a complex quantity represented as,
 \begin{align*}
 \gamma = \alpha + \jmath\beta
 \end{align*} 
@@ -249,7 +249,7 @@ so,
 \alpha = 0, \beta = \omega\sqrt{LC}
 \end{align*}
 
-With no loss, there is no reason for the wave amplitude to reduce on the transmission line since $\alpha = 0$ (The Attenuation Constant)\index{attenuation constant}. Hence, there is a sustained propagation of electromagnetic waves along the transmission line.
+With no loss, there is no reason for the wave amplitude to reduce on the transmission line since $\alpha = 0$ (attenuation constant)\index{attenuation constant}. Hence, there is a sustained propagation of electromagnetic waves along the transmission line.
 
 $\beta = \omega\sqrt{LC}$ but $\beta = \frac{2\pi}{\lambda}$ and $\omega = 2\pi f $. That is,
 \begin{align*}
@@ -265,9 +265,7 @@ Recall, $\lambda f = V$ which is the velocity of the wave in the transmission li
 \end{align*}
 The velocity of the wave in the transmission line is related to the inductance and capacitance of the transmission line. Hence the velocity is fixed once the inductance and capacitance are given.
 
-Can we vary load $L$ and $C$ to vary $V$? Not really, $L$ and $C$ are coupled. Varying $C$ changes $L$ and varying $L$ changes $C$ to make $V$ a constant of the transmission line. The velocity parameter is decided by the field condition in the transmission line and is fixed by the boundary condition. 
-
-For instance, with varying separation between the two conductors, the mutual inductance will vary and at the same time, the separation between the two conductors vary thereby varying the capacitance. Hence, $L$ and $C$ of the transmission line are not independent quantities.
+Can we vary load $L$ and $C$ to vary $v$? Not really, $L$ and $C$ are coupled. Varying $C$ changes $L$ and varying $L$ changes $C$ to make $v$ a constant of the transmission line. The velocity is decided by the field condition in the transmission line and is fixed by the boundary condition. For instance, with varying separation between the two conductors, the mutual inductance will vary and at the same time, the separation between the two conductors vary thereby varying the capacitance. Hence, $L$ and $C$ of the transmission line are not independent quantities.
 
 We then calculate the characteristic impedance on a lossless transmission line which is given as,
 \begin{align*}
@@ -291,9 +289,8 @@ where $\frac{1}{\jmath} = -\jmath$, we have that $\gamma$ is
 \begin{align}
 = \sqrt{{(\jmath\omega L)(\jmath\omega C)(1 - j\frac{R}{\omega L})(1 - j\frac{G}{\omega C})}}
 \label{eqn:lowlossgamma}
-\end{align}
-
-Recall from Binomial expansion the a power series with fraction power can be expressed as follows where x is the fractional part. 
+\end{dmath}
+\footnote{Recall $\frac{1}{\jmath} = -\jmath$}The expressions $\left(1 - j\frac{R}{\omega L}\right)^{\frac{1}{2}}$ and $\left(1 - j\frac{G}{\omega C}\right)^{\frac{1}{2}}$ in Equation~\ref{eqn:lowlossgamma} can be expressed as a power series. Recall from Binomial expansion the a power series with fraction power can be expressed as follows where $x$ is the fractional part.
 \begin{dmath*}
 (1 + x)^{\frac{1}{2}} = \Comb{\frac{1}{2}}{0}(1)^{\frac{1}{2}}x^0 + \Comb{\frac{1}{2}}{1}(1)^{{\frac{1}{2}} - 1}x^1 + \ldots
 \end{dmath*}
