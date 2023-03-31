@@ -9,7 +9,7 @@ From our previous chapter, we recall that,
 \gamma = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} +\jmath\omega\sqrt{LC}
 \label{eqn:refcoeffient1}
 \end{equation}
-which states the conditions defined for a low-loss transmission line in terms of the primary constants (R, L, C and G) of the line. To treat a line as a low-loss transmission line, one will have to express these conditions ( $R \ll \omega L$ and $G \ll \omega C$) in terms of the secondary parameters ($\alpha$ and $\beta $) since these parameters are readily available on the data-sheet. If we can establish a relationship between these parameters ($\alpha$ and $\beta $) for the low-loss nature of the line, then we can find out whether a particular line is low-loss at a particular frequency.
+which states the conditions defined for a low-loss transmission line in terms of the primary constants (R, L, C and G) of the line. To treat a line as a low-loss transmission line, one will have to express these conditions ($R \ll \omega L$ and $G \ll \omega C$) in terms of the secondary parameters ($\alpha$ and $\beta $) since these parameters are readily available on the data-sheet. If we can establish a relationship between these parameters ($\alpha$ and $\beta $) for the low-loss nature of the line, then we can find out whether a particular line is low-loss at a particular frequency.
 
 Recall that,
 \begin{equation}
@@ -127,21 +127,20 @@ I= \frac{V^+}{Z_o} e^{- \gamma x} - \frac{V^-}{Z_o} e^{\gamma x}
 \label{fig:11111111}
 \end{figure}
 
-For a lossless transmission line at any point $l$,\\
-substituting $\gamma = \jmath\beta$ and $x=-l$ into equation~\ref{eqn:genvoltage} , we have ;
-\begin{equation*}\\
+For a lossless transmission line at any point $l$, substituting $\gamma = \jmath\beta$ and $x=-l$ into equation~\ref{eqn:genvoltage}, we have;
+\begin{equation*}
 V(l) = V^+ e^{j \beta l} + V^- e^{- j \beta l}
-\end{equation*}\\
-Divide through by $ V^+ e^{j \beta l}$, we get ;\\
+\end{equation*}
+Divide through by $ V^+ e^{j \beta l}$, we get;
 \begin{equation*}
-\frac{V(l)}{ V^+ e^{j \beta l}}= (1 +\frac{V^- e^{- j \beta l}}{V^+ e^{j \beta l}})
-\end{equation*}\\
+\frac{V(l)}{ V^+ e^{j \beta l}}= \left(1 +\frac{V^- e^{- j \beta l}}{V^+ e^{j \beta l}}\right)
+\end{equation*}
 \begin{equation*}
-V(l) = V^+ e^{j \beta l}(1+ \frac{V^-}{V^+}e^{-j 2 \beta l})
-\end{equation*}\\
+V(l) = V^+ e^{j \beta l}\left(1+ \frac{V^-}{V^+}e^{-j 2 \beta l}\right)
+\end{equation*}
 \begin{equation}
 V(l) = V^+ e^{j \beta l}(1 + \Gamma_L e^{-j 2 \beta l})
-\label{eqn:voltagefromload}
+\label{eqn:voltagefromload2}
 \end{equation}
 where $\Gamma _L = \frac{V^-}{V^+}$. Similarly, substituting $\gamma = j\beta$ and $x = -l$ into equation~\ref{eqn:gencurrent}:
 \begin{equation*}
@@ -149,14 +148,14 @@ I(l) = \frac{V^+}{Z_o}  e^{\jmath \beta l} - \frac{V^-}{Z_o} e^{-\jmath\beta l}
 \end{equation*}
 Divide through by $\frac{V^+}{Z_o}  e^{\jmath\beta l}$
 \begin{equation*}
-\frac{I(l)}{\frac{V^+}{Z_o}  e^{\jmath\beta l}} =( 1- \frac{\frac{V^-}{Z_o} e^{-\jmath\beta l}}{\frac{V^+}{Z_o}  e^{\jmath\beta l}} )
+\frac{I(l)}{\frac{V^+}{Z_o}  e^{\jmath\beta l}} = \left( 1- \frac{\frac{V^-}{Z_o} e^{-\jmath\beta l}}{\frac{V^+}{Z_o}  e^{\jmath\beta l}}\right)
 \end{equation*}
 \begin{equation*}
-\frac{I(l)}{\frac{V^+}{Z_o}  e^{\jmath\beta l}} =( 1-  \frac{V^-}{V^+}e^{-\jmath 2 \beta l})
+\frac{I(l)}{\frac{V^+}{Z_o}  e^{\jmath\beta l}} = \left(1-  \frac{V^-}{V^+}e^{-\jmath 2 \beta l}\right)
 \end{equation*}
 \begin{equation}
-I(l) = \frac{V^+}{Z_o}e ^{j \beta l}  \{ 1 - \Gamma_L e^{-j 2 \beta l}\}
-\label{eqn:currentfromload}
+I(l) = \frac{V^+}{Z_o}e ^{j \beta l}  \left\{ 1 - \Gamma_L e^{-j 2 \beta l}\right\}
+\label{eqn:currentfromload2}
 \end{equation}
 where,
 \begin{equation*}
@@ -167,8 +166,9 @@ $V = f( V^{+}, V^{-})$ and $I = f(I^{+}, I^{-})$ means $V$ and $I$ are a superpo
 \Gamma_L = |\Gamma_L|e^{j\phi_L}
 \label{eqn:refcoefficientfromload}
 \end{equation}
-where $\phi_L =$ phase of the reflection coefficient at the load end. Then, we can write down the $V(l)$ and $I(l)$ explicitly in terms of the magnitude of the reflection coefficient and the phase.\\
-Therefore substituting equation~\ref{eqn:refcoefficientfromload} into equations \ref{eqn:voltagefromload} and \ref{eqn:currentfromload} respectively, we will get ;
+where $\phi_L$ is the phase of the reflection coefficient at the load end. Then, we can write down the $V(l)$ and $I(l)$ explicitly in terms of the magnitude of the reflection coefficient and the phase.
+
+Therefore substituting equation~\ref{eqn:refcoefficientfromload} into equations \ref{eqn:voltagefromload2} and~\ref{eqn:currentfromload2} respectively, we will get;
 \begin{equation*}
 V(l) = V^{+}e^{\jmath\beta l}(1 + |\Gamma_L|e^{j\phi_L} . e^{-j 2 \beta l})
 \end{equation*}
