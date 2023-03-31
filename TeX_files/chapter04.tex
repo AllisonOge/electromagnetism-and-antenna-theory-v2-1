@@ -340,23 +340,23 @@ So,
 Compared to the lossless transmission line where $\alpha = 0$, there is a value for the attenuation constant. Also, we have that $\beta = \omega\sqrt{LC}$ for both cases of lossless and low-loss, which means that the phase constant does not change when we introduce low-loss to the transmission line. Hence, if we are interested in only the phase constant for a low-loss line, it can be treated as a lossless transmission line. However, for a real line $\alpha \neq 0$, there is that small loss so that as you travel the wave, amplitude reduces slowly at $e^{-\alpha}$.
 
 Recall, $Z_0 = \sqrt{\frac{L}{C}}$ for a lossless line, substituting it in Equation~\ref{eqn:lowlossalpha}, we have,
-\[\alpha = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}} = \frac{1}{2}(\frac{R}{Z_0} + GZ_0)\]
+\[\alpha = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}} = \frac{1}{2}\left(\frac{R}{Z_0} + GZ_0\right)\]
 Therefore,
-\[\gamma = \jmath\omega\sqrt{LC} + \frac{1}{2}(\frac{R}{Z_0} + GZ_0)\]
+\[\gamma = \jmath\omega\sqrt{LC} + \frac{1}{2}\left(\frac{R}{Z_0} + GZ_0\right)\]
 So if $R$ and $G$ are known and $Z_0$ for the lossless line has been determined, we can use $\alpha = \frac{1}{2}(\frac{R}{Z_0} + GZ_0)$ to calculate $\alpha$ for the low-loss line.
 \begin{align*}
 Z_0 = \sqrt{\frac{R + \jmath\omega L}{G + \jmath\omega C}} = \sqrt{\frac{\jmath\omega L(1 - \jmath\frac{R}{\omega L})}{\jmath\omega C(1 - \jmath\frac{G}{\omega C})}}
 \end{align*}
-$jw$ will cancel out, leaving us with
-\begin{align*}
-\sqrt{\frac{L}{C}}\sqrt{\frac{1 - j\frac{R}{\omega L}}{1 - j\frac{G}{\omega C}}} =\sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{\omega L}\right)^{\frac{1}{2}}\left(1 - \jmath\frac{G}{\omega C}\right)^{-\frac{1}{2}} 
-\end{align*}
+$j\omega$ will cancel out, leaving us with
+\begin{dmath*}
+Z_0 = \sqrt{\frac{L}{C}}\sqrt{\frac{1 - j\frac{R}{\omega L}}{1 - j\frac{G}{\omega C}}} =\sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{\omega L}\right)^{\frac{1}{2}}\left(1 - \jmath\frac{G}{\omega C}\right)^{-\frac{1}{2}} 
+\end{dmath*}
 From Binomial expansion, we have that:
 \begin{align*}
 Z_0 = \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} + \ldots\right)\left(1 - \jmath\frac{G}{2\omega C} + \ldots\right)
 \end{align*}
 \begin{align*}
-= \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} - \jmath\frac{G}{2\omega C} + \text{\ldots smaller terms}\right)
+= \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} - \jmath\frac{G}{2\omega C} + \text{\ldots (\it{smaller terms})}\right)
 \end{align*}
 The characteristic impedance is no more real but complex. Its real value is the same as that of a lossless line. We have a small imaginary part which implies the presence of losses in the transmission line.
 
