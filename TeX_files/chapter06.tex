@@ -4,44 +4,49 @@ In our previous chapter, we investigated the Standing Wave Pattern on a transmis
 In this chapter, we will study the impedance transformation on a lossless
 transmission line and we will establish some of the very important characteristics of impedance transformation on a lossless transmission line. After which, we will proceed to an important calculation of Power Transfer to the Load and also the expression for $V^{+}$.
 \section{Transformation on a Lossless Transmission Line}
-Recall that, the impedance transformation relationship for any point is given as :
+Recall that, the impedance transformation relationship for any point is given as:
 \begin{align*}
-\footnotemark[1]Z(l) = Z_o\left\lbrace \frac{Z_Lcosh\gamma l + Z_osinh\gamma l}{Z_ocosh\gamma l + Z_Lsinh\gamma l}\right\rbrace 
+\footnotemark[1]Z(l) = Z_o\left\lbrace \frac{Z_L\cosh(\gamma l) + Z_o\sinh(\gamma l)}{Z_o\cosh(\gamma l) + Z_L\sinh(\gamma l)}\right\rbrace 
 \end{align*}
 \footnotetext[1]{$Z(l)$ is the impedance at any point on the line}
 \footnotetext[2]{$\bar{Z}(l)$ is the normalized impedance at any point on the line}
 \begin{align*}
-\footnotemark[2]\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_Lcosh\gamma l + sinh\gamma l}{\bar{Z}_Lsinh\gamma l + cosh\gamma l}\right\rbrace 
+\footnotemark[2]\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_L\sinh(\gamma l) + \cosh(\gamma l)}\right\rbrace 
 \end{align*}
-if $\bar{Z_L} = 1$ i.e $Z_L = Z_o$ and $\bar{Z}(l) = 1 \rightarrow  Z(l) = Z_o$\\
-for a lossless Transmission Line,$\gamma=j\beta$\\\\
-Where
+if $\bar{Z_L} = 1$ i.e $Z_L = Z_o$ and $\bar{Z}(l) = 1 \rightarrow  Z(l) = Z_o$
+
+For a lossless Transmission Line,$\gamma=j\beta$ where
 \begin{align*}
-cosh\gamma l = \frac{e^{\gamma l} + e^{-\gamma l}}{2} \quad and \quad sinh\gamma l = \frac{e^{\gamma l} - e^{-\gamma l}}{2}
+\cosh\gamma l = \frac{e^{\gamma l} + e^{-\gamma l}}{2} \quad and \quad \sinh\gamma l = \frac{e^{\gamma l} - e^{-\gamma l}}{2}
 \end{align*}
 so,
 \begin{align*}
-cosh\gamma l= cosh(j\beta l)=\frac{e^{j \beta l} + e^{-j \beta l}}{2}=cos\beta l
+\cosh\gamma l= \cosh(j\beta l)=\frac{e^{j \beta l} + e^{-j \beta l}}{2}=\cos(\beta l)
 \end{align*}
 And
 \begin{dmath*}
-sinh\gamma l=sinh(j \beta l) = \frac{e^{j \beta l} - e^{-j \beta l}}{2}=j\left( \frac{e^{j \beta l} - e^{-j \beta l}}{2j}\right) =jsin\beta l
+\sinh\gamma l=\sinh(j\beta l) = \frac{e^{j \beta l}-e^{-j\beta l}}{2} = j\left( \frac{e^{j\beta l}-e^{-j\beta l}}{2j}\right) =j\sin(\beta l)
 \end{dmath*}
 
 Therefore impedance transformation relationship for a lossless transmission line is given as;
 \begin{equation}
-\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_Lcos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_Lsin\beta l}\right\rbrace 
+\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
+\label{eqn:charimp}
 \end{equation}
 $Z_o$ is a real quantity for a lossless transmission line same as:
 \begin{equation}
-\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_Lcos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_Lsin\beta l}\right\rbrace 
+\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
+\label{eqn:charimpnorm}
 \end{equation}
-With this impedance transformation relationship, we can establish some very important characteristics of the transmission line. When we move on a transmission line a distance of $\frac{\lambda}{2}$ ( half wave length ), the voltage standing wave characteristics repeat itself, so if we take a ratio of voltage and current at a certain location, we expect that this characteristic will repeat at $\frac{\lambda}{2}$.\\
-Moving $\frac{\lambda}{4}$ from the point of $R_{max}$ and $R_{min}$ , should bring something interesting. Similarly, if we terminate the line into its characteristics impedance, the impedance measured at any point equals to the characteristics impedance. So we have three important points we can draw from this.\\
+With this impedance transformation relationship, we can establish some very important characteristics of the transmission line. When we move on a transmission line a distance of $\frac{\lambda}{2}$ (half wave length), the voltage standing wave characteristics repeat itself, so if we take a ratio of voltage and current at a certain location, we expect that this characteristic will repeat at $\frac{\lambda}{2}$.
+
+Moving $\frac{\lambda}{4}$ from the point of $R_{\max}$ and $R_{\min}$, should bring something interesting. Similarly, if we terminate the line into its characteristics impedance, the impedance measured at any point equals to the characteristics impedance. So we have three important points we can draw from this.
+
 Lets show with proof these three characteristics.
 \begin{enumerate}[(i)]
-\item Normalized impedance Value repeat every $\frac{\lambda}{2}$ distance: Lets say at $l$ we have maximum or minimum impedance, then moving $l=\frac{\lambda}{2}$ from that point we should get same impedance again!\\\\
-At location $l , Impedance =\bar{Z}(l),$
+\item Normalized impedance Value repeat every $\frac{\lambda}{2}$ distance: Lets say at $l$ we have maximum or minimum impedance, then moving $l=\frac{\lambda}{2}$ from that point we should get same impedance again!
+
+At location $l$, Impedance $= \bar{Z}(l)$,
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\linewidth]{./graphics/6}
@@ -49,28 +54,27 @@ At location $l , Impedance =\bar{Z}(l),$
 \label{fig:astyuif}
 \end{figure}
 
-At location ${(l+\frac{\lambda}{2})}$, Impedance  $=$ $\bar{Z}(l+\frac{\lambda}{2})$\\\\
-substituting ${(l+\frac{\lambda}{2})}$ for $l$ in equation $6.1$, we get: 
+At location ${\left(l+\frac{\lambda}{2}\right)}$, Impedance $= \bar{Z}\left(l+\frac{\lambda}{2}\right)$ substituting ${\left(l+\frac{\lambda}{2}\right)}$ for $l$ in equation~\ref{eqn:charimp}, we get: 
 \begin{align*}
-\bar{Z}(l+\frac{\lambda}{2}) = \left\lbrace \frac{\bar{Z}_L cos\beta (l+\frac{\lambda}{2}) + jsin\beta (l+\frac{\lambda}{2})}{cos\beta (l+\frac{\lambda}{2}) + j\bar{Z}_L sin\beta (l+\frac{\lambda}{2})}\right\rbrace 
+\bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L \cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\sin(\beta \left(l+\frac{\lambda}{2}\right))}{\cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\bar{Z}_L \sin(\beta \left(l+\frac{\lambda}{2}\right))}\right\rbrace 
 \end{align*}
 Since \footnote{$\beta$ represents phase constant}$\beta$ = $ \frac{2\pi}{\lambda}$, therefore,
 \begin{dmath*}
-\beta(l+\frac{\lambda}{2})=\frac{2\pi}{\lambda}(l+\frac{\lambda}{2})=\frac{2\pi}{\lambda}l+\pi=\beta l+\pi
+\beta\left(l+\frac{\lambda}{2}\right)=\frac{2\pi}{\lambda}\left(l+\frac{\lambda}{2}\right)=\frac{2\pi}{\lambda}l+\pi=\beta l+\pi
 \end{dmath*}
 \begin{align*}
-\bar{Z}(l+\frac{\lambda}{2}) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l+\pi) + j\sin(\beta l+\pi)}{\cos(\beta l+\pi) + j\bar{Z}_L\sin(\beta l+\pi)}\right\rbrace 
+\bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l+\pi) + j\sin(\beta l+\pi)}{\cos(\beta l+\pi) + j\bar{Z}_L\sin(\beta l+\pi)}\right\rbrace 
 \end{align*}
 But 
-\begin{align*} 
-cos(\beta l+\pi)=-cos\beta l \quad and \quad sin(\beta l+\pi)=-sin\beta l
-\end{align*}
+\[
+\cos(\beta l+\pi)=-\cos(\beta l)$ and $\sin(\beta l+\pi)=-\sin(\beta l)
+\] 
 \begin{dmath*}
-\bar{Z}(l+\frac{\lambda}{2})=\left\lbrace \frac{-\bar{Z}_L cos\beta l - jsin\beta l}{-cos\beta l - j\bar{Z}_L sin\beta l}\right\rbrace = \left\lbrace \frac{\bar{Z}_L cos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_L sin\beta l}\right\rbrace\;\;\equiv \bar{Z}(l)
+\bar{Z}\left(l+\frac{\lambda}{2}\right)=\left\lbrace \frac{-\bar{Z}_L \cos(\beta l) - j\sin(\beta l)}{-\cos(\beta l) - j\bar{Z}_L \sin(\beta l)}\right\rbrace = \left\lbrace \frac{\bar{Z}_L \cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L \sin(\beta l)}\right\rbrace\;\;\equiv \bar{Z}(l)
 \end{dmath*} 
 This is same as original formula obtained for $\bar{Z}(l)$.
 
-Hence\ $\bar{Z}(l+\frac{\lambda}{2})
+Hence $\bar{Z}\left(l+\frac{\lambda}{2}\right)
 =\bar{Z}(l)$, which proves that impedance repeat itself at $\frac{\lambda}{2}$.\\
 
 In other words, no matter the length of the transmission line, modulus $\frac{\lambda}{2}$ is  a special information which is available from the impedance relationship.
@@ -295,7 +299,7 @@ R_{min} = Z_o \left(\frac{1 - |\Gamma_L|}{1 + |\Gamma_L|}\right) = \frac{Z_o}{\r
 
 For Impedance transformation, 
 $$Z(l) = Z_o\left\{\frac{Z_L\cos\beta l + jZ_o\sin\beta l}{jZ_o\sin\beta l + Z_L\cos\beta l}\right\} $$
-$$= Z_o\left\{\frac{Z_L\cosh\gamma l + Z_o\sinh\gamma l}{Z_o\cosh\gamma l + Z_L\sinh\gamma l}\right\}	$$
+$$= Z_o\left\{\frac{Z_L\\cosh\gamma l + Z_o\\sinh\gamma l}{Z_o\\cosh\gamma l + Z_L\\sinh\gamma l}\right\}	$$
 When the relationship is normalized, $Z_o$ is eliminated from the expression and $Z_L$ takes the form $\bar{Z_L}$.
 $$P = \frac{1}{2}\frac{|V^+|}{Z_o}\lbrace 1 - |\Gamma_L|^2\rbrace --\text{Real power}	$$
 $$P = \frac{1}{2}\frac{|V^+|}{Z_o}\lbrace 1 - |\Gamma_L|^2\rbrace + j2Im\lbrace \Gamma_L e^{- j2\beta l}\rbrace --\text{Complex power}$$
