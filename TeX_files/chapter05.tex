@@ -194,30 +194,36 @@ So by moving towards the generator, the phase becomes more and more negative, wh
 \label{fig:kjhgfdwert}
 \end{figure}
 
-The magnitude $( 1+|\Gamma_L|  e^{j(\phi_L -2 \beta l)})$ varies as we move along the transmission line.\\
-From figure 5.3 \footnote{\includegraphics[scale=0.15]{./graphics/picture4} 
+The magnitude $1+|\Gamma_L|  e^{j(\phi_L -2 \beta l)}$ varies as we move along the transmission line.
 
-Argand Diagram refers to a geometric plot of complex numbers as points z = x+iy using the x-axis as the real axis and the y-axis as the imaginary axis. Such plots are named after Jean-Robert Argand(1768-1822), although they were first described by Norwegian-Danish land surveyor and mathematician Casper Wessel (1745-1818.)}Argand Diagram below, \\
-$ A =| 1+| \Gamma_L| e^{j (\phi_L - 2\beta l)}|$ \quad$, B=| \Gamma_L|$\\\\
-$Phase\ angle = \phi_L - 2 \beta l$.\\\\
-If $ \phi_L - 2 \beta l = 2 \pi n$, where n is an integer, then $ e^{j(\phi_L - 2 \beta l)} = 1$. This is the right side of the dot on the real axis.\\\\ 
+From the \footnote{\includegraphics[scale=0.15]{./graphics/picture4}
+
+Argand Diagram refers to a geometric plot of complex numbers as points $z = x + iy$ using the x-axis as the real axis and the y-axis as the imaginary axis. Such plots are named after Jean-Robert Argand (1768-1822), although they were first described by Norwegian-Danish land surveyor and mathematician Casper Wessel (1745-1818.)}Argand diagram in figure~\ref{fig:kjhgfdwert},
+$ A =|1 +| \Gamma_L| e^{j (\phi_L - 2\beta l)}|,\quad B = |\Gamma_L|,\quad\text{Phase angle} = \phi_L - 2 \beta l$.
+
+If $ \phi_L - 2 \beta l = 2 \pi n$, where n is an integer, then $ e^{j(\phi_L - 2 \beta l)} = 1$. This is the right side of the dot on the real axis.
+
 Also, if $\phi_L - 2 \beta l=(2 n + 1) \pi$, then $e^{j (\phi_L - 2 \beta l)} = -1$. This is the left side of the dot on the real axis.
 \begin{equation*}
 V(l) = V^{+}e^{j\beta l}(1 + |\Gamma_L|  e^{j(\phi_L -2\beta l)})
 \end{equation*}
-$(1 + |\Gamma_L|  e^{j(\phi_L -2\beta l)})$ add when they are in phase to give maximum V i.e at $(\phi_L -2\beta l) = 0, 2\pi, 4\pi ...$, and subtract to give minimum V i.e at  $(\phi_L -2\beta l) = \pi, 3\pi, 5\pi ...$ \\
-This is opposite to the behaviour of the current relationship, when 1 and  $-|\Gamma_L|  e^{j(\phi_L -2\beta l)}$ in $1-|\Gamma_L|  e^{j(\phi_L -2\beta l)}$ are out of phase, they add at $\pi, 3\pi, 5\pi...$ to give maximum current and they cancel when in phase at $0, 2\pi, 4\pi...$, to give minimum current.\\
-As stated earlier, when $ e^{j(\phi_L - 2 \beta l)} = 1$, the voltage is maximum and the current is minimum. When $ e^{\jmath(\phi_L - 2 \beta l)} = -1$, the voltage is minimum and the current is maximum. So at the same location along the transmission line, maximum voltage corresponds to minimum current, and minimum voltage corresponds to maximum current. This is opposite to what we observed in a lumped circuit, where the maximum voltage point corresponds to maximum current and minimum voltage corresponds to minimum current.\\
+$(1 + |\Gamma_L|  e^{j(\phi_L -2\beta l)})$ add when they are in phase to give maximum voltage, V i.e at $(\phi_L -2\beta l) = 0, 2\pi, 4\pi \ldots$, and subtract when out-of-phase to give minimum voltage, V i.e at  $(\phi_L -2\beta l) = \pi, 3\pi, 5\pi \ldots$.
+
+This is opposite to the behaviour of the current relationship, when the terms in $1-|\Gamma_L|  e^{j(\phi_L -2\beta l)}$, (1) and  ($-|\Gamma_L|  e^{j(\phi_L -2\beta l)}$) are out of phase, they add at $\pi, 3\pi, 5\pi, \ldots$ to give maximum current and they cancel when in phase at $0, 2\pi, 4\pi, \ldots$ to give minimum current.
+
+As stated earlier, when $ e^{j(\phi_L - 2 \beta l)} = 1$, the voltage is maximum and the current is minimum. When $ e^{\jmath(\phi_L - 2 \beta l)} = -1$, the voltage is minimum and the current is maximum. So at the same location along the transmission line, maximum voltage corresponds to minimum current, and minimum voltage corresponds to maximum current. This is opposite to what we observed in a lumped circuit, where the maximum voltage point corresponds to maximum current and minimum voltage corresponds to minimum current.
+
 The maximum voltage and current does not occur at the same point on the transmission line, they are staggered in space. Whenever there is a maximum voltage, there is a minimum current and vice versa. So the standing wave of voltage and current are shifted with respect to each other in space on the transmission line. 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{./graphics/fig5.4modified}
-\caption{Voltage and Current Plot, with Increasing l to the left}
+\caption{Voltage and Current plot moving in the direction of increasing $l$}
 \label{fig:asdfghjhgfdsa}
 \end{figure}
 From figure 5.4, we observe that maximum voltage corresponds to minimum current and minimum voltage corresponds to maximum current.
 
-\section{Concept of Voltage Standing Wave Ratio (VSWR)}
+From figure~\ref{fig:asdfghjhgfdsa}, we observe that maximum voltage corresponds to minimum current and minimum voltage corresponds to maximum current.
+
 Recall that;
 \begin{align*}
 \frac{V(l)}{I(l)} = \frac{V^{+}e^{j\beta l}(1+ |\Gamma_L|e^{j(\phi_L- 2 \beta l)})}{\frac{V^{+}}{Z_o}(1- |\Gamma_L|e^{j(\phi_L- 2\beta l)})}
@@ -228,7 +234,7 @@ Therefore,
 \end{equation*}
 For maximum voltage, $\phi_L-2\beta l = \textnormal{Even multiples of }\pi$ that is $0, 2\pi, 4\pi,  6\pi,\ldots$. For minimum voltage,  $\phi_L-2\beta l=\textnormal{Odd multiples of } \pi$ that is $\pi, 3\pi,\ 5\pi,\ \ldots$. Thus the euler formular 
 \[e^{j(\phi_L - 2 \beta l)} = \cos(\phi_L - 2 \beta l) + jsin(\phi_L - 2 \beta l)\]
-Since $\sin(\phi_L - 2 \beta l) = 0$ for all multiples of $\pi$ or $n\pi$, where n is an integer becomes real. So when a voltage is maximum or minimum, $\frac{V(l)}{I(l)} = Z_o \times$ (real quantity).
+Since $\sin(\phi_L - 2 \beta l) = 0$ for all multiples of $\pi$ or $n\pi$, where n is an integer becomes real. So when a voltage is maximum or minimum, $\frac{V(l)}{I(l)} = Z_0 \times$ (real quantity).
 
 So irrespective of what the line is terminated in at maximum voltage, the impedance at that point is always real. Even if the line is terminated in a complex impedance, the maximum voltage is always real. If we move to the point of maximum voltage, the impedance that will be measured at that point will always be real. Similarly, at the location where the voltage is minimum, the impedance will again be real.
 
@@ -250,7 +256,7 @@ Z_{\min}=\frac{|V_{\min}|}{|I_{\max}|} = R_{\min}
 \begin{equation}
 R_{\min} =Z_o\left\{\frac{1-|\Gamma_L|}{1+|\Gamma_L|}\right\}
 \end{equation}
-Once load impedance, characteristic impedance $Z_o$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to Equation~\ref{eqn:maximp} and the lowest according to Equation~\ref{eqn:minimp}.
+Once load impedance, characteristic impedance $Z_0$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to equation~\ref{eqn:maximp} and the lowest according to equation~\ref{eqn:minimp}.
 
 Once we have the voltage standing wave on the transmission line, at high frequencies the measurement of phase is very difficult and complicated. One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase but in a not direct manner rather indirect by measuring only the magnitude quantities. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time relationship between the two waves, the forward and backward wave. 
 
