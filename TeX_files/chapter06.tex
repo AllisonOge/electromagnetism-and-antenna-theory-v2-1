@@ -43,8 +43,8 @@ With this impedance transformation relationship, we can establish some very impo
 Moving $\frac{\lambda}{4}$ from the point of $R_{\max}$ and $R_{\min}$, should bring something interesting. Similarly, if we terminate the line into its characteristics impedance, the impedance measured at any point equals to the characteristics impedance. So we have three important points we can draw from this.
 
 Lets show with proof these three characteristics.
-\begin{enumerate}[(i)]
-\item Normalized impedance Value repeat every $\frac{\lambda}{2}$ distance: Lets say at $l$ we have maximum or minimum impedance, then moving $l=\frac{\lambda}{2}$ from that point we should get same impedance again!
+\subsection{Normalized impedance value repeat every $\frac{\lambda}{2}$ distance}
+Lets say at $l$ we have maximum or minimum impedance, then moving $l=\frac{\lambda}{2}$ from that point we should get same impedance again!
 
 At location $l$, Impedance $= \bar{Z}(l)$,
 \begin{figure}[h]
@@ -78,18 +78,9 @@ Hence $\bar{Z}\left(l+\frac{\lambda}{2}\right)
 =\bar{Z}(l)$, which proves that impedance repeat itself at $\frac{\lambda}{2}$.\\
 
 In other words, no matter the length of the transmission line, modulus $\frac{\lambda}{2}$ is  a special information which is available from the impedance relationship.
-\item If we move a distance of $\frac{\lambda}{4}$, we move from a maximum to minimum impedance and vice versa.\\
 
-At location $l , Impedance =\bar{Z}(l).$\\\\
-Then at location ${(l+\frac{\lambda}{4})}$, Impedance  $=$ $\bar{Z}(l+\frac{\lambda}{4})$\\\\
-substituting ${(l+\frac{\lambda}{4})}$ for $l$ in equation $6.1$, we get:
-\begin{align*}
-\bar{Z}(l+\frac{\lambda}{4}) = \left\lbrace \frac{\bar{Z}(l)cos\beta (l+\frac{\lambda}{4}) + jsin\beta (l+\frac{\lambda}{4})}{cos\beta (l+\frac{\lambda}{4}) + j\bar{Z}(l)sin\beta (l+\frac{\lambda}{4})}\right\rbrace 
-\end{align*}
-Where\ \ \  $\beta( l + \frac{\lambda}{4})$ = $\beta l + \frac{2\pi}{\lambda} . \frac{\lambda}{4} = \beta l + \frac{\pi}{2}.$
-\begin{align*} 
-= \left\lbrace \frac{\bar{Z}(l)cos(\beta l + \frac{\pi}{2}) + jsin(\beta l + \frac{\pi}{2})}{cos (\beta l + \frac{\pi}{2}) + j\bar{Z}(l)sin(\beta l + \frac{\pi}{2})}\right\rbrace
-\end{align*}
+\subsection{Normalized impedance inverts at every $\frac{\lambda}{4}$ distance}
+If we move a distance of $\frac{\lambda}{4}$, we move from a maximum to minimum impedance and vice versa.
 
 But $cos(\beta l + \frac{\pi}{2})= -sin\beta l , \quad sin(\beta l +\frac{\pi}{2})= cos\beta l$
 
@@ -109,8 +100,9 @@ This is another important point here, that for every $\frac{\lambda}{4}$ distanc
 \begin{dmath*}
 \bar{Z}(l) = \left\lbrace \frac{\bar{Z}_Lcos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_Lsin\beta l}\right\rbrace = \left\lbrace \frac{cos\beta l + jsin\beta l}{cos\beta l + jsin\beta l}\right\rbrace = 1
 \end{dmath*}
-Therefore, irrespective of the length of the transmission line, if the line is terminated in its characteristics impedance , then the impedance seen at every point on the transmission line is equal to the characteristics impedance. This means that once a line is terminated in its characteristics impedance, we don't have to worry about the impedance transformation on the line, we can use any length of transmission and the impedance will always be the same along the length of the line. $Z_L=Z_o$ i.e when reflection coefficient is zero, there is no reflected wave on the transmission line and we have only forward traveling wave on the transmission line. Forward traveling wave always see an impedance which is equal to the characteristics impedance. This result is not new, it is what we had discussed earlier when we talked about transmission line and that was, if a line is terminated in its characteristic impedance , the impedance seen at every point on the transmission line is equal to the characteristics impedance. 
-\end{enumerate}
+
+\subsection{The matching condition characteristics}
+If the transmission line is terminated by its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_o$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_o}=1$. Then equation~\ref{eqn:charimp} becomes:
 So these are the three very important characteristics of a lossless transmission line.
 \begin{enumerate}[(i)]
 \item Impedance transformation repeats at every $\frac{\lambda}{2}$ distances.
