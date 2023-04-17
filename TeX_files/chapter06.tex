@@ -70,39 +70,45 @@ But
 \cos(\beta l+\pi)=-\cos(\beta l)$ and $\sin(\beta l+\pi)=-\sin(\beta l)
 \] 
 \begin{dmath*}
-\bar{Z}\left(l+\frac{\lambda}{2}\right)=\left\lbrace \frac{-\bar{Z}_L \cos(\beta l) - j\sin(\beta l)}{-\cos(\beta l) - j\bar{Z}_L \sin(\beta l)}\right\rbrace = \left\lbrace \frac{\bar{Z}_L \cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L \sin(\beta l)}\right\rbrace\;\;\equiv \bar{Z}(l)
+\bar{Z}\left(l+\frac{\lambda}{2}\right)=\left\lbrace \frac{-\bar{Z}_L \cos(\beta l) - j\sin(\beta l)}{-\cos(\beta l) - j\bar{Z}_L \sin(\beta l)}\right\rbrace = \left\lbrace \frac{\bar{Z}_L \cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L \sin(\beta l)}\right\rbrace\;\;\equiv\bar{Z}(l)
 \end{dmath*} 
 This is same as original formula obtained for $\bar{Z}(l)$.
 
-Hence $\bar{Z}\left(l+\frac{\lambda}{2}\right)
-=\bar{Z}(l)$, which proves that impedance repeat itself at $\frac{\lambda}{2}$.\\
+Hence $\bar{Z}\left(l+\frac{\lambda}{2}\right)=\bar{Z}(l)$, which proves that impedance repeat itself at $\frac{\lambda}{2}$.
 
 In other words, no matter the length of the transmission line, modulus $\frac{\lambda}{2}$ is  a special information which is available from the impedance relationship.
 
 \subsection{Normalized impedance inverts at every $\frac{\lambda}{4}$ distance}
 If we move a distance of $\frac{\lambda}{4}$, we move from a maximum to minimum impedance and vice versa.
 
-But $cos(\beta l + \frac{\pi}{2})= -sin\beta l , \quad sin(\beta l +\frac{\pi}{2})= cos\beta l$
+At location $l, \textnormal{Impedance}=\bar{Z}(l)$.
 
-\begin{align*} 
-= \left\lbrace \frac{-\bar{Z}(l)sin\beta l + jcos\beta l}{-sin\beta l + j\bar{Z}(l) cos\beta l}\right\rbrace
-\end{align*}
-
-\begin{dmath*}
-\bar{Z}(l+\frac{\lambda}{4}) =\frac{j}{j} \left\lbrace \frac{cos\beta l + j\bar{Z}(l)sin\beta l}{\bar{Z}(l)cos\beta l + jsin\beta l}\right\rbrace = 
-\frac{1}{\left\lbrace \frac{\bar{Z}(l)cos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}(l)sin\beta l}\right\rbrace} =\frac{1}{\bar{Z} (l)}
-\end{dmath*}
+Then at location ${(l+\frac{\lambda}{4})}$, Impedance  $=\bar{Z}(l+\frac{\lambda}{4})$. Substituting ${(l+\frac{\lambda}{4})}$ for $l$ in equation~\ref{eqn:charimp}, we get:
 \begin{align*}
-\bar{Z}(l+\frac{\lambda}{4}) = \frac{1}{\bar{Z} (l)}
+\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta (l+\frac{\lambda}{4})) + jsin(\beta (l+\frac{\lambda}{4}))}{\cos(\beta (l+\frac{\lambda}{4})) + j\bar{Z}(l)\sin(\beta (l+\frac{\lambda}{4}))}\right\rbrace 
 \end{align*}
-This is another important point here, that for every $\frac{\lambda}{4}$ distance moved , the normalized impedance inverts itself. Note the word \textbf{Normalized}, it is not absolute impedance. If absolute impedance is reversed, it becomes \textbf{Admittance}. The normalized impedance does not have a unit, it is dimensionless. So if I have an impedance greater than $Z_o$ along a transmission line , after $\frac{\lambda}{4}$ distance, it becomes less than $Z_o$ because the normalized impedance is the inverse of the one at previous location. So at $\frac{\lambda}{4}$ distance, impedance inverts after another $\frac{\lambda}{4}$ again it re-inverts becoming the original impedance, which is equivalent to repeating itself at $\frac{\lambda}{2}$ distance (Which was proved earlier). So when we talk about the periodicity of the impedance on the transmission line, at $\frac{\lambda}{2}$ the absolute or normalized impedance repeats itself, whereas every distance of $\frac{\lambda}{4}$, the normalized impedance inverts itself. Later on when we study impedance matching characteristics, this property is used extensively for finding out the impedance transformation which can match impedance on transmission line.
-\item The matching condition characteristics: If the line is terminated in its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_o$ $\Longrightarrow \bar{Z}_L= \frac{Z_L}{Z_o}$=1. Then equation $6.1$ becomes;
+Where 
 \begin{dmath*}
-\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_Lcos\beta l + jsin\beta l}{cos\beta l + j\bar{Z}_Lsin\beta l}\right\rbrace = \left\lbrace \frac{cos\beta l + jsin\beta l}{cos\beta l + jsin\beta l}\right\rbrace = 1
+\beta(l + \frac{\lambda}{4})=\beta l + \frac{2\pi}{\lambda} \cdot \frac{\lambda}{4} = \beta l + \frac{\pi}{2}
+\end{dmath*}
+\begin{align*} 
+\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta l + \frac{\pi}{2}) + j\sin(\beta l + \frac{\pi}{2})}{\cos(\beta l + \frac{\pi}{2}) + j\bar{Z}(l)\sin(\beta l + \frac{\pi}{2})}\right\rbrace
+\end{align*}
+But $\cos(\beta l + \frac{\pi}{2})= -\sin(\beta l), \sin(\beta l+\frac{\pi}{2})=\cos(\beta l)$
+\begin{align*} 
+\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{-\bar{Z}(l)\sin(\beta l) + j\cos(\beta l)}{-\sin(\beta l) + j\bar{Z}(l) \cos(\beta l)}\right\rbrace
+\end{align*}
+\begin{dmath*}
+\bar{Z}\left(l+\frac{\lambda}{4}\right) =\frac{j}{j} \left\lbrace \frac{\cos(\beta l) + j\bar{Z}(l)\sin(\beta l)}{\bar{Z}(l)\cos(\beta l) + j\sin(\beta l)}\right\rbrace 
+= \frac{1}{\left\lbrace \frac{\bar{Z}(l)\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}(l)\sin(\beta l)}\right\rbrace} 
+=\frac{1}{\bar{Z}(l)}
 \end{dmath*}
 
 \subsection{The matching condition characteristics}
 If the transmission line is terminated by its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_o$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_o}=1$. Then equation~\ref{eqn:charimp} becomes:
+\begin{dmath*}
+\bar{Z}(l) = \left\lbrace\frac{\bar{Z}_L\cos\beta l + j\sin\beta l}{\cos\beta l + j\bar{Z}_L\sin\beta l}\right\rbrace = \left\lbrace \frac{\cos\beta l + j\sin\beta l}{\cos\beta l + jsin\beta l}\right\rbrace = 1
+\end{dmath*}
 So these are the three very important characteristics of a lossless transmission line.
 \begin{enumerate}[(i)]
 \item Impedance transformation repeats at every $\frac{\lambda}{2}$ distances.
@@ -120,11 +126,12 @@ Initially, our idea was to transfer power from generator to load effectively. In
 For these two reasons that the generator power should be completely delivered to the load and that no reflected power should come back to the generator, we must make sure always that the impedance which the generator sees is always equal to the characteristics impedance. We will study these two issues later but let's study a general case and ask if we have a transmission line which is connected to a generator at  one end and a load at the other end. How much power will be delivered to the load. Again without going into voltage and current equation, we can write down power at the location of the load i.e Power delivered to the load will be given as follows.
 
 At load end, $L=0$ therefore, $e^{-2\beta (l)} = e^{-2\beta (0)}$
-
-$V(o)= V^{+} \left\lbrace {1 + \Gamma_L e^{-2\beta(0)}}\right\rbrace $ = $V^{+}\left\lbrace 1 +\Gamma_L \right\rbrace$.
-
-$I(o)= \frac{V^{+}}{Z_o} \left\lbrace {1 - \Gamma_L e^{-2\beta(0)}}\right\rbrace $ =$ \frac{V^{+}}{Z_o}$ $\left\lbrace 1 -\Gamma_L \right\rbrace$ 
-
+\begin{align*}
+V(0) &= V^{+} \left\lbrace {1 + \Gamma_L e^{-2\beta(0)}}\right\rbrace\\ 
+&= V^{+}\left\lbrace 1 +\Gamma_L \right\rbrace\\
+I(0) &= \frac{V^{+}}{Z_o} \left\lbrace{1 - \Gamma_L e^{-2\beta(0)}}\right\rbrace\\ 
+&= \frac{V^{+}}{Z_o}\left\lbrace1 -\Gamma_L \right\rbrace
+\end{align*}
 So from the general voltage and current relationship on the transmission line we have found  out the voltage and current values at load end.
 
 $Z_o= $ real for a lossless line,
@@ -134,7 +141,7 @@ I^\ast (o) =\frac{V^{+ (\ast )}}{Z_o}\left\lbrace 1 -\Gamma_L \right\rbrace
 
 Power delivered to load.
 \begin{dmath*}
-P= \frac{1}{2} Re\left\lbrace V(o) I^*(o) \right\rbrace = \frac{1}{2} Re\left\lbrace V^+(1+\Gamma_L) \times \frac{V^{+(*)}}{Z_o} (1-\Gamma_L)\right\rbrace
+P = \frac{1}{2}\mathfrak{Re}\left\lbrace V(0) I^\ast(0) \right\rbrace= \frac{1}{2}\mathfrak{Re}\left\lbrace V^+(1+\Gamma_L) \times\frac{V^{+(\ast)}}{Z_o} (1-\Gamma_L)\right\rbrace
 \end{dmath*}
 \begin{equation}
 P= \frac{1}{2} \frac{|V^+|^2}{Z_o} \left\lbrace 1 -|\Gamma_L|^2 \right\rbrace 
@@ -171,11 +178,19 @@ which is the power reflected by load in the backward wave.
 Therefore, Power delivered to load $=$ Power transferred to load $-$ Power reflected.
 
 \begin{align*} 
-P= \frac{1}{2} \frac{ { |V^+ | }^2}{Z_o} -\frac{1}{2} \frac{ {|V^- |}^2 }{Z_o} = \frac{1}{2} \left\lbrace \frac{ { | V^+ | }^2}{Z_o} -\frac{ {|V^- |}^2 }{Z_o} \right\rbrace
+\textnormal{Power delivered to load}, P\\
+=& \textnormal{Power transferred to load}\\
+&- \textnormal{Power reflected}\\
+=& \frac{1}{2} \frac{{|V^+|}^2}{Z_o} -\frac{1}{2} \frac{{|V^-|}^2 }{Z_o}\\
+=& \frac{1}{2} \left\lbrace \frac{{|V^+| }^2}{Z_o} -\frac{ {|V^-|}^2 }{Z_o} \right\rbrace\\
+=& \frac{1}{2} \frac{{|V^+|}^2}{Z_o} \left\lbrace 1 - {
+\begin{vmatrix}
+\frac{V^-}{V^+}
+\end{vmatrix}^2}\right\rbrace
 \end{align*}
-\begin{align*} 
-P_L= \frac{1}{2} \frac{ { | V^+ | } ^2}{Z_o} \left\lbrace 1 - { | {\frac{V^-}{V^+}|^2}}\right\rbrace\\
-Recall \ that\ \ \ \  \Gamma_L =\frac{V^-}{V^+}.
+Recall that $\Gamma_L =\frac{V^-}{V^+}$.
+\begin{align*}
+P_L=\frac{1}{2} \frac{{|V^+|}^2}{Z_o} \left\lbrace 1 - { \Gamma_L }^2 \right\rbrace.
 \end{align*}
 \begin{align*}
 P_L=\frac{1}{2} \frac{{| V^+ |}^2}{Z_o} \left\lbrace 1 - { \Gamma_L }^2 \right\rbrace.
