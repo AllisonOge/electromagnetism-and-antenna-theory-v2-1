@@ -144,20 +144,17 @@ Power delivered to load.
 P = \frac{1}{2}\mathfrak{Re}\left\lbrace V(0) I^\ast(0) \right\rbrace= \frac{1}{2}\mathfrak{Re}\left\lbrace V^+(1+\Gamma_L) \times\frac{V^{+(\ast)}}{Z_o} (1-\Gamma_L)\right\rbrace
 \end{dmath*}
 \begin{equation}
-P= \frac{1}{2} \frac{|V^+|^2}{Z_o} \left\lbrace 1 -|\Gamma_L|^2 \right\rbrace 
+P = \frac{1}{2} \frac{|V^+|^2}{Z_o} \left\lbrace 1 -|\Gamma_L|^2 \right\rbrace\footnotemark
 \end{equation}
+\footnotetext{
+Given $V=a + jb  \quad \quad V^\ast=a-jb$
 
+Then, $V\times V^\ast = (a + jb)(a-jb)= a^2-jab + jab +(jb)(-jb)=a^2 + b^2$
+
+$|V|= \sqrt{a^2 + b^2}$ thus, $|V|^2 = a^2 + b^2$
+
+This implies that $|V|^2 = V \times V^* $}
 $\Gamma_L$ is a real value since it is the absolute value taken here.
-
-\textbf{NOTE:} 
-
-$V= a + jb  \quad \quad V^*= a -jb$
-
-$ V\times V^* = ( a + jb)(a-jb)= a^2 - jab + jab + (jb) (-jb)= a^2 + b^2 $
-
-$| V |= \sqrt{a^2 + b^2} $ \quad \quad $|V|^2 = a^2 + b^2 $
-
-$| V |^2 = V \times V^* $ 
 
 Recall that,
 \begin{align*}\Gamma_L = \frac{ Z_L -Z_o }{ Z_L + Z_o }.
