@@ -103,27 +103,34 @@ But $\cos(\beta l + \frac{\pi}{2})= -\sin(\beta l), \sin(\beta l+\frac{\pi}{2})=
 = \frac{1}{\left\lbrace \frac{\bar{Z}(l)\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}(l)\sin(\beta l)}\right\rbrace} 
 =\frac{1}{\bar{Z}(l)}
 \end{dmath*}
+We can draw an observation that for every $\frac{\lambda}{4}$ distance moved, the normalized impedance inverts itself\footnote{Note the word \textbf{normalized}, it is not absolute impedance}. If absolute impedance is inverted, it is \textbf{admittance}\index{admittance}. The normalized impedance does not have a unit, it is dimensionless. So if I have an impedance greater than $Z_o$ along a transmission line, after $\frac{\lambda}{4}$ distance, it becomes less than $Z_o$ because the normalized impedance is the inverse of the one at previous location. So at $\frac{\lambda}{4}$ distance, impedance inverts after another $\frac{\lambda}{4}$ again it re-inverts becoming the original impedance, which is equivalent to repeating itself at $\frac{\lambda}{2}$ distance. 
+
+Hence, when we talk about the periodicity of the impedance on the transmission line, at $\frac{\lambda}{2}$ the absolute or normalized impedance repeats itself, whereas every distance of $\frac{\lambda}{4}$, the normalized impedance inverts itself. Next on is the study of impedance matching characteristics; this property is used extensively for finding out the impedance transformation which can match impedance on transmission line.
 
 \subsection{The matching condition characteristics}
 If the transmission line is terminated by its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_o$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_o}=1$. Then equation~\ref{eqn:charimp} becomes:
 \begin{dmath*}
 \bar{Z}(l) = \left\lbrace\frac{\bar{Z}_L\cos\beta l + j\sin\beta l}{\cos\beta l + j\bar{Z}_L\sin\beta l}\right\rbrace = \left\lbrace \frac{\cos\beta l + j\sin\beta l}{\cos\beta l + jsin\beta l}\right\rbrace = 1
 \end{dmath*}
+Therefore, irrespective of the length of the transmission line, if the line is terminated in its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. This means that once a line is terminated in its characteristics impedance, there is no need to compute the impedance transformation on the line, we can use any length of transmission and the impedance will always be the same along the length of the line. 
+
+$Z_L=Z_o$ i.e when reflection coefficient is zero, there is no reflected wave on the transmission line and we have only forward traveling wave on the transmission line. Forward traveling wave always see an impedance which is equal to the characteristics impedance. This result is not new, it is what we had discussed earlier when we talked about transmission line and that was, if a line is terminated in its characteristic impedance, the impedance seen at every point on the transmission line is equal to the characteristics impedance. 
+
 So these are the three very important characteristics of a lossless transmission line.
 \begin{enumerate}[(i)]
 \item Impedance transformation repeats at every $\frac{\lambda}{2}$ distances.
 \item Normalized impedance inverts at every $\frac{\lambda}{4}$ distance.
-\item Finally if the line is terminated in its characteristics impedance , the impedance seen at every point of the line is equal to the characteristics impedance.
+\item Finally if the line is terminated in its characteristics impedance, the impedance seen at every point of the line is equal to the characteristics impedance.
 \end{enumerate}
 With this understanding of impedance transformation, now we can go to Power Transfer Calculation of the transmission line.
 
 \section{Power Transfer on Transmission Line}
-Initially, our idea was to transfer power from generator to load effectively. In the lossless case, it should be that all generator power is completely transferred to the load. However, we have seen that if the impedance is not equal to the characteristics impedance, then there will always be reflection on the transmission line and whatever energy the generator supplies, part of this energy will get reflected back to the generator . Now when we talk about matching condition or maximum power transfer condition, there are two cases to consider;
+Initially, our idea was to transfer power from generator to load effectively. In the lossless case, it should be that all generator power is completely transferred to the load. However, we have seen that if the impedance is not equal to the characteristics impedance, then there will always be reflection on the transmission line and whatever energy the generator supplies, part of this energy will get reflected back to the generator. Now when we talk about matching condition\index{matching condition} or maximum power transfer condition\index{matching power transfer condition}, there are two cases to consider;
 \begin{enumerate}[(i)]
-\item When the power is given by the generator, it should be maximally transfered to the load.
-\item When the reflected power comes back to generator, the generator is not capable of absorbing power, so when the reflected power comes back with a different amplitude and phase, it negatively affects the generator's performance. So it is desirable that the generator should not see any power coming back at it.
+\item When the power is generated by the generator, it should be maximally transfered to the load.
+\item When the reflected power comes back to generator, the generator is not capable of absorbing power, so when the reflected power comes back with a different amplitude and phase, it negatively affects the generator's performance (destructive interference). So it is desirable that the generator should not see any power coming back at it.
 \end{enumerate}
-For these two reasons that the generator power should be completely delivered to the load and that no reflected power should come back to the generator, we must make sure always that the impedance which the generator sees is always equal to the characteristics impedance. We will study these two issues later but let's study a general case and ask if we have a transmission line which is connected to a generator at  one end and a load at the other end. How much power will be delivered to the load. Again without going into voltage and current equation, we can write down power at the location of the load i.e Power delivered to the load will be given as follows.
+For these two reasons that the generator power should be completely delivered to the load and that no reflected power should come back to the generator, we must make sure always that the impedance which the generator sees is always equal to the characteristics impedance. We will study these two issues later but let's study a general case and suppose we have a transmission line which is connected to a generator at  one end and a load at the other end. Then, \emph{how much power will be delivered to the load?} Again using the voltage and current equation, we can write down power at the location of the load i.e power delivered to the load will be given as follows.
 
 At load end, $L=0$ therefore, $e^{-2\beta (l)} = e^{-2\beta (0)}$
 \begin{align*}
@@ -134,7 +141,7 @@ I(0) &= \frac{V^{+}}{Z_o} \left\lbrace{1 - \Gamma_L e^{-2\beta(0)}}\right\rbrace
 \end{align*}
 So from the general voltage and current relationship on the transmission line we have found  out the voltage and current values at load end.
 
-$Z_o= $ real for a lossless line,
+$Z_o= $ real for a lossless line, thus the conjugate of the current equation at the load end is:
 \begin{align*}
 I^\ast (0) =\frac{V^{+ (\ast )}}{Z_o}\left\lbrace 1 -\Gamma_L \right\rbrace
 \end{align*}
@@ -160,20 +167,21 @@ Recall that,
 \begin{align*}\Gamma_L = \frac{ Z_L -Z_o }{ Z_L + Z_o }.
 \end{align*}
 
-Once load impedance is known, the reflection coefficient at load end is known. Then we can calculate modulus of reflection coefficient so that the power delivered to the load can be calculated if $V^+$ is known. How do we find $V^+ ? $ From the relationship here, if we know the amplitude of the forward traveling wave as well as the load impedance, we can calculate the power from the circuit perspective point of view. We can use a different argument in arriving at the same answer. That is on the transmission line the power supplied from generator, in the form of a traveling wave goes towards the load and we already said that traveling wave always see impedance equal to characteristics impedance. So if the traveling wave has amplitude $V^+$, it is as if this wave is supplying the power to $Z_o$ in the lossless case. So one can say now that  a wave having amplitude $V^+$ going forward direction sees impedance $Z_o$.\\
+Once load impedance is known, the reflection coefficient at load end is known. Then we can calculate modulus of reflection coefficient so that the power delivered to the load can be calculated if $V^+$ is known. How do we find $V^+ ? $ From the relationship here, if we know the amplitude of the forward traveling wave as well as the load impedance, we can calculate the power from the circuit perspective point of view. We can use a different argument in arriving at the same answer. That is on the transmission line the power supplied from generator, in the form of a traveling wave goes towards the load and we already said that traveling wave always see impedance equal to characteristics impedance. So if the traveling wave has amplitude $V^+$, it is as if this wave is supplying the power to $Z_o$ in the lossless case. So one can say now that  a wave having amplitude $V^+$ going forward direction sees impedance $Z_o$.
+
 Power carried by forward wave:  
 \begin{align*}
 P_{for}= \frac{1}{2} \frac{{|V|^+}^2}{Z_o}
 \end{align*}
-When this gets to the load , part of the energy will get reflected back , and this backward traveling wave has amplitude $V^-$ which also sees characteristics impedance.\\
+When this gets to the load, part of the energy will get reflected back, and this backward traveling wave has amplitude $V^-$ which also sees characteristics impedance.
+
 The power carried by this wave:
 \begin{align*}
 P_{ref}= \frac{1}{2}\frac{{|V^-|}^2}{Z_o}
 \end{align*}
 which is the power reflected by load in the backward wave.
 
-Therefore, Power delivered to load $=$ Power transferred to load $-$ Power reflected.
-
+Therefore,
 \begin{align*} 
 \textnormal{Power delivered to load}, P\\
 =& \textnormal{Power transferred to load}\\
@@ -189,10 +197,7 @@ Recall that $\Gamma_L =\frac{V^-}{V^+}$.
 \begin{align*}
 P_L=\frac{1}{2} \frac{{|V^+|}^2}{Z_o} \left\lbrace 1 - { \Gamma_L }^2 \right\rbrace.
 \end{align*}
-\begin{align*}
-P_L=\frac{1}{2} \frac{{| V^+ |}^2}{Z_o} \left\lbrace 1 - { \Gamma_L }^2 \right\rbrace.
-\end{align*}
-So when we do a power calculation for transmission line , either we go by circuit concept or we go by the understanding of the wave concept. This is the story of the real part i.e the power actually supplied to the load. One then asks how do we calculate for complex power at any location $?$. If we calculate the power flow along any point on the transmission line not necessarily at the load end, what will that indicate$?$ Lets see, we can get the voltage and current at any arbitrary location on the transmission line i.e
+So when we do a power calculation for transmission line, either we go by circuit concept or we go by the understanding of the wave concept. This is the story of the real part i.e the power actually supplied to the load. One then asks how do we calculate for complex power at any location?. If we calculate the power flow along any point on the transmission line not necessarily at the load end, what will that indicate? Lets see, we can get the voltage and current at any arbitrary location on the transmission line i.e
 \begin{align*} 
 V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace ,\\ 
 I(l) = \frac{V^+}{Z_o} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
