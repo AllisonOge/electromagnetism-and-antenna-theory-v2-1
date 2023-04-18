@@ -278,31 +278,35 @@ $Z_o = \sqrt{\frac{L}{C}}$ = real &  & 	$Z_o = \sqrt{\frac{L}{C}}\left(1 - j\fra
 \end{tabular} 
 \end{table} 
 
-\subsection*{Generally (i.e. for both cases- lossless and low-loss)}
-
+Other parameters that are derived are as follows and they apply equally to lossless and low-loss conditions.
 \begin{align*}
-\Gamma_L = \frac{Z_L - Z_o}{Z_L + Z_o} = \frac{\bar{Z_L} - 1}{\bar{Z_L} + 1}
+\Gamma_L = \frac{Z_L - Z_o}{Z_L + Z_o} = \frac{\bar{Z_L} - 1}{\bar{Z_L} + 1} = \frac{V^-}{V^+}
+\end{align*}
+\begin{align*}
+\text{VSWR, }\rho = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
+\end{align*}
+\begin{align*}
+R_\max &= Z_o \left( \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}\right) = Z_o \rho\\
+Z_\max &= \frac{|V_\max|}{|I_\min|}
+\end{align*}
+\begin{align*}
+R_\min &= Z_o \left(\frac{1 - |\Gamma_L|}{1 + |\Gamma_L|}\right) = \frac{Z_o}{\rho}\\
+Z_\min &= \frac{|V_\min|}{|I_\max|}
 \end{align*}
 
+For Impedance transformation, we have
 \begin{align*}
-\Gamma_L = \frac{V^-}{V^+},
-VSWR(\rho) = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
+Z(l) &= Z_o\left\lbrace\frac{Z_L\cos\beta l + jZ_o\sin\beta l}{jZ_o\sin\beta l + Z_L\cos\beta l}\right\rbrace\\ 
+&= Z_o\left\lbrace\frac{Z_L\cosh\gamma l + Z_o\sinh\gamma l}{Z_o\cosh\gamma l + Z_L\sinh\gamma l}\right\rbrace
 \end{align*}
 
-\begin{align*}
-R_{max} = Z_o \left( \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}\right) = Z_o \rho,\\
-Z_{max} = \frac{|V_{max}|}{|I_{min}|}
-\end{align*}
-
-\begin{align*}
-R_{min} = Z_o \left(\frac{1 - |\Gamma_L|}{1 + |\Gamma_L|}\right) = \frac{Z_o}{\rho}, Z_{min} = \frac{|V_{min}|}{|I_{max}|}
-\end{align*}
-
-For Impedance transformation, 
-$$Z(l) = Z_o\left\{\frac{Z_L\cos\beta l + jZ_o\sin\beta l}{jZ_o\sin\beta l + Z_L\cos\beta l}\right\} $$
-$$= Z_o\left\{\frac{Z_L\\cosh\gamma l + Z_o\\sinh\gamma l}{Z_o\\cosh\gamma l + Z_L\\sinh\gamma l}\right\}	$$
-When the relationship is normalized, $Z_o$ is eliminated from the expression and $Z_L$ takes the form $\bar{Z_L}$.
-$$P = \frac{1}{2}\frac{|V^+|}{Z_o}\lbrace 1 - |\Gamma_L|^2\rbrace --\text{Real power}	$$
-$$P = \frac{1}{2}\frac{|V^+|}{Z_o}\lbrace 1 - |\Gamma_L|^2\rbrace + j2Im\lbrace \Gamma_L e^{- j2\beta l}\rbrace --\text{Complex power}$$
-$$V^+ = \dfrac{Z_L^{\textquotesingle}V_s e^{-j\beta l}}{(Z_s + Z_L^{\textquotesingle})(1 + \Gamma_L e^{-j2\beta
-l})}$$
+Lastly, the power flow equations
+\begin{dmath*}
+P_L = \frac{1}{2}\frac{|V^+|}{Z_o}\lbrace 1 - |\Gamma_L|^2\rbrace\quad\text{Real power}
+\end{dmath*}
+\begin{dmath*}
+P(l) = \frac{1}{2}\frac{|V^+|}{Z_o}\lbrace 1 - |\Gamma_L|^2\rbrace - \mathfrak{Im}\lbrace \Gamma_L e^{- j2\beta l}\rbrace\quad\text{Complex power}
+\end{dmath*}
+\[
+V^+ = \frac{Z_L^{'}V_s e^{-j\beta l}}{(Z_s + Z_L^{'})(1 + \Gamma_L e^{-j2\beta l})}
+\]
