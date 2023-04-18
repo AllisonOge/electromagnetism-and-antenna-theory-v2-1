@@ -236,33 +236,31 @@ Considering the circuit in figure~\ref{fig:qwerrtt}, $Z_L$ is transformed to $Z^
 \label{fig:qwerrtt}
 \end{figure}
 
-\begin{equation}
-V_A = \frac{Z^'_L}{Z^{'}_L + Z_s} . V_s
-\end{equation}
-\begin{equation}
-I_A = \frac{V_A}{Z^{'}_L}
-\end{equation} 
-So from the lumped circuit at generator end we can determine the voltage and current at the input end of the transmission line. We can write down the voltage and current at the input end using the transmission line equations.
-\begin{equation*} 
-V_A= V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace 
-\end{equation*} 
-\begin{equation*}
-I_A = I(l) = \frac{V^+}{Z_o} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
-\end{equation*}
-
-So we know now the value of $V_A$ and $I_A$ from the lumped element side of view and the transmission line element side of view. We can equate the two to be same to get,
+Considering the lumped circuit, the voltage and current equations are\footnote{
+The voltage and current relations take the limit as the size of the circuit tends to zero so it is valid for any arbitrary frequency.
+}
+\begin{align}
+V_A &= \frac{Z^'_L}{Z^{'}_L + Z_s} . V_s\label{eqn:transimpvoltage}\\
+I_A &= \frac{V_A}{Z^{'}_L}\label{eqn:transimpcurrent}
+\end{align} 
+We can then determine the voltage and current at the tranformed location using the transmission line equations, such that,
+\begin{align*} 
+V_A &= V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace\\
+I_A &= I(l) = \frac{V^+}{Z_o} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
+\end{align*}
+So we know now the value of $V_A$ and $I_A$ from the lumped element side of view and the transmission line element side of view. We can equate the two to get,
 \begin{equation} 
-V_A = \frac{Z^{'}_L}{Z^{'}_L + Z_s} . V_s = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace 
+V_A = \frac{Z^{'}_L}{Z^{'}_L + Z_s} . V_s = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace\label{eqn:evaluatev+voltage}
 \end{equation}
 \begin{equation}
 I_A = \frac{V_A}{Z^{'}_L} = I(l) = \frac{V^+}{Z_o} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
-\label{equ:6.8}
+\label{eqn:evaluatev+current}
 \end{equation}
-So solving equation~\ref{equ:6.8} making $V^{+}$ the subject of the formula, we get the expression of $V^+$ below. 
+So solving equation~\ref{eqn:evaluatev+current} making $V^{+}$ the subject of the formula, we get the expression of $V^+$ as follows. 
 \begin{equation} 
 V^+ = \frac{Z^{'}_L V_s e^{-j\beta l}}{(Z_S + Z^{'}_L)(1 + \Gamma_L e^{-j2\beta l })}, 
 \end{equation}
-$\alpha, \beta , l  , \Gamma_L,$ and $Z_o$ are all known values, so now we have a known value for $V^+$\\
+$\alpha, \beta, l, \Gamma_L$ and $Z_o$ are all known values, so now we have a known value for $V^+$.
 
 From here $V^+$ can be determined and then substituted into the power equation and so power delivered to the load can be calculated or power at any point along the line. This is a complete solution to voltage and current on the transmission line.
 
