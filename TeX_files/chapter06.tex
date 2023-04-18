@@ -266,16 +266,19 @@ $\alpha, \beta , l  , \Gamma_L,$ and $Z_o$ are all known values, so now we have 
 
 From here $V^+$ can be determined and then substituted into the power equation and so power delivered to the load can be calculated or power at any point along the line. This is a complete solution to voltage and current on the transmission line.
 
-\section{Summary}  
-We defined a very important parameters of transmission line called the reflection coefficients and the voltage standing wave ratio ( VSWR ) . Then we studied the impedance transformation relationship on a lossless transmission line. We took special case of lossless transmission line and then we found some important characteristics of the lossless transmission line. We got the differential equation for voltage and current. We solved the voltage and current equations and then got a general solution for voltage and current on the transmission line. Then we imposed a boundary condition that was the impedance boundary condition on the transmission line and then from there we evaluated certain arbitrary constants on the transmission line. Furthermore, we investigated the power flow on transmission line, found out how much power would be delivered to the load and ultimately we found out the final unknown arbitrary constant which was $V^+$ on transmission line so that we can now calculate the absolute power delivered to the load for a given condition. Again, to the concept of lumped element, increase in frequency is not applicable,  this is because, space has to be brought into the picture and we introduced the concept called the \textbf{Distributed Element}. In the framework of the distributed element, we wrote down the voltage and current relations, taking the limit as the size of the circuit tends to zero so it is valid for any arbitrary frequency. This now complete the first part of analysis of transmission line. So we shall deal with more application of transmission line, we will go and discuss now a graphical representation of transmission line or graphical tool for analyzing the problems of transmission line, and later on go to application of transmission line at high frequencies. 
-
+\section{Summary}
+Table~\ref{tab:transparams} show the transmission line parameters for lossless and low-loss conditions that have been discussed and derived.
+\begin{table}[h]
+\caption[short]{Transmission line parameters for lossless and low-loss conditions}
+\label{tab:transparams}
 \begin{tabular}{l c l}
 {\bf Lossless}&   	$\leftrightarrow$  & {\bf Low-loss}  \\ 
-$\alpha$ = 0 &  & $\alpha = \dfrac{1}{2}R\sqrt{\frac{C}{L}} + \dfrac{1}{2}G\sqrt{\frac{C}{L}}$  \\
+$\alpha$ = 0 &  & $\alpha = \dfrac{1}{2}R\sqrt{\frac{C}{L}} + \dfrac{1}{2}G\sqrt{\frac{C}{L}}$\\
 $\beta = \omega\sqrt{LC}$ & & $\beta = \omega\sqrt{LC}$\\
 $\gamma = j\beta$ & & $\gamma = \alpha + j\beta$\\
 $Z_o = \sqrt{\frac{L}{C}}$ = real &  & 	$Z_o = \sqrt{\frac{L}{C}}\left(1 - j\frac{R}{2\omega L} - j\frac{G}{2\omega C}\right)$
 \end{tabular} 
+\end{table} 
 
 \subsection*{Generally (i.e. for both cases- lossless and low-loss)}
 
