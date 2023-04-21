@@ -42,7 +42,7 @@ Z= R+jX
 \end{equation*}
 $R$  represents the real part called resistance and $jX$ represents the imaginary part called reactance. Just like in the analytical approach, our analysis using the graphical approach will be done with the normalized impedance rather than the absolute impedance. It therefore means that, given any impedance, it must be normalized with respect to the characteristic impedance ($Z_o$) such that
 \begin{equation*}
-\bar{Z}=\frac{Z_L}{Z_o}
+\bar{Z}=\frac{Z_L}{Z_o} \quad \text{(normalised)}
 \end{equation*}
 $Z_L$ is the absolute  impedance. So our representation of the normalized impedance would be:
 \begin{equation*}
@@ -71,6 +71,9 @@ The transformation from the Z plane to the $\Gamma$ plane is made possible using
 \Gamma = \frac{Z_L - Z_o}{Z_L + Z_o}\label{eqn:refcoefficientfromload07}
 \end{equation}
 Normalizing we have
+\begin{align*}
+\Gamma= \frac{\bar{Z} - 1}{\bar{Z} + 1}\quad\text{or}\quad\bar{Z}= \frac{1 + \Gamma}{1 - \Gamma}
+\end{align*}
 With this transformation relationship, if the normalized impedance is known, we can find the reflection coefficient and vice versa. It also means for every value of impedance Z, there is a corresponding value of reflection co-efficient $ \Gamma$. Just as Z has real and imaginary parts, $\Gamma$ also has real and imaginary parts which can be written in either cartesian (or rectangular) form as $\Gamma=u+jv$ or polar form $\Gamma$ = $Re^{j\theta}$
 
 From previous chapters, it was established that the reflection coefficient for all passive loads is always less than or equal to one ($\Gamma\leq 1)$. At an open or short circuit, reflection co-efficient $\Gamma = 1$, for any other impedance $\Gamma < 1$.  So by plotting the reflection co-efficient ($\Gamma$) we have the right half Z plane mapping into a unit circle in the gamma plane as shown in figure~\ref{fig:oiuhgvcx}.
@@ -86,6 +89,7 @@ In general, when solving graphically the problems of transmission lines, the bas
 \section{Transformation analysis for complex plane}
 It was established that since there is a one-to-one transformation between the complex Z plane and $\Gamma$ plane every point on the Z plane is mapped to a point on the $ \Gamma$ plane. In this section, we will be mapping the impedance from the Z plane to the gamma plane.
 
+Recall, $\bar{Z} = r + jx $ and also $\bar{Z} = \frac{1 + \Gamma}{1 - \Gamma}$.
 \begin{equation}
 r + jx =\frac{1 + \Gamma}{1 - \Gamma}
 \label{eqn:normequatetransformeqn}
@@ -94,57 +98,34 @@ r + jx =\frac{1 + \Gamma}{1 - \Gamma}
 \Gamma\ = u + jv\label{eqn:transformeqn}
 \end{equation}
 Substituting equation~\ref{eqn:transformeqn} in~\ref{eqn:normequatetransformeqn} we have:
-\begin{equation}
+\begin{dmath*}
 r + jx = \frac{(1 + u) + jv}{(1 - u) -jv}
-\end{equation}
-conjugating 7.4 we have:
-\begin{equation*}
-r + jx = \frac{(1 + u) + jv}{(1 - u) -jv}\times \frac{(1 - u) + jv}{(1 - u) +jv}
-\end{equation*}
-expanding the expression, we have:
-\begin{equation*}
-r + jx =\frac{1 - u^2 + jv(1 + u) + jv(1 - u) - v^2}{(1 - u)^2 + jv(1 - u) - jv(1 - u) + v^2} 
-\end{equation*}
-simplifying the expression, we have:
-\begin{equation*}
-r + jx = \frac{1 - u^2 + 2jv - v^2}{(1 -u)^2 + v^2}
-\end{equation*}
-re-arranging the expression
-\begin{equation*}
-r + jx = \frac{1 - (u^2 + v^2) + 2jv}{(1 - u)^2 + v^2}
-\end{equation*}
-separating the real and imaginary parts, we have:
-\begin{equation}
-r = \frac{1 - (u^2 + v^2)}{(1 - u)^2 + v^2}
-\end{equation}
-and
-\begin{equation}
-x = \frac{2v}{(1 - u)^2 + v^2}
-\end{equation}
-considering the real part :	
-\begin{equation*}
-r = \frac{1 - (u^2 + v^2)}{(1 - u)^2 + v^2}
-\end{equation*}
-\begin{equation*}
-r((1 - u)^2 + v^2) = 1 -(u^2 + v^2)
-\end{equation*}
-\begin{equation*}
-r - 2ur + u^2r + v^2r = 1 - u^2 - v^2
-\end{equation*}
-collecting like terms, we have:
-\begin{equation*}
-u^2(r + 1) -2ur + (r - 1) + v^2(r + 1) = 0
-\end{equation*}
-dividing through by r + 1:
-\begin{equation}
-u^2 - 2u(\frac{r}{r + 1}) + v^2 +(\frac{r - 1}{r + 1}) = 0
-\end{equation}
-by using the method of completing the squares:
+= \frac{(1 + u) + jv}{(1 - u) -jv}\times \frac{(1 - u) + jv}{(1 - u) +jv}
+=\frac{1 - u^2 + jv(1 + u) + jv(1 - u) - v^2}{{(1 - u)}^2 + jv(1 - u) - jv(1 - u) + v^2}
+= \frac{1 - u^2 + 2jv - v^2}{(1 -u)^2 + v^2}
+= \frac{1 - (u^2 + v^2) + 2jv}{{(1 - u)}^2 + v^2}
+\end{dmath*}
+Thus the real and imaginary parts of the equation are:
 \begin{align*}
-(u - \frac{r}{r+1})^2\;\;+\;\;v^2\;\;+\;\;(\frac{r-1}{r+1})\;\; - \;\;(\frac{r}{r+1})^2\;\; = \;\;0
+r &= \frac{1 - (u^2 + v^2)}{{(1 - u)}^2 + v^2}\quad\text{(real part)}\\
+&\text{and}\\
+x &= \frac{2v}{{(1 - u)}^2 + v^2}\quad\text{(imaginary part)}
 \end{align*}
 Considering the real part, we can express it in the form of the equation of a circle.	
+\begin{align*}
+r({(1 - u)}^2 + v^2) =& 1 -(u^2 + v^2)\\
+r - 2ur + u^2r + v^2r =& 1 - u^2 - v^2\\
+u^2(r + 1) -2ur + (r - 1) + v^2(r + 1) =& 0\\
+u^2 - 2u\left(\frac{r}{r + 1}\right) + v^2 + \left(\frac{r - 1}{r + 1}\right) =& 0
+\end{align*}
 We further simplify using the method of completing the squares;
+\begin{align*}
+{\left(u - \frac{r}{r+1}\right)}^2 + v^2 + \left(\frac{r-1}{r+1}\right) - {\left(\frac{r}{r+1}\right)}^2  =  0
+\end{align*}
+\begin{align*}
+{\left(u - \frac{r}{r + 1}\right)}^2 + v^2 &= {\left(\frac{r}{r + 1}\right)}^2 - \left(\frac{r - 1}{r + 1}\right)\\
+{\left(u - \frac{r}{r + 1}\right)}^2+ v^2 &= \frac{r^2 -(r^2 -1)}{{(r + 1)}^2}
+\end{align*}
 \begin{equation}
 {\left(u - \frac{r}{r + 1}\right)}^2+ v^2 = \frac{1}{{(r + 1)}^2}\label{eqn:tranformedresistance}
 \end{equation}
@@ -152,27 +133,19 @@ Equation~\eqref{eqn:tranformedresistance} represents the equation of a circle in
 The general equation of a circle is ${(x - a)}^2 + {(y - b)}^2 = r^2$ where $(a, b)$ are the center coordinates of the equation and $r$ is the radius.
 }.
 
-equation 7.8 can be compared  with  the equation of a circle of radius r, with origin at x = a and y = 0 which is $ (x - a)^2 + y^2 = r^2 $\\ 
-considering the imaginary part, we have:
-\begin{equation*}
-x =\frac{2v}{(1 - u)^2 + v^2}
-\end{equation*}
-\begin{equation*}
-x(1 - 2u + u^2 + v^2) = 2v
-\end{equation*}
-\begin{equation*}
-v^2x - 2v + u^2x - 2ux + x = 0
-\end{equation*}
-divide through by x
-\begin{equation*}
-v^2 - \frac{2v}{x} +u^2 - 2u + 1 = 0
-\end{equation*}
-factorising the expresssion becomes:
-\begin{equation*}
-(u - 1)^2 -1 + (v - \frac{1}{x})^2 -\frac{1}{x^2} + 1 = 0
-\end{equation*}
+In a similar way, let's consider the imaginary part.
+\begin{align*}
+x &= \frac{2v}{{(1 - u)}^2 + v^2}\\
+x(1 - 2u + u^2 + v^2) &= 2v\\
+v^2x - 2v + u^2x - 2ux + x &= 0
+\end{align*}
+We divide through by $x$ and factorize
+\begin{align*}
+v^2 - \frac{2v}{x} +u^2 - 2u + 1 =& 0\\
+{(u - 1)}^2 -1 + {\left(v - \frac{1}{x}\right)}^2 -\frac{1}{x^2} + 1 =& 0
+\end{align*}
 \begin{equation}
-(u - 1)^2 + (v - \frac{1}{x})^2 = \frac{1}{x^2}\label{eqn:circleuvplane}
+{(u - 1)}^2 + {\left(v - \frac{1}{x}\right)}^2 = \frac{1}{x^2}\label{eqn:tranformedreactance}
 \end{equation}
 Equation~\eqref{eqn:tranformedreactance} represents the equation of a circle in the $uv$ plane centred at $\left(1,\frac{1}{x}\right)$ with radius $\left(\frac{1}{x}\right)$.
 
