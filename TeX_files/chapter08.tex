@@ -19,7 +19,7 @@ Where $l$ is the distance from load point towards generator, $\Gamma_{L}$ is the
 We are still discussing lossless transmission lines for which the attenuation constant is zero.
 }. The  voltage reflection coefficient, $\Gamma_L$ can be expressed in polar form as $|\Gamma_{L}|e^{j\theta_L}$ such that
 \begin{equation*}
-\Gamma{(l)}=|\Gamma_{L}|e^{j\theta_L}.e^{-j2\beta l}
+\Gamma{(l)} = |\Gamma_{L}|e^{j\theta_L}\cdot e^{-j2\beta l}
 \end{equation*}
 Where $\theta_L$ is the phase angle of deflection of the load.
 \begin{equation}
@@ -56,21 +56,31 @@ However as we have said, you may have connections in transmission lines which ar
 
 Thus, in this section, we will determine how the Smith Chart is used when we compute in terms of admittances. Since the Smith Chart gives the normalized impedances of the transmission line, the same thing will be derived for admittances so we shall first define the normalized admittance of the transmission line and for that, we would require what is called the \emph{characteristic admittance}\index{characteristics admittance} of the line. The characteristic admittance is given in equation~\eqref{eqn:characteristicsadmit}
 \begin{equation}
-Y_o= \frac{1}{Z_o}
+Y_o = \frac{1}{Z_o}\label{eqn:characteristicsadmit}
 \end{equation}
-Then, every admittance is normalized to this,
+Then, normalizing the admittance would yeild
+\begin{align*}
+\bar{Y} = \frac{Y}{Y_o}\quad\text{thus, load admittance is }\quad\bar{Y}_L = \frac{Y_L}{Y_o}
+\end{align*}
+The reflection co-efficient as derived in equation~\eqref{eqn:refcoefficientfromload07} is given as
 \begin{equation*}
-\overline{Y} = \frac{Y}{Y_o} 
+\Gamma = \frac{Z - Z_o}{Z + Z_o} 
 \end{equation*}
 To determine the reflection coefficient in terms of admittance we replace the impedance $Z$ and characteristics impedance are then expressed as the inverse of admittance $\frac{1}{Y}$ and inverse of the characteristics admittance $\frac{1}{Y_o}$ respectively.
 \begin{equation*}
 \Gamma = \frac{\frac{1}{Y} - \frac{1}{Y_o}}{\frac{1}{Y} + \frac{1}{Y_o}}
 \end{equation*}
+We further simplify as follows;
+\begin{dmath*}
+\Gamma = \frac{Y_o - Y}{Y_o + Y}
+= \frac{1 - \frac{Y}{Y_o}}{1 + \frac{Y}{Y_o}}
+= \frac{1 - \bar{Y}}{1 + \bar{Y}} = -1\cdot\left(\frac{\bar{Y} - 1}{\bar{Y} + 1}\right)
+\end{dmath*}
 The negative sign indicates a phase change of 180\textdegree\footnote{
 As -1 is a phase change of $\pi, e^{j\pi} = \cos\pi + j\sin\pi = -1$
 } thus, it can be expressed as
 \begin{equation}
-\Gamma= \frac{Y_o - Y}{Y_o + Y} 
+\Gamma = \frac{\bar{Y} - 1}{\bar{Y} + 1}e^{j\pi}
 \end{equation}
 So the reflection coefficient written in terms of normalized admittances is same as reflection coefficient written in terms of normalized impedance except for the 180\textdegree\; phase change.
 
@@ -85,6 +95,10 @@ This implies that same value is derived for reflection coefficient when calculat
 Hence as far as the constant VSWR circles are concerned, any point on the Smith Chart rotated by 180\textdegree\; corresponds to the normalized admittance with corresponding circles of constant resistance and circles of constant reactance. 
 
 \emph{What would be the complex representation of the admittance?}
+\begin{dmath*}
+\bar{Y}=\frac{G + jB}{Y_o} = g + jb
+= \text{conductance} + j (\text{susceptance})
+\end{dmath*}
 If we interchange $r$ with $g$ and $x$ with $b$, then the circles through the point on the constant VSWR circle will be the \textbf{circle of constant conductance} and the \textbf{circle of constant susceptance} which are similar to the circle of constant resistance and circle of constant reactance except that they are rotated by 180\textdegree\;. This implies that our analysis with admittances will resemble one where every point on the Smith Chart is flipped and so the clustered end goes to the left hand side as shown in figure~\ref{fig:invertedsmithchart}.
 \begin{figure}[h]
 \centering
@@ -197,6 +211,8 @@ The above analysis makes sense since one characteristics of the transmission lin
 
 \item Multiply the normalized impedance at $l$ by the characteristic impedance $Z_o$ to get $\bar{Z}_{l}$ at the new location.
 \end{enumerate}
+
+A more general overview of a transmission problme is one where the impedance is given at a particular location and we need to transform the impedance to another location. If the new location is to the left of the previous impedance (towards the generator) then we follow the aforementioned steps, otherwise we reverse the direction of the angular rotation instead of $-2\beta{l}$, we have $+2\beta{l}$ which is counter-clockwise rotation. Hence, moving towards generator will be clockwise rotation and moving away from generator will be anti-clockwise rotation. The sense of rotation in impedance calculations is extremely important because that tells us whether to move towards the generator or away from the generator. Therefore, in all transmission line calculations, the direction of the generator should be given much consideration because that will decide the movement along the transmission line.
 
 For admittance calculations, the same steps apply except in the sense of the position of the positive real axis (see figure~\ref{fig:dfyui}).
 \begin{figure}[h]
