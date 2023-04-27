@@ -223,12 +223,18 @@ For admittance calculations, the same steps apply except in the sense of the pos
 \label{fig:dfyui}
 \end{figure}
 
+Analytically, the impedance transformation requires the calculation of sine and cosine functions that are unusually very complicated. With the help of the Smith Chart, the impedance transformation is easily achieved.
 
 \section{VSWR on the transmission line}
-Therefore, the maximum normalized resistance, $r_\max$ gives the VSWR, $\rho$. Similarly, on the left side of VSWR circle on the Smith Chart we have $r_\min$. Hence $r_\min = \frac{1}{\rho}$. On the real axis, we have only resistance and no reactance so points of intersection of the constant VSWR circle with the real axis gives the maximum and minimum normalized resistance.  The reason why we call it the constant VSWR circle is because as determined in equation~\eqref{eqn:vswr}, it is given as $\frac{1 + |\Gamma|}{1 - |\Gamma|}$ which is constant for a lossless transmission line and these values of $r_\max$ and $r_\min$ can easily be deduced from the VSWR circles without a need to calculate. The VSWR is taken as the ratio of maximum impedance on the line to characteristics impedance.
-
-
-We want to find out the distance of current or voltage maximum at the load end of the transmission line.
+Another quantity which is a measure of reflection is the VSWR and we established previously that $R_\max = Z_{o}\rho$ and $R_\min = \frac{Z_o}{\rho}$. If we normalize $R_\max$ and $R_\min$ then we get:
+\begin{equation}
+\bar{R}_\max = r_\max = {\rho}
+\end{equation}
+and
+\begin{equation}
+\bar{R}_\min = r_\min = \frac{1}{\rho}
+\end{equation}
+Therefore, the maximum normalized resistance, $r_\max$ gives the VSWR, $\rho$. Similarly, on the left side of VSWR circle on the Smith Chart we have $r_\min$. Hence $r_\min = \frac{1}{\rho}$. Thus, \emph{how do we determine the VSWR graphically?} On the real axis, we have only resistance and no reactance so points of intersection of the constant VSWR circle with the real axis gives the maximum and minimum normalized resistance (see figure~\ref{fig:oijhgfdsa}).  The reason why we call it the constant VSWR circle is because as determined in equation~\eqref{eqn:vswr}, it is given as $\frac{1 + |\Gamma|}{1 - |\Gamma|}$ which is constant for a lossless transmission line and these values of $r_\max$ and $r_\min$ can easily be deduced from the VSWR circles without a need to calculate. The VSWR is taken as the ratio of maximum impedance on the line to characteristics impedance.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{./graphics/oijhgfdsa}
@@ -236,16 +242,29 @@ We want to find out the distance of current or voltage maximum at the load end o
 \label{fig:oijhgfdsa}
 \end{figure}
 
-From our knowledge of transmission line, at point of maximum voltage, we experience minimum current which gives $R_{max}$ then at minimum voltage, we experience maximum current which gives $R_{min}$ hence $R_{max}$ corresponds to $V_{max}$,  $I_{min}$ and  $R_{min}$ corresponds to  $V_{min}$, $I_{max}$.  We want to find out these locations on the load. To move from point $Z_{l}$ to $\bar{R}_{max}$, the clockwise angle covered indicates movement $l$ towards the generator corresponding to $\theta_{max}$ while $\theta_{min}$ corresponds to $180^o$ or $\frac{\lambda}{4}$ distance to get to $R_{min}$ from the $R_{max}$ point.
+Hence, the maximum value of the normalized resistance gives VSWR. The maximum value of resistance in terms of normalized quantity is seen when the VSWR circle intersects the real axis on the right side.The rightmost side corresponds to the impedance which is $r_\max$ and the reactance for that is zero\textemdash\;$r_\max$ is nothing but $\rho$. Similarly, the minimum value which we see on transmission line is $r_\min = \frac{1}{\rho}$. The minimum resistance which corresponds to the leftmost intercept on the real axis gives $\frac{1}{\rho}$. Thus once the load impedance or any other impedance is marked on the Smith Chart and the constant VSWR circle is drawn, calculation of the VSWR is straightforward same as the reflection coefficient and transformed/normalized impedance. It is just a matter of plotting and reading different values on a Smith Chart.
+
+Next is to find out the locations of the  minimum and maximum voltage and current on the transmission line. 
+
+\section{Location of the minimum and maximum voltage and current}
+Suppose we want to find out the distance of current or voltage maximum at the load end of the transmission line. From our knowledge of transmission line, at point of maximum voltage, we experience minimum current which gives $R_\max$ then at minimum voltage, we experience maximum current which gives $R_\min$ hence $R_\max$ corresponds to $V_\max$,  $I_\min$ and  $R_\min$ corresponds to  $V_\min$, $I_\max$.  To find out these locations from the load, we move from point, $Z_L$ to $r_\max$ and $r_\min$ as shown in figure~\ref{fig:lkjtresx}. The corresponding clockwise angles, $\theta_\max$ and $\theta_\min$, covered indicate the distances $l_\max$ and $l_\min$ towards the generator.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{./graphics/lkjtresx}
-\caption{Maximum and Minimum Value of Voltage, Current, and Resistance}
+\includegraphics[width=0.7\linewidth]{./graphics/lkjtresx}
+\caption{Location of the maximum and minimum values of voltage and current}
 \label{fig:lkjtresx}
 \end{figure}
 
-$\frac{\theta_{max}}{2\beta}=l$ gives the distance from the load point $\theta_{max} < 180^o$. From the diagram, $\theta_{min}$ indicates that the angle moved to get to $R_{min}$ is $>270^o but <360^o$. $\theta_{max}$ is therefore the angle moved to get from load to $R_{max}$.
-\begin{align}
-\frac{\theta_{min}}{2\beta}=\frac{\theta_{max} + \pi}{2\beta} = L
-\end{align}
-To get to $R_{min}$ position; $\theta_{min} = \frac{\theta_{max}}{2\beta} + \frac{\lambda}{4}.$ 
+We compute the corresponding distances $l_\max$ and $l_\min$, 
+recall that $2\beta{l} = \theta\Longrightarrow l =\frac{\theta}{2\beta}$. Hence,
+\begin{align*}
+l_\max = \frac{\theta_\max}{2\beta}\quad\text{and}\quad l_\min = \frac{\theta_\min}{2\beta}
+\end{align*}
+These gives the distances from the load point. From figure~\ref{fig:lkjtresx}, $\theta_\max < 180^o(\pi)$ and $270^o(\frac{3\pi}{2}) <\theta_\min >360^o(2\pi)$ and they therefore are the angles moved to get from load to $r_\max$ and $r_\min$ respectively.
+
+More generally,
+\begin{dmath}
+l = \frac{\theta_\min}{2\beta}
+=\frac{\theta_\max + \pi}{2\beta} 
+= \frac{\theta_\max}{2\beta} + \frac{\lambda}{4}
+\end{dmath}
