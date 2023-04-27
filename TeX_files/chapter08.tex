@@ -1,32 +1,33 @@
 \chapter{Impedance Transformation in a lossless medium using a Smith Chart}\label{lec:lec8}
 \section{Objectives}
-
+The objective of the chapter is to discuss the following
 \begin{enumerate}[(i)]
-\item How to develop the Voltage Standing Wave Ratio(VSWR) set of circles.
+\item How to develop the Voltage Standing Wave Ratio (VSWR) set of circles.
 \item Relationship between impedance and admittance.
 \item How to determine reflection coefficient graphically.
 \item How to determine impedance transformation graphically.
-\item How to locate maximum and minimum voltage, and current points on the transmission line on the smith chart.
+\item How to locate maximum and minimum voltage, and current points on the transmission line on the Smith Chart.
 \end{enumerate}
-Previously, we developed a graphical tool by transforming the complex impedance of a transmission line into the gamma plane called the smith chart. This was a superposition of constant resistance circles on constant reactance circles lying within the limit circle $|\Gamma| \leq 1$. Before we go into the use of the SMITH CHART for transmission line calculations, we develop one more set of circles called the constant VSWR circles and then superpose it in the smith chart.\\\\ We know that:
+
+Previously, we developed a graphical tool by transforming the complex impedance of a transmission line into the gamma plane called the Smith Chart. This we have seen as the superimposition of circles of constant resistance on the circles of constant reactance masked within the limit circle $|\Gamma| \leq 1$. Before we go into the use of the Smith Chart for transmission line calculations, we develop one more set of circles called the constant VSWR circles and then superpose it in the Smith Chart.
+
+We know that:
 \begin{equation*}
 \Gamma(l) =\Gamma_L e^{-j2\beta{l}}
 \end{equation*}
-where l = distance from load point towards generator.\\
-$\Gamma_{L}$ = voltage reflection coefficient at load end.\\ 	
-$\beta$\ = phase constant of the transmission line.\\\\
-\textbf{NOTE:}	We are still discussing lossless transmission lines for which the attenuation constant is zero.
+Where $l$ is the distance from load point towards generator, $\Gamma_{L}$ is the voltage reflection coefficient at load end and $\beta$\ is the phase constant of the transmission line\footnote{
+We are still discussing lossless transmission lines for which the attenuation constant is zero.
+}. The  voltage reflection coefficient, $\Gamma_L$ can be expressed in polar form as $|\Gamma_{L}|e^{j\theta_L}$ such that
 \begin{equation*}
 \Gamma{(l)}=|\Gamma_{L}|e^{j\theta_L}.e^{-j2\beta l}
 \end{equation*}
-where	$\theta_L$ = phase angle of deflection of the load.
+Where $\theta_L$ is the phase angle of deflection of the load.
 \begin{equation}
 \Gamma{(l)} =|\Gamma_L|e^{j(\theta_L - 2\beta{l})}
 \end{equation}
-That is, total phase = $\theta_L - 2\beta{l}$.\\
-Hence the reflection coefficient $\Gamma{(l)}$ has magnitude $|\Gamma_L|$ on the complex gamma plane but it's phase angle varies with distance from the load end. Since $l$ is positive when moving towards the generator, therefore, the phase increases in negativity. The distance of the point $|\Gamma_L|$ from the centre of the circle remains constant but it's angle changes with a change in $l$. Hence $|\Gamma_L|e^{j(\theta_L - 2\beta l)}$ represents a constant VSWR circle having the same centre of origin with that of the complex gamma plane.
+The total phase becomes $\theta_L - 2\beta{l}$. Hence the reflection coefficient $\Gamma{(l)}$ has magnitude $|\Gamma_L|$ on the complex gamma plane but a phase angle that varies with distance from the load end. Since $l$ is positive when moving towards the generator, therefore, the phase increases in negative direction. The distance of the point $|\Gamma_L|$ from the centre of the circle remains constant but it's angle changes with a change with respect to $l$. Hence $|\Gamma_L|e^{j(\theta_L - 2\beta l)}$ represents a \emph{constant VSWR circle}\index{constant vswr circle} having the same centre of origin with that of the complex gamma plane as shown in figure~\ref{fig:lkjhgryn}.
 
-When moving towards the generator with increasing length, $l$, a corresponding anti-clockwise rotation in the gamma plane is experienced. On this circle, the magnitude of the reflection coefficient is the same no matter what point we are, but the angle differs and we know that:
+When moving towards the generator with increasing length, $l$, a corresponding anti-clockwise rotation in the gamma plane is experienced. On this circle, the magnitude of the reflection coefficient is the same no matter what point we are, but the angle differs and we know that,
 \begin{equation}
 VSWR = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
 \end{equation}
@@ -37,17 +38,13 @@ VSWR = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
 \label{fig:lkjhgryn}
 \end{figure}
 
-Since $|\Gamma_L|$ is same at any point on the circle, then the VSWR is same for all points on the circle, hence we call the circle a constant VSWR circle. Note that while solving transmission line problems, we have to draw circles of constant VSWR circles on the smith chart so the smith chart readily gives the constant resistance and reactance circles in the limit circle of $|\Gamma_L|\leq 1$.
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\linewidth]{./graphics/qwertyhgf}
-\caption{Constant VSWR Circle}
-\label{fig:qwertyhgf}
-\end{figure}
+Since $|\Gamma_L|$ is same at any point on the circle, then the VSWR is same for all points on the circle, hence we call the circle a constant VSWR circle. 
+% Note that while solving transmission line problems, we have to draw constant VSWR circles on the Smith Chart so the Smith Chart readily gives the constant resistance and reactance circles in the limit circle of $|\Gamma_L|\leq 1$.
+One should always note that the centre of all VSWR circles is same as that of the origin of  the complex gamma plane for all passive loads. Therefore, the magitude of the reflection coefficient is always less or equal to 1. Larger radius of $|\Gamma_L|$ gives more reflection coefficient with lower impedance match and smaller radius of  $|\Gamma_L|$ gives smaller magnitude of reflection coefficient and a better impedance match (see figure~\ref{fig:poiuyfd}).
 
-One should always note that the centre of all VSWR circles is same as that of the origin of  the complex gamma plane for all passive loads. Therefore, the magitude of the reflection coefficient is always less or equal to 1. So the VSWR circles are centred at the origin of the gamma plane and maximum $|\Gamma_L|=1$. Larger radius of $|\Gamma_L|$ gives more reflection coefficient with lower impedance match and smaller radius of  $|\Gamma_L|$ gives smaller magnitude of reflection coefficient and a better impedance match.
+When we say that we have better impedance matching on the Smith Chart, visually speaking, we mean that the point closest to the centre of the Smith Chart is better for impedance matching because it represents a smaller magnitude of reflection coefficient. 
 
-When we have impedance matching on the smith chart, visually speaking, we can say that the point closest to the centre of the smith chart is better for impedance matching because it represents a smaller magnitude of reflection coefficient. With the understanding of superimposing the constant VSWR circle on the smith chart, we can therefore solve the transmission line problem.
+With the understanding of superimposing the constant VSWR circle on the Smith Chart, we can therefore solve the transmission line problem.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.57\linewidth]{./graphics/poiuyfd}
@@ -55,8 +52,9 @@ When we have impedance matching on the smith chart, visually speaking, we can sa
 \label{fig:poiuyfd}
 \end{figure}
 
-However as we have said, you may have connections in transmission lines which are in the form of parallel connections and we know that from circuit analysis, anywhere we have parallel connections, it is easier to deal with admittances rather than impedances. Before now, we have been discussing load impedances and load characteristics impedance of transmission lines. However, if we have to make parallel connections on the transmission line, we represent the load as admittances and characteristics admittance before we carry out the analysis on the smith chart. We can therefore determine how the smith chart will work if we do all calculations in terms of admittances. Since the smith chart gives the normalized impedances of the transmission line, the same thing will be derived for admittances so we shall first define the normalized admittance of the transmission line and from that, we would require what is called the characteristic admittance of the line. First we define the characteristic admittance.
-\section{Admittance}
+However as we have said, you may have connections in transmission lines which are in the form of parallel connections and we know that from circuit analysis, anywhere we have parallel connections, it is easier to deal with admittances rather than impedances. Before now, we have been discussing load impedances and load characteristics impedance of transmission lines. However, if we have to make parallel connections on the transmission line, we represent the load as admittances and characteristics admittance before we carry out the analysis on the Smith Chart. 
+
+Thus, in this section, we will determine how the Smith Chart is used when we compute in terms of admittances. Since the Smith Chart gives the normalized impedances of the transmission line, the same thing will be derived for admittances so we shall first define the normalized admittance of the transmission line and for that, we would require what is called the \emph{characteristic admittance}\index{characteristics admittance} of the line. The characteristic admittance is given in equation~\eqref{eqn:characteristicsadmit}
 \begin{equation}
 Y_o= \frac{1}{Z_o}
 \end{equation}
@@ -64,36 +62,19 @@ Then, every admittance is normalized to this,
 \begin{equation*}
 \overline{Y} = \frac{Y}{Y_o} 
 \end{equation*}
-\begin{equation*}
-\space  \overline{Y}_L = \frac{Y_L}{Y_o}
-\end{equation*}
-Recall from previous chapters:
-\begin{equation*}
-\Gamma = \frac{Z-Z_o}{Z+Z_o} 
-\end{equation*}
-The impedance Z is then expressed as the inverse of admittance $\frac{1}{Y}$. When we normalize all admittances with respect to the characteristics admittance, we can then imply that the reflection coefficient in terms of the admittance can be expressed as:
+To determine the reflection coefficient in terms of admittance we replace the impedance $Z$ and characteristics impedance are then expressed as the inverse of admittance $\frac{1}{Y}$ and inverse of the characteristics admittance $\frac{1}{Y_o}$ respectively.
 \begin{equation*}
 \Gamma = \frac{\frac{1}{Y} - \frac{1}{Y_o}}{\frac{1}{Y} + \frac{1}{Y_o}}
 \end{equation*}
-Then, the equation is simplified to give:
+The negative sign indicates a phase change of 180\textdegree\footnote{
+As -1 is a phase change of $\pi, e^{j\pi} = \cos\pi + j\sin\pi = -1$
+} thus, it can be expressed as
 \begin{equation}
 \Gamma= \frac{Y_o - Y}{Y_o + Y} 
 \end{equation}
-Dividing the numerator and denominator by $Y_o$:
-\begin{equation*}
-\Gamma= \frac{1 - \frac{Y}{Y_o}}{1 + \frac{Y}{Y_o}}
-\end{equation*}
-The final equation is given as:
-\begin{equation*}
-\Gamma= \frac{1 - \overline{Y}}{1 + \overline{Y}} = -1 (\frac{\overline{Y} - 1}{\overline{Y} + 1}) 
-\end{equation*}
-The negative sign indicates a phase change making reflection coefficient equal to:
-\begin{equation}
-\Gamma = \frac{\overline{Y} - 1}{\overline{Y} + 1}e^{j\pi}
-\end{equation}
-As -1 is a phase change of $\pi, e^{j\pi} = cos\pi + jsin\pi = -1$\\\\
-So the reflection coefficient written in terms of normalized admittances is same as reflection coefficient written in terms of normalized impedance except for the 180$^o$ phase change brought in by $e^{j\pi}$.\\
-This implies that same value is derived for reflection coefficient when calculated using the normalized impedance or admittance but for a phase shift of 180$^o$ which would be experienced on the transmission line. In other words, on the complex gamma plane of the smith chart, the 180$^o$ phase shift will correspond to a rotation of 180$^o$. Essentially, the normalized impedance and admittance can be calculated in the same way except when we are doing calculations for normalized admittances then, there is a rotation of 180$^o$ on the complex gamma plane otherwise all other values and parameters remain unchanged.
+So the reflection coefficient written in terms of normalized admittances is same as reflection coefficient written in terms of normalized impedance except for the 180\textdegree\; phase change.
+
+This implies that same value is derived for reflection coefficient when calculated using the normalized impedance or admittance except there is a phase shift of 180\textdegree\; that would be experienced on the transmission line. In other words, on the complex gamma plane of the Smith Chart, the 180\textdegree\; phase shift will correspond to a rotation of 180\textdegree\; (see figure~\ref{fig:zstyuiou}). Essentially, the normalized impedance and admittance can be calculated in the same way except when carry out calculations for normalized admittances, there is a rotation of 180\textdegree\; on the complex gamma plane otherwise all other values and parameters remain unchanged.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.6\linewidth]{./graphics/zstyuiou}
@@ -101,63 +82,74 @@ This implies that same value is derived for reflection coefficient when calculat
 \label{fig:zstyuiou}
 \end{figure}
 
-Hence as far as the set of circles are concerned on the smith chart, any point on the smith chart rotated by 180$^o$ corresponds to a set of circles called the normalized admittance. Let's then say that:
-\begin{equation*}
-\overline{Y} = g + jb = conductance + j(susceptance.)
-\end{equation*}
-\begin{equation*}
-\overline{Y}=\frac{G + jB}{Y_o} = g + jb
-\end{equation*}
-So if we have admittance on a line given by G + jB, and characteristics admittance $Y_o$, we can calculate the normalized admittance as 
-\begin{equation*}
-\overline{Y} = g + jb
-\end{equation*}
-If we interchange r with g and x with b, we can get a set of circles which will be \textbf{constant conductance circle and constant susceptance circle} which is similar to the constant resistance and reactance circles except that they are rotated by 180$^o$. Hence every point on our smith chart is flipped and so the clustered point goes to the left as shown in the figure below.
+Hence as far as the constant VSWR circles are concerned, any point on the Smith Chart rotated by 180\textdegree\; corresponds to the normalized admittance with corresponding circles of constant resistance and circles of constant reactance. 
 
-So nothing has changed as far as the smith chart is concerned unless that it is rotated by $180^o$. If we keep the axis of the complex reflection coefficient the same, then the smith chart is rotated by $180^o$. Alternatively, we keep the smith chart the same as the original, rotate the complex gamma axis by $180^o$ before doing calculations for admittances. So, if we develop an understanding that we will not rotate the smith chart, that means we want to use it in its original form, that is, the most clustered part of it to our right, then if we do the impedance calculations, the positive real axis is towards right and the positive imaginary axis goes up. However, during calculations using the smith chart unchanged for admittances, the positive real axis is towards the left and the  positive imaginary axis will be downwards. Normally, whenever we do the smith chart calculations, we do not rotate the smith chart. For the impedance, the gamma axis is the  positive top right plane and for admittances, the bottom left plane is the positive plane. Depending on whether we are doing calculations for the impedance or admittances and if we require fixed measurement in the complex gamma plane, then the axis has to be rotated appropriately by $180^o$ depending on whether we are using the impedance or admittance. However if we do not want to find the phase of the reflection coefficient, the axis of the gamma plane does not come into the picture but just the impedances and the admittance will do. So without worrying about the axis of the complex gamma plane, we can use the same Smith chart for the admittance as well as the impedance calculations. This is the reason why when you look at the Smith chart carefully, you will see that the upper half of the Smith chart is denoted by (x,b) and the lower part (-x,-b).The circles are denoted by either 'r' or 'g' so any normalized value of r is equal to the same normalized value of g as it will represent the same circle. So as long we are dealing with a normalized quantity, the impedance and admittance can be treated exactly the same way on the Smith chart. However, the normalized values of g and r or b and x have different meaning physically. Do they represent same physical conditions? The answer is NO!  For example r = 0 ; x = 0, corresponds to a short circuit condition, the impedance is zero at that point. However, if we take  a normalized value of admittance with g=0, b=0 which represents admittance equal to zero, it is not a short circuit but an open circuit condition on the line. Therefore, the normalized values of impedances and admittances can be  treated exactly the same way but when we go for the physical conditions, they are not treated as same. Let us therefore consider the points on Smith chart for the admittance with the special points replaced with b for r, g for x.
+\emph{What would be the complex representation of the admittance?}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1.0\linewidth]{./graphics/jnbkvfld}
+
+Alternatively, we can keep the Smith Chart orientation the same and rotate the complex gamma axis by 180\textdegree\; before doing calculations for admittances. So, if we develop an understanding that we will not rotate the Smith Chart, that means we want to use it in its original form, that is, the most clustered part of it to our right, then if we do the impedance calculations, the positive real axis is towards right and the positive imaginary axis goes up. However, during calculations using the Smith Chart unchanged for admittances, the positive real axis is towards the left and the  positive imaginary axis will be downwards. Normally, whenever we do the Smith Chart calculations, we do not rotate the Smith Chart. For the impedance, the gamma axis is the  positive top right plane and for admittances, the bottom left plane is the positive plane. Depending on whether we are doing calculations for the impedance or admittances and if we require fixed measurement in the complex gamma plane, then the axis has to be rotated appropriately by 180\textdegree\; depending on whether we are using the impedance or admittance. This is important when finding the phase of the reflection coefficient, otherwise, the axis of the gamma plane is insignificant. So without worrying about the axis of the complex gamma plane, we can use the same Smith Chart for the admittance as well as the impedance calculations. This is the reason why when you look at the Smith Chart carefully, you will see that the upper half of the Smith Chart is denoted by $(x,b)$ and the lower part $(-x,-b)$.The circles are denoted by either $r$ or $g$ so any normalized value of $r$ is equal to the same normalized value of $g$ which represent the same circle. 
+
+Hence, as long we are dealing with a normalized quantity, the impedance and admittance can be treated exactly the same way on the Smith Chart. However, the normalized values of $g$ and $r$ or $b$ and $x$ have different meaning physically. But do they represent the same physical conditions? The answer is NO! For example $r = 0; x = 0$, corresponds to a short circuit condition\textemdash\;the impedance is zero\textemdash\;however, if we take  a normalized value of admittance with $g=0, b=0$ which represents admittance equal to zero, it is not a short circuit but an open circuit condition on the line. Therefore, the normalized values of impedances and admittances can be treated exactly the same way in calculations but not the same interpretations for the physical conditions. In summary, mathematically, $g = 0\quad, b = 0\Longrightarrow$ open circuit and $g = \infty, b = \infty \Longrightarrow$  short circuit. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{./graphics/jnbkvfld}
 \caption{Physical variation of impedance and admittance}
 \label{fig:jnbkvfld}
 \end{figure}
 
-g = 0 b = 0 $\Longrightarrow$ open circuit and\\
-g = $\infty$  b = $\infty$ $\Longrightarrow$  short circuit.\\
-Keeping the Smith Chart fixed and doing the calculations with the admittances, the upper half of the Smith Chart represents capacitive loads and the lower half represents the inductive loads. With these in mind, the use of Smith chart for impedance or admittance calculation is very straight forward.\\
-Now lets make use of the Smith chart to solve transmission line problems. 
+Let us therefore consider the points on Smith Chart for the admittance where the special points $r$ and $x$ are replaced with $b$ and $g$ respectively. Maintaning the original orientation of the Smith Chart then for the admittance Smith Chart, the upper half of the Smith Chart represents capacitive loads and the lower half represents the inductive loads (see figure~\ref{fig:jnbkvfld}). With these in mind, the use of Smith Chart for impedance or admittance calculation is very straight forward.
+
+Now lets make use of the Smith Chart to solve transmission line problems. 
 
 \section{Use of Smith Chart for Transmission Line Calculation}
-The simplest problem we can think of for transmission line is: For a given load, find the reflection coefficient at the load point. Analytically, we can use the formula $\frac{Z_L - Z_0}{Z_L + Z_0}$ but in using the Smith chart, the problem is much simpler to solve. Remember the impedance and admittance you have on Smith chart are all normalized quantities. So the first in any calculation on a Smith chart is to normalize all impedances and/or admittances with respect to characteristic impedance and/or characteristic admittance.
+Let us consider the simplest problem we can think of for transmission line. Suppose for a given load, we want to find the reflection coefficient at the load point. Analytically, we can use the formula $\frac{Z_L - Z_0}{Z_L + Z_0}$ but in using the Smith Chart, the problem is much simpler to solve. Remember the impedance and admittance you have on Smith Chart are all normalized quantities. So we take the following steps
 
 \subsection*{Procedure:}
 \begin{enumerate}[(i)]
-\item Normalize $Z_{L}$ to get $\frac{Z_{L}}{Z_{0}}$ = $\overline{Z}_{L}$ , read this point on the Smith chart, that is,  $r+jx$.
-\item Identify the constant resistance and reactance circle with the value r and x respectively.
-\item Determine the point of intersection of the r and x circles to give the reflection coefficient from which the length of the dotted line which gives $|\Gamma_L|$ and $\theta_L$ can be measured.
+\item Normalize $Z_{L}$ to get $\bar{Z}_{L}$, that is, $\frac{Z_{L}}{Z_{0}}$.
+\item Determine this point on the Smith Chart, that is,  $r+jx$ by identifying the constant resistance and reactance circle with the value $r$ and $x$ respectively and the point of intersection (see figure~\ref{fig:lfds}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{./graphics/lfds}
-\caption{Intercept Between Resistance and Reactance Circles}
+\includegraphics[width=0.7\linewidth]{./graphics/lfds}
+\caption{Point of intersection of circles of constant resistance and reactance}
 \label{fig:lfds}
 \end{figure}
 
-So without doing any calculation, just by measuring its distance, and the angle, we get the magnitude of reflection coefficient   $|\Gamma_L|$
-and phase angle $\theta_L$. Same thing we can do from the admittance perspective. Let $\overline{Y}$ = g + jb , we will see the intercept point on the Smith Chart for admittance too. However, to find out the complex reflection coefficient, recall the positive real axis is the one to the left for admittance since we have kept the Smith chart fixed. For admittances, the current axis has to be rotated by $180^o$. The distance from origin to that point gives you  $|\Gamma_L|$ but the phase measured from the  positive real axis shows $\theta_L$. 
+\item Determine the distance of the point of intersection from the origin to find the magnitude of the reflection coefficient, $|\Gamma_L|$ and then the corresponding phase given as $\theta_L$.
+\end{enumerate}
+
+So without doing any calculation, just by measuring its distance, and the angle, we get the magnitude of reflection coefficient, $|\Gamma_L|$
+and phase angle, $\theta_L$. 
+
+Similarly, for the admittance, let $\bar{Y} = g + jb$. We determine the point of intersection on the Smith Chart the same way as that of impedance, however, to find out the complex reflection coefficient, maintaining the orientation, then the positive real axis is to the left. So the phase angle will be measured from the positive real axis as shown in figure~\ref{fig:kjhgfds}. We summarize the steps as follows.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{./graphics/KJHGFDS}
-\caption{Admittance Smith Chart at a $180^o$ phase shift}
+\includegraphics[width=0.7\linewidth]{./graphics/KJHGFDS}
+\caption{Determining the reflection coefficient for admittance on a Smith Chart}
 \label{fig:kjhgfds}
 \end{figure}
  
 \subsection*{Procedure:}
+\begin{enumerate}[(i)]
+\item Normalize the admittance $\bar{Y}$ with the characteristic admittance, $Y_o$.
+\item Determine the point on the Smith Chart which is the point of intersection of the circle of constant conductance, $g$ and the circle of constant susceptance, $b$.
+\item Determine the distance of the point from origin to find the magnitude of the reflection coefficient,  $|\Gamma_L|$ but the phase angle, $\theta_L$ will be measured from the  positive real axis (see figure~\ref{fig:kjhgfds}). 
 \end{enumerate}
 
+Thus, when we are using normalized impedance or admittance, appropriate rotation has to be made on the coordinate axes of the Smith Chart. Once this is done, the calculation of the complex reflection coefficient is very straight forward. Mark the normalized points on the Smith Chart. Find the distance from the origin to the marked point and then measure the angle from this marked point from the positive real axis which differs for impedance and admittance while maintaining the orientation of the Smith Chart. 
 
-If the load impedance is given and we are asked to find the reflection coefficient and load impedance at another point $l$ on the transmission line, that is:
+In another simple transmission line problem, let us suppose the magnitude of the reflection coefficient and phase angle is given, but we need to find the load. The steps are summarized below.
+\subsection*{Procedure:}
+\begin{enumerate}[(i)]
+\item Draw a cirle of radius equal to the magnitude of the reflection coefficient from the origin.
+\item Determine phase angle from the positive real axis depending on whether the impedance or admittance value at the load is required.
+\item Mark the point on the circle and find the corresponding $r$ and $x$ circles or $g$ and $b$ circles.
+\item Multiply the normalized impedance or admittance by the characteristic impedance or admittance to get the load impedance or admittance.
+\end{enumerate}
 
 \section{Impedance transformation problems with the Smith Chart}
+A common problem in transmission line is impedance transformation. We have shown how it is done analytically but \emph{how can we perform impedance transformation graphically?} 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{./graphics/uytrewsxcvbj}
