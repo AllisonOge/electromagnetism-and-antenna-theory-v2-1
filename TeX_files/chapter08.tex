@@ -1,5 +1,5 @@
-\chapter{Smith Chart}\label{lec:lec8}
-At the end of this chapter, students are supposed to know the following:
+\chapter{Impedance Transformation in a lossless medium using a Smith Chart}\label{lec:lec8}
+\section{Objectives}
 
 \begin{enumerate}[(i)]
 \item How to develop the Voltage Standing Wave Ratio(VSWR) set of circles.
@@ -150,17 +150,14 @@ and phase angle $\theta_L$. Same thing we can do from the admittance perspective
 \caption{Admittance Smith Chart at a $180^o$ phase shift}
 \label{fig:kjhgfds}
 \end{figure}
-
-Note that when we are using normalized impedance or admittance, appropriate rotation has to be made on the coordinate axes of the Smith chart. Once this is done, the calculation of the complex reflection coefficient is very straight forward. Mark the normalized points on the Smith Chart. Find the distance from the origin to the marked point and then measure the angle from this marked point to the positive real axis for admittance or impedance on the  Smith chart which are not the same when the Smith Chart is kept fixed. In other problems where reflection coefficient and angle is given, you are told to find the load. This problem is also straight forward.
-\item Mark out the point of  reflection coefficient given on the smith chart.
-\item Once the point is gotten, find the corresponding r and x circles to get the value of normalized impedance $\overline{Z}$.
-\item Multiply the normalized impedance by the characteristic impedance to get the load impedance. Do similar thing for the admittance calculation from given reflection coefficient.
+ 
+\subsection*{Procedure:}
 \end{enumerate}
 
 
 If the load impedance is given and we are asked to find the reflection coefficient and load impedance at another point $l$ on the transmission line, that is:
 
-Given $Z_L$ or $Y_L$, if we are to find $Z_L$ or $Y_L$ at distance $l$ from the load, we use the hypothetical sketch of the smith chart shown in figure~\ref{fig:uytrewsxcvbj};
+\section{Impedance transformation problems with the Smith Chart}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{./graphics/uytrewsxcvbj}
@@ -189,16 +186,7 @@ If we replace the impedances by the admittances,and are now interested in only t
 \label{fig:mjhtre}
 \end{figure}
 
-Another quantity which is a measure of reflection is the VSWR and we established previously that $R_{max} = Z_{o}\rho$ and $R_{min} = \frac{Z_o}{\rho}$. If we normalize $R_{max}$ and $R_{min}$ then we get:
-\begin{equation}
-\overline{R}_{max} = {\rho}
-\end{equation}
-and
-\begin{equation}
-\overline{R}_{min} = \frac{1}{\rho}
-\end{equation}
-Therefore, the maximum $\overline{R}$ on the constant VSWR circles gives the VSWR at that point, we have only resistance and no reactance, that is, on the real axis. Similarly, on the left side of VSWR circle on the smith chart we have $\overline{R}_{min}$. Hence $\overline{R}_{min} = \frac{1}{\rho}$. The reason why we call it the constant VSWR circle is because we are used to calculating VSWR as $\frac{1 + |\Gamma|}{1 - |\Gamma|}$ and this can easily be deduced from the VSWR circles without a need to calculate.
-The VSWR is taken as the ratio of maximum impedance on the line to characteristics impedance.
+\subsection*{Procedure:}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{./graphics/wertuyuk}
@@ -221,6 +209,8 @@ Next is to find out the locations of the  minimum and maximum voltage and curren
 \label{fig:dfyui}
 \end{figure}
 
+
+\section{VSWR on the transmission line}
 
 We want to find out the distance of current or voltage maximum at the load end of the transmission line.
 \begin{figure}[h]
