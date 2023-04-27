@@ -98,7 +98,7 @@ The process of analyzing moderately lossy line using smith chart is hard without
 A plot of these circles is shown in fig. 13.3. However, if we want to have a very accurate analysis then ideally we have to really draw this spiral on the smith chart.
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\linewidth]{"./graphics/Diagram"}
+\includegraphics[scale=0.4]{"./graphics/Diagram"}
 \caption{Series of concentric circles of reflection coefficient $\Gamma{(l)}$ for $l = \frac{\lambda}{2},\lambda, \frac{3\lambda}{2}$ after we apply the approximation.}
 \end{figure}
 
@@ -185,9 +185,7 @@ On the other hand to improve the reliability of $\alpha$, if we take a long leng
 To resolve this issue, using the setup we take measurement at two frequencies. The first measurement of $Z_{oc}$ and $Z_{sc}$ is taken at one frequency  to get $\beta$ which is ambiguous with $2m\pi$. Then the frequency is changed slowly so that we get same value of phase variation. At  that point the number of cycles which we have on the transmission line has just changed by one. So by slowly changing the frequency and making sure only one cycle change takes place in $\theta$, then the $m$ is changed from $m$ to $m + 1$ and then we get a value of $\beta$. From here the two values of $\beta$ is used to find the correct value of $\beta$ as  follows:
 
 Let $f_1$ and $f_2$ be the frequencies in which we carried out the measurement of  $Z_{oc}$ and $Z_{sc}$, let us assume at $f_1$ we get  $Z_{oc}$ and $Z_{sc}$ and get
-\begin{align*}
-\beta_1 = \frac{1}{2l}(\theta \pm 2m\pi)
-\end{align*}
+
 \begin{center}
 $\beta_1= \frac{1}{2l}(\theta + 2m\pi)$\footnote{Taking the positive increments of $\theta$}
 \end{center}

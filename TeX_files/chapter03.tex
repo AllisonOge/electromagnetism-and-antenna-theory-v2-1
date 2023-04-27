@@ -11,10 +11,10 @@ In the previous chapter, we showed that voltage and current appear in form of wa
 Where $R$ is the resistance per unit length\\
 
 \hspace{13pt}$L$ is the inductance per unit length\\
-  
-\hspace{13pt}$C$ is the capacitance per unit length\\
-  
+
 \hspace{13pt}$G$ is the conductance per unit length\\ 
+
+\hspace{13pt}$C$ is the capacitance per unit length\\
 For the forward travelling wave, we had the expression
 \begin{equation}
 V^+e^{-\gamma x} =\left|  V^+\right| e^{-(\alpha + \jmath\beta)x}e^{\jmath\phi}
@@ -28,13 +28,24 @@ But $ e^{j(0)} = e^0 = 1 $, the expression then simplifies to
 V^+e^{-\gamma x} = \left| V^+\right| e^{-\alpha x}e^{-\jmath\beta x}
 \label{eqn3.2}
 \end{equation}
+Equation~\ref{eqn3.2} is called a Phasor representation.\\
+
+In phasor representation, the time varying part is ignored. For example the complete expression for $V^+$ is 
+\begin{equation*}
+V^+ = \left| V^+\right| e^{j(\omega t + \phi)} e^{-\gamma x} 
+\end{equation*}
+and the phasor form is
+\begin{equation*}
+V^+ = \left| V^+\right| e^{j\phi} e^{-\gamma x}
+\end{equation*}
+were $\phi$ is the initial phase.
 \section{The Phase constant}
 From the Equation \ref{eqn3.2}, we see that as the wave propagates i.e as the value of x increases, the quantity $\mid V^+\mid e^{-\alpha x}$ is exponentially decreasing while $e^{-\jmath\beta x}$ is the sinusoidal part that oscillates because according to Euler's formula\footnote{
 \includegraphics[scale=0.2]{./graphics/euler}
 
 Named after Leonhard Euler (15 April 1707 - 18 September 1783). He was a Swiss mathematician, physicist, astronomer, logician and engineer who made important and influential discoveries in many branches of mathematics like infinitesimal calculus and graph theory. He was a friend of Daniel Bernoulli.
 } 
-$e^{-\jmath\beta x} = \cos{\beta x} - \jmath \sin{ \beta x}$. Hence phase (space phase) is obtained from $e^{-\jmath\beta x}$.\\
+$e^{-\jmath\beta x} = \cos{\beta x} - \jmath \sin{ \beta x}$. Hence phase (space phase) is obtained from $e^{-\jmath\beta x}$.
 
 We now see that the equation 
 \begin{equation}
@@ -50,15 +61,16 @@ As we travel in the positive x-direction, the phase lags more and this linearly 
 \end{equation}
 We know that a phase change of 2$\pi$ corresponds to wavelength. From;
 \begin{equation}
-\phi = \beta x \quad and  \quad\phi = 2\pi
+\phi = \beta x \quad if,  \quad\phi = 2\pi
 \end{equation}
+thus,
 \begin{align*}
 2\pi = \beta\lambda \quad or \quad\beta = \frac{2\pi}{\lambda} \quad
 \end{align*}
-where, $ x = \lambda $ (distance\ travelled).\\
+where, $ x = \lambda $ (distance\ travelled).
 
-For most transmission line problems involving wave motion, $\lambda$ is not given, instead, $\gamma$ (propagation constant) is given in the complex form and $\beta$ is analyzed from the value of $\gamma$ given. The propagation constant $\gamma$ is then calculated from $\beta$.
-Since $\gamma$ depends on the primary constants $R$, $L$, $G$ and $C$ at operating frequency $\omega$, we then conclude that the quantity $\beta$ called \textbf{Phase Constant} is also a function of frequency $\omega$. In other words, we conclude that the wavelength of waves on a transmission line is a function of the line parameter changes, phase constant change, and wavelength change.
+For most transmission line problems involving wave motion, $\lambda$ is not given, instead, $\gamma$ (propagation constant) is given in the complex form and $\beta$ is analyzed from the value of $\gamma$ given. The wavelength $\lambda$ is then calculated from $\beta$.
+Since $\gamma$ depends on the primary constants $R$, $L$, $G$ and $C$ at operating frequency $\omega$, we then conclude that the quantity $\beta$ called \textbf{Phase Constant} is also a function of frequency $\omega$. In other words, we conclude that the wavelength of waves on a transmission line is a function of the line parameter, phase constant, and wavelength.
 \section{The Attenuation constant}
 Recall that amplitude varies as $\lvert V^+ \rvert e^{-\alpha x}$ so that we have maximum amplitude at $x = 0$. As x increases, the amplitude decreases exponentially with $\alpha x$. 
 \begin{figure}[h]
@@ -68,7 +80,7 @@ Recall that amplitude varies as $\lvert V^+ \rvert e^{-\alpha x}$ so that we hav
 \label{fig:VversusXcurve}
 \end{figure}
 
-From Figure~\ref{fig:VversusXcurve}, $\alpha$ is a parameter that measures how fast amplitude decay occurs in the transmission line wave. This quantity $\alpha$ is called the \textbf{Attenuation Constant}. The attenuation constant measures how the wave attenuates (reduces in its value) as it travels along the structure. So,
+From Figure~\ref{fig:VversusXcurve}, $\alpha$ is a parameter that measures how fast amplitude decay occurs in the transmission line wave. This quantity $\alpha$ is called the \textbf{Attenuation Constant}. The attenuation constant measures how the wave attenuates (reduces in its value) as it travels along the structure. So it is measured in Nepers/meter.
 \begin{align*}
 \text{Attenuation constant,}\ \alpha = \frac{Nepers}{meter}
 \end{align*}
@@ -80,8 +92,9 @@ The unit's name is derived from the name of John Napier. John Napier of Merchist
 
 So, a distance $x = \frac{1}{\alpha}$ tells you the effective travel distance in the transmission line beyond which the amplitude drops below $\frac{1}{e}$ of its initial value. Since the wave is reducing to $\frac{1}{e}$ of its initial value, the power of the wave also reduces. Taking the ratio of the initial amplitude and final amplitude after the effective travel distance we have;
 \begin{align*}
- \frac{\lvert V^+\rvert}{\lvert V^+\rvert e ^{-\alpha x}} \quad \text{because the initial amplitude at } x = 0
+\frac{\lvert V^+\rvert}{\lvert V^+\rvert e ^{-\alpha x}}
 \end{align*}
+because the initial amplitude at $x = 0$ is $\left| V^+\right|$
 \begin{align*}
 \text{with }x = \frac{1}{\alpha},\text{ the expression reduces to }\frac{1}{e}
 \end{align*}
@@ -96,26 +109,28 @@ Therefore, 1 Neper/m = 8.68 dB/m.\\
 As in propagation constant $\gamma$, the attenuation constant $\alpha$ depends on the primary constant of the transmission line as well as the frequency of operation $\omega$. In general, the propagation constant $\gamma$ which is a combination of phase constant $\beta$ and attenuation constant $\alpha$ is a function of primary line parameters and frequency of operation. Hence as $\omega$ increases, $\alpha$ increases. This is the reason some structures which were satisfactorily good conductors, at low frequencies become bad conductors at high frequencies (i.e the conductor becomes a more lossy line at high frequencies).
 
 \begin{exmp}
-Let R = 0.5 $\Omega$ /m, L = 0.2$\mu$H /m, C = 100pF/m, G = 0.1 $\Omega$ /m, freq = 1GHz. \ Calculate\ the\ propagation\ constant,\ attenuation\ constant\ and\ phase\ constant\ for\ this\ line. \\\\\\\\\\
+Let R = 0.5 $\Omega$ /m, L = 0.2$\mu$H /m, C = 100pF/m, G = 0.1 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.
 
-$\textbf{Solution.}$\\\\
-$ \gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}$\\\\
-But,$ \ \omega = 2\pi f\quad$ and $\quad f = 1GHz = 1 \times 10^9 $ Hz\\\\
-$ \omega = 2\pi \times 10^9 $ rad/s.\\\\
-Substituting into the $ \gamma $ expression; \\\\
-$\sqrt{[0.5+\jmath (2\pi \times 10^9)\times 0.2 \times 10^{-6}][0.1 + \jmath(2\pi \times 10^9) \times 100 \times10^{-12}]}  $\\\\
-$ \gamma = \sqrt{(0.5 + \jmath 400\pi)(0.1 + \jmath 0.2\pi)} $\\\\
-Expanding,\\\\
-$ = \sqrt{0.5(0.1) + 0.5(\jmath 0.2\pi) + \jmath 400\pi(0.1) + \jmath 400\pi(\jmath 0.2\pi)} $ \\\\
-Recall  that,$ \quad \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1 $\\\\
-$ =\sqrt{0.05 + \jmath 0.31416 +\jmath 125.6637 - 789.568} $ \\\\
-$ = \sqrt{-789.518 + \jmath 125.97786} $ \\
+\subsubsection*{Solution}
+\[ \gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}\]
+But,$ \ \omega = 2\pi f\quad$ and $\quad f = 1\textnormal{GHz} = 1 \times 10^9 \textnormal{Hz} $ 
+\[\omega = 2\pi \times 10^9\textnormal{rad/s}\]
+Substituting into the $ \gamma $ expression;
+\[\gamma = \sqrt{(0.5 + \jmath 400\pi)(0.1 + \jmath 0.2\pi)}\]
+Expanding,
+\[ = \sqrt{0.5(0.1) + 0.5(\jmath 0.2\pi) + \jmath 400\pi(0.1) + \jmath 400\pi(\jmath 0.2\pi)}\]
+Recall  that, $ \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1 $
+\begin{dmath*}
+=\sqrt{0.05 + \jmath 0.31416 +\jmath 125.6637 - 789.568}
+= \sqrt{-789.518 + \jmath 125.97786}
+\end{dmath*}
 
 We are now faced with the challenge of finding the square root of a complex number.
 \footnotetext[3]{
 \includegraphics[scale=0.3]{./graphics/demoivre}
 
-Named after Abraham de Moivre (26 May 1667 – 27 November 1754). He was a French mathematician known for de Moivre's formula, a formula that links complex numbers and trigonometry, and for his work on the normal distribution and probability theory. He was a friend of Isaac Newton, Edmond Halley, and James Stirling.}\\
+Named after Abraham de Moivre (26 May 1667 – 27 November 1754). He was a French mathematician known for de Moivre's formula, a formula that links complex numbers and trigonometry, and for his work on the normal distribution and probability theory. He was a friend of Isaac Newton, Edmond Halley, and James Stirling.}
+
 To find the square root, we apply DeMoivre's theorem \footnotemark[3]. It states; $ \quad Z^{\frac{1}{n}} = |Z|^{\frac{1}{n}}\angle\frac{\theta}{n} $\\\\
 We first convert the complex number to polar form.\\\\
 -$ 789.518 + \jmath 125.9778 = 799.5055\angle 170.934\textdegree $\\\\
@@ -128,7 +143,6 @@ $ \alpha = 2.23467 $ Nepers/m, $ \beta = 28.1871 $ rad/m\\\\
 We now convert the attenuation constant to dB/m; \\
 1 Nepers/m = 8.68dB/m \\\\
 2.23467 Nepers/m = 19.3969 dB/m
-
 \end{exmp} 
 
 \begin{exmp}
@@ -140,57 +154,93 @@ If the wave travels from right to left, find the voltage at B.
 \caption{The transmission line showing points A and B.}
 \end{figure}
 
-\textbf{Solution.} \\ 
+\subsubsection*{Solution}
 At x = 1, the voltage is maximum, at x = 0 i.e A, V = 8.66v. Due to the direction of wave travel, we expect its amplitude to reduce to a smaller value at B. The expression
 \begin{align}
-V(x,t) = Re{[\left| V^+\right|  e^{-\alpha x}.e^{-\jmath\beta x + \jmath\omega t}.e^{+\jmath\phi}]} 
+V(x,t) = \mathfrak{Re}{[\left| V^+\right|  e^{-\alpha x}.e^{-\jmath\beta x + \jmath\omega t}.e^{+\jmath\phi}]} 
 \label{eqn:voltagesoln}
 \end{align}
 represents the forward travelling or progressive wave moving along the +x direction.\\
 Extracting the real part and including the initial phase.
 \begin{align*}
-V(x,t) = \lvert V^+\rvert cos(\phi + \omega t - \beta x)e^{-\alpha x}
+V(x,t) = \lvert V^+\rvert\cos(\phi + \omega t - \beta x)e^{-\alpha x}
 \end{align*}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./graphics/VversusX}
+\includegraphics[width=1\linewidth]{./graphics/fig3.3}
 \caption{Voltage versus distance with time}
 \end{figure}
 
 $\lvert V^+\rvert e^{-\alpha x} $ gives the amplitude variation with distance $ x $. \\
-$ \phi + \omega t - \beta x $ gives the phase (including the initial phase $ \phi $ ).\\
+$ \phi + \omega t - \beta x $ gives the phase (including the initial phase $ \phi $).
 
 Substituting x = 0, t = 0, and $\phi = 30^o$ into equation~\ref{eqn:voltagesoln},
 \begin{align*}
-V(x,t) = V(0,0) &= 8.66v \\
-V(x,t) &= \lvert V^+\rvert cos(\phi + \omega (0) - \beta (0)e^{-\alpha (0)}\\
-8.66 &= \lvert V^+\rvert cos(\phi)\\
-8.66 &= \lvert V^+\rvert cos(30)\\
-\lvert V^+\rvert &= 10v
+V(x,t) &= V(0,0) = 8.66V \\
+V(x,t) &= \lvert V^+\rvert\cos(\phi + \omega (0) - \beta (0))e^{-\alpha (0)}\\
+8.66 &= \lvert V^+\rvert\cos(\phi)\\
+8.66 &= \lvert V^+\rvert\cos(30)\\
+\lvert V^+\rvert &= 10V
 \end{align*}
 Substituting x = 1m, t = 100ns, and $\phi = 30^o$ into equation~\ref{eqn:voltagesoln},\\\\
-$ V(x,t) = 10 cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} - 28.18\times 1)e^{-2.235\times 1} $\\\\
+$ V(x,t) = 10\cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} - 28.18\times 1)e^{-2.235\times 1} $\\\\
 $ = 10 \times -0.815 \times e^{-2.235} $\\\\
-$ = -0.872v $\\
+$ = -0.872V $\\
 To find the peak voltage at x = 1,
 \begin{align*}
-V(1,t) = 10cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18)e^{-2.235}
+V(1,t) = 10\cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18)e^{-2.235}
 \end{align*}
-but the value is maximum when $cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18) = 1$, 
+but the value is maximum when $\cos(\frac{\pi}{6} + 2\pi \times 10^9t - 28.18) = 1$, 
 \begin{align*}
-V_{max} &= 10e^{-2.235}\\
-V_{max} &= 1.07v
+V_{\max} &= 10e^{-2.235}\\
+V_{\max} &= 1.07V
 \end{align*}
-We observe from the solution that attenuation took place since the amplitude reduced from 8.66v to -0.88v.\\ \\
+We observe from the solution that attenuation took place since the amplitude reduced from 8.66v to -0.88v.
+
 If the wave travels from right to left
 \begin{dmath*}
-V(x,t) = \mathfrak{Re}{[V^+ e^{+\alpha x}.e^{+\jmath\beta x + \jmath\omega t}e^{+\jmath\phi}]}
+V (x,t) = \mathfrak{Re}{[V^+ e^{+\alpha x}.e^{+\jmath\beta x + \jmath\omega t}e^{+\jmath\phi}]}
 = \lvert V^+\rvert cos(\phi + \omega t + \beta x)e^{+\alpha x}
-= 10 cos(\frac{\pi}{6} + 2\pi \times 10^9\times 100\times 10^{-9} + 28.18\times 1)e^{+2.235\times 1}
-= 10 \times -0.9093 \times e^{+2.235}
-= -84.99v
+= 10 cos(\frac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} + 28.18\times1) e^{+2.235\times1}
+= 10 \times-0.9093 \times e^{+2.235}
+= -84.99V
 \end{dmath*} 	
 \end{exmp}
+This is the amplitude of the voltage at point B that will undergo attenuation in moving backwards from B to A.
+\begin{exmp}
+Let R = 0.4 $\Omega$ /m, L = 0.3$\mu$H /m, C = 120pF/m, G = 0.08 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for\ this\ line.
+
+\subsubsection*{Solution}
+\[\gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}\]
+But, $\omega = 2\pi f\quad$ and $\quad f = 1GHz = 1 \times 10^9 $ Hz
+\[\omega = 2\pi \times 10^9rad/s.\]
+Substituting into the $\gamma$ expression; 
+\begin{dmath*}
+\sqrt{0.4+\jmath(2\pi\times10^9)\times0.3\times10^{-6}}\times\sqrt{0.08+\jmath(2\pi\times10^9) \times120 \times10^{-12}} 
+\end{dmath*}
+\begin{dmath*}
+\gamma=\sqrt{(0.5+\jmath600\pi) (0.08+\jmath0.24\pi)}
+= \sqrt{0.4(0.08) + 0.4(\jmath0.24\pi) + \jmath600\pi(0.08) + \jmath600\pi(\jmath0.24\pi)}
+\end{dmath*} 
+Recall  that,$ \quad \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1$
+
+Thus,
+\begin{dmath*}
+\gamma =\sqrt{0.032 + \jmath 0.3016 +\jmath 150.7964 - 1421.2230} = \sqrt{-1421.191 + \jmath 151.098} 
+\end{dmath*}
+
+We first convert the complex number to polar form, thus:
+\[-1421.191 + \jmath 151.098 = 1429.2006\angle 173.931^o\]
+\begin{dmath*} 
+\sqrt{-1421.191 + \jmath 151.098} = \sqrt{1429.2006}\angle \frac{173.931}{2}
+=37.8\angle 86.9655 
+\end{dmath*}
+Converting back to cartesian form;
+\[\textnormal{Propagation constant,}\quad\gamma=2 +\jmath 37.747\]
+From the expression; $ \alpha = 2 $ Nepers/m, $ \beta = 37.747 $ rad/m.
+
+We now convert the attenuation constant to dB/m (1 Nepers/m = 8.68dB/m), thus, 2 Nepers/m = 17.36 dB/m.
+\end{exmp} 
 
 \section{The Characteristic Impedance}
 Recall from the original differential equation;
@@ -199,20 +249,29 @@ Recall from the original differential equation;
 \end{align*}
 Also, 
 \begin{align*}
-V = V^+e^{-\gamma x}+V^-e^{+\gamma x}\quad and \quad I = I^+e^{-\gamma x}+I^-e^{+\gamma x}
+V = V^+e^{-\gamma x}+V^-e^{+\gamma x}\quad and
+\end{align*}
+\begin{align*}
+I = I^+e^{-\gamma x}+I^-e^{+\gamma x}
 \end{align*}
 Substituting $V$ and $I$ into the differential equation,
+\[\frac{d}{dx}(V^+e^{-\gamma x}+V^-e^{+\gamma x}) = -(R+\jmath\omega L)(I^+e^{-\gamma x}+I^-e^{+\gamma x})\]
+Thus,
+\[-\gamma V^+e^{-\gamma x}+\gamma V^-e^{+\gamma x} = -(R+\jmath\omega L)(I^+e^{-\gamma x}+I^-e^{+\gamma x}) \]
+$(V^+,I^+)$ represent forward traveling waves, while $(V^-,I^-)$ represent backward traveling waves for voltage and current respectively. The relationship between voltage and current has to be satisfied at every point along the transmission line. This will happen if and only if
 \begin{align*}
-\frac{d}{dx}(V^+e^{-\gamma x}+V^-e^{+\gamma x}) &= -(R+\jmath\omega L)(I^+e^{-\gamma x}+I^-e^{+\gamma x})\\
--\gamma V^+e^{-\gamma x}+\gamma V^-e^{+\gamma x} &= -(R+\jmath\omega L)(I^+e^{-\gamma x}+I^-e^{+\gamma x})
+-\gamma V^+e^{-\gamma x} &= -(R+\jmath\omega L)I^+e^{-\gamma x}\quad
 \end{align*}
- $(V^+,I^+)$ represent forward traveling waves, while $(V^-,I^-)$ represent backward traveling waves for voltage and current respectively. The relationship between voltage and current has to be satisfied at every point along the transmission line. This will happen if and only if
 \begin{align*}
--\gamma V^+e^{-\gamma x} &= -(R+\jmath\omega L)I^+e^{-\gamma x}\quad and\quad \frac{V^+}{I^+} = \frac{R+\jmath\omega L}{\gamma}
+\quad\quad So,\quad \frac{V^+}{I^+} = \frac{R+\jmath\omega L}{\gamma}
 \end{align*}
-Also, 
+
+\quad Also, 
 \begin{align*}
-\gamma V^-e^{+\gamma x} &= -(R+\jmath\omega L)I^-e^{+\gamma x}\quad and\quad \frac{V^-}{I^-} = -\frac{R+\jmath\omega L}{\gamma}
+\gamma V^-e^{+\gamma x} &= -(R+\jmath\omega L)I^-e^{+\gamma x}\quad 
+\end{align*}
+\begin{align*}
+So,\quad \frac{V^-}{I^-} = -\frac{R+\jmath\omega L}{\gamma}
 \end{align*}
 The expressions above show the relationship between forward and backward travelling waves for voltage and current.
 
@@ -247,14 +306,14 @@ From the derivation of characteristic impedance, we can write
 \begin{equation}
 \frac{V^+}{I^+} = Z_o\quad and\quad \frac{V^-}{I^-} = -Z_o
 \end{equation}
-It is clear that at any point on the transmission line, the ratio of voltage to current (forward or backward) is always constant i.e equal to characteristic impedance.\\
+It is clear that at any point on the transmission line, the ratio of voltage to current (forward or backward) is always constant i.e equal to characteristic impedance.
 
 Hence a forward travelling wave sees an impedance of $Z_o$ and the reverse travelling wave sees an impedance of $-Z_o$. If $Z_o$ is real, it means the forward travelling wave sees a positive resistance while the backward travelling wave sees a negative resistance.
 
 \textbf{But what does a negative resistance mean?}
-Ordinarily, energy flow is from the generator to the load which the positive resistance represents. The negative resistance means energy is being carried backwards i.e energy is flowing from the load into the generator.\\
+Ordinarily, energy flow is from the generator to the load which the positive resistance represents. The negative resistance means energy is being carried backwards i.e energy is flowing from the load into the generator.
 
-In conclusion, irrespective of the boundary condition of the transmission line, the forward travelling wave always sees an impedance equal to the characteristic impedance while a backward travelling wave sees a negative of the characteristic impedance.\\
+In conclusion, irrespective of the boundary condition of the transmission line, the forward travelling wave always sees an impedance equal to the characteristic impedance while a backward travelling wave sees a negative of the characteristic impedance.
 
 We established that;
 \begin{align*}
@@ -274,12 +333,8 @@ I = \frac{V^+}{Z_o}e^{-\gamma x}-\frac{V^-}{Z_o}e^{+\gamma x}
 \end{equation}
 
 \section{Defining boundary condition}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.45]{./graphics/tlcircuit}
-\caption{The transmission line showing generator and load}
-\end{figure}
-Up until now, we have not defined the boundary condition of the transmission line. So let's do that here. We have two spatial locations on the transmission line, one at the generator and the other where an arbitrary load $Z_L$ is connected. To define boundary conditions, we define the spatial distance from the load end, the origin, so that all distances move from the load end towards the generator. So we now have a parameter that moves towards the generator from the load side. At the load point $l = 0$ and at the generator, $l = L$. So $l = -x$ is in our transmission line equation. Substituting $l = -x$ in Equations \ref{eqn:voltage} and \ref{eqn:current}, we have
+
+Up until now, we have not defined the boundary condition of the transmission line. So let's do that here. We have two spatial locations on the transmission line, one at the generator and the other where an arbitrary load $Z_L$ is connected. To define boundary conditions, we define the spatial distance from the load end, the origin, so that all distances move from the load end towards the generator. So we now have a parameter that moves towards the generator from the load side. At the load point $l = 0$ and at the generator, $l = L$. So $l = -x$ is in our transmission line equation. Substituting $l = -x$ in Equations~\ref{eqn:voltage} and~\ref{eqn:current}, we have
 \begin{equation}
 V = V^+e^{+\gamma l}+V^-e^{-\gamma l}
 \label{eqn:voltagefromload}
@@ -289,6 +344,11 @@ I = \frac{V^+}{Z_o}e^{+\gamma l}-\frac{V^-}{Z_o}e^{-\gamma l}
 \label{eqn:currentfromload}
 \end{equation}
 $l = 0$ corresponds to the load location or the receiving end of the transmission line and $l = L$ is the generator point or transmitting end of the transmission line.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{./graphics/tlcircuit}
+\caption{The transmission line showing generator and load}
+\end{figure}
 
 \section{The reflection coefficient}
 At $l = 0$, $Z = Z_L$ since $Z_L$ terminates the transmission line at this point. Substituting $l = 0$ into Equations (3.12) and (3.13),
@@ -317,8 +377,10 @@ Z_L = Z_o\left[ \frac{\frac{V^+ + V^-}{V^+}}{\frac{V^+ - V^-}{V^+}}\right]
 Z_L = Z_o\left[ \frac{1+ \frac{V^-}{V^+}}{1 - \frac{V^-}{V^+}}\right] 
 \label{eqn:impedatload}
 \end{equation}
-Here we see that the absolute values of $V^+$ and $V^-$ do not matter, instead, the ratio $\frac{V^-}{V^+}$ is what's important. Hence we define a new parameter on which $Z_L$ depends. This parameter is known as the reflection coefficient.\\ \textbf{Reflection Coefficient} can be defined as the ratio of backward travelling wave to forward travelling wave on the transmission line.
-The reflection coefficient is denoted by \footnote[3]{$\Gamma$ is capital Gamma, the third letter of the Greek alphabet.}$\Gamma$.
+Here we see that the absolute values of $V^+$ and $V^-$ do not matter, instead, the ratio $\frac{V^-}{V^+}$ is what's important. Hence we define a new parameter on which $Z_L$ depends. This parameter is known as the reflection coefficient.
+
+\textbf{Reflection Coefficient} can be defined as the ratio of backward travelling wave to forward travelling wave on the transmission line.
+The reflection coefficient is denoted by $\Gamma$\footnote[3]{$\Gamma$ is capital Gamma, the third letter of the Greek alphabet.}.
 \begin{equation*}
 \Gamma = \frac{\text{backward travelling wave}}{\text{forward travelling wave}}
 \end{equation*}
@@ -326,7 +388,8 @@ The reflection coefficient is denoted by \footnote[3]{$\Gamma$ is capital Gamma,
 \Gamma (l) = \frac{V^-e^{-\gamma l}}{V^+e^{+\gamma l}}
 \label{eqn:rfc}
 \end{equation}
- $\Gamma(l)$ is the reflection coefficient at any point on the line.\\ \\
+$\Gamma(l)$ is the reflection coefficient at any point on the line.
+
 At $l = 0$,
 \begin{equation*}
 \Gamma (0) = \frac{V^-e^{-\gamma (0)}}{V^+e^{+\gamma (0)}}
@@ -336,16 +399,16 @@ At $l = 0$,
 \label{eqn:rfcatload}
 \end{equation}
 $\Gamma_L$ is the reflection coefficient at the load point on the line. From now henceforth, $\Gamma_L$ will be used to represent the reflection coefficient at the load point.\\
- Substituting Equation~\ref{eqn:rfcatload} into Equation~\ref{eqn:rfc},
+Substituting Equation~\ref{eqn:rfcatload} into Equation~\ref{eqn:rfc},
 \begin{equation*}
 \Gamma (l) = \Gamma_L\frac{e^{-\gamma l}}{e^{+\gamma l}}
 \end{equation*}
 \begin{equation}
 \Gamma (l) = \Gamma_L e^{-2\gamma l}
 \end{equation}
-Recall, Equation~\ref{eqn:impedatload} was derived at the load point. We would now derive the relationship at any point on the line. \\ \\
-Dividing Equation~\ref{eqn:voltagefromload} by Equation~\ref{eqn:currentfromload},
+Recall, Equation~\ref{eqn:impedatload} was derived at the load point. We would now derive the relationship at any point on the line.
 
+Dividing Equation~\ref{eqn:voltagefromload} by Equation~\ref{eqn:currentfromload},
 \begin{align*}
 \frac{V}{I} = \frac{V^+e^{+\gamma l}+V^-e^{-\gamma l}}{1}\times \frac{Z_o}{V^+e^{+\gamma l}-V^-e^{-\gamma l}}
 \end{align*}
@@ -383,3 +446,22 @@ Z_L - Z_o &= (Z_o + Z_L)\Gamma_L
 The reflection coefficient tells you the ratio between reflected and incident voltage. It's a measure of how much energy is reflected from the transmission line.
 
 Our intention is always to deliver maximum energy to the load, we, therefore, want the reflection coefficient to be as small as possible. So we shall find the condition to deliver maximum power to the load i.e no reflection on the transmission line.
+
+\newpage
+\section*{Exercises}
+\begin{ExerciseList}
+\Exercise[label={ex31}]
+With appropriate equation of amplitude variation along a transmission line, explain what is meant by Characteristic length.
+
+\Exercise[label={ex32}]
+In what unit is attenuation constant stated in most data sheets?
+
+\Exercise[label={ex33}]
+Starting from the differential equation guilding transmission lines, derive the characteristic impedance relation. What does negative impedance imply from the backward voltage to current ratio?
+
+\Exercise[label={ex34}]
+What are the physical significance of the propagation constant($\gamma$), attenuation constant($\alpha$) and phase constant($\beta$)?
+
+\Exercise[label={ex35}]
+From $ V = V^+e^{+\lambda l} + V^-e^{-\lambda l} $ and $ I = \frac{V^+}{Z_0}e^{+\lambda l} - \frac{V^-}{Z_0}e^{-\lambda l}$, show that $ \Gamma_L = \frac{Z_L - Z_o}{Z_L + Z_o} $.
+\end{ExerciseList}

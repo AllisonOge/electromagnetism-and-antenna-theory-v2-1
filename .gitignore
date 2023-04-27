@@ -6,5 +6,8 @@
 *.idx
 *.ind
 *.ilg
+*.out
+*.fls
+*.fdb_latexmk
 main.synctex.gz
 main.pdf
