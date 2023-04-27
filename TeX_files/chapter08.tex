@@ -152,52 +152,53 @@ In another simple transmission line problem, let us suppose the magnitude of the
 A common problem in transmission line is impedance transformation. We have shown how it is done analytically but \emph{how can we perform impedance transformation graphically?} 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\linewidth]{./graphics/uytrewsxcvbj}
-\caption{Points Along the constant r and x Circles}
+\includegraphics[width=0.7\linewidth]{./graphics/wertuyuk}
+\caption{Tranformed impedance at distance $l$ from the load}
+\label{fig:wertuyuk}
+\end{figure}
+
+If the load impedance is given as shown in figure~\ref{fig:wertuyuk} and we are asked to find the reflection coefficient and load impedance at another point $l$ on the transmission line, that is, given $Z_L$ or $Y_L$, we are to find $Z_L$ or $Y_L$ at distance $l$ from the load. We will use a hypothetical sketch of the Smith Chart shown in figure~\ref{fig:uytrewsxcvbj}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\linewidth]{./graphics/uytrewsxcvbj}
+\caption{Points along the constant r and x Circles}
 \label{fig:uytrewsxcvbj}
 \end{figure}
 
-\section{Steps in Transmission Line Calculation}
-\textbf{Step 1}: If the impedance is not normalized, we normalize all impedances\\
-\textbf{Step 2}: Determine all $r$ and $x$ constants from $\overline{Z} = r + jx$ and plot both points to intersect on the smith chart.
-As we have seen earlier, the magnitude of the reflection coefficient remains same as the point moves on a circle (
-that is, a constant VSWR circle)\\
-\textbf{Step 3}: Take a compass and draw a circle passing the point $\overline{Z}_L$ from the origin.\\
-NOTE that as we move along the transmission line, the phase angle changes by $2\beta{l}$ in the clockwise direction (from load towards generator).\\
-Normally, in a standard smith chart, instead of marking this angle, the distance is marked directly around the smith chart. But how is this done?\\
-In one rotation, the angle changes by 2$\pi$, that is, 2$\beta{l}$ = 2$\pi{l}$ = 2(2$\pi/\lambda){l}$ , $l$ =$\lambda/2$ therefore, a full rotation around the smith chart corresponds to a distance of $\lambda/2$ on a constant VSWR circle, then we arrive at the same point.\\\\
-The above analysis makes sense since one characteristics of the transmission line is that it's impedance characteristics repeats every $\lambda/2$ and the angle which is now the load angle minus 2$\beta{l}$ can be calibrated in terms of wavelength with a full rotation corresponding to $\lambda/2$ movement. To move from $\overline{Z}_{l}$ by a distance $l_1$, we rotate or move along the circle by an angle of 2$\beta{l}$ clockwise direction (from load towards generator) so $l$ is positive and the angle 2$\beta{l}$ becomes negative. Sense of rotation is very important in doing  all transmission line calculations. If we move in a clockwise direction by a distance of 2$\beta{l}$, we will reach a location $l$ on the transmission line so the intersect point after moving $l$ distance keeps the magnitude of the reflection coefficient. We get a new angle smaller than the previous angle.\\
-
-$\Gamma_{l}$ is what is represented at the point of intersection after moving distance $l$ or angle -2$\beta{l}$. From the new point of  intersection, we find out the constant resistance and reactance circle that passes through $\overline{Z}_{l} = r + jx$ then we multiply by characteristics impedance $Z_o$ to get $\overline{Z}_{l}$ at the new location. Analytically, the impedance transformation requires the calculation of sine and cosine functions that are unusually very complicated. With the help of the smith chart, the impedance transformation is easily achieved.\\\\
-One may have a general situation where impedance is given at a particular location and we are told to transform the impedance to another location. Take note, if the new location is to the left of the previous impedance then we do exactly the same thing that has been done as "l" was usually to the left of $Z_{l}$, else we reverse the direction of the angular rotation instead of -2$\beta{l}$, we have $+2\beta{l}$ which is counter-clockwise rotation. Hence, moving towards generator will be clockwise rotation and moving away from generator will be anti-clockwise rotation. The sense of rotation in impedance calculations is extremely important because that tells us whether you are moving towards the generator or away from the generator.Therefore, in all transmission line calculations, the direction of the generator should be given much consideration because that will decide the movement along the transmission line. \\\\
-If we replace the impedances by the admittances,and are now interested in only the transformed admittances, then the axis for reflection coefficient comes into picture but every other parameters remains the same like the impedance case until we are required to find the phase of the reflection coefficient and at that point, the positive real axis becomes the one shown below.
+\subsection*{Procedure:}
+\begin{enumerate}[(i)]
+\item If the impedance is not normalized, we normalize all impedances.
+\item Determine the point, $\bar{Z}_L$, on the Smith Chart and draw a circle passing through the point from the origin. As we have seen earlier, the magnitude of the reflection coefficient remains same as the point moves on the circle which is a constant VSWR circle.
+\item Determine the point that translates to a distance $l$. In a Smith Chart, one rotation, $2\pi$ translate to a phase change of $2\beta{l}$\footnote{
+As we move along the transmission line, the phase angle changes by $2\beta{l}$ in the clockwise direction (from load towards generator).
+}, that is $2\beta{l} = 2\pi\Longrightarrow l = \frac{\pi}{\beta} = \frac{\lambda}{2}$\footnote{
+$\beta = \frac{2\pi}{\lambda}$
+} (see figure~\ref{fig:mjhtre}). Therefore, a full rotation around the Smith Chart corresponds to a distance of $\frac{\lambda}{2}$ on a constant VSWR circle\footnote{
+The above analysis makes sense since one characteristics of the transmission line is that it's impedance characteristics repeats every $\frac{\lambda}{2}$ distance on the line.
+}. So we determine the corresponding $x\lambda$ for the value of $l$ moving clockwise along the VSWR from the point $\bar{Z}_L$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\linewidth]{./graphics/mjhtre}
-\caption{Impedance Transformation from Distance L along the Transmssion Line}
+\includegraphics[width=0.7\linewidth]{./graphics/mjhtre}
+\caption{Tranformed impedance at distance $l$ from the load}
 \label{fig:mjhtre}
 \end{figure}
 
-\subsection*{Procedure:}
+\item Mark the new point on the Smith Chart and determine the magitude of the reflection coefficient and phase angle as shown in figure~\ref{fig:uyhbgjvkclxse} or the circle of constant resistance and circle of constant reactance to determine the normalized impedance at $l$, that is, $\bar{Z}_{l} = r + jx$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/wertuyuk}
-\caption{Impedance Transformation by Distance $l$ Along the Transmission Line}
-\label{fig:wertuyuk}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\linewidth]{./graphics/uyhbgjvkclxse}
-\caption{New phase Angle after Rotation}
+\includegraphics[width=0.7\linewidth]{./graphics/uyhbgjvkclxse}
+\caption{New phase angle after rotation}
 \label{fig:uyhbgjvkclxse}
 \end{figure}
 
-Hence, the maximum value of the normalized resistance gives VSWR. Maximum value of resistance in terms of normalized quantity is seen when the VSWR circle intersects the real axis on the right side.The rightmost side corresponds to the impedance which is $R_{max}$ normalized and the reactance for that is zero. Normalized $R_{max}$ is nothing but $\rho$. Similarly, the minimum value which we see on transmission line is $R_{min} = \frac{Z_o}{\rho}$, $\overline{R}_{min} = \frac{1}{\rho}$. The minimum resistance which corresponds to the leftmost intercept on the real axis gives $\frac{1}{\rho}$. Once the load impedance or any other impedance is marked on the smith chart and the constant VSWR circle is drawn, calculation of the VSWR, reflection coefficient and transformed/normalized impedance is very straightforward. It is just a matter of plotting and reading different values on a smith chart.\\\\
-Next is to find out the locations of the  minimum and maximum voltage and current on the transmission line. Parameters gotten can be used to determine what kind of loads the transmission line is terminated on by simply looking at the standing wave pattern. A position of a hypothetical load impedance on the smith chart is shown below.
+\item Multiply the normalized impedance at $l$ by the characteristic impedance $Z_o$ to get $\bar{Z}_{l}$ at the new location.
+\end{enumerate}
+
+For admittance calculations, the same steps apply except in the sense of the position of the positive real axis (see figure~\ref{fig:dfyui}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.4\linewidth]{./graphics/dfyui}
-\caption{Change in phase angle at new admittance replacement}
+\includegraphics[width=0.7\linewidth]{./graphics/dfyui}
+\caption{Phase angle measurement with admittance Smith Chart}
 \label{fig:dfyui}
 \end{figure}
 
