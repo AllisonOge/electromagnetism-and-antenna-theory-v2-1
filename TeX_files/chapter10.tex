@@ -58,48 +58,33 @@ We are dealing with a lossless transmission line unless otherwise stated.
 Z_{L} = Z_o\frac{R_\min\cos\beta l_\min - jZ_o\sin\beta l_\min}{Z_o\cos\beta l_\min - jR_\min\sin\beta l_\min}
 \end{dmath}
 Rationalize into proper form by multiplying the top and bottom by the conjugate of the denominator.
-{\footnotesize 
 \begin{dmath}
-Z_{L} = Z_o\left(\frac{R_{min}\cos\beta l_{min} - jZ_o\sin\beta l_{min}}{Z_o\cos\beta l_{min} - jR_{min}\sin\beta l_{min}}\right)\times\left(\frac{Z_o\cos\beta l_{min} + jR_{min}\sin\beta l_{min}}{Z_o\cos\beta l_{min} + jR_{min}\sin\beta l_{min}}\right)
-\end{dmath}} 
-{\footnotesize 
-\begin{dmath}
-Z_{L} = Z_o
-\frac{Z_oR_{min}\cos^{2}\beta l_{min} + Z_oR_{min}\sin^{2}\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}} +j\frac{(R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min}}{Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min}}
-\end{dmath}}
+Z_{L} = Z_o\left(\frac{R_\min\cos\beta l_\min - jZ_o\sin\beta l_\min}{Z_o\cos\beta l_\min - jR_\min\sin\beta l_\min}\right)\times\left(\frac{Z_o\cos\beta l_\min + jR_\min\sin\beta l_\min}{Z_o\cos\beta l_\min + jR_\min\sin\beta l_\min}\right)
+= Z_o
+\frac{Z_oR_\min\cos^{2}\beta l_\min + Z_oR_\min\sin^{2}\beta l_\min}{Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min} +j\frac{(R_\min^{2}-Z_o^{2})\cos\beta l_\min\sin\beta l_\min}{Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min}
+\end{dmath}
 Recall $ \cos^{2}(A) + \sin^{2}(A) = 1 $ and $ \frac{\sin(A)}{\cos(A)} = \tan(A) $
 \begin{dmath}
-Z_{L} = Z_o\frac{Z_oR_{min} + j(R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min})}{(Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}
+Z_{L} = Z_o \times\frac{Z_o R_\min + j(R_\min^{2}-Z_o^{2})\cos\beta l_\min\sin\beta l_\min}{(Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min)}
 \end{dmath}
-Divide numerator and denominator by $\cos^{2}\beta l_{min}$:
-\begin{align*}
-Z_{L} = Z_o\frac{\frac{Z_oR_{min}}{\cos^{2}\beta l_{min}} + \frac{j(R_{min}^{2}-Z_o^{2})\cos\beta l_{min}\sin\beta l_{min})}{\cos^{2}\beta l_{min}}}{\frac{(Z_o^{2}\cos^{2}\beta l_{min} + R_{min}^{2}\sin^{2}\beta l_{min})}{\cos^{2}\beta l_{min}}}
-\end{align*}
-Recall $ \frac{1}{\cos(A)} = \sec(A) $
-\begin{align}
-Z_{L} = Z_o\{\frac{Z_oR_{min}\sec^{2}\beta l_{min} + j(R_{min}^{2}-Z_o^{2})\tan\beta l_{min}}{Z_o^{2}+ R_{min}^{2}\tan^{2}\beta l_{min}}\}
-\end{align}
-$\frac{Z_o}{R_{min}} = \rho$ , Divide numerator and denominator by $R_{min}^{2}$ to have numerator as:
-\begin{align*}
-Z_{L} = Z_o\{\frac{Z_oR_{min}}{R_{min}^{2}}\sec^{2}\beta l_{min} + \frac{j(R_{min}^{2}-Z_o^{2})}{{R_{min}^{2}}}\tan\beta l_{min}\}
-\end{align*}
-\begin{align*}
-Z_{L} = Z_o [\rho \sec^{2}\beta l_{min} + j(1-\rho^{2})\tan\beta l_{min}] =
-\end{align*}
-\begin{align*}
-Z_{L} = Z_o [ \rho (1 + \tan^{2}\beta l_{min}) + j(1-\rho^{2})\tan\beta l_{min}]
-\end{align*}
-Denominator changes thus:
-\begin{align*}
-\frac{1}{R_{min}^{2}}{(Z_o^{2} + R_{min}^{2}\tan^{2}\beta l_{min})} = \rho^{2} + \tan^{2}\beta l_{min}
-\end{align*}
-We have:
-{\footnotesize
-\begin{dmath}
-Z_{L} = Z_o \left[\frac{\rho (1 + \tan^{2}\beta l_{min}) + j(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}} \right]
-\end{dmath}}
+Divide numerator and denominator by $\cos^{2}\beta l_\min$:
 \begin{dmath*}
-\overline{Z_{L}} = \frac{Z_{L}}{Z_o} =  \frac{\rho (1 + \tan^{2}\beta l_{min})}{\rho^{2} + \tan^{2}\beta l_{min}} + \frac{j(1-\rho^{2})\tan\beta l_{min}}{\rho^{2} + \tan^{2}\beta l_{min}}
+Z_{L} = Z_o\frac{\frac{Z_o R_\min}{\cos^{2}\beta l_\min} + \frac{j(R_\min^{2}-Z_o^{2})\cos\beta l_\min\sin\beta l_\min}{\cos^{2}\beta l_\min}}{\frac{(Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min)}{\cos^{2}\beta l_\min}}
+\end{dmath*}
+Recall $ \frac{1}{\cos(A)} = \sec(A)$
+\begin{dmath*}
+Z_{L} = Z_o\left\lbrace\frac{Z_o R_\min\sec^{2}\beta l_\min + j(R_\min^{2}-Z_o^{2})\tan\beta l_\min}{Z_o^{2} + R_\min^{2}\tan^{2}\beta l_\min}\right\rbrace
+\end{dmath*}
+But $\frac{Z_o}{R_\min} = \rho$; dividing the numerator and denominator by $R_\min^{2}$
+\begin{dmath}
+Z_{L} = Z_o\left\lbrace\frac{\frac{Z_o R_\min}{R_\min^{2}}\sec^{2}\beta l_\min + \frac{j(R_\min^{2}-Z_o^{2})}{{R_\min^{2}}}\tan\beta l_\min}{\frac{1}{R_\min^{2}}{(Z_o^{2} + R_\min^{2}\tan^{2}\beta l_\min)}}\right\rbrace
+= Z_o \left\lbrace\frac{\rho \sec^{2}\beta l_\min + j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right\rbrace 
+= Z_o \left\lbrace \frac{\rho (1 + \tan^{2}\beta l_\min) + j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right\rbrace
+\label{eqn:slottedtnxline}
+\end{dmath}
+Thus, the normalized impedance to be measured is 
+\begin{dmath*}
+\bar{Z_{L}} = \frac{Z_{L}}{Z_o} =  \frac{\rho (1 + \tan^{2}\beta l_\min)}{\rho^{2} + \tan^{2}\beta l_\min} + \frac{j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}
 \end{dmath*}
 Where the real part is $R = Z_o\left[\frac{\rho (1 + \tan^{2}\beta l_\min)}{\rho^{2} + \tan^{2}\beta l_\min}\right]$ and the imaginary part is $ X = Z_o\left[\frac{(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right]$.
 
@@ -168,25 +153,27 @@ Hence for a open or short circuit load, by using different length of transmissio
 Analytically, $l$ is the distance towards the generator and recall that for a lossless transmission line which we assume unless stated otherwise.
 
 Considering a short circuit load at the end of a transmission line, then using the impedance transformation relation,
-circle, we get a pure reactance. We can assume the presence of
-that reactance at that point, from the open or short circuit end
-towards the signal source or generator.
-Hence for a load of open or short circuit, by using different length of transmission line, we can get different reactance at the input. So the question is what should be the length of the transmission line, so that one gets a particular value of reactance at the input?\\
-Analytically,
-$ l $ is the distance towards the generator.\\ Recall for a LOSSLESS Transmission Line which we assume unless stated otherwise.
-\begin{align*}
-Z_{L} = Z_o \{ \frac{Z_{L}\cos\beta l + jZ_o\sin\beta l}{Z_o\cos\beta l + jZ_{L}\sin\beta l}\}  
-\end{align*}
-\begin{center}
-$Z_{L} = 0$ for short circuit 
-\end{center}
+\begin{dmath}
+Z_{in} = Z_o \left\lbrace\frac{Z_{L}\cos\beta l + jZ_o\sin\beta l}{Z_o\cos\beta l + jZ_{L}\sin\beta l}\right\rbrace\quad Z_{L} \text{= 0 for short circuit} 
+= Z_o \left\lbrace \frac{0 + jZ_o\sin\beta l}{Z_o\cos\beta l + 0}\right\rbrace  = jZ_o\tan\beta l 
+\end{dmath}
+
+Similarly, considering an open circuit load at the end of a transmission line, $Z_L = \infty$ so we take limits as $Z_L$ tends to infinity.
+\begin{dmath}
+Z_{in} = Z_o \left\lbrace \frac{Z_{L}\cos\beta l + jZ_o\sin\beta l}{Z_o\cos\beta l + jZ_{L}\sin\beta l}\right\rbrace \quad Z_{L} \text{= }\infty\text{ for open circuit.}
+= Z_o \left\lbrace \frac{\cos\beta l + j\frac{Z_o}{Z_{L}}\sin\beta l}{\frac{Z_o}{Z_{L}}\cos\beta l + j\sin\beta l}\right\rbrace
+= Z_o \left\lbrace \frac{\cos\beta l + j \times 0}{0 + j\sin\beta l}\right\rbrace = -jZ_o\cot\beta l 
+\end{dmath}
+Thus,
 \begin{align}
-Z_{L} = Z_o \{ \frac{0 + jZ_o\sin\beta l}{Z_o\cos\beta l + 0}\}  = jZ_o\tan\beta l
+Z_{in} &= jZ_o\tan\beta l \Rightarrow \text{ short circuit}\\
+Z_{in} &= -jZ_o\cot\beta l \Rightarrow \text{ open circuit}
 \end{align}
 Hence the problem of realizing a given reactance from open or short circuit load involves finding the $l$ that gets the appropriate $Z_{in}$. 
 Let $l_{SC}$ and $l_{OC}$ represent short circuit and open circuit length respectively, then we have $ X = jZ_o\tan\beta l_{sc} $ and $ X = -jZ_o\cot\beta l_{oc} $ for short circuit and open circuit respectively. Since the phase constant $ \beta $ is known for the transmission line, we make $ l_{SC} $ and $ l_{OC} $ the subject of the equations, we already know the reactance, $X$ we require, so that 
 \begin{align}
-Z_{L} = Z_o \{ \frac{\cos\beta l + j \times 0}{0 + j\sin\beta l}\} = -jZ_o\cot\beta l  
+l_{SC} &= \frac{1}{\beta}\tan^{-1}\frac{X}{Z_o}\\
+l_{OC} &= \frac{1}{\beta}\cot^{-1}\frac{-X}{Z_o}
 \end{align}
 
 If the frequency of operation as well as velocity of the wave propagation are known, then we can find $\lambda$ and use $\beta = \frac{2\pi}{\lambda} $. Therefore, in conclusion, we can realize the unknown reactance from using transections of the transmission line. 
@@ -207,7 +194,7 @@ The steps taken on the Smith Chart as outlined as follows:
 \includegraphics[width=1\linewidth]{./graphics/group10diagram6}
 \caption{Open and Short Circuit points on the Smith Chart}
 \label{fig:group10diagram6}
-\end{figure} 
+\end{figure}
 
 \item Measure the distance from the normalized impedance $\bar{Z}_{in}$ to the short or open circuit moving counter clockwise. 
 \end{enumerate}
