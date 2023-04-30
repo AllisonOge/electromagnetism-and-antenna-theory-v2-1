@@ -82,107 +82,138 @@ Now we solve some simple problems based on the theory we have developed from the
 \begin{exmp}
 A voltage wave at ${1GH}z$ is traveling on a transmission line in ${+x}$ direction. The primary constants of the line are ${R=0.5\Omega/m}$, ${L=0.2\mu H/m}$, ${G=0.1\upsilon/m}$, ${C=100pF/m}$. Calculate the attenuation constant in ${nepers/m}$ and ${dB/m}$. If the voltage of the forward traveling wave at ${t=0}$ and ${x=0}$ ${v}=0.866V$. Find the voltage at ${x=1m}$ and time ${t=100nsec}$. What is the peak voltage at ${x=1m?}$ Take initial phase as ${30^0}$.
 
-
-\begin{center}
-\textbf{Solution to Problem 1}
-\end{center}
-$ \omega = 2\pi\times 10^{9} $ rad/sec\\
+\subsection*{Solution}
+\[\omega = 2\pi\times 10^{9}\text{rad/sec}\]
 Propagation constant $\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}$
 \begin{dmath*}
-\gamma=\\
- \sqrt{(0.5 + \jmath( 2\pi\times 10^{9} \times 0.2\times 10^{-6}))(0.1 + \jmath (2\pi\times 10{9} \times 10^{-12}))} \quad
+\gamma
+=\sqrt{(0.5 + \jmath( 2\pi\times 10^{9} \times 0.2\times 10^{-6}))(0.1 + \jmath (2\pi\times 10{9} \times 10^{-12}))} \quad
+= 2.23 + \jmath 28.2 \text{per metre}
 \end{dmath*}
 
-$ = 2.23 + \jmath 28.2$ per metre\\ 
-$\gamma = \alpha + \jmath\beta$\\
-where $\alpha$ = Attenuation constant and $\beta$ = Phase constant\\
+In comparision with $\gamma = \alpha + \jmath\beta$ where $\alpha$  is the attenuation constant and $\beta$ is the phase constant.
 
-$\Rightarrow \alpha$ = 2.23 \emph{Nepers/m} and $\beta$ = 28.2 \emph{rad/m}\\
-but 1 Nepers/m = 8.68\emph{dB/m}\\
-$\Rightarrow$ 2.23 \emph{Nepers/m} = 2.23$\times$8.68= 19.36 \emph{dB/m}\\\\
-Now to find $V_{(x,t)}$, we shall express $V_{(x,t)}$ in general as \\\\
-$V_{(x,t)} = (V^{+}e^{-\gamma x} + V^{-}e^{+\gamma x})e^{j\omega t}$ for forward and backward wave.\\\\
-Since we are dealing with only forward wave $ V^{-} = 0 $.\\\\
-$V_{(x,t)} = V^{+}e^{-\gamma x}e^{j\omega t}$\\\\
-$V_{(x,t)} = Re({V^{+}e^{-(\alpha +j\beta)x}e^{j\omega t}})$\\\\
-$V_{(x,t)} = Re({V^{+}e^{-\alpha x}e^{-j\beta x}e^{j\omega t}})$\\\\
-$V_{(x,t)} = Re({V^{+}e^{-\alpha x}e^{j(\omega t - \beta x)}})$\\\\The real or imaginary part is sufficient to characterize the sinusoidal variation with time, ${e^{j\omega t}}$ is very general.\\\\
-${V^+}$ has an amplitude and initial phase. Hence, it is a complex quality expressed as $ V^{+} = |V^{+}|e^{\jmath\phi} $, $ |V^{+}| =$ Amplitude and $ \phi =$ initial phase\\\\
-$V_{(x,t)} = Re({|V^{+}|e^{-\alpha x}e^{j\phi}e^{j(\omega t - \beta x)}})$\\\\
-$V_{(x,t)} = Re({|V^{+}|e^{-\alpha x}e^{j(\phi+\omega t - \beta x)}})$\\\\
-$V_{(x,t)} = Re({|V^{+}|e^{-2.23x}e^{(\phi+2\pi10^9t-28.2x)}})$\\\\
-At $ x = 0, t = 0, \quad \quad V(x,t) = 8.66V $ then at these values\\\\ 
-$8.66 = Re({|V^{+}|e^{-0}e^{j(\phi+0-0)}}) \quad = Re({|V^+|}e^{j\phi})$\\\\
-$Re({V^{+}e^{j\phi}}) = Re({V^{+}{cos\phi}} + {jV^{+}{sin\phi}}) = |V^{+}|{cos\phi}$\\\\
-$Re({|V^{+}|e^{-\alpha x}e^{j(\phi+\omega t - \beta x)}}) = ({|V^{+}|e^{-\alpha x}cos{(\phi+\omega t - \beta x)}})$\\\\
-$8.66 = {|V^+|{cos\phi}} \quad$ at $ \phi = 30^{o} $\\\\
-$8.66 = {|V^+|{cos30}}$\\\\
-$8.66 = {|V^+|{0.866}}$\\\\
-$\frac{8.66}{0.866} = {|V^+|}$\\\\
-${|V^{+}| = 10V}$\\\\
-Hence, the complete expression is\\
-$V_({x,t}) = 10e^{-2.23x} cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2x})$\\\\
-To find voltage at x=1m and t=100nsec, we have\\
-$V_({1,100nsec}) \\ = 10e^{-2.23} cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} - 28.2\times1})$\\\\
-$V_({1,100nsec}) = -0.88V$\\\\
-$V_({x,t}) = 10e^{-2.23x} cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2x})$\\\\
-The peak value at x = 1m is given thus\\\\
-$V_({1,t}) = 10e^{-2.23(1)} cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2(1)})$\\\\
-Peak value happens when $cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2(1)}) = 1$\\\\
-$ V_{(1,t)_{max}} = 10e^{-2.23} = 1.07528V $\\\\
-This is one of the simplest problem of a Transmission Line, where the primary constants are given and voltage at some instant of time and location is also given. We are then asked to find out the voltage at some other location and at some other instant of time.\\
-\begin{center}
-\textbf{PROBLEM 2}
-\end{center}
-Given that the wave in the previous example is travelling in the negative ${x}$ direction and all other parameters are kept the same, what is the instantaneous voltage at the same time and at the same location?\\
-\begin{center}
-\textbf{SOLUTION}
-\end{center}
-For the wave travelling in the negative direction, we have\\
-$V_{(x,t)} = Re(V^{-}e^{\gamma x}e^{j\omega t})$ for backward wave.\\\\
-$Re({V^{-}e^{\alpha x}e^{j\beta x}e^{j\omega t}}) = {|V^{-}|e^{\alpha x}cos{(\phi+\omega t + \beta x)}}$\\\\
-At ${t=0, x=0, V=8.66}$, then\\\\
-${8.66} = {|V^{-}|}e^{0} cos({\phi + 0 + 0})$\\\\
-$8.66 = {|V^-|{cos\phi}} \quad$ at $ \phi = 30^{o} $\\\\
-$8.66 = {|V^-|{cos30}}$\\\\
-$8.66 = {|V^-|{0.866}}$\\\\
-$\frac{8.66}{0.866} = {|V^-|}$\\\\
-${|V^{-}|} = 10V$\\\\
-$V_({x,t}) = 10e^{2.23x} cos({\dfrac{\pi}{6} + 2\pi\times10^9t + 28.2x})$\\\\
-At ${t=100nsec}$ and ${x=1m}$\\\\
-$V_({x,t}) = 10e^{2.23} cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} + 28.2})\\\\
-= -83.7701V$\\\\
-\begin{figure}[h!]
+Hence, $\alpha = 2.23 \text{Nepers/m} $ and $\beta = 28.2 \text{rad/m}$ but $1 \text{Nepers/m} = 8.68\text{dB/m}\Rightarrow 2.23 \text{Nepers/m} = 2.23\times8.68= 19.36 \text{dB/m}$
+
+Now to find $V{(x,t)}$, we shall express $V_{(x,t)}$ in general as
+\begin{dmath*}
+V{(x,t)} = (V^{+}e^{-\gamma x} + V^{-}e^{+\gamma x})e^{j\omega t}\quad\text{for forward and backward wave}
+\end{dmath*}
+And $ V^{-} = 0 $ when considering only the forward wave.
+\begin{dmath*}
+V{(x,t)} = V^{+}e^{-\gamma x}e^{j\omega t}
+= \mathfrak{Re}\left\lbrace{V^{+}e^{-(\alpha +j\beta)x}e^{j\omega t}}\right\rbrace
+=\mathfrak{Re}\left\lbrace{V^{+}e^{-\alpha x}e^{-j\beta x}e^{j\omega t}}\right\rbrace
+= \mathfrak{Re}\left\lbrace{V^{+}e^{-\alpha x}e^{j(\omega t - \beta x)}}\right\rbrace
+\end{dmath*}
+The real or imaginary part is sufficient to characterize the sinusoidal variation with time, ${e^{j\omega t}}$ is very general.
+
+${V^+}$ has an amplitude and initial phase. Hence, it is a complex quality expressed as $ V^{+} = |V^{+}|e^{\jmath\phi} $, $ |V^{+}| =$ Amplitude and $ \phi =$ initial phase
+\begin{dmath*}
+V{(x,t)} = \mathfrak{Re}\left\lbrace{|V^{+}|e^{-\alpha x}e^{j\phi}e^{j(\omega t - \beta x)}}\right\rbrace
+= \mathfrak{Re}\left\lbrace{|V^{+}|e^{-\alpha x}e^{j(\phi+\omega t - \beta x)}}\right\rbrace
+= \mathfrak{Re}\left\lbrace{|V^{+}|e^{-2.23x}e^{(\phi+2\pi10^9t-28.2x)}}\right\rbrace
+\end{dmath*}
+At $ x = 0, t = 0, \quad V(x,t) = 8.66V $ then
+\begin{dmath*}
+8.66 = \mathfrak{Re}\left\lbrace{|V^{+}|e^{-0}e^{j(\phi+0-0)}}\right\rbrace
+= \mathfrak{Re}\left\lbrace{|V^+|}e^{j\phi}\right\rbrace
+= \mathfrak{Re}\left\lbrace{V^{+}e^{j\phi}}\right\rbrace = \mathfrak{Re}\left\lbrace{V^{+}{cos\phi}} + {jV^{+}{sin\phi}}\right\rbrace
+= |V^{+}|{cos\phi}
+= \mathfrak{Re}\left\lbrace{|V^{+}|e^{-\alpha x}e^{j(\phi+\omega t - \beta x)}}\right\rbrace
+= ({|V^{+}|e^{-\alpha x}\cos(\phi+\omega t - \beta x)})
+= {|V^+|{\cos\phi}} \quad \text{at }\phi \text{= 30\textdegree}
+= {|V^+|{\cos30}}
+= {|V^+|{0.866}}
+\end{dmath*} 
+Thus, $\frac{8.66}{0.866} = {|V^+|}\Longrightarrow {|V^{+}| = 10V}$
+
+Hence, the complete expression is
+\begin{dmath*}
+V({x,t}) = 10e^{-2.23x} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2x})
+\end{dmath*}
+To find voltage at $x=1m$ and $t=100nsec$, we have
+\begin{dmath*}
+V({1,100nsec}) = 10e^{-2.23} \cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} - 28.2\times1})
+= -0.88V
+\end{dmath*}
+\begin{dmath*}
+V({x,t}) = 10e^{-2.23x} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2x})
+\end{dmath*}
+The peak value at $x = 1m$ is given thus
+\begin{dmath*}
+V({1,t}) = 10e^{-2.23(1)} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2(1)})
+\end{dmath*}
+Peak value happens when $\cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2(1)}) = 1$
+\begin{dmath*}
+V{(1,t)_\max} = 10e^{-2.23} = 1.07528V
+\end{dmath*}
+This is one of the simplest transmission line problem where the primary constants are given as well as the voltage at some instant of time and location. We are then asked to find out the voltage at some other location and at some other instant of time.
+\end{exmp}
+
+\begin{exmp}
+Given that the wave in the previous example is travelling in the negative ${x}$ direction and all other parameters are kept the same, what is the instantaneous voltage at the same time and at the same location?
+
+\subsection*{Solution}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group98}
 \caption{Diagram for Problem 2}
+\label{fig:group98}
 \end{figure}
-So what we note here is, if we look at the transmission line with ${x=0}$ and ${x=1m}$. If the wave travels in forward direction, then the wave will attenuate in the direction of propagation. The variation is from ${8.66V}$ to ${-0.88V}$. In the backward direction, the wave will attenuate in the reverse direction so it has to  have a higher amplitude at ${x=1m}$ and ${t=100nsec}$ from were it attenuates from ${-83.7701V}$ to ${8.66V}$ in the other direction. The direction of propagation of the wave is very important.\\
-\begin{center}
-\textbf{PROBLEM 3}
-\end{center}
-A transmision line has $L = 0.25muH/m$, $C=100pF/m$ and ${G=0}$. What should be the value of ${R}$ for the line so that the line can be travelled as a low loss line? The frequency of operation is ${100MHz}$.\\
-\begin{center}
-\textbf{SOLUTION}
-\end{center}
-For low loss line ${\alpha\ll\beta}$ say ${100\alpha=\beta}$ at 1 percent of ${\beta}$ value\\\\
-${\beta=\omega\sqrt{LC}} = {2\pi\times100\times10^6\sqrt{0.25\times10^{-6}\times100\times10^{-12}}}$\\\\
-${\beta=2\pi\times100\times10^6\times5\times10^{-9}}$\\\\
-${\beta=\pi}$\\\\			${\alpha={\dfrac{1}{2}}(R\sqrt{\dfrac{C}{L}}+G\sqrt{\dfrac{L}{C}})}$\\\\
-G = 0, So that:\\\\
-${\alpha={\frac{R}{2}}\sqrt{\frac{C}{L}}}$\\\\
-${\alpha=\frac{R}{2}\sqrt{\frac{100\times10^{-12}}{0.25\times10^{-6}}}}$\\\\
-${\alpha=\frac{R}{2}\sqrt{\frac{1}{2500}}}$\\\\
-${\alpha=\frac{R}{2}\times\frac{1}{50}}$\\\\
-${\alpha=\frac{R}{100}}$\\\\
-Remember 
-${\alpha = \frac{\beta}{100}}$\\\\
-Since ${\beta = \pi}$\\\\
-${\alpha = \frac{\beta}{100} = \frac{\pi}{100} = \frac{R}{100}}$\\\\
-${R = \pi\Omega/m}$\\\\ 
-So for this transmission line taking a resistance of ${3\Omega /m}$. It can be treated as a low loss transmission line. If ${R>\pi}$ say ${4\Omega}$, it is no more a low loss transmission line and it slowly become a lossy transmission line. When ${R}$ increases to the point that ${\alpha\approx\beta}$, then the line becomes extremely lossy.\newpage
 
-\begin{center}
-\textbf{SUMMARY}
-\end{center}
-So in this section, we have shown how to identify the load by looking at standing wave patterns. Next we solved some simple problems for transmission line based on voltage equations which we have derived for the transmission line. Next we go to applications of transmission line since we make use of sections of transmission line in realizing various circuit elements in high frequency circuits.\\		
+For the wave travelling in the negative direction, we have $V_{(x,t)} = \mathfrak{Re}\left\lbrace V^{-}e^{\gamma x}e^{j\omega t}\right\rbrace$ for backward wave.
+\begin{dmath*}
+V(x,t) = Re({V^{-}e^{\alpha x}e^{j\beta x}e^{j\omega t}}) = {|V^{-}|e^{\alpha x}cos{(\phi+\omega t + \beta x)}}
+\end{dmath*}
+At ${t=0, x=0, V=8.66}$, then
+\begin{dmath*}
+{8.66} = {|V^{-}|}e^{0} cos({\phi + 0 + 0})
+= {|V^-|{cos\phi}} \quad \text{at }\phi\text{= 30\textdegree} 
+= {|V^-|{cos30}}
+= {|V^-|{0.866}}
+\end{dmath*}
+\begin{dmath*}
+\frac{8.66}{0.866} = {|V^-|} = 10V
+\end{dmath*}
+\begin{align*}
+V({x,t}) = 10e^{2.23x} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t + 28.2x})
+\end{align*}
+At ${t=100nsec}$ and ${x=1m}$
+\begin{dmath*}
+V({x,t}) = 10e^{2.23} \cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} + 28.2})
+= -83.7701V
+\end{dmath*}
+So what we note here is, if we look at the transmission line with ${x=0}$ and ${x=1m}$. If the wave travels in forward direction, then the wave will attenuate in the direction of propagation. The variation is from ${8.66V}$ to ${-0.88V}$. In the backward direction, the wave will attenuate in the reverse direction so it has to  have a higher amplitude at ${x=1m}$ and ${t=100nsec}$ from were it attenuates from ${-83.7701V}$ to ${8.66V}$ in the other direction. The direction of propagation of the wave is very important.
+\end{exmp}
+
+\begin{exmp}
+A transmision line has $L = 0.25muH/m$, $C=100pF/m$ and ${G=0}$. What should be the value of ${R}$ for the line so that the line can be travelled as a low loss line? The frequency of operation is ${100MHz}$
+
+\subsection*{Solution}
+For low loss line ${\alpha\ll\beta}$ say ${100\alpha=\beta}$ at 1 percent of ${\beta}$ value
+\begin{dmath*}
+\beta=\omega\sqrt{LC}
+= {2\pi\times100\times10^6\sqrt{0.25\times10^{-6}\times100\times10^{-12}}}
+=2\pi\times100\times10^6\times5\times10^{-9}
+=\pi
+\end{dmath*}
+\begin{dmath*}
+\alpha={\frac{1}{2}}\left(R\sqrt{\frac{C}{L}}+G\sqrt{\frac{L}{C}}\right)\quad (\text{G = 0})
+={\frac{R}{2}}\sqrt{\frac{C}{L}}
+=\frac{R}{2}\sqrt{\frac{100\times10^{-12}}{0.25\times10^{-6}}}
+=\frac{R}{2}\sqrt{\frac{1}{2500}}
+=\frac{R}{2}\times\frac{1}{50}
+=\frac{R}{100}
+\end{dmath*}
+Remember ${\alpha = \frac{\beta}{100}}$, since ${\beta = \pi}$
+\begin{dmath*}
+\alpha = \frac{\beta}{100} 
+= \frac{\pi}{100} 
+= \frac{R}{100}
+\end{dmath*}
+\[\Longrightarrow R = \pi\Omega/m \]
+So for this transmission line taking a resistance of ${3\Omega /m}$. It can be treated as a low loss transmission line. If ${R>\pi}$ say ${4\Omega}$, it is no more a low loss transmission line and it slowly become a lossy transmission line. When ${R}$ increases to the point that ${\alpha\approx\beta}$, then the line becomes extremely lossy.
+\end{exmp}
+
+So in this section, we have shown how to identify the load by looking at standing wave patterns. Next we solved some simple problems for transmission line based on voltage equations which we have derived for the transmission line. Next we go to applications of transmission line since we make use of sections of transmission line in realizing various circuit elements in high frequency circuits.
