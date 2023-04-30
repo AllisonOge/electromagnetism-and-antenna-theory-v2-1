@@ -9,7 +9,8 @@ So \emph{how can we quickly identify the type of load\footnote{The type of load 
 
 Recall that:
 \begin{align}
-VSWR = \frac{|V|_{max}}{|V|_{min}}
+VSWR = \frac{|V|_\max}{|V|_\min}
+\label{eqn:vswr09}
 \end{align}
 From the equation~\eqref{eqn:vswr09}, the smaller the value of $|V|_\min$, the larger the value of ${VSWR}$, that is, as $|V|_\min$ tends to zero, ${VSWR}$ tends to infinity. When $|V|_\max{\approx}|V|_\min$, then $VSWR = 1$.
 
@@ -90,7 +91,7 @@ Propagation constant $\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}$
 =\sqrt{(0.5 + \jmath( 2\pi\times 10^{9} \times 0.2\times 10^{-6}))(0.1 + \jmath (2\pi\times 10{9} \times 10^{-12}))} \quad
 = 2.23 + \jmath 28.2 \text{per metre}
 \end{dmath*}
-
+ 
 In comparision with $\gamma = \alpha + \jmath\beta$ where $\alpha$  is the attenuation constant and $\beta$ is the phase constant.
 
 Hence, $\alpha = 2.23 \text{Nepers/m} $ and $\beta = 28.2 \text{rad/m}$ but $1 \text{Nepers/m} = 8.68\text{dB/m}\Rightarrow 2.23 \text{Nepers/m} = 2.23\times8.68= 19.36 \text{dB/m}$
