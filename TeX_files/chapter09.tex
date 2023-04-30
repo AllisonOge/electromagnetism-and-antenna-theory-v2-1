@@ -1,75 +1,85 @@
-\chapter{Identifying Types of Load from Standing Wave Pattern}\label{lec:lec9}
+\chapter{Identifying Types of Load from Standing Wave Pattern\index{standing wave pattern}}\label{lec:lec9}
 
-In the previous chapter, we discussed how to get the VSWR circle from the smith chart and how to solve transmission line problems, which are in the form of parallel connections using admittance and characteristics admittance instead of impedances.
-
-In this chapter, we will discuss how to identify the types of load from standing wave patterns. Standing wave pattern has two important characteristics which are:
+In the previous chapter, we discussed how to solve some simple common transmission line problems using both impedances and admittances and then we discussed the constant VSWR circle. In this chapter, we will discuss how to identify the types of load from standing wave patterns. Standing wave pattern has two important characteristics which are:
 \begin{enumerate}[(i)]
-\item The Location of Maximum and Minimum (Current/Voltage)
+\item The location of maximum and minimum (current/voltage)
 \item The VSWR circle.
 \end{enumerate}
-So without calculating VSWR, the idea is to quickly identify the type of load, not the exact value of the load.\\
+So \emph{how can we quickly identify the type of load\footnote{The type of load is not the exact value of the load} without calculating the VSWR?}
+
 Recall that:
 \begin{align}
 VSWR = \frac{|V|_{max}}{|V|_{min}}
 \end{align}
+From the equation~\eqref{eqn:vswr09}, the smaller the value of $|V|_\min$, the larger the value of ${VSWR}$, that is, as $|V|_\min$ tends to zero, ${VSWR}$ tends to infinity. When $|V|_\max{\approx}|V|_\min$, then $VSWR = 1$.
 
-From the equation above, the smaller the value of $|V|_{min}$, the larger the value of ${VSWR}$ i.e. as $|V|_{min}$ tends to zero, ${VSWR}$ tends to infinity.\\
-When $|V|_{max}$ ${\approx}$ $|V|_{min}$, then $VSWR = 1$\\
-
-To identify a load, let's look at the smith chart to see how the impedance varies on the line and then come back to standing wave pattern and identify the loads.\\
-Figure 9.1 and 9.2 are smith charts showing VSWR circle for inductance and capacitance load at the top and bottom respectively.\\
+First, let us observe the variation of the impedance on the tranmission line with the Smith Chart then we will revisit our early question. Figures~\ref{fig:group91} and~\ref{fig:group92} are simplified Smith Charts showing the VSWR circle for inductive and capacitive load at the top and bottom areas respectively.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./graphics/Group91}
-\caption{A Smith chart representation of Inductive Load}
+\caption{A Smith Chart representation of inductive load}
+\label{fig:group91}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./graphics/Group92}
-\caption{A Smith chart representation of Capacitive Load}
-\end{figure}From Figure 9.1, If we move from load towards the generator i.e. clockwise rotation, for the inductive load we encounter $V_{max}$ first before another $\frac{\lambda}{4}$ or $\pi rad$ movement to encounter ${V_{min}}$.\\
-If we move from $\bar{Z_L}$ in clockwise direction for capacitive load, we encounter $V_{min}$ first before another $\frac{\lambda}{4}$ or $\pi rad$ movement to encounter $V_{max}$. $V_{min}\neq0$ means it is not a pure reactive load i.e $VSWR\neq\infty$\\
-Now, let's analyze some standing wave graph and determine the type of load which they represent.
-\begin{figure}[h!]
+\caption{A Smith Chart representation of capacitive load}
+\label{fig:group92}
+\end{figure}
+
+As shown in figure~\ref{fig:group91}, if we move from the load towards the generator, that is, a clockwise rotation, for the inductive load we encounter $V_\max$ first before ${V_\min}$ in another $\frac{\lambda}{4}$ or $\pi rad$ movement. Similarly, if we move from $\bar{Z_L}$ in clockwise direction for capacitive load, we encounter $V_\min$ first before $V_\max$, in another $\frac{\lambda}{4}$ or $\pi rad$ movement. Also, $V_\min\neq0$ which means that for a complex inductive load that is not purely reactive, $VSWR\neq\infty$.
+
+\section{Complex Reactive Loads}
+Now, let us analyze some standing wave graph and determine the type of load which they represent. The transmission line circuit is shown in figure~\ref{fig:group93} and we can analyse the standing wave pattern based on the new observation we have discussed. As the standing wave pattern moves from load towards the generator from right to left, it gets to a maximum first and its minimum is not zero so it $|V_\min|$ does not touch the real axis.
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group93}
-\caption{Standing wave pattern variation of a complex Inductive load}
-\end{figure}\\In Figure 9.3, the standing wave pattern moves from load towards the generator from right to left. It gets to a maximum first and its minimum is not zero as it does not touch the real axis. This indicates a complex inductance load which is similar to being on the upper half of the smith chart.\\
-\begin{figure}[h!]
+\caption{Standing wave pattern variation of a complex inductive load}
+\label{fig:group93}
+\end{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group94}
-\caption{Standing wave pattern variation of a complex Capacitive load}
-\end{figure}\\In Figure 9.4, $V_{min}\neq0$ which means it is not purely reactive, we encounter $V_{min}$ first before $V_{max}$ indicating a complex capacitive load similarly to being on the lower half of the smith chart. The movement is towards the generator.\\
+\caption{Standing wave pattern variation of a complex capacitive load}
+\label{fig:group94}
+\end{figure}
 
-If the load is neither capacitive nor inductive, then it must lie on the real horizontal axis of the smith chart. So the location of the load itself will be at either the voltage minimum point or voltage maximum point.\\
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.5]{./graphics/Group95}
-\caption{Standing wave pattern variation of a pure Resistive load}
-\end{figure}\\
-If the load is purely reactive as in Figure 9.5. On the smith chart, the intersection of the VSWR circle on the real axis will be the location of the voltage maximum and minimum. So the load will have either the maximum or minimum voltage at the load end as shown in Figure 9.5. The thick curve has ${V_{max}}$ at load end meaning ${R>Zo}$. If ${V_{min}}$ is at load end, it means ${R<Z_o}$, ${Z_o}$ is the characteristics impedance.\\
-\begin{figure}[h!]
+Similarly for a complex capacitive load, $V_\min\neq0$ and we encounter $V_\min$ first before $V_\max$ as shown in figure~\ref{fig:group94}. 
+
+\section{Purely Reactive Loads}
+Let us observe the standing wave patterns with pure reative components at the load end. As shown in figure~\ref{fig:group96}, the voltage minimum is zero or it touches the horizontal axis that is ${VSWR=\dfrac{V_\max}{V_\min}=\infty}$ as ${V_\min=0}$.
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group96}
-\caption{Standing wave pattern variation of a pure Inductive load}
-\end{figure}\\
-In Figure 9.6, we observe that the voltage minimum is zero or it touches the horizontal axis i.e ${VSWR=\dfrac{V_{max}}{V_{min}}=\infty}$ as ${V_{min}=0}$. i.e purely reactive loads. As we move from the load end we meet ${V_{max}}$ first indicating it is purely inductive and lies on the upper half of the smith chart.\\
-\begin{figure}[h!]
+\caption{Standing wave pattern variation of a pure inductive load}
+\label{fig:group96}
+\end{figure}
+
+As we move from the load end we meet ${V_\max}$ first indicating it is purely inductive and lies on the upper half of the Smith Chart.
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group97}
-\caption{Standing wave pattern variation of a pure Capacitive load}
-\end{figure}\\
-In Figure 9.7, the voltage minimum is also zero, but we encounter a minimum first as we go from the load end towards the generator indicating a purely capacitive load. So it lies in the lower half of the smith chart and $VSWR=\infty$.\\
+\caption{Standing wave pattern variation of a pure capacitive load}
+\label{fig:group97}
+\end{figure}
 
-So looking at the standing wave pattern, one can quickly identify the types of load because the information about the load is completely available from the standing wave pattern. Hence, ${V_{max}}$ and ${V_{min}}$ location and lowest value of ${V_{min}}$ which is related to VSWR can help us identity loads very quickly.\\
+For purely capacitive loads, the voltage minimum is also zero, but we encounter a minimum first as we go from the load end towards the generator indicating a purely capacitive load. So it lies in the lower half of the Smith Chart and $VSWR=\infty$.
 
-Now we solve some simple problems based on the theory we have developed from the transmission line.\\
+\section{Resistive Loads}
+Lastly, there is the case of when the load is neither capacitive nor inductive. If so, then the load must lie on the real horizontal axis of the Smith Chart, so the location of the load itself will be at either the voltage minimum point or voltage maximum point. If the load is purely resistive as in figure~\ref{fig:group95}. Recall that on the Smith Chart, the points of intersection of the VSWR circle on the real axis will be the locations of the voltage maximum and minimum. So there will either be maximum or minimum voltage at the load end as shown in figure~\ref{fig:group95}. The solid curve has ${V_\max}$ at load end meaning ${R>Z_o}$ while the dashed curve has ${V_\min}$ at load end which means ${R<Z_o}$. ${Z_o}$ is the characteristics impedance.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{./graphics/Group95}
+\caption{Standing wave pattern variation of a pure resistive}
+\label{fig:group95}
+\end{figure}
 
-\begin{center}
-\textbf{PROBLEM 1}
-\end{center}
+So looking at the standing wave pattern, one can quickly identify the types of load because the information about the load is completely available from the standing wave pattern. Hence, ${V_\max}$ and ${V_\min}$ location and lowest value of ${V_\min}$ which is related to VSWR can help us identity loads very quickly.
 
+\section{Transmission line problems}
+Now we solve some simple problems based on the theory we have developed from the transmission line.
+
+\begin{exmp}
 A voltage wave at ${1GH}z$ is traveling on a transmission line in ${+x}$ direction. The primary constants of the line are ${R=0.5\Omega/m}$, ${L=0.2\mu H/m}$, ${G=0.1\upsilon/m}$, ${C=100pF/m}$. Calculate the attenuation constant in ${nepers/m}$ and ${dB/m}$. If the voltage of the forward traveling wave at ${t=0}$ and ${x=0}$ ${v}=0.866V$. Find the voltage at ${x=1m}$ and time ${t=100nsec}$. What is the peak voltage at ${x=1m?}$ Take initial phase as ${30^0}$.
 
 
