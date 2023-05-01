@@ -1,87 +1,74 @@
 \chapter{Matching Of Impedances}\label{lec:lec12}
-\verb|From| previous chapters, we have dealt with other applications of transmission lines. In this chapter we are going to learn about the  most important application of \textbf{Transmission Lines}, which is \textquotedblleft Impedance Matching\textquotedblright.
+From previous chapters, we have dealt with other applications of transmission lines. In this chapter we will discuss the most important application of transmission lines, which is \emph{\textquotedblleft Impedance Matching\textquotedblright}\index{impedance matching}.
+
+As we know when the load impedance is equal to characteristic impedance $Z_o$, there is no reflection on the line, hence there is maximum power transfer. But this \textit{matching condition}\index{matching condition} is not always feasible. Thus, we need a module or device which will transform the load impedance to the characteristic impedance. This module is known as a \textbf{matching transformer unit}\index{matching transformer} as shown in figure~\ref{fig:fig7}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig7}
 \caption{Matching Transformer unit}
+\label{fig:fig7}
 \end{figure} 
 
-As we know from previous chapters, when impedance is equal to characteristic impedance $(Z_o)$, there is no reflection on the line, hence there is maximum power transfer. But as we have seen, this \textit{matching condition} is not always feasible. We then need a module or device which will transform this impedance to the characteristic impedance. This module  is known as a \textbf{matching unit or matching transformer}. 
-
-Let's start with the first example which has a matching unit (transformer)  which can convert the output (Z) impedance to the characteristic impedance $Z_o$, which is shown in figure 12.1. At the input (left most side), we should see a characteristic impedance $ Z_o$ and the module should be completely lossless (ideal) to allow maximum power transfer to load($Z$).
-
-Let's discuss various method by which different impedances can be matched to the characteristic impedance.
+Let us suppose we want to convert the output impedance $Z$ with the matching unit (transformer) to the characteristic impedance $Z_o$, which is shown in figure~\ref{fig:fig7}. At the input (left most side), we should see a characteristic impedance $ Z_o$ and the module should be completely lossless (ideal) to allow maximum power transfer to load $Z$. First, let us discuss various methods by which different impedances can be matched to the characteristic impedance.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig8}
+\includegraphics[width=0.7\linewidth]{./graphics/fig8}
 \caption{Application of transformer}
+\label{fig:fig8}
 \end{figure}
-\verb| 	In| figure 12.2a we have two different resistance $R_1$ and $R_2$ which are to be matched, i.e $R_1\neq R_2$. If they are connected directly there will be a mismatch and no maximum power transfer from $R_1$ to $R_2$. We then introduce some  device in between that will make $R_1$ appear like $R_2$ when seen  from left side and $R_2$ to appear like  $R_1$, when seen from the right side, so from both side it will appear that they are matched to the load and there is maximum power transfer.
 
-In figure 12.2b, we are matching R to $Z_o$, so we place in a module which help us to match the impedances between R and $Z_o$. Hence at the left side we should see $ Z_o$
-
-Also in figure 12.2c, which is the most important case. We have two(2) long transmission lines which are to be connected together. If the length of each transmission is very large, the input impedance of transmission line one(1) will appear as its characteristics impedance ($ Z_{o1}$) and transmission line two(2) will appear as its characteristics impedance $ Z_{o2}$. Making a straight connection between them,  $ Z_{o2}$ sees itself connected to $ Z_{o1}$ and vice-versa. This will cause an impedance mismatch and reflection towards both side at the junction of transmission line. So we bring a transforming device in between that will make  $Z_{o1}$ see $Z_{o2}$ as $Z_{o1}$ and vice-versa. From both sides, it seems as if the line is terminated in its characteristic impedance. Hence there will be no reflection on either side of the transmission line.
+In figure~\ref{fig:fig8}a we have two different resistances $R_1$ and $R_2$ which are to be matched, that is, $R_1\neq R_2$. If they are connected directly there will be a mismatch and no maximum power transfer from $R_1$ to $R_2$. We then introduce some device in between that will make $R_1$ appear like $R_2$ when seen from left side and $R_2$ to appear like $R_1$, when seen from the right side, so from both side it will appear that they are matched to the load and there is maximum power transfer. In figure~\ref{fig:fig8}b, we are matching R to $Z_o$, and like the previous case study we place in a module to match the impedances between R and $Z_o$. Hence at the left side we should see $Z_o$ and vice versa. lastly, in figure~\ref{fig:fig8}c, which is the most important case. We have two long transmission lines which are to be connected together. If the length of each transmission is very large, the input impedance of transmission line one (1) will appear as its characteristics impedance $ Z_{o1}$ and transmission line two (2) will appear as its characteristics impedance $ Z_{o2}$. For maximum power transfer, we bring a transforming device in between that will make $Z_{o1}$ see $Z_{o2}$ as $Z_{o1}$ and vice-versa. From both sides, it seems as if the line is terminated in its characteristic impedance. Hence there will be no reflection on either side of the transmission line.
 
 \section{Quarter Wavelength Transformer Technique}
-On the smith chart, if we have an impedance which is resistive, how much can we move on the transmission line so that the impedance always appear like a resistance? Let us introduce some section of transmission line in between both impedances (input and output) which has a characteristic impedance $ Z_{ox}$ in figure 12.2a and 12.2b  and is different from the characteristic impedance  $ Z_o$ to which the resistive impedance R is to be matched.
+On the Smith Chart, if we have an impedance which is resistive, \emph{how much can we move on the transmission line so that the impedance always appear like a resistance?} Let us introduce some section of transmission line in between both impedances (input and output) which has a characteristic impedance $ Z_{ox}$ in figure~\ref{fig:fig8}a and~\ref{fig:fig8}b and is different from the characteristic impedance $ Z_o$ to which the resistive impedance R is to be matched.
 
-Hence, we find out $ Z_{ox}$ and the length of this introduced transmission line for which R can be matched with $ Z_o$. Resistive impedance lie on the horizontal axis of the smith chart, $Z >  Z_o$ lies on the right and $Z <  Z_o$ lies on the left of smith chart.
-So the question is: What should be the value of $Z_{ox}$ and length l, that will match the resistive impedance to the characteristic impedance( $Z_o$)? From the smith chart shown in figure 12.3, to see a resistance again, we move $ \lambda/4$  or $ \lambda/2$. % remember to put in a smith chart here%
+Hence, we find out $ Z_{ox}$ and the length of this introduced transmission line for which R can be matched with $ Z_o$. Resistive impedance lie on the horizontal axis of the Smith Chart, $Z > Z_o$ lies on the right and $Z < Z_o$ lies on the left of Smith Chart. So the question is, \emph{what should be the value of $Z_{ox}$ and length $l$, that will match the resistive impedance to the characteristic impedance $Z_o$?} From the Smith Chart, to transform from $R$ to another resistive value, we need to move by either $ \frac{\lambda}{4}$ or $ \frac{\lambda}{2}$. But a $\frac{\lambda}{2}$ movement brings us back to the same impedance and thus we don't use this value because it will transform the impedance to itself. A $\frac{\lambda}{4}$ movement on the other hand, will have a resistive impedance which is different from the original resistive impedance(that is, inverts itself), thus $l = \frac{\lambda}{4} $ will be most appropriate because at this length we will have a different resistive value.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/smich}
-\caption{Smith chart}
-\end{figure}
-$\lambda/2$ movement brings us back to the same impedance. We won't use this value because it will transform the impedance to itself. $\lambda/4$ movement will have a resistive impedance which is different from the original resistive impedance(i.e inverts itself). $l = \lambda/4 $ will be most appropriate because at this length we will have a different resistive value.\\%remember to put in a figure here%
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{./graphics/fig9}
+\includegraphics[width=0.7\linewidth]{./graphics/fig9}
 \caption{The quarter wavelength transformer technique}
+\label{fig:fig9}
 \end{figure}
-From figure 12.4, at the transformer (output), the normalize impedance seen will be $R/Z_{ox}$. At the transformer(input), the normalize impedance seen will be $Z_{ox}/R$ (we know from property of transmission line, that every distance of $l = \lambda/4$, the impedance inverts itself). So the absolute characteristic impedance($ Z_o$) seen at the input will be equal to: 
-\[
-Z_o=(Z_{ox}/R)\times Z_{ox}\]  which gives 
-\[ Z_o=(Z_{ox}^2/R)\]
-therefore, \begin{equation}
+
+From figure~\ref{fig:fig9}, at the transformer (output), the normalize impedance seen will be $\frac{R}{Z_{ox}}$. At the transformer (input), the normalize impedance seen will be $\frac{Z_{ox}}{R}$\footnote{
+We know from property of transmission line, that every distance of $l = \frac{\lambda}{4}$, the impedance inverts itself
+}. So the absolute characteristic impedance $ Z_o$ seen at the input will be equal to: 
 Z_{ox}=\sqrt{RZ_o}
 \end{equation}
+Equation~\eqref{eqn:xteristicsimptransformer} implies that if we have a mismatch condition, we can input a matching transformer (an example is the \uppercase{balun}\footnote{
+A \uppercase{balun} is a type of electrical transformer used to connect a balanced transmission line, such as a twisted pair cable, to an unbalanced transmission line, such as a coaxial cable. The name \uppercase{balun} is short for \textquotedblleft\;balanced to unbalanced.\textquotedblright\;. It has a length $l=\frac{\lambda}{4}$, and a characteristic impedance $Z_{ox}$. \uppercase{Balun}s are commonly used in radio and television systems, as well as in data communication networks. They are available in a variety of designs, including ferrite-core \uppercase{balun}s, air-core \uppercase{balun}s, and transmission line \uppercase{balun}s.
+}\index{balun}). Introducing this section of transmission line, we will have a matched condition where R will appear as $ Z_o$ when seen from the input and $ Z_o$ will appear as R when seen from output. Since the transmission line is lossless, there is a match on the transmission line from $ Z_o$ to R, therefore, we will see a maximum power transfer.
+This technique of matching impedance is known as the \textbf{Quarter Wavelength Transformer Technique}\index{quarter wavelength transformer technique} which derives its name from the fact that we have to travel a length which is equal to a quarter, that is, 1/4 of the wavelength $\lambda$. This matching transformer is also used for matching lumped circuit.
 
-What does this tell us? This equation tells us that if we have a mismatch condition, we can input a matching transformer ( an example is the BALUN)\footnote{A BALUN is a device which is use to connect balance load to an unbalance load, it is mostly use in television.  it has a length ($L=\lambda/4$), and a characteristic impedance $Z_{ox} $}.
-Introducing this section of transmission line, we will have a matched condition where R will appear as $ Z_o$ when seen from the input and $ Z_o$ will appear as R when seen from output. Since line is lossless, there is a match on the transmission line from $ Z_o$ to R, therefore, we will see a maximum power transfer.
-This technique of matching impedance is known as the\\ 
-\underline{\textbf{Quarter Wavelength Transformer Technique}} which derives its name from the fact that we have to travel a length which is equal to a quarter, i.e 1/4 of the wavelength($\lambda$). This matching transformer is also used for matching lumped circuit.\\
-\subsection{Complex load impedance}
-\verb| 	A| question may be asked: if this technique(quarter wavelength transformer technique) is only used to match resistive impedance? The answer is absolutely \textbf{No!}  We can use this method to solve complex impedances but it requires us to do some thinking because on the first look, it appears impossible. This is because on the smith chart shown in figure 12.3, to derive $Z_{ox}$, we use only the horizontal axis of the chart. Now, how can we use both the real and imaginary parts of the chart?
+\subsection{Complex Load Impedance Matching}
+Now, we would like to find out \emph{if the technique (quarter wavelength transformer technique) can only be used to match resistive impedance?} The answer is no, we can use this method to solve complex impedances but it requires us to do some thinking because at the first look, it appears impossible. This is because on the Smith Chart, to derive $Z_{ox}$, we use only the horizontal axis of the chart. Now, \emph{how can we use both the real and imaginary parts of the chart?}
 
-As we saw earlier, we need to do some proper thinking to solve complex load(Z). We solve it  by first transforming the complex  normalized impedances to a real impedance by moving along the length of a transmission line. That means if you introduce some length of transmission line with characteristic impedance ($ Z_o$), then the impedance seen at the other end is real if the length is such that you get a voltage (maximum or minimum) for that length.
+We solve it by first transforming the complex normalized impedances to a real impedance. This is done by moving along the length of a transmission line. That means if you introduce some length of transmission line with characteristic impedance $ Z_o$, then the impedance seen at the other end is real if the length is such that you get a voltage (maximum or minimum) for that length.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig10}
-\caption{The quarter wavelength transformer technique for complex load Z}
+\caption{The quarter wavelength transformer technique for complex load $Z$}
+\label{fig:fig10}
 \end{figure}
 
-From figure 12.5, we have to move $ Z$ which is complex by a distance l on the transmission line to make its transformed impedance real at point B.
+From figure~\ref{fig:fig10}, we have to move $Z$ which is complex by a distance $l$ on the transmission line to make its transformed impedance real at point B.
+
+\subsection*{Procedure:}
+\begin{enumerate}[(i)]
+\item Mark the normalized point of the impedance, \textbf{P}, $r + jx$\footnote{
+The normalized impedance $ \bar{Z}$ is normalized with respect to characteristic impedance of the line $ Z_{o1}$, that is $ \bar{Z} = Z/ Z_{o1}$
+} on the Smith Chart as shown in figure~\ref{fig:sinsmith}.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{./graphics/sinsmith}
-\caption{ Simplified smith chart for complex load Quarter wavelength transformer }
+\caption{ Simplified Smith Chart for complex load Quarter wavelength transformer}
+\label{fig:sinsmith}
 \end{figure}
 
-\verb|U|sing analytical method may be time consuming and tedious, so we use a smith chart to solve the problem.\\ 
-\underline{\textbf{ Procedures:}}
-\begin{enumerate}
-\item Let $ Z = R + jX$ normalized become point $ P= \overline{R} +$ \footnote{The normalised impedance $ \overline{Z}$ is normalized with respect to characteristic impedance of the line $ Z_{o1}$, that is $ \overline{Z} = Z/ Z_{o1}$} $j\overline{X}$  on the smith chart shown in figure 12.6.
-\item  From point P, draw a constant VSWR circle.
-\item As we move on a constant VSWR circle (clockwise), we reach a point T which is a real impedance $\overline{R}_{max}$. As we move further, we reach a point S which is also a real impedance $\overline{R}_{min}$.
-\item $ l_{max}$ represents the distance from point P to T, while $ l_{min}$ represents the distance from point P to S.
-\item If we know the VSWR ($\rho$), the normalized impedance at point T and S would be known.
-\item considering distance  $ l_{max}$, the absolute impedance ($ Z'$) seen at point T is \begin{equation}R_{max} = Z_{o1}\times\rho
-\end{equation}
-\item considering distance  $ l_{min}$, the absolute impedance ($ Z'$) seen at point S is\begin{equation} R_{min} = Z_{o1}/\rho\end{equation}
-\item Therefore the absolute impedance ($Z'$) at point B in figure 12.5 can be found using either $ R_{max}$ or $ R_{min}$.
-\end{enumerate}
-
-Therefore the characteristics impedance of the quarter wavelength transformer $Z_{ox}$ would be: 
+\item Draw a constant VSWR circle at point \textbf{P} and find the first point of intersection with the real axis moving clockwise. In figure~\ref{fig:sinsmith} it is marked as \textbf{T}. The point \textbf{T} is a real impedance $r_\max$. The next point of intersection with the real axis is \textbf{S} and it is $r_\min$.
+\item The respective distances of these points from the load impedance are $ l_\max$ and $ l_\min$ respectively. $ l_\max$ is the distance from point \textbf{P} to \textbf{T}, while $ l_\max$ is the distance from point \textbf{P} to \textbf{S}.
+\item Determine the VSWR, $\rho$, and determine the corresponding resistive values $R_\max$ and $R_\min$ at points \textbf{T} and \textbf{S} respectively. 
+\item Considering the additional transmission line section of length $ l_\max$, the absolute impedance $ Z'$ seen at point \textbf{T} is
 \begin{equation}
 \boxed{Z_{ox}=\sqrt{Z_{o1}\rho Z_o}} 
 \end{equation}
@@ -90,24 +77,24 @@ Therefore the characteristics impedance of the quarter wavelength transformer $Z
 \boxed{Z_{ox}=\sqrt{Z_{o1}Z_o/\rho}}
 \end{equation}
 
-Any solution is acceptable depending on whether we want the length $l$, to be small or large. If we are taking cost into consideration, we will choose for shorter length of the transmission line.\\
+Any solution is acceptable depending on whether we want the length $l$ to be small or large. If we are taking cost into consideration for instance, we will choose for shorter length of the transmission line.
 
-In conclusion, we can say that\textit{ Quarter Wavelength Transformer technique} can be used for matching complex impedance (Z) to real impedance($Z_o$). However, it has a big drawback in that you require a unique characteristic impedance $Z_{ox}$ for the transforming device for different load Z. This is not desirable and realizable in nature because in practice, we do not get a\textit{ Transmission Line} whose characteristic impedance can be varied easily. The characteristic impedance $Z_{ox}$  depends on the physical dimensions of the transmission line as will be seen in chapter 15. We have cables of transmission line with standard characteristic impedance. For example for co-axial cable, the characteristic impedances are 50$\Omega$ and 75$\Omega$. For parallel wire transmission line, the characteristic impedances are 300$\Omega$ and 600$\Omega$.\\
-\verb|The| question then is, can we use the standard transmission line which are available with their standardize characteristic impedances?
+In conclusion, we can say that \textit{Quarter Wavelength Transformer technique} can be used for matching complex impedance $Z$ to the characterstics impedance $Z_o$. However, it has a big drawback in that you require a unique characteristic impedance $Z_{ox}$ for the transforming device for different loads. This is not desirable and realizable in nature because in practice, we do not get a transmission line whose characteristic impedance can be varied easily. The characteristic impedance $Z_{ox}$ depends on the physical dimensions of the transmission line as will be seen in chapter 15. Typically, we have cables of transmission line with standard characteristic impedance. For example for co-axial cable, the characteristic impedances are $50\Omega$ and $75\Omega$. For parallel wire transmission line, the characteristic impedances are $300\Omega$ and $600\Omega$.
+
 \section{Stub Matching Technique}
-\verb|T|he answer to section 12.1 question is \textbf{Yes!} The approach used in solving this problem is known as \textbf{Stub Matching Technique}. Let's define a Stub.\\
+The question then is, \emph{can we use the standard transmission line which are available with their standardize characteristic impedances?} Yes we can and the approach used is known as \textbf{Stub Matching Technique}\index{stub matching technique}. Let's define a Stub\index{stub}.
 
-A stub is an auxiliary section of a transmission line which is either short circuited (S.C) or open circuited (O.C), appended or connected to the main transmission line either in series or parallel. There are four(4) types of stub matching technique, which are :\\
-\begin{enumerate}
+A stub is an auxiliary section of a transmission line which is either short circuited (S.C) or open circuited (O.C), appended or connected to the main transmission line either in series or parallel. There are four(4) types of stub matching technique, which are
+\begin{enumerate}[(i)]
 \item Series O.C stub matching technique
 \item Series S.C stub matching technique
 \item parallel O.C stub matching technique
 \item Parallel S.C stub matching technique
 \end{enumerate}
-In this chapter, we are going to be concentrating on the \textbf{Parallel Short Circuit Stub Matching Technique.}\\
+In this chapter, we are going to be concentrating on the \textbf{Parallel Short Circuit Stub Matching Technique.}
 
-By using the stub at proper location on the main transmission line, it is possible to match a complex impedance(Z) to the characteristic impedance ($Z_o$).\\
-\underline{Note}: We do not require a unique characteristic impedance ($Z_o$) for each impedance matching. The characteristic impedance of the main and auxiliary transmission line remains the same.\\
+By using the stub at proper location on the main transmission line, it is possible to match a complex impedance $Z$ to the characteristic impedance $Z_o$.
+Recall the advantage of the stub technique is that we do not require a unique characteristic impedance $Z_o$ for each impedance matching. The characteristic impedance of the main and auxiliary transmission line remains the same.
 
 What we want to change now is the length $l$ from load (location of stub) and the length of the auxiliary transmission line attached to the main transmission line ($l_s$). There are three (3) techniques for appending an auxiliary line (stub) to the main line. They are :
 \begin{enumerate}[(i)]
