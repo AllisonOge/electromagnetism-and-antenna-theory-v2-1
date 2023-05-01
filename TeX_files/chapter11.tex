@@ -337,25 +337,11 @@ Another application of transmission line is the voltage or current step up trans
 \caption{Short circuit transmission line with section xx'}
 \end{figure}
 
-Considering a small section of transmission line shorted at the end shown in figure 11.5. Let's say  by some  means,  voltage  is induced along the section of the  transmission line not from open circuit  or short circuit  end  but between  these  two  points. (let's say at the middle location shown  with  the dotted lines). At any time, it would appear that the two sections (A and B) of transmission lines are connected in parallel. Standing wave signal get setup and induced in the transmission line. This voltage does not see any impedance but the characteristic impedance of the transmission line. So the voltage  at the middle  point XX' sends two traveling waves along the transmission line as if the  energy is supplied to the characteristic impedance of the two sections of the transmission line. The waves are shown  as going in direction M and N respectively. N waves  sees a short circuit and M waves  sees  an open circuit. N sees a reflection  coefficient  of -1. Hence, at short circuit point, the wave is reflected completely as shown  by the arrow. With a reflection coefficient of -1, the amplitude is unity but the phase is 180 degrees. Hence, the wave  traveling toward N after reflection undergoes a phase change of $\pi$ and travels all the way to the open circuit  side as shown by the arrow. At the open circuit point, the reflection coefficient = 1.
-
-$ \Gamma_{L} = \frac{Z_{L} - Z_{o}}{Z_{L} + Z_{o}} =  \frac{1 - \frac{Z_{o}}{Z_{L}}}{1 + \frac{Z_{o}}{Z_{L}}}$\\
-
-$ Z_{L} = \infty $ At open circuit.\\
-
-$ \Gamma_{L} =  \frac{1 - \frac{Z_{o}}\infty}{1 + \frac{Z_{o}}\infty} = \frac{1 - 0}{1 + 0} = 1$
-
-Hence for open circuit $\Gamma_{L} = 1 $.
-
-And N wave reverses with $\pi$ phase change, it gets to open circuit with a reflection coefficient of  1, turn around and start moving  toward point XX'. Hence at XX' N traveled  a total distance of $ \frac{\lambda}{2} (\frac{\lambda}{8} + \frac{\lambda}{4} + \frac{\lambda}{8})$ and has  gone through a phase change of $2\pi$.
-
-A distance traveled $\frac{\lambda}{4}$ corresponds to a phase change  of $\pi$ due to negative reflection coefficient, it means N has undergone a phase change of $\pi$  (due to $\frac{\lambda }{4}$ distance  traveled) + $\pi$ (due to negative  reflection  coefficient  at short circuit) = $2\pi$ total phase change.
-
-Hence  the  wave induced at XX' is same as the  wave N which has been taken through  a phase change  of $2\pi$. This is some kind of positive feedback because  the induced  voltage  will add to the  reflected  voltage N, increase in amplitude  and the re-traveling process  starts all over. That means  the voltage essentially  starts growing  in  the transmission line. Exactly the same  thing  happen to  wave M. It is reflected  at open circuit point, travels $\frac{\lambda}{4}$ to short circuit  point  reflected with a phase of $\pi$  and travels  towards XX'. At the end has traveled $\frac{\lambda }{2}$  distance  with total phase change of $2\pi$ also. add to the induced  voltage  at XX'. At the end the wave has traveled $\frac{\lambda}{2}$ distance with total phase of $2\pi$ also. Add to the induced voltage at XX'. Then everything  grows as it goes around one more time.  Hence the standing wave of the setup will grow.  Hence a small  voltage is induced at XX'.   
-\begin{figure}[h]
+ \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig6}
-\caption{Short circuit transmission line with with voltage placed at section XX'}
+\includegraphics[width=1\linewidth]{./graphics/step_up_transformer_temp}
+\caption{Standing wave propagation in the transmission line with one end open and the other end shorted}
+\label{fig:fig6}
 \end{figure}
 
 How far will it grow? With no losses in the transmission line, it will grow up to infinity. The voltage will keep growing to infinite amplitude because there is nothing  controlling this amplitude  on the transmission line. Hence, if even a small voltage is induced on a section  of the transmission line with resonant length, the standing wave in the transmission line is now much larger compared to the induced voltage on the transmission line. This voltage can be used to our advantage in the sense that the voltage  in the transmission line  can be much larger compared to the voltage we originally induced at point XX'.
