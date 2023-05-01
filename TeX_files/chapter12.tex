@@ -33,7 +33,14 @@ Hence, we find out $ Z_{ox}$ and the length of this introduced transmission line
 From figure~\ref{fig:fig9}, at the transformer (output), the normalize impedance seen will be $\frac{R}{Z_{ox}}$. At the transformer (input), the normalize impedance seen will be $\frac{Z_{ox}}{R}$\footnote{
 We know from property of transmission line, that every distance of $l = \frac{\lambda}{4}$, the impedance inverts itself
 }. So the absolute characteristic impedance $ Z_o$ seen at the input will be equal to: 
+\begin{dmath*}
+Z_o=\left(\frac{Z_{ox}}{R}\right)\times Z_{ox}
+=\frac{Z_{ox}^2}{R}
+\end{dmath*}
+Therefore,
+\begin{equation}
 Z_{ox}=\sqrt{RZ_o}
+\label{eqn:xteristicsimptransformer}
 \end{equation}
 Equation~\eqref{eqn:xteristicsimptransformer} implies that if we have a mismatch condition, we can input a matching transformer (an example is the \uppercase{balun}\footnote{
 A \uppercase{balun} is a type of electrical transformer used to connect a balanced transmission line, such as a twisted pair cable, to an unbalanced transmission line, such as a coaxial cable. The name \uppercase{balun} is short for \textquotedblleft\;balanced to unbalanced.\textquotedblright\;. It has a length $l=\frac{\lambda}{4}$, and a characteristic impedance $Z_{ox}$. \uppercase{Balun}s are commonly used in radio and television systems, as well as in data communication networks. They are available in a variety of designs, including ferrite-core \uppercase{balun}s, air-core \uppercase{balun}s, and transmission line \uppercase{balun}s.
@@ -70,12 +77,17 @@ The normalized impedance $ \bar{Z}$ is normalized with respect to characteristic
 \item Determine the VSWR, $\rho$, and determine the corresponding resistive values $R_\max$ and $R_\min$ at points \textbf{T} and \textbf{S} respectively. 
 \item Considering the additional transmission line section of length $ l_\max$, the absolute impedance $ Z'$ seen at point \textbf{T} is
 \begin{equation}
-\boxed{Z_{ox}=\sqrt{Z_{o1}\rho Z_o}} 
+R_\max = Z_{o1}\times\rho
 \end{equation}
-\\OR
+Similarly for $ l_\min$, the absolute impedance $ Z'$ seen at point \textbf{S} is
 \begin{equation}
-\boxed{Z_{ox}=\sqrt{Z_{o1}Z_o/\rho}}
+R_\min = \frac{Z_{o1}}{\rho}
 \end{equation}
+\end{enumerate}
+Therefore the absolute impedance $Z'$ at point B in figure~\ref{fig:fig10} can be found using either $ R_\max$ or $ R_\min$. And the characteristics impedance of the quarter wavelength transformer $Z_{ox}$ would be
+\begin{equation*}
+Z_{ox}=\sqrt{Z_{o1}\rho Z_o}\quad\text{or}\quad Z_{ox}=\sqrt{Z_{o1}\frac{Z_{o1}}{\rho}}
+\end{equation*}
 
 Any solution is acceptable depending on whether we want the length $l$ to be small or large. If we are taking cost into consideration for instance, we will choose for shorter length of the transmission line.
 
