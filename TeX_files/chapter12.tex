@@ -77,14 +77,14 @@ The normalized impedance $ \bar{Z}$ is normalized with respect to characteristic
 \item Determine the VSWR, $\rho$, and determine the corresponding resistive values $R_\max$ and $R_\min$ at points \textbf{T} and \textbf{S} respectively. 
 \item Considering the additional transmission line section of length $ l_\max$, the absolute impedance $ Z'$ seen at point \textbf{T} is
 \begin{equation}
-R_\max = Z_{o1}\times\rho
+Z' = R_\max = Z_{o1}\times\rho
 \end{equation}
 Similarly for $ l_\min$, the absolute impedance $ Z'$ seen at point \textbf{S} is
 \begin{equation}
-R_\min = \frac{Z_{o1}}{\rho}
+Z' = R_\min = \frac{Z_{o1}}{\rho}
 \end{equation}
 \end{enumerate}
-Therefore the absolute impedance $Z'$ at point B in figure~\ref{fig:fig10} can be found using either $ R_\max$ or $ R_\min$. And the characteristics impedance of the quarter wavelength transformer $Z_{ox}$ would be
+Therefore the absolute impedance $Z'$ at point B in figure~\ref{fig:fig10} can be found using either $ R_\max$ or $ R_\min$ and the characteristics impedance of the quarter wavelength transformer $Z_{ox}$ would be
 \begin{equation*}
 Z_{ox}=\sqrt{Z_{o1}\rho Z_o}\quad\text{or}\quad Z_{ox}=\sqrt{Z_{o1}\frac{Z_{o1}}{\rho}}
 \end{equation*}
@@ -125,17 +125,11 @@ We are going to consider the single stub matching technique in the\textit{ paral
 
 Therefore, the solution is as follows; we need to find the length $ l_l$ such that when Z is transformed by this distance, the resistive part becomes equal to $Z_o$ and the parallel combination of the transformed impedance and the reactive part from the stub cancels out.\\
 
-Choose $l_s$, such that the reactive part of stub cancels the reactive part of the load after its transformation. The function of Length $l$(location of stub), is to make impedance Z to be equal to characteristic impedance($Z_o$) and length of stub($l_s$) functions to neutralize the reactive part. Doing this analytically is tedious but using Smith Chart is easier.\\
-
-For single stub matching, it is better to work in terms of admittances because of the parallel connection.\\
-Let load 
-\begin{equation}
-Y = 1/Z
-\end{equation}
-characteristic admittance 
-\begin{equation} Y_o = 1/Z_o\end{equation} 
-and normalized load admittance with respect to characteristic admittance 
-\begin{equation} 
+For the single stub matching, we will work in terms of admittance since we have parallel connections. Therefore, let the load admittance and characteristic admittance be
+\begin{align*}
+Y &= 1/Z\quad\text{(load admittance)}\\
+Y_o &= 1/Z_o\quad\text{(characteristic admittance)}
+\end{align*}
 \bar{Y}=\frac{Y}{Y_o} 
 \end{equation}
 \textbf{Lets see how this work on the Smith Chart}. % put Smith Chart here%.
