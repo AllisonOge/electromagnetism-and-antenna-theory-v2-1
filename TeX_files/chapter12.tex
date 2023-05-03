@@ -91,12 +91,12 @@ Z_{ox}=\sqrt{Z_{o1}\rho Z_o}\quad\text{or}\quad Z_{ox}=\sqrt{Z_{o1}\frac{Z_{o1}}
 
 Any solution is acceptable depending on whether we want the length $l$ to be small or large. If we are taking cost into consideration for instance, we will choose for shorter length of the transmission line.
 
-In conclusion, we can say that \textit{Quarter Wavelength Transformer technique} can be used for matching complex impedance $Z$ to the characterstics impedance $Z_o$. However, it has a big drawback in that you require a unique characteristic impedance $Z_{ox}$ for the transforming device for different loads. This is not desirable and realizable in nature because in practice, we do not get a transmission line whose characteristic impedance can be varied easily. The characteristic impedance $Z_{ox}$ depends on the physical dimensions of the transmission line as will be seen in chapter 15. Typically, we have cables of transmission line with standard characteristic impedance. For example for co-axial cable, the characteristic impedances are $50\Omega$ and $75\Omega$. For parallel wire transmission line, the characteristic impedances are $300\Omega$ and $600\Omega$.
+In conclusion, we can say that \textit{Quarter Wavelength Transformer technique} can be used for matching complex impedance $Z$ to the characterstics impedance $Z_o$. However, it has a big drawback in that you require a unique characteristic impedance $Z_{ox}$ for the matching device for different loads. This is not desirable and realizable in nature because in practice, we do not get a transmission line whose characteristic impedance can be varied easily. The characteristic impedance $Z_{ox}$ depends on the physical dimensions of the transmission line as will be seen in chapter 15. Typically, we have cables of transmission line with standard characteristic impedance. For example for co-axial cable, the characteristic impedances are $50\Omega$ and $75\Omega$. For parallel wire transmission line, the characteristic impedances are $300\Omega$ and $600\Omega$.
 
 \section{Stub Matching Technique}
-The question then is, \emph{can we use the standard transmission line which are available with their standardize characteristic impedances?} Yes we can and the approach used is known as \textbf{Stub Matching Technique}\index{stub matching technique}. Let's define a Stub\index{stub}.
+The question then is, \emph{can we use the standard transmission line which are available with their standardize characteristic impedances?} Yes we can and the approach used is known as \textbf{Stub Matching Technique}\index{stub matching technique}. Let's define a Stub.
 
-A stub is an auxiliary section of a transmission line which is either short circuited (S.C) or open circuited (O.C), appended or connected to the main transmission line either in series or parallel. There are four(4) types of stub matching technique, which are
+\emph{A stub\index{stub} is an auxiliary section of a transmission line which is either short circuited (S.C) or open circuited (O.C) that is attached to the main transmission line either in series or parallel.} There are four(4) types of stub matching technique, which are
 \begin{enumerate}[(i)]
 \item Series O.C stub matching technique
 \item Series S.C stub matching technique
@@ -106,107 +106,113 @@ A stub is an auxiliary section of a transmission line which is either short circ
 In this chapter, we are going to be concentrating on the \textbf{Parallel Short Circuit Stub Matching Technique.}
 
 By using the stub at proper location on the main transmission line, it is possible to match a complex impedance $Z$ to the characteristic impedance $Z_o$.
-Recall the advantage of the stub technique is that we do not require a unique characteristic impedance $Z_o$ for each impedance matching. The characteristic impedance of the main and auxiliary transmission line remains the same.
+Recall the advantage of the stub technique is that we do not require a unique characteristic impedance $Z_o$ for each impedance matching. The characteristic impedance of the main and auxiliary transmission line remains the same. However, we change the length $l_l$ from load to the location of stub and the length of the stub (or auxiliary transmission line) attached to the main transmission line $l_s$ (see figure~\ref{fig:fig11}).
 
-What we want to change now is the length $l$ from load (location of stub) and the length of the auxiliary transmission line attached to the main transmission line ($l_s$). There are three (3) techniques for appending an auxiliary line (stub) to the main line. They are :
+There are three (3) techniques for attching a stub to the transmission line to match the load impedance to the characteristic impedance and they are:
 \begin{enumerate}[(i)]
-\item Single Stub matching technique - One appended auxiliary line.
-\item Double Stub matching technique - Two appended auxiliary line.
-\item Triple Stub matching technique - Three appended auxiliary line.
-\end{enumerate} 
-\subsection{Single Stub Matching Technique }
+\item Single Stub matching technique - One attached auxiliary line.
+\item Double Stub matching technique - Two attached auxiliary line.
+\item Triple Stub matching technique - Three attached auxiliary line.
+\end{enumerate}
+
+\subsection{Single Stub Matching Technique}
+In this section, we will discuss the single stub matching technique in the \textit{parallel short circuit stub matching technique configuration}. Figure~\ref{fig:fig11} shows the structure of a single stub matching technique. Again, our aim is to find a real impedance at point A that is equal to the characteristic impedance, $Z_o$. The main transmission line with characteristics impedance $ Z_o$ is connected to load impedance $Z$.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig11}
-\caption{Single stub matching technique with one auxiliary line attached}
+\caption{Single stub matching technique with one auxiliary transmission line attached}
+\label{fig:fig11}
 \end{figure}
 
-We are going to consider the single stub matching technique in the\textit{ parallel short circuit type.} Again, our aim is to find a real impedance at point A in figure 12.7 which is equal to $Z_o$. The main line with characteristics impedance $ Z_o$ is connected to impedance Z. We connect the auxiliary transmission line to the main transmission line. The stub is short circuited. The stub length $l_s$ is connected in parallel to the main transmission line at a distance $ l_l$ from the impedance to be matched. We know that as voltage or energy moves from generator to the load, it sees two(2) parts: the stub section and load Z section. At the load, there is reflection and since the stub is short circuited, there is a total reflection which is in opposite direction ($\Gamma_{s.c} = -1$). If we make sure that both reflected energy from stub and from load match each other in amplitude and are opposite in phase, there will be no reflection beyond node A. Since there is no reflection beyond A that is, the input impedance is always going to be equal to the characteristic impedance.\\
+ The stub length $l_s$ is connected in parallel to the main transmission line at a distance $ l_l$ from the impedance to be matched. We know that as voltage or energy moves from generator to the load, it sees two (2) parts: the stub section and load $Z$ section. At the load, there is reflection and at the stub there is a total reflection which is in opposite direction ($\Gamma_{SC} = -1$) since the stub is short circuited. If we make sure that both reflected energy from stub and from load match each other in amplitude and are opposite in phase, there will be no reflection beyond point A. Since there is no reflection beyond A that is, the input impedance is always going to be equal to the characteristic impedance.
 
-Therefore, the solution is as follows; we need to find the length $ l_l$ such that when Z is transformed by this distance, the resistive part becomes equal to $Z_o$ and the parallel combination of the transformed impedance and the reactive part from the stub cancels out.\\
+The theory, thereofore, is as follows; \emph{we need to find the length $ l_l$ such that when the load impedance $Z$ is transformed by this distance, the resistive part becomes equal to $Z_o$ and the parallel combination of the transformed impedance and the reactive part from the stub cancels out.} We choose $l_s$, such that the reactive part of stub cancels the reactive part of the load after its transformation. The purpose of the length $l_l$ (location of stub), is to make impedance $Z$ to be equal to characteristic impedance $Z_o$ and the purpose of the length of stub $l_s$ is to neutralize the reactive part. We will proceed to solve the single stub matching technique graphically using the Smith Chart.
 
 For the single stub matching, we will work in terms of admittance since we have parallel connections. Therefore, let the load admittance and characteristic admittance be
 \begin{align*}
 Y &= 1/Z\quad\text{(load admittance)}\\
 Y_o &= 1/Z_o\quad\text{(characteristic admittance)}
 \end{align*}
+Hence, the normalized load admittance is
+\begin{equation*} 
 \bar{Y}=\frac{Y}{Y_o} 
-\end{equation}
-\textbf{Lets see how this work on the Smith Chart}. % put Smith Chart here%.
+\end{equation*}
+Figure~\ref{fig:qwtch} shows the simplified Smith Chart for the singe stub matching problem.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/qwtch}
-\caption{Simplified Smith Chart for single stub matching}
+\caption{Simplified Smith Chart for Single Stub Matching}
+\label{fig:qwtch}
 \end{figure}
-Let P be the normalized admittance to be matched in figure 12.8. We draw the constant VSWR circle passing through P. When this circle intersect g = 1 circle, at that point it means the real part will be equal to the characteristic impedance $Z_o$. that is,. at point (B and D). Distance (P to B) or (P to D) will give us what the reactive
-part should be at that location since we know already the conductive part is equal to 1. The distance PB = $l_l$ from figure 12.7 or the distance PD will serve the same purpose. At A, \footnote{$Y = g + jb$}$\bar{Y} = 1 + jb' $. Then the stub must have $-jb'$ as its admittance so that when they are connected in parallel, the susceptance cancels out leaving only the normalize admittance of $1 + j0$.
-Also when the stub is connected in series, we use the same pattern but we will use impedance values instead of admittances.\\
-The process involved are:\\
-\begin{itemize}
-\item[a.]First locate the given admittance value to be matched on the Smith Chart.
-\item[b.]Draw your constant VSWR circle around the located point on Smith Chart.
-\item[c.] Move on the constant VSWR circle in a clockwise direction and mark the two points it intersect with the constant g = 1 circle.
-\item[d.]The distance from the first location (point P) to either of these new points (point B or D) is the location of stub $l_l$.
-\item[f.] Choosing point B (1+j$b'$), take a mirror image which is point D(1 - j$b'$). Draw a constant susceptance circle passing through this point D. Where this circle touches the outermost circle of Smith Chart is$ -jb'$.
-\item[g.] The distance moving anticlockwise\footnote{Since stub is S.C, energy is totally reflected.} from this point S to the S.C point on the Smith Chart give us the length of stub.
-\end{itemize}
+Let P be the point of the normalized admittance to be matched and the dashed circle passing through P is the constant VSWR circle. Where this circle intersects $g = 1$ circle denoted by points B and D, we have that the real part of the transformed admittance, $Y$ equals the characteristic admittance $Y_o$. That is, at points B and D, the distance from P to B or P to D will give us a conductive part equal to unity (same as $Y_o$) and then what the unmatched reactive part should be at thoes locations. These locations give the value of $l_l$ which corresponds to point A in figure~\ref{fig:fig11}, such that from the load section, $\bar{Y} = 1 + jb'$. Therefore, the stub must have $-jb'$ as its admittance so that when they are connected in parallel, the susceptance cancels out leaving only the normalize admittance of $1 + j0$. The process involved is summarized as follows:
+\begin{enumerate}[(i)]
+\item First locate the given admittance value to be matched on the Smith Chart.
+\item Draw your constant VSWR circle through the located point on Smith Chart.
+\item Move along the constant VSWR circle in a clockwise direction and mark the two points it intersects with the constant $g = 1$ circle.
+\item The distance from the first location (point P) to either of these new points (point B or D) is the location of stub $l_l$.
+\item Choose a point from the new points say point B (1+j$b'$), take a mirror image which is point D (1 - j$b'$). Draw a constant susceptance circle passing through this point D. Where this circle touches the outermost circle of Smith Chart is $-jb'$.
+\item The distance moving anticlockwise from this point S to the SC point on the Smith Chart give us the length of stub (see figure~\ref{fig:qwtch}).
+\end{enumerate}
 
-Single stub matching technique is an extremely useful technique in matching impedances to the characteristics impedance of the line. In this technique, we are matching impedance without any unique \textbf{Transmission line} as in the case of a Quarter wavelength transformer technique.\\
+Similarly, when the stub is connected in series, we use the same pattern but we will use impedance values instead of admittances. Single stub matching technique is an extremely useful technique in matching impedances to the characteristics impedance of the line. In this technique, we are matching impedance without any unique transmission line unit as in the case of a Quarter Wavelength Transformer Technique. However, this technique has a small drawback which is that the location of the stub depends on the impedance to be matched. Though the single stub technique can match all possible load, for every load to be matched, the location of the stub has to be changed which may not be that easy once the stub is connected. To solve this limitations as we did for quarter wavelength transformer technology, we will use the Double Stub Matching Technique.
 
-However, this technique has a small drawback which is: the location of the stub depends on the impedance to be matched. Though the single stub technique can match all possible load, for every load to be matched, the location of the stub has to be changed which may not be that easy once the stub is connected.\\
-
-To solve this limitations as we did for quarter wavelength transformer technology, we will use the Double stub matching technique.
-\subsection{Double Stub Matching Technique}
-
-This technique involves the use of two(2) stub. In this method, we change only the length of the stub while the location of stub is fixed. The separation between the stubs is $ 3\lambda/8$. The distance between stub 1 and load is $l_l$%put footnote here and two figures(double stub(12.9) and Smith Chart(12.10))%
+\subsection{Double Stub Matching Technique}\index{double stub matching technique}
+This technique involves the use of two (2) stubs. In this method, we change only the length of the stub while the location of stub is fixed. The separation between the stubs is $3\frac{\lambda}{8}$. The distance between stub 1 and load is $l_l$ as shown in figure~\ref{fig:fig12}
+%put footnote here and two figures(double stub(12.9) and Smith Chart(12.10))%
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig12}
-\caption{Double stub matching technique with two auxiliary lines attached}
+\caption{Double Stub Matching Technique with two auxiliary lines attached}
+\label{fig:fig12}
 \end{figure}
+From figure~\ref{fig:fig12}, starting from the load end, the initial admittance is $\bar{Y} = g + jb$. After a distance $l_l$ moving clockwise to point B (towards generator), (at this point B\textsuperscript{\textemdash}, $g_1 + jb'$) and when this is combined with the susceptance from stub 1, $-jb_1$, we get $g_1 +jb_1$ at B\textsuperscript{+}. When transformed along the length $3\frac{\lambda}{8}$, we get $1 + jb_2$. When this is combined with the susceptance of stub 2 $-jb_2$, we get $1 + 0j$ beyond point C, C\textsuperscript{+}. Like for the single stup matching technique, we will solve the double stub matching technique using the Smith Chart.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/dousmith}
-\caption{Simplified Smith Chart for double matching technique}
-\end{figure}\\
-\underline{\textbf{Procedure:} } \\
+\caption{Simplified Smith Chart for Double Stub Matching Technique}
+\label{fig:dousmith}
+\end{figure}
 
-From figure 12.9, starting from the output, the initial Admittance was $g + jb$. After a distance $l_l$ moving clockwise to point B (towards generator ), (at this point $B = g' + jb'$) when this is combined with the susceptance from the stub($-jb_1$), we get $g_1 +jb_1$. When transformed along the length $3\lambda/8$, we get 1 + $jb_2$. When this is combined with the susceptance of stub 2$(-jb_2)$, we get $1 + 0j$ beyond point $C^+$.\\
+Figure~\ref{fig:dousmith} shows the analysis for the structure in figure~\ref{fig:fig12}. We have already seen in the single stub matching technique that at the location where a stub is connected if the admittance seen towards the load is of the form $1 +jb$ then the stub can cancel the reactive part of the admittance and we get a matching condition. In the case of the double stub matching technique, if the admittance at point C is of the form $1 + jb$, the matching condition can be achieved. This means at location B the admittance must be a transformed version of $1 + jb$ by a distance $3\frac{\lambda}{8}$ away from the generator. The translation of $1 + jb$ by distance of $3\frac{\lambda}{8}$ counter-clockwise is the same as the rotation of the $g = 1$ circle by 270\textdegree counter-clockwise around the centre of the Smith Chart.
 
-Using Smith Chart for the analysis, since we are to move a distance of $3\lambda/8$, we first rotate circle g = 1 by $270^o$. Mark the normalized admittance $g + jb$ (since we are dealing with parallel circuit) denoted by A on figure 12.10. Move by $l_l$ to get to point B(g + j$b'$). At point B, since we are adding a stub of $-jb'$, we are changing only the reactive part. So we move anticlockwise on the constant conductance circle till we get to the rotated g = 1 circle. At this point, we now move on a constant VSWR circle in a clockwise direction, that is,. we move by $ 3\lambda/8$. After the distance $ 3\lambda/8$, the point touches the initial g = 1 circle given by point $C (1+ jb_2$). To cancel $jb_2$ you take a mirror image of $1-jb_2$, then find conductance circle of $ -jb_2$ at the outermost circle of the Smith Chart. We measure the distance from this point to the S.C point in an anticlockwise direction to give us the length of the second stub.\\
+\subsection*{Procedure:}
+\begin{enumerate}[(i)]
+\item Mark the normalized admittance $g + jb$ denoted by A in figure~\ref{fig:dousmith}.
+\item Move on the constant VSWR circle by $l_l$ to get to point B\textsuperscript{\textemdash} ($g_1 + jb'$).
+\item At point B\textsuperscript{+}, since we are adding the admittance of stub 1, $-jb'$, we are changing only the reactive part. So we move anticlockwise on the circle of constant conductance, $g_1$, from B\textsuperscript{\textemdash} till we get to the rotated $g = 1$ circle where it intersects at B\textsuperscript{+}. Essentially, stub 1 helps in bringing the admittance to lie on the rotated circle.
+\item At point B\textsuperscript{+}, we now move on a constant VSWR circle in a clockwise direction by $ 3\frac{\lambda}{8}$ to transform the admittance $g_1 + jb_1$ to $1 + jb_2$ at C\textsuperscript{\textemdash}.
+\item To cancel the reactive part, $jb_2$ we take a mirror image, $1-jb_2$, then find susceptance circle of $-jb_2$ at the outermost circle of the Smith Chart, $S_2$. We measure the distance from this point to the SC point in an anticlockwise direction to give us the length of the second stub, $l_{s2}$.
+\item Now to find the length of the first stub, we find the difference between the two (2) susceptance value B\textsuperscript{\textemdash} and B\textsuperscript{+} since the conductance are the same. Mark the difference on the outermost circle of the Smith Chart $S_1$. The distance from this point to the SC point moving anticlockwise gives the length of the first stub.
+\end{enumerate}
 
-Now to find the length of the first stub, we find the difference between the two (2) susceptance value $B$ and $B^+$, since the conductance are the same. Mark the difference on the outermost circle of Smith Chart($S_1$). The distance from this point to the S.C point moving anticlockwise gives the length of the first stub. \\
+We have successfully tackled the drawback of flexible location of the stub in the single stub matching technique. However, the double stub matching technique has a drawback which is, the whole essence of matching is possible provided that by moving in a constant conductance circle we can intersect the $g = 1$ circle. If by the movement through the constant conductance circle we can not reach the rotated $g = 1$ circle, then matching is not possible. Now we know the nature of the constant g circle (that they are within one another), so it is possible that if the admittance at point B\textsuperscript{\textemdash} lies in a circle smaller than the $g = 1$ circle, then by our movement inside the constant conductance circle, we will never be able to intersect the rotated $g = 1$ circle, which means matching is not possible. What this means is that if $g_1 + jb'$ lies within the shaded forbidden region shown in figure~\ref{fig:dousmith}, then the impedance matching is not possible. The impedance we want to match can lie in the forbidden region, but the transformed impedance after distance $ l_l$ should be out of the forbidden region.
 
-However, this has a small drawback which is, the whole essence of matching is possible provided that by moving in a constant conductance circle we can intersect the $g = 1$ circle. If by the movement through the constant conductance circle we can not reach the rotated $g = 1$ circle, then the matching is not possible. Now we know the nature of the constant g circle (that they are within another). So it is possible that if the admittance at point B lies in a circle smaller than the $g = 1$ circle, then by our movement inside the constant conductance circle, we will never be able to come to the rotated g = 1 circle. If we can not come to the rotated $g = 1$ circle, then the impedance after transformation can not come to the original $g =1$ circle that is,. matching is not possible. What this means is that if $g' + jb'$ lies within the shaded forbidden region shown in figure 12.10, then the impedance matching is not possible. The impedance we want to match can lie in the forbidden region, but the transformed impedance after distance $ l_l$ should be out of the forbidden region.\\
-
-So by choosing a proper value for $l_l$, we can avoid the forbidden region. Therefore, the double stub matching technique has a small limitation that it cannot match those impedances whose transformed value after $l_l$ lie within the forbidden region. However, this has been solved by introducing the concept of three stub matching.
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{./graphics/fig12}
-\caption{Double stub matching technique with two auxiliary lines attached}
-\end{figure} 
+So by choosing a proper value for $l_l$, we can avoid the forbidden region. Therefore, the double stub matching technique has a small limitation that it cannot match those impedances whose transformed value after $l_l$ lie within the forbidden region. However, this has been solved by introducing the concept of \emph{three stub matching}\index{three stub matching}.
 
 \begin{exmp}
-For a load, $Z_{o} = 50\Omega$, $Z_{L} = (100 + j100)\Omega$ design a double stub machine to match the load for the transmission line. Note $l_{1} = 0.4\lambda$
-\subsection*{Solution}
-$$\bar{Z_{L}} = \frac{Z_{L}}{Z_{o}} = 2 + j2$$
-Note:$\frac{3\lambda}{8}$ correspond to $270^{o} $ rotation on the Smith Chart. Because 0.5$\lambda$ correspond to $ 360^{o}$. 
+For a load impedance, $Z_{L} = (100 + j100)\Omega$, and characteristic impedance, $Z_{o} = 50\Omega$,  design a double stub matching unit to match the load for the transmission line. Note $l_{1} = 0.4\lambda$.
+
+\subsection*{Solution}			
+\subsubsection*{Procedure:}
+\begin{enumerate}[(i)]
+\item Determine the normalized value for the load resistance $Z_{L}$.
+\begin{dmath*}
+\bar{Z_{L}} = \frac{Z_{L}}{Z_{o}} = 2 + j2
+\end{dmath*}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/question1}
-\caption{worked example}
+\caption{Worked Example}
+\label{fig:question1}
 \end{figure}
-				
-\subsubsection*{Procedures}
-\begin{enumerate}[(i)]
-\item Determine the normalized value for the load resistance $Z_{L}$. Using $\bar{Z_{L}} = \frac{Z_{L}}{Z_{o}}$ 
+
 \item Mark the point on the Smith Chart $\bar{Z_{L}} = 2 + j2$  
 \item Draw the constant VSWR circle from the normalized impedance point
-\item Move $180^{o}$ from the normalized impedance point on the constant VSWR circle to the normalized admittance $Y_{L}$
+\item Move 180\textdegree\; from the normalized impedance point on the constant VSWR circle to the normalized admittance $Y_{L}$
 \item Extend the point $Y_{L}$ to meet the bigger circle on the Smith Chart 
 \item Where the line meets the VSWR circle mark the point and name it $Y_{d1}$            
-\item Draw a rotated $270\deg $ circle of radius 1                         
-\item At point $Y_{d1}$, moving at constant g mark point E and D which cuts the rotated $270\deg $ circle of radius 1 at point ends.
+\item Draw a rotated 270\textdegree\; circle of radius 1. \textbf{Note:} $\frac{3\lambda}{8}$ correspond to 270\textdegree\; rotation on the Smith Chart because $0.5\lambda$ correspond to 360\textdegree.
+\item At point $Y_{d1}$, moving at constant $g$ mark point E and D which cuts the rotated 270\textdegree circle of radius 1 at point ends.
 \item Point E and D are $Y_{11}$                        
 \item Solve for $Y_{s1}$ (Using either point E and D as $Y_{11}$) $Y_{s1}$ =  $Y_{11}$ -  $Y_{d1}$           
 \item Mark point $Y_{s1}$ on the Smith Chart, extend the point to the circle and measure its wave length towards the generator $l^{1}$ 
@@ -220,17 +226,17 @@ $ l_{s1} = 0.25 + l^{1} $
 \end{enumerate}
 \end{exmp}
 
+\subsection{Three Stub Matching Technique}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig13}
 \caption{Three stub matching technique with three auxiliary lines attached}
+\label{fig:fig13}
 \end{figure}
 
-From figure 12.11, if the matching is done with stub 2 and 1 and stub 3 is made an open circuit (so that the $ l_{s3}$ equals quarter wavelength), we find that stub 2 and 3 makes the transformed impedance to lie in the forbidden region.So we disconnect stub 3 and make use of stub 1 and 2. Depending on whether the transformed impedance lie within the forbidden region or not, we can make use of stub 1 and 2 or stub 2 and 3. 
+From figure~\ref{fig:fig13}, if the matching is done with stub 2 and 1 and stub 3 is made an open circuit (so that the $ l_{s3}$ equals quarter wavelength, $\frac{\lambda}{4}$), we find that stub 2 and 3 makes the transformed impedance to lie in the forbidden region. So we disconnect stub 3 and make use of stub 1 and 2. Depending on whether the transformed impedance lie within the forbidden region or not, we can make use of stub 1 and 2 or stub 2 and 3. The final solution in the impedance matching is the three stub technique. By using this method, all possible impedances can be matched without moving the location of the stub on the transmission line.
 
-The final solution in the impedance matching is the three stub technique. By using this method, all possible impedances can be matched without moving the location of the stub on the transmission line.
-
-In conclusion, we have dealt with the major application of \textit{transmission line} which is, impedance matching in which we covered the different methods with which impedance can be matched. These are:
+In conclusion, we have dealt with the major applications of transmission line which is impedance matching in which we covered the different methods with which impedance can be matched. These are:
 \begin{enumerate}
 \item The quarter wavelength matching technique.
 \item Single stub matching technique.
