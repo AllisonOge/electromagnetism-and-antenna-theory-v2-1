@@ -1,127 +1,158 @@
-\chapter{Graphical Approach To Analyzing Transmission Line Problems Using Smith Chart}\label{lec:lec15}
-We are going to solve few problems on transmission line mainly using smith chart. Measurement of an unknown impedance at high frequencies are carried out by studying the standing wave ratio and the location of the maxima and minima, of the standing wave pattern by using a\footnote{Slotted lines are used for microwave measurements and consist of a movable probe inserted into a slot in a transmission line. They are used in conjunction with a microwave power source and usually, in keeping with their low-cost application, a low cost Schottky diode detector and VSWR meter rather than an expensive microwave power meter.} slotted transmission line since measurement of phase is unreliable at high frequencies.
+\chapter{Various Types of Transmission Lines}\label{lec:lec15}
+In this chapter we will pick up from the last chapter on transmission line problems using the Smith chart and then discuss the types of transmission lines in practice. 
 
-\begin{example}
+\begin{exmp}
+\subsubsection*{Unknown Impedance Measurement}
+We have a slotted transmission line to which an unknown impedance $Z_L$ is connected as shown in figure~\ref{fig:fig3}. The measurement of the standing wave pattern on the transmission line gave $\frac{\lambda}{2}=30cm$ and the measurement of the variation of voltage as a function of length $l$ on the transmission line gave $V_\max=15V,V_\min=5V$. Find the unknown impedance $Z_L$. (Take $Z_0 = 50\varOmega$)
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig3}
+\caption{Slotted Transmission Line.}
 \label{fig:fig3}
-\caption{slotted transmission line.}
 \end{figure}
 
-We look at the example at figure~\ref{fig:fig3}, we have a transmission line to which an unknown impedance $Z_L$ is connected. By using what we call a slotted transmission line, we measure the standing wave pattern on the transmission line. With $\dfrac{\lambda}{2}=30cm$ where $\lambda=60cm.$
-$$\phi=2\beta L$$ 
-and 
+\subsubsection*{(a) Phase Estimation}
+Recall,
 \begin{dmath*}
-\beta=\dfrac{2\pi}{\lambda}
+\phi=2\beta l\quad\text{and }\beta\text{ = }\dfrac{2\pi}{\lambda}
+=2\cdot\dfrac{2\pi}{\lambda} l
+=2\cdot\dfrac{360}{60}\cdot27
+=324^{o}
 \end{dmath*}
-\begin{dmath*}
-\phi=2\cdot\dfrac{2\pi}{\lambda} L
-\end{dmath*}
-$$\phi=2\cdot\dfrac{360}{60}\cdot27$$
-$$\phi=324^{o}$$
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{./graphics/fig2}
-\caption{Measurement Of Impedance}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{./graphics/fig1}
-\caption{Measurement Of Impedance}
-\end{figure}
-
-We measure the variation of voltage as a function of length $ l $ on the transmission line. With $V_{max}=15V,V_{min}=5V$
+\subsubsection*{(b) VSWR}
 \begin{equation*}
-\rho=\frac{V_{max}}{V_{min}}=\frac{15}{5}=3
+\rho=\frac{V_\max}{V_\min}=\frac{15}{5}=3
 \end{equation*}
-With all these information,we go to the smith chart to calculate the unknown impedance.It is clear from here that moving a distance of $27cm$ from the load towards the generator. i.e clockwise  movement on the smith chart will correspond to $324^o$,
-\begin{figure}[h]
+With all these information,we go to the Smith chart to calculate the unknown impedance. It is clear from here that moving a distance of $27cm$ from the load towards the generator, that is, clockwise movement on the Smith chart will correspond to 324\textdegree.
+
+We should arrive at the maxima point on the impedance Smith chart, which is the intersection of the constant VSWR circle on the positive real axis. From origin we draw circle with radius, $\rho = 3$. It touches the real axis at $V_\min$ and $V_\max$ as shown in figure~\ref{fig:slottedlinesoln}. The point where the angle cuts the constant VSWR circle is the unknown impedance $\bar{Z}_L$ (see figure~\ref{fig:slottedlinesoln}).
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig12}
 \caption{Measurement of unknown impedance using smith chart}
 \end{figure}
 
-We should arrive at the maxima point on the impedance smith chart,which is the right hand intercept of the constant VSWR circle on the positive real axis. From origin we draw circle with \ radius= $\rho =3$,It touch the real axis at $V_{min}\ and\ V_{max}$. Where the angle cuts the VSWR=3 circle is the unknown impedance $\overline{Z}_L$ from the smith chart.In the smith chart $\overline{Z}_L=1.15-j1.23$. If the characteristics impedance of the line is $50\Omega$, then $Z_{L}= (\overline{Z}_L\times Z_o)=50(1.15-j1.23)= 57.5-j61.5 \Omega$. So unknown impedance can be measured very easily with a smith chart without doing much complex calculation.
-\end{example}
+Thus the unkown impedance according to the Smith chart is $\bar{Z}_L=1.15-j1.23$. With the characteristics impedance of the line given as $50\varOmega$, then $Z_{L}=\bar{Z}_L\times Z_0 =50(1.15-j1.23)= (57.5-j61.5) \varOmega$. So unknown impedance can be measured very easily with a Smith chart without doing much complex calculation.
+\end{exmp}
 
-\begin{example}
-\subsection*{Problem using quarter wave transformer.}
-A load impedance $Z_{L}=75-j35\Omega$ is to be matched to $50\Omega$ using quarter wave transformer.Design the matching set up. 
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{./graphics/fighalfwave}
-\caption{Load impedance matching}
-\end{figure}
+\begin{exmp}
+\subsubsection*{Quarter Wavelength Matching}
+A load impedance $Z_{L}=(75-j35)\varOmega$ is to be matched to $50\varOmega$ using a quarter wave transformer. Design the matching set up. 
 
 \subsection*{Solution}
-We recall that the quarter wave transformer can match two resistive impedances if the characteristics impedance is real. However the impedance given to us here is complex,so we use a section of a transmission line to first convert the impedance to a real value, from that point onward a quarter wave transformer can then be used for the matching.\\
-The length of the quarter wave  transformer is $\dfrac{\lambda}{4}$ at XX, 75-j35 should be real.
+We recall that the quarter wave transformer can match a resistive load impedance to the characteristic impedance (that is, two resistive impedances). However the load impedance given is complex, so we use a section of a transmission line of length $l$ as shown in figure~\ref{fig;fighalfwave}, to first convert the impedance to a real value, from that point onward a quarter wave transformer can then be used for the matching.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{./graphics/fighalfwave}
+\caption{Load Impedance Matching Design with Quarter Wavelength Trasfromer}
+\label{fig;fighalfwave}
+\end{figure}
+
+The length of the quarter wave transformer is $\frac{\lambda}{4}$ at XX' (see figure~\ref{fig:image}), $Z_L = (75-j35)\varOmega$ should be real.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/image}
-\caption{Quarter wave transformer}
+\caption{Quarter Wavelength Transformer Design}
+\label{fig:image}
 \end{figure}
 
-On the smith chart we draw the VSWR circle for $Z_{L} =75-j35\Omega$ and move around it towards generator i.e in clockwise direction till we are in the real axis which gives $R_{min}\ and\ R_{max}\ or\ V_{min}\ and\ V_{max}$ respectively. \\
-At  $ \overline{Z}_L=1.5-j0.7$ , marked on the smith chart using OX as radius, we draw constant VSWR circle that intercept the real axis at P and Q, if we move XP we get a real impedance corresponding to $R_{min}$ and if we move XPQ we get another real Impedance Corresponding to $R_{max}$. So we have two possibilities for either XP or XPQ.
+On the Smith chart we draw the VSWR circle for normalized $Z_{L}$\footnote{
+Normalization is done using the charateristic Impedance of the section of transmission line of length $l$.
+} and move clockwise to the point of intersection with the real axis which gives either $R_\min$ or $R_\max$.
+
+Figure~\ref{fig:tosin} shows the Smith chart analysis. $\bar{Z}_L=1.5-j0.7$ is marked at \textbf{X} and the constant VSWR circle is drawn using \textbf{OX} as radius and it intersects the real axis at \textbf{P} and \textbf{Q}. If we move from \textbf{X} to \textbf{P} (\textbf{XP}) we get a resistive impedance corresponding to $r_\min$ and if we move from \textbf{X} through \textbf{P} to \textbf{Q} (\textbf{XPQ}), we get another resistive impedance corresponding to $r_\max$.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/TOSIN}
-\caption{Quarter wave transformer solution on smith chart}
+\caption{Quarter Wavelength Design\textemdash\;graphical analysis}
+\label{fig:tosin}
 \end{figure}
 
-$$XP=0.5\lambda-0.306\lambda=0.194 \lambda=L_1$$
-$\overline{R}_{min} =0.5\Omega$ on the smith chart,
+The distance and resistance for \textbf{XP} are
 \begin{dmath*}
-R_{min}=Z_{o} \times \overline{R}_{min}=50\times0.5=25\Omega
+\boldmath{XP}=0.5\lambda-0.306\lambda
+=0.194\lambda
+=l_1
 \end{dmath*}
-$$XPQ=0.194\lambda+0.25\lambda=0.444\lambda=L_2$$
-$$\overline{R}_{max}=2\Omega$$
-$$R_{max}=Z_{o} \times \overline{R}_{max}=50\times2=100\Omega$$
-Hence $l=L_1=0.194\lambda \ or \ L_2=0.444\lambda$ which is the distance to be moved to change $Z_{L}$ to a real value of the quarter wavelength transformer. 
-The outward circle of the smith chart is calibrated in $\lambda$,so you can take the angle subtended by the movement and do a direct conversion to $\lambda$, $\lambda$\ at X is 0.306 moving to 0.5 is a difference of 0.194$\lambda$\footnote{$L_1=0.5\lambda - 0.306\lambda=0.194\lambda$}
-The top half is $0.25\lambda$, added to the 0.194$\lambda$ calculated initially brings us to 0.444$\lambda$ \footnote{$L_2=0.25\lambda+0.194\lambda=0.444\lambda$}
-for $R_{max}$. Going back to the problem we have that for $L_1=0.194\lambda, R_{min}=25\varOmega$ 
+\begin{dmath*}
+r_\min = \bar{R}_\min \quad\text{From figure~\ref{fig:tosin}}
+= 0.5\varOmega
+\end{dmath*}
+
+Thus, $R_\min$ is 
+\begin{dmath*}
+R_\min= Z_0\times\bar{R}_\min
+=50\times0.5=25\varOmega
+\end{dmath*}
+
+Similarly, the distance and resistance for \textbf{XPQ} are
+\begin{dmath*}
+\boldmath{XPQ}=0.194\lambda+0.25\lambda
+=0.444\lambda
+=l_2
+\end{dmath*}
+\begin{dmath*}
+r_\max = \bar{R}_\max\quad\text{From figure~\ref{fig:tosin}}
+=2\varOmega
+\end{dmath*}
+
+Thus, $R_\max$ is
+\begin{dmath*}
+R_\max=Z_0 \times \bar{R}_\max
+=50\times2
+=100\varOmega
+\end{dmath*}
+Hence $l=l_1=0.194\lambda$ or $l_2=0.444\lambda$ which is the length of the section of transmission line for transforming the complex impedance to real impedance just before the Quarter Wavelength Transformer.
+
+The outward circle of the Smith chart is calibrated in $\lambda$, so one can take the angle subtended by the movement and do a direct conversion to $\lambda$, $\lambda$\ at X is 0.306 moving to 0.5 is a difference of $0.194\lambda$\footnote{
+$l_1=0.5\lambda - 0.306\lambda=0.194\lambda$
+}. The top half is $0.25\lambda$, added to the $0.194\lambda$ calculated initially brings us to $0.444\lambda$\footnote{
+$l_2=0.25\lambda+0.194\lambda=0.444\lambda$
+} for $R_\max$. Going back to the problem we have that for $l_1=0.194\lambda, R_\min=25\varOmega$.
 \begin{equation*}
-Z_{ox} \footnote{$Z_{ox}$is the geometric mean of the two impedances to be matched.}=\sqrt{Z_o\times R}=\sqrt{50\times25}=35.35\varOmega
+Z_{0x}\footnote{
+$Z_{0x}$is the geometric mean of the two impedances to be matched.
+} =\sqrt{Z_0 \times R}
+=\sqrt{50\times25}
+=35.35\varOmega
 \end{equation*}
-For $$L_2=0.444\lambda, R_{max}=100\varOmega$$ 
+For $l_2=0.444\lambda, R_\max=100\varOmega$ 
 \begin{dmath*}
-Z_{ox}$ =$\sqrt{Z_o\times R}=\sqrt{50\times100}=70.7\varOmega
+Z_{0x}=\sqrt{Z_0 \times R}
+=\sqrt{50\times100}
+=70.7\varOmega
 \end{dmath*}
 
-Here we see how to match a complex impedance to a real impedance by using section of the transmission line and the quarter wavelength transformer. The quarter wavelength transformer can match only impedance which is real. That is why we introduce a section of transmission line before the quarter wavelength transformer to help convert our complex load impedance to real impedance.
-\end{example}
+Here we see how to match a complex impedance to the characteristic impedance (real impedance) by using a section of the transmission line and the Quarter Wavelength Transformer. The Quarter Wavelength Transformer can match only impedance which is real values, that is why we introduce a section of transmission line before the Quarter Wavelength Transformer to help convert our complex load impedance to real impedance.
+\end{exmp}
 
-\begin{example}
-\subsection*{Problem on single stub matching.}
-The main transmission line and the auxiliary line has $Z_o=50\varOmega$. Calculate $L_s\ and\ L_1$ using smith chart.
+\begin{exmp}
+\subsubsection*{Single Stub Matching}
+Design a single stub matching unit to match the load impedance shown in figure~\ref{fig:figw} to the characteristic impedance, $Z_0 = 50\varOmega$. Calculate for $l_s$ and $l_1$.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/figw}
-\caption{single stub matching}
+\caption{Single Stub Matching design}
+\label{fig:figw}
 \end{figure}
+
 \subsection*{Solution}
 We normalize $Z_L=90-j25$ to get 
-$\overline{Z}_L=1.8-j0.5$. since stub and $Z_L$ are in parallel,
-we convert $\overline{Z}_L$ to its admittance value. $\overline{Y}_{L}$
+$\bar{Z}_L=1.8-j0.5$. since stub and $Z_L$ are in parallel,
+we convert $\bar{Z}_L$ to its admittance value. $\bar{Y}_{L}$
 should be transformed from 
-$\overline{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies  on  the circle of constant conductance $g=1$. With OP we draw circle of constant VSWR with OP as radius. We get the point where this VSWR circle intercept the g=1 circle at moving clockwise(towards generator )from Q to M. the distance QM correspond to $L_1, L_1=0.152\lambda-0.032\lambda=0.12\lambda$.
+$\bar{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies on the circle of constant conductance $g=1$. With OP we draw circle of constant VSWR with OP as radius. We get the point where this VSWR circle intercept the g=1 circle at moving clockwise(towards generator )from Q to M. the distance QM correspond to $L_1, L_1=0.152\lambda-0.032\lambda=0.12\lambda$.
 
-Mirror M on the VSWR circle to get $1-jb1$. On the constant suceptance curve of $?jb$, find where it intercept the circle at $g=0 \ and \ ?jb_1$. This is the outermost circle. $R$ represent pure susceptance value of $jb_1$. 
+Mirror M on the VSWR circle to get $1-jb1$. On the constant suceptance curve of $jb$, find where it intercept the circle at $g=0 \ and \ ?jb_1$. This is the outermost circle. $R$ represent pure susceptance value of $jb_1$. 
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig14}
-\caption{single stub matching on a smith chart}
+\caption{Single Stub Matching Design\textemdash\;graphical analysis}
+\label{fig:fig14}
 \end{figure}
 
-Hence we have to move from SC \footnote{S.C- short circuit.} of the stub towards the generator to see this Susceptance.The distance $L_s$ is the movement from SC to -jb1 towards the generator and that distance represents the length of the stub.For admittance on smith chart right most side is the SC part and the leftmost  part is the open circuit part.This is  opposite to the convention in the impedance smith chart.\\
-At SC $l_{s.c}=0.25\lambda$ moving towards the generator.At R, $l=0.402\lambda$,the distance $l_s=0.402-0.25=0.152\lambda$. Now we know the length of the stub and location of the stub as well.These are some of the problems which can be solved easily with the help of the smith chart.Using an analytic approach for the same  process is an extremely tedious task.This example clearly demonstrate the use of a smith  chart for solving complex transmission line problems.
-\end{example}
+Hence we have to move from the short circuit (SC) end of the stub towards the generator to see this Susceptance.The distance $l_s$ is the movement from SC to -jb1 towards the generator and that distance represents the length of the stub.For admittance on Smith chart right most side is the SC part and the leftmost part is the open circuit part.This is opposite to the convention in the impedance Smith chart.
 
-\section{Characteristics impedance for common transmission line}
-Let us talk about the final aspect of transmission line which is the characteristics impedance of common transmission line which we see in practice.At the beginning of our study, we saw various kinds of transmission line such as coaxial line,Parallel wire, Micro-strip structure e.t.c in practice one would need to calculate the characteristics impedance of the line.Let us see the formulas used for calculating the characteristics impedance of the various transmission line. The most commonly used transmission line is the Coaxial line commonly used for connection between  electric equipments.
+At SC $l_{sc}=0.25\lambda$ moving towards the generator.At R, $l=0.402\lambda$,the distance $l_s=0.402-0.25=0.152\lambda$. Now we know the length of the stub and location of the stub as well.These are some of the problems which can be solved easily with the help of the Smith chart.Using an analytic approach for the same process is an extremely tedious task.This example clearly demonstrate the use of a smith chart for solving complex transmission line problems.
+\end{exmp}
 
 \subsection{Coaxial line}
 The coaxial cable has an inner diameter $d$ outer  diameter $D$ and dielectric constant $\epsilon_r$ for the medium separating the outer and inner conductor. Teflon is mostly used to separate d from D as the dielectric material is from 2 to 4 in value.
