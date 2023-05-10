@@ -183,9 +183,18 @@ It shows that the characteristics impedance of a coaxial line depends on the rat
 
 Let us take some typical values just to get a feel of what kind of parameters are required to realize certain characteristics impedance, say $\epsilon_r$=4, 
 \begin{dmath*}
-\dfrac{D}{d}=10^{(\dfrac{138}{69})}=10^{2}=100
+Z_0 =\dfrac{138}{\sqrt{4}}\log(\dfrac{D}{d})
+= 69\log(\dfrac{D}{d})
 \end{dmath*}
-therefore $D=100d$.
+This implies that
+\begin{dmath*}
+\frac{D}{d}=10^{\left(\dfrac{Z_0 }{69}\right)}
+\end{dmath*}
+What we see from this relationship is that the ratio of $\frac{D}{d}$ increases very rapidly as the characteristic of impedance $Z_0 $ increases. Suppose that $Z_0 = 69\varOmega$ then, $\dfrac{D}{d}= 10$ or $D=10d$. Similarly, when $Z_0 = 138$
+\begin{dmath*}
+\dfrac{D}{d}=10^{\left(\dfrac{138}{69}\right)}=10^{2}=100
+\end{dmath*}
+Therefore $D=100d$.
 
 Thus, the size of the outer conductor compared to the inner conductor increases very rapidly as the characteristics impedance of the line increases. This implies that the coaxial structure is more suited for realizing low characteristics impedances and that is the reason why typically the lines which are used as coaxial lines have characteristics impedance that lie around $50\varOmega$ to $75\varOmega$. If we say let us realize a characteristics impedance of 200 or 300 Ohms with the same structure, $\frac{D}{d} = 10^{\left(\dfrac{300}{69}\right)} = 22275.4$ which is obviously an outrageous value of $\frac{D}{d}$ and this size will be physically unreliable. Hence, the coaxial structure is intrinsically more suited for realizing low characteristics impedances of order $50\varOmega$ or $75\varOmega$. Typically the coaxial cables are standardized for $50\varOmega$, however when we go for antenna application we get a cable that has $75\varOmega$ characteristics impedance and the reason is that the antenna that is mostly used in practice that is, the \emph{half wave dipole}\index{half wave dipole} has input impedance very close to $75\varOmega$ as we shall see in later chapters. So just from the compatibility point of view of the impedances, whenever we use the coaxial cables for the antenna, we use the cable which is having a characteristics impedance of $75\varOmega$. However for most of other application of high frequency equipment the impedance has been almost standardized to $50\varOmega$.
 
@@ -203,6 +212,23 @@ Z_0 =\dfrac{276}{\sqrt{\epsilon_r}}\log(\dfrac{2D}{d})
 \label{eqn:parallelwiretx}
 \end{equation}
 
+When air is the dielectric, $\epsilon_r$=1, so that
+\begin{equation}
+Z_0 = 276\log(\dfrac{2D}{d})
+\label{eqn:parallelwiretxair}
+\end{equation}
+We can only make $D$ as small as possible to vary $Z_0 $. if $D\approx d$ that is, almost close to each other then 
+\begin{dmath*}
+Z_0 = 276\log(\dfrac{2d}{d})
+=276\log(2)
+=82.8\varOmega
+\end{dmath*}
+So minimum realizable value of $D$ is when $D = d$, and at that point $Z_\min=82.2\varOmega$. Suppose $\frac{D}{d}=5$, then
+\begin{dmath*}
+Z_0 =276\log(2\times5)
+=276\log(10)
+=276\varOmega
+\end{dmath*}
 As we can see for the parallel wire (balanced) structure, realizing low impedance is more difficult compared to coaxial cables. This is because we cannot realize impedance less than $82.8\varOmega$. However we can realize high impedance easily. Since we are talking about two conductor which are parallel, separating them to vary $D$ is very easy.
 
 This kind of transmission line intrinsically is used for realizing high characteristics impedance. They are also used in telephone lines\textemdash\;all the telephone lines which are seen in towers are in the form of parallel wire lines. So generally, the parallel wire transmission line are used in that application where one would like to realize high impedances or conversely, when one would have to give such a structure a high impedance. So the coaxial structure and parallel wire structure are complimenting in terms of characteristics impedance. The coaxial cable structure can give low impedances easily and are difficult to get high impedances from. Whereas the parallel lines will easily give high impedance but are difficult to get low impedance from. Typically for a parallel wire transmission line the characteristics impedance is $Z_0 =300\varOmega$ or $Z_0 =600\varOmega$ so the parallel wire transmission line are also standardized to a fixed characteristics impedance.
@@ -216,6 +242,10 @@ The third structure in practice is the microstrip line structure and this struct
 \label{fig:microstrip}
 \end{figure}
 
+\begin{equation}
+Z_0 =\dfrac{377}{\left(\sqrt{\epsilon_r}\dfrac{W}{h}+2\right)}
+\label{eqn:microstrip}
+\end{equation}
 At microwave frequencies, one can use a substrate like alumina as the dielectric which has a high value of dielectric constant (as high as 9.8). The dielectric constant value may have very wide range and $\frac{W}{h}$ can vary by a very wide range, so that we can realize a wide range of characteristic impedance. Using high $\epsilon_r$ we can realize low $Z_0$ and high $Z_0$ with small $\epsilon_r$.
 
 We can vary the impedance by a large amount by changing $\frac{W}{h}$ ratio. Such that at high frequencies, we standardize the frequency to $50\varOmega$, if we are to connect it to a coaxial cable or make it have high impedance (maybe if we want to connect it to the parallel wire transmission line). There is a small difference however between these two connections and that is if we take a structure which is the coaxial cable structure with inner and outer conductor, we can connect voltage to the inner conductor and ground the outer conductor as shown in figure~\ref{fig:microstripvar}.
