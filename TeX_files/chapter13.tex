@@ -117,8 +117,12 @@ Multiplying equation~\eqref{eqn:zsclossy} and~\eqref{eqn:zoclossy}, gives
 Z_{sc}Z_{oc}
 = Z_0\tanh\gamma l Z_0\coth\gamma l
 = {Z_0}^2\quad\text{Recall, }\coth\theta\text{ = }\frac{1}{\tanh\theta}
-= \sqrt{Z_{oc}\cdot Z_{sc}}
 \end{dmath*}
+Therefore,
+\begin{equation}
+Z_0 = \sqrt{Z_{oc}\cdot Z_{sc}}
+\label{eqn:xteristicsimplossy2}
+\end{equation}
 Also dividing equation~\eqref{eqn:zsclossy} by~\eqref{eqn:zoclossy} gives
 \begin{dmath*}
 \frac{Z_{sc}}{Z_{oc}} = \frac{\tanh\gamma l}{\coth\gamma l} 
@@ -202,7 +206,7 @@ But $\beta = \frac{2\pi f}{v}$, so substituting equation~\eqref{eqn:velocityloss
 \end{align}
 So what we have done is to carry out this measurement at two frequencies which are closely spaced in such a way that changing the frequency from $f_1$ to $f_2$, the number of cycles on the section of the line is only increased by one. Then from there we calculate the value of the velocity of the wave in the transmission line and then we get the phase constant.
 
-At this point one may ask \emph{why are we estimating the velocity on the line? Does the wave not travel with the velocity of light on the line or if we know $\beta$ can we not find what $\lambda$ is and then find the velocity?} In fact the problem is exactly opposite. The problem depends on the structure of the line, the velocity of the wave actually changes, FREQUENCY is the one that is SACRED but depending upon propagation characteristics, velocity changes or the wavelength changes and therefore the phase constant changes. So it is not that we know the wavelength from the velocity and we are trying to find out $\beta$. In fact $\beta$ is the quantity which is the most unknown quantity. So for a given structure we first estimate the value of $\beta$, then wavelength($\frac{2\pi}{\beta}= \lambda$) and velocity ($\lambda f = v$). So in practice, the measurement of the attenuation constant and the phase constant have to go through all these steps that have been stated.
+At this point one may ask \emph{why are we estimating the velocity on the line? Does the wave not travel with the velocity of light on the line or if we know $\beta$ can we not find what $\lambda$ is and then find the velocity?} In fact the problem is exactly opposite. The problem depends on the structure of the line, the velocity of the wave actually changes, FREQUENCY is the one that is SACRED but depending upon propagation characteristics, velocity changes or the wavelength changes and therefore the phase constant changes. So it is not that we know the wavelength from the velocity and we are trying to find out $\beta$. In fact $\beta$ is the quantity which is the most unknown quantity. So for a given structure we first estimate the value of $\beta$, then wavelength ($\frac{2\pi}{\beta}= \lambda$) and velocity ($\lambda f = v$). So in practice, the measurement of the attenuation constant and the phase constant have to go through all these steps that have been stated.
 
 This is the method which we mentioned in the open or short circuit test. This is the most widely used test in practice for measuring the characteristic impedance and propagation constant of the line. Of course there are certain practical difficulties, when we try to apply the open circuit or short circuit to the end of the transmission line, even if you short the two conductors of a transmission line, there will always be some conductance at the end. If the two ends are left open for the open circuit test, there will be some fringing capacitance at the end of the line. So realizing a perfect open or short circuit at very high frequency, is not that straight forward. People make extra effort to develop modules called short circuit modules and open circuit modules which can be connected to the end of the line to realize a good open or short circuit.
 \begin{figure}[h]
