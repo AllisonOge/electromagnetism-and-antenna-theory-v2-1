@@ -1,9 +1,9 @@
-\chapter{Impedance Transformation and Power Transfer}\label{lec:lec6}
-In our previous chapter, we investigated the Standing Wave Pattern on a transmission line and also an important parameter which is the voltage standing wave ratio VSWR, (which is the ratio of the maximum voltage seen on the transmission line to the minimum voltage seen on the transmission line).
+In the previous sections, we investigated the Standing Wave Pattern on a transmission line and also an important parameter which is the voltage standing wave ratio (VSWR)\index{voltage standing wave ratio} \emph{which is the ratio of the maximum voltage seen on the transmission line to the minimum voltage seen on the transmission line}.
 
-In this chapter, we will study the impedance transformation on a lossless
-transmission line and we will establish some of the very important characteristics of impedance transformation on a lossless transmission line. After which, we will proceed to an important calculation of Power Transfer to the Load and also the expression for $V^{+}$.
-\section{Transformation on a Lossless Transmission Line}
+Let us now study impedance transformation on a lossless
+transmission line and then establish some of the very important characteristics of impedance transformation on a lossless transmission line. Thereafter, we will proceed to an important calculation of Power Transfer to the load and also derive the expression for $V^{+}$.
+
+\section{Impedance Transformation on a Lossless Transmission Line}\label{lec:lec6}
 Recall that, the impedance transformation relationship for any point is given as:
 \begin{align*}
 \footnotemark[1]Z(l) = Z_o\left\lbrace \frac{Z_L\cosh(\gamma l) + Z_o\sinh(\gamma l)}{Z_o\cosh(\gamma l) + Z_L\sinh(\gamma l)}\right\rbrace 
@@ -43,6 +43,7 @@ With this impedance transformation relationship, we can establish some very impo
 Moving $\frac{\lambda}{4}$ from the point of $R_{\max}$ and $R_{\min}$, should bring something interesting. Similarly, if we terminate the line into its characteristics impedance, the impedance measured at any point equals to the characteristics impedance. So we have three important points we can draw from this.
 
 Lets show with proof these three characteristics.
+
 \subsection{Normalized impedance value repeat every $\frac{\lambda}{2}$ distance}
 Lets say at $l$ we have maximum or minimum impedance, then moving $l=\frac{\lambda}{2}$ from that point we should get same impedance again!
 
@@ -218,7 +219,7 @@ P(l) = \frac{1}{2} \frac{{|V^+|}^2}{Z_o}\left\lbrace 1 - {|\Gamma_L|}^2 - j2\Gam
 = \frac{1}{2} \frac{{|V^+|}^2}{Z_o}\left\lbrace 1 - {|\Gamma_L|}^2 - \mathfrak{Im}\lbrace\Gamma_L{e}^{-j2\beta l}\rbrace\right\rbrace
 \end{dmath}
 Thus, given the complex power, the real part is $1 - {|\Gamma_L}|^2$ which is the resistive power, and the imaginary part is $ j2\Gamma_L \sin(2\beta l) = \mathfrak{Im}\lbrace\Gamma_L{e}^{-j2\beta l}\rbrace$ which is the reactive power.
- 
+
 Therefore, at any location of the transmission line, the power is complex, the interesting thing to note is that the resistive power at any point is equal to the power which we earlier calculated that is delivered to the load end. So for a lossless line the resistive power at any point along the line is the same as the power which is delivered to the load\footnote{
 This can be explained with the line of throught that the resistive power finally gets to the load if the line is lossless, since there is no absorption of power at any point along the line and so all the resistive power gets to the load because the load is the part where you have resistive component and power can be  absorbed in that location.
 }. Hence at any point on the transmission line, power transfer of the resistive part is completely delivered to the load and as such the resistive power which is the actual power flow should be independent of any location on the line.
@@ -313,6 +314,8 @@ P_L = \frac{1}{2}\mathfrak{Re}\lbrace V_L I_L^\ast\rbrace
 
 We can see that $P_{in} = P_L$ as expected because the line is lossless so the input power should equal the delivered power at the load point.
 \end{exmp}
+
+\section{Evaluation of $\mathbf{V^{+}}$}\label{sec:evalvplus}
 So far, our transmission line analysis (voltage and current equations, impedance transformation, power transfer analysis and so on) has been derived in terms of $V^+$. $V^+$ is a final arbitrary constant in the solution of the differential equation of transmission line that we are yet to evaluate. It is the amplitude of the incident voltage, which we have assumed in known a priori. Now the question is \emph{how do we evaluate $V^{+}$?}.
 
 Considering the circuit in figure~\ref{fig:qwerrtt}, $Z_L$ is transformed to $Z^{'}_L$, from position BB' to AA'. $Z^{'}_L$ is the impedance of the load as seen by the generator end. With $Z_L$ transformed to $Z^{'}_L$, the whole circuit is reduced to a lump circuit as shown in figure~\ref{fig:qwerrtt}.
@@ -351,7 +354,7 @@ $\alpha, \beta, l, \Gamma_L$ and $Z_o$ are all known values, so now we have a kn
 
 From here $V^+$ can be determined and then substituted into the power equation and so power delivered to the load can be calculated or power at any point along the line. This is a complete solution to voltage and current on the transmission line.
 
-\section{Summary}
+\subsection*{Summary}
 Table~\ref{tab:transparams} show the transmission line parameters for lossless and low-loss conditions that have been discussed and derived.
 \begin{table}[h]
 \caption[short]{Transmission line parameters for lossless and low-loss conditions}
