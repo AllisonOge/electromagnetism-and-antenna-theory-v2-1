@@ -299,7 +299,27 @@ Hence  $ V^{+}e^{j(\omega t- \beta x )} $ is a positive or progressive travellin
 
 Hence with high-frequency circuit analysis, the voltages and current have to be visualized in the form of waves. In conclusion, we see that a departure from the lumped circuit analysis to the distributed circuit analysis radically changes the approach to circuit analysis to a voltage and current that exist in the form of waves on the electrical circuits. 
 
-\newpage
+\begin{exmp}
+\subsubsection*{Transmission line Equation}
+Show that the voltage $V(x,t) = A\cos(\omega t+\theta)e^{j\beta x}$ satisfies the transmission line equation~\eqref{eqn:deqn}, for a uniform lossless line, if $\beta = \omega\sqrt{LC}$.
+
+\subsubsection*{Solution}
+In the coming sections, we will discuss the properties of a lossless transmission line in detail but as an introduction, for a lossless transmission line, $R = G = 0$, so equation~\eqref{eqn:deqn} reduces to
+\begin{dmath*}
+\derivative[2]{V}{x} = -(0 + j\omega L)\times -(0 + j\omega C)V
+= -(\omega^2 LC)V
+\end{dmath*}
+For $V(x,t) = A\cos(\omega t+\theta)e^{j\beta x}$, the differential equation becomes
+\begin{align*}
+\derivative[2]{A\cos(\omega t+\theta)e^{j\beta x}}{x} &= -(\omega^2 LC)\times A\cos(\omega t+\theta)e^{j\beta x}\\
+A\times -\cos(\omega t+\theta)\times\derivative[2]{e^{j\beta x}}{x} &= -(\omega^2 LC)\times A\cos(\omega t+\theta)e^{j\beta x}\\
+-(A\cos(\omega t+\theta))\times\beta^2e^{j\beta x} &= -(\omega^2 LC)\times A\cos(\omega t+\theta)e^{j\beta x}\\
+\beta^2 &= \omega^2 LC
+\end{align*}
+
+This implies that $\beta = \omega\sqrt{LC}$ and proves that  if $\beta = \omega\sqrt{LC}$, the voltage equation given for a lossless transmission line satifies the transmission line equation.
+\end{exmp}
+
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex21}] 
