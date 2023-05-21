@@ -245,6 +245,41 @@ We first convert the complex number to polar form, thus:
 \sqrt{-1421.191 + \jmath 151.098} = \sqrt{1429.2006}\angle \frac{173.931}{2}
 =37.8\angle 86.9655 
 \end{dmath*}
+    
+% \begin{exmp}
+% Let R = 0.4 $\Omega$ /m, L = 0.3$\mu$H /m, C = 120pF/m, G = 0.08 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.
+
+% \subsubsection*{Solution}
+% \[\gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}\]
+% But, $\omega = 2\pi f\quad$ and $\quad f = 1GHz = 1 \times 10^9 $ Hz
+% \[\omega = 2\pi \times 10^9rad/s.\]
+% Substituting into the $\gamma$ expression; 
+% \begin{dmath*}
+% \sqrt{0.4+\jmath(2\pi\times10^9)\times0.3\times10^{-6}}\times\sqrt{0.08+\jmath(2\pi\times10^9) \times120 \times10^{-12}} 
+% \end{dmath*}
+% \begin{dmath*}
+% \gamma=\sqrt{(0.5+\jmath600\pi) (0.08+\jmath0.24\pi)}
+% = \sqrt{0.4(0.08) + 0.4(\jmath0.24\pi) + \jmath600\pi(0.08) + \jmath600\pi(\jmath0.24\pi)}
+% \end{dmath*} 
+% Recall  that,$ \quad \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1$
+
+% Thus,
+% \begin{dmath*}
+% \gamma =\sqrt{0.032 + \jmath 0.3016 +\jmath 150.7964 - 1421.2230} = \sqrt{-1421.191 + \jmath 151.098} 
+% \end{dmath*}
+
+% We first convert the complex number to polar form, thus:
+% \[-1421.191 + \jmath 151.098 = 1429.2006\angle 173.931^o\]
+% \begin{dmath*} 
+% \sqrt{-1421.191 + \jmath 151.098} = \sqrt{1429.2006}\angle \frac{173.931}{2}
+% =37.8\angle 86.9655 
+% \end{dmath*}
+% Converting back to cartesian form;
+% \[\textnormal{Propagation constant,}\quad\gamma=2 +\jmath 37.747\]
+% From the expression; $ \alpha = 2 $ Nepers/m, $ \beta = 37.747 $ rad/m.
+
+% We now convert the attenuation constant to dB/m (1 Nepers/m = 8.68dB/m), thus, 2 Nepers/m = 17.36 dB/m.
+% \end{exmp} 
 
 \section{The Characteristic Impedance}\index{characteristic impedance}
 As derived in equations~\eqref{eqn:deltav} and~\eqref{eqn:deltai}
@@ -450,5 +485,9 @@ Starting from the differential equation guilding transmission lines, derive the 
 What are the physical significance of the propagation constant($\gamma$), attenuation constant($\alpha$) and phase constant($\beta$)?
 
 \Exercise[label={ex35}]
-From $ V = V^+e^{+\lambda l} + V^-e^{-\lambda l} $ and $ I = \frac{V^+}{Z_0}e^{+\lambda l} - \frac{V^-}{Z_0}e^{-\lambda l}$, show that $ \Gamma_L = \frac{Z_L - Z_o}{Z_L + Z_o} $.
+Let $R = 0.4\varOmega$/m, $L = 0.3\mu$H/m, $C = 120$pF/m, $G = 0.08\varOmega$/m, and $f = 1$GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.
+
+\Answer[ref={ex35}]
+(a) Propagation constant, $\gamma = 2 +\jmath 37.747$ (b)Attenuation constant, $\alpha = 2$ Nepers/m (17.36 dB/m) (c) Phase constant, $\beta = 37.747 $ rad/m.
+
 \end{ExerciseList}
