@@ -224,8 +224,95 @@ This can be explained with the line of throught that the resistive power finally
 }. Hence at any point on the transmission line, power transfer of the resistive part is completely delivered to the load and as such the resistive power which is the actual power flow should be independent of any location on the line.
 
 However the reactive power is a function of $l$, which shows the energy stored at different location along the transmission line. Now we have two parts when we calculate the power on a transmission line. \emph{There is a resistive power which is a measure of power flow which ultimately gets delivered to the load and the reactive power which measures the amount energy storage at different location along the line and depends on the value of voltage and current at that location.} Recall that the voltage and current equations are standing waves and thus the energy stored also varies at different location along the transmission line. Therefore, in conclusion, the reactive power will vary at different locations across the line while the resistive power which is the power delivered to the load will be independent of location of the transmission line.
+\begin{exmp}
+\subsubsection*{Power Flow on a Lossless Line}
+A generator with voltage $V_g = 300\angle0^o$V and internal resistance, $Z_g = 50\varOmega$ is connected to a load, $Z_L = 75\varOmega$ through a 50-$\varOmega$ lossless transmission line of length $l = 0.15\lambda$.
+\begin{enumerate}[(a)]
+\item Compute the input impedance of the line at the generator, $Z_{in}$.
+\item Compute the time-average power delivered to the line, $P_{in}$.
+\item Compute the time-average power delivered to the load, $P_L$. How does $P_{in}$ compare to $P_L$? Explain.
+\end{enumerate}
 
-\section{Evaluation of $\mathbf{V^{+}}$} 
+\subsubsection*{Solution}
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{./graphics/power_problem_temp}
+\caption{Circuit Diagram of Worked example}
+\label{fig:powerproblem}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=.7\linewidth]{./graphics/power_problem2_temp}
+\caption{Transformed Circuit Diagram of Worked example}
+\label{fig:powerproblem2}
+\end{figure}
+
+From the transmission line shown in figure~\ref{fig:powerproblem}, to find $Z_{in}$ we will use the impedance transformation relation in equation~\eqref{eqn:imp} such that
+\begin{dmath*}
+Z_{in} = Z_0\left[\frac{Z_L\cosh\beta l + jZ_0\sinh\beta l}{Z_0\cosh\beta l + jZ_L\sinh\beta l} \right]
+= 50\left[\frac{75\cosh(0.3\pi) + j50\sinh(0.3\pi)}{50\cosh(0.3\pi) + j75\cosh(0.3\pi)} \right]\footnotemark
+= (41.25 - j16.35)\varOmega
+\end{dmath*}
+\footnotetext{
+$\beta l = \frac{2\pi}{\lambda}\times 0.15\lambda = 0.3\pi$
+}
+The time-average power delivered to the line is the power at point AA' in figure~\ref{fig:powerproblem} which is given as
+\begin{dmath*}
+P_{in} = \frac{1}{2}\mathfrak{Re}\left\lbrace V_{in}I_{in}^*\right\rbrace
+\end{dmath*}
+The voltage and current at point AA' can be found using the voltage and current variations in a lossless transmission line from equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} but $|V^+|$ is not known. Instead we turn to some circuit laws and analyze the transformed circuit shown in figure~\ref{fig:powerproblem2}\footnote{This approach will be dealt with appropriately in \autoref{sec:evalvplus}}.
+
+Thus we can determine $V_{in}$ and $I_{in}$ from the circuit diagram is figure~\ref{fig:powerproblem2} as
+\begin{align*}
+I_{in} &= \frac{V_g}{Z_g + Z_{in}} 
+= \frac{300\angle0^o}{50 + (41.25 - j16.35)}\\
+&= 3.24\angle10.16^oA\\
+V_{in} &= I_{in}Z_{in} = 3.24\angle10.16^o(41.25 - j16.35)\\
+&= 143.6\angle-11.46^oV
+\end{align*}
+
+Thus, the power delivered to the line is
+\begin{dmath*}
+P_{in} = \frac{1}{2}\mathfrak{Re}\lbrace V_{in}I_{in}^\ast\rbrace
+= \frac{1}{2}\mathfrak{Re}\lbrace 143.6\angle-11.46^o\times3.24\angle-10.16^o\rbrace
+=\frac{143.6\times3.24}{2}\cos(21.62^o)
+= 216W
+\end{dmath*}
+
+Now, let us determine the power delivered to the load end, $P_L$, given as
+\begin{dmath*}
+P_L = \frac{1}{2}\mathfrak{Re}\lbrace V_L I_L^\ast\rbrace
+\end{dmath*}
+\emph{How do we determine $V_L$ and $I_L$?} We can determine $V_L$ and $I_L$ using equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} where $l = 0$ such that we get
+\begin{align*}
+V(0) &= V_L = V^+\lbrace1 + \Gamma_L\rbrace\\
+I(0) &= I_L = \frac{V^+}{Z_0}\lbrace1 + \Gamma_L\rbrace
+\end{align*}
+So we need to evaluate $V^+$ using the same voltage equation but with $l = L = 0.15\lambda$, that is
+\begin{align*}
+V_{in} &= V^+\lbrace1 + \Gamma_Le^{-j\beta l}\rbrace\\
+V^+ &= \frac{V_{in}}{1+\left(\dfrac{Z_L - Z_0}{Z_L + Z_0}\right)e^{-j\beta l}}\\
+&=\frac{143.6\angle-11.46^o}{1+\left(\dfrac{75 - 50}{75 + 50}\right)e^{-j0.3\pi}}\\
+&= \frac{143.6\angle-11.46^o}{1+0.2e^{-j0.3\pi}}\\
+&= 150\angle-54^oV
+\end{align*}
+Thus the values for $V_L$ and $I_L$ are
+\begin{align*}
+V_L &= V^+\lbrace1 + \Gamma_L\rbrace = 150\angle-54^o(1 + 0.2)\\
+&= 180\angle-54^o V\\
+I_L &= \frac{V^+}{Z_0}\lbrace1 + \Gamma_L\rbrace = \frac{150\angle-54^o}{50}(1 - 0.2)\\
+&= 2.4\angle-54^oA
+\end{align*}
+
+Now we determine the power delivered to the load which is
+\begin{dmath*}
+P_L = \frac{1}{2}\mathfrak{Re}\lbrace V_L I_L^\ast\rbrace
+= \frac{1}{2}\mathfrak{Re}\lbrace 180\angle-54^o\times 2.4\angle54^o\rbrace
+= 216W
+\end{dmath*}
+
+We can see that $P_{in} = P_L$ as expected because the line is lossless so the input power should equal the delivered power at the load point.
+\end{exmp}
 So far, our transmission line analysis (voltage and current equations, impedance transformation, power transfer analysis and so on) has been derived in terms of $V^+$. $V^+$ is a final arbitrary constant in the solution of the differential equation of transmission line that we are yet to evaluate. It is the amplitude of the incident voltage, which we have assumed in known a priori. Now the question is \emph{how do we evaluate $V^{+}$?}.
 
 Considering the circuit in figure~\ref{fig:qwerrtt}, $Z_L$ is transformed to $Z^{'}_L$, from position BB' to AA'. $Z^{'}_L$ is the impedance of the load as seen by the generator end. With $Z_L$ transformed to $Z^{'}_L$, the whole circuit is reduced to a lump circuit as shown in figure~\ref{fig:qwerrtt}.
