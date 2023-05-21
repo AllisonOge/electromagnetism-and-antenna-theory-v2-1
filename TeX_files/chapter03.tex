@@ -218,33 +218,41 @@ This is the amplitude of the voltage at point B that will undergo attenuation in
 \end{exmp}
 
 \begin{exmp}
-Let R = 0.4 $\Omega$ /m, L = 0.3$\mu$H /m, C = 120pF/m, G = 0.08 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for\ this\ line.
+\subsubsection*{Determine the backward traveling wave}
+Given that the wave in the previous example is travelling in the negative ${x}$ direction and all other parameters are kept the same, what is the instantaneous voltage at the same time and at the same location?
 
-\subsubsection*{Solution}
-\[\gamma = \sqrt{(R+\jmath\omega L)(G + \jmath\omega C)}\]
-But, $\omega = 2\pi f\quad$ and $\quad f = 1GHz = 1 \times 10^9 $ Hz
-\[\omega = 2\pi \times 10^9rad/s.\]
-Substituting into the $\gamma$ expression; 
+\subsection*{Solution}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{./graphics/Group98}
+\caption{Solution for example \ref{exmp:forward}}
+\label{fig:group98}
+\end{figure}
+
+For the wave travelling in the negative direction, we have $V_{(x,t)} = \mathfrak{Re}\left\lbrace V^{-}e^{\gamma x}e^{j\omega t}\right\rbrace$ for backward wave.
 \begin{dmath*}
-\sqrt{0.4+\jmath(2\pi\times10^9)\times0.3\times10^{-6}}\times\sqrt{0.08+\jmath(2\pi\times10^9) \times120 \times10^{-12}} 
+V(x,t) = \mathfrak{Re}\left\lbrace{V^{-}e^{\alpha x}e^{j\beta x}e^{j\omega t}}\right\rbrace = |V^{-}|e^{\alpha x}cos{(\phi+\omega t + \beta x)}
+\end{dmath*}
+At ${t=0, x=0, V=8.66}$, then
+\begin{dmath*}
+{8.66} = {|V^{-}|}e^{0} cos({\phi + 0 + 0})
+= {|V^-|{cos\phi}} \quad \text{at }\phi\text{= 30\textdegree} 
+= {|V^-|{cos30}}
+= {|V^-|{0.866}}
 \end{dmath*}
 \begin{dmath*}
-\gamma=\sqrt{(0.5+\jmath600\pi) (0.08+\jmath0.24\pi)}
-= \sqrt{0.4(0.08) + 0.4(\jmath0.24\pi) + \jmath600\pi(0.08) + \jmath600\pi(\jmath0.24\pi)}
-\end{dmath*} 
-Recall  that,$ \quad \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2 = -1$
-
-Thus,
+\frac{8.66}{0.866} = {|V^-|} = 10V
+\end{dmath*}
+\begin{align*}
+V({x,t}) = 10e^{2.23x} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t + 28.2x})
+\end{align*}
+At ${t=100nsec}$ and ${x=1m}$
 \begin{dmath*}
-\gamma =\sqrt{0.032 + \jmath 0.3016 +\jmath 150.7964 - 1421.2230} = \sqrt{-1421.191 + \jmath 151.098} 
+V({x,t}) = 10e^{2.23} \cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} + 28.2})
+= -83.7701V
 \end{dmath*}
-
-We first convert the complex number to polar form, thus:
-\[-1421.191 + \jmath 151.098 = 1429.2006\angle 173.931^o\]
-\begin{dmath*} 
-\sqrt{-1421.191 + \jmath 151.098} = \sqrt{1429.2006}\angle \frac{173.931}{2}
-=37.8\angle 86.9655 
-\end{dmath*}
+So what we note here is, if we look at the transmission line with ${x=0}$ and ${x=1m}$. If the wave travels in forward direction, then the wave will attenuate in the direction of propagation. The variation is from ${8.66V}$ to ${-0.88V}$. In the backward direction, the wave will attenuate in the reverse direction so it has to  have a higher amplitude at ${x=1m}$ and ${t=100nsec}$ from were it attenuates from ${-83.7701V}$ to ${8.66V}$ in the other direction. The direction of propagation of the wave is very important.
+\end{exmp}
     
 % \begin{exmp}
 % Let R = 0.4 $\Omega$ /m, L = 0.3$\mu$H /m, C = 120pF/m, G = 0.08 $\Omega$ /m, freq = 1GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.
