@@ -268,3 +268,53 @@ l = \frac{\theta_\min}{2\beta}
 =\frac{\theta_\max + \pi}{2\beta} 
 = \frac{\theta_\max}{2\beta} + \frac{\lambda}{4}
 \end{dmath}
+
+\begin{exmp}\label{exmp:locatepoints}
+\subsubsection*{Locate the points on the Smith chart}
+Locate the following points on the Smith chart (Take characteristic impedance, $Z_{0}$ = 50$\Omega$).
+
+\begin{enumerate}[(a)]
+\item 50+j75$\varOmega$
+\item 10+j0$\varOmega$
+\item 0-j80$\varOmega$
+\item $\Gamma=0.3\angle60^o$
+\item VSWR, $\rho=2.5$
+\item $R_\min$ on $\rho$ = 1.5  circle
+\end{enumerate}
+
+\subsubsection*{Solution}
+All impedances seen on the Smith chart are normalized impedances. Therefore, for impedance (a), (b), and (c), we will first normalize these points with the characteristic impedance such that
+\begin{align*}
+\bar{A}&=\frac{A}{Z_{0}}
+=\frac{50 + j75}{50}\\
+&=1+j1.5\\
+\bar{B}&=\frac{B}{Z_{0}}
+= \frac{10 + j0}{50}\\
+&=0.2+j0\\
+\bar{C}&=\frac{C}{Z_{0}}
+= \frac{0 - j80}{50}\\
+&=0-j1.6
+\end{align*}
+
+To locate point A on the Smith chart, we first identify the constant resistance circle of $r = 1.0$. It is the circle which passes through the centre of the Smith chart from the right hand side (see figure~\ref{fig:workedexample1}). Next, we identify the constant reactance circle of $x = 1.5$. Recall that the circles above the real axis passing through the centre are the inductive reactance, while the circles below the line are the capacitive reactance. Since the value $x = 1.5$ is positive, it should be the constant inductive reactance circle. The point of intersection of these circle represents the normalized impedance, A, $1 + j1.5$. The same steps applies when identifying points B and C on the Smith chart.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{"./graphics/Smith chart"}
+\caption{Worked Example}
+\label{fig:workedexample1}
+\end{figure}
+
+To locate point in (d) which is the reflection coefficient, the approach is quite different. First, we measure the length of the diameter of the constant resistance circle $r = 1.0$ and record its value. In our case, we measured $7.6cm$. Thus we can determine the radius of a reflection coefficient of magnitude, $0.3$, that is, by multiplying the length, $7.cm$ with the value of the reflection coefficient which is $0.3$, we will get a value, $2.28cm$. 
+
+Next, we draw a circle of radius $2.28cm$ from the origin on the Smith chart (see figure~\ref{fig:workedexample1}). Note that the degree of rotation (circurmference of the gamma plane\textemdash limit circle) is calibrated in both degrees and distance. To locate the corresponding phase, we look along the circumference showing \textquotedblleft ANGLE OF REFLECTION COEFFICIENT IN DEGREES\textquotedblright\; we will locate the angle 60\textdegree\; anticlockwise. Then draw a straight line through the centre of the plane to the located angle 60\textdegree\; on the Smith chart. The point of intersection of the circle and the line is the point, $\Gamma = 0.3\angle60^o$ on the Smith chart (see figure~\ref{fig:workedexample1}).
+
+To locate point in (e), which is the VSWR of value 2.5, we will locate the point that reads $r = 2.5$ along the real axis on the Smith chart and draw a circle passing through that point from the origin. The VSWR circle of 2.5 is drawn through that point.
+
+To locate point in (f), first, we first draw the VSWR circle of value 1.5 using the steps discussed above. The rightmost side along the circle where the real axis intersects the VSWR circle is the normalized $R_\max$ or $r_\max$ and the leftmost side is the normalized $R_\min$ or $r_\min$. Therefore we record the value at the leftmost side and multiply the value by the characteristic impedance
+\begin{align*}
+r_\min &= \bar{R}_\min = \frac{R_\min}{Z_0}\\
+R_\min  &= \frac{r_\min}{Z_0} = 0.75 \times 50\\
+&= 37.5\Omega
+\end{align*}
+\end{exmp}
+

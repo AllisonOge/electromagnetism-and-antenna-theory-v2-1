@@ -201,6 +201,82 @@ The maximum voltage and current does not occur at the same point on the transmis
 
 The plot of the voltage and current variations in figure~\ref{fig:asdfghjhgfdsa} shown that maximum voltage corresponds to minimum current and minimum voltage corresponds to maximum current.
 
+\begin{exmp}
+\subsubsection*{Maximum and Minimum voltage and current}
+A lossless transmission line has 75$\Omega$ characteristic impedance. The line is terminated in a load impedance of $50-j100\Omega$. The maximum voltage measured on the line is 100V.
+
+(a) Find the maximum and minimum current, and the minimum voltage on the line.
+
+(b) At what distance from the load are the voltage and the current maximum?
+
+\subsubsection*{Solution}
+We are given
+$Z_{0}=75\Omega$,
+$Z_{L}=50-j100\Omega$, and 
+$|V|_\max=100V$
+
+\subsubsection*{(a) Maximum voltage and maximum and minimum current}
+The first step is to calculate the reflection coefficient.
+\begin{dmath*}
+\Gamma_{L}=\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}
+=\frac{50-j100-75}{50-j100+75}
+=0.64\angle-65.3^o 
+\end{dmath*}
+Where $|\Gamma_{L}|=0.64$ and $\phi_{L}=-65.3^o$. Since we are told that the line is lossless, then the reflection coefficient will remain constant throughout the line.
+
+We know that the maximum voltage which we will see on the line $|V|_\max=|V^{+}|(1+|\Gamma_{L}|)$, and we are given $|V|_\max$, we also know now the reflection coefficient, so we can find out the magnitude of the incident wave $|V^+|$.
+
+So,
+\begin{align*}
+100&=|V^{+}|(1+0.64)\\
+|V^{+}|&=\frac{100}{1.64}\\
+&=60.8V
+\end{align*}
+
+Let us determine the maximum current and minimum voltage and current. Given the characteristic impedance and the maximum voltage, we can find the maximum current as 
+\begin{align*}
+|I|_\max&=\frac{|V|_\max}{Z_0}\\
+&=\frac{100}{75}\\
+&=1.33A
+\end{align*}
+The minimum current can be expressed in terms of minimum voltage as well so that
+\begin{align*}
+|I|_\min&=\frac{|V|_\min}{Z_0}\quad\text{But }|V|_\min\text{ = }|V^+|(1 - |\Gamma_L|)\\
+&=\frac{|V^{+}|}{Z_0}(1-|\Gamma_{L}|)\\
+&=\frac{60.8}{75}(1-0.64)\\
+&=0.29A
+\end{align*}
+And we can determin the minimum voltage using either $|V|_\min=Z_0|I|_\min$ or $|V|_\min=|V^{+}|(1-|\Gamma_{L}|)$. Using the first equation, then the minimum voltage is	
+\begin{dmath*}
+|V|_\min=Z_0|I|_\min
+=75\times0.29=21.88V
+\end{dmath*}
+
+\subsubsection*{(b) Location of maximum voltage and current}
+Lastly, let us locate the distance from the load where the current and voltage are maximum. Let us note that when the two traveling waves have a constructive interference, we have a voltage maximum which corresponds to the current minimum. Also, when two traveling waves have a destructive interference, we have a voltage minimum which corresponds to the current maximum.
+
+Recall that the phase difference between the forward and the backward wave is given by $\phi_{L}-2\beta l$. If $\phi_{L}-2\beta l$ equals even multiples of $\pi$, the two waves will  have a constructive interference and the voltage will be maximum. Similarly, when $\phi_{L}-2\beta l$ equals odd multiples of $\pi$, the two waves will have a destructive interference and a voltage minimal will be observed. So mathematically, voltage maximum occurs at $\phi_{L}-2\beta l= \pm2m\pi$, where m is an integer quantity.
+\begin{align*}
+\phi_{L}-2\beta l_\max&=-2m\pi\\
+\text{Thus, }\quad2\beta l_\max&= \phi_{L}+2m\pi\\
+\text{But, }\beta = \frac{2\pi}{\lambda}\\
+2 \times \frac{2\pi}{\lambda}\times l_\max&= \phi_{L}+2m\pi\\
+l_\max&=\frac{(\phi_L + 2m\pi)\lambda}{4\pi}
+\end{align*}
+We know $\phi_{L}=-65.3^o=-1.14rad$
+\begin{align*}
+l_\max=\frac{(-1.14 + 2m\pi)\lambda}{4\pi}
+\end{align*}
+When $m = 1,2,3, \ldots\quad l_\max=0.41\lambda, 0.91\lambda, 1.41\lambda$ and so on.
+
+Similarly, to find the current maximum, let us recall that the current maximum occurs at a point where the voltage is minimum and vice versa. They are apart by a distance of $\frac{\lambda}{4}$, so the current maximum is at
+\[
+l_\max(\text{voltage})\pm \frac{\lambda}{4}
+\]
+
+Using the negative and positive sign will both give correct answers. Here, we will use the negative sign, that is, $l_\max-\frac{\lambda}{4}$. When $m = 1, 2, 3, \ldots$, therefore $|I|_\max$ occurs at $0.16\lambda , 0.66\lambda , 1.16\lambda$ and so on.
+\end{exmp}
+
 \section{Concept of Voltage Standing Wave Ratio (VSWR)}\index{voltage standing wave ratio}
 Let us suppose we are interested in finding the impedance at an arbitrary distance $l$ on a lossless transmission line. Then the ratio of voltage and current would be
 \begin{align*}
@@ -316,4 +392,66 @@ We know that the impedance known at any point in a transmission line can always 
 
 At high frequencies, if we have a complex impedance, its measurement is quite tedious because we cannot measure phase accurately. Now we have a mechanism for measuring the phase indirectly. As we have mentioned, the phase gets reflected into the standing wave pattern on the location of voltage maximum and minimum. So if we measure VSWR and the location of $V_{\max}$ and $V_{\min}$ we can always transform $R_{\max}$ or $R_{\min}$ to the location of the load which is nothing but the load impedance. So if we transform from the load impedance to the voltage maximum or minimum we would get $R_{\max}$ and $R_{\min}$. In summary, ig the location of $V_{\max}$ from the load is known and the value of impedance at that location, and the distance of the load from that point are also known, then the transformation of $R_{\max}$ or $R_{\min}$ to load end should give load impedance.
 
-When we go to the application of transmission line we will see that the technique is used for measuring complex impedances. Then we will explicitly derive the expression for the unknown impedance which is terminated to a transmission line. 
+
+\begin{exmp}
+\subsubsection*{Maximum and Minimum Resistance}
+A $50\Omega$ transmission line is connected to a parallel combination of a $100\Omega$ resistance and a 1nF capacitance.
+
+(a) Find the VSWR on the line at a frequency of 2MHz.
+
+(b) Find the maximum and minimum resistance seen on the line.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{./graphics/d1}
+\caption{Circuit diagram}
+\end{figure}
+
+\subsubsection*{Solution}
+\begin{enumerate}[(i)]
+\item First, we will find out the complete impedance for the parallel combination of the resistor and capacitor, given as $Z_{L}=R\parallel X_C$, that is
+\begin{align*}
+Z_L&=\frac{R \times X_c}{R + X_C}\quad\text{Where }X_C =\frac{1}{j\omega C}\\
+&=\frac{R\times\dfrac{1}{j\omega C}}{\dfrac{j\omega RC + 1}{j\omega C}}\\
+&=\frac{R}{j\omega C} \times \frac{j \omega C}{j\omega RC + 1}\\
+&=\frac{R}{j\omega RC + 1}
+\end{align*}
+Given $f=2$MHz
+\begin{dmath*}
+\omega = 2\pi f
+= 2\pi \times 2 \times 10^{6}
+=1.256\times 10^{7}rad/s    
+\end{dmath*}
+Therefore the load impedance is
+\begin{dmath*}
+Z_{L}=\frac{100}{1 + j1.2566}
+= 38.77-j48.7\Omega
+= 62.3\angle-51.5^o\Omega
+\end{dmath*}
+
+\item Next, we find the refection coefficient.\\
+Reflection coefficient at load point,
+\begin{dmath*}
+\Gamma_{L}=\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}
+= \frac{38.77-j48.7-50}{38.77-j48.7+50}
+=0.13-j0.47 = 0.5\angle-74.23^o
+\end{dmath*}
+We get $|\Gamma_{L}|=0.5$ and $\phi_L = -74.23^o$
+
+\item 
+\subsubsection*{(a) VSWR}
+Now, we know the reflection coefficient, we can find out VSWR, $\rho$, given as;
+\begin{dmath*}
+\rho=\frac{1 + |\Gamma_{L}|}{1-|\Gamma_{L}|}=\frac{1+0.5}{1-0.5} = 3
+\end{dmath*}
+
+\item 
+\subsubsection*{(b) Maximum and Minimum Resistance}
+$R_\max$ and $R_\min$ can be calculated from equations~\eqref{eqn:maximprho} and~\eqref{eqn:minimprho} such that
+\begin{align*}
+R_\max = 50 \times 3 = 150\Omega\\
+R_\min = \frac{50}{3} = 16.67\Omega
+\end{align*}
+\end{enumerate}
+\end{exmp}
+

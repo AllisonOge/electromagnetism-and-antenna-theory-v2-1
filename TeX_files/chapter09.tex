@@ -1,4 +1,115 @@
-\chapter{Identifying Types of Load from Standing Wave Pattern\index{standing wave pattern}}\label{lec:lec9}
+\begin{exmp}
+A 50$\Omega$ line is terminated in a load impedance $25+j35\Omega$. Find the following using a Smith chart.
+\begin{enumerate}[(a)]
+\item Reflection coefficient in cartesian and polar form,
+\item Reflection coefficient and impedance at a distance of $0.2\lambda$ from the load end of the line.
+\item VSWR on the line.
+\end{enumerate}
+
+\subsubsection*{Solution}
+We are given $Z_{L}=25+j35\varOmega$ and $Z_{0}=50\varOmega$, so first, we normalize the load impedance
+\begin{dmath*}
+\bar{Z_{L}}=\frac{25+j35}{50}=0.5+j0.7
+\end{dmath*}
+We mark this point on the Smith chart as shown in figure~\ref{fig:workedexample2}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{"./graphics/Smith chart 1"}
+\caption{Worked Example}
+\label{fig:workedexample2}
+\end{figure}
+
+To get the reflection coefficient, we draw a circle from the origin of the Smith chart through the marked point (normalized load impedance), A. The distance between point A and the centre gives the magnitude of the reflection coefficient\footnote{
+The distance is read from the scale for reflection coefficient E or I at the bottom of the Smith chart page
+
+\underline{Note}: This method is different from that used in example~\ref{exmp:locatepoints} and both methods are correct
+}. We read the value as
+\begin{align*}
+|\Gamma_{L}| = 0.52
+\end{align*}
+
+To determine the angle $\phi_{L}$, we draw a straight line from the origin through point A to the outermost circle as shown in figure~\ref{fig:workedexample2}. From the scale that reads \textquotedblleft ANGLE OF REFLECTION COEFFICIENT\textquotedblright\;, read the angle the line makes from the positive real axis. The value gives the angle of the reflection coefficient in polar form so that the reflection coefficient at the load is $0.52\angle100^o$ in polar form.
+
+The cartesian form is obtained by converting the polar form to cartesian form as shown below
+\begin{align*}
+\Gamma_{L} &= 0.52\angle100^o\\
+&= 0.52e^{j100}\\
+&= 0.52{\cos100 + j\sin100}\\
+&= -0.09+j0.512
+\end{align*}
+
+The next step is to get the reflection coefficient at a distance of $0.2\lambda$ from the load point, that is, $\Gamma(0.2\lambda)$. 
+
+First, we identify the scale on the outermost circle that reads \textquotedblleft WAVELENGTH TOWARDS GENERATOR\textquotedblright\; and measure the value measured at point A which we obtained as $0.11\lambda$. To move a distance $0.2\lambda$ towards the generator means to move clockwise along the scale\footnote{
+Similarly, moving towards the load on the Smith chart means to move in the anticlockwise direction along the scale that reads \textquotedblleft WAVELENGTH TOWARDS LOAD\textquotedblright\;.
+}. We mark this point as B, which has the value $0.11\lambda + 0.2\lambda=0.31\lambda$. We draw a straight line through the origin of the Smith chart and point B and determine the point of intersection with the VSWR circle. The point is marked P (see figure~\ref{fig:workedexample2}) which is the point of the reflection coefficient moved $0.2\lambda$ towards the generator. 
+
+Recall the magnitude of the reflection coefficient is given by the distance between the centre and the point P and the angle is measured from the positive real axis. We read the value as
+\begin{align*}
+\Gamma(0.2\lambda) = 0.52\angle316^o
+\end{align*}
+
+To find the normalized impedance at point P, we locate the constant resistance and reactance circles through the point. In our case we obtained
+\begin{align*}
+\bar{Z}=1.4-j1.37\\
+\text{Thus, }Z &=Z_{0}\times\bar{Z}\\
+&= 50(1.4-j1.37)\\
+&= 70-j68.5\varOmega
+\end{align*}
+
+Next, we obtain the value $\rho$ by reading the value at the rightmost side of the VSWR circle (see figure~\ref{fig:workedexample2}).
+\begin{align*}
+VSWR, \rho = 3.8
+\end{align*}
+\end{exmp}
+
+\begin{exmp}
+\subsubsection*{Transmission line analysis with Admittances}
+A line is terminated in a normalized admittance $0.2-j0.5\varOmega$. Find 
+\begin{enumerate}[(a)]
+\item the location of the voltage maximum from the load end. 
+\item the reflection coefficient , normalized admittance and normalized impedance at a distance $0.12\lambda$ from the load.
+\end{enumerate}
+
+\subsubsection*{Solution}
+Now, in this problem we are dealing with admittances instead of impedances. The admittance we are given here is already normalized, so we mark the point, $\bar{Y} = 0.2 - j0.5$, on the Smith chart as shown in figure~\ref{fig:workedexample3}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{"./graphics/smith chart 3"}
+\caption{Worked Example}
+\label{fig:workedexample3}
+\end{figure}
+
+Next, we draw a circle from the origin of the Smith chart through that point $\bar{Y}_L$ which should help us determine the position of maximum voltage and reflection coefficient, normalized admittance and normalized impedance at $0.12\lambda$ from the load.
+
+\subsubsection*{(a) Location of the voltage maximum from the load end}
+For the admittance Smith chart, the voltage maximum will now lie on the leftmost side of the VSWR circle of the Smith chart. This point is marked as $V_\max$ on the Smith chart (see figure~\ref{fig:workedexample3}). The distance between $\bar{Y}_L$ and $V_\max$ on the Smith chart is the location of the voltage maximum moving towards the generator\footnote{
+Recall we move clockwise when moving towards the generator.
+}.
+
+\subsubsection*{(b) Reflection coefficient, normalized admittance and impedance at a distance $0.12\lambda$ from the load}
+First we note the distance corresponding to $\bar{Y}_L$ which we measured as $0.424\lambda$ on the Smith chart. Moving a distance of $0.12\lambda$ towards the generator implies the new location is $0.424\lambda + 0.12\lambda = 0.544\lambda$. But the highest value on the wavelength scale is $0.5\lambda$ so the value on the scale which corresponds to $0.544\lambda$ is $0.044\lambda$\footnote{
+$0.544\lambda-0.5\lambda$
+}. Next we draw a line from the origin of the Smith chart through that point and mark the point of intersection of the line with the VSWR circle as $\bar{Y}$ (see figure~\ref{fig:workedexample3}). We read the corresponding value of normalized admittance as:
+\begin{align*}
+\bar{Y} = 0.18 + j0.28
+\end{align*}
+
+To get the normalized impedance at the distance of $0.12\lambda$ from the load point, we transform the admittance by $\frac{\lambda}{4}$\footnote{
+Recall that the normalized impedance inverts itself every $\frac{\lambda}{4}$
+}. Put differently, the normalized admittance is the reciprocal(inverse) of the normalized impedance. A transformation by $\frac{\lambda}{4}$ can easily be calculated on the Smith chart by drawing a straight line from the normalized admittance, $\bar{Y}$ through the origin such that it divides the Smith chart into halves. We mark this point as $\bar{Z}$ (see figure~\ref{fig:workedexample3}) which is 180\textdegree from the point $\bar{Y}$. This point reads the values of normalized impedance as:
+\begin{align*}
+\bar{Z} = 1.6 - j2.6
+\end{align*}
+
+Finally, we need to measure the reflection coefficient. To get the magnitude, we measure the distance between the origin of the Smith chart and $\bar{Z}$\footnote{
+This is done either with a pair of dividers preferably to take the length and read its distance on the scale at the bottom of the Smith chart page. Or alternatively, divide the distance measured with a pair of dividers by the distance measured for the $r = 1.0$ constant resistance circle.
+}. While we get the phase angle by measuring the angle suspended for the positive real axis. That is,
+\begin{align*}
+\Gamma = 0.7\angle328^o
+\end{align*}
+All these demonstrate is the effectiveness of the Smith chart in moving from impedance to admittance and vice versa. We switch from impedance to admittance by diagonally switching on the Smith chart. That is, at the load point for instance, $\bar{Y_{L}}$, if we go diagonally opposite, we get $\bar{Z_{L}}$. So basically, it helps us invert complex number. 
+\end{exmp}
 
 In the previous chapter, we discussed how to solve some simple common transmission line problems using both impedances and admittances and then we discussed the constant VSWR circle. In this chapter, we will discuss how to identify the types of load from standing wave patterns. Standing wave pattern has two important characteristics which are:
 \begin{enumerate}[(i)]
