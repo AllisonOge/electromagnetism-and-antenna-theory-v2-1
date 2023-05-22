@@ -1,7 +1,7 @@
-\chapter{Applications of transmission lines}\label{lec:lec10}
-This chapter deals with the applications of transmission line at high frequency. In the previous chapters, we dealt with the
-analysis of transmission line that is, the derivation of transmission line equations, power flow in transmission line, voltage and wave characteristics of transmission line, the use of graphical tool called a Smith Chart to analyze the transmission line.
-There are many applications of transmission line but at high frequency, many of the reactive elements are replaced by transmission line sections. This is the part we shall discuss in this chapter.
+\section{Applications of transmission lines}\label{lec:lec10}
+This section deals with the applications of transmission line at high frequency. Previously, we dealt with the
+analysis of transmission line that is, the derivation of transmission line equations, power flow in transmission line, voltage and wave characteristics of transmission line, the use of graphical tool called a Smith chart to analyze the transmission line.
+There are many applications of transmission line but at high frequencies, many of the reactive elements are replaced by transmission line sections. This is the part we shall discuss in this section.
 \begin{enumerate}[(i)]
 \item Measurement of Unknown Impedance 
 \item As a Circuit Element
@@ -10,7 +10,7 @@ There are many applications of transmission line but at high frequency, many of 
 \item Matching Impedance
 \end{enumerate}
 
-\section{Measurement of unknown impedance}
+\subsection{Measurement of unknown impedance}
 The measurement of phase is a very difficult task at high frequency. Phase measurement is crucial in impedance measurement because the impedance of a circuit consists of both the resistance and the reactance, and the reactance component depends on the phase relationship between the current and the voltage in the circuit. At high frequencies, it becomes difficult to measure the phase of signals accurately due to several factors, such as signal distortion, noise, and the limited frequency response of measurement instrument. For instance, the phase shift caused by the circuit under test becomes very small at high frequencies. Additionally, the propagation delay in cables, connectors and other components used in the measurement setup becomes significant at high frequencies and can introduce errors in the phase measurement. Therefore, in order to measure complex impedances, we have to measure the complex voltage and complex current. Since the measurement of phase is not that simple, the measurement of complex impedance becomes difficult at high frequency. In transmission line, the temporal phase between the voltage and current gets translated into spatial phase in the form of standing wave pattern which means we can assume that the temporal phase between voltage and current is gotten by measuring the standing wave pattern on the transmission line. This is the method used for measuring unknown impedance at high frequency, using a special transmission line called \textbf{slotted
 transmission line}\index{slotted transmission line}.
 \begin{figure}[h]
@@ -39,7 +39,7 @@ The setup for the measurement is depicted in figure~\ref{fig:group10diagram1}. T
 \item Calculate the impedance using impedance transformation relation
 \end{enumerate}
 
-\subsection{Impedance Calculation}
+\subsubsection{Impedance Calculation}
 Recall, VSWR is given as
 \begin{align}
 \rho = \frac{|V|_\max}{|V|_\min}
@@ -109,7 +109,7 @@ The minimum voltage for the short circuit standing wave pattern repeats itself a
 
 This technique of impedance measurement is very useful. In fact at high frequencies (e.g., microwave frequencies) without measurement like this on a slotted line, one will not be able to measure the unknown impedance. So at high frequency, the transmission line is suitable for the measurement of unknown impedance.
 
-\section{As a Circuit Element}
+\subsection{As a Circuit Element}
 Assuming we wound the inductor as shown in figure~\ref{fig:group10diagram3} at high frequencies such that its inductance is L. At high frequency, there is a capacitance between the turns of the inductor that almost short out current as $X_{C} = \frac{1}{2\pi f_c}$. This was not the case at low frequencies when the turns appeared separated from one another. Hence, at high frequency we then have distributed capacitors between the turns of inductor.
 \begin{figure}[h]
 \centering
@@ -149,7 +149,7 @@ The outermost circle has $r = 0$ and it implies that as we move along that circl
 
 Hence for a open or short circuit load, by using different length of transmission line, we can get different reactance at the input. Therefore, \emph{what should be the length of the transmission line, so that one gets a particular value of reactance at the input?}
 
-\subsection{Analytical approach of using transmission line as a circuit element}
+\subsubsection{Analytical approach of using transmission line as a circuit element}
 Analytically, $l$ is the distance towards the generator and recall that for a lossless transmission line which we assume unless stated otherwise.
 
 Considering a short circuit load at the end of a transmission line, then using the impedance transformation relation,
@@ -178,14 +178,14 @@ l_{OC} &= \frac{1}{\beta}\cot^{-1}\frac{-X}{Z_o}
 
 If the frequency of operation as well as velocity of the wave propagation are known, then we can find $\lambda$ and use $\beta = \frac{2\pi}{\lambda} $. Therefore, in conclusion, we can realize the unknown reactance from using transections of the transmission line. 
 
-As we know, for such calculations as this, the use of Smith Chart comes in handy. The top half of the impedance Smith Chart at the outermost circle is pure inductance, and the bottom half is for capacitance. However, before we get into details of Smith Chart usage, we have to be sure that $X = Z_o\tan\beta l_{SC}$ and $X = -Z_o\cot\beta l_{OC}$ for all variation of $\beta l_{SC}$  from 0 to $ 2\pi $, either $\tan\beta l_{SC}$ or $\cot\beta l_{OC}$ varies from $-\infty$ to $+\infty$. Essentially, we want to measure the values of $X$ as we change the values of $l_{SC}$ or $l_{OC}$ in the transmission line, then we can realize any arbitrary value of the reactance. There is no limit to this. So any value of reactance between $-\infty$ to $+\infty$ can be realized either by short circuited line or open circuited line.
+As we know, for such calculations as this, the use of Smith chart comes in handy. The top half of the impedance Smith chart at the outermost circle is pure inductance, and the bottom half is for capacitance. However, before we get into details of Smith chart usage, we have to be sure that $X = Z_o\tan\beta l_{SC}$ and $X = -Z_o\cot\beta l_{OC}$ for all variation of $\beta l_{SC}$  from 0 to $ 2\pi $, either $\tan\beta l_{SC}$ or $\cot\beta l_{OC}$ varies from $-\infty$ to $+\infty$. Essentially, we want to measure the values of $X$ as we change the values of $l_{SC}$ or $l_{OC}$ in the transmission line, then we can realize any arbitrary value of the reactance. There is no limit to this. So any value of reactance between $-\infty$ to $+\infty$ can be realized either by short circuited line or open circuited line.
 
 The choice of whether to use a short circuit or open circuit line will depend upon the system you want to employ the circuit element. For example supposing we have a parallel wire transmission line, then connecting the two ends of the transmission line is rather easy, as we can short the end of the transmission line. However, a transmission line like a Printed Circuit Board (PCB), with ground plane on one side and the line on top separated by a dielectric. To short circuit the line, we will have to drill a plated-through hole (or a signal-carrying conductive via) into the PCB and requires a lot of precision, so realizing a short circuit line on that configuration is rather difficult. For this reason, an open circuit line is preferred. There may be situations where the short circuit line will be preferred over the open circuit line and vice versa. Irrespective of the one used, we will be able to realize all the reactances from  $ -\infty$ to $+\infty $, that is, we can realize any capacitive or inductive reactance by using an open circuited or short circuit section of a transmission line.
 
-\subsection{Graphical approach of using transmission line as a circuit element}
+\subsubsection{Graphical approach of using transmission line as a circuit element}
 Graphically, we we want to find the length, the problem turn out to be the opposite of the impedance calculation. Since we know the input impedance $Z_{in}$ at generator end  and we know terminating impedance, $Z_{L}$ at the end of the transmission line to be 0 or $\infty$ (that is, it is short circuit or open circuit point). So the challenge is that we want to find $ l_{SC} $ or $ l_{OC} $ where the impedances are known at both ends are known.
 
-The steps taken on the Smith Chart as outlined as follows:
+The steps taken on the Smith chart as outlined as follows:
 \begin{enumerate}[(i)]
 \item Mark the normalized impedance $\bar{Z}_{in}$ position, $\bar{Z}_{in} = jx$
 \item Mark the point for a short circuit or open circuit, $jx = 0$ or $jx = \infty$ (see figure~\ref{fig:group10diagram6}).
@@ -207,7 +207,7 @@ Figure~\ref{fig:group10diagram7} shows the distances between the normalized impe
 \label{fig:group10diagram7}
 \end{figure}
 
-Similarly, to realize a capacitive reactance which will be located at the bottom half of the Smith Chart for a start. Moving clockwise from short circuit point by no more than $\frac{\lambda}{4}$ we have inductive reactance, but beyond that point from $\frac{\lambda}{4}$ to $\frac{\lambda}{2}$ we have capacitive reactance (see figure~\ref{fig:group10diagram9}).
+Similarly, to realize a capacitive reactance which will be located at the bottom half of the Smith chart for a start. Moving clockwise from short circuit point by no more than $\frac{\lambda}{4}$ we have inductive reactance, but beyond that point from $\frac{\lambda}{4}$ to $\frac{\lambda}{2}$ we have capacitive reactance (see figure~\ref{fig:group10diagram9}).
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./graphics/group10diagram8}
@@ -225,7 +225,7 @@ Hence if the length lies within 0 and $ \frac{\lambda}{4} $ for a short circuite
 
 So any transection of a transmission line of size 0 to $ \frac{\lambda}{2} $ can realize any arbitrary value of capacitance and inductance at a particular frequency. We are not realizing a capacitor or inductor in actual sense, but we are realizing capacitive and inductive reactance.
 
-\section{As a Resonant circuit}
+\subsection{As a Resonant circuit}
 At $ \frac{\lambda}{4} $ the behaviour of the line changes from $ X_{L} $ to $ X_{C} $ or $ X_{C} $ to $ X_{L} $. Such a behaviour is similar to the characteristics of resonance, that is, at $\frac{\lambda}{4}$  location, we have a characteristics that is more like resonance characteristics. Let us suppose we have a circuit, at resonant frequency\footnote{
 Resonance frequency is a frequency point where the inductive reactance of the inductor becomes equal in value to the capacitive reactance of the capacitor $ X_{L} = X_{C} $
 }, a part of the circuit has inductive behaviour while the other part has capacitive behaviour. 
@@ -244,7 +244,7 @@ For a short circuit whose length is $ \frac{\lambda}{2} $, the impedance is equa
 
 So for a given frequency as we change the line length, when the line length is $ 0, \frac{\lambda}{2}, \lambda $ we see impedances at X, Y and Z. At frequency for which the length is $ \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4} $ we see impedance at A, B and C\footnote{
 We are dealing with short circuit for this analysis
-}. Starting from the short circuit (SC) point on the Smith Chart $ \frac{\lambda}{4} $, $ \frac{3\lambda}{4} $, $ \frac{5\lambda}{4} $ movement will correspond to a open circuit or $ \infty $ impedance,  hence A, B and C on the graph. Also, $ \frac{\lambda}{2} $, $ \lambda $, $ \frac{3\lambda}{2} $ will correspond to a SC point, which is the point we started from\footnote{
+}. Starting from the short circuit (SC) point on the Smith chart $ \frac{\lambda}{4} $, $ \frac{3\lambda}{4} $, $ \frac{5\lambda}{4} $ movement will correspond to a open circuit or $ \infty $ impedance,  hence A, B and C on the graph. Also, $ \frac{\lambda}{2} $, $ \lambda $, $ \frac{3\lambda}{2} $ will correspond to a SC point, which is the point we started from\footnote{
 rRecall that a complete $ 2\pi $ movement correspond to $ \frac{\lambda}{2} $ on the Smith Chart
 }. Hence in the frequency range close to X, Y and Z we have characteristics similar to that of a series LC circuit
 at resonance (see figure~\ref{fig:group10diagram12}). However in the vicinity of A, B and C the behaviour is similar to that of a parallel LC circuit at resonance (see figure~\ref{fig:group10diagram13}). 
@@ -261,10 +261,10 @@ at resonance (see figure~\ref{fig:group10diagram12}). However in the vicinity of
 \label{fig:group10diagram13}
 \end{figure}
 
-\subsection{Resonance for Series LC Circuit}
+\subsubsection{Resonance for Series LC Circuit}
 From the characteristics of series LC circuit, we know that at resonance frequency, $X_L = X_C$. As frequency increases, then $ X_{L} > X_{C} $ then we have a positive $X$, and conversely, as frequency decreases, then $ X_{C} > X_{L} $ therefore we have negative $X$ (see figure~\ref{fig:group10diagram12}).
 
-\subsection{Resonance for Parallel LC Circuit}
+\subsubsection{Resonance for Parallel LC Circuit}
 At resonance frequency, the equivalent impedance, $X$ is $\infty$ that is
 \begin{align*}
 \frac{1}{X} = \frac{1}{X_{C}} + \frac{1}{X_{L}} = 0
@@ -292,7 +292,7 @@ length is $0, \frac{\lambda}{2}, \lambda $ we see impedances at A, B and C as sh
 For open circuit line for length around $ \frac{\lambda}{2} $, the line will behave like a parallel resonant circuit because the input impedance will be at infinity. At about $ \frac{\lambda}{4} $, the line is like a short circuit and so behaves like a series resonant circuit. If the length of the line is $ \frac{\lambda}{2} $ the line will behave like a parallel resonant circuit.
 So depending upon whether short circuit line or open circuit line is used, the series or parallel resonance circuit can be realized at different frequencies. So invariably, at high frequencies, the transmission line can be used for realizing circuit elements and series or parallel resonance circuits.
 
-\subsection{Quality Factor of a resonant transmission line circuit}
+\subsubsection{Quality Factor of a resonant transmission line circuit}
 So \emph{what is the quality factor of the resonant circuit?} By definition, quality factor is related to the losses of the circuit (the higher the loss, the smaller the quality factor). So whenever we have a reactive element like inductor or capacitor, the losses in these elements characterize the quality factor. Quality Factor is a parameter that describes how under-damped an oscillator or resonator is and characterizes a resonator's bandwidth relative to its center frequency. It is a dimensionless quantity. It is a measure of the quality of a resonant circuit. 
 
 If we are dealing with lossless transmission line, then the quality factor for the resonance circuits should be infinite. There is no loss, however in practice, there is always a small loss in the transmission line. Hence we will shift our analysis from lossless transmission line to low-loss transmission line. This analysis will be treated in the next.
