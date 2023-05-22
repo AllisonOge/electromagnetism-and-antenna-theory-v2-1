@@ -1,27 +1,10 @@
-\chapter{Applications of transmission line (2)}\label{lec:lec11}
-We are discussing the applications of transmission line, which are:
-\begin{enumerate}[(i)]
-\item Impedance measurement
-\item As a circuit element
-\item As a Resonant Circuit
-\item As a step up transformer
-\item Impedance matching 
-\end{enumerate}
+% In \autoref{sec:circuitelement}, we discussed that at high frequency, lumped circuit elements such as the inductor does not behave only as an inductor, but as a capacitor and an inductor. Also, a capacitor does not behave only as a capacitor, but as an inductor and a capacitor. Due to this behaviour experienced by this lumped elements (capacitor and inductor) at high frequencies, a transmission line of length $l$ with a short circuit or open circut end is used.
 
-In this chapter, we are considering:
-\begin{enumerate}[(i)]
-\item As a Resonant Circuit
-\item As a step up transformer
-\end{enumerate}
+% A short circuited transmission line has a length, $l_{SC}$ and a open circuited transmission line has a length $l_{OC}$. it is used as a capacitor and as an inductor by varying its length. We established that for an inductor, $0 < l_{SC} < \frac{\lambda}{4}$ and for a capacitor, $\frac{\lambda}{4} < l_{SC} < \frac{\lambda}{2} $
 
-\section{Quality Factor of a resonant transmission line circuit}
-Previously, we discussed that at high frequency, lumped circuit elements such as the inductor does not behave only as an inductor, but as a capacitor and an inductor. Also, a capacitor does not behave only as a capacitor, but as an inductor and a capacitor. Due to this behaviour experienced by this lumped elements (capacitor and inductor) at high frequencies, a transmission line of length $l$ with a short circuit or open circut end is used.
+% Up to this point, we have dealt with lossless transmission line, which imply, for the use of the transmission line as a resonant circuit, we expect to get an infinite quality factor. Quality factor\index{quality factor} of a resonance circuit depends on the losses of the circuit, higher loss leads to low quality factor and vice versa.
 
-A short circuited transmission line has a length, $l_{SC}$ and a open circuited transmission line has a length $l_{OC}$. it is used as a capacitor and as an inductor by varying its length. We established that for an inductor, $0 < l_{SC} < \frac{\lambda}{4}$ and for a capacitor, $\frac{\lambda}{4} < l_{SC} < \frac{\lambda}{2} $
-
-Up to this point, we have dealt with lossless transmission line, which imply, for the use of the transmission line as a resonant circuit, we expect to get an infinite quality factor. Quality factor\index{quality factor} of a resonance circuit depends on the losses of the circuit, higher loss leads to low quality factor and vice versa.
-
-Now, we consider a transmission line with losses at length of $ l=\frac{\lambda}{4} $, so that we can then determine the actual value of quality factor for this case. Let the length be $ l=\frac{\lambda}{4} $, either open circuit or short circuit as shown in figure~\ref{fig:fig1}.
+Let us consider a transmission line with losses at length of $ l=\frac{\lambda}{4} $, so that we can then determine the actual value of quality factor for this case. The transmission line can be either open circuit or short circuit as shown in figure~\ref{fig:fig1}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig1}
@@ -31,7 +14,7 @@ Now, we consider a transmission line with losses at length of $ l=\frac{\lambda}
 
 At $ \frac{\lambda}{4} $, the open circuit will appear as a short circuit to the other end of the line and similarly, the short circuit will appear as an open circuit. Therefore, a short circuit end transmission line will appear as a parallel resonance circuit at $ l_{SC}=\frac{\lambda}{4} $ and a open circuit end transmission line will appear as a series resonance circuit at $ l_{OC}=\frac{\lambda}{4} $. So, in order to find the quality factor, we first calculate the actual input impedance of these lines with losses at the given length.
 
-\subsection{Impedance of resonant circuit with losses}
+\subsubsection{Impedance of resonant circuit with losses}\label{lec:lec11}
 To calculate the input impedances of the lines $ Z_{OC} $ and $ Z_{SC} $, for a length $ l=\frac{\lambda}{4} $ with losses, recall the impedance transformation relationship is
 \begin{dmath*}
 Z(l) = Z_{o}\left(\frac{Z_{L}\cosh\gamma l + Z_{o}\sinh\gamma l}{Z_{o}\cosh\gamma l + Z_{L}\sinh\gamma l}\right)\quad\text{for short circuit }Z_{L}\text{= 0}
@@ -124,7 +107,7 @@ Ideally $ Z_{OC}=0 $, but this is not the case with low loss line where we have 
 With $ Z_{OC} = Z_{o} \alpha l $ and 
 $ Z_{SC}= \frac{Z_{o}}{\alpha l} $, we can vary the frequency and measure the variation of $ Z_{SC} $ or $ Z_{OC} $ with frequency. Recall that $ \alpha $ depends on frequency, length $(l)$ also depends on frequency since $ l=\frac{\lambda}{4} $. The variation of $ Z_{SC} $ or $ Z_{OC} $ with frequency gives us what is called the frequency response of the circuit\index{frequency response of the circuit}.
 
-\subsection{Quality factor}
+\subsubsection{Quality factor}
 Quality factor\index{quality factor} can be calculated in two ways:
 \begin{enumerate}[(i)]
 \item From the frequency response of the circuit
@@ -191,10 +174,10 @@ I(l) = \frac{V_{o}}{Z_{o}}\cos \beta l
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig03}
 \caption{Voltage and Current distribution of the short circuited transmission line}
-\label{fig:fig3}
+\label{fig:fig03}
 \end{figure}
 
-The plot of the voltage and current distributions along the short circuited transmission line is shown in figure~\ref{fig:fig3}. It shown that at $l = \frac{\lambda}{2}$ the voltage distribution is maximum while that of the current is zero. At $ l = \frac{\lambda}{4}$ , $ \beta l = \frac{\pi}{2} $, so that $\sin \beta l = \sin \frac{\pi}{2}$ = 1 and $\cos \beta l = \cos \frac{\pi}{2} = 0$. For the voltage distribution we have a peak at $ l = \frac{\lambda}{4}$ and a minimum of $ l = 0 $ and for the current distribution we have a peak value at $ l = 0$ and a minimum value at $l = \frac{\lambda}{4}$.
+The plot of the voltage and current distributions along the short circuited transmission line is shown in figure~\ref{fig:fig03}. It shown that at $l = \frac{\lambda}{2}$ the voltage distribution is maximum while that of the current is zero. At $ l = \frac{\lambda}{4}$ , $ \beta l = \frac{\pi}{2} $, so that $\sin \beta l = \sin \frac{\pi}{2}$ = 1 and $\cos \beta l = \cos \frac{\pi}{2} = 0$. For the voltage distribution we have a peak at $ l = \frac{\lambda}{4}$ and a minimum of $ l = 0 $ and for the current distribution we have a peak value at $ l = 0$ and a minimum value at $l = \frac{\lambda}{4}$.
 
 Now we know the voltage and current distributions on the transection of the transmission line, we can find the energy stored at different points of the transmission line. To find the energy stored, the capacitance of a infinitesimal section of the transmission line is $C\Delta l$ for $\Delta l$ section since R, G, C and L are always stated per unit length. Hence, the capacitive and inductive energy stored in that section are 
 \begin{align*}
@@ -258,7 +241,7 @@ Q = \frac{\beta}{2 \alpha}
 \end{equation}
 Equation~\eqref{eqn:qualityfacsoln} is the same expression we would have obtained by finding out the frequency response of the transmission line and measuring the input and it's variation as a function of frequency. It implies that the quality factor is related to the phase $\beta$ and attenuation constant $ \alpha$ of the transmission line. For a low loss line $ \alpha \ll \beta$, thus Q is very large. This means that $Q \gg 1$ for a low loss line. This is very important because it implies that at high frequencies, a transection of a transmission line can give a high quality factor circuit. Since quality factor is related to 3dB bandwidth, the higher the quality factor, the smaller the 3dB bandwidth or the more tuned the circuit is. This is the frequency selectivity\index{frequency selectivity} of the circuit and a high quality factor signifies a very frequency selective circuit. We can get few hundreds to few thousands of quality factor value for some low loss transmission lines and a very good frequency sensitivity section of a transmission line are used as a resonant circuits.
 
-\section{As a Step Up Transformer}
+\subsection{As a Step Up Transformer}
 Let us consider a small section of transmission line of length, $l = \frac{\lambda}{4}$, shorted at the end shown in figure~\ref{fig:fig5}. Let's say by some means, voltage is induced along the section of the transmission line not from open circuit or short circuit end but between these two ends which we will take as the middle location as shown by the dotted lines.
 \begin{figure}[h]
 \centering
