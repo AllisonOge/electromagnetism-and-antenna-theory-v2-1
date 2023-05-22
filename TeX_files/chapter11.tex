@@ -17,30 +17,30 @@ At $ \frac{\lambda}{4} $, the open circuit will appear as a short circuit to the
 \subsubsection{Impedance of resonant circuit with losses}\label{lec:lec11}
 To calculate the input impedances of the lines $ Z_{OC} $ and $ Z_{SC} $, for a length $ l=\frac{\lambda}{4} $ with losses, recall the impedance transformation relationship is
 \begin{dmath*}
-Z(l) = Z_{o}\left(\frac{Z_{L}\cosh\gamma l + Z_{o}\sinh\gamma l}{Z_{o}\cosh\gamma l + Z_{L}\sinh\gamma l}\right)\quad\text{for short circuit }Z_{L}\text{= 0}
-= Z_{o}\left( \frac{0\times\cosh\gamma l + Z_{o}\sinh\gamma l}{Z_{o}\cosh\gamma l + 0\times\sinh\gamma l}\right)
-= Z_{o}\left(\frac{Z_{o}\sinh\gamma l}{Z_{o}\cosh\gamma l}\right)
-= Z_{o}\left(\frac{\sinh\gamma l}{\cosh\gamma l}\right)
+Z(l) = Z_0\left(\frac{Z_{L}\cosh\gamma l + Z_0\sinh\gamma l}{Z_0\cosh\gamma l + Z_{L}\sinh\gamma l}\right)\quad\text{for short circuit }Z_{L}\text{= 0}
+= Z_0\left( \frac{0\times\cosh\gamma l + Z_0\sinh\gamma l}{Z_0\cosh\gamma l + 0\times\sinh\gamma l}\right)
+= Z_0\left(\frac{Z_0\sinh\gamma l}{Z_0\cosh\gamma l}\right)
+= Z_0\left(\frac{\sinh\gamma l}{\cosh\gamma l}\right)
 \end{dmath*}
 From trigonometry functions $ \tanh\theta =\frac{\sinh\theta}{\cosh\theta} $
 \begin{equation}
-Z(l)_{SC}=Z_{o}\tanh\gamma L
+Z(l)_{SC}=Z_0\tanh\gamma L
 \end{equation}
 We adjust the expression for open circuit length at $ Z_{L} =\infty $ and take limits at it tends to $\infty$, thus
 \begin{dmath*}
-Z(l)_{OC} = Z_{o}\left(\frac{\cosh\gamma l +\frac{Z_{o}}{Z_{L}}\sinh\gamma l}{\frac{Z_{o}}{Z_{L}}\cosh\gamma l+ \sinh\gamma l}\right)
-= Z_{o}\left(\frac{\cosh\gamma l + 0\times\sinh\gamma l}{0\times\cosh\gamma l+ \sinh\gamma l}\right)
-= Z_{o}\left(\frac{\cosh\gamma l}{\sinh\gamma l}\right)
+Z(l)_{OC} = Z_0\left(\frac{\cosh\gamma l +\frac{Z_0}{Z_{L}}\sinh\gamma l}{\frac{Z_0}{Z_{L}}\cosh\gamma l+ \sinh\gamma l}\right)
+= Z_0\left(\frac{\cosh\gamma l + 0\times\sinh\gamma l}{0\times\cosh\gamma l+ \sinh\gamma l}\right)
+= Z_0\left(\frac{\cosh\gamma l}{\sinh\gamma l}\right)
 \end{dmath*}
 From trigonometry functions $ \frac{1}{\tanh\theta}=\frac{\cosh\theta}{\sinh\theta}=\coth\theta $
 \begin{equation}
-Z(l)_{OC}=Z_{o}\coth\gamma l	
+Z(l)_{OC}=Z_0\coth\gamma l	
 \end{equation}
-$ Z(l)_{SC}=Z_{o}\tanh\gamma l $ and $ Z(l)_{OC}=Z_{o}\coth\gamma l $, but with $ \gamma=\alpha +j\beta $, we have $ \alpha\ll\beta $ for low loss transmission line\footnote{
+$ Z(l)_{SC}=Z_0\tanh\gamma l $ and $ Z(l)_{OC}=Z_0\coth\gamma l $, but with $ \gamma=\alpha +j\beta $, we have $ \alpha\ll\beta $ for low loss transmission line\footnote{
 A low-loss transmission line is not the same as a lossless transmission line
 }, i.e $ \gamma\neq j\beta $, the $ \alpha $ part must be taken into consideration as well. We know that at $ l=\frac{\lambda}{4} $, the input impedance of a short circuit line is an open circuit and that of an open circuit line is a short circuit. However, in the presence of a loss, that will not be true. The impedance will neither be infinity for $ Z_{SC} $ nor zero for $ Z_{OC} $. If the loss is present, the input impedance will give
 \begin{equation}
-Z_{SC}=Z_{o}\tanh\gamma l=Z_{o}\tanh(\alpha+j\beta)l
+Z_{SC}=Z_0\tanh\gamma l=Z_0\tanh(\alpha+j\beta)l
 \end{equation}
 Where $ \gamma=\alpha+j\beta $ for a low-loss transmission line.
 
@@ -51,32 +51,32 @@ From trigonometry $\tanh(A+B)=\frac{\tanh A+\tanh B}{1+\tanh A\tanh B} $
 Recall that $ \tanh jA= j\tan A$.\\
 Therefore,
 \begin{equation}
-Z_{o}\tanh(\alpha+j\beta)l=Z_{o}\left(\frac{\tanh \alpha l+j\tan \beta l}{1+j\tanh \alpha l\tan \beta l}\right)
+Z_0\tanh(\alpha+j\beta)l=Z_0\left(\frac{\tanh \alpha l+j\tan \beta l}{1+j\tanh \alpha l\tan \beta l}\right)
 \end{equation}
 If $ \alpha $ is small compare to $ \beta $ for a length of $ \frac{\lambda}{4} $ of transmission line, $ \alpha l $ is much smaller than 1. For a low loss line, $ \alpha\ll\beta $ and $ \beta=\frac{2\pi}{\lambda} $. Therefore	$ \tanh \alpha l \approxeq \alpha l $, then we have
 \begin{equation}
-Z_{SC}\approxeq Z_{o}\left(\frac{\alpha l + j \tan \beta l}{1+ j\alpha l \tan\beta l}\right)
+Z_{SC}\approxeq Z_0\left(\frac{\alpha l + j \tan \beta l}{1+ j\alpha l \tan\beta l}\right)
 \label{eqn:scimp}
 \end{equation} 
 For $ l=\frac{\lambda}{4}, \beta=\frac{2\pi}{\lambda} \Longrightarrow \beta l= \frac{2\pi}{\lambda} \times\frac{\lambda}{4} =\frac{\pi}{2} $\\
 Dividing both the numerator and denominator of equation~\ref{eqn:scimp} by $ \tan\beta l $
 \begin{dmath*}
-Z_{SC}=Z_{o}\left(\frac{\alpha l + j \tan \beta l}{1+ j\alpha l \tan\beta l}\right)\times\left(\frac{\frac{1}{\tan \beta l}}{\frac{1}{\tan \beta l}}\right)
-=Z_{o}\left(\frac{\frac{\alpha l}{\tan \beta l}+\frac{j\tan \beta l}{\tan \beta l}}{\frac{1}{\tan \beta l}+\frac{j\alpha l\tan \beta l}{\tan \beta l}}\right)
-=Z_{o}\left(\frac{\frac{\alpha l}{\tan \beta l} + j}{\frac{1}{\tan \beta l} + j\alpha l}\right)\quad \tan \beta l\text{ =}\tan\frac{\pi}{2}\text{ =}\infty 
-=Z_{o}\left(\frac{\frac{\alpha l}{\infty} + j}{\frac{1}{\infty} + j \alpha l}\right)\quad\frac{\alpha l}{\infty}\text{= 0, }\frac{1}{\infty}\text{= 0}
-=Z_{o}\left(\frac{j}{j\alpha l}\right)
-=Z_{o}\left(\frac{1}{\alpha l}\right)
+Z_{SC}=Z_0\left(\frac{\alpha l + j \tan \beta l}{1+ j\alpha l \tan\beta l}\right)\times\left(\frac{\frac{1}{\tan \beta l}}{\frac{1}{\tan \beta l}}\right)
+=Z_0\left(\frac{\frac{\alpha l}{\tan \beta l}+\frac{j\tan \beta l}{\tan \beta l}}{\frac{1}{\tan \beta l}+\frac{j\alpha l\tan \beta l}{\tan \beta l}}\right)
+=Z_0\left(\frac{\frac{\alpha l}{\tan \beta l} + j}{\frac{1}{\tan \beta l} + j\alpha l}\right)\quad \tan \beta l\text{ =}\tan\frac{\pi}{2}\text{ =}\infty 
+=Z_0\left(\frac{\frac{\alpha l}{\infty} + j}{\frac{1}{\infty} + j \alpha l}\right)\quad\frac{\alpha l}{\infty}\text{= 0, }\frac{1}{\infty}\text{= 0}
+=Z_0\left(\frac{j}{j\alpha l}\right)
+=Z_0\left(\frac{1}{\alpha l}\right)
 \end{dmath*}
 \begin{equation}
-Z_{SC}=\frac{Z_{o}}{\alpha l}
+Z_{SC}=\frac{Z_0}{\alpha l}
 \end{equation}
-Therefore, this means that the input impedance of a short circuit line, if the length is $ \frac{\lambda}{4} $ is $ \frac{Z_{o}}{\alpha l} $, which is not infinity. Recall $ Z_{SC} = \infty $ for a lossless transmission line, but $ \alpha l \ll 1 $ means $ Z_{SC} $ is large but not infinity.
+Therefore, this means that the input impedance of a short circuit line, if the length is $ \frac{\lambda}{4} $ is $ \frac{Z_0}{\alpha l} $, which is not infinity. Recall $ Z_{SC} = \infty $ for a lossless transmission line, but $ \alpha l \ll 1 $ means $ Z_{SC} $ is large but not infinity.
 
 Similarly, the open circuit impedance is 
 \begin{dmath*}
-Z_{OC}=Z_{o}\coth\gamma l=\frac{Z_{o}}{\tanh\gamma l}
-=Z_{o}\coth\gamma l=Z_{o}\coth(\alpha+j\beta) l
+Z_{OC}=Z_0\coth\gamma l=\frac{Z_0}{\tanh\gamma l}
+=Z_0\coth\gamma l=Z_0\coth(\alpha+j\beta) l
 \end{dmath*}
 For low loss transmission line $ \alpha\ll\beta $.
 
@@ -86,26 +86,26 @@ But,
 \[ \frac{1}{\tanh(\alpha+j\beta)l}=\frac{1 + j\tanh (\alpha l)\tanh (j\beta l)}{\tanh (\alpha l) + \tanh (j\beta l)} \]
 And lastly, $ \tanh jA= j \tan A $
 \begin{dmath*}
-Z_{OC} = \frac{Z_{o}}{\tanh(\alpha+j\beta)}
-=Z_{o}\left(\frac{1+j\tanh \alpha l\tan \beta l}{\tanh \alpha l+j\tan \beta l}\right)
-\approxeq Z_{o}\left(\frac{1+ j \alpha l\tan \beta l}{\alpha l+j\tan \beta l}\right)
+Z_{OC} = \frac{Z_0}{\tanh(\alpha+j\beta)}
+=Z_0\left(\frac{1+j\tanh \alpha l\tan \beta l}{\tanh \alpha l+j\tan \beta l}\right)
+\approxeq Z_0\left(\frac{1+ j \alpha l\tan \beta l}{\alpha l+j\tan \beta l}\right)
 \end{dmath*}
 Divide both the numerator and denominator by $ \tan \beta l $
 \begin{dmath*}
-Z_{OC}=Z_{o}\left(\frac{\frac{1}{\tan \beta l}+\frac{j \alpha l\tan \beta l}{\tan \beta l}}{\frac{\alpha l}{\tan \beta l}+\frac{j\tan \beta l}{\tan \beta l}}\right)
-=Z_{o}\left(\frac{\frac{1}{\tan \beta l} + j \alpha l}{\frac{\alpha l}{\tan \beta l} + j}\right)\quad\tan\beta l\text{ =}\tan\frac{\pi}{2}\text{= }\infty
-=Z_{o}\left(\frac{\frac{1}{\infty} + j \alpha l}{\frac{\alpha l}{\infty} + j}\right)\quad\frac{\alpha l}{\infty}\text{= 0, }\frac{1}{\infty}\text{= 0}
-=Z_{o}\left(\frac{j \alpha l}{j}\right)
+Z_{OC}=Z_0\left(\frac{\frac{1}{\tan \beta l}+\frac{j \alpha l\tan \beta l}{\tan \beta l}}{\frac{\alpha l}{\tan \beta l}+\frac{j\tan \beta l}{\tan \beta l}}\right)
+=Z_0\left(\frac{\frac{1}{\tan \beta l} + j \alpha l}{\frac{\alpha l}{\tan \beta l} + j}\right)\quad\tan\beta l\text{ =}\tan\frac{\pi}{2}\text{= }\infty
+=Z_0\left(\frac{\frac{1}{\infty} + j \alpha l}{\frac{\alpha l}{\infty} + j}\right)\quad\frac{\alpha l}{\infty}\text{= 0, }\frac{1}{\infty}\text{= 0}
+=Z_0\left(\frac{j \alpha l}{j}\right)
 \end{dmath*}
 \begin{equation}
-Z_{OC}=Z_{o}(\alpha l)
+Z_{OC}=Z_0(\alpha l)
 \end{equation}
-Therefore, for low loss transmission line where $\alpha\ll\beta$, $ Z_{SC}\approxeq \frac{Z_{o}}{\alpha l} $ and $ Z_{OC} \approxeq Z_{o} \alpha l $. 
+Therefore, for low loss transmission line where $\alpha\ll\beta$, $ Z_{SC}\approxeq \frac{Z_0}{\alpha l} $ and $ Z_{OC} \approxeq Z_0 \alpha l $. 
 
-Ideally $ Z_{OC}=0 $, but this is not the case with low loss line where we have $ Z_{OC} = Z_{o} \alpha l $. What we note here is that the input impedance of the resonance section of a transmission line is ideally zero or infinity for series or parallel resonance circuit respectively. In practice, we see that we have small input impedance for a series resonance circuit and large input impedance for parallel resonance circuit.
+Ideally $ Z_{OC}=0 $, but this is not the case with low loss line where we have $ Z_{OC} = Z_0 \alpha l $. What we note here is that the input impedance of the resonance section of a transmission line is ideally zero or infinity for series or parallel resonance circuit respectively. In practice, we see that we have small input impedance for a series resonance circuit and large input impedance for parallel resonance circuit.
 
-With $ Z_{OC} = Z_{o} \alpha l $ and 
-$ Z_{SC}= \frac{Z_{o}}{\alpha l} $, we can vary the frequency and measure the variation of $ Z_{SC} $ or $ Z_{OC} $ with frequency. Recall that $ \alpha $ depends on frequency, length $(l)$ also depends on frequency since $ l=\frac{\lambda}{4} $. The variation of $ Z_{SC} $ or $ Z_{OC} $ with frequency gives us what is called the frequency response of the circuit\index{frequency response of the circuit}.
+With $ Z_{OC} = Z_0 \alpha l $ and 
+$ Z_{SC}= \frac{Z_0}{\alpha l} $, we can vary the frequency and measure the variation of $ Z_{SC} $ or $ Z_{OC} $ with frequency. Recall that $ \alpha $ depends on frequency, length $(l)$ also depends on frequency since $ l=\frac{\lambda}{4} $. The variation of $ Z_{SC} $ or $ Z_{OC} $ with frequency gives us what is called the frequency response of the circuit\index{frequency response of the circuit}.
 
 \subsubsection{Quality factor}
 Quality factor\index{quality factor} can be calculated in two ways:
@@ -145,7 +145,7 @@ So to calculate the quality factor, we calculate the energy stored in a transect
 let us consider a transection of a short circuited transmission line of length, $ l=\frac{\lambda}{4} $. Since the length depends on frequency, let us say frequency = $ f_{o} $ when $ l=\frac{\lambda_{o}}{4}$ and carry out our analysis. Hence, the resonant frequency of a circuit is $ f_{o} =\frac{v}{\lambda_{o}}$ (where $v$ = velocity of the wave). We now find voltage and current expression on the transmission line with the load end short circuited. With the load end short circuited, $Z_{L}= 0$, the reflection coefficient at the load point is -1 due to total reflection.
 
 So,
-\[\Gamma_{L} = \frac{Z_{L} - Z_{o}}{Z_{L} + Z_{o}} = \frac{0 - Z_{o}}{0 + Z_{o}} = -1\]
+\[\Gamma_{L} = \frac{Z_{L} - Z_0}{Z_{L} + Z_0} = \frac{0 - Z_0}{0 + Z_0} = -1\]
 A reflection coefficient of -1 means that the amplitude of reflection coefficient is 1 with a phase change of 180\textdegree.
 
 At this point, we can write down the voltage and current equation with the known reflection coefficient. We can also find out what the variation of voltage and current is on the transmission line fromm equation~\eqref{eqn:voltagefromload}
@@ -161,13 +161,13 @@ V(l) = V_{o}\sin \beta l
 \end{equation}
 In a similar manner, we can find the current distribution using equation~\eqref{eqn:currentfromload},
 \begin{dmath*}
-I(l) = \frac{V^{+}}{Z_{o}}e^{j\beta l} - \frac{V^{-}}{Z_{o}}e^{-j\beta l},\quad\frac{V^{-}}{V^{+}}\text{ = }\Gamma, V^{-}\text{ = }-V^{+}
-= \frac{V^{+}}{Z_{o}}e^{j\beta l} + \frac{V^{+}}{Z_{o}}e^{-j\beta l}\quad\text{Recall, }\frac{e^{j\beta l} + e^{-j\beta l}}{2}\text{ = }\cos \beta l
-=\frac{2V^{+}}{Z_{o}}\left(\frac{e^{j\beta l} + e^{-j\beta l}}{2}\right)
-= \frac{2V^{+}}{Z_{o}}\cos \beta l\quad\text{Let, }2V^{+}\text{ = }V_{o}
+I(l) = \frac{V^{+}}{Z_0}e^{j\beta l} - \frac{V^{-}}{Z_0}e^{-j\beta l},\quad\frac{V^{-}}{V^{+}}\text{ = }\Gamma, V^{-}\text{ = }-V^{+}
+= \frac{V^{+}}{Z_0}e^{j\beta l} + \frac{V^{+}}{Z_0}e^{-j\beta l}\quad\text{Recall, }\frac{e^{j\beta l} + e^{-j\beta l}}{2}\text{ = }\cos \beta l
+=\frac{2V^{+}}{Z_0}\left(\frac{e^{j\beta l} + e^{-j\beta l}}{2}\right)
+= \frac{2V^{+}}{Z_0}\cos \beta l\quad\text{Let, }2V^{+}\text{ = }V_{o}
 \end{dmath*}
 \begin{equation}
-I(l) = \frac{V_{o}}{Z_{o}}\cos \beta l
+I(l) = \frac{V_{o}}{Z_0}\cos \beta l
 \label{eqn:currentdistro}
 \end{equation}
 \begin{figure}[h]
@@ -187,19 +187,19 @@ U_{\text{inductor}} = \frac{1}{2}L\Delta lI^{2}
 Hence, the total energy stored in a transmission line can be written as:
 \begin{dmath*}
 U = \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V(l)|^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}|I(l)|^{2}dl\quad\text{from equations~\eqref{eqn:voltagedistro} and~\eqref{eqn:currentdistro}}
-= \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V_{o}\sin \beta l |^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}\left|\frac{V_{o}}{Z_{o}}\cos \beta l \right|^{2}dl
-= \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}(\sin^{2} \beta l) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\int_{0}^{\frac{\lambda_{o}}{4}}( \cos^{2} \beta l) dl
+= \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V_{o}\sin \beta l |^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}\left|\frac{V_{o}}{Z_0}\cos \beta l \right|^{2}dl
+= \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}(\sin^{2} \beta l) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}}( \cos^{2} \beta l) dl
 \end{dmath*}
 Recall from trigonometry   
 \[\sin^{2} \beta l = \frac{1 - \cos2\beta l}{2},\quad \cos^{2} \beta l = \frac{1 + \cos2\beta l}{2}\]
 {\small \begin{dmath}
-U = \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\int_{0}^{\frac{\lambda_{o}}{4}} \left(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl  = \frac{1}{2}CV_{o}^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right]= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin \pi}{4 \beta}\right] = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[ \frac{\lambda_{o}}{8} \right]
+U = \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}} \left(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl  = \frac{1}{2}CV_{o}^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right]= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin \pi}{4 \beta}\right] = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right]
 \end{dmath}}
-Where $\frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] $ is the energy stored in line capacitance and $ \frac{1}{2}L\frac{V_{o}^{2}}{Z_{o}^{2}}\left[ \frac{\lambda_{o}}{8} \right] $ is the energy stored in line inductance.
+Where $\frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] $ is the energy stored in line capacitance and $ \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right] $ is the energy stored in line inductance.
 
 We see that the two quantities are equal since
 \begin{equation*}
-Z_{o} = \sqrt{\frac{L}{C}}\Longrightarrow CZ_{o}^{2} = L,\quad C = \frac{L}{Z_{o}^{2}}
+Z_0 = \sqrt{\frac{L}{C}}\Longrightarrow CZ_0^{2} = L,\quad C = \frac{L}{Z_0^{2}}
 \end{equation*}
 \begin{dmath}
 U = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] +\frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right]
@@ -217,21 +217,21 @@ Equation~\eqref{eqn:totalenergy} is the total energy in the short circuited tran
 
 The energy stored in the line is connected at point AA'. Finding out what the power loss at AA' is, the power loss is equivalent to the power loss in the line because the line is short circuited. Therefore, the load is not consuming any power and the power supplied will be equal to the loss in the transmission line. So without revisiting the primary constant of the transmission line, just by calculating the input impedance of the line, we can find out what the equivalent resistance would be at the input point of the line and find out the losses through this resistance which will be the power loss in the line. Hence, the input impedance seen at AA' will be
 \begin{equation*}
-Z_{SC} = \frac{Z_{o}}{\alpha l}\quad\text{from equation~\eqref{eqn:scimp}}
+Z_{SC} = \frac{Z_0}{\alpha l}\quad\text{from equation~\eqref{eqn:scimp}}
 \end{equation*}
 And the power loss is
 \begin{dmath}
 P_{loss} = \frac{V_{o}^{2}}{Z_{SC}}\quad V_{o}\text{ is the supplied voltage}
-= \frac{V_{o}^{2}}{\frac{Z_{o}}{\alpha l}}
+= \frac{V_{o}^{2}}{\frac{Z_0}{\alpha l}}
 = \frac{\alpha l\times V_o^2}{Z_o}
-= \frac{V_{o}^{2}}{Z_{o}}\times\alpha \times\frac{\lambda_{o}}{4}
+= \frac{V_{o}^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}
 \label{eqn:powerloss}
 \end{dmath}
 Then, the quality factor, Q from equation~\eqref{eqn:qualityfac} is given as follows by substituting equations~\eqref{eqn:totalenergy} and~\eqref{eqn:powerloss}.
 \begin{dmath*}
-Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}\times CV_{o}^{2}\times\frac{\lambda_{o}}{4}}{\frac{V_{o}^{2}}{Z_{o}}\times\alpha \times\frac{\lambda_{o}}{4}}\right)
-= 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_{o}}}\right)
-= \frac{2 \pi f_{o} Z_{o}C}{2\alpha}\quad\text{But, }Z_{o}\text{ = }\sqrt{\frac{L}{C}}\Rightarrow Z_{o}C\text{ = }\sqrt{LC}, 2\pi f_{o}\text{ = }\omega_{o}
+Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}\times CV_{o}^{2}\times\frac{\lambda_{o}}{4}}{\frac{V_{o}^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}}\right)
+= 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_0}}\right)
+= \frac{2 \pi f_{o} Z_0C}{2\alpha}\quad\text{But, }Z_0\text{ = }\sqrt{\frac{L}{C}}\Rightarrow Z_0C\text{ = }\sqrt{LC}, 2\pi f_{o}\text{ = }\omega_{o}
 = \frac{\omega_{o}\sqrt{LC}}{2 \alpha}\quad\omega_{o}\sqrt{LC}\text{ = }\beta\text{, phase constant}
 = \frac{\beta}{2 \alpha}
 \end{dmath*}
@@ -260,9 +260,9 @@ Let us consider a small section of transmission line of length, $l = \frac{\lamb
 
  N traveling wave sees a short circuit and M traveling wave sees an open circuit. N wave sees a reflection coefficient of -1, hence, at short circuit point, the wave is reflected completely as shown by the arrow. With a reflection coefficient of -1, the amplitude is unity but the phase is 180\textdegree (or $\pi$). Hence, the wave traveling toward N after reflection undergoes a phase change of $\pi$ and travels all the way to the open circuit side. At the open circuit point, the reflection coefficient = 1\footnote{
 \begin{dmath*}
-\Gamma_{L} = \frac{Z_{L} - Z_{o}}{Z_{L} + Z_{o}}\quad Z_{L}\text{ = }\infty\text{ and taking limits}
-= \frac{1 - \frac{Z_{o}}{Z_{L}}}{1 + \frac{Z_{o}}{Z_{L}}}
-= \frac{1 - \frac{Z_{o}}\infty}{1 + \frac{Z_{o}}\infty}
+\Gamma_{L} = \frac{Z_{L} - Z_0}{Z_{L} + Z_0}\quad Z_{L}\text{ = }\infty\text{ and taking limits}
+= \frac{1 - \frac{Z_0}{Z_{L}}}{1 + \frac{Z_0}{Z_{L}}}
+= \frac{1 - \frac{Z_0}\infty}{1 + \frac{Z_0}\infty}
 = \frac{1 - 0}{1 + 0}
 = 1
 \end{dmath*}
