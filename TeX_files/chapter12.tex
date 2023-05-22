@@ -93,7 +93,97 @@ Any solution is acceptable depending on whether we want the length $l$ to be sma
 
 In conclusion, we can say that \textit{Quarter Wavelength Transformer technique} can be used for matching complex impedance $Z$ to the characterstics impedance $Z_o$. However, it has a big drawback in that you require a unique characteristic impedance $Z_{ox}$ for the matching device for different loads. This is not desirable and realizable in nature because in practice, we do not get a transmission line whose characteristic impedance can be varied easily. The characteristic impedance $Z_{ox}$ depends on the physical dimensions of the transmission line as will be seen in chapter 15. Typically, we have cables of transmission line with standard characteristic impedance. For example for co-axial cable, the characteristic impedances are $50\Omega$ and $75\Omega$. For parallel wire transmission line, the characteristic impedances are $300\Omega$ and $600\Omega$.
 
-\section{Stub Matching Technique}
+\begin{exmp}
+\subsubsection*{Quarter Wavelength Matching}
+A load impedance $Z_{L}=(75-j35)\varOmega$ is to be matched to $50\varOmega$ using a quarter wave transformer. Design the matching set up. 
+
+\subsection*{Solution}
+We recall that the quarter wave transformer can match a resistive load impedance to the characteristic impedance (that is, two resistive impedances). However the load impedance given is complex, so we use a section of a transmission line of length $l$ as shown in figure~\ref{fig;fighalfwave}, to first convert the impedance to a real value, from that point onward a quarter wave transformer can then be used for the matching.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{./graphics/fighalfwave}
+\caption{Load Impedance Matching Design with Quarter Wavelength Trasfromer}
+\label{fig;fighalfwave}
+\end{figure}
+
+The length of the quarter wave transformer is $\frac{\lambda}{4}$ at XX' (see figure~\ref{fig:image}), $Z_L = (75-j35)\varOmega$ should be real.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{./graphics/image}
+\caption{Quarter Wavelength Transformer Design}
+\label{fig:image}
+\end{figure}
+
+On the Smith chart we draw the VSWR circle for normalized $Z_{L}$\footnote{
+Normalization is done using the charateristic Impedance of the section of transmission line of length $l$.
+} and move clockwise to the point of intersection with the real axis which gives either $R_\min$ or $R_\max$.
+
+Figure~\ref{fig:tosin} shows the Smith chart analysis. $\bar{Z}_L=1.5-j0.7$ is marked at \textbf{X} and the constant VSWR circle is drawn using \textbf{OX} as radius and it intersects the real axis at \textbf{P} and \textbf{Q}. If we move from \textbf{X} to \textbf{P} (\textbf{XP}) we get a resistive impedance corresponding to $r_\min$ and if we move from \textbf{X} through \textbf{P} to \textbf{Q} (\textbf{XPQ}), we get another resistive impedance corresponding to $r_\max$.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{./graphics/TOSIN}
+\caption{Quarter Wavelength Design\textemdash\;graphical analysis}
+\label{fig:tosin}
+\end{figure}
+
+The distance and resistance for \textbf{XP} are
+\begin{dmath*}
+\boldmath{XP}=0.5\lambda-0.306\lambda
+=0.194\lambda
+=l_1
+\end{dmath*}
+\begin{dmath*}
+r_\min = \bar{R}_\min \quad\text{From figure~\ref{fig:tosin}}
+= 0.5\varOmega
+\end{dmath*}
+
+Thus, $R_\min$ is 
+\begin{dmath*}
+R_\min= Z_0\times\bar{R}_\min
+=50\times0.5=25\varOmega
+\end{dmath*}
+
+Similarly, the distance and resistance for \textbf{XPQ} are
+\begin{dmath*}
+\boldmath{XPQ}=0.194\lambda+0.25\lambda
+=0.444\lambda
+=l_2
+\end{dmath*}
+\begin{dmath*}
+r_\max = \bar{R}_\max\quad\text{From figure~\ref{fig:tosin}}
+=2\varOmega
+\end{dmath*}
+
+Thus, $R_\max$ is
+\begin{dmath*}
+R_\max=Z_0 \times \bar{R}_\max
+=50\times2
+=100\varOmega
+\end{dmath*}
+Hence $l=l_1=0.194\lambda$ or $l_2=0.444\lambda$ which is the length of the section of transmission line for transforming the complex impedance to real impedance just before the Quarter Wavelength Transformer.
+
+The outward circle of the Smith chart is calibrated in $\lambda$, so one can take the angle subtended by the movement and do a direct conversion to $\lambda$, $\lambda$\ at X is 0.306 moving to 0.5 is a difference of $0.194\lambda$\footnote{
+$l_1=0.5\lambda - 0.306\lambda=0.194\lambda$
+}. The top half is $0.25\lambda$, added to the $0.194\lambda$ calculated initially brings us to $0.444\lambda$\footnote{
+$l_2=0.25\lambda+0.194\lambda=0.444\lambda$
+} for $R_\max$. Going back to the problem we have that for $l_1=0.194\lambda, R_\min=25\varOmega$.
+\begin{equation*}
+Z_{0x}\footnote{
+$Z_{0x}$is the geometric mean of the two impedances to be matched.
+} =\sqrt{Z_0 \times R}
+=\sqrt{50\times25}
+=35.35\varOmega
+\end{equation*}
+For $l_2=0.444\lambda, R_\max=100\varOmega$ 
+\begin{dmath*}
+Z_{0x}=\sqrt{Z_0 \times R}
+=\sqrt{50\times100}
+=70.7\varOmega
+\end{dmath*}
+
+Here we see how to match a complex impedance to the characteristic impedance (real impedance) by using a section of the transmission line and the Quarter Wavelength Transformer. The Quarter Wavelength Transformer can match only impedance which is real values, that is why we introduce a section of transmission line before the Quarter Wavelength Transformer to help convert our complex load impedance to real impedance.
+\end{exmp}
+
 The question then is, \emph{can we use the standard transmission line which are available with their standardize characteristic impedances?} Yes we can and the approach used is known as \textbf{Stub Matching Technique}\index{stub matching technique}. Let's define a Stub.
 
 \emph{A stub\index{stub} is an auxiliary section of a transmission line which is either short circuited (S.C) or open circuited (O.C) that is attached to the main transmission line either in series or parallel.} There are four(4) types of stub matching technique, which are
@@ -156,7 +246,36 @@ Let P be the point of the normalized admittance to be matched and the dashed cir
 
 Similarly, when the stub is connected in series, we use the same pattern but we will use impedance values instead of admittances. Single stub matching technique is an extremely useful technique in matching impedances to the characteristics impedance of the line. In this technique, we are matching impedance without any unique transmission line unit as in the case of a Quarter Wavelength Transformer Technique. However, this technique has a small drawback which is that the location of the stub depends on the impedance to be matched. Though the single stub technique can match all possible load, for every load to be matched, the location of the stub has to be changed which may not be that easy once the stub is connected. To solve this limitations as we did for quarter wavelength transformer technology, we will use the Double Stub Matching Technique.
 
-\subsection{Double Stub Matching Technique}\index{double stub matching technique}
+\begin{exmp}
+\subsubsection*{Single Stub Matching}
+Design a single stub matching unit to match the load impedance shown in figure~\ref{fig:figw} to the characteristic impedance, $Z_0 = 50\varOmega$. Calculate for $l_s$ and $l_1$.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{./graphics/figw}
+\caption{Single Stub Matching design}
+\label{fig:figw}
+\end{figure}
+
+\subsection*{Solution}
+We normalize $Z_L=90-j25$ to get 
+$\bar{Z}_L=1.8-j0.5$. since stub and $Z_L$ are in parallel,
+we convert $\bar{Z}_L$ to its admittance value. $\bar{Y}_{L}$
+should be transformed from 
+$\bar{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies on the circle of constant conductance $g=1$. With OP we draw circle of constant VSWR with OP as radius. We get the point where this VSWR circle intercept the g=1 circle at moving clockwise(towards generator )from Q to M. the distance QM correspond to $L_1, L_1=0.152\lambda-0.032\lambda=0.12\lambda$.
+
+Mirror M on the VSWR circle to get $1-jb1$. On the constant suceptance curve of $jb$, find where it intercept the circle at $g=0 \ and \ ?jb_1$. This is the outermost circle. $R$ represent pure susceptance value of $jb_1$. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{./graphics/fig14}
+\caption{Single Stub Matching Design\textemdash\;graphical analysis}
+\label{fig:fig14}
+\end{figure}
+
+Hence we have to move from the short circuit (SC) end of the stub towards the generator to see this Susceptance.The distance $l_s$ is the movement from SC to -jb1 towards the generator and that distance represents the length of the stub.For admittance on Smith chart right most side is the SC part and the leftmost part is the open circuit part.This is opposite to the convention in the impedance Smith chart.
+
+At SC $l_{sc}=0.25\lambda$ moving towards the generator.At R, $l=0.402\lambda$,the distance $l_s=0.402-0.25=0.152\lambda$. Now we know the length of the stub and location of the stub as well.These are some of the problems which can be solved easily with the help of the Smith chart.Using an analytic approach for the same process is an extremely tedious task.This example clearly demonstrate the use of a smith chart for solving complex transmission line problems.
+\end{exmp}
+
 This technique involves the use of two (2) stubs. In this method, we change only the length of the stub while the location of stub is fixed. The separation between the stubs is $3\frac{\lambda}{8}$. The distance between stub 1 and load is $l_l$ as shown in figure~\ref{fig:fig12}
 %put footnote here and two figures(double stub(12.9) and Smith Chart(12.10))%
 \begin{figure}[h]

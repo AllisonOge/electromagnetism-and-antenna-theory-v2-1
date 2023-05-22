@@ -109,7 +109,42 @@ The minimum voltage for the short circuit standing wave pattern repeats itself a
 
 This technique of impedance measurement is very useful. In fact at high frequencies (e.g., microwave frequencies) without measurement like this on a slotted line, one will not be able to measure the unknown impedance. So at high frequency, the transmission line is suitable for the measurement of unknown impedance.
 
-\subsection{As a Circuit Element}
+\begin{exmp}
+\subsubsection*{Unknown Impedance Measurement}
+We have a slotted transmission line to which an unknown impedance $Z_L$ is connected as shown in figure~\ref{fig:fig3}. The measurement of the standing wave pattern on the transmission line gave $\frac{\lambda}{2}=30cm$ and the measurement of the variation of voltage as a function of length $l$ on the transmission line gave $V_\max=15V,V_\min=5V$. Find the unknown impedance $Z_L$. (Take $Z_0 = 50\varOmega$)
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{./graphics/slotted_line_problem_temp}
+\caption{Slotted Transmission Line.}
+\label{fig:fig3}
+\end{figure}
+
+\subsubsection*{(a) Phase Estimation}
+Recall,
+\begin{dmath*}
+\phi=2\beta l\quad\text{and }\beta\text{ = }\dfrac{2\pi}{\lambda}
+=2\cdot\dfrac{2\pi}{\lambda} l
+=2\cdot\dfrac{360}{60}\cdot27
+=324^{o}
+\end{dmath*}
+\subsubsection*{(b) VSWR}
+\begin{equation*}
+\rho=\frac{V_\max}{V_\min}=\frac{15}{5}=3
+\end{equation*}
+With all these information,we go to the Smith chart to calculate the unknown impedance. It is clear from here that moving a distance of $27cm$ from the load towards the generator, that is, clockwise movement on the Smith chart will correspond to 324\textdegree.
+
+We should arrive at the maxima point on the impedance Smith chart, which is the intersection of the constant VSWR circle on the positive real axis. From origin we draw circle with radius, $\rho = 3$. It touches the real axis at $V_\min$ and $V_\max$ as shown in figure~\ref{fig:slottedlinesoln}. The point where the angle cuts the constant VSWR circle is the unknown impedance $\bar{Z}_L$ (see figure~\ref{fig:slottedlinesoln}).
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{./graphics/slotted_line_soln_temp}
+\caption{Worked Problem}
+\label{fig:slottedlinesoln}
+\end{figure}
+
+Thus the unkown impedance according to the Smith chart is $\bar{Z}_L=1.15-j1.23$. With the characteristics impedance of the line given as $50\varOmega$, then $Z_{L}=\bar{Z}_L\times Z_0 =50(1.15-j1.23)= (57.5-j61.5) \varOmega$. So unknown impedance can be measured very easily with a Smith chart without doing much complex calculation.
+\end{exmp}
+
+\subsection{As a Circuit Element}\label{sec:circuitelement}
 Assuming we wound the inductor as shown in figure~\ref{fig:group10diagram3} at high frequencies such that its inductance is L. At high frequency, there is a capacitance between the turns of the inductor that almost short out current as $X_{C} = \frac{1}{2\pi f_c}$. This was not the case at low frequencies when the turns appeared separated from one another. Hence, at high frequency we then have distributed capacitors between the turns of inductor.
 \begin{figure}[h]
 \centering
