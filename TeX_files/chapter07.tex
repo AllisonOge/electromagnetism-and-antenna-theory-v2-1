@@ -1,5 +1,5 @@
-\chapter{Introduction to Smith Chart}\label{lec:lec7}
-In the previous lectures, we were able to derive equations for different parameters for a transmission line such as;
+\section{Introduction to Smith Chart}\label{lec:lec7}
+Previously, we were able to derive equations for different parameters for a transmission line such as;
 \begin{enumerate}[(i)]
 \item 	Power delivered to the load
 \item	Voltage Standing Wave Ratio (VSWR)
@@ -8,9 +8,7 @@ In the previous lectures, we were able to derive equations for different paramet
 \item	Impedance transformation ratio etc.
 \end{enumerate}
 
-Up till now, we analyze transmission line characteristics using analytical methods. But in this lecture, we utilize another approach for analyzing the problems of a transmission line which is the \textbf{Graphical Approach}.
-
-This approach involves solving the problems of a transmission line from an image called a \textbf{Smith Chart}. This approach is most preferred for solving transmission line problems than the analytical approach owing to the following reasons;
+Up till now, we analyze transmission line characteristics using analytical methods. But in this lecture, we utilize another approach for analyzing the problems of a transmission line which is the \emph{graphical approach}. This approach involves solving the problems of a transmission line from an image called a \textbf{Smith chart}\index{smith chart}. This approach is most preferred for solving transmission line problems than the analytical approach owing to the following reasons;
 \begin{enumerate}[(i)]
 \item Images have a much longer-lasting impression than equations or text on the human mind.
 \item Calculations can be reduced by a significant amount when analyzing the problems of the transmission line with the graphical method.
@@ -35,7 +33,7 @@ In this chapter we will simply develop a basic framework for analyzing the trans
 \label{fig:mjhdj}
 \end{figure}
 
-\section{Plane Transformation}
+\subsection{Plane Transformation}
 We have established that impedances possess a real part and a complex part and this can be written as;
 \begin{equation*}
 Z= R+jX
@@ -86,7 +84,7 @@ From previous chapters, it was established that the reflection coefficient for a
 
 In general, when solving graphically the problems of transmission lines, the basic idea is to take the impedance which is normalized with respect to the characteristics impedance and do a transformation of this impedance into the gamma plane.
 
-\section{Transformation analysis for complex plane}
+\subsection{Transformation analysis for complex plane}
 It was established that since there is a one-to-one transformation between the complex Z plane and $\Gamma$ plane every point on the Z plane is mapped to a point on the $ \Gamma$ plane. In this section, we will be mapping the impedance from the Z plane to the gamma plane.
 
 Recall, $\bar{Z} = r + jx $ and also $\bar{Z} = \frac{1 + \Gamma}{1 - \Gamma}$.
@@ -153,7 +151,7 @@ From equations~\eqref{eqn:tranformedresistance} and~\eqref{eqn:tranformedreactan
 
 All points on the circle of constant resistance have the same resistance value in the $Z$ plane and all points on the circle of constant reactance will have the same reactance in the $Z$ plane.
 
-\section{Circle of Constant Resistance}
+\subsection{Circle of Constant Resistance}
 In order to visualize the plot of the circles of constant resistance we need to transform the limits of the values of $r$, the real part of normalized impedance $\bar{Z}$. The limits of $r$ are $[0, \infty]$ both inclusive and thus the corresponding values of the radius of these circles is $[1, 0]$. Plotting the circle for different values of $r$, we get the plot in figure~\ref{fig:ouytre}.
 \begin{figure}[h]
 \centering
@@ -174,7 +172,7 @@ The complete plot of the circles of constant resistance for the values of increa
 
 We can observe that the circles of the constant resistance passes through $u = 1$, and $v = 0$.
 
-\section{Circle of Constant Reactance}
+\subsection{Circle of Constant Reactance}
 Similarly, for the plots of the circles of constant reactance, we consider the limits of the values of $x$ which are $[-\infty, +\infty]$. The corresponding values of the radius of the circle as given by equation~\eqref{eqn:tranformedreactance} are both zero and the radius at $x = 0$ approaches $-\infty$ from the negative domain and $+\infty$ from the positive domain of $x$. Similarly, for the centre coordinates of these circles, considering the negative and positive domains separately, we deduce that the centre of these circles lies on a vertical plane passing through the $u$ axis at $u = 1$ and varies from $-\infty$ to $+\infty$\footnote{
 At $x = \pm\infty$, the centre from equation~\eqref{eqn:tranformedreactance} is $(1, 0)$ and at $x = 0$, the centre is $(1, \pm\infty)$.
 }.
@@ -257,3 +255,12 @@ At M the impedance equal to the characteristic impedance of the line and that is
 These points if properly understood can be used to solve transmission line problems with ease.
 
 To solve transmission line problems using the smith chart, it should be held such that the most clustered portion of the circle should be towards the right hand of the user because the real axis at the complex gamma plane is in that direction and the complex imaginary plane is in the vertical direction. If done so then calculation on conversion from the complex reflection co-efficient plane to the impedance plane and vice versa can be done easily as well as marking of impedance points on the smith chart to use to find co-ordinates of the point which gives the reflection co-efficient easily. In conclusion, the smith chart is a handy tool for solving very complex impedance transformation problems.
+
+\section*{Exercise}
+\begin{ExerciseList}
+\Exercise[label={ex71}]
+Why do we limit our analysis on the Smith chart to the limit circle?
+
+\Exercise[label={ex72}]
+As we move along a transmission line, how does a point move on the Smith chart?
+\end{ExerciseList}
