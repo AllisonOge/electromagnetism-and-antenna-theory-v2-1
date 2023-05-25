@@ -152,11 +152,11 @@ At this point, we can write down the voltage and current equation with the known
 \begin{dmath*}
 V(l) = V^{+}e^{j\beta l} + V^{-}e^{-j\beta l},\quad \frac{V^{-}}{V^{+}}\text{ = } \Gamma, V^{-} \text{= }-V^{+}
 = V^{+}e^{j\beta l} - V^{+}e^{-j\beta l}\text{Recall, }\frac{e^{j\beta l }- e^{-j\beta l}}{2j}\text{ = }\sin\beta l
-=j2V^{+}\left(\frac{e^{j\beta l }- e^{-j\beta l}}{2j}\right) =j2V^{+}\sin \beta l\quad\text{Let, }j2V^{+}\text{ = }V_{o}
-= V_{o}\sin \beta l 
+=j2V^{+}\left(\frac{e^{j\beta l }- e^{-j\beta l}}{2j}\right) =j2V^{+}\sin \beta l\quad\text{Let, }j2V^{+}\text{ = }V_0
+= V_0\sin \beta l 
 \end{dmath*}
 \begin{equation}
-V(l) = V_{o}\sin \beta l
+V(l) = V_0\sin \beta l
 \label{eqn:voltagedistro}
 \end{equation}
 In a similar manner, we can find the current distribution using equation~\eqref{eqn:currentfromload},
@@ -164,10 +164,10 @@ In a similar manner, we can find the current distribution using equation~\eqref{
 I(l) = \frac{V^{+}}{Z_0}e^{j\beta l} - \frac{V^{-}}{Z_0}e^{-j\beta l},\quad\frac{V^{-}}{V^{+}}\text{ = }\Gamma, V^{-}\text{ = }-V^{+}
 = \frac{V^{+}}{Z_0}e^{j\beta l} + \frac{V^{+}}{Z_0}e^{-j\beta l}\quad\text{Recall, }\frac{e^{j\beta l} + e^{-j\beta l}}{2}\text{ = }\cos \beta l
 =\frac{2V^{+}}{Z_0}\left(\frac{e^{j\beta l} + e^{-j\beta l}}{2}\right)
-= \frac{2V^{+}}{Z_0}\cos \beta l\quad\text{Let, }2V^{+}\text{ = }V_{o}
+= \frac{2V^{+}}{Z_0}\cos \beta l\quad\text{Let, }2V^{+}\text{ = }V_0
 \end{dmath*}
 \begin{equation}
-I(l) = \frac{V_{o}}{Z_0}\cos \beta l
+I(l) = \frac{V_0}{Z_0}\cos \beta l
 \label{eqn:currentdistro}
 \end{equation}
 \begin{figure}[h]
@@ -187,23 +187,23 @@ U_{\text{inductor}} = \frac{1}{2}L\Delta lI^{2}
 Hence, the total energy stored in a transmission line can be written as:
 \begin{dmath*}
 U = \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V(l)|^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}|I(l)|^{2}dl\quad\text{from equations~\eqref{eqn:voltagedistro} and~\eqref{eqn:currentdistro}}
-= \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V_{o}\sin \beta l |^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}\left|\frac{V_{o}}{Z_0}\cos \beta l \right|^{2}dl
-= \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}(\sin^{2} \beta l) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}}( \cos^{2} \beta l) dl
+= \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V_0\sin \beta l |^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}\left|\frac{V_0}{Z_0}\cos \beta l \right|^{2}dl
+= \frac{1}{2}CV_0^{2}\int_{0}^{\frac{\lambda_{o}}{4}}(\sin^{2} \beta l) dl + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}}( \cos^{2} \beta l) dl
 \end{dmath*}
 Recall from trigonometry   
 \[\sin^{2} \beta l = \frac{1 - \cos2\beta l}{2},\quad \cos^{2} \beta l = \frac{1 + \cos2\beta l}{2}\]
 {\small \begin{dmath}
-U = \frac{1}{2}CV_{o}^{2}\int_{0}^{\frac{\lambda_{o}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}} \left(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl  = \frac{1}{2}CV_{o}^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right]= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8} - \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin \pi}{4 \beta}\right] = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] + \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right]
+U = \frac{1}{2}CV_0^{2}\int_{0}^{\frac{\lambda_{o}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}} \left(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl  = \frac{1}{2}CV_0^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right]= \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8} - \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin \pi}{4 \beta}\right] = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right]
 \end{dmath}}
-Where $\frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] $ is the energy stored in line capacitance and $ \frac{1}{2}L\frac{V_{o}^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right] $ is the energy stored in line inductance.
+Where $\frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right] $ is the energy stored in line capacitance and $ \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right] $ is the energy stored in line inductance.
 
 We see that the two quantities are equal since
 \begin{equation*}
 Z_0 = \sqrt{\frac{L}{C}}\Longrightarrow CZ_0^{2} = L,\quad C = \frac{L}{Z_0^{2}}
 \end{equation*}
 \begin{dmath}
-U = \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right] +\frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{8}\right]
-= \frac{1}{2}CV_{o}^{2}\left[\frac{\lambda_{o}}{4}\right]
+U = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right] +\frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right]
+= \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{4}\right]
 \label{eqn:totalenergy}
 \end{dmath}
 
@@ -221,15 +221,15 @@ Z_{SC} = \frac{Z_0}{\alpha l}\quad\text{from equation~\eqref{eqn:scimp}}
 \end{equation*}
 And the power loss is
 \begin{dmath}
-P_{loss} = \frac{V_{o}^{2}}{Z_{SC}}\quad V_{o}\text{ is the supplied voltage}
-= \frac{V_{o}^{2}}{\frac{Z_0}{\alpha l}}
-= \frac{\alpha l\times V_o^2}{Z_o}
-= \frac{V_{o}^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}
+P_{loss} = \frac{V_0^{2}}{Z_{SC}}\quad V_0\text{ is the supplied voltage}
+= \frac{V_0^{2}}{\frac{Z_0}{\alpha l}}
+= \frac{\alpha l\times V_o^2}{Z_0}
+= \frac{V_0^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}
 \label{eqn:powerloss}
 \end{dmath}
 Then, the quality factor, Q from equation~\eqref{eqn:qualityfac} is given as follows by substituting equations~\eqref{eqn:totalenergy} and~\eqref{eqn:powerloss}.
 \begin{dmath*}
-Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}\times CV_{o}^{2}\times\frac{\lambda_{o}}{4}}{\frac{V_{o}^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}}\right)
+Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}\times CV_0^{2}\times\frac{\lambda_{o}}{4}}{\frac{V_0^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}}\right)
 = 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_0}}\right)
 = \frac{2 \pi f_{o} Z_0C}{2\alpha}\quad\text{But, }Z_0\text{ = }\sqrt{\frac{L}{C}}\Rightarrow Z_0C\text{ = }\sqrt{LC}, 2\pi f_{o}\text{ = }\omega_{o}
 = \frac{\omega_{o}\sqrt{LC}}{2 \alpha}\quad\omega_{o}\sqrt{LC}\text{ = }\beta\text{, phase constant}

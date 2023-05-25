@@ -45,7 +45,7 @@ However as we have said, you may have connections in transmission lines which ar
 
 Thus, in this section, we will determine how the Smith chart is used when we compute in terms of admittances. Since the Smith chart gives the normalized impedances of the transmission line, the same thing will be derived for admittances so we shall first define the normalized admittance of the transmission line and for that, we would require what is called the \emph{characteristic admittance}\index{characteristics admittance} of the line. The characteristic admittance is given in equation~\eqref{eqn:characteristicsadmit}
 \begin{equation}
-Y_o = \frac{1}{Z_o}\label{eqn:characteristicsadmit}
+Y_o = \frac{1}{Z_0}\label{eqn:characteristicsadmit}
 \end{equation}
 Then, normalizing the admittance would yeild
 \begin{align*}
@@ -53,7 +53,7 @@ Then, normalizing the admittance would yeild
 \end{align*}
 The reflection co-efficient as derived in equation~\eqref{eqn:refcoefficientfromload07} is given as
 \begin{equation*}
-\Gamma = \frac{Z - Z_o}{Z + Z_o} 
+\Gamma = \frac{Z - Z_0}{Z + Z_0} 
 \end{equation*}
 To determine the reflection coefficient in terms of admittance we replace the impedance $Z$ and characteristics impedance are then expressed as the inverse of admittance $\frac{1}{Y}$ and inverse of the characteristics admittance $\frac{1}{Y_o}$ respectively.
 \begin{equation*}
@@ -198,7 +198,7 @@ The above analysis makes sense since one characteristics of the transmission lin
 \label{fig:uyhbgjvkclxse}
 \end{figure}
 
-\item Multiply the normalized impedance at $l$ by the characteristic impedance $Z_o$ to get $\bar{Z}_{l}$ at the new location.
+\item Multiply the normalized impedance at $l$ by the characteristic impedance $Z_0$ to get $\bar{Z}_{l}$ at the new location.
 \end{enumerate}
 
 A more general overview of a transmission problme is one where the impedance is given at a particular location and we need to transform the impedance to another location. If the new location is to the left of the previous impedance (towards the generator) then we follow the aforementioned steps, otherwise we reverse the direction of the angular rotation instead of $-2\beta{l}$, we have $+2\beta{l}$ which is counter-clockwise rotation. Hence, moving towards generator will be clockwise rotation and moving away from generator will be anti-clockwise rotation. The sense of rotation in impedance calculations is extremely important because that tells us whether to move towards the generator or away from the generator. Therefore, in all transmission line calculations, the direction of the generator should be given much consideration because that will decide the movement along the transmission line.
@@ -214,7 +214,7 @@ For admittance calculations, the same steps apply except in the sense of the pos
 Analytically, the impedance transformation requires the calculation of sine and cosine functions that are unusually very complicated. With the help of the Smith chart, the impedance transformation is easily achieved.
 
 \subsection{Voltage Standing Wave Ratio (VSWR)}
-Another quantity which is a measure of reflection is the VSWR and we established previously that $R_\max = Z_{o}\rho$ and $R_\min = \frac{Z_o}{\rho}$. If we normalize $R_\max$ and $R_\min$ then we get:
+Another quantity which is a measure of reflection is the VSWR and we established previously that $R_\max = Z_0\rho$ and $R_\min = \frac{Z_0}{\rho}$. If we normalize $R_\max$ and $R_\min$ then we get:
 \begin{equation}
 \bar{R}_\max = r_\max = {\rho}
 \end{equation}

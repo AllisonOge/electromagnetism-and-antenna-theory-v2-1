@@ -44,49 +44,49 @@ Recall, VSWR is given as
 \begin{align}
 \rho = \frac{|V|_\max}{|V|_\min}
 \end{align}
-Once we take measurement of $|V|_\max$ and $|V|_\min$, then we calculate for $ \rho $. We then find the maximum and minimum impedance which one can see in the transmission line. So at $l_\min$ we have $R_\min$ at that point and $R_\min$ = $\frac{Z_o}{\rho}$. Once $R_\min$ is known at $l_\min$, the calculation of unknown impedance is simply an impedance transformation problem. We recall that once the impedance at any point on the transmission line is known, the impedance at any other point can be calculated using the impedance transformation relationship.
+Once we take measurement of $|V|_\max$ and $|V|_\min$, then we calculate for $ \rho $. We then find the maximum and minimum impedance which one can see in the transmission line. So at $l_\min$ we have $R_\min$ at that point and $R_\min$ = $\frac{Z_0}{\rho}$. Once $R_\min$ is known at $l_\min$, the calculation of unknown impedance is simply an impedance transformation problem. We recall that once the impedance at any point on the transmission line is known, the impedance at any other point can be calculated using the impedance transformation relationship.
 
-Since we know $R_\min$ = $\frac{Z_o}{\rho}$ at $l_\min$ from the load, we can transform this impedance by a distance $l_\min$ away from the generator, so that its impedance is equal to terminating impedance $Z_{L}$. So the unknown impedance is nothing but the transformation of $R_\min$ = $\frac{Z_o}{\rho}$ by $l_\min$ to the load side of the generator. Equation~\eqref{eqn:lmintransform} is the impedance transformation relation with $l$ substituted with $l_\min$.
+Since we know $R_\min$ = $\frac{Z_0}{\rho}$ at $l_\min$ from the load, we can transform this impedance by a distance $l_\min$ away from the generator, so that its impedance is equal to terminating impedance $Z_{L}$. So the unknown impedance is nothing but the transformation of $R_\min$ = $\frac{Z_0}{\rho}$ by $l_\min$ to the load side of the generator. Equation~\eqref{eqn:lmintransform} is the impedance transformation relation with $l$ substituted with $l_\min$.
 \begin{align}
-Z_{L} = Z_o\frac{R_\min\cos(-\beta l_\min) + jZ_o\sin(-\beta l_\min)}{Z_o\cos(-\beta l_\min) + jR_\min\sin(-\beta l_\min)}
+Z_{L} = Z_0\frac{R_\min\cos(-\beta l_\min) + jZ_0\sin(-\beta l_\min)}{Z_0\cos(-\beta l_\min) + jR_\min\sin(-\beta l_\min)}
 \label{eqn:lmintransform}
 \end{align}
 $l_\min$ is negative since we are moving away from the generator. Finding $Z_\min$ is a matter of separating the real and imaginary parts, we get the value of resistance and reactance\footnote{
 We are dealing with a lossless transmission line unless otherwise stated.
 } as shown below.
 \begin{dmath}
-Z_{L} = Z_o\frac{R_\min\cos\beta l_\min - jZ_o\sin\beta l_\min}{Z_o\cos\beta l_\min - jR_\min\sin\beta l_\min}
+Z_{L} = Z_0\frac{R_\min\cos\beta l_\min - jZ_0\sin\beta l_\min}{Z_0\cos\beta l_\min - jR_\min\sin\beta l_\min}
 \end{dmath}
 Rationalize into proper form by multiplying the top and bottom by the conjugate of the denominator.
 \begin{dmath}
-Z_{L} = Z_o\left(\frac{R_\min\cos\beta l_\min - jZ_o\sin\beta l_\min}{Z_o\cos\beta l_\min - jR_\min\sin\beta l_\min}\right)\times\left(\frac{Z_o\cos\beta l_\min + jR_\min\sin\beta l_\min}{Z_o\cos\beta l_\min + jR_\min\sin\beta l_\min}\right)
-= Z_o
-\frac{Z_oR_\min\cos^{2}\beta l_\min + Z_oR_\min\sin^{2}\beta l_\min}{Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min} +j\frac{(R_\min^{2}-Z_o^{2})\cos\beta l_\min\sin\beta l_\min}{Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min}
+Z_{L} = Z_0\left(\frac{R_\min\cos\beta l_\min - jZ_0\sin\beta l_\min}{Z_0\cos\beta l_\min - jR_\min\sin\beta l_\min}\right)\times\left(\frac{Z_0\cos\beta l_\min + jR_\min\sin\beta l_\min}{Z_0\cos\beta l_\min + jR_\min\sin\beta l_\min}\right)
+= Z_0
+\frac{Z_0R_\min\cos^{2}\beta l_\min + Z_0R_\min\sin^{2}\beta l_\min}{Z_0^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min} +j\frac{(R_\min^{2}-Z_0^{2})\cos\beta l_\min\sin\beta l_\min}{Z_0^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min}
 \end{dmath}
 Recall $ \cos^{2}(A) + \sin^{2}(A) = 1 $ and $ \frac{\sin(A)}{\cos(A)} = \tan(A) $
 \begin{dmath}
-Z_{L} = Z_o \times\frac{Z_o R_\min + j(R_\min^{2}-Z_o^{2})\cos\beta l_\min\sin\beta l_\min}{(Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min)}
+Z_{L} = Z_0 \times\frac{Z_0 R_\min + j(R_\min^{2}-Z_0^{2})\cos\beta l_\min\sin\beta l_\min}{(Z_0^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min)}
 \end{dmath}
 Divide numerator and denominator by $\cos^{2}\beta l_\min$:
 \begin{dmath*}
-Z_{L} = Z_o\frac{\frac{Z_o R_\min}{\cos^{2}\beta l_\min} + \frac{j(R_\min^{2}-Z_o^{2})\cos\beta l_\min\sin\beta l_\min}{\cos^{2}\beta l_\min}}{\frac{(Z_o^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min)}{\cos^{2}\beta l_\min}}
+Z_{L} = Z_0\frac{\frac{Z_0 R_\min}{\cos^{2}\beta l_\min} + \frac{j(R_\min^{2}-Z_0^{2})\cos\beta l_\min\sin\beta l_\min}{\cos^{2}\beta l_\min}}{\frac{(Z_0^{2}\cos^{2}\beta l_\min + R_\min^{2}\sin^{2}\beta l_\min)}{\cos^{2}\beta l_\min}}
 \end{dmath*}
 Recall $ \frac{1}{\cos(A)} = \sec(A)$
 \begin{dmath*}
-Z_{L} = Z_o\left\lbrace\frac{Z_o R_\min\sec^{2}\beta l_\min + j(R_\min^{2}-Z_o^{2})\tan\beta l_\min}{Z_o^{2} + R_\min^{2}\tan^{2}\beta l_\min}\right\rbrace
+Z_{L} = Z_0\left\lbrace\frac{Z_0 R_\min\sec^{2}\beta l_\min + j(R_\min^{2}-Z_0^{2})\tan\beta l_\min}{Z_0^{2} + R_\min^{2}\tan^{2}\beta l_\min}\right\rbrace
 \end{dmath*}
-But $\frac{Z_o}{R_\min} = \rho$; dividing the numerator and denominator by $R_\min^{2}$
+But $\frac{Z_0}{R_\min} = \rho$; dividing the numerator and denominator by $R_\min^{2}$
 \begin{dmath}
-Z_{L} = Z_o\left\lbrace\frac{\frac{Z_o R_\min}{R_\min^{2}}\sec^{2}\beta l_\min + \frac{j(R_\min^{2}-Z_o^{2})}{{R_\min^{2}}}\tan\beta l_\min}{\frac{1}{R_\min^{2}}{(Z_o^{2} + R_\min^{2}\tan^{2}\beta l_\min)}}\right\rbrace
-= Z_o \left\lbrace\frac{\rho \sec^{2}\beta l_\min + j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right\rbrace 
-= Z_o \left\lbrace \frac{\rho (1 + \tan^{2}\beta l_\min) + j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right\rbrace
+Z_{L} = Z_0\left\lbrace\frac{\frac{Z_0 R_\min}{R_\min^{2}}\sec^{2}\beta l_\min + \frac{j(R_\min^{2}-Z_0^{2})}{{R_\min^{2}}}\tan\beta l_\min}{\frac{1}{R_\min^{2}}{(Z_0^{2} + R_\min^{2}\tan^{2}\beta l_\min)}}\right\rbrace
+= Z_0 \left\lbrace\frac{\rho \sec^{2}\beta l_\min + j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right\rbrace 
+= Z_0 \left\lbrace \frac{\rho (1 + \tan^{2}\beta l_\min) + j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right\rbrace
 \label{eqn:slottedtnxline}
 \end{dmath}
 Thus, the normalized impedance to be measured is 
 \begin{dmath*}
-\bar{Z_{L}} = \frac{Z_{L}}{Z_o} =  \frac{\rho (1 + \tan^{2}\beta l_\min)}{\rho^{2} + \tan^{2}\beta l_\min} + \frac{j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}
+\bar{Z_{L}} = \frac{Z_{L}}{Z_0} =  \frac{\rho (1 + \tan^{2}\beta l_\min)}{\rho^{2} + \tan^{2}\beta l_\min} + \frac{j(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}
 \end{dmath*}
-Where the real part is $R = Z_o\left[\frac{\rho (1 + \tan^{2}\beta l_\min)}{\rho^{2} + \tan^{2}\beta l_\min}\right]$ and the imaginary part is $ X = Z_o\left[\frac{(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right]$.
+Where the real part is $R = Z_0\left[\frac{\rho (1 + \tan^{2}\beta l_\min)}{\rho^{2} + \tan^{2}\beta l_\min}\right]$ and the imaginary part is $ X = Z_0\left[\frac{(1-\rho^{2})\tan\beta l_\min}{\rho^{2} + \tan^{2}\beta l_\min}\right]$.
 
 Hence $Z_{L} = R +jX$ can easily be calculated from all parameters that we have measured viz; $|V|_\max$, $|V|_\min$, VSWR, $\rho = \frac{|V|_\max}{|V|_\min}$, $l_\min$, and $\beta$ from $\beta = 2\frac{\pi}{\lambda}$. It can be seen that we have transformed $R_\min$ to $Z_{L}$ without necessarily knowing the value of $R_\min$, as seen in equation~\eqref{eqn:slottedtnxline}, the expression for X that is, reactance and R that is, resistance, $R_\min$ is not calculated. However, in practice, when connecting the unknown impedance to the slotted line section, we use conductors as well as other forms of connectors. This means the location of the impedance is not accurately known, so measurement of $l_\min$, sometimes become inaccurate. If we know $l_\min$ precisely, then the solution is straightforward and very accurate in finding out what the unknown impedance is. If $l_\min$ is not known, there would be error in the unknown impedance.
 
@@ -189,31 +189,33 @@ Analytically, $l$ is the distance towards the generator and recall that for a lo
 
 Considering a short circuit load at the end of a transmission line, then using the impedance transformation relation,
 \begin{dmath}
-Z_{in} = Z_o \left\lbrace\frac{Z_{L}\cos\beta l + jZ_o\sin\beta l}{Z_o\cos\beta l + jZ_{L}\sin\beta l}\right\rbrace\quad Z_{L} \text{= 0 for short circuit} 
-= Z_o \left\lbrace \frac{0 + jZ_o\sin\beta l}{Z_o\cos\beta l + 0}\right\rbrace  = jZ_o\tan\beta l 
+Z_{in} = Z_0 \left\lbrace\frac{Z_{L}\cos\beta l + jZ_0\sin\beta l}{Z_0\cos\beta l + jZ_{L}\sin\beta l}\right\rbrace\quad Z_{L} \text{= 0 for short circuit} 
+= Z_0 \left\lbrace \frac{0 + jZ_0\sin\beta l}{Z_0\cos\beta l + 0}\right\rbrace  = jZ_0\tan\beta l
+\label{eqn:zinshortcircuit}
 \end{dmath}
 
 Similarly, considering an open circuit load at the end of a transmission line, $Z_L = \infty$ so we take limits as $Z_L$ tends to infinity.
 \begin{dmath}
-Z_{in} = Z_o \left\lbrace \frac{Z_{L}\cos\beta l + jZ_o\sin\beta l}{Z_o\cos\beta l + jZ_{L}\sin\beta l}\right\rbrace \quad Z_{L} \text{= }\infty\text{ for open circuit.}
-= Z_o \left\lbrace \frac{\cos\beta l + j\frac{Z_o}{Z_{L}}\sin\beta l}{\frac{Z_o}{Z_{L}}\cos\beta l + j\sin\beta l}\right\rbrace
-= Z_o \left\lbrace \frac{\cos\beta l + j \times 0}{0 + j\sin\beta l}\right\rbrace = -jZ_o\cot\beta l 
+Z_{in} = Z_0 \left\lbrace \frac{Z_{L}\cos\beta l + jZ_0\sin\beta l}{Z_0\cos\beta l + jZ_{L}\sin\beta l}\right\rbrace \quad Z_{L} \text{= }\infty\text{ for open circuit.}
+= Z_0 \left\lbrace \frac{\cos\beta l + j\frac{Z_0}{Z_{L}}\sin\beta l}{\frac{Z_0}{Z_{L}}\cos\beta l + j\sin\beta l}\right\rbrace
+= Z_0 \left\lbrace \frac{\cos\beta l + j \times 0}{0 + j\sin\beta l}\right\rbrace = -jZ_0\cot\beta l
+\label{eqn:zinopencircuit}
 \end{dmath}
 Thus,
 \begin{align}
-Z_{in} &= jZ_o\tan\beta l \Rightarrow \text{ short circuit}\\
-Z_{in} &= -jZ_o\cot\beta l \Rightarrow \text{ open circuit}
+Z_{in} &= jZ_0\tan\beta l \Rightarrow \text{ short circuit}\\
+Z_{in} &= -jZ_0\cot\beta l \Rightarrow \text{ open circuit}
 \end{align}
 Hence the problem of realizing a given reactance from open or short circuit load involves finding the $l$ that gets the appropriate $Z_{in}$. 
-Let $l_{SC}$ and $l_{OC}$ represent short circuit and open circuit length respectively, then we have $ X = jZ_o\tan\beta l_{sc} $ and $ X = -jZ_o\cot\beta l_{oc} $ for short circuit and open circuit respectively. Since the phase constant $ \beta $ is known for the transmission line, we make $ l_{SC} $ and $ l_{OC} $ the subject of the equations, we already know the reactance, $X$ we require, so that 
+Let $l_{SC}$ and $l_{OC}$ represent short circuit and open circuit length respectively, then we have $ X = jZ_0\tan\beta l_{sc} $ and $ X = -jZ_0\cot\beta l_{oc} $ for short circuit and open circuit respectively. Since the phase constant $ \beta $ is known for the transmission line, we make $ l_{SC} $ and $ l_{OC} $ the subject of the equations, we already know the reactance, $X$ we require, so that 
 \begin{align}
-l_{SC} &= \frac{1}{\beta}\tan^{-1}\frac{X}{Z_o}\\
-l_{OC} &= \frac{1}{\beta}\cot^{-1}\frac{-X}{Z_o}
+l_{SC} &= \frac{1}{\beta}\tan^{-1}\frac{X}{Z_0}\\
+l_{OC} &= \frac{1}{\beta}\cot^{-1}\frac{-X}{Z_0}
 \end{align}
 
 If the frequency of operation as well as velocity of the wave propagation are known, then we can find $\lambda$ and use $\beta = \frac{2\pi}{\lambda} $. Therefore, in conclusion, we can realize the unknown reactance from using transections of the transmission line. 
 
-As we know, for such calculations as this, the use of Smith chart comes in handy. The top half of the impedance Smith chart at the outermost circle is pure inductance, and the bottom half is for capacitance. However, before we get into details of Smith chart usage, we have to be sure that $X = Z_o\tan\beta l_{SC}$ and $X = -Z_o\cot\beta l_{OC}$ for all variation of $\beta l_{SC}$  from 0 to $ 2\pi $, either $\tan\beta l_{SC}$ or $\cot\beta l_{OC}$ varies from $-\infty$ to $+\infty$. Essentially, we want to measure the values of $X$ as we change the values of $l_{SC}$ or $l_{OC}$ in the transmission line, then we can realize any arbitrary value of the reactance. There is no limit to this. So any value of reactance between $-\infty$ to $+\infty$ can be realized either by short circuited line or open circuited line.
+As we know, for such calculations as this, the use of Smith chart comes in handy. The top half of the impedance Smith chart at the outermost circle is pure inductance, and the bottom half is for capacitance. However, before we get into details of Smith chart usage, we have to be sure that $X = Z_0\tan\beta l_{SC}$ and $X = -Z_0\cot\beta l_{OC}$ for all variation of $\beta l_{SC}$  from 0 to $ 2\pi $, either $\tan\beta l_{SC}$ or $\cot\beta l_{OC}$ varies from $-\infty$ to $+\infty$. Essentially, we want to measure the values of $X$ as we change the values of $l_{SC}$ or $l_{OC}$ in the transmission line, then we can realize any arbitrary value of the reactance. There is no limit to this. So any value of reactance between $-\infty$ to $+\infty$ can be realized either by short circuited line or open circuited line.
 
 The choice of whether to use a short circuit or open circuit line will depend upon the system you want to employ the circuit element. For example supposing we have a parallel wire transmission line, then connecting the two ends of the transmission line is rather easy, as we can short the end of the transmission line. However, a transmission line like a Printed Circuit Board (PCB), with ground plane on one side and the line on top separated by a dielectric. To short circuit the line, we will have to drill a plated-through hole (or a signal-carrying conductive via) into the PCB and requires a lot of precision, so realizing a short circuit line on that configuration is rather difficult. For this reason, an open circuit line is preferred. There may be situations where the short circuit line will be preferred over the open circuit line and vice versa. Irrespective of the one used, we will be able to realize all the reactances from  $ -\infty$ to $+\infty $, that is, we can realize any capacitive or inductive reactance by using an open circuited or short circuit section of a transmission line.
 
@@ -259,6 +261,25 @@ Hence if the length lies within 0 and $ \frac{\lambda}{4} $ for a short circuite
 \end{figure}
 
 So any transection of a transmission line of size 0 to $ \frac{\lambda}{2} $ can realize any arbitrary value of capacitance and inductance at a particular frequency. We are not realizing a capacitor or inductor in actual sense, but we are realizing capacitive and inductive reactance.
+
+\begin{exmp}
+\subsubsection*{Trasmission line as a circuit element}
+A lossless transmission line is terminated in a short circuit. How long (in wavelengths) should the line be in order for it to appear as a open circuit at its input terminal?
+
+\subsubsection*{Solution}
+From equation~\eqref{eqn:zinshortcircuit}, we have:
+\begin{align*}
+Z_{in} &= jZ_{0}\tan\beta l
+\end{align*}
+If $\beta l = (\frac{\pi}{2} + n\pi)$ when n is an positive integer, then $Z_{in} = j\infty\varOmega$. So we have:
+\begin{align*}
+\beta l &= \frac{\pi}{2} + n\pi\\
+l &= \frac{\pi}{2\beta} + \frac{n\pi}{\beta}\\
+l &= \frac{\lambda}{4} + \frac{n\lambda}{2}
+\end{align*}
+
+Therefore the length of the line can be any odd multiple of $\frac{\lambda}{4}$. For example, if $n = 1$, then $l = \frac{3\lambda}{4}$, if $n = 3$, then $l = \frac{7\lambda}{4}$ and so on.
+\end{exmp}
 
 \subsection{As a Resonant circuit}
 At $ \frac{\lambda}{4} $ the behaviour of the line changes from $ X_{L} $ to $ X_{C} $ or $ X_{C} $ to $ X_{L} $. Such a behaviour is similar to the characteristics of resonance, that is, at $\frac{\lambda}{4}$  location, we have a characteristics that is more like resonance characteristics. Let us suppose we have a circuit, at resonant frequency\footnote{
@@ -335,7 +356,7 @@ If we are dealing with lossless transmission line, then the quality factor for t
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex101}]
-A transmission line of length $ \frac{\lambda}{4} $ is terminated in a load impedance of $ 50 \Omega $ and is excited by a generator of internal impedance $ 50 \Omega $. Calculate the input impedance of the line at a frequency of 100 MHz. Assume that the line is lossless and that the phase velocity is $ 2 \times 10^{8} $ m/s.
+A 75-$\varOmega$ resistive load is preceded by a $\frac{\lambda}{4}$ section of a 50-$\varOmega$ lossless transmission line, which is itself preceeded by another $\frac{\lambda}{4}$ section of a 100-$\varOmega$ line. What is the input impedance?
 \Answer
-Solution to exercise~\ref{ex101}
+Impedance, $Z_{in} = 300\varOmega$
 \end{ExerciseList}
