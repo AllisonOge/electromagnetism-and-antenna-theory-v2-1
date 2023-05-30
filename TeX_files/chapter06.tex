@@ -31,12 +31,12 @@ And
 Therefore impedance transformation relationship for a lossless transmission line is given as;
 \begin{equation}
 \bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
-\label{eqn:charimp}
+\label{eqn:implossless}
 \end{equation}
 $Z_0$ is a real quantity for a lossless transmission line same as:
 \begin{equation}
 \bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
-\label{eqn:charimpnorm}
+\label{eqn:implosslessnorm}
 \end{equation}
 With this impedance transformation relationship, we can establish some very important characteristics of the transmission line. When we move on a transmission line a distance of $\frac{\lambda}{2}$ (half wave length), the voltage standing wave characteristics repeat itself, so if we take a ratio of voltage and current at a certain location, we expect that this characteristic will repeat at $\frac{\lambda}{2}$.
 
@@ -55,7 +55,7 @@ At location $l$, Impedance $= \bar{Z}(l)$,
 \label{fig:astyuif}
 \end{figure}
 
-At location ${\left(l+\frac{\lambda}{2}\right)}$, Impedance $= \bar{Z}\left(l+\frac{\lambda}{2}\right)$ substituting ${\left(l+\frac{\lambda}{2}\right)}$ for $l$ in equation~\ref{eqn:charimp}, we get: 
+At location ${\left(l+\frac{\lambda}{2}\right)}$, Impedance $= \bar{Z}\left(l+\frac{\lambda}{2}\right)$ substituting ${\left(l+\frac{\lambda}{2}\right)}$ for $l$ in equation~\ref{eqn:implossless}, we get: 
 \begin{align*}
 \bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L \cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\sin(\beta \left(l+\frac{\lambda}{2}\right))}{\cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\bar{Z}_L \sin(\beta \left(l+\frac{\lambda}{2}\right))}\right\rbrace 
 \end{align*}
@@ -84,7 +84,7 @@ If we move a distance of $\frac{\lambda}{4}$, we move from a maximum to minimum 
 
 At location $l, \textnormal{Impedance}=\bar{Z}(l)$.
 
-Then at location ${(l+\frac{\lambda}{4})}$, Impedance  $=\bar{Z}(l+\frac{\lambda}{4})$. Substituting ${(l+\frac{\lambda}{4})}$ for $l$ in equation~\ref{eqn:charimp}, we get:
+Then at location ${(l+\frac{\lambda}{4})}$, Impedance  $=\bar{Z}(l+\frac{\lambda}{4})$. Substituting ${(l+\frac{\lambda}{4})}$ for $l$ in equation~\ref{eqn:implossless}, we get:
 \begin{align*}
 \bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta (l+\frac{\lambda}{4})) + jsin(\beta (l+\frac{\lambda}{4}))}{\cos(\beta (l+\frac{\lambda}{4})) + j\bar{Z}(l)\sin(\beta (l+\frac{\lambda}{4}))}\right\rbrace 
 \end{align*}
@@ -109,7 +109,7 @@ We can draw an observation that for every $\frac{\lambda}{4}$ distance moved, th
 Hence, when we talk about the periodicity of the impedance on the transmission line, at $\frac{\lambda}{2}$ the absolute or normalized impedance repeats itself, whereas every distance of $\frac{\lambda}{4}$, the normalized impedance inverts itself. Next on is the study of impedance matching characteristics; this property is used extensively for finding out the impedance transformation which can match impedance on transmission line.
 
 \subsection{The matching condition characteristics}
-If the transmission line is terminated by its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_0$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_0}=1$. Then equation~\ref{eqn:charimp} becomes:
+If the transmission line is terminated by its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_0$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_0}=1$. Then equation~\ref{eqn:implossless} becomes:
 \begin{dmath*}
 \bar{Z}(l) = \left\lbrace\frac{\bar{Z}_L\cos\beta l + j\sin\beta l}{\cos\beta l + j\bar{Z}_L\sin\beta l}\right\rbrace = \left\lbrace \frac{\cos\beta l + j\sin\beta l}{\cos\beta l + jsin\beta l}\right\rbrace = 1
 \end{dmath*}
@@ -248,10 +248,10 @@ A generator with voltage $V_g = 300\angle0^o$V and internal resistance, $Z_g = 5
 \label{fig:powerproblem2}
 \end{figure}
 
-From the transmission line shown in figure~\ref{fig:powerproblem}, to find $Z_{in}$ we will use the impedance transformation relation in equation~\eqref{eqn:imp} such that
+From the transmission line shown in figure~\ref{fig:powerproblem}, to find $Z_{in}$ we will use the impedance transformation relation in equation~\eqref{eqn:implossless} such that
 \begin{dmath*}
-Z_{in} = Z_0\left[\frac{Z_L\cosh\beta l + jZ_0\sinh\beta l}{Z_0\cosh\beta l + jZ_L\sinh\beta l} \right]
-= 50\left[\frac{75\cosh(0.3\pi) + j50\sinh(0.3\pi)}{50\cosh(0.3\pi) + j75\cosh(0.3\pi)} \right]\footnotemark
+Z_{in} = Z_0\left[\frac{Z_L\cos\beta l + jZ_0\sin\beta l}{Z_0\cos\beta l + jZ_L\sin\beta l} \right]
+= 50\left[\frac{75\cos(0.3\pi) + j50\sin(0.3\pi)}{50\cos(0.3\pi) + j75\cos(0.3\pi)} \right]\footnotemark
 = (41.25 - j16.35)\varOmega
 \end{dmath*}
 \footnotetext{
@@ -291,10 +291,10 @@ I(0) &= I_L = \frac{V^+}{Z_0}\lbrace1 + \Gamma_L\rbrace
 \end{align*}
 So we need to evaluate $V^+$ using the same voltage equation but with $l = L = 0.15\lambda$, that is
 \begin{align*}
-V_{in} &= V^+\lbrace1 + \Gamma_Le^{-j\beta l}\rbrace\\
-V^+ &= \frac{V_{in}}{1+\left(\dfrac{Z_L - Z_0}{Z_L + Z_0}\right)e^{-j\beta l}}\\
-&=\frac{143.6\angle-11.46^o}{1+\left(\dfrac{75 - 50}{75 + 50}\right)e^{-j0.3\pi}}\\
-&= \frac{143.6\angle-11.46^o}{1+0.2e^{-j0.3\pi}}\\
+V_{in} &= V^+e^{j\beta l}\lbrace1 + \Gamma_Le^{-2j\beta l}\rbrace\\
+V^+ &= \frac{V_{in}}{e^{j\beta l}\left(1+\left(\dfrac{Z_L - Z_0}{Z_L + Z_0}\right)e^{-2j\beta l}\right)}\\
+&=\frac{\dfrac{143.6\angle-11.46^o}{e^{j0.3}}}{1+\left(\dfrac{75 - 50}{75 + 50}\right)e^{-j0.6\pi}}\\
+&= \frac{\dfrac{143.6\angle-11.46^o}{e^{j0.3}}}{1+0.2e^{-j0.6\pi}}\\
 &= 150\angle-54^oV
 \end{align*}
 Thus the values for $V_L$ and $I_L$ are
