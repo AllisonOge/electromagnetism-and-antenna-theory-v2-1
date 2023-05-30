@@ -16,6 +16,7 @@ Up till now, we analyze transmission line characteristics using analytical metho
 \end{enumerate}
 
 This method if properly understood makes solving transmission line problems much easier and faster. It can also be used as a means of cross-checking the solution obtained using the analytical method so that one does not go conceptually wrong in solving transmission line problems.
+
 It is very important to understand that the graphical approach does not give the voltage and current solutions but rather it gives the following parameters:
 \begin{enumerate}[(i)]
 \item Impedance transformation relationship 
@@ -38,11 +39,11 @@ We have established that impedances possess a real part and a complex part and t
 \begin{equation*}
 Z= R+jX
 \end{equation*}
-$R$  represents the real part called resistance and $jX$ represents the imaginary part called reactance. Just like in the analytical approach, our analysis using the graphical approach will be done with the normalized impedance rather than the absolute impedance. It therefore means that, given any impedance, it must be normalized with respect to the characteristic impedance ($Z_0$) such that
+$R$ represents the real part called resistance and $jX$ represents the imaginary part called reactance. Just like in the analytical approach, our analysis using the graphical approach will be done with the normalized impedance rather than the absolute impedance. It therefore means that, given any impedance, it must be normalized with respect to the characteristic impedance ($Z_0$) such that
 \begin{equation*}
 \bar{Z}=\frac{Z_L}{Z_0} \quad \text{(normalised)}
 \end{equation*}
-$Z_L$ is the absolute  impedance. So our representation of the normalized impedance would be:
+$Z_L$ is the absolute impedance. So our representation of the normalized impedance would be:
 \begin{equation*}
 \bar{Z}= r + jx
 \end{equation*}
@@ -64,7 +65,7 @@ Graphically, the statement is represented in the figure~\ref{fig:oigvbnkliu}
 \end{figure}
 
 Solving problems of transmission lines using the z-plane is quite difficult. For this reason, the impedance which was normalized with respect to the characteristic impedance is transformed into another plane which we shall call the \emph{complex co-efficient plane}\index{complex co-efficient plane} or \emph{Gamma plane}\index{gamma plane} ($\Gamma$).
-The transformation from the Z plane to the $\Gamma$ plane is made possible using the one-to-one relationship that exists between the impedance and the reflection co-efficient $\Gamma$ rewritten in equation~\ref{eqn:refcoefficientfromload07}
+The transformation from the Z plane to the $\Gamma$ plane is made possible using the one-to-one relationship that exists between the impedance and the reflection co-efficient $\Gamma$ rewritten in equation~\eqref{eqn:refcoefficientfromload07}
 \begin{equation}
 \Gamma = \frac{Z_L - Z_0}{Z_L + Z_0}\label{eqn:refcoefficientfromload07}
 \end{equation}
@@ -74,7 +75,7 @@ Normalizing we have
 \end{align*}
 With this transformation relationship, if the normalized impedance is known, we can find the reflection coefficient and vice versa. It also means for every value of impedance Z, there is a corresponding value of reflection co-efficient $ \Gamma$. Just as Z has real and imaginary parts, $\Gamma$ also has real and imaginary parts which can be written in either cartesian (or rectangular) form as $\Gamma=u+jv$ or polar form $\Gamma$ = $Re^{j\theta}$
 
-From previous chapters, it was established that the reflection coefficient for all passive loads is always less than or equal to one ($\Gamma\leq 1)$. At an open or short circuit, reflection co-efficient $\Gamma = 1$, for any other impedance $\Gamma < 1$.  So by plotting the reflection co-efficient ($\Gamma$) we have the right half Z plane mapping into a unit circle in the gamma plane as shown in figure~\ref{fig:oiuhgvcx}.
+From previous chapters, it was established that the reflection coefficient for all passive loads is always less than or equal to one ($\Gamma\leq 1)$. At an open or short circuit, reflection co-efficient $\Gamma = 1$, for any other impedance $\Gamma < 1$. So by plotting the reflection co-efficient ($\Gamma$) we have the right half Z plane mapping into a unit circle in the gamma plane as shown in figure~\ref{fig:oiuhgvcx}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{./graphics/oiuhgvcx}
@@ -118,7 +119,7 @@ u^2 - 2u\left(\frac{r}{r + 1}\right) + v^2 + \left(\frac{r - 1}{r + 1}\right) =&
 \end{align*}
 We further simplify using the method of completing the squares;
 \begin{align*}
-{\left(u - \frac{r}{r+1}\right)}^2 + v^2 + \left(\frac{r-1}{r+1}\right) - {\left(\frac{r}{r+1}\right)}^2  =  0
+{\left(u - \frac{r}{r+1}\right)}^2 + v^2 + \left(\frac{r-1}{r+1}\right) - {\left(\frac{r}{r+1}\right)}^2 = 0
 \end{align*}
 \begin{align*}
 {\left(u - \frac{r}{r + 1}\right)}^2 + v^2 &= {\left(\frac{r}{r + 1}\right)}^2 - \left(\frac{r - 1}{r + 1}\right)\\
@@ -199,7 +200,7 @@ As seen, the centre always lies on a line $u = 1$ and as $x$ increases in the po
 \label{fig:sddfghj}
 \end{figure}
 
-It can be observed that the superimposed set of circle were masked by the outermost circle of raduis of 1. This circle is called the \emph{limit circle}\index{limit circle} for the gamma plane which is the region where $\Gamma\ \leq 1$. This is so because in the analysis of transmission lines, we are not concerned with reflection co-efficients that are greater than one, we are only interested in reflection co-efficient that are less than or equal to 1 which is represented by the unit circle of radius equal to 1. It therefore means that any other point outside this range of reflection co-efficient, $\Gamma$, is not of practical relevance since it does not represent a passive load.  Although, the constant reactance circles fills the entire space, we only consider the portion that satisfies $ \Gamma\ \leq 1$ and this lies within the unit circle of the complex gamma plane.
+It can be observed that the superimposed set of circle were masked by the outermost circle of raduis of 1. This circle is called the \emph{limit circle}\index{limit circle} for the gamma plane which is the region where $\Gamma\ \leq 1$. This is so because in the analysis of transmission lines, we are not concerned with reflection co-efficients that are greater than one, we are only interested in reflection co-efficient that are less than or equal to 1 which is represented by the unit circle of radius equal to 1. It therefore means that any other point outside this range of reflection co-efficient, $\Gamma$, is not of practical relevance since it does not represent a passive load. Although, the constant reactance circles fills the entire space, we only consider the portion that satisfies $ \Gamma\ \leq 1$ and this lies within the unit circle of the complex gamma plane.
 
 Some of the observations we made are summarized as follows:
 \begin{enumerate}[(i)]
@@ -212,7 +213,7 @@ Some of the observations we made are summarized as follows:
 \end{enumerate}
 
 \section{The Smith chart}
-The superposition of the two circles is now a coordinate system for impedance on the complex gamma plane. This is called the \textbf{Smith chart}\footnote{
+The superposition of the two circles is now a coordinate system for impedance on the complex gamma plane. This is called the \textbf{Smith chart}\index{smith chart}\footnote{
 \includegraphics[scale=0.09]{./graphics/a21}
 
 PHILIP HAGAR SMITH (April 29, 1905 - August 29, 1987) was an electrical engineer who became famous for his invention of the SMITH CHART. He graduated from Tufts College in 1928 with a BS degree in electrical engineering while working for Bell Telephone Laboratories. He invented his eponymous Smith chart during the period of being faced with the challenge of how to show and evaluate multiple complex impedance parameters which can range from zero to infinity. When asked why he invented the chart, Smith explained \emph{\textquotedblleft From the time I could operate a slide rule, I've been interested in graphical representations of mathematical relationship\textquotedblright}. This interest in representing mathematical relationships in graphical form is what led to the invention of the smith chart.
@@ -224,7 +225,7 @@ PHILIP HAGAR SMITH (April 29, 1905 - August 29, 1987) was an electrical engineer
 \label{fig:smithchart-2}
 \end{figure}
 
-The Smith chart is a graphical aid designed for electrical and electronics engineers to assist in solving problems of the transmission lines and matching circuits. It is a product of superimposing the circle of constant resistance and the circle of constant reactance. It can be used to simultaneously display multiple parameters such as the impedances, admittances, reflection co-efficient e.t.c.
+The Smith chart is a graphical aid designed for electrical and electronics engineers to assist in solving problems of the transmission lines and matching circuits. It is a product of superimposing the circle of constant resistance and the circle of constant reactance. It can be used to simultaneously display multiple parameters such as the impedances, admittances, reflection co-efficient etc.
 It is plotted on the complex reflection co-efficient plane in two dimensions and is scaled in normalized impedance (which is most common), normalized admittance or both. It has circumstantial scaling of wavelengths and degrees. The wavelengths scale is used in distributed component problems and represents the distance measured along the transmission line connected between the generator and the load to the point under consideration.
 
 Figure~\ref{fig:473-drawingjhgfd} shows the simplified version that will allow us mark out some important points.

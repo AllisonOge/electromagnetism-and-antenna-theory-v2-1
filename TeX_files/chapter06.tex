@@ -1,7 +1,6 @@
 In the previous sections, we investigated the Standing Wave Pattern on a transmission line and also an important parameter which is the voltage standing wave ratio (VSWR)\index{voltage standing wave ratio} \emph{which is the ratio of the maximum voltage seen on the transmission line to the minimum voltage seen on the transmission line}.
 
-Let us now study impedance transformation in a lossless
-transmission line and then establish some of the very important characteristics of impedance transformation on a lossless transmission line. Thereafter, we will proceed to an important calculation of Power Transfer to the load and also derive the expression for $V^{+}$.
+Let us now study impedance transformation in a lossless transmission line and then establish some of the very important characteristics of impedance transformation on a lossless transmission line. Thereafter, we will proceed to an important calculation of power transfer to the load and also derive the expression for $V^{+}$.
 
 \section{Impedance Transformation on a Lossless Transmission Line}\label{lec:lec6}
 Recall that, the impedance transformation relationship for any point is given as:
@@ -55,7 +54,7 @@ At location $l$, Impedance $= \bar{Z}(l)$,
 \label{fig:astyuif}
 \end{figure}
 
-At location ${\left(l+\frac{\lambda}{2}\right)}$, Impedance $= \bar{Z}\left(l+\frac{\lambda}{2}\right)$ substituting ${\left(l+\frac{\lambda}{2}\right)}$ for $l$ in equation~\ref{eqn:implossless}, we get: 
+At location ${\left(l+\frac{\lambda}{2}\right)}$, Impedance $= \bar{Z}\left(l+\frac{\lambda}{2}\right)$ substituting ${\left(l+\frac{\lambda}{2}\right)}$ for $l$ in equation~\eqref{eqn:implossless}, we get: 
 \begin{align*}
 \bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L \cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\sin(\beta \left(l+\frac{\lambda}{2}\right))}{\cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\bar{Z}_L \sin(\beta \left(l+\frac{\lambda}{2}\right))}\right\rbrace 
 \end{align*}
@@ -109,13 +108,13 @@ We can draw an observation that for every $\frac{\lambda}{4}$ distance moved, th
 Hence, when we talk about the periodicity of the impedance on the transmission line, at $\frac{\lambda}{2}$ the absolute or normalized impedance repeats itself, whereas every distance of $\frac{\lambda}{4}$, the normalized impedance inverts itself. Next on is the study of impedance matching characteristics; this property is used extensively for finding out the impedance transformation which can match impedance on transmission line.
 
 \subsection{The matching condition characteristics}
-If the transmission line is terminated by its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_0$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_0}=1$. Then equation~\ref{eqn:implossless} becomes:
+If the transmission line is terminated by its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. So if $Z_L=Z_0$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_0}=1$. Then equation~\eqref{eqn:implossless} becomes:
 \begin{dmath*}
 \bar{Z}(l) = \left\lbrace\frac{\bar{Z}_L\cos\beta l + j\sin\beta l}{\cos\beta l + j\bar{Z}_L\sin\beta l}\right\rbrace = \left\lbrace \frac{\cos\beta l + j\sin\beta l}{\cos\beta l + jsin\beta l}\right\rbrace = 1
 \end{dmath*}
 Therefore, irrespective of the length of the transmission line, if the line is terminated in its characteristics impedance, then the impedance seen at every point on the transmission line is equal to the characteristics impedance. This means that once a line is terminated in its characteristics impedance, there is no need to compute the impedance transformation on the line, we can use any length of transmission and the impedance will always be the same along the length of the line. 
 
-$Z_L=Z_0$ i.e when reflection coefficient is zero, there is no reflected wave on the transmission line and we have only forward traveling wave on the transmission line. Forward traveling wave always see an impedance which is equal to the characteristics impedance. This result is not new, it is what we had discussed earlier when we talked about transmission line and that was, if a line is terminated in its characteristic impedance, the impedance seen at every point on the transmission line is equal to the characteristics impedance. 
+$Z_L=Z_0$ i.e when reflection coefficient is zero, there is no reflected wave on the transmission line and we have only forward traveling wave on the transmission line. Forward traveling wave always see an impedance which is equal to the characteristics impedance. This result is not new, it is what we had discussed earlier when we talked about transmission line and that was, if a line is terminated in its characteristic impedance, the impedance seen at every point on the transmission line is equal to the characteristics impedance.
 
 So these are the three very important characteristics of a lossless transmission line.
 \begin{enumerate}[(i)]
@@ -142,7 +141,7 @@ I(0) &= \frac{V^{+}}{Z_0} \left\lbrace{1 - \Gamma_L e^{-2\beta(0)}}\right\rbrace
 \end{align*}
 So from the general voltage and current relationship on the transmission line we have found  out the voltage and current values at load end.
 
-$Z_0= $ real for a lossless line, thus the conjugate of the current equation at the load end is:
+$Z_0$ is real for a lossless line, thus the conjugate of the current equation at the load end is:
 \begin{align*}
 I^\ast (0) =\frac{V^{+ (\ast )}}{Z_0}\left\lbrace 1 -\Gamma_L \right\rbrace
 \end{align*}
@@ -408,7 +407,7 @@ A 50$\Omega$ lossless transmission line is connected to a load of $50 + j50\Omeg
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/antenna_power_problem}
-\caption{Antenna configuration for Ex.~\autoref{ex62}}
+\caption{Antenna configuration for Ex.~\ref{ex62}}
 \label{fig:antennapowerproblem}
 \end{figure}
 \Answer[ref={ex61}]

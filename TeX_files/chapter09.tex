@@ -1,4 +1,5 @@
 \begin{exmp}
+\subsubsection*{Transmission line analysis using a Smith chart}
 A 50$\Omega$ line is terminated in a load impedance $25+j35\Omega$. Find the following using a Smith chart.
 \begin{enumerate}[(a)]
 \item Reflection coefficient in cartesian and polar form,
@@ -30,7 +31,7 @@ The distance is read from the scale for reflection coefficient E or I at the bot
 
 To determine the angle $\phi_{L}$, we draw a straight line from the origin through point A to the outermost circle as shown in figure~\ref{fig:workedexample2}. From the scale that reads \textquotedblleft ANGLE OF REFLECTION COEFFICIENT\textquotedblright\;, read the angle the line makes from the positive real axis. The value gives the angle of the reflection coefficient in polar form so that the reflection coefficient at the load is $0.52\angle100^o$ in polar form.
 
-The cartesian form is obtained by converting the polar form to cartesian form as shown below
+The cartesian form is obtained by converting the polar form to the cartesian form as shown below
 \begin{align*}
 \Gamma_{L} &= 0.52\angle100^o\\
 &= 0.52e^{j100}\\
@@ -68,11 +69,11 @@ VSWR, \rho = 3.8
 A line is terminated in a normalized admittance $0.2-j0.5\varOmega$. Find 
 \begin{enumerate}[(a)]
 \item the location of the voltage maximum from the load end. 
-\item the reflection coefficient , normalized admittance and normalized impedance at a distance $0.12\lambda$ from the load.
+\item the reflection coefficient, normalized admittance and normalized impedance at a distance $0.12\lambda$ from the load.
 \end{enumerate}
 
 \subsubsection*{Solution}
-Now, in this problem we are dealing with admittances instead of impedances. The admittance we are given here is already normalized, so we mark the point, $\bar{Y} = 0.2 - j0.5$, on the Smith chart as shown in figure~\ref{fig:workedexample3}.
+Now, in this problem, we are dealing with admittances instead of impedances. The admittance we are given here is already normalized, so we mark the point, $\bar{Y} = 0.2 - j0.5$, on the Smith chart as shown in figure~\ref{fig:workedexample3}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{"./graphics/smith chart 3"}
@@ -88,9 +89,9 @@ Recall we move clockwise when moving towards the generator.
 }.
 
 \subsubsection*{(b) Reflection coefficient, normalized admittance and impedance at a distance $0.12\lambda$ from the load}
-First we note the distance corresponding to $\bar{Y}_L$ which we measured as $0.424\lambda$ on the Smith chart. Moving a distance of $0.12\lambda$ towards the generator implies the new location is $0.424\lambda + 0.12\lambda = 0.544\lambda$. But the highest value on the wavelength scale is $0.5\lambda$ so the value on the scale which corresponds to $0.544\lambda$ is $0.044\lambda$\footnote{
+First, we note the distance corresponding to $\bar{Y}_L$ which we measured as $0.424\lambda$ on the Smith chart. Moving a distance of $0.12\lambda$ towards the generator implies the new location is $0.424\lambda + 0.12\lambda = 0.544\lambda$. But the highest value on the wavelength scale is $0.5\lambda$ so the value on the scale which corresponds to $0.544\lambda$ is $0.044\lambda$\footnote{
 $0.544\lambda-0.5\lambda$
-}. Next we draw a line from the origin of the Smith chart through that point and mark the point of intersection of the line with the VSWR circle as $\bar{Y}$ (see figure~\ref{fig:workedexample3}). We read the corresponding value of normalized admittance as:
+}. Next, we draw a line from the origin of the Smith chart through that point and mark the point of intersection of the line with the VSWR circle as $\bar{Y}$ (see figure~\ref{fig:workedexample3}). We read the corresponding value of normalized admittance as:
 \begin{align*}
 \bar{Y} = 0.18 + j0.28
 \end{align*}
@@ -103,12 +104,12 @@ Recall that the normalized impedance inverts itself every $\frac{\lambda}{4}$
 \end{align*}
 
 Finally, we need to measure the reflection coefficient. To get the magnitude, we measure the distance between the origin of the Smith chart and $\bar{Z}$\footnote{
-This is done either with a pair of dividers preferably to take the length and read its distance on the scale at the bottom of the Smith chart page. Or alternatively, divide the distance measured with a pair of dividers by the distance measured for the $r = 1.0$ constant resistance circle.
+This is done either with a pair of dividers preferably to take the length and read its distance on the scale at the bottom of the Smith chart page. Alternatively, divide the distance measured with a pair of dividers by the distance measured for the $r = 1.0$ constant resistance circle.
 }. While we get the phase angle by measuring the angle suspended for the positive real axis. That is,
 \begin{align*}
 \Gamma = 0.7\angle328^o
 \end{align*}
-All these demonstrate is the effectiveness of the Smith chart in moving from impedance to admittance and vice versa. We switch from impedance to admittance by diagonally switching on the Smith chart. That is, at the load point for instance, $\bar{Y_{L}}$, if we go diagonally opposite, we get $\bar{Z_{L}}$. So basically, it helps us invert complex number. 
+All these demonstrate are the effectiveness of the Smith chart in moving from impedance to admittance and vice versa. We switch from impedance to admittance by diagonally switching on the Smith chart. That is, at the load point for instance, $\bar{Y_{L}}$, if we go diagonally opposite, we get $\bar{Z_{L}}$. So basically, it helps us invert complex numbers. 
 \end{exmp}
 
 \subsection{Identifying Types of Load from Standing Wave Pattern\index{standing wave pattern}}\label{lec:lec9}
@@ -127,7 +128,7 @@ VSWR = \frac{|V|_\max}{|V|_\min}
 \end{align}
 From the equation~\eqref{eqn:vswr09}, the smaller the value of $|V|_\min$, the larger the value of ${VSWR}$, that is, as $|V|_\min$ tends to zero, ${VSWR}$ tends to infinity. When $|V|_\max{\approx}|V|_\min$, then $VSWR = 1$.
 
-First, let us observe the variation of the impedance on the tranmission line with the Smith chart then we will revisit our early question. Figures~\ref{fig:group91} and~\ref{fig:group92} are simplified Smith charts showing the VSWR circle for inductive and capacitive load at the top and bottom areas respectively.
+First, let us observe the variation of the impedance on the transmission line with the Smith chart then we will revisit our early question. Figures~\ref{fig:group91} and~\ref{fig:group92} are simplified Smith charts showing the VSWR circle for inductive and capacitive load at the top and bottom areas respectively.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./graphics/Group91}
@@ -144,7 +145,7 @@ First, let us observe the variation of the impedance on the tranmission line wit
 As shown in figure~\ref{fig:group91}, if we move from the load towards the generator, that is, a clockwise rotation, for the inductive load we encounter $V_\max$ first before ${V_\min}$ in another $\frac{\lambda}{4}$ or $\pi rad$ movement. Similarly, if we move from $\bar{Z_L}$ in clockwise direction for capacitive load, we encounter $V_\min$ first before $V_\max$, in another $\frac{\lambda}{4}$ or $\pi rad$ movement. Also, $V_\min\neq0$ which means that for a complex inductive load that is not purely reactive, $VSWR\neq\infty$.
 
 \subsubsection{Complex Reactive Loads}
-Now, let us analyze some standing wave graph and determine the type of load which they represent. The transmission line circuit is shown in figure~\ref{fig:group93} and we can analyse the standing wave pattern based on the new observation we have discussed. As the standing wave pattern moves from load towards the generator from right to left, it gets to a maximum first and its minimum is not zero so it $|V_\min|$ does not touch the real axis.
+Now, let us analyze some standing wave graphs and determine the type of load which they represent. The transmission line circuit is shown in figure~\ref{fig:group93} and we can analyse the standing wave pattern based on the new observation we have discussed. As the standing wave pattern moves from load towards the generator from right to left, it gets to a maximum first and its minimum is not zero so it $|V_\min|$ does not touch the real axis.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group93}
@@ -158,14 +159,14 @@ Now, let us analyze some standing wave graph and determine the type of load whic
 \label{fig:group94}
 \end{figure}
 
-Similarly for a complex capacitive load, $V_\min\neq0$ and we encounter $V_\min$ first before $V_\max$ as shown in figure~\ref{fig:group94}. 
+Similarly, for a complex capacitive load, $V_\min\neq0$ and we encounter $V_\min$ first before $V_\max$ as shown in figure~\ref{fig:group94}. 
 
 \subsubsection{Purely Reactive Loads}
-Let us observe the standing wave patterns with pure reative components at the load end. As shown in figure~\ref{fig:group96}, the voltage minimum is zero or it touches the horizontal axis that is ${VSWR=\dfrac{V_\max}{V_\min}=\infty}$ as ${V_\min=0}$.
+Let us observe the standing wave patterns with pure reactive components at the load end. As shown in figure~\ref{fig:group96}, the voltage minimum is zero or it touches the horizontal axis that is ${VSWR=\dfrac{V_\max}{V_\min}=\infty}$ as ${V_\min=0}$.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group96}
-\caption{Standing wave pattern variation of a pure inductive load}
+\caption{Standing wave pattern variation of a purely inductive load}
 \label{fig:group96}
 \end{figure}
 
@@ -173,14 +174,14 @@ As we move from the load end we meet ${V_\max}$ first indicating it is purely in
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group97}
-\caption{Standing wave pattern variation of a pure capacitive load}
+\caption{Standing wave pattern variation of a purely capacitive load}
 \label{fig:group97}
 \end{figure}
 
 For purely capacitive loads, the voltage minimum is also zero, but we encounter a minimum first as we go from the load end towards the generator indicating a purely capacitive load. So it lies in the lower half of the Smith chart and $VSWR=\infty$.
 
 \subsubsection{Resistive Loads}
-Lastly, there is the case of when the load is neither capacitive nor inductive. If so, then the load must lie on the real horizontal axis of the Smith Chart, so the location of the load itself will be at either the voltage minimum point or voltage maximum point. If the load is purely resistive as in figure~\ref{fig:group95}. Recall that on the Smith Chart, the points of intersection of the VSWR circle on the real axis will be the locations of the voltage maximum and minimum. So there will either be maximum or minimum voltage at the load end as shown in figure~\ref{fig:group95}. The solid curve has ${V_\max}$ at load end meaning ${R>Z_0}$ while the dashed curve has ${V_\min}$ at load end which means ${R<Z_0}$. ${Z_0}$ is the characteristics impedance.
+Lastly, there is the case when the load is neither capacitive nor inductive. If so, then the load must lie on the real horizontal axis of the Smith Chart, so the location of the load itself will be at either the voltage minimum point or the voltage maximum point. If the load is purely resistive as in figure~\ref{fig:group95}. Recall that on the Smith Chart, the points of intersection of the VSWR circle on the real axis will be the locations of the voltage maximum and minimum. So there will either be maximum or minimum voltage at the load end as shown in figure~\ref{fig:group95}. The solid curve has ${V_\max}$ at load end meaning ${R>Z_0}$ while the dashed curve has ${V_\min}$ at load end which means ${R<Z_0}$. ${Z_0}$ is the characteristics impedance.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/Group95}
@@ -188,9 +189,9 @@ Lastly, there is the case of when the load is neither capacitive nor inductive. 
 \label{fig:group95}
 \end{figure}
 
-So looking at the standing wave pattern, one can quickly identify the types of load because the information about the load is completely available from the standing wave pattern. Hence, ${V_\max}$ and ${V_\min}$ location and lowest value of ${V_\min}$ which is related to VSWR can help us identity loads very quickly.
+So looking at the standing wave pattern, one can quickly identify the types of loads because the information about the load is completely available from the standing wave pattern. Hence, ${V_\max}$ and ${V_\min}$ location and lowest value of ${V_\min}$ which is related to VSWR can help us identify loads very quickly.
 
-So in this section, we have shown how to identify the load by looking at standing wave patterns. Next we go to applications of transmission line since we make use of sections of transmission line in realizing various circuit elements in high frequency circuits.
+So in this section, we have shown how to identify the load by looking at standing wave patterns. Next, we go to applications of transmission lines since we make use of sections of transmission lines in realizing various circuit elements in high-frequency circuits.
 
 \section*{Exercises}
 \begin{ExerciseList}

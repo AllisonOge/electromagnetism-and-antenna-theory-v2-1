@@ -128,7 +128,7 @@ V(l) = V^+ e^{j \beta l}(1 + \Gamma_L e^{-j 2 \beta l})\quad\text{where }\Gamma 
 \label{eqn:voltagefromloadlossless}
 \end{equation}
 
-Similarly, substituting $\gamma = j\beta$ and $x = -l$ into equation~\ref{eqn:currentfromloadlec5}:
+Similarly, substituting $\gamma = j\beta$ and $x = -l$ into equation~\eqref{eqn:currentfromloadlec5}:
 \begin{align*}
 I(l) &= \frac{V^+}{Z_0} e^{\jmath \beta l} - \frac{V^-}{Z_0} e^{-\jmath\beta l}\\
 \frac{I(l)}{\frac{V^+}{Z_0} e^{\jmath\beta l}} &= \left( 1- \frac{\frac{V^-}{Z_0} e^{-\jmath\beta l}}{\frac{V^+}{Z_0} e^{\jmath\beta l}}\right)\footnotemark\\
@@ -149,7 +149,7 @@ From equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloa
 \end{equation}
 where $\phi_L$ is the phase of the reflection coefficient at the load end. Then, we can write down the $V(l)$ and $I(l)$ explicitly in terms of the magnitude of the reflection coefficient and the phase.
 
-Therefore substituting equation~\ref{eqn:refcoefficientfromload} into equations \ref{eqn:voltagefromloadlossless} and~\ref{eqn:currentfromloadlossless} respectively, we will get;
+Therefore substituting equation~\eqref{eqn:refcoefficientfromload} into equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} respectively, we will get;
 \begin{dmath}
 V(l) = V^{+}e^{\jmath\beta l}(1 + |\Gamma_L|e^{j\phi_L} . e^{-j 2 \beta l})
 = V^{+}e^{\jmath\beta l}(1 + |\Gamma_L| e^{\jmath(\phi_L -2 \beta l)})
@@ -307,7 +307,7 @@ Z_{\min}=\frac{|V_{\min}|}{|I_{\max}|}
 = R_{\min}=Z_0\left\{\frac{1-|\Gamma_L|}{1+|\Gamma_L|} \right\}
 \label{eqn:minimp}
 \end{dmath}
-Once load impedance, characteristic impedance $Z_0$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to equation~\ref{eqn:maximp} and the lowest according to equation~\ref{eqn:minimp}.
+Once load impedance, characteristic impedance $Z_0$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to equation~\eqref{eqn:maximp} and the lowest according to equation~\eqref{eqn:minimp}.
 
 At high frequencies, with the knowledge of the voltage standing wave on the transmission line, the measurement of phase is very difficult and complicated. One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase not in a direct manner but rather an indirect one by measuring only the magnitude quantities. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time relationship between the two waves, the forward and backward wave. 
 
