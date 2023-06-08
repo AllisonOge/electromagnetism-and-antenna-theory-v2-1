@@ -3,8 +3,8 @@ name: Error Report
 about: Errors in grammar, derivations, calculations and images
 title: 'chp[#]-sec[#]: [closest title to the error] e.g chp1-sec1.7: radar formular
   is incorrect'
-labels: ''
-assignees: ''
+labels: documentation
+assignees: AllisonOge, Victor-Aken, sixtusafam
 
 ---
 
