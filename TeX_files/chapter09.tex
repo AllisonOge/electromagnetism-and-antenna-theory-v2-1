@@ -1,6 +1,120 @@
-\chapter{Identifying Types of Load from Standing Wave Pattern\index{standing wave pattern}}\label{lec:lec9}
+\begin{exmp}
+\subsubsection*{Transmission line analysis using a Smith chart}
+A 50$\Omega$ line is terminated in a load impedance $25+j35\Omega$. Find the following using a Smith chart.
+\begin{enumerate}[(a)]
+\item Reflection coefficient in cartesian and polar form,
+\item Reflection coefficient and impedance at a distance of $0.2\lambda$ from the load end of the line.
+\item VSWR on the line.
+\end{enumerate}
 
-In the previous chapter, we discussed how to solve some simple common transmission line problems using both impedances and admittances and then we discussed the constant VSWR circle. In this chapter, we will discuss how to identify the types of load from standing wave patterns. Standing wave pattern has two important characteristics which are:
+\subsubsection*{Solution}
+We are given $Z_{L}=25+j35\varOmega$ and $Z_{0}=50\varOmega$, so first, we normalize the load impedance
+\begin{dmath*}
+\bar{Z_{L}}=\frac{25+j35}{50}=0.5+j0.7
+\end{dmath*}
+We mark this point on the Smith chart as shown in figure~\ref{fig:workedexample2}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{"./graphics/Smith chart 1"}
+\caption{Worked Example}
+\label{fig:workedexample2}
+\end{figure}
+
+To get the reflection coefficient, we draw a circle from the origin of the Smith chart through the marked point (normalized load impedance), A. The distance between point A and the centre gives the magnitude of the reflection coefficient\footnote{
+The distance is read from the scale for reflection coefficient E or I at the bottom of the Smith chart page
+
+\underline{Note}: This method is different from that used in example~\ref{exmp:locatepoints} and both methods are correct
+}. We read the value as
+\begin{align*}
+|\Gamma_{L}| = 0.52
+\end{align*}
+
+To determine the angle $\phi_{L}$, we draw a straight line from the origin through point A to the outermost circle as shown in figure~\ref{fig:workedexample2}. From the scale that reads \textquotedblleft ANGLE OF REFLECTION COEFFICIENT\textquotedblright\;, read the angle the line makes from the positive real axis. The value gives the angle of the reflection coefficient in polar form so that the reflection coefficient at the load is $0.52\angle100^o$ in polar form.
+
+The cartesian form is obtained by converting the polar form to the cartesian form as shown below
+\begin{align*}
+\Gamma_{L} &= 0.52\angle100^o\\
+&= 0.52e^{j100}\\
+&= 0.52{\cos100 + j\sin100}\\
+&= -0.09+j0.512
+\end{align*}
+
+The next step is to get the reflection coefficient at a distance of $0.2\lambda$ from the load point, that is, $\Gamma(0.2\lambda)$. 
+
+First, we identify the scale on the outermost circle that reads \textquotedblleft WAVELENGTH TOWARDS GENERATOR\textquotedblright\; and measure the value measured at point A which we obtained as $0.11\lambda$. To move a distance $0.2\lambda$ towards the generator means to move clockwise along the scale\footnote{
+Similarly, moving towards the load on the Smith chart means to move in the anticlockwise direction along the scale that reads \textquotedblleft WAVELENGTH TOWARDS LOAD\textquotedblright\;.
+}. We mark this point as B, which has the value $0.11\lambda + 0.2\lambda=0.31\lambda$. We draw a straight line through the origin of the Smith chart and point B and determine the point of intersection with the VSWR circle. The point is marked P (see figure~\ref{fig:workedexample2}) which is the point of the reflection coefficient moved $0.2\lambda$ towards the generator. 
+
+Recall the magnitude of the reflection coefficient is given by the distance between the centre and the point P and the angle is measured from the positive real axis. We read the value as
+\begin{align*}
+\Gamma(0.2\lambda) = 0.52\angle316^o
+\end{align*}
+
+To find the normalized impedance at point P, we locate the constant resistance and reactance circles through the point. In our case we obtained
+\begin{align*}
+\bar{Z}=1.4-j1.37\\
+\text{Thus, }Z &=Z_{0}\times\bar{Z}\\
+&= 50(1.4-j1.37)\\
+&= 70-j68.5\varOmega
+\end{align*}
+
+Next, we obtain the value $\rho$ by reading the value at the rightmost side of the VSWR circle (see figure~\ref{fig:workedexample2}).
+\begin{align*}
+VSWR, \rho = 3.8
+\end{align*}
+\end{exmp}
+
+\begin{exmp}
+\subsubsection*{Transmission line analysis with Admittances}
+A line is terminated in a normalized admittance $0.2-j0.5\varOmega$. Find 
+\begin{enumerate}[(a)]
+\item the location of the voltage maximum from the load end. 
+\item the reflection coefficient, normalized admittance and normalized impedance at a distance $0.12\lambda$ from the load.
+\end{enumerate}
+
+\subsubsection*{Solution}
+Now, in this problem, we are dealing with admittances instead of impedances. The admittance we are given here is already normalized, so we mark the point, $\bar{Y} = 0.2 - j0.5$, on the Smith chart as shown in figure~\ref{fig:workedexample3}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{"./graphics/smith chart 3"}
+\caption{Worked Example}
+\label{fig:workedexample3}
+\end{figure}
+
+Next, we draw a circle from the origin of the Smith chart through that point $\bar{Y}_L$ which should help us determine the position of maximum voltage and reflection coefficient, normalized admittance and normalized impedance at $0.12\lambda$ from the load.
+
+\subsubsection*{(a) Location of the voltage maximum from the load end}
+For the admittance Smith chart, the voltage maximum will now lie on the leftmost side of the VSWR circle of the Smith chart. This point is marked as $V_\max$ on the Smith chart (see figure~\ref{fig:workedexample3}). The distance between $\bar{Y}_L$ and $V_\max$ on the Smith chart is the location of the voltage maximum moving towards the generator\footnote{
+Recall we move clockwise when moving towards the generator.
+}.
+
+\subsubsection*{(b) Reflection coefficient, normalized admittance and impedance at a distance $0.12\lambda$ from the load}
+First, we note the distance corresponding to $\bar{Y}_L$ which we measured as $0.424\lambda$ on the Smith chart. Moving a distance of $0.12\lambda$ towards the generator implies the new location is $0.424\lambda + 0.12\lambda = 0.544\lambda$. But the highest value on the wavelength scale is $0.5\lambda$ so the value on the scale which corresponds to $0.544\lambda$ is $0.044\lambda$\footnote{
+$0.544\lambda-0.5\lambda$
+}. Next, we draw a line from the origin of the Smith chart through that point and mark the point of intersection of the line with the VSWR circle as $\bar{Y}$ (see figure~\ref{fig:workedexample3}). We read the corresponding value of normalized admittance as:
+\begin{align*}
+\bar{Y} = 0.18 + j0.28
+\end{align*}
+
+To get the normalized impedance at the distance of $0.12\lambda$ from the load point, we transform the admittance by $\frac{\lambda}{4}$\footnote{
+Recall that the normalized impedance inverts itself every $\frac{\lambda}{4}$
+}. Put differently, the normalized admittance is the reciprocal(inverse) of the normalized impedance. A transformation by $\frac{\lambda}{4}$ can easily be calculated on the Smith chart by drawing a straight line from the normalized admittance, $\bar{Y}$ through the origin such that it divides the Smith chart into halves. We mark this point as $\bar{Z}$ (see figure~\ref{fig:workedexample3}) which is 180\textdegree from the point $\bar{Y}$. This point reads the values of normalized impedance as:
+\begin{align*}
+\bar{Z} = 1.6 - j2.6
+\end{align*}
+
+Finally, we need to measure the reflection coefficient. To get the magnitude, we measure the distance between the origin of the Smith chart and $\bar{Z}$\footnote{
+This is done either with a pair of dividers preferably to take the length and read its distance on the scale at the bottom of the Smith chart page. Alternatively, divide the distance measured with a pair of dividers by the distance measured for the $r = 1.0$ constant resistance circle.
+}. While we get the phase angle by measuring the angle suspended for the positive real axis. That is,
+\begin{align*}
+\Gamma = 0.7\angle328^o
+\end{align*}
+All these demonstrate are the effectiveness of the Smith chart in moving from impedance to admittance and vice versa. We switch from impedance to admittance by diagonally switching on the Smith chart. That is, at the load point for instance, $\bar{Y_{L}}$, if we go diagonally opposite, we get $\bar{Z_{L}}$. So basically, it helps us invert complex numbers. 
+\end{exmp}
+
+\subsection{Identifying Types of Load from Standing Wave Pattern\index{standing wave pattern}}\label{lec:lec9}
+
+We have so far discussed how to solve some simple common transmission line problems using both impedances and admittances and then we discussed the constant VSWR circle. In this section, we will discuss how to identify the types of load from standing wave patterns. Standing wave pattern has two important characteristics which are:
 \begin{enumerate}[(i)]
 \item The location of maximum and minimum (current/voltage)
 \item The VSWR circle.
@@ -14,207 +128,73 @@ VSWR = \frac{|V|_\max}{|V|_\min}
 \end{align}
 From the equation~\eqref{eqn:vswr09}, the smaller the value of $|V|_\min$, the larger the value of ${VSWR}$, that is, as $|V|_\min$ tends to zero, ${VSWR}$ tends to infinity. When $|V|_\max{\approx}|V|_\min$, then $VSWR = 1$.
 
-First, let us observe the variation of the impedance on the tranmission line with the Smith Chart then we will revisit our early question. Figures~\ref{fig:group91} and~\ref{fig:group92} are simplified Smith Charts showing the VSWR circle for inductive and capacitive load at the top and bottom areas respectively.
+First, let us observe the variation of the impedance on the transmission line with the Smith chart then we will revisit our early question. Figures~\ref{fig:group91} and~\ref{fig:group92} are simplified Smith charts showing the VSWR circle for inductive and capacitive load at the top and bottom areas respectively.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./graphics/Group91}
-\caption{A Smith Chart representation of inductive load}
+\caption{A Smith chart representation of inductive load}
 \label{fig:group91}
 \end{figure}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./graphics/Group92}
-\caption{A Smith Chart representation of capacitive load}
+\caption{A Smith chart representation of capacitive load}
 \label{fig:group92}
 \end{figure}
 
 As shown in figure~\ref{fig:group91}, if we move from the load towards the generator, that is, a clockwise rotation, for the inductive load we encounter $V_\max$ first before ${V_\min}$ in another $\frac{\lambda}{4}$ or $\pi rad$ movement. Similarly, if we move from $\bar{Z_L}$ in clockwise direction for capacitive load, we encounter $V_\min$ first before $V_\max$, in another $\frac{\lambda}{4}$ or $\pi rad$ movement. Also, $V_\min\neq0$ which means that for a complex inductive load that is not purely reactive, $VSWR\neq\infty$.
 
-\section{Complex Reactive Loads}
-Now, let us analyze some standing wave graph and determine the type of load which they represent. The transmission line circuit is shown in figure~\ref{fig:group93} and we can analyse the standing wave pattern based on the new observation we have discussed. As the standing wave pattern moves from load towards the generator from right to left, it gets to a maximum first and its minimum is not zero so it $|V_\min|$ does not touch the real axis.
+\subsubsection{Complex Reactive Loads}
+Now, let us analyze some standing wave graphs and determine the type of load which they represent. The transmission line circuit is shown in figure~\ref{fig:group93} and we can analyse the standing wave pattern based on the new observation we have discussed. As the standing wave pattern moves from load towards the generator from right to left, it gets to a maximum first and its minimum is not zero so it $|V_\min|$ does not touch the real axis.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./graphics/Group93}
+\includegraphics[width=0.8\linewidth]{./graphics/Group93}
 \caption{Standing wave pattern variation of a complex inductive load}
 \label{fig:group93}
 \end{figure}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./graphics/Group94}
+\includegraphics[width=0.8\linewidth]{./graphics/Group94}
 \caption{Standing wave pattern variation of a complex capacitive load}
 \label{fig:group94}
 \end{figure}
 
-Similarly for a complex capacitive load, $V_\min\neq0$ and we encounter $V_\min$ first before $V_\max$ as shown in figure~\ref{fig:group94}. 
+Similarly, for a complex capacitive load, $V_\min\neq0$ and we encounter $V_\min$ first before $V_\max$ as shown in figure~\ref{fig:group94}. 
 
-\section{Purely Reactive Loads}
-Let us observe the standing wave patterns with pure reative components at the load end. As shown in figure~\ref{fig:group96}, the voltage minimum is zero or it touches the horizontal axis that is ${VSWR=\dfrac{V_\max}{V_\min}=\infty}$ as ${V_\min=0}$.
+\subsubsection{Purely Reactive Loads}
+Let us observe the standing wave patterns with pure reactive components at the load end. As shown in figure~\ref{fig:group96}, the voltage minimum is zero or it touches the horizontal axis that is ${VSWR=\dfrac{V_\max}{V_\min}=\infty}$ as ${V_\min=0}$.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./graphics/Group96}
-\caption{Standing wave pattern variation of a pure inductive load}
+\includegraphics[width=0.8\linewidth]{./graphics/Group96}
+\caption{Standing wave pattern variation of a purely inductive load}
 \label{fig:group96}
 \end{figure}
 
 As we move from the load end we meet ${V_\max}$ first indicating it is purely inductive and lies on the upper half of the Smith Chart.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./graphics/Group97}
-\caption{Standing wave pattern variation of a pure capacitive load}
+\includegraphics[width=0.8\linewidth]{./graphics/Group97}
+\caption{Standing wave pattern variation of a purely capacitive load}
 \label{fig:group97}
 \end{figure}
 
-For purely capacitive loads, the voltage minimum is also zero, but we encounter a minimum first as we go from the load end towards the generator indicating a purely capacitive load. So it lies in the lower half of the Smith Chart and $VSWR=\infty$.
+For purely capacitive loads, the voltage minimum is also zero, but we encounter a minimum first as we go from the load end towards the generator indicating a purely capacitive load. So it lies in the lower half of the Smith chart and $VSWR=\infty$.
 
-\section{Resistive Loads}
-Lastly, there is the case of when the load is neither capacitive nor inductive. If so, then the load must lie on the real horizontal axis of the Smith Chart, so the location of the load itself will be at either the voltage minimum point or voltage maximum point. If the load is purely resistive as in figure~\ref{fig:group95}. Recall that on the Smith Chart, the points of intersection of the VSWR circle on the real axis will be the locations of the voltage maximum and minimum. So there will either be maximum or minimum voltage at the load end as shown in figure~\ref{fig:group95}. The solid curve has ${V_\max}$ at load end meaning ${R>Z_o}$ while the dashed curve has ${V_\min}$ at load end which means ${R<Z_o}$. ${Z_o}$ is the characteristics impedance.
+\subsubsection{Resistive Loads}
+Lastly, there is the case when the load is neither capacitive nor inductive. If so, then the load must lie on the real horizontal axis of the Smith Chart, so the location of the load itself will be at either the voltage minimum point or the voltage maximum point. If the load is purely resistive as in figure~\ref{fig:group95}. Recall that on the Smith Chart, the points of intersection of the VSWR circle on the real axis will be the locations of the voltage maximum and minimum. So there will either be maximum or minimum voltage at the load end as shown in figure~\ref{fig:group95}. The solid curve has ${V_\max}$ at load end meaning ${R>Z_0}$ while the dashed curve has ${V_\min}$ at load end which means ${R<Z_0}$. ${Z_0}$ is the characteristics impedance.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./graphics/Group95}
+\includegraphics[width=0.8\linewidth]{./graphics/Group95}
 \caption{Standing wave pattern variation of a pure resistive}
 \label{fig:group95}
 \end{figure}
 
-So looking at the standing wave pattern, one can quickly identify the types of load because the information about the load is completely available from the standing wave pattern. Hence, ${V_\max}$ and ${V_\min}$ location and lowest value of ${V_\min}$ which is related to VSWR can help us identity loads very quickly.
+So looking at the standing wave pattern, one can quickly identify the types of loads because the information about the load is completely available from the standing wave pattern. Hence, ${V_\max}$ and ${V_\min}$ location and lowest value of ${V_\min}$ which is related to VSWR can help us identify loads very quickly.
 
-\section{Transmission line problems}
-Now we solve some simple problems based on the theory we have developed from the transmission line.
+So in this section, we have shown how to identify the load by looking at standing wave patterns. Next, we go to applications of transmission lines since we make use of sections of transmission lines in realizing various circuit elements in high-frequency circuits.
 
-\begin{exmp}
-A voltage wave at ${1GH}z$ is traveling on a transmission line in ${+x}$ direction. The primary constants of the line are ${R=0.5\Omega/m}$, ${L=0.2\mu H/m}$, ${G=0.1\upsilon/m}$, ${C=100pF/m}$. Calculate the attenuation constant in ${nepers/m}$ and ${dB/m}$. If the voltage of the forward traveling wave at ${t=0}$ and ${x=0}$ ${v}=0.866V$. Find the voltage at ${x=1m}$ and time ${t=100nsec}$. What is the peak voltage at ${x=1m?}$ Take initial phase as ${30^0}$.
-
-\subsection*{Solution}
-\[\omega = 2\pi\times 10^{9}\text{rad/sec}\]
-Propagation constant $\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}$
-\begin{dmath*}
-\gamma
-=\sqrt{(0.5 + \jmath( 2\pi\times 10^{9} \times 0.2\times 10^{-6}))(0.1 + \jmath (2\pi\times 10{9} \times 10^{-12}))} \quad
-= 2.23 + \jmath 28.2 \text{per metre}
-\end{dmath*}
- 
-In comparision with $\gamma = \alpha + \jmath\beta$ where $\alpha$  is the attenuation constant and $\beta$ is the phase constant.
-
-Hence, $\alpha = 2.23 \text{Nepers/m} $ and $\beta = 28.2 \text{rad/m}$ but $1 \text{Nepers/m} = 8.68\text{dB/m}\Rightarrow 2.23 \text{Nepers/m} = 2.23\times8.68= 19.36 \text{dB/m}$
-
-Now to find $V{(x,t)}$, we shall express $V_{(x,t)}$ in general as
-\begin{dmath*}
-V{(x,t)} = (V^{+}e^{-\gamma x} + V^{-}e^{+\gamma x})e^{j\omega t}\quad\text{for forward and backward wave}
-\end{dmath*}
-And $ V^{-} = 0 $ when considering only the forward wave.
-\begin{dmath*}
-V{(x,t)} = V^{+}e^{-\gamma x}e^{j\omega t}
-= \mathfrak{Re}\left\lbrace{V^{+}e^{-(\alpha +j\beta)x}e^{j\omega t}}\right\rbrace
-=\mathfrak{Re}\left\lbrace{V^{+}e^{-\alpha x}e^{-j\beta x}e^{j\omega t}}\right\rbrace
-= \mathfrak{Re}\left\lbrace{V^{+}e^{-\alpha x}e^{j(\omega t - \beta x)}}\right\rbrace
-\end{dmath*}
-The real or imaginary part is sufficient to characterize the sinusoidal variation with time, ${e^{j\omega t}}$ is very general.
-
-${V^+}$ has an amplitude and initial phase. Hence, it is a complex quality expressed as $ V^{+} = |V^{+}|e^{\jmath\phi} $, $ |V^{+}| =$ Amplitude and $ \phi =$ initial phase
-\begin{dmath*}
-V{(x,t)} = \mathfrak{Re}\left\lbrace{|V^{+}|e^{-\alpha x}e^{j\phi}e^{j(\omega t - \beta x)}}\right\rbrace
-= \mathfrak{Re}\left\lbrace{|V^{+}|e^{-\alpha x}e^{j(\phi+\omega t - \beta x)}}\right\rbrace
-= \mathfrak{Re}\left\lbrace{|V^{+}|e^{-2.23x}e^{(\phi+2\pi10^9t-28.2x)}}\right\rbrace
-\end{dmath*}
-At $ x = 0, t = 0, \quad V(x,t) = 8.66V $ then
-\begin{dmath*}
-8.66 = \mathfrak{Re}\left\lbrace{|V^{+}|e^{-0}e^{j(\phi+0-0)}}\right\rbrace
-= \mathfrak{Re}\left\lbrace{|V^+|}e^{j\phi}\right\rbrace
-= \mathfrak{Re}\left\lbrace{V^{+}e^{j\phi}}\right\rbrace = \mathfrak{Re}\left\lbrace{V^{+}{cos\phi}} + {jV^{+}{sin\phi}}\right\rbrace
-= |V^{+}|{cos\phi}
-= \mathfrak{Re}\left\lbrace{|V^{+}|e^{-\alpha x}e^{j(\phi+\omega t - \beta x)}}\right\rbrace
-= ({|V^{+}|e^{-\alpha x}\cos(\phi+\omega t - \beta x)})
-= {|V^+|{\cos\phi}} \quad \text{at }\phi \text{= 30\textdegree}
-= {|V^+|{\cos30}}
-= {|V^+|{0.866}}
-\end{dmath*} 
-Thus, $\frac{8.66}{0.866} = {|V^+|}\Longrightarrow {|V^{+}| = 10V}$
-
-Hence, the complete expression is
-\begin{dmath*}
-V({x,t}) = 10e^{-2.23x} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2x})
-\end{dmath*}
-To find voltage at $x=1m$ and $t=100nsec$, we have
-\begin{dmath*}
-V({1,100nsec}) = 10e^{-2.23} \cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} - 28.2\times1})
-= -0.88V
-\end{dmath*}
-\begin{dmath*}
-V({x,t}) = 10e^{-2.23x} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2x})
-\end{dmath*}
-The peak value at $x = 1m$ is given thus
-\begin{dmath*}
-V({1,t}) = 10e^{-2.23(1)} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2(1)})
-\end{dmath*}
-Peak value happens when $\cos({\dfrac{\pi}{6} + 2\pi\times10^9t - 28.2(1)}) = 1$
-\begin{dmath*}
-V{(1,t)_\max} = 10e^{-2.23} = 1.07528V
-\end{dmath*}
-This is one of the simplest transmission line problem where the primary constants are given as well as the voltage at some instant of time and location. We are then asked to find out the voltage at some other location and at some other instant of time.
-\end{exmp}
-
-\begin{exmp}
-Given that the wave in the previous example is travelling in the negative ${x}$ direction and all other parameters are kept the same, what is the instantaneous voltage at the same time and at the same location?
-
-\subsection*{Solution}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{./graphics/Group98}
-\caption{Diagram for Problem 2}
-\label{fig:group98}
-\end{figure}
-
-For the wave travelling in the negative direction, we have $V_{(x,t)} = \mathfrak{Re}\left\lbrace V^{-}e^{\gamma x}e^{j\omega t}\right\rbrace$ for backward wave.
-\begin{dmath*}
-V(x,t) = Re({V^{-}e^{\alpha x}e^{j\beta x}e^{j\omega t}}) = {|V^{-}|e^{\alpha x}cos{(\phi+\omega t + \beta x)}}
-\end{dmath*}
-At ${t=0, x=0, V=8.66}$, then
-\begin{dmath*}
-{8.66} = {|V^{-}|}e^{0} cos({\phi + 0 + 0})
-= {|V^-|{cos\phi}} \quad \text{at }\phi\text{= 30\textdegree} 
-= {|V^-|{cos30}}
-= {|V^-|{0.866}}
-\end{dmath*}
-\begin{dmath*}
-\frac{8.66}{0.866} = {|V^-|} = 10V
-\end{dmath*}
-\begin{align*}
-V({x,t}) = 10e^{2.23x} \cos({\dfrac{\pi}{6} + 2\pi\times10^9t + 28.2x})
-\end{align*}
-At ${t=100nsec}$ and ${x=1m}$
-\begin{dmath*}
-V({x,t}) = 10e^{2.23} \cos({\dfrac{\pi}{6} + 2\pi\times10^9\times100\times10^{-9} + 28.2})
-= -83.7701V
-\end{dmath*}
-So what we note here is, if we look at the transmission line with ${x=0}$ and ${x=1m}$. If the wave travels in forward direction, then the wave will attenuate in the direction of propagation. The variation is from ${8.66V}$ to ${-0.88V}$. In the backward direction, the wave will attenuate in the reverse direction so it has to  have a higher amplitude at ${x=1m}$ and ${t=100nsec}$ from were it attenuates from ${-83.7701V}$ to ${8.66V}$ in the other direction. The direction of propagation of the wave is very important.
-\end{exmp}
-
-\begin{exmp}
-A transmision line has $L = 0.25muH/m$, $C=100pF/m$ and ${G=0}$. What should be the value of ${R}$ for the line so that the line can be travelled as a low loss line? The frequency of operation is ${100MHz}$
-
-\subsection*{Solution}
-For low loss line ${\alpha\ll\beta}$ say ${100\alpha=\beta}$ at 1 percent of ${\beta}$ value
-\begin{dmath*}
-\beta=\omega\sqrt{LC}
-= {2\pi\times100\times10^6\sqrt{0.25\times10^{-6}\times100\times10^{-12}}}
-=2\pi\times100\times10^6\times5\times10^{-9}
-=\pi
-\end{dmath*}
-\begin{dmath*}
-\alpha={\frac{1}{2}}\left(R\sqrt{\frac{C}{L}}+G\sqrt{\frac{L}{C}}\right)\quad (\text{G = 0})
-={\frac{R}{2}}\sqrt{\frac{C}{L}}
-=\frac{R}{2}\sqrt{\frac{100\times10^{-12}}{0.25\times10^{-6}}}
-=\frac{R}{2}\sqrt{\frac{1}{2500}}
-=\frac{R}{2}\times\frac{1}{50}
-=\frac{R}{100}
-\end{dmath*}
-Remember ${\alpha = \frac{\beta}{100}}$, since ${\beta = \pi}$
-\begin{dmath*}
-\alpha = \frac{\beta}{100} 
-= \frac{\pi}{100} 
-= \frac{R}{100}
-\end{dmath*}
-\[\Longrightarrow R = \pi\Omega/m \]
-So for this transmission line taking a resistance of ${3\Omega /m}$. It can be treated as a low loss transmission line. If ${R>\pi}$ say ${4\Omega}$, it is no more a low loss transmission line and it slowly become a lossy transmission line. When ${R}$ increases to the point that ${\alpha\approx\beta}$, then the line becomes extremely lossy.
-\end{exmp}
-
-So in this section, we have shown how to identify the load by looking at standing wave patterns. Next we solved some simple problems for transmission line based on voltage equations which we have derived for the transmission line. Next we go to applications of transmission line since we make use of sections of transmission line in realizing various circuit elements in high frequency circuits.
+\section*{Exercises}
+\begin{ExerciseList}
+\Exercise[label={ex91}]
+Explain the following:
+\end{ExerciseList}

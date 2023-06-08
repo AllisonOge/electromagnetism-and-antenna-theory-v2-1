@@ -1,9 +1,9 @@
-\chapter{Lossy Transmission Line}\label{lec:lec13}
-In previous chapters, we have discussed the lossless or low loss transmission line. We have studied the characteristics of lossless transmission line and have seen various applications of the lossless transmission line. In practice however, as frequency increases, the loss increases and the line becomes very lossy. In this Chapter, we will see briefly the characteristics of a lossy line.
+\section{Lossy Transmission Line}\label{lec:lec13}
+In previous sections, we have discussed the lossless and low loss transmission line. We have studied the characteristics of lossless transmission line and have seen various applications of the lossless transmission line. In practice however, as frequency increases, the loss increases and the line becomes very lossy. In this section, we will see briefly the characteristics of a lossy line.
 
 Obviously, if a line is very lossy then it is not a very efficient medium for transfer of power, so when we say a line is lossy in practice it is not very lossy but it is moderately lossy. Let us briefly examine the characteristic impedance and the propagation constant of a very lossy line, after which we will examine that of a moderately lossy line.
 
-\section{Very Lossy Transmission Line}
+\subsection{Very Lossy Transmission Line}
 For a very lossy line we will define the relationship between the primary constants as:
 \begin{align*}
 R\gg\omega L
@@ -23,7 +23,7 @@ We observe that the characteristic impedance is real but the propagation constan
 
 Obviously, we are not interested in this case we are investigating. Let us however consider the case where $R$ and $G$ are comparable to $\omega L$ and $\omega C$ and we refer to this transmission line as the moderately lossy line.
 
-\section{Moderately Lossy Transmission Line}Mathematically, the relationship between the primary constants can be expressed as follows:
+\subsection{Moderately Lossy Transmission Line}Mathematically, the relationship between the primary constants can be expressed as follows:
 \begin{align*}
 R \approx \omega L\\
 G \approx \omega C
@@ -57,7 +57,7 @@ The incident wave exponentially decays as we move towards the load and depending
 
 From a different view it implies that if there is a large mismatch at the load side, as we move towards the generator the mismatch becomes weaker and the matching improves and we see an impedance at the generator end which is very close to the characteristic impedance $Z_0$ of the transmission line, because only the forward traveling wave is seen at the generator end. We conclude that for a lossy line, irrespective of what the load impedance is, there will always be a matching seen at the generator. But this is not a very good situation, because the power which is supplied by the generator is not delivered to the load. A substantial amount of power has been lost in the transmission line. So many times in transmission line design, a deliberately lossy line is introduced so that even in any experiment we connect some arbitrary load and get  some really strong reflections, at least these reflections will not go and damage the generator. So in this case the purpose certainly is not maximum power transfer but it is to protect the generator from any unwanted reflections.
 
-\subsection{Using the Smith chart for lossy lines}
+\subsubsection{Using the Smith chart for lossy lines}
 Let us examine the effect of a lossy line on the reflection coefficient of the transmission line. For the lossy line, the expression for the reflection coefficient is given as;
 \begin{dmath*}
 \Gamma{(l)} = \frac{V^-}{V^+}e^{-2\alpha l}e^{-j2\beta l}\quad\text{But, }\Gamma_L\text{ =}\frac{V^-}{V^+}
@@ -96,11 +96,11 @@ A plot of these circles is shown in figure~\ref{fig:vswrlossy}, however, if we w
 
 The analytic calculation of the impedance on a lossy line are as general as we have discussed earlier in the previous chapters. So those impedance transformation relationships using the hyperbolic cosines and sines are applicable for the calculation of the impedances on transmission line. Therefore, with this minor modification to the analysis, the Smith chart can be used for moderately lossy transmission lines.
 
-\section{Characteristic impedance and propagation constant measurement}
+\subsection{Characteristic Impedance and Propagation Constant measurement}
 Here we would like to measure the characteristic impedance and the propagation constant which are the secondary constants. Normally for calculations of transmission lines, we generally do not estimate the primary constants rather we estimate the secondary constants. Assuming there is setup which can measure an unknown impedance at an unknown frequency. Then we can measure the characteristic impedance of a moderately lossy line or a low loss line. This measurement can be done by conducting a short circuit and open circuit test of a section of a transmission line. Consider a length of transmission line, $l$, one end of the transmission line is connected to the impedance measurement setup as shown in figure~\ref{fig:impmeasurement}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"./graphics/impedance_measurement_temp"}
+\includegraphics[width=1\linewidth]{"./graphics/impedance_measurement"}
 \caption{Impedance measurement setup}
 \label{fig:impmeasurement}
 \end{figure}
@@ -216,3 +216,21 @@ This is the method which we mentioned in the open or short circuit test. This is
 \end{figure}
 
 In this chapter, we have discussed the characteristics of a lossy line and that of a moderately lossy line. We have also studied how to make use of Smith chart for this moderately lossy transmission line and the use of a practical method that brought in $\delta$ change for $\frac{\lambda}{2}$ movement in length when drawing the approximation for the reflection coefficient on the gamma plane. Lastly, we saw a practical method for estimating the characteristics impedance and complex propagation constant of a transmission line.
+
+\section*{Exercises}
+\begin{ExerciseList}
+\Exercise[label={ex131}]
+A lossy transmission line has a characteristic impedance of $50\varOmega$ and a propagation constant of $0.02 + j0.1$. Find the wavelength, velocity of propagation and the loss in dB/m.
+\Answer[ref={ex131}]
+% \begin{align*}
+% \alpha &= 0.02 m^{-1}\\
+% \beta &= 0.1 m^{-1}\\
+% Z_0 &= 50\varOmega\\
+% \gamma &= \alpha + j\beta\\
+% \lambda &= \frac{2\pi}{\beta} = \frac{2\pi}{0.1} = 20\pi m\\
+% v &= \lambda f = 20\pi f\\
+% \text{Loss} &= 20\log_{10}e^{-2\alpha l} = 20\log_{10}e^{-2\times 0.02\times l} = 20\log_{10}e^{-0.04l}\\
+% &= -0.086l dB/m
+% \end{align*}
+(a) The wavelength is $20\pi$m, (b) the velocity of propagation is $20\pi f$ and (c) the loss is $-0.086l$dB/m.
+\end{ExerciseList}
