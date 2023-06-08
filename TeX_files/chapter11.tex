@@ -121,9 +121,9 @@ The quality factor (Q factor) can be computed from the frequency response of a s
 \label{fig:fig2}
 \end{figure}
 
-The voltage response is shown in figure~\ref{fig:fig2}. It doesn't matter if we use a series or parallel resonance circuit. At resonance frequency $ f_{o} $, we get the maximum response, below and beyond that frequency, the amplitude drops. The 3dB frequency is where the amplitude reduces to $ \frac{1}{\sqrt{2}} $ of its maximum value. In this case, $ \Delta f=3\text{dB bandwidth} =f_{2}-f_{1} $, so the quality factor is given as equation~\eqref{eqn:qualityfac}
+The voltage response is shown in figure~\ref{fig:fig2}. It doesn't matter if we use a series or parallel resonance circuit. At resonance frequency $ f_0 $, we get the maximum response, below and beyond that frequency, the amplitude drops. The 3dB frequency is where the amplitude reduces to $ \frac{1}{\sqrt{2}} $ of its maximum value. In this case, $ \Delta f=3\text{dB bandwidth} =f_{2}-f_{1} $, so the quality factor is given as equation~\eqref{eqn:qualityfac}
 \begin{equation}
-Q=\frac{f_{o}}{\Delta f}=\frac{f_{o}}{f_{2}-f_{1}}
+Q=\frac{f_0}{\Delta f}=\frac{f_0}{f_{2}-f_{1}}
 \label{eqn:qualityfac}
 \end{equation} 
 
@@ -132,17 +132,17 @@ Alternatively, we can take a section of the transmission line, find the voltage 
 \text{Quality factor},Q 
 =2\pi\left(\frac{\text{Energy stored in the circuit}}{\text{Energy lost per cycle}}\right) 
 \end{dmath*} 
-If the resonant frequency is $ f_{o} $, the energy lost per cycle is $ f_{o} $ cycles per second. Since in 1 seconds, we have $ f_{o} $ number of cycles;
+If the resonant frequency is $ f_0 $, the energy lost per cycle is $ f_0 $ cycles per second. Since in 1 seconds, we have $ f_0 $ number of cycles;
 \begin{dmath*}
-\text{Quality factor}, Q = 2\pi f_{o}\left(\frac{\text{Energy stored in the circuit}}{\text{Energy lost per second}}\right)
+\text{Quality factor}, Q = 2\pi f_0\left(\frac{\text{Energy stored in the circuit}}{\text{Energy lost per second}}\right)
 \end{dmath*}
 The energy lost per second = Power loss in the circuit 
 \begin{dmath*}
-\text{Quality factor}, Q=2 \pi f_{o}\left(\frac{\text{Energy stored in the circuit}}{\text{Power loss in the circuit}}\right)
+\text{Quality factor}, Q=2 \pi f_0\left(\frac{\text{Energy stored in the circuit}}{\text{Power loss in the circuit}}\right)
 \end{dmath*}
 So to calculate the quality factor, we calculate the energy stored in a section of the transmission line and the power loss in the transmission line. Then we can easily find out the value of the quality factor for that section of the transmission line.
 
-let us consider a section of a short-circuited transmission line of length, $ l=\frac{\lambda}{4} $. Since the length depends on frequency, let us say frequency = $ f_{o} $ when $ l=\frac{\lambda_{o}}{4}$ and carry out our analysis. Hence, the resonant frequency of a circuit is $ f_{o} =\frac{v}{\lambda_{o}}$ (where $v$ = velocity of the wave). We now find voltage and current expression on the transmission line with the load end short-circuited. With the load end short-circuited, $Z_{L}= 0$, the reflection coefficient at the load point is -1 due to total reflection.
+let us consider a section of a short-circuited transmission line of length, $ l=\frac{\lambda}{4} $. Since the length depends on frequency, let us say frequency = $ f_0 $ when $ l=\frac{\lambda_{0}}{4}$ and carry out our analysis. Hence, the resonant frequency of a circuit is $ f_0 =\frac{v}{\lambda_{0}}$ (where $v$ = velocity of the wave). We now find voltage and current expression on the transmission line with the load end short-circuited. With the load end short-circuited, $Z_{L}= 0$, the reflection coefficient at the load point is -1 due to total reflection.
 
 So,
 \[\Gamma_{L} = \frac{Z_{L} - Z_0}{Z_{L} + Z_0} = \frac{0 - Z_0}{0 + Z_0} = -1\]
@@ -186,28 +186,28 @@ U_{\text{inductor}} = \frac{1}{2}L\Delta lI^{2}
 \end{align*}
 Hence, the total energy stored in a transmission line can be written as:
 \begin{dmath*}
-U = \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V(l)|^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}|I(l)|^{2}dl\quad\text{from equations~\eqref{eqn:voltagedistro} and~\eqref{eqn:currentdistro}}
-= \frac{1}{2}C\int_{0}^{\frac{\lambda_{o}}{4}}|V_0\sin \beta l |^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{o}}{4}}\left|\frac{V_0}{Z_0}\cos \beta l \right|^{2}dl
-= \frac{1}{2}CV_0^{2}\int_{0}^{\frac{\lambda_{o}}{4}}(\sin^{2} \beta l) dl + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}}( \cos^{2} \beta l) dl
+U = \frac{1}{2}C\int_{0}^{\frac{\lambda_{0}}{4}}|V(l)|^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{0}}{4}}|I(l)|^{2}dl\quad\text{from equations~\eqref{eqn:voltagedistro} and~\eqref{eqn:currentdistro}}
+= \frac{1}{2}C\int_{0}^{\frac{\lambda_{0}}{4}}|V_0\sin \beta l |^{2}dl + \frac{1}{2}L\int_{0}^{\frac{\lambda_{0}}{4}}\left|\frac{V_0}{Z_0}\cos \beta l \right|^{2}dl
+= \frac{1}{2}CV_0^{2}\int_{0}^{\frac{\lambda_{0}}{4}}(\sin^{2} \beta l) dl + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{0}}{4}}( \cos^{2} \beta l) dl
 \end{dmath*}
 Recall from trigonometry   
 \[\sin^{2} \beta l = \frac{1 - \cos2\beta l}{2},\quad \cos^{2} \beta l = \frac{1 + \cos2\beta l}{2}\]
 {\small \begin{dmath}
-U = \frac{1}{2}CV_0^{2}\int_{0}^{\frac{\lambda_{o}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{o}}{4}} \left(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl  = \frac{1}{2}CV_0^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{o}}{4}} = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{o}})\frac{\lambda_{o}}{4} }{4 \beta}\right]= \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8} - \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{\lambda_{o}}{8} + \frac{\sin \pi}{4 \beta}\right] = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right]
+U = \frac{1}{2}CV_0^{2}\int_{0}^{\frac{\lambda_{0}}{4}}\left(\frac{1}{2} - \frac{\cos 2\beta l}{2}\right) dl + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\int_{0}^{\frac{\lambda_{0}}{4}} \left(\frac{1}{2} + \frac{\cos 2\beta l}{2}\right) dl  = \frac{1}{2}CV_0^{2}\left[\frac{l}{2} - \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{0}}{4}} + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{l}{2} + \frac{\sin 2\beta l}{4 \beta}\right]_{0}^{\frac{\lambda_{0}}{4}} = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{0}}{8} - \sin \frac{2(\frac{2\pi}{\lambda_{0}})\frac{\lambda_{0}}{4} }{4 \beta}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{\lambda_{0}}{8} + \frac{\sin 2(\frac{2\pi}{\lambda_{0}})\frac{\lambda_{0}}{4} }{4 \beta}\right]= \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{0}}{8} - \frac{\sin \pi}{4 \beta}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[\frac{\lambda_{0}}{8} + \frac{\sin \pi}{4 \beta}\right] = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{0}}{8}\right] + \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[ \frac{\lambda_{0}}{8} \right]
 \end{dmath}}
-Where $\frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right] $ is the energy stored in line capacitance and $ \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[ \frac{\lambda_{o}}{8} \right] $ is the energy stored in line inductance.
+Where $\frac{1}{2}CV_0^{2}\left[\frac{\lambda_{0}}{8}\right] $ is the energy stored in line capacitance and $ \frac{1}{2}L\frac{V_0^{2}}{Z_0^{2}}\left[ \frac{\lambda_{0}}{8} \right] $ is the energy stored in line inductance.
 
 We see that the two quantities are equal since
 \begin{equation*}
 Z_0 = \sqrt{\frac{L}{C}}\Longrightarrow CZ_0^{2} = L,\quad C = \frac{L}{Z_0^{2}}
 \end{equation*}
 \begin{dmath}
-U = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right] +\frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{8}\right]
-= \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{o}}{4}\right]
+U = \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{0}}{8}\right] +\frac{1}{2}CV_0^{2}\left[\frac{\lambda_{0}}{8}\right]
+= \frac{1}{2}CV_0^{2}\left[\frac{\lambda_{0}}{4}\right]
 \label{eqn:totalenergy}
 \end{dmath}
 
-Equation~\eqref{eqn:totalenergy} is the total energy in the short-circuited transmission line of length $l = \frac{\lambda_o}{4}$. To calculate the quality factor, we also need to calculate the power loss in the transmission line. If we take the section of a transmission line $\frac{\lambda_{o}}{4}$ shown in figure~\ref{fig:fig4}.
+Equation~\eqref{eqn:totalenergy} is the total energy in the short-circuited transmission line of length $l = \frac{\lambda_o}{4}$. To calculate the quality factor, we also need to calculate the power loss in the transmission line. If we take the section of a transmission line $\frac{\lambda_{0}}{4}$ shown in figure~\ref{fig:fig4}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig4}
@@ -223,16 +223,16 @@ And the power loss is
 \begin{dmath}
 P_{loss} = \frac{V_0^{2}}{Z_{SC}}\quad V_0\text{ is the supplied voltage}
 = \frac{V_0^{2}}{\frac{Z_0}{\alpha l}}
-= \frac{\alpha l\times V_o^2}{Z_0}
-= \frac{V_0^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}
+= \frac{\alpha l\times V_0^2}{Z_0}
+= \frac{V_0^{2}}{Z_0}\times\alpha \times\frac{\lambda_{0}}{4}
 \label{eqn:powerloss}
 \end{dmath}
 Then, the quality factor, Q from equation~\eqref{eqn:qualityfac} is given as follows by substituting equations~\eqref{eqn:totalenergy} and~\eqref{eqn:powerloss}.
 \begin{dmath*}
-Q = 2 \pi f_{o}\left(\frac{\frac{1}{2}\times CV_0^{2}\times\frac{\lambda_{o}}{4}}{\frac{V_0^{2}}{Z_0}\times\alpha \times\frac{\lambda_{o}}{4}}\right)
-= 2 \pi f_{o}\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_0}}\right)
-= \frac{2 \pi f_{o} Z_0C}{2\alpha}\quad\text{But, }Z_0\text{ = }\sqrt{\frac{L}{C}}\Rightarrow Z_0C\text{ = }\sqrt{LC}, 2\pi f_{o}\text{ = }\omega_{o}
-= \frac{\omega_{o}\sqrt{LC}}{2 \alpha}\quad\omega_{o}\sqrt{LC}\text{ = }\beta\text{, phase constant}
+Q = 2 \pi f_0\left(\frac{\frac{1}{2}\times CV_0^{2}\times\frac{\lambda_{0}}{4}}{\frac{V_0^{2}}{Z_0}\times\alpha \times\frac{\lambda_{0}}{4}}\right)
+= 2 \pi f_0\left(\frac{\frac{1}{2}C}{\frac{\alpha}{Z_0}}\right)
+= \frac{2 \pi f_0 Z_0C}{2\alpha}\quad\text{But, }Z_0\text{ = }\sqrt{\frac{L}{C}}\Rightarrow Z_0C\text{ = }\sqrt{LC}, 2\pi f_0\text{ = }\omega_{0}
+= \frac{\omega_{0}\sqrt{LC}}{2 \alpha}\quad\omega_{0}\sqrt{LC}\text{ = }\beta\text{, phase constant}
 = \frac{\beta}{2 \alpha}
 \end{dmath*}
 \begin{equation}
