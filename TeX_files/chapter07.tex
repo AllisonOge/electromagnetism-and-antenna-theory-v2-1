@@ -26,19 +26,21 @@ It is very important to understand that the graphical approach does not give the
 \item Location of voltage maximum etc.
 \end{enumerate}
 
-In this chapter we will simply develop a basic framework for analyzing the transmission line by graphical approach.
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\linewidth]{./graphics/mjhdj}
-\caption{Absolute impedance on the complex $Z$ plane}
-\label{fig:mjhdj}
-\end{figure}
+In this section, we will simply develop a basic framework for analyzing the transmission line by graphical approach.
 
 \subsection{Plane Transformation}
 We have established that impedances possess a real part and a complex part and this can be written as;
 \begin{equation*}
 Z= R+jX
 \end{equation*}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{./graphics/Z_plane1}
+	\caption{Absolute impedance on the complex $Z$ plane}
+	\label{fig:mjhdj}
+\end{figure}
+
 $R$ represents the real part called resistance and $jX$ represents the imaginary part called reactance. Just like in the analytical approach, our analysis using the graphical approach will be done with the normalized impedance rather than the absolute impedance. It therefore means that, given any impedance, it must be normalized with respect to the characteristic impedance ($Z_0$) such that
 \begin{equation*}
 \bar{Z}=\frac{Z_L}{Z_0} \quad \text{(normalised)}
@@ -49,7 +51,7 @@ $Z_L$ is the absolute impedance. So our representation of the normalized impedan
 \end{equation*}
 Let us represent this expression graphically on the complex z plane as shown in figure~\ref{fig:transline2}.
 \begin{figure}[h]
-\center\includegraphics[width=0.5\linewidth]{./graphics/TransLine2 RETOUCHED}
+\center\includegraphics[width=0.8\linewidth]{./graphics/Zplane}
 \caption{Normalized impedance on the complex Z plane}
 \label{fig:transline2}
 \end{figure}
@@ -78,8 +80,8 @@ With this transformation relationship, if the normalized impedance is known, we 
 From previous chapters, it was established that the reflection coefficient for all passive loads is always less than or equal to one ($\Gamma\leq 1)$. At an open or short circuit, reflection co-efficient $\Gamma = 1$, for any other impedance $\Gamma < 1$. So by plotting the reflection co-efficient ($\Gamma$) we have the right half Z plane mapping into a unit circle in the gamma plane as shown in figure~\ref{fig:oiuhgvcx}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{./graphics/oiuhgvcx}
-\caption{Z Plane and Complex $\gamma$ plane}
+\includegraphics[width=1.05\linewidth]{./graphics/plane_transform}
+\caption{Z Plane and Complex $\Gamma$ plane}
 \label{fig:oiuhgvcx}
 \end{figure}
 
@@ -133,11 +135,23 @@ The general equation of a circle is ${(x - a)}^2 + {(y - b)}^2 = r^2$ where $(a,
 }.
 
 In a similar way, let's consider the imaginary part.
-\begin{align*}
-x &= \frac{2v}{{(1 - u)}^2 + v^2}\\
-x(1 - 2u + u^2 + v^2) &= 2v\\
-v^2x - 2v + u^2x - 2ux + x &= 0
-\end{align*}
+
+\begin{equation*}
+x = \frac{2v}{{(1 - u)}^2 + v^2}
+\end{equation*}
+\begin{equation*}
+x(1 - 2u + u^2 + v^2) = 2v
+\end{equation*}
+\begin{equation*}
+v^2x - 2v + u^2x - 2ux + x = 0
+\end{equation*}
+
+%%\begin{align*}
+%%x = \frac{2v}{{(1 - u)}^2 + v^2}\\
+%%x(1 - 2u + u^2 + v^2) = 2v\\
+%%v^2x - 2v + u^2x - 2ux + x = 0
+%%\end{align*}
+
 We divide through by $x$ and factorize
 \begin{align*}
 v^2 - \frac{2v}{x} +u^2 - 2u + 1 =& 0\\
@@ -148,7 +162,7 @@ v^2 - \frac{2v}{x} +u^2 - 2u + 1 =& 0\\
 \end{equation}
 Equation~\eqref{eqn:tranformedreactance} represents the equation of a circle in the $uv$ plane centred at $\left(1,\frac{1}{x}\right)$ with radius $\left(\frac{1}{x}\right)$.
 
-From equations~\eqref{eqn:tranformedresistance} and~\eqref{eqn:tranformedreactance}, it can be deduced that for any value of $r$ and $x$, we get a circle on the gamma plane. The circle that corresponds to $r$ is called the \emph{Circle of Constant Resistance}\index{circle of constant resistance} while that corresponds to $x$ is called the \emph{Circle of Constant Reactance}\index{circle of constant reactance}.
+From equations~\eqref{eqn:tranformedresistance} and~\eqref{eqn:tranformedreactance}, it can be deduced that for any value of $r$ and $x$, we get a circle on the gamma plane. The circle that corresponds to $r$ is called the \emph{Circle of Constant Resistance}\index{circle of constant resistance} while the circle that corresponds to $x$ is called the \emph{Circle of Constant Reactance}\index{circle of constant reactance}.
 
 All points on the circle of constant resistance have the same resistance value in the $Z$ plane and all points on the circle of constant reactance will have the same reactance in the $Z$ plane.
 
@@ -156,8 +170,8 @@ All points on the circle of constant resistance have the same resistance value i
 In order to visualize the plot of the circles of constant resistance we need to transform the limits of the values of $r$, the real part of normalized impedance $\bar{Z}$. The limits of $r$ are $[0, \infty]$ both inclusive and thus the corresponding values of the radius of these circles is $[1, 0]$. Plotting the circle for different values of $r$, we get the plot in figure~\ref{fig:ouytre}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/circle_of_constant_resistance_temp.png}
-\caption{Plot of the Circles of Constant Resistance at the limits of the values of $r$ and at $r = 1$}
+\includegraphics[width=1\linewidth]{./graphics/fig2.35}
+\caption{Plot of the Circles of Constant Resistance at the limits of the values of $r = 0$ and at $r = \infty$}
 \label{fig:ouytre}
 \end{figure}
 
@@ -166,7 +180,7 @@ Let's plot for various value of $r$, by increasing its value from 0 to $\infty$.
 The complete plot of the circles of constant resistance for the values of increasing $r$ is shown in figure~\ref{fig:rghmgfcx}. It can be said that the centre shifts towards the right and the radius keeps reducing towards zero. At $r = \infty$, the centre is (1,0) and the radius is zero, which is denoted as a dot on the real axis.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/rghmgfcx}
+\includegraphics[width=0.9\linewidth]{./graphics/const_resistance_circles}
 \caption{Plot of the circles of constant resistance for increasing values of $r$}
 \label{fig:rghmgfcx}
 \end{figure}
@@ -181,21 +195,23 @@ At $x = \pm\infty$, the centre from equation~\eqref{eqn:tranformedreactance} is 
 Figure~\ref{fig:uytrdbn} shows the plot of the circles of constant reactance.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/circle_of_constant_reactance_temp.png}
+\includegraphics[width=1\linewidth]{./graphics/plot_of_const_reactance_circles}
 \caption{Plot of the circles of constant reactance at the limits $x = \pm\infty$ and $x = 0$ as well as inbetween.}
 \label{fig:uytrdbn}
 \end{figure}
 
-As seen, the centre always lies on a line $u = 1$ and as $x$ increases in the positive domain, the centre shifts down along $u = 1$ line and the radius decreases. Similarly, as $x$ increases in the negative domain, the centre shifts up along $u = 1$ line and the raduis decreases. The radius of the circles of constant reactance at $x = 0$ is shown with a line through the origin whose centre is at $\pm\infty$. Also, we can observe that the circles of constant reactance also pass through the coordinate $(u,v) = (1,0)$. This signifies the uniqueness of the point. The superimposed plots of these circles are shown in figures~\ref{fig:ijnbvcxw} and~\ref{fig:sddfghj}.
+As seen, the centre always lies on a line $u = 1$ and as $x$ increases in the positive domain, the centre shifts down along $u = 1$ line and the radius decreases. Similarly, as $x$ increases in the negative domain, the centre shifts up along $u = 1$ line and the raduis decreases. The radius of the circles of constant reactance at $x = 0$ is shown with a line through the origin whose centre is at $\pm\infty$. Also, we can observe that the circles of constant reactance also pass through the coordinate $(u,v) = (1,0)$. This signifies the uniqueness of the point. 
+
+The superimposed plots of the constant resistance and constant reactance circles are  thus shown in figures~\ref{fig:ijnbvcxw} and~\ref{fig:sddfghj}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/ijnbvcxw}
+\includegraphics[width=1.1\linewidth]{./graphics/const_resistance_reactance_circles}
 \caption{Plot of the two set of circles superimposed}
 \label{fig:ijnbvcxw}
 \end{figure}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/sddfghj}
+\includegraphics[width=0.8\linewidth]{./graphics/relevant_region_SC}
 \caption{Masking of the superimposed set to relevant region}
 \label{fig:sddfghj}
 \end{figure}
