@@ -33,7 +33,7 @@ The propagation constant for the case of the moderately lossy line $\gamma$ is g
 \gamma = \alpha +j\beta
 \label{eqn:propconstmodloss}
 \end{align}
-Where $\alpha$ is comparable to $\beta$ since $R$ and $G$ are comparable to $\omega L$ and $\omega C$. From the voltage equation we derived in equation~\eqref{eqn:volatagefromload} written as follows:
+Where $\alpha$ is comparable to $\beta$ since $R$ and $G$ are comparable to $\omega L$ and $\omega C$ respectively. From the voltage equation we derived in equation~\eqref{eqn:voltagefromload} written as follows:
 \begin{dmath*}
 V = V^+e^{\gamma l} + V^-e^{
 -\gamma l}\quad\text{substituting }\gamma\text{ = }\alpha + j\beta
@@ -44,7 +44,7 @@ Such a traveling wave exponentially decays with the attenuation constant $\alpha
 Similarly, $V^-e^{-\alpha l}e^{-j\beta l}$ exponentially decays as we move towards the generator or exponentially grows towards the load. Depending upon the value of the ratio of $V^-$ and $V^+$ which is the reflection coefficient at the load point, $\Gamma_L$ the two traveling waves propagating in opposite directions decay or grow exponentially as we move towards the generator. We recall from the lossless case that the amplitude of $\Gamma_L$ was same at every point on the transmission line, however that is not true for the moderately lossy line because the amplitude of the reflected to incident wave varies with $\alpha l$, as $\Gamma$ is now a function of location on the transmission line.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"./graphics/lossy_standing_wave_temp"}
+\includegraphics[width=1\linewidth]{"./graphics/moderately_lossy_TX_plot"}
 \caption{A plot of the attenuation of the forward and backward traveling waves of the moderately lossy line from the load point.}
 \end{figure}
 \begin{figure}[h]
@@ -76,7 +76,7 @@ The expression $|\Gamma_L|e^{j(\theta_L-2\beta l)}$ we have seen earlier in the 
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{"./graphics/lossy_gamma_temp"}
-\caption{(a) A plot of the reflection coefficient on the $\gamma$-plane. (b)Variation of the reflection coefficient along the transmission line towards the generator and the step value of $l = \frac{\lambda}{2}$ for $\Gamma(l)$ to approximate the spiral to a series of concentric circles.}
+\caption{(a) A plot of the reflection coefficient on the $\Gamma$-plane. (b)Variation of the reflection coefficient along the transmission line towards the generator and the step value of $l = \frac{\lambda}{2}$ for $\Gamma(l)$ to approximate the spiral to a series of concentric circles.}
 \label{fig:lossygamma}
 \end{figure}
 
@@ -89,7 +89,7 @@ The process of analyzing moderately lossy line using Smith chart is hard without
 A plot of these circles is shown in figure~\ref{fig:vswrlossy}, however, if we want to have a very accurate analysis then ideally we have to really draw this spiral on the Smith chart.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"./graphics/vswr_lossy_temp"}
+\includegraphics[width=1\linewidth]{"./graphics/concentricVSWRcircles"}
 \caption{Series of concentric circles of reflection coefficient $\Gamma{(l)}$ for $l = \frac{\lambda}{2},\lambda, \frac{3\lambda}{2}$ after we apply the approximation.}
 \label{fig:vswrlossy}
 \end{figure}

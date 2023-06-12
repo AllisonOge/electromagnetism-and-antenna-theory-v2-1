@@ -6,7 +6,7 @@
 \caption{Overhead transmission line}
 \end{figure}
 
-The concept of electromagnetic waves has fascinated man for so many years that man has asked so many questions varying from \emph{\textquotedblleft Why do stars twinkle?\textquotedblright}, to \emph{\textquotedblleft Why do magnetic needles deflect?\textquotedblright}, and \emph{\textquotedblleft Why does light travel from the sun when there is no medium between?\textquotedblright}
+The concept of electromagnetic waves has fascinated man for so many years that man has asked so many questions varying from \emph{\textquotedblleft Why do stars twinkle?\textquotedblright}, to \emph{\textquotedblleft Why do magnetic needles deflect?\textquotedblright}, and \emph{\textquotedblleft how does light travel from the sun when there is no medium between?\textquotedblright}
 
 In modern-day, questions vary from \emph{\textquotedblleft how do we have tv reception?\textquotedblright} to \emph{\textquotedblleft how do we have radio stations operating\textquotedblright} to \emph{\textquotedblleft how does a mobile phone work?\textquotedblright} to \emph{\textquotedblleft why are certain things heated when they are kept inside a microwave?\textquotedblright}. All these phenomena revolve around the concept of electromagnetic waves.\footnote{The concept of electromagnetic waves is virtually applied in almost all advanced technology.}
 
@@ -49,7 +49,7 @@ see \autoref{lec:lec18} for a detailed explanation of Maxwell's equations
 \section{Application of electromagnetic waves}
 Depending on the frequency of operation, there are different media used to transmit electromagnetic waves. When the frequency is between 30MHz to 300MHz, the coaxial cable\index{coaxial cable} is used for transmission of the wave, from 30GHz to 300GHz the waveguide\index{waveguide} structure is used and as the frequency goes higher, the media used is the optical fibre\index{optic fibre}.
 
-A question that comes to mind in electromagnetic wave transmission is \emph{\textquotedblleft Why do we have to increase frequency?\textquotedblright} \hspace{0.03in} To answer that we would have to think of the major application of high frequency which is in communication. Then for transmitting more information we require large bandwidth. Since the frequency of operation is proportional to the bandwidth, by increasing the frequency of operation we increase the bandwidth and as such one can transmit more information on a given channel.
+A question that comes to mind in electromagnetic wave transmission is \emph{\textquotedblleft Why do we have to increase frequency?\textquotedblright} \hspace{0.03in} To answer that we would have to think of the major application of high frequency which is in communication. Then for transmitting more information, we require large bandwidth. Since the frequency of operation is proportional to the bandwidth, by increasing the frequency of operation we increase the bandwidth and as such one can transmit more information on a given channel.
 
 \subsection{Transmission Line}
 \begin{figure}[h]
@@ -59,7 +59,7 @@ A question that comes to mind in electromagnetic wave transmission is \emph{\tex
 \end{figure}
 
 In transmission lines, our main concern is how voltage and current would flow in a two-conductor system called a \textit{transmission line} and how losses occur during transmission \footnote{
-When the frequency of a wave increases its wavelength decreases and when the wavelength of the wave is comparable to the length of the transmitting media (length of the wire) the losses along the wire becomes too significant to ignore.
+When the frequency of a wave increases its wavelength decreases and when the wavelength of the wave is comparable to the length of the transmitting media (length of the wire) the losses along the wire become too significant to ignore.
 }.
 
 There are different types of transmission media and the application of this media is based on the frequency range of the signal.
@@ -70,12 +70,12 @@ There are different types of transmission media and the application of this medi
 \end{figure} 
 
 \subsubsection{Twisted pairs}
-They are point to point transmission lines\footnote{
+They are point-to-point transmission lines\footnote{
 Connections between two nodes or endpoints
 } (it is a balanced transmission line having voltages $v^{+}$ and $v^{-}$ connected at its terminals). An example of the twisted pairs is the telephone wires; it is characterized by low data rate, high Electromagnetic Interference (EMI)\index{electromagnetic interference} and is lossy at radio frequencies.
 
 \subsubsection{Coaxial cable}
-For the coaxial cable we have an example in the LAN (Local Area Network) cable; it characterizes data rates of up to a few Mbps, low EMI and moderate loss.
+For the coaxial cable, we have an example in the LAN (Local Area Network) cable; it characterizes data rates of up to a few Mbps, low EMI and moderate loss.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./graphics/coaxialcable}
@@ -134,7 +134,7 @@ A satellite is an object that is placed above the earth's surface. There is a sa
 \caption{Space satellite}
 \end{figure}
 
-The whole propagation of the electromagnetic wave and proper placing of radiation in the direction towards the earth is achieved using the principles of electromagnetic waves. Satellite communication has a large time delay because of the turnaround trip time taken from the earth station to the satellite and from the satellite back to the earth station.
+The whole propagation of the electromagnetic wave and proper placing of radiation in the direction towards the earth is achieved using the principles of electromagnetic waves. Satellite communication has a large time delay because of the turnaround trip time taken from the Earth station to the satellite and from the satellite back to the Earth station.
 
 \subsection{Fiber optics communication}
 \begin{figure}[h]
@@ -177,14 +177,14 @@ When there is constructive interference, a strong signal strength is observed an
 In radar altimetry, electromagnetic waves are used for finding the distance of an object from its position in space to the antenna. The antenna is excited with an electromagnetic pulse and the dish beams parallel waves downwards. This beam is reflected from the earth's surface/target object back to the dish. The dish converges the received signal back to the antenna and processes it in the detector (see figure~\ref{fig:new}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/New}
+\includegraphics[width=1\linewidth]{./graphics/Azimuth_resolution}
 \caption{Illustration of Azimuth resolution}
 \label{fig:new}
 \end{figure}
 
 The \textit{Azimuth (or bearing) resolution}\index{azimuth resolution} of the radar is given as $\Delta \theta = \beta R = \frac{\lambda R}{D}$\footnote{The implication of this equation lies in the size of the antenna. To get a high resolution the size of the antenna would be large}, where $\beta$ is the beam width of the antenna given as $\dfrac{\lambda}{D}$, $\lambda$ is the wavelength of the beam, $R$ is the range of distance covered by the beam and $D$ is the aperture of the antenna. It is the measure of the ability of an imaging radar to separate two closely spaced scatterers in the direction parallel to the motion of the beam (resolution at the same range but different bearings). Similarly, the measure of the ability of a radar to correctly resolve the position of two closely spaced objects in the range is called the \textit{range resolution}\index{range resolution} which makes up the second category of resolution in radar systems. It is given as $\geq \dfrac{cT}{2}$ where $c$ is the speed of light, and $T$ is the transmission pulse width.
 
-With radar systems the distance travelled by the beam can be estimated and also if the object is moving in the radial direction, there would be a frequency change between the signal transmitted by the antenna and the signal reflected (Doppler shift) and from this result the velocity of the object can be estimated. The radar essentially uses the electromagnetic pulse to find the distance and the velocity of an object.
+With radar systems, the distance travelled by the beam can be estimated and also if the object is moving in the radial direction, there would be a frequency change between the signal transmitted by the antenna and the signal reflected (Doppler shift) and from this result the velocity of the object can be estimated. The radar essentially uses the electromagnetic pulse to find the distance and the velocity of an object.
 
 \subsubsection{The monostatic radar equation}
 \begin{figure}[h]
@@ -232,7 +232,7 @@ $\theta$ is the incidence angle
 \label{fig:slar2}
 \end{figure}
 
-The equation shows, that increasing altitude decreases the azimuthal resolution of SLAR. A very long antenna (i.e., large D)\footnote{For this book, $D$ is the size of the antenna. hence the statement \textquotedblleft large D\textquotedblright, since the length ($L$) of an object is a function of the size ($D$)} would be required to achieve a good resolution from the aircraft. Synthetic Aperture Radar (SAR) is used to acquire higher resolution.
+The equation shows, that increasing altitude decreases the azimuthal resolution of SLAR. A very long antenna (i.e., large D)\footnote{For this book, $D$ is the size of the antenna. hence the statement \textquotedblleft large D\textquotedblright\; since the length ($L$) of an object is a function of the size ($D$)} would be required to achieve a good resolution from the aircraft. Synthetic Aperture Radar (SAR) is used to acquire higher resolution.
 
 \subsubsection{To measure the cross-track resolution}
 At all ranges, the radar antenna measures the radial line of sight distance between the radar and each target on the surface. This is the slant range distance. The ground range distance is the true horizontal distance along the ground corresponding to each point measured in the slant range. The cross-track resolution, $R_{r}$, is defined as:  
@@ -264,7 +264,7 @@ To improve the resolution in remote sensing, a technique called the \textit{synt
 To mitigate this, there is a technique where the antenna is small but the vehicle moves and as the vehicle moves, the reflection information is stored after all the refection information is collected from different locations, then data processing can be done to get an angular resolution which will correspond to the total distance travelled by the vehicle. This technique is known as the \textit{synthetic aperture radar}\index{synthetic aperture radar} (see figure~\ref{fig:sar2}).
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.35]{./graphics/sar3}
+\includegraphics[scale=0.35]{./graphics/sar2}
 \caption{Diagram illustrating the SAR}
 \label{fig:sar2}
 \end{figure}
@@ -294,17 +294,17 @@ The frequency of the signals is converted, detected and processed. With a radio 
 $\frac{\lambda}{D}$ comes into the picture and to get a very fine resolution of the image of the sky, a very large telescope would be needed.
 
 
-Producing a very large telescope is difficult so we use the synthetic aperture technique as it was used on radars. In this method we use a set-up of antennas, for example, if the dish in each array is of the order of $ D = 25m $ and the total spread of the antennas of the order 21km. Therefore, we get an effective aperture through each antenna that has an aperture of only 25m.
+Producing a very large telescope is difficult so we use the synthetic aperture technique as it was used on radars. In this method, we use a set-up of antennas, for example, if the dish in each array is of the order of $ D = 25m $ and the total spread of the antennas of the order 21km. Therefore, we get an effective aperture through each antenna that has an aperture of only 25m.
 
 \subsection{EMI/EMC}
 
 \textbf{EMI} is \textit{electromagnetic interference}\index{electromagnetic interference}. Firstly, let us investigate how a high-frequency device would create interfering signals and then what ways in which the interference can be reduced.
 
-For example, you may get interference on our radios, whenever somebody starts a car or a motorcycle in the vicinity, because starting a car or motorcycle involves sparking and because of that spark, you get electromagnetic interference which is picked up by the radio antenna and you get disturbance on your radios. It is essential to investigate the technique by which the interferer can be reduced or the mechanism by which the devices can be isolated. This technique is called \textit{\textbf{shielding}}.
+For example, you may get interference on our radios, whenever somebody starts a car or a motorcycle in the vicinity because starting a car or motorcycle involves sparking and because of that spark, you get electromagnetic interference which is picked up by the radio antenna and you get disturbance on your radios. It is essential to investigate the technique by which the interferer can be reduced or the mechanism by which the devices can be isolated. This technique is called \textit{\textbf{shielding}}.
 
 \textbf{EMC} is electromagnetic compatibility. Today, whenever we design electromagnetic gadgets or electrical devices it is mandatory to make them electromagnetically compliant so it does not create additional electromagnetic interference which will affect other systems.
 
-The figure below describes the whole concept of EMC, illustrating both causes(natural or man-made) and solution(shielding and other techniques).
+The figure below describes the whole concept of EMC, illustrating both causes(natural or man-made) and solutions (shielding and other techniques).
 
 \begin{figure}[h]
 \centering
@@ -317,7 +317,7 @@ The figure below describes the whole concept of EMC, illustrating both causes(na
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex11}]
-What is the difference between adaptive arrays and switched beam antenna?
+What is the difference between adaptive arrays and switched beam antennae?
 
 \Exercise[label={ex12}]
 What is Swath width in SLAR?
