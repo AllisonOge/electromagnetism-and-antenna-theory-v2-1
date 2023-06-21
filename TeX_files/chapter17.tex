@@ -8,26 +8,26 @@ To get a feel for the dot product, essentially if we consider a vector field lik
 Similarly for the curl of the vector $\overline{F}$, as the name suggests, it is either something curling or rotation is involved here. If we consider a vector field and keep an object in this field such as fluid flow in the surface of a river, then that keeps the object turning on the surface of the river because of the differential flow of the layers of the water, they sometimes have a rotational effect on the object. That rotational effect is what is captured by the curl operator. So if we define the net rotation created on an object per unit area of the object, then that quantity is essentially the curl of that vector field.
 
 \begin{dmath*}
-	\text{Curl of vector} \quad \overline{F} = \nabla \times \overline{F} = 
-	\begin{Bmatrix}
-		\hat{x} & \hat{y} & \hat{z}\\
-		\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
-		F_{x} & F_{y} & F_{z}
-	\end{Bmatrix}
+\text{Curl of vector} \quad \overline{F} = \nabla \times \overline{F} = 
+\begin{Bmatrix}
+\hat{x} & \hat{y} & \hat{z}\\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+F_{x} & F_{y} & F_{z}
+\end{Bmatrix}
 \end{dmath*}
 
 \section{Divergence or Curl Producing Vector Fields}
 To add a bit of feel, let us ask what kind of field will give you divergence or curl. We can draw a vector field shown below.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig171}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig171}
 \caption{Horizontal Vector Field}
 \end{figure}
 
 Along the horizontal direction, the vectors are the same in magnitude and direction. Going down vertically across, the magnitude changes for 2 to 3 and 3 to 4. 1 to 2 and 4 to 5 remains same. A small area \textbf{A} placed at the location shown, can create some kind of shear on the object depending on the strength of the vector through the top and bottom of \textbf{A}, less \textbf{A} be at \textbf{B}. \textbf{B} will turn counterclockwise while \textbf{C} will turn clockwise as the force created by the arrow magnitude is more at the top for \textbf{C} compared to the bottom of \textbf{C} and more at the bottom of \textbf{B} compared to the top. Hence rotation is experienced in that region. If we however consider a field shown below. That is the field magnitude is changing in the \textbf{x} direction.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig172}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig172}
 \caption{Changing Field Magnitude}
 \end{figure}
 
@@ -62,17 +62,17 @@ $\nabla^2 f= \nabla .\cdot (\nabla f) =$ Divergence of gradient of the scalar fu
 %\centering
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{./graphics/fig173}
+%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig173}
 %\label{fig:fig173}
 %\end{minipage}%
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{./graphics/fig173b}
+%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig173b}
 %\label{fig:fig173b}
 %\end{minipage}
 %\begin{minipage}{.5\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{./graphics/fig173c}
+%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig173c}
 %\label{fig:fig173c}
 %\end{minipage}%
 %\caption{line surface and volume integration}
@@ -109,7 +109,7 @@ When we do the integration along a path, it is called \textbf{Contour or Line In
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{./graphics/fig17.3}
+	\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig17.3}
 	\caption{line surface and volume integration}
 \end{figure}
 
@@ -128,7 +128,7 @@ The line integration around some path C is ${\displaystyle \int  \overline{A} \c
 \end{equation}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{./graphics/fig17.4}
+	\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/fig17.4}
 	\caption{Open and closed contour}
 \end{figure}
 
@@ -137,7 +137,7 @@ So at every location, we find out the product $\overline{A} \cdot \overline{dl}$
 We can carry out similar operation for the surface integral as having an area $A$ with an infinitesimally small area $d\overline{A}$. $d\overline{A}$ has direction perpendicular to that small area, if the vector field in this area is $\overline{A}$, we can define the surface integration as:
 \begin{figure}
 	\centering
-	\includegraphics[width=1\linewidth]{./graphics/surface_Int}
+	\includegraphics[width=1\linewidth]{\pathtopartone/graphics/surface_Int}
 	\caption{Surface Integral}
 \end{figure}
 %insert integration image here
@@ -168,7 +168,7 @@ The third is the volume integral,if we have some function which is a Scalar $f$:
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{./graphics/fig175}
+	\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/fig175}
 	\caption{volume integral of scalar f}
 	\label{fig:page-8}
 \end{figure}
@@ -195,7 +195,7 @@ It converts a closed line integral to an open surface integral or vice-versa.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{./graphics/fig17.8}
+	\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/fig17.8}
 	\caption{Stokes theorem}
 \end{figure}
  
@@ -203,17 +203,17 @@ It converts a closed line integral to an open surface integral or vice-versa.
 %\centering
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{./graphics/fig176}
+%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig176}
 %\label{fig:fig176}
 %\end{minipage}%
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{./graphics/fig176b}
+%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig176b}
 %\label{fig:fig176b}
 %\end{minipage}
 %\begin{minipage}{.5\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{./graphics/fig176c}
+%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig176c}
 %\label{fig:fig176c}
 %\end{minipage}%
 %\caption{surface integral to volume integral conversion}
@@ -226,7 +226,7 @@ Then we can have the contour $C$ for which line integral was defined for vector 
 %Let us illustrate this better with a very clear diagram. 
 \begin{figure}
 	\centering
-	\includegraphics[width=1.2\linewidth]{./graphics/contour_integral}
+	\includegraphics[width=1.2\linewidth]{\pathtopartone/graphics/contour_integral}
 	\caption{Contour Integration}
 \end{figure}
 
@@ -262,7 +262,7 @@ So in a homogenous and isotropic medium,  $\overline{D}$ is a scalar version of 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{./graphics/isotropicAniso}
+	\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/isotropicAniso}
 	\caption{Isotropic and Anisotropic Medium}
 \end{figure}
 

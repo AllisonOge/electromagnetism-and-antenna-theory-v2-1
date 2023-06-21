@@ -20,6 +20,11 @@
 \usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{breqn}
+\usepackage[abspath, parent]{currfile}
+% get absolute path to this directory
+\makeatletter
+\edef\pathtopartone{\currfileabsdir/}% Store it in \pathtopartone
+\makeatother
 
 % custom set exercises and example packages. add dependencies
 \usepackage[lastexercise, answerdelayed]{exercise}
@@ -90,42 +95,6 @@ Electromagnetism and Antenna Theory is a book developed out of dedication and pa
 % \include{./TeX_files/chapter32}
 % \include{./TeX_files/chapter33}
 % \include{./TeX_files/chapter34}
-
-\part{WAVEGUIDES AND ANTENNA THEORY}
-
-% introduction to waveguides and rectangular waveguides lectures
-
-% \include{./TeX_files/chapter35}
-% \include{./TeX_files/chapter36}
-% \include{./TeX_files/chapter37}
-% \include{./TeX_files/chapter38}
-% \include{./TeX_files/chapter39}
-% \include{./TeX_files/chapter40}
-% \include{./TeX_files/chapter41}
-% \include{./TeX_files/chapter42}
-
-% circular waveguide lectures
-
-% \include{./TeX_files/chapter43}
-% \include{./TeX_files/chapter44}
-% \include{./TeX_files/chapter45}
-
-% antenna theory lectures
-
-% \include{./TeX_files/chapter46}
-% \include{./TeX_files/chapter47}
-% \include{./TeX_files/chapter48}
-% \include{./TeX_files/chapter49}
-% \include{./TeX_files/chapter50}
-% \include{./TeX_files/chapter51}
-% \include{./TeX_files/chapter52}
-% \include{./TeX_files/chapter53}
-% \include{./TeX_files/chapter54}
-% \include{./TeX_files/chapter55}
-% \include{./TeX_files/chapter56}
-% \include{./TeX_files/chapter57}
-% \include{./TeX_files/chapter58}
-% \include{./TeX_files/chapter59}
 
 \backmatter
 % bibliography, glossary and index would go here.
