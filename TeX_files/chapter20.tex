@@ -12,21 +12,21 @@ Whenever we solve the phenomenon of electromagnetics, generally these media cons
 Let us say we have a media interface and the two sides have different material properties i.e medium 1 with permittivity $\epsilon_1$, conductivity $\sigma_1$ and permeability $\mu_1$, and medium 2 with $\epsilon_2$, $\sigma_2$ and $\mu_2$ respectively. Now we can write the different integral equations in the form of maxwell's equation across the boundary. Consider a box and the boundary shown, if we apply Gauss's law across the boundary,
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium1}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/diemedium1}
 \caption{A box in the boundary of two media.}
 \end{figure}
 
 According to Gauss's law, the total displacement coming out of the box is equal to the charges enclosed. If we make the thickness of the box shrink to zero. We will get a relationship between the displacement vector going in all directions as $d$ shrinks.  Let's say in medium 1 we have $D_{n1}$ and $D_{t1}$ as the normal and tangential components of the displacement vectors in medium 1 with respect to the surface of the box (Pillbox is the usual name). We have the figure below.
 \begin{figure}[h]
 \centering
-\includegraphics[width=.7\linewidth]{./graphics/diemedium2}
+\includegraphics[width=.7\linewidth]{\pathtopartone/graphics/diemedium2}
 \caption{Shrinking box.}
 \end{figure}
 
 Any general displacement vector in medium 1 close to the interface can be resolved into two components, the tangential $D_{t1}$ and normal components $D_{n1}$. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium3}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/diemedium3}
 \caption{Normal and tangential components of Displacement vector $\overline{D}$.}
 \end{figure}
 Similarly, for medium 2 the tangential and normal components are $D_{t2}$ and $D_{n2}$ respectively. The normal displacement coming from the box when the thickness of the box tends to zero i.e $d \longrightarrow 0$, the displacement due to $D_{t1}$ and $D_{t2}$ becomes zero as the area on top and at the bottom becomes zero. So that the displacement coming out of the box with $d \longrightarrow 0$ is as a result of $D_{n1}$ and $D_{n2}$ only, as $L$ and $B$ are not affected by the shrinking. From Gauss's law, if we take a net normal displacement from the shrinked box, that will be equal to the total charge enclosed. With $d \longrightarrow 0$, this is nothing but the charge on the surface of the sheet (i.e the box which has now being compressed to the sheet) or Surface Charge.
@@ -50,7 +50,7 @@ By using Ampere's circuit law and the Faraday's laws, we will get two more bound
 If we take a loop around the boundary
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium4}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/diemedium4}
 \caption{Boundary loop.}
 \end{figure}
 (not a box this time) and then apply Faraday's law across the loop, then find the line integral to get electromotive force emf, it must be equal to the rate of change of flux in that loop. Since we are talking about a finite magnetic flux density $\overline{B}$i.e the rate of change of flux in that loop is also a finite quantity. $\overline{E}.\overline{dl} = 0$ for $E_{n1}$ and $E_{n2}$ only. $E_{t1}$ and $E_{t2}$ will contribute when $L \longrightarrow 0$. 
@@ -81,7 +81,7 @@ Therefore, the tangential component of electric field is continuous across the b
 The same can be done for the Ampere's circuit law for the magnetic fields in medium 1 as $H_{t1}$, $H_{n1}$ and $H_{t2}$, $H_{n2}$ for medium 2 respectively. We apply Ampere's law around the loop.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium4_2}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/diemedium4_2}
 \caption{Ampere's law is applied around the loop.}
 \end{figure}
 This we do by finding the line integral of $H$ around the loop (magnetomotive force) in a clockwise direction. Even if $\frac{\partial\overline{D}}{\partial t}$ ( displacement current density) was available and perpendicular to the plane of $Ld$ outward, $\frac{\partial\overline{D}}{\partial t}. Ld$ will give current, but with finite current density and area $Ld$ going to zero,  $\frac{\partial\overline{D}}{\partial t}. Ld \rightarrow 0 $. So,
@@ -111,7 +111,7 @@ Using the four Maxwell's equations in integral form for two media interface, we 
 However, the differential form cannot be used in situations where you have media discontinuities because they require space derivatives and at discontinuity, these space derivative are undefined. In these cases, we apply the integral form. When we apply the integral form to the media interfaces, we get the boundary conditions. With $\overline{H}_1$ and $\overline{H}_2$ shown in the figure below.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium4_2_2}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/diemedium4_2_2}
 \caption{Boundary with normal and tangential components of magnetic field intensity $\overline{H}$ shown.}
 \end{figure}
 
@@ -136,7 +136,7 @@ With this we can summarize the four boundary conditions for the dielectric media
 We have a medium on both sides of a boundary.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/dielectric_dielectric}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/dielectric_dielectric}
 \caption{Dielectric - Dielectric boundary Interface.}
 \end{figure}
 
@@ -155,7 +155,7 @@ Therefore, unless we have a knowledge of surface charge $\rho_s$ or surface curr
 We would now take a dielectric to conducting media. This is what we have in transmission structures like coaxial cables, waveguides and transmission lines. We would like to find the boundary conditions to the dielectric to conducting media. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium5_2}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/diemedium5_2}
 \caption{Dielectric - Conductor Interface.}
 \end{figure}
 
@@ -182,7 +182,7 @@ So if we have a time varying electric field which is identically zero in the con
 Similarly, it is possible that when we have time varying fields, there might be current flowing across the surface of the conductor. Therefore, for an ideal conductor the field inside it is zero, but we can have surface charges and surface current. The situation is as we have it in the figure below.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1.2\linewidth]{./graphics/diemedium5_2_2}
+\includegraphics[width=1.2\linewidth]{\pathtopartone/graphics/diemedium5_2_2}
 \caption{Dielectric - Conductor Interface.}
 \end{figure}
 
@@ -211,7 +211,7 @@ Two charges $Q_A$ and $Q_B$ are separated by a distance of 10m. $Q_A = 10cos\ome
 Let P be the point at which to find $\overline{E}$. At $t = 0$, $Q_A = +10C$ and $Q_B = -10C$ and that shows the direction of the $\overline{E}$ field also by $\overline{E}_{A}$ and $\overline{E}_{B}$. Let $Q_A$ and $Q_B$ lie on the $Z$ axis as shown .
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig20.10}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig20.10}
 \caption{Diagram showing charges $Q_A$, $Q_B$ and point $P$.}
 \end{figure}
 
@@ -297,7 +297,7 @@ Find the surface charge density and the surface current density at the location 
 With infinite conductivity for $Z<0$, that is an ideal conductor, electric and magnetic field cannot exist inside it. Electric field is normal to the surface as shown in the diagram.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/diemedium7}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/diemedium7}
 \caption{Medium with electric field $\overline{E}$ and conductivity Z direction shown.}
 \end{figure}
 

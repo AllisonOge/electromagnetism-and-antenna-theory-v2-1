@@ -21,7 +21,7 @@ Transmission lines can best be defined as a medium of power transfer from one po
 \subsection{Co-axial cable}\index{coaxial cable}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.65]{./graphics/coaxial}
+\includegraphics[scale=0.65]{\pathtopartone/graphics/coaxial}
 \caption{Co-axial cable transmission line}
 \label{fig:coaxial}
 \end{figure}
@@ -31,7 +31,7 @@ Figure~\ref{fig:coaxial} is a coaxial cable. In this particular setup, there’s
 \subsection{Balanced Parallel wire transmission lines}\index{balanced parallel wire transmission line}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\linewidth]{./graphics/parallel_wire_tx_simp}
+\includegraphics[width=0.5\linewidth]{\pathtopartone/graphics/parallel_wire_tx_simp}
 \caption{Balanced parallel wire transmission line}
 \label{fig:twowire}
 \end{figure}
@@ -41,7 +41,7 @@ Figure~\ref{fig:twowire} shows the parallel wire transmission line which has two
 \subsection{Unbalanced Parallel wire transmission lines}\index{unbalanced parallel wire transmission line}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/unbalanced}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/unbalanced}
 \caption{Unbalanced Line}
 \label{fig:unbalanced}
 \end{figure}
@@ -51,7 +51,7 @@ In this structure shown in figure~\ref{fig:unbalanced}, we have a conducting rod
 \subsection{Microstrip Line}\index{microstrip line}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{./graphics/ms (1)}
+\includegraphics[scale=0.6]{\pathtopartone/graphics/ms (1)}
 \caption{Microstrip line}
 \label{fig:micro}
 \end{figure}
@@ -62,14 +62,14 @@ The microstrip line is a transmission line geometry with a single conductor havi
 The structure is made up of a trace of conductor enmeshed in a dielectric with conducting surfaces at the top and bottom that are grounded.(see figure~\ref{fig:stripline}). The stripline is similar to the microstripline but with ground planes both above and below the trace. Striplines are mostly easily constructed on the inner layers of multi-layer printed circuit boards. Another form of a stripline known as a Differential-stripline is shown in figure~\ref{fig:diff-stripline}.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{./graphics/micro}
+\includegraphics[scale=0.6]{\pathtopartone/graphics/micro}
 \caption{Stripline}
 \label{fig:stripline}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/stripline}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/stripline}
 \caption{Differential Stripline}
 \label{fig:diff-stripline}
 \end{figure}
@@ -80,7 +80,7 @@ A similarity across the various structures is the presence of a two-conductor sy
 Circuit laws like Kirchhoff’s law, are limited to low-frequency circuits where we only take note of the value of the electrical components, i.e. for a circuit that comprises circuit elements like resistors, capacitors and inductors, only their values are needed for the circuit analysis. However, as frequency increases, the signal value changes significantly. Let us suppose a transmission line of length, L whose ends are connnected to a voltage source and load at points XX'and YY' respectively as shown in figure~\ref{fig:first}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig2.7}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig2.7}
 \caption{Circuit diagram of a transmission line}
 \label{fig:first}
 \end{figure}
@@ -116,7 +116,7 @@ Transit time cannot be neglected for a two-conductor wire but when a small quant
 The relationship between voltage and current is valid for high frequency like that of low frequency as $ \Delta x  \rightarrow 0$ (infinitesimally small). Hence, this solves for voltage and current of a transmission line in the presence of the transit time effect.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/second fixed}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/second fixed}
 \caption{simple circuit diagram of a transmission line}
 \end{figure}	
 
@@ -127,7 +127,7 @@ We all know that as frequency increases in the circuit, the two conductors have 
 What would be the lumped element model for the subsection of the transmission line? As stated earlier, the voltage drop can be modelled as resistive and reactive drop across lumped elements. Put differently, We all know that as frequency increases in the circuit, the two conductors XY and X'Y' respectively in figure~\ref{fig:first} have both electric and magnetic fields induced as shown in figure~\ref{fig:third}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fieldsTx}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fieldsTx}
 \caption{Distributed element model explained with generated fields across a transmission line}
 \label{fig:third}
 \end{figure}
@@ -135,7 +135,7 @@ What would be the lumped element model for the subsection of the transmission li
 So when the magnetic field is linked with current, an inductance is produced while the electric field between the two conductors with air as dielectric produces capacitance as shown in figure~\ref{fig:lossless-Tx}. The inductance and capacitance produced are distributed along the length of the structure and these parameters are called the \textbf{distributed parameters of the line}\index{distributed parameters}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/losslessTx}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/losslessTx}
 \caption{Distributed parameters of a lossless tranmission line}
 \label{fig:lossless-Tx}
 \end{figure}
@@ -143,7 +143,7 @@ So when the magnetic field is linked with current, an inductance is produced whi
 At low frequency, there is no voltage drop across the length of a transmission line but as frequency starts to increase, the inductive reactance, $X_{L}$, starts causing a voltage drop across the length of the transmission line that was not seen at low frequency. Conductors do not have zero resistance and the separation of the conductor, as a dielectric is not ideal, causes current flow between the conductors across the conductance of the dielectric. Hence, we have a more realistic transmission line modelled as shown in figure~\ref{fig:sixth}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/lossyTx}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/lossyTx}
 \caption{Distributed elements for lossy transmission}
 \label{fig:sixth}
 \end{figure}
@@ -168,7 +168,7 @@ After the primary constants have been determined then the analysis of the transm
 \section{Telegrapher's Equations}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{./graphics/fig 2-11}
+\includegraphics[scale=0.4]{\pathtopartone/graphics/fig 2-11}
 \caption{Circuit analysis of a small segment of the transmission line}
 \label{fig:seventh}
 \end{figure}
@@ -286,7 +286,7 @@ V^{+}e^{j( \omega t-\beta x)} = V^{+}cos(\omega t- \beta x) +  V^{+}jsin(\omega 
 Since we want real voltage we take only $ V^{+}cos(\omega t- \beta x) $ and plot variation of $ V $ with respect to $ x $ and $ t $. We have the graph shown in figure~\ref{fig:abc} for different $ t $, as $ t $ increases, a point in the plot moves rightward. Hence with respect to space and time, the graph moves rightward as time increases. This is called a \textbf{travelling wave}\index{traveling wave phenomenon}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/ABC}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/ABC}
 \caption{Voltage as a function of x for $V^+e^{-\lambda x}$}
 \label{fig:abc}
 \end{figure}
@@ -294,7 +294,7 @@ Since we want real voltage we take only $ V^{+}cos(\omega t- \beta x) $ and plot
 Hence  $ V^{+}e^{j(\omega t- \beta x )} $ is a positive or progressive travelling wave as it moves rightward with an increase in time. Similarly, when $ V^{-}e^{j( \omega t+ \beta x )} $ is plotted on the graph, the point starts moving leftward with an increase in time and it is the negative travelling wave(see figure~\ref{fig:abcd}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/ABCD}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/ABCD}
 \caption{Voltage as a function of x for $V^+e^{-\lambda x}$}
 \label{fig:abcd}
 \end{figure}

@@ -16,7 +16,7 @@ Z_L = Z_0 \quad (\text{Matched Load Condition})
 \end{align*}
 As the wave moves along the line, it sees $Z_0$. At $Z_L$, it suddenly sees an impedance discontinuity from $Z_0$ to $Z_L$ which is like a steep change because of that part of the energy that tends to get reflected by the generator on the transmission line. So, for maximum power transfer, the terminating load impedance must be equal to the characteristics impedance otherwise, maximum power transfer will not take place and there will always be reflection.
 
-The reflection co-efficient at any point on the transmission line from equation~\eqref{eqn:rfc} is given as:
+The reflection coefficient at any point on the transmission line from equation~\eqref{eqn:rfc} is given as:
 \begin{align*}
 \Gamma{(l)} = \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}} = \frac{\text{Backward wave}}{\text{Forward wave}}
 \end{align*}
@@ -106,7 +106,7 @@ Z(l) = Z_0\left[\frac{2(Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l))}{2(Z_L\sinh(\ga
 
 Equation~\eqref{eqn:imp} shows that the impedance at any point $l$ is related to the load impedance $Z_L$ and the characteristics impedance $Z_0$. This enables us to move $Z_L$ to any point along the transmission line. Hence at $l = 0$, we have $Z_L$ but at $l = L$, the input impedance measured at the generator end will not be $Z_L$. It will depend on $Z_L$ and also the length of the line. So, if the length of the line keeps varying, the impedance you measure at the input end of the line will keep varying. 
 
-Hence, if we design a circuit at high frequency and connect a load to the end, depending on the length of the transmission line, the input impedance will keep varying with length. From a circuit perspective, the input impedance is very important, so at high frequencies, the length connecting the load to the circuit matters as the input impedance seen by the generator varies with length.
+Hence, if we design a circuit at high frequency and connect a load to the end, depending on the length of the transmission line, the input impedance will keep varying with length. From a circuit perspective, the input impedance is very important, so, at high frequencies, the length connecting the load to the circuit matters as the input impedance seen by the generator varies with length.
 
 From Equation~\ref{eqn:imp}, we normalize with respect to $Z_0$ such that,
 $\frac{Z(l)}{Z_0} = \bar{Z}(l)$ and $\frac{Z_L}{Z_0} =\bar{Z}_L$ which are the normalized values.
@@ -145,7 +145,7 @@ At matched conditions, there is no reflected wave. With infinite line length, th
 Now we can generalize the impedance transformation relationship. Till now, we have transformed impedance $Z_L$ which is at the load end to $Z(l)$. Nothing special about the load end other than we defining our origin to be at that point. So, the load point was used as our reference point. In general, given a transmission line as shown in figure~\ref{fig:1234}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{./graphics/1234}
+\includegraphics[scale=0.45]{\pathtopartone/graphics/1234}
 \caption{General representation of a transmission line}
 \label{fig:1234}
 \end{figure}
