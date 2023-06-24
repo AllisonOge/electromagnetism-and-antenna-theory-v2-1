@@ -1,53 +1,61 @@
 \chapter{Power Flow in an Electromagnetic Wave}\label{lec:lec27}
 Up till now, we have seen that a time-varying electric and magnetic field constitutes a wave phenomenon. Thus this wave requires some power or energy to flow. In this chapter, we look at the power flow associated with electromagnetic waves. We do some derivation starting with Maxwell's Equation and find out the power flow associated with a time-varying electromagnetic field.
 
-Up till now, we have investigated a wave which is called uniform plane wave i.e. a wave propagation in an unbound medium. However, in developing the power flow equations associated with electromagnetic waves, we would do a general analysis and not restrict our focus to uniform plane waves, at the end we find out the power flow associated with uniform plane waves which we have discussed in \autoref{lec:lec25} and \autoref{lec:lec26}. So whenever we have the beginning of analysis in electromechanics, we go back to Maxwell's Equations and find answers that are consistent with Maxwell's equation. The same thing we do have if we are asked a question, we go back to Maxwell's Equations. What power do we get for power flow associated with the electromagnetic fields? From Maxwell's Equation we have;
+Up till now, we have investigated a wave which is called uniform plane wave i.e. a wave propagation in an unbound medium. However, in developing the power flow equations associated with electromagnetic waves, we would do a general analysis and not restrict our focus to uniform plane waves, at the end we find out the power flow associated with uniform plane waves which we have discussed in \autoref{lec:lec25} and \autoref{lec:lec26}. So whenever we are at the beginning of analysis in electromagnetics, we go back to Maxwell's Equations and find answers that are consistent with Maxwell's equation. The same thing we do have if we are asked the question,  ``What power do we get for the power flow associated with an electromagnetic field?".\\
+
+From Maxwell's Equation, we have;
 \begin{align}
-\nabla\times\bar{E}=-\frac{\partial\bar{B}}{\partial t} \cdot 
+\nabla\times\bar{E}=-\frac{\delta\bar{B}}{\delta t} \cdot 
 \end{align} 
 If the permeability of the system is not a function of time,
 \begin{align}
-B=\mu H\\
-\frac{\delta\bar{B}}{\partial t}= -\mu\frac{\delta\bar{H}}{\delta t} =  - \mu\frac{\delta\bar{H}}{\delta t}
+\vec{B}=\mu \vec{H}\\
+\frac{\delta\bar{B}}{\delta t}= -\mu\frac{\delta\bar{H}}{\delta t}
 \end{align}
 Therefore;
 \begin{align}
 \nabla\times\bar{E} = -\mu \frac{\delta\bar{H}}{\delta t} 
 \end{align} 
-and 
+and similarly, if permittivity  $(\epsilon) $ is not a function of time,
 \begin{align}
+\vec{D} = \epsilon \vec{E}\\
 \nabla\times\bar{H} =\bar{J} + \frac{\delta\bar{D}}{\delta t}  =  J + \epsilon\frac{\delta\bar{E}}{\delta t} 
 \end{align}
-if permeability  $(\epsilon) $ is not a function of time.
-We start with these two basic equations and then try to investigate the power flow associated with electric and magnetic fields. We essentially make use of the vector identities and then try to find out the meaning of some expressions we would get from using the vector identities.
 
+We start with these two basic equations and then try to investigate the power flow associated with electric and magnetic fields. We essentially make use of the vector identities and then try to find out the meaning of some expressions we would get from using the vector identities.\\
+\\
+Recall,
 \begin{align}
-\nabla \cdot ( \bar{A}\times\bar{C} ) = C \cdot (\nabla\times\bar{A}) - \bar{A}\cdot(\nabla\times\bar{C}) 
+\nabla \cdot ( \bar{A}\times\bar{C} ) = C \cdot (\nabla\times\bar{A}) - \bar{A}\cdot(\nabla\times\bar{C})
+\label{vector identity} 
 \end{align} 
 For arbitrary vectors $\bar{A}$ and $\bar{C}$,
 
-Let $\bar{A}$ be the electric field $\bar{E}$and $ \bar{C} $ be the Magnetic Field $\bar{H}$, substituting for $\bar{A}$ as $\bar{E}$ and $\bar{C}$ as $\bar{H}$ into equation (5.4), we have;
+Let $\bar{A}$ be the electric field $\bar{E}$ and $ \bar{C} $ be the Magnetic Field $\bar{H}$, substituting for $\bar{A}$ as $\bar{E}$ and $\bar{C}$ as $\bar{H}$ into equation\ref{vector identity}, we have;
 \begin{align}
 \nabla\cdot(\bar{E}\times\bar{H})= \bar{H}\cdot(\nabla\times\bar{E})-\bar{E}\cdot(\nabla\times\bar{H})
 \end{align} 
 Now Substituting for $\nabla\times\bar{E}$ and $\nabla\times\bar{H}$, we have;
 \begin{align} \nabla\cdot(\bar{E}\times\bar{H})=
 \bar{H}\cdot(-\mu\frac{\delta\bar{H}}{\delta t}) - \bar{E}\cdot(\bar{J}+\epsilon\frac{\delta\bar{E}}{\delta t})
+\label{E and H power flow}
 \end{align}
-Recall from vector identities, we  have that;
+Recall from vector identities, we  have that;\\
+\\
 $\frac{\delta}{\delta t}(\bar{A}\cdot\bar{C})= \bar{A}\cdot\frac{\delta\bar{C}}{\delta t}+\bar{C}\cdot\frac{\delta\bar{A}}{\delta t}$ 
-$\frac{\delta}{\delta t}(\bar{A}\cdot\bar{A})= \bar{A}\cdot\frac{\delta\bar{A}}{\delta t}+\bar{A}\cdot\frac{\delta\bar{A}}{\delta t} = 2\bar{A}\cdot\frac{\delta A}{\delta t}$
-
-Making $\bar{A}\frac{\delta A}{\delta t} $ the subject of formula,
+$\frac{\delta}{\delta t}(\bar{A}\cdot\bar{A})= \bar{A}\cdot\frac{\delta\bar{A}}{\delta t}+\bar{A}\cdot\frac{\delta\bar{A}}{\delta t} = 2\bar{A}\cdot\frac{\delta A}{\delta t}$\\
+\\
+Making $\bar{A}\cdot\frac{\delta A}{\delta t} $ the subject of formula,
 we have;
 \begin{dmath}
-\bar{A}\cdot\frac{\delta\bar{A}}{\delta t}=\frac{1}{2}\frac{\delta}{\delta t}(\bar{A}\cdot\bar{A})=\frac{1}{2}\frac{\delta}{\delta t} |A|^{2} 
+\bar{A}\cdot\frac{\delta\bar{A}}{\delta t}=\frac{1}{2}\frac{\delta}{\delta t}(\bar{A}\cdot\bar{A})=\frac{1}{2}\frac{\delta}{\delta t} |A|^{2}
+\label{vector identity 2} 
 \end{dmath}
-having refreshed ourselves with these identities, we can deduce from equation (27.9)  that;
+Having refreshed ourselves with these identities, we can deduce from equation\ref{E and H power flow}, that;
 \begin{dmath}
 \nabla\cdot(\bar{E}\times\bar{H}) = -\mu\left(\bar{H}\cdot\frac{\delta\bar{H}}{\delta t}\right) - \bar{E}\cdot\bar{J} - \epsilon\left(\bar{E}\cdot\frac{\delta\bar{E}}{\delta t}\right)
 \end{dmath}
-therefore, relating equation (27.11) to equation (27.10) we have;
+Therefore, relating equation\ref{vector identity 2}, to equation\ref{E and H power flow}, we have;
 \begin{dmath}
 \nabla\cdot(\bar{E}\times\bar{H})=-\frac{\mu}{2}\frac{\delta}{\delta t}|\bar{H}|^{2} -  \frac{\epsilon}{2}\frac{\delta}{\delta t}|\bar{E}|^{2}-\bar{E}\cdot\bar{J} 
 \end{dmath}
@@ -56,60 +64,53 @@ We can investigate this expression over a closed surface or volume to have some 
 \iiint_{v}\nabla\cdot(\bar{E}\times\bar{H})dv  = \iiint_v-\frac{\mu}{2}\frac{\delta}{\delta t}|\bar{H}|^{2}dv-
 \iiint_{v}\frac{\epsilon}{2}\frac{\delta}{\delta t}|\bar{E}|^{2}dv -\iiint_{v}\bar{E}\cdot\bar{J}dv 
 \end{dmath*}
-If we assume that the volume enclosed is not varying as a function of time i.e. fixed volume, that is to say, that the field varies with time but space does not vary with time. We can take $\frac{\delta}{\delta t}$ out of the equation and apply the divergence theorem on $ \int_{v}\nabla_{e}(\bar{E}\times\bar{H}) $ to change it to a closed surface integral.
+If we assume that the volume enclosed is not varying as a function of time i.e. fixed volume, that is to say, that the field varies with time but space does not vary with time. We can take $\frac{\delta}{\delta t}$ out of the integration and apply the divergence theorem on $ \int_{v}\nabla\cdot(\bar{E}\times\bar{H}) $ to convert it to a closed surface integral.\\
+\\
+Thus,\\
+\\
 \begin{math}
-\iint(\bar{E}\times\bar{H})\cdot\bar{d}a  =  -\frac{\delta}{\delta t}  \iiint_{v}\frac{\mu}{2}|\bar{H}|^{2}dv -  \frac{\delta}{\delta t}\iiint_{v}\frac{\epsilon}{2}|\bar{E}|^{2}dv  -  \iiint_{v}\bar{E}\cdot\bar{J}dv 
-\end{math}
-we now substitute $ \bar{J}=\sigma\bar{E}, $ into equation (27.12) to get; 
-$\bar{E}\cdot\bar{J}=\bar{E}\sigma\bar{E}=\sigma\bar{E}\bar{E}=\sigma|\bar{E}|^{2} $
-$ \oint(\bar{E}\times\bar{H})\bar{d}a $ = - $ \frac{\delta}{\delta t}\int_{v} \frac{\mu}{2}|\bar{H}|^{2}dv$ - $ \frac{\delta}{\delta t}\int_{v}\frac{\epsilon}{2}|\bar{E}|^{2}dv$
--$ \int_{v}\sigma|\bar{E}|^{2}dv $
+\oint(\bar{E}\times\bar{H})\cdot\bar{d}a  =  -\frac{\delta}{\delta t}  \int_{v}\frac{\mu}{2}|\bar{H}|^{2}dv -  \frac{\delta}{\delta t}\int_{v}\frac{\epsilon}{2}|\bar{E}|^{2}dv  -  \int_{v}\bar{E}\cdot\bar{J}dv 
+\end{math}\\
+\\
+we now substitute $ \bar{J}=\sigma\bar{E}, $ into $\bar{E}\cdot\bar{J}$ to get; 
+$\bar{E}\cdot\bar{J}=\bar{E}\cdot\sigma\bar{E}=\sigma\bar{E}\cdot\bar{E}=\sigma|\bar{E}|^{2} $\\
+\\
+So,
+\begin{equation*}
+	 \oint(\bar{E}\times\bar{H})\cdot\bar{d}a = -  \frac{\delta}{\delta t}\int_{v} \frac{\mu}{2}|\bar{H}|^{2}dv -  \frac{\delta}{\delta t}\int_{v}\frac{\epsilon}{2}|\bar{E}|^{2}dv
+	- \int_{v}\sigma|\bar{E}|^{2}dv 
+\end{equation*}
+Each term in the above expression, has a physical significance.\\
+\\
+$\int_{v} \frac{\mu}{2}|\bar{H}|^{2}dv$ represents the total magnetic energy stored in the volume V hence the term $-\frac{\delta}{\delta t}\int_{v} \frac{\mu}{2}|\bar{H}|^{2}dv$ gives the rate of change of magnetic energy stored in the volume(The negative sign indicates a decrease).\\
+\\
+Similarly, $\int_{v}\frac{\epsilon}{2}|\bar{E}|^{2}dv$ represents the total electrical energy stored in the volume V hence the term $-\frac{\delta}{\delta t}\int_{v}\frac{\epsilon}{2}|\bar{E}|^{2}dv$ gives the rate of change of electrical energy stored in the volume(Again the negative sign indicates a decrease).\\
+\\
+While the term $-\int_{v}\sigma|\bar{E}|^{2}dv $ represents the total ohmic loss in the volume due to the finite conductivity of the medium.
 
-where;
-
-$ \iiint_{v}\frac{\mu}{2}|\bar{H}|^{2}dv $ 
-(\begin{small}
-Tells us the total Magnetic energy stored in that volume V
-\end{small})
-and
-$ \iiint_{v} \frac{\epsilon}{2}|\bar{E}|^{2}dv $ 
-(\begin{small}
-Tells us the total electric energy stored in that volume V     
-\end{small})
--$\frac{\delta}{\delta t}\iiint_{v}\frac{\mu}{2}|\bar{H}|^{2}dv$
-(\begin{small}
-Shows us the rate of change of Magnetic (decrease) energy stored in volume v i.e. decrease in energy over time     
-\end{small})
--$\frac{\delta}{\delta t}\int_{v}\frac{\epsilon}{2}|\bar{E}|^{2}dv$
-(\begin{small}
-Shows the rate of change of Electric (decrease) energy stored in volume v i.e. decrease in energy as a function of time    
-\end{small})
--$\int_{v}\sigma|\bar{E}|^{2}dv$
-(\begin{small}
-Shows the Ohmic loss in that volume or power loss in the volume because of finite conductivity in the medium.   
-\end{small})
-
-So if we have a total energy enclosed in a surface, these 3 total losses combined must be equal to the outward energy going out from the closed surface (s), Since there is no other mechanism for energy consumption. From the law of conservation of energy, we get that $ \oint(\bar{E}\times\bar{H})\bar{d}a $ must represent the flow of energy coming out from the closed surface. So $ \oint(\bar{E}\times\bar{H})\bar{d}a $ (the net power outflow from a closed surface)  gives the net power flow of the electric and magnetic field from that closed surface. This is called \textbf{Poynting theorem}\footnote{John Henry Poynting (Born 9, September 1852 and died 30, March 1914). He was an English physicist. He was a professor of physics at Mason Science College, from 1880 to 1900, and then at the successor institution, the University of Birmingham until his death.
+So if we have an amount of energy enclosed in a surface, these 3 total losses combined must be equal to the total outward energy going out from the closed surface (s). Since there is no other mechanism for energy consumption, from the law of conservation of energy, we get that $ \oint(\bar{E}\times\bar{H})\cdot\bar{da} $ must represent the net flow of energy coming out from the closed surface. So $ \oint(\bar{E}\times\bar{H})\cdot\bar{d}a $ (the net power outflow from a closed surface)  gives the net power flow of the electric and magnetic field from that closed surface. This is called \textbf{Poynting theorem}\footnote{John Henry Poynting (Born 9, September 1852 and died 30, March 1914). He was an English physicist. He was a professor of physics at Mason Science College, from 1880 to 1900, and then at the successor institution, the University of Birmingham until his death.
 
 He is Known For the Poynting vector, Poynting Effect, Poynting's Theorem 
 Poynting was the youngest son of Thomas Elford Poynting, a Unitarian minister}\index{poynting theroem}. 
 
 \section{Poynting theorem and Poynting vector}
-The Poynting theorem states that the cross-product of electric and magnetic fields integrated over a closed surface gives the total power flow from the closed surface. Now we have seen the quantity which represents the total power flow, then $\bar{E}\times\bar{H}$ is essentially the power density on the surface. So that when this power density is integrated over an area, it gives the total power flow from the surface. It should be kept in mind that as the total power flow gives the net power flow, $\bar{E}\times\bar{H}$ Should give the power density at any point on the surface of the sphere is the arbitrary definition.  The theorem does not state that $\bar{E}\times\bar{H}$ represent the power density or power flow per unit area at every point on the surface of the volume. What it is telling us is that the total power coming out of a close surface is $\oint_{s}(\bar{E}\times\bar{H})$. So saying that $\bar{E}\times\bar{H}$ is the power density which is true for every point on the surface of a SPHERE (Because of Symmetry). It is arbitrary we take power density from here. It so happens that most of the time in practice, this arbitrary definition gives the power density correctly. However, it should be said that if knowing $\bar{E}\times\bar{H}$, one already knows power density at every point on the surface of this volume. This statement is not correct. There are many special cases where $\bar{E}\times\bar{H}$  may give power flow where there is no power flow at that point. So while using $\bar{E}\times\bar{H}$  as power density, one should be very careful. In most practical situations, however, the arbitrary definition that $\bar{E}\times\bar{H}$  gives power density at any location normally is valid.
+The Poynting theorem states that the cross-product of electric and magnetic fields integrated over a closed surface gives the total power flow from the closed surface. Now we have seen the quantity which represents the total power flow, then $\bar{E}\times\bar{H}$ is essentially the power density on the surface. So that when this power density is integrated over an area, it gives the total power flow from that surface area.
+It should be kept in mind that, even though $ \oint(\bar{E}\times\bar{H})\cdot\bar{da} $ gives the net power flow from a closed surface, saying that $\bar{E}\cross\bar{H}$ should give the power density at any point on the surface, is only an arbitrary definition. The theorem does not state that $\bar{E}\cross\bar{H}$ gives the power density (or power flow per unit area) on the surface. Rather it states that, the total power flow out of a closed surface is given by $ \oint(\bar{E}\times\bar{H})\cdot\bar{da} $. So saying $\bar{E}\cross\bar{H}$ is the power density which is true for every point on the surface of a sphere(due to symmetry), might not be true in some other cases.\\
+Hence, it is arbitrary we take power density from here. It so happens that most of the time in practice, this arbitrary definition gives the power density correctly. But however, it should be said that, if knowing $\bar{E}\times\bar{H}$, one already knows the power density at every point on the surface of the volume, this statement is not correct. There are many special cases where $\bar{E}\times\bar{H}$  may give power flow where there is no power flow at that point. So while using $\bar{E}\times\bar{H}$  as power density, one should be very careful. In most practical situations, however, the arbitrary definition that $\bar{E}\times\bar{H}$  gives power density at any location normally is valid.
 
-So we have an important quantity called a power flow density $ \bar{P}=\bar{E}\times\bar{H} $ where $  \bar{P}  $ is called a POYNTING VECTOR\index{poynting vector} for these fields. Poynting vector is an important concept in the electromagnetic wave as it tells the power flow associated with any particular point in space and also tells in which direction the power is flowing. The first thing we note here is that if you have an electric and magnetic field, the Poynting vector is the direction perpendicular to both $ \bar{E} $ and  $ \bar{H} $. So if $  \bar{P}  $  has to be non-zero in terms of power flow, then $ \bar{E} $ and  $ \bar{H} $ should not be parallel to each other. In a case where  $ \bar{E} $ and  $ \bar{H} $ are parallel to each other, then  $ \bar{E}\times\bar{H} $=0 and this connotes that there will be no net power flow associated with this. So only when the component of the electric and magnetic fields are perpendicular to each other would they contribute to power flow and the direction of power flow is perpendicular to $ \bar{E} $ and  $ \bar{H} $    fields. It should be noted that for us to have a power flow $ \bar{E} $ and  $ \bar{H} $  must cross each other, whenever $ \bar{E} $ and  $ \bar{H} $ Crosses each other, there is a possibility of power flow. We use the word possibility here because this quantity   $ \bar{E}\times\bar{H} $ is telling you the so-called instantaneous power if we know the value of ?. and  $ \bar{E} $ and  $ \bar{H} $. At that instant of time at some point in space, we can always find out $ \bar{E}\times\bar{H} $. At that instant of time, we get $  \bar{P}  $ which will give the Poynting vector at that instance of time. It is possible that even if $  \bar{P}  $ is finite at some instance of time, there may be a net power flow over long periods. That is in time average sense, there may not be power flow associated with that system. So Poynting Vector $  \bar{P}  $ which we defined as $ \bar{E}\times\bar{H} $  serves the purpose of defining the power flow. But in Practical System, a more useful quantity would be the time average value of the Poynting Vector, because the Poynting vector at some instant of time may be negative and that is like getting negative power. Of course, when dealing with space, we can say negative power flow means direction change. All these complications come in simply if we use $ \bar{E}\times\bar{H} $ to get  $  \bar{P}  $. since $  \bar{P}  $  can be positive or negative and $  \bar{P}  $  can be a complex quantity too if there is a phase difference between $ \bar{E} $ and  $ \bar{H} $ with time. So what we do is, we try to get the time average value of the Poynting vector and it is a much more useful quantity for finding out if there is a net flow of power associated with the Electric and Magnetic fields. 
+So we have an important quantity called a power flow density $ \bar{P}=\bar{E}\times\bar{H} $ where $  \bar{P}  $ is called a POYNTING VECTOR\index{poynting vector} for these fields. Poynting vector is an important concept in the electromagnetic wave as it tells the power flow associated with any particular point in space and also tells in which direction the power is flowing. The first thing we note here is that if you have an electric and magnetic field, the Poynting vector is the direction perpendicular to both $ \bar{E} $ and  $ \bar{H} $. So if $  \bar{P}  $  has to be non-zero in terms of power flow, then $ \bar{E} $ and  $ \bar{H} $ should not be parallel to each other. In a case where  $ \bar{E} $ and  $ \bar{H} $ are parallel to each other, then  $ \bar{E}\times\bar{H} $=0 and this connotes that there will be no net power flow associated with this. So only when the component of the electric and magnetic fields are perpendicular to each other would they contribute to power flow and the direction of power flow is perpendicular to $ \bar{E} $ and  $ \bar{H} $    fields. It should be noted that for us to have a power flow, $ \bar{E} $ and  $ \bar{H} $  must cross each other. Whenever $ \bar{E} $ and  $ \bar{H} $ Crosses each other, there is a possibility of power flow. We use the word possibility here because this quantity   $ \bar{E}\times\bar{H} $ is telling you the so-called instantaneous power if we know the values of  $ \bar{E} $ and  $ \bar{H} $. At that instant of time at some point in space, we can always find out $ \bar{E}\times\bar{H} $ and we get $  \bar{P}  $ which will give the Poynting vector at that instant of time. It is possible that even if $  \bar{P}  $ is finite at some instance of time, there may be no net power flow over long periods. That is in time average sense, there may not be power flow associated with that system. So Poynting Vector $  \bar{P}  $ which we defined as $ \bar{E}\times\bar{H} $  serves the purpose of defining the power flow. But in Practical Systems, a more useful quantity would be the time average value of the Poynting Vector, because the Poynting vector at some instant of time may be negative and that is like getting negative power. Of course, when dealing with space, we can say negative power flow means direction change. All these complications come in simply if we use $ \bar{E}\times\bar{H} $ to get  $  \bar{P}  $ since $  \bar{P}  $  can be positive or negative and $  \bar{P}  $  can be a complex quantity too if there is a phase difference between $ \bar{E} $ and  $ \bar{H} $ with time. So what we do is, we try to get the time average value of the Poynting vector and it is a much more useful quantity for finding out if there is a net flow of power associated with the Electric and Magnetic fields. 
 
-As we have seen earlier, we are interested only in the analysis of time-harmonic fields, so we assume that electric and magnetic fields are varying sinusoidally as a function of time. The only thing is a phase difference between $ \bar{E} $ and  $ \bar{H} $, we are then asked what is the average power flow associated with $ \bar{E} $ and  $ \bar{H} $ In this case.
+As we have seen earlier, we are interested only in the analysis of time-harmonic fields, so we assume that the electric and magnetic fields are varying sinusoidally as a function of time. The only thing now is when there is a phase difference between $ \bar{E} $ and  $ \bar{H} $, we then ask what is the average power flow associated with $ \bar{E} $ and  $ \bar{H} $ in that case.
 
 Now we define the general time-varying electric and magnetic fields which vary as a function of space and time as;
 
 $ \bar{E}=\bar{E_{o}} e^{\jmath\omega t+j\phi_{e}}$,
-$ \bar{H}=\bar{H_{o}} e^{\jmath\omega t+j\phi_{h}}$
+$ \bar{H}=\bar{H_{o}} e^{\jmath\omega t+j\phi_{h}}$.
 We take the unit vector associated with $ \bar{E_{o}} $ and  $ \bar{H_{o}} $ as $ \hat{e} $ And $ \hat{h} $, so we remember that we are only taking either the real or the imaginary part of $ e^{\jmath\omega t} $ for simple analysis. It doesn't mean $ \bar{E} $ cannot be complex. But for simplicity,
 $ \bar{E}=\mathfrak{Re}(E_{o}e^{\jmath\omega t}e^{j\phi e} )\cdot\hat{e} $   
 $ \bar{H}=\mathfrak{Re}(H_{o}e^{\jmath\omega t}e^{j\phi h} )\cdot\hat{h} $ 
 where  $ \hat{e} $ and $ \hat{h} $ 
-gives the unit vector of the electric and magnetic field, $ \phi_{e} $ and $ \phi_{h} $ are the phase electric and magnetic field and $ E_{o} $ and  $ H_{o} $ are the amplitude of electric and magnetic fields. So the real parts give an instantaneous value of the electric and magnetic field. Once this is known, we can find the Poynting vector at that instant in time.
+gives the unit vector of the electric and magnetic field, $ \phi_{e} $ and $ \phi_{h} $ are the phases of the electric and magnetic fields and $ E_{o} $ and  $ H_{o} $ are the amplitude of the electric and magnetic fields. So the real parts give an instantaneous value of the electric and magnetic field. Once this is known, we can find the Poynting vector at that instant in time.
 \begin{align*}
 \bar{E}(t)=E_{o}\cos(\omega t+\phi_{e})\hat{e}\\ 
 \bar{H}(t)=H_{o}\cos(\omega t+\phi_{h})\hat{h}
@@ -122,105 +123,106 @@ How did we get to the last expression, we will see below. From compound angle fo
 \begin{dmath*}
 \cos(\omega t+\omega t) =\cos\omega t\cos\omega t-\sin\omega t\sin\omega t =\cos^{2}\omega t-\sin^{2}\omega t=\cos^{2}\omega t-(1-\cos^{2}\omega t)
 \end{dmath*}
-Simplifying further, we get $ 2\cos^{2}\omega t-1 $ or $ \cos^{2}\omega t=\frac{\cos^{2}\omega t+1}{2}$.
+Simplifying further, we get $ 2\cos^{2}\omega t-1 = \cos(2\omega t) $ or $ \cos^{2}\omega t=\frac{\cos^{2}\omega t+1}{2}$.
 
 \begin{dmath*}
-\sin(\omega t+\omega t) =\sin\omega t\cos\omega t-\cos\omega t\sin\omega t
+\sin(\omega t+\omega t) =\sin\omega t\cos\omega t+\cos\omega t\sin\omega t
 \end{dmath*}
 Simplifying further, we get $ 2\sin\omega t\cos\omega t$ or $  \sin\omega t\cos\omega t = \frac{\sin2\omega t}{2}$
 \begin{dmath*}
 \bar{P}= \bar{E}\times\bar{H}=E_{o}H_{o}\cos(\omega t+\phi_{e})\cos(\omega t+\phi_{h})\hat{e}\times\hat{h} 
 = E_{o}H_{o}[(\cos\omega t\cos\phi_{e}-\sin\omega t\sin\phi_{e})(\cos\omega t\cos\phi_{h}-\sin\omega t\sin\phi_{h})]\hat{e}\times\hat{h} 
-=  E_{o}H_{o}[\cos^{2}\omega t\cos\phi_{e}\cos_{h}-\cos\omega t\sin\omega t\cos\phi_{e}\sin\phi_{h}-\cos\omega t\sin\omega t\sin\phi_{e}\cos\phi_{h}+\sin^{2}\omega t\sin\phi_{e}\sin_{h}]\hat{e}\times\hat{h}
-=E_{o}H_{o}[\cos^{2}\omega t\cos\phi_{e}\cos\phi_{h}+ ( 1 - \cos^{2}\omega t)\sin\phi_{e}\sin\phi_{h} -\cos\omega t\sin\omega t(cos\phi_{e}\sin\phi_{h} +\sin \phi_{e}\sin\phi_{h})]\hat{e}\times\hat{h} 
-=E_{o}H_{o}[\cos^{2}\omega t(\cos\phi_{e}\cos\phi_{h}-\sin\phi_{e}\sin\phi_{h})+\sin\phi_{e}\sin\phi_{h}-\cos\omega t\sin\omega t()\cos\phi_{e}\sin\phi_{h}+\sin\phi_{e}\cos\phi_{h}] \hat{e}\times\hat{h} 
+=  E_{o}H_{o}[\cos^{2}\omega t\cos\phi_{e}\cos\phi_{h}-\cos\omega t\sin\omega t\cos\phi_{e}\sin\phi_{h}-\cos\omega t\sin\omega t\sin\phi_{e}\cos\phi_{h}+\sin^{2}\omega t\sin\phi_{e}\sin\phi_{h}]\hat{e}\times\hat{h}
+=E_{o}H_{o}[\cos^{2}\omega t\cos\phi_{e}\cos\phi_{h}+ ( 1 - \cos^{2}\omega t)\sin\phi_{e}\sin\phi_{h} -\cos\omega t\sin\omega t(cos\phi_{e}\sin\phi_{h} +\sin \phi_{e}\cos\phi_{h})]\hat{e}\times\hat{h} 
+=E_{o}H_{o}[\cos^{2}\omega t(\cos\phi_{e}\cos\phi_{h}-\sin\phi_{e}\sin\phi_{h})+\sin\phi_{e}\sin\phi_{h}-\cos\omega t\sin\omega t(\cos\phi_{e}\sin\phi_{h}+\sin\phi_{e}\cos\phi_{h})] \hat{e}\times\hat{h} 
 = E_{o}H_{o}[\cos^{2}\omega t\cos(\phi_{e}+\phi_{h})+\sin\phi_{e}\sin\phi_{h}-\cos\omega t\sin\omega t\sin(\phi_{e}+\phi_{h})      ]\hat{e}\times\hat{h}  
-=E_{o}H_{o} [(\frac{\cos\omega t+1}{2})\cos(\phi_{e}+\phi_{h})+\sin\phi_{e}\sin\phi_{h}-\frac{\sin2\omega t}{2}\sin(\phi_{e}+\phi_{h})] \hat{e}\times\hat{h}  
-=E_{o}H_{o}[\cos2\omega t\cos(\phi_{e}+\phi_{h})-\sin2\omega t\sin(\phi_{e}+\phi_{h})+\frac{1}{2}\cos(\phi_{e}+\phi_{h})+\sin\phi_{e}\sin\phi_{h}]\hat{e}\times\hat{h} 
+=E_{o}H_{o} [(\frac{\cos2\omega t+1}{2})\cos(\phi_{e}+\phi_{h})+\sin\phi_{e}\sin\phi_{h}-\frac{\sin2\omega t}{2}\sin(\phi_{e}+\phi_{h})] \hat{e}\times\hat{h}  
+=E_{o}H_{o}[\frac{\cos2\omega t\cos(\phi_{e}+\phi_{h})}{2}- \frac{\sin2\omega t\sin(\phi_{e}+\phi_{h})}{2}+\frac{1}{2}\cos(\phi_{e}+\phi_{h})+\sin\phi_{e}\sin\phi_{h}]\hat{e}\times\hat{h} 
 =E_{o}H_{o}[\frac{1}{2}\cos(2\omega t+\phi_{e}+\phi_{h})+\frac{1}{2}\cos(\phi_{e}+\phi_{h})+\sin\phi_{e}\sin\phi_{h}]\hat{e}\times\hat{h} 
 =E_{o}H_{o}[\frac{1}{2}\cos(2\omega t+\phi_{e}+\phi_{h})+\frac{1}{2}\cos\phi_{e}\cos_{h} -\frac{1}{2}\sin\phi_{e}\sin\phi_{h}+\sin\phi_{e}\sin\phi_{h}]\hat{e}\times\hat{h} 
-=E_{o}H_{o}[\frac{1}{2}\cos(2\omega t+\phi_{e}+\phi_{h})+\frac{1}{2}\cos\phi_{e}\cos_{h} +\frac{1}{2}\sin\phi_{e}\sin\phi_{h}]\hat{e}\times\hat{h}
+=E_{o}H_{o}[\frac{1}{2}\cos(2\omega t+\phi_{e}+\phi_{h})+\frac{1}{2}\cos\phi_{e}\cos\phi_{h} +\frac{1}{2}\sin\phi_{e}\sin\phi_{h}]\hat{e}\times\hat{h}
 =\frac{ E_{o}H_{o}}{2}[\cos(\phi_{e}-\phi_{h})+\cos(2\omega t+\phi_{e}+\phi_{h})]\hat{e}\times\hat{h} 
 \end{dmath*}
 So when we take an average of this throughout the signal then $\cos(2\omega t+\phi_{e}+\phi_{h})$ will go to zero. Positive area cancels negative area. It corresponds to a waveform having 2f as its frequency. So over a period corresponding to $ T=\frac{2\pi}{\omega} $ the time average $ \bar{P}_{av} $ is; $ \frac{1}{T}\int^{T}_{0}\bar{P}dt $ with $ T=\frac{2\pi}{\omega} $.
 \begin{dmath*}
 \bar{P}_{av}=\frac{1}{T}\int^{T}_{0} \frac{ E_{o}H_{o}}{2}\cos(\phi_{e}-\phi_{h})dt(\hat{e}\times\hat{h})  
 \frac{E_{o}H_{o}}{2} \cos(\phi_{e}-\phi_{h})(\hat{e}\times\hat{h}) 
-=\frac{1}{2} \mathfrak{Re}[(E_{o}e^{j\omega t+j\phi_{e}}+\hat{e})\times(H_{o}e^{j\omega t+j\phi_{h}}+\hat{h})] ^{*}  
+=\frac{1}{2} \mathfrak{Re}[(E_{o}e^{j\omega t+j\phi_{e}}\hat{e})\times(H_{o}e^{-j\omega t-j\phi_{h}}\hat{h})]
+=\frac{1}{2} \mathfrak{Re}[(E_{o}e^{j\omega t+j\phi_{e}}\hat{e})\times(H_{o}e^{j\omega t+j\phi_{h}}\hat{h})^{*}]  
 \end{dmath*}
 \begin{flushright}
 \begin{footnotesize}
-the * above is the conjugate.
+the * above represents the conjugate.
 \end{footnotesize}
 \end{flushright} 
 But Originally; $ \bar{E}=\bar{E_{o}}e^{j\omega t+j\phi_{e}}$ and $ H=\bar{H_{o}}e^{j\omega t+j\phi_{e}} $
 
-We now have the average power to be; $\bar{P}_{av}=\mathfrak{Re}(\bar{E}\times\bar{H}^{*})$. This means that if we know the electric and magnetic field in complex forms, i.e. the electric and magnetic field may not be in the time phase. In general, we can calculate $ \bar{E}\times\bar{H}^{*} $, the real part of that. Taking $ \frac{1}{2} $ of it gives the average power flow which is associated with that electromagnetic wave. So $\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}(\bar{E}\times\bar{H}^{*})$ is a real quantity. All these problems we had with instantaneous power flow, $ \bar{P}=\bar{E}\times\bar{H} $ complex depending on the phase between $ \bar{E} $ and $ \bar{H} $, have now been taken care of. This also tells the overall power flow which is associated with this field at a particular location, the instantaneous Poynting vector might be negative or positive. But the average power Poynting vector will always be positive and that gives the net power flow associated with those electric and magnetic fields.
+We now have the average power to be; $\bar{P}_{av}=\mathfrak{Re}(\bar{E}\times\bar{H}^{*})$. This means that if we know the electric and magnetic field in complex forms(the electric and magnetic field may not be in the time phase) , in general, we can calculate $ \bar{E}\times\bar{H}^{*} $. Taking half of the real part gives the average power flow which is associated with that electromagnetic wave. So $\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}(\bar{E}\times\bar{H}^{*})$ is a real quantity. All these problems we had with instantaneous power flow, $ \bar{P}=\bar{E}\times\bar{H} $ complex depending on the phase between $ \bar{E} $ and $ \bar{H} $, have now been taken care of. This also implies that, the overall power flow which is associated with these fields at a particular location. It is possible that, at a particular location, the instantaneous Poynting vector might be negative or positive but the average power Poynting vector will always be positive and that gives the net power flow associated with these electric and magnetic fields.
 
-This is the concept regularly used in finding out the power flow associated with magnetic waves. Again you have for average power flow that $ \bar{E} $ and $ \bar{H} $ fields are perpendicular (or have components perpendicular to each other), only then would we have a cross product which will be non-zero.
-Secondly, the electric and magnetic fields should not be in TIME QUADRATURE. This means the electric and magnetic fields should not differ by a phase of $90^{o}$. If this happens, $ \mathfrak{Re}(\bar{E}\times\bar{H}^{*})=0 $ and then we will not have any real power flow associated with the field at that point. It is generally possible that if you take the electric and magnetic fields, you get complex power. The real part of the quantity gives the net power flow at that location and the imaginary part (j conjugate ) gives the power oscillating around a point. At some point, the power is coming back essentially so the imaginary part of $ E\times\bar{H}^{*} $ gives the oscillatory power called the REACTIVE POWER. Whereas the real part gives the net power flow or the RESISTIVE POWER flow at the location. So this concept of the Poynting vector and the average Poynting vector is very important because by using this concept, we can calculate the net power flow at a particular location.
+This is the concept regularly used in finding out the average power flow associated with electromagnetic waves. So in determining average power flow, there are two things now essential. One is, $ \bar{E} $ and $ \bar{H} $ fields must be perpendicular (or have components perpendicular to each other), only then would we have a cross product which will be non-zero. Secondly, the electric and magnetic fields should not be in TIME QUADRATURE. This means the electric and magnetic fields should not differ by a phase of $90^{o}$. If this happens, $ \mathfrak{Re}(\bar{E}\times\bar{H}^{*})=0 $ and then we will not have any real power flow associated with the fields at that point. So in general it is possible that if you take the electric and magnetic fields, you get a complex power. The real part of the quantity gives the net power flow at that location and the imaginary part (j conjugate ) gives the power oscillating around that point. So at some instant of time, the power might be going in a certain direction, and after some time, the power will be coming back in the same direction. So the imaginary part of $ E\times\bar{H}^{*} $ gives the oscillatory power called the REACTIVE POWER. Whereas the real part gives the net power flow or the RESISTIVE POWER flow at the location. So the concept of the Poynting vector and the average Poynting vector is very important because by using this concept, we can calculate the net power flow at a particular location.
 
 \section{Uniform Plane wave}\index{uniform plane wave}
-We can then apply this concept to a case of a uniform plane wave. How much power density does a uniform plane wave carry when it travels in a media? In Uniform plane waves, electric and magnetic fields are perpendicular to each other. With $ \bar{E} $ and $ \bar{H} $ shown below
+We can then apply this concept to a case of a uniform plane wave. So we may ask, How much power density does a uniform plane wave carry when it travels in a media?. In Uniform plane waves, electric and magnetic fields are perpendicular to each other. With $ \bar{E} $ and $ \bar{H} $ shown below
 \begin{figure}[h]
 \centering
 \textsc{\includegraphics[width=.7\linewidth]{./graphics/cc}}
 \caption{Direction of power flow of an electromagnetic wave}
 \end{figure}
 
-The direction of power flow is given by the right-hand rule. $ \bar{E}\times\bar{H} $ as we realize has the direction of $ \bar{P}_{av} $ which is also the same as the direction of wave propagation. As we have seen in the case of a uniform plane wave, $ \bar{E} $, $ \bar{H} $ and the direction of propagation are perpendicular to each other. If we say the electric field is $ \bar{E}=E_{o}e^{-j\beta z}\hat{x} $ having phase variation of Z therefore;
+The direction of power flow is given by the right-hand rule. $ \bar{E}\times\bar{H} $ as we realize has the direction of $ \bar{P}_{av} $ which is also the same as the direction of wave propagation. As we have seen in the case of a uniform plane wave, $ \bar{E} $, $ \bar{H} $ and the direction of propagation are mutually perpendicular to each other. If we say the electric field is $ \bar{E}=E_{o}e^{-j\beta z}\hat{x} $ having phase variation in the Z direction, therefore;
 $ \bar{H}=H_{o}e^{-j\beta z}\hat{y} $,
 \begin{dmath*}
 \bar{P}_{av}=\frac{1}{2}\mathfrak{Re}(\bar{E}\times\bar{H}^{*})
-=\frac{1}{2}\mathfrak{Re}(E_{o}e^{-j\beta z}H_{o}e^{+j\beta z}\hat{x}\times\hat{y})
+=\frac{1}{2}\mathfrak{Re}(E_{o}e^{-j\beta z}H_{o}e^{+j\beta z})(\hat{x}\times\hat{y})
 =\frac{1}{2}\mathfrak{Re}(E_{o}H_{o}\hat{z})=\frac{1}{2}(E_{o}H_{o}\hat{z}) 
 \end{dmath*}
-So for a uniform plane wave, the average Poynting vector will be half $ E_{o}H_{o} $. in direction $ \hat{z} $ with $ \bar{E} $ in $ \hat{x} $ and $ \bar{H} $ in $ \hat{y} $ direction.
+So for a uniform plane wave, the average Poynting vector will be half $ E_{o}H_{o} $ in direction $ \hat{z} $ with $ \bar{E} $ in $ \hat{x} $ and $ \bar{H} $ in $ \hat{y} $ direction.
 
 Now we can take specific cases for the uniform plane wave in an unbound medium in which the wave is propagating. For a DIELECTRIC MEDIUM, $ \bar{E} $ and $ \bar{H} $ are related by the intrinsic impedance of the medium.
-$ \frac{E}{H}=\eta $= intrinsic impedance.
+$ \frac{E}{H}=\eta $ = intrinsic impedance.
 
-Substituting into $ \bar{P}_{av}=\frac{1}{2}(E_{o}H_{o}z^{*}) $ and making it in terms of the electric field,  we have;
+Assuming $H_{0} \text{ and } E_{0}$ are complex quantities, then $\bar{P}_{av}=\frac{1}{2} \mathfrak{Re}(E_{o}H_{o}^{*}\hat{z}) $. Substituting $\eta$ into $ \bar{P}_{av}=\frac{1}{2} \mathfrak{Re}(E_{o}H_{o}^{*}\hat{z}) $ and making it in terms of the electric field only,  we have;
 \begin{dmath*}
-\bar{P}_{av}=\frac{1}{2}E_{o}(\frac{E_{o}}{\eta})^{*}\hat{z}  
+\bar{P}_{av}=\frac{1}{2} \mathfrak{Re}\left\{E_{o}(\frac{E_{o}}{\eta})^{*}\right\}\hat{z}  
 \end{dmath*}
-This can also be written as $ \bar{P}_{ov}=\frac{1}{2}E_{o}(\frac{E_{o}}{\eta})^{*} $ or  $ \frac{1}{2}\eta H_{o}(H_{o}^{*})\hat{z} $ in terms of magnetic field.
+This can also be written as $ \bar{P}_{av}= \frac{1}{2}\mathfrak{Re}\left\{\eta H_{o}(H_{o}^{*})\right\}\hat{z} $ in terms of magnetic field.
 
 We now have that 
 \begin{dmath*}
-\bar{P}_{av}=\mathfrak{Re}(\frac{|E_{o}|^{2}}{2\eta^{*}})\hat{z}
+\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}}{\eta^{*}}\right\}\hat{z}
 \end{dmath*}
 or 
 \begin{dmath}
-\bar{P}_{av}=\frac{\eta}{2}|H_{o}|^{2}
+\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}\left\{\eta|H_{o}|^{2}\right\}\hat{z}
 \end{dmath}
-So from here, we can find the average power flow associated with a uniform plane wave in an unbound medium. For a dielectric medium,for which $ \eta=\sqrt{\frac{\mu}{2}} $ that is for an ideal dielectric, $ \eta $ is real.
-$ \bar{P}_{av}=\frac{1}{2}\frac{|E_{o}|^{2}}{\eta} $ or $ \frac{1}{2}\eta|H_{o}|^{2} $ so in a dielectric medium, we know the peak amplitude of either the electric or magnetic field, we know the permeability and permittivity of the medium, and then we can find $ \eta $ which is real. From knowing $ E_{o} $ or $ H_{o} $, we can get the power flow density associated with this uniform plane wave.
+So from here, we can find the average power flow associated with a uniform plane wave in an unbound medium. For a dielectric medium,for which $ \eta=\sqrt{\frac{\mu}{2}} $, that is for an ideal dielectric, $ \eta $ is real.
+$ \bar{P}_{av}=\frac{1}{2}\frac{|E_{o}|^{2}}{\eta} $ or $ \frac{1}{2}\eta|H_{o}|^{2} $. So in a dielectric medium, if we know the peak amplitude of either the electric or magnetic field, the permeability and permittivity of the medium, and then $ \eta $ which is real, we can get the power flow density associated with this uniform plane wave with above equations.
 
-In general, if the medium has finite conductivity that is non-zero or very large, then we go using
+In general, if the medium has a finite conductivity that is non-zero or very large, then we use
 
-$ \bar{P}_{av}=\mathfrak{Re}(\frac{|E_{o}|^{2}}{\mu^{*}})\hat{z} $ or $ \mathfrak{Re}(\eta|H_{o}|^{2})\hat{z} $ 
+$ \bar{P}_{av}=\mathfrak{Re}(\frac{|E_{o}|^{2}}{2\eta^{*}})\hat{z} $ or  $ \bar{P}_{av}= \frac{1}{2}\mathfrak{Re}\left\{\eta H_{o}(H_{o}^{*})\right\}\hat{z} $ 
 as $ \eta $ is a complex quantity in this case.
 
-For the extreme case of a good conductor the average power,
+For the extreme case of a good conductor, to get the average power, Recall;
 \begin{dmath*}
-\eta=\sqrt{\frac{\omega\mu}{2\sigma}}+\sqrt[j]{\frac{\omega\mu}{\bar{2\sigma}}}
+\eta=\sqrt{\frac{\omega\mu}{2\sigma}}+j\sqrt{\frac{\omega\mu}{{2\sigma}}}
 \end{dmath*}
+Thus,
 \begin{dmath*}
 \bar{P}_{av}=\frac{1}{2}|E_{o}|^{2}\sqrt{\frac{\sigma}{2\omega\mu}} 
 \end{dmath*}
-that is from
+that is because,
 \begin{dmath*}
-\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}}{\eta^{*}}\right\}=\frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}}{\sqrt{\frac{\omega\mu}{2\sigma}}-\sqrt[j]{\frac{\omega\mu}{\bar{2\sigma}}}}\right\}
+\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}}{\eta^{*}}\right\}=\frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}}{\sqrt{\frac{\omega\mu}{2\sigma}}-j\sqrt{\frac{\omega\mu}{\bar{2\sigma}}}}\right\}
 \end{dmath*}
-finding the conjugate
+Finding the conjugate
 \begin{dmath*}
-\bar{P}_{av}= \frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}\left(\sqrt{\frac{\omega\mu}{2\sigma}}+\sqrt[j]{\frac{\omega\mu}{\bar{2\sigma}}}\right)}{\left(\sqrt{\frac{\omega\mu}{2\sigma}}-\sqrt[j]{\frac{\omega\mu}{\bar{2\sigma}}}\right)\left(\sqrt{\frac{\omega\mu}{2\sigma}}+\sqrt[j]{\frac{\omega\mu}{\bar{2\sigma}}}\right)}\right\}
+\bar{P}_{av}= \frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}\left(\sqrt{\frac{\omega\mu}{2\sigma}}+j\sqrt{\frac{\omega\mu}{\bar{2\sigma}}}\right)}{\left(\sqrt{\frac{\omega\mu}{2\sigma}}-j\sqrt{\frac{\omega\mu}{\bar{2\sigma}}}\right)\left(\sqrt{\frac{\omega\mu}{2\sigma}}+j\sqrt{\frac{\omega\mu}{\bar{2\sigma}}}\right)}\right\}
 \end{dmath*}
 simplifying further,
 \begin{dmath*}
-\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}(\sqrt{\frac{\omega\mu}{2\sigma}}+\sqrt[j]{\frac{\omega\mu}{\bar{2\sigma}}})}{\frac{2\omega\mu}{2\sigma}}\right\}
-= \frac{|E_{o}|^{2}}{2}\mathfrak{Re}\left\{\frac{\sigma}{\omega\mu}\left(\sqrt{\frac{\omega\mu}{2\sigma}}+\sqrt[j]{\frac{\omega\mu}{\bar{2\sigma}}}\right) \right\}
+\bar{P}_{av}=\frac{1}{2}\mathfrak{Re}\left\{\frac{|E_{o}|^{2}(\sqrt{\frac{\omega\mu}{2\sigma}}+j\sqrt{\frac{\omega\mu}{\bar{2\sigma}}})}{\frac{2\omega\mu}{2\sigma}}\right\}
+= \frac{|E_{o}|^{2}}{2}\mathfrak{Re}\left\{\frac{\sigma}{\omega\mu}\left(\sqrt{\frac{\omega\mu}{2\sigma}}+j\sqrt{\frac{\omega\mu}{\bar{2\sigma}}}\right) \right\}
  =\frac{|E_{o}|}{2}\frac{\sigma}{\omega\mu}\times\sqrt{\frac{\omega\mu}{2\sigma}}=\frac{1}{2}|E_{o}|^{2}\sqrt{\frac{\sigma}{2\omega\mu}} 
 \end{dmath*}
 Hence for a good conductor, we have, 

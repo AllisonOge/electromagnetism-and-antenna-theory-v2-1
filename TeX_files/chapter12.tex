@@ -199,7 +199,7 @@ In this chapter, we are going to be concentrating on the \textbf{Parallel Short 
 By using the stub at the proper location on the main transmission line, it is possible to match a complex impedance $Z$ to the characteristic impedance $Z_0$.
 Recall the advantage of the stub technique is that we do not require a unique characteristic impedance $Z_0$ for each impedance matching. The characteristic impedance of the main and auxiliary transmission lines remains the same. However, we change the length $l_l$ from load to the location of the stub and the length of the stub (or auxiliary transmission line) attached to the main transmission line $l_s$ (see figure~\ref{fig:fig11}).
 
-There are three (3) techniques for matching a stub to the transmission line to match the load impedance to the characteristic impedance and they are:
+There are three (3) techniques for attaching a stub to the transmission line to match the load impedance to the characteristic impedance and they are:
 \begin{enumerate}[(i)]
 \item Single Stub matching technique - One attached auxiliary line.
 \item Double Stub matching technique - Two attached auxiliary lines.
@@ -259,12 +259,12 @@ Design a single stub matching unit to match the load impedance shown in figure~\
 
 \subsection*{Solution}
 We normalize $Z_L=90-j25$ to get 
-$\bar{Z}_L=1.8-j0.5$. since stub and $Z_L$ are in parallel,
+$\bar{Z}_L=1.8-j0.5$. Since stub and $Z_L$ are in parallel,
 we convert $\bar{Z}_L$ to its admittance value. $\bar{Y}_{L}$
 should be transformed from 
-$\bar{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies on the circle of constant conductance $g=1$. With OP we draw a circle of constant VSWR with OP as radius. We get the point where this VSWR circle intercept the g=1 circle at moving clockwise(towards the generator )from Q to M. The distance QM correspond to $L_1, L_1=0.152\lambda-0.032\lambda=0.12\lambda$.
+$\bar{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies on the circle of constant conductance $g=1$. Draw a circle of constant VSWR with OP as radius. We get the point where this VSWR circle intercept the g=1 circle moving clockwise(towards the generator )from Q to M. The distance QM correspond to $L_1.\hspace{0.15cm} L_1=0.152\lambda-0.032\lambda=0.12\lambda$.
 
-Mirror M on the VSWR circle to get $1-jb1$. On the constant susceptance curve of $jb$, find where it intercepts the circle at $g=0 \ and \ ?jb_1$. This is the outermost circle. $R$ represent the pure susceptance value of $jb_1$. 
+Mirror M on the VSWR circle to get $1-jb1$. On the constant susceptance curve of $jb$, find where it intercepts the circle at $g=0$. This is the outermost circle. $R$ represent the pure susceptance value of $jb_1$. 
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/fig14}
@@ -282,11 +282,11 @@ This technique involves the use of two (2) stubs. In this method, we change only
 %put footnote here and two figures(double stub(12.9) and Smith Chart(12.10))%
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig12}
+\includegraphics[width=1\linewidth]{./graphics/double_stub}
 \caption{Double Stub Matching Technique with two auxiliary lines attached}
 \label{fig:fig12}
 \end{figure}
-From figure~\ref{fig:fig12}, starting from the load end, the initial admittance is $\bar{Y} = g + jb$. After a distance $l_l$ moving clockwise to point B (towards generator), (at this point B\textsuperscript{\textemdash}, $g_1 + jb'$) and when this is combined with the susceptance from stub 1, $-jb_1$, we get $g_1 +jb_1$ at B\textsuperscript{+}. When transformed along the length $3\frac{\lambda}{8}$, we get $1 + jb_2$. When this is combined with the susceptance of stub 2 $-jb_2$, we get $1 + 0j$ beyond point C, C\textsuperscript{+}. As for the single-stub matching technique, we will solve the double-stub matching technique using the Smith Chart.
+From figure~\ref{fig:fig12}, starting from the load end, the initial admittance is $\bar{Y} = g + jb$. After a distance $l_l$ moving clockwise to point B (towards generator), at this point B\textsuperscript{\textemdash}, the admittance becomes $g_1 + jb'$ and when this is combined with the susceptance(or admittance) from stub 1, $-jb_1$, we get $g_1 +jb_1^{'}$ at B\textsuperscript{+}. When the admittance at B\textsuperscript{+} is further transformed along the length $3\frac{\lambda}{8}$(clockwise, towards the generator), we get $1 + jb_2$ at point C\textsuperscript{-}. When this is combined with the susceptance of stub 2 $-jb_2$, we get $1 + 0j$ beyond point C, C\textsuperscript{+}. As for the single-stub matching technique, we will solve the double-stub matching technique using the Smith Chart.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/dousmith}
@@ -300,10 +300,10 @@ Figure~\ref{fig:dousmith} shows the analysis for the structure in figure~\ref{fi
 \begin{enumerate}[(i)]
 \item Mark the normalized admittance $g + jb$ denoted by A in figure~\ref{fig:dousmith}.
 \item Move on the constant VSWR circle by $l_l$ to get to point B\textsuperscript{\textemdash} ($g_1 + jb'$).
-\item At point B\textsuperscript{+}, since we are adding the admittance of stub 1, $-jb'$, we are changing only the reactive part. So we move anticlockwise on the circle of constant conductance, $g_1$, from B\textsuperscript{\textemdash} till we get to the rotated $g = 1$ circle where it intersects at B\textsuperscript{+}. Essentially, stub 1 helps in bringing the admittance to lie on the rotated circle.
-\item At point B\textsuperscript{+}, we now move on a constant VSWR circle in a clockwise direction by $ 3\frac{\lambda}{8}$ to transform the admittance $g_1 + jb_1$ to $1 + jb_2$ at C\textsuperscript{\textemdash}.
-\item To cancel the reactive part, $jb_2$ we take a mirror image, $1-jb_2$, then find susceptance circle of $-jb_2$ at the outermost circle of the Smith Chart, $S_2$. We measure the distance from this point to the SC point in an anticlockwise direction to give us the length of the second stub, $l_{s2}$.
+\item At point B\textsuperscript{+}, since we are adding the admittance of stub 1, $-jb_{1}$, we are changing only the reactive part. So we move on the circle of constant conductance, $g_1$, from B\textsuperscript{\textemdash} till we get to the rotated $g = 1$ circle where it intersects at B\textsuperscript{+}(Notice that we will intersect the $g = 1$ circle at two points, this gives two possible solutions for B\textsuperscript{+} but we usually we pick one). So essentially, stub 1 helps in bringing the admittance to lie on the rotated circle.
 \item Now to find the length of the first stub, we find the difference between the two (2) susceptance values B\textsuperscript{\textemdash} and B\textsuperscript{+} since the conductance is the same. Mark the difference on the outermost circle of the Smith Chart $S_1$. The distance from this point to the SC point moving anticlockwise gives the length of the first stub.
+\item At point B\textsuperscript{+}, we now move on the constant VSWR circle of $g_{1} + jb_1^{'}$ in a clockwise direction by $ 3\frac{\lambda}{8}$ to transform the admittance $g_1 + jb_1^{'}$ to $1 + jb_2$ at C\textsuperscript{\textemdash}.
+\item To cancel the reactive part, $jb_2$ we take a mirror image, $1-jb_2$, then find susceptance circle of $-jb_2$ at the outermost circle of the Smith Chart, $S_2$. We measure the distance from this point to the SC point in an anticlockwise direction to give us the length of the second stub, $l_{s2}$.
 \end{enumerate}
 
 We have successfully tackled the drawback of the flexible location of the stub in the single stub matching technique. However, the double stub matching technique has a drawback which is, the whole essence of matching is possible provided that by moving in a constant conductance circle we can intersect the $g = 1$ circle. If by the movement through the constant conductance circle, we can not reach the rotated $g = 1$ circle, then matching is not possible. Now we know the nature of the constant g circle (that they are within one another), so it is possible that if the admittance at point B\textsuperscript{\textemdash} lies in a circle smaller than the $g = 1$ circle, then by our movement inside the constant conductance circle, we will never be able to intersect the rotated $g = 1$ circle, which means matching is not possible. What this means is that if $g_1 + jb'$ lies within the shaded forbidden region shown in figure~\ref{fig:dousmith}, then impedance matching is not possible. The impedance we want to match can lie in the forbidden region, but the transformed impedance after distance $ l_l$ should be out of the forbidden region.
@@ -331,19 +331,18 @@ For a load impedance, $Z_{L} = (100 + j100)\Omega$, and characteristic impedance
 \item Mark the point on the Smith Chart $\bar{Z_{L}} = 2 + j2$  
 \item Draw the constant VSWR circle from the normalized impedance point
 \item Move 180\textdegree\; from the normalized impedance point on the constant VSWR circle to the normalized admittance $Y_{L}$
-\item Extend the point $Y_{L}$ to meet the bigger circle on the Smith Chart 
-\item Where the line meets the VSWR circle mark the point and name it $Y_{d1}$            
+\item Then move from point $Y_{L}$ by distance $l_{1}(\text{in this case } 0.4\lambda)$ clockwise(towards generator). Where the line meets the VSWR circle, mark the point and name it $Y_{d1}$.           
 \item Draw a rotated 270\textdegree\; circle of radius 1. \textbf{Note:} $\frac{3\lambda}{8}$ correspond to 270\textdegree\; rotation on the Smith Chart because $0.5\lambda$ correspond to 360\textdegree.
-\item At point $Y_{d1}$, moving at constant $g$ mark point E and D which cuts the rotated 270\textdegree circle of radius 1 at point ends.
+\item At point $Y_{d1}$, move along the constant $g$ circle to intersect the rotated $g = 1$ circle. Mark the points of intersection E and D.
 \item Point E and D are $Y_{11}$                        
-\item Solve for $Y_{s1}$ (Using either point E and D as $Y_{11}$) $Y_{s1}$ =  $Y_{11}$ -  $Y_{d1}$           
-\item Mark point $Y_{s1}$ on the Smith Chart, extend the point to the circle and measure its wavelength towards the generator $l^{1}$ 
+\item Solve for $Y_{s1}$ (Using either point E and D as $Y_{11}$). $Y_{s1}$ =  $Y_{11}$ -  $Y_{d1}$           
+\item Mark point $Y_{s1}$ on the Smith Chart, extend the point to the outermost circle and mark the point $l^{1}$ 
 \item Moving from short circuit point to point $Y_{s1}$. Calculate the distance
 $ l_{s1} = 0.25 + l^{1} $                                    
 \item To get $l_{s2}$. With the radius from the centre to point E, draw a circle and with the radius from the centre to point D draw a circle
-\item Mark the $270\deg$ point of radius point E circle, where it meets with the unit resistance circle, mark the point and call it $Y_{d2}$. With radius from centre to point, D mark the $270\deg$ point, where it meets with the unit resistance circle and call it $Y_{d2}^{1}$ 
-\item With point $Y_{d2}$ or $Y_{d2}^{1}$ get $Y_{s2}$ $Y_{22}=1$ $Y_{s2}=Y_{22}-Y_{d2}^{1}$
-\item Mark the point $Y_{d2}$ on the Smith Chart and extend to the outer circle. Mark the point $l^{11}$
+\item Mark the $270\deg$ point of radius point E circle, where it meets with the unit resistance circle, mark the point and call it $Y_{d2}$. With radius from centre to point, D mark the $270\deg$ point, where it meets with the unit resistance circle and call it $Y_{d2}^{'}$ 
+\item With point $Y_{d2}$ or $Y_{d2}^{'}$ we can then get $Y_{s2}$. Note, $Y_{22}=1$ thus, $Y_{s2}=Y_{22}-Y_{d2}^{'}$
+\item Mark the point $Y_{d2}$ on the Smith Chart and extend to the outermost circle. Mark the point $l^{11}$
 \item Measure the length from the short circuit point to the $l^{11}$ $Y_{d2} = 0.25 + l^{11}$
 \end{enumerate}
 \end{exmp}
@@ -381,7 +380,7 @@ A $50\varOmega$ transmission line with an air core operates at 100MHz and is con
 Solution to exercise~\ref{ex122}
 
 \Exercise[label={ex123}]
-Find the matching network to match $Z_L = (100 + j100)\varOmega$ to a line characteristic impedance $50\varOmega$ using:
+Find the matching network to match $Z_L = (100 + j100)\varOmega$ to a line of characteristic impedance $50\varOmega$ using:
 \begin{enumerate}[(a)]
 \item a single series O.C stub
 \item a single parallel(shunt) O.C stub

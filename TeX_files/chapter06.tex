@@ -49,7 +49,7 @@ Let's say at $l$ we have maximum or minimum impedance, then moving $l=\frac{\lam
 At location $l$, Impedance $= \bar{Z}(l)$,
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/poiuyt}
+\includegraphics[width=1.1\linewidth]{./graphics/load_over_half_wavelength}
 \caption{Z($l$) over distance $\frac{\lambda}{2}$}
 \label{fig:astyuif}
 \end{figure}
@@ -292,8 +292,8 @@ So we need to evaluate $V^+$ using the same voltage equation but with $l = L = 0
 \begin{align*}
 V_{in} &= V^+e^{j\beta l}\lbrace1 + \Gamma_Le^{-2j\beta l}\rbrace\\
 V^+ &= \frac{V_{in}}{e^{j\beta l}\left(1+\left(\dfrac{Z_L - Z_0}{Z_L + Z_0}\right)e^{-2j\beta l}\right)}\\
-&=\frac{\dfrac{143.6\angle-11.46^o}{e^{j0.3}}}{1+\left(\dfrac{75 - 50}{75 + 50}\right)e^{-j0.6\pi}}\\
-&= \frac{\dfrac{143.6\angle-11.46^o}{e^{j0.3}}}{1+0.2e^{-j0.6\pi}}\\
+&=\frac{143.6\angle-11.46^o}{e^{j0.3\pi}\left(1 +\left(\dfrac{75 - 50}{75 + 50}\right)e^{-j0.6\pi}\right)}\\
+&= \frac{143.6\angle-11.46^o}{e^{j0.3\pi}\left( 1+0.2e^{-j0.6\pi}\right)}\\
 &= 150\angle-54^oV
 \end{align*}
 Thus the values for $V_L$ and $I_L$ are
@@ -320,7 +320,7 @@ So far, our transmission line analysis (voltage and current equations, impedance
 Considering the circuit in figure~\ref{fig:qwerrtt}, $Z_L$ is transformed to $Z^{'}_L$, from position BB' to AA'. $Z^{'}_L$ is the impedance of the load as seen by the generator end. With $Z_L$ transformed to $Z^{'}_L$, the whole circuit is reduced to a lumped circuit as shown in figure~\ref{fig:qwerrtt}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/a2}
+\includegraphics[width=1.1\linewidth]{./graphics/load_transformation}
 \caption{Transformation of load impedance from $Z_L$ to $Z_{L}^'$}
 \label{fig:qwerrtt}
 \end{figure}
