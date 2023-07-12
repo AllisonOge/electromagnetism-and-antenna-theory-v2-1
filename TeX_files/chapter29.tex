@@ -1,44 +1,44 @@
 \chapter{Uniform Plane Wave in an arbitrary direction}\label{lec:lec29}
 
-Prior to now, our discussion on plane wave propagation has been in an unbound medium, orienting our co-ordinate system such that the wave propagated was in the direction of one of the axis(the z-axis). This was done because an unbound medium is symmetric in all directions, regardless of the direction looked from, the medium appears same.
-However, in a bound medium, the choice of the co-ordinate axis might affect the analysis algebraically.
-Essentially we select a co-ordinate system that will enable our analysis be simple, doing this restricts the choice of co-ordinate axis. First we would investigate the propagation of electro-magnetic waves in a semi-finite medium (i.e half of an unbound medium), then move on to bound medium. However before this analysis we require a representation of electro-magnetic wave traveling in an arbitrary direction with respect to the co-ordinate axis.
+Prior to now, our discussion on plane wave propagation has been in an unbound medium, orienting our coordinate system such that the wave propagated was in the direction of one of the axes (the z-axis). This was done because an unbound medium is symmetric in all directions, regardless of the direction looked from, the medium appears the same.
+However, in a bound medium, the choice of the coordinate axis might affect the analysis algebraically.
+Essentially we select a coordinate system that will enable our analysis to be simple, doing this restricts the choice of coordinate axes. First, we would investigate the propagation of electromagnetic waves in a semi-finite medium (i.e. half of an unbound medium), then move on to a bound medium. However, before this analysis, we require a representation of electromagnetic waves travelling in an arbitrary direction with respect to the coordinate axis.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.43]{./graphics/wave_in_arbitrary_direction}
 \caption{wave in arbitrary direction}
-\label{wave in arbitrary direction}
+\label{fig:wave_in_arbitrary_direction}
 \end{figure}
 
 \section{Wave in arbitrary direction}
-Recall when we had a co-ordinate system such that the wave was propagating in the z-axis, it's phase variation was also in the same direction while it's electric and magnetic fields were in planes perpendicular to the z-axis(i.e the x-y plane).
-Say we have an unbound medium, the wave would still be oriented such that it is moving in an arbitrary direction with respect to the co-ordinate axis.
+Recall when we had a coordinate system such that the wave was propagating in the z-axis, its phase variation was also in the same direction while its electric and magnetic fields were in planes perpendicular to the z-axis(i.e. the x-y plane).
+Say we have an unbound medium, the wave would still be oriented such that it is moving in an arbitrary direction with respect to the coordinate axis.
 
-In fig(29.1) a wave propagation in an arbitrary direction is shown; a constant phase plane(i.e the plane which the electric and magnetic field lie) is shown perpendicular to the waves direction.
+In figure~\ref{fig:wave_in_arbitrary_direction} a wave propagation in an arbitrary direction is shown; a constant phase plane(i.e. the plane in which the electric and magnetic field lie) is shown perpendicular to the wave's direction.
 $\phi_{x}$,$\phi_{y}$ and $\phi_{z}$ are the angles which the wave makes with the x, y and z axis respectively. 
 The vector has direction cosines $\cos\phi_{x}\hat{x}$, $\cos\phi_{y}\hat{y}$, $\cos\phi_{z}\hat{z}$. The unit vector:
 \begin{equation}
 \hat{n} = \cos\phi_{x}\hat{x} + \cos\phi_{y}\hat{y} + \cos\phi_{z}\hat{z}
 \end{equation}
 
-Taking two arbitrary points on the wave direction point O and P, where O is the origin and P has co-ordinates (x,y,z).
+Taking two arbitrary points on the wave direction point O and P, where O is the origin and P has coordinates (x,y,z).
 
 Thus $\vec{OP}$ = $x\hat{x}$ + $y\hat{y}$ + $z\hat{z}$
 
-The normal distance to take to any point on the constant phase plane is OA , so if any point is taken on the plane and it's projection is found in the direction of the normal, the quantity is fixed regardless of the point it is taking on the phase plane.
+The normal distance to take to any point on the constant phase plane is OA, so if any point is taken on the plane and its projection is found in the direction of the normal, the quantity is fixed regardless of the point it is taking on the phase plane.
 
 The equation of the phase plane will be:
 
 \begin{center}
-$\hat{n}$.$\vec{OP}$ (i.e the dot product of $\hat{n}$ and $\vec{OP}$)
+$\hat{n}\cdot\vec{OP}$ (i.e the dot product of $\hat{n}$ and $\vec{OP}$)
 
-$\hat{n}$.$\vec{OP}$ = $\left|OA \right|$  = constant
+$\hat{n}\cdot\vec{OP}$ = $\left|OA \right|$  = constant
 
 substituting for $\hat{n}$ and $\vec{OP}$
 \end{center}
 $x\cos\phi_{x}$ + $y\cos\phi_{y}$ + $z\cos\phi_{z}$ = constant. And this constant is the magnitude of $\vec{OA}$ which gives the distance of the plane from its origin.
 
-If the wave is having a phase constant, $\beta$ along $\vec{OA}$, then the phase of the plane is $\beta$ multiplied by the distance traveled which is $\lvert OA\rvert$.
+If the wave is having a phase constant, $\beta$ along $\vec{OA}$, then the phase of the plane is $\beta$ multiplied by the distance travelled which is $\lvert OA\rvert$.
 
 \begin{center}
 therefore, Phase of the plane = $\beta$ $\left|OA \right|$ = $\beta$ $\hat{n}.\hat{r}$
@@ -47,10 +47,10 @@ where $\hat{r}$ = $\vec{OP}$ = $x\hat{x}$ + $y\hat{y}$ + $z\hat{z}$
 
 \end{center}
 $\beta$ = Phase constant,
-$\hat{n}$ = Unit vector in the direction of propagated wave,
+$\hat{n}$ = Unit vector in the direction of the propagated wave,
 $\hat{r}$ = Position of any Vector on the constant phase plane
 
-Since we now have the phase of plane, then getting the expression of the electric and magnetic field which corresponds to the wave propagation is straight forward.
+Since we now have the phase of the plane, then getting the expression of the electric and magnetic field which corresponds to the wave propagation is straightforward.
 \begin{center}
 
 Electric field, $\bar{E}$ = $\bar{E}_{0}e^{-j\beta \hat{n}.\hat{r}}$
@@ -79,7 +79,7 @@ Recall, $\hat{E}_{0}.\hat{n}$ = 0 since they are perpendicular, then
 \begin{center}
 $\hat{E}\cdot \hat{k} = 0$
 \end{center}
-Therefore, to verify if the wave is traveling in the z-direction then
+Therefore, to verify if the wave is travelling in the z-direction then
 \begin{center}
 $\phi_{z}$ = 0, $\phi_{y}$ = 90\textdegree, $\phi_{x}$ = 90\textdegree.
 
@@ -89,15 +89,14 @@ $\hat{k}$ = $\beta\hat{z}$
 
 Thus, space variation = $e^{-j\beta z}$
 \end{center}
-This is the same expression we got for a wave which was traveling in the z direction.
-\\Therefore,
+This is the same expression we got for a wave which was travelling in the z-direction.
 
-$\hat{E}$ = $\hat{E}_{0} e^{-j\beta\hat{n}.\hat{r}}$ is a representation of the electric field for a uniform plane wave traveling in an arbitrary direction making angles $\phi_{x}$, $\phi_{y}$ and $\phi_{z}$ with the three co-ordinate axes.
+Therefore, $\hat{E}=\hat{E}_{0} e^{-j\beta\hat{n}.\hat{r}}$ is a representation of the electric field for a uniform plane wave travelling in an arbitrary direction making angles $\phi_{x}$, $\phi_{y}$ and $\phi_{z}$ with the three co-ordinate axes.
 
 
 To find the magnetic field corresponding to the electric field, we go back to the original Maxwell's equation.
 
-Since we are still dealing with the media which does not have conductivity, we say let's have a source free media i.e no conductivity or currents.
+Since we are still dealing with media which does not have conductivity, we say let's have source-free media i.e. no conductivity or currents.
 
 The Maxwell's equations:
 
@@ -114,19 +113,19 @@ and
 \frac{-1}{j\omega\mu}
 \begin{vmatrix}
 \hat{x} & \hat{y} & \hat{z}\\
-	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
-	E_{x} & E_{y} & E_{z}
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+E_{x} & E_{y} & E_{z}
 \end{vmatrix}
 \end{equation}
 
-The electric field vector $\hat{E}$ can be determined explicitly in it's component as:
+The electric field vector $\hat{E}$ can be determined explicitly in its component as:
 
 \begin{align}
 \bar{E} = [E_{0x}\hat{x} + E_{0y}\hat{y} + E_{0z}\hat{z}]e^{-j\bar{k}.\bar{r}}
 \end{align}
 
 Note that, $E_{0x}$, $E_{0y}$ and $E_{0z}$ are not functions of the space since the electric field is constant everywhere in the space, hence space variation is only present in $e^{-j\bar{k}.\bar{r}}$.
-So taking a component and it's derivative w.r.t x will be:
+So taking a component and its derivative w.r.t x will be:
 
 \begin{equation}
 \frac{\delta}{\delta x} [E_x,E_y,E_z] = -jk_x[E_x,E_y,E_z]
@@ -145,9 +144,9 @@ E_{x} & E_{y} & E_{z}
 \end{equation}
 
 But, since the quantity $\begin{vmatrix}
-	\hat{x} & \hat{y} & \hat{z}\\
-	-jk_x & -jk_y & -jk_z\\
-	E_{x} & E_{y} & E_{z}
+\hat{x} & \hat{y} & \hat{z}\\
+-jk_x & -jk_y & -jk_z\\
+E_{x} & E_{y} & E_{z}
 \end{vmatrix}$ is a cross product of $-jk$ and $E$, $\bar{H}$ can be written as:
 \begin{equation}
 \frac{-1}{j\omega\mu} [-j\bar{k}\times\bar{E}] = \frac{1}{\omega\mu} \bar{k}\times\bar{E}
@@ -157,21 +156,21 @@ Recall, $\hat{k}$ is in the direction of wave propagation,
 $\bar{E}$ is in the direction of the electric field and
 $\bar{H}$ = cross product of $\hat{k}$ and $\bar{E}$, meaning it is perpendicular to both  $\hat{k}$ and $\bar{E}$.
 
-Say we have a wave traveling in an arbitrary direction with electric field:
+Say we have a wave travelling in an arbitrary direction with an electric field:
 \begin{equation}
 \bar{E} = E_0 e^{-j\bar{k}.\bar{r}} = \bar{E}_0[e^{-j(\beta\cos\phi_{x}x + \beta\cos\phi_{y}y + \beta\cos\phi_{z}z)}]
 \end{equation}
 
-Considering only the space space variation the z-direction:
+Considering only the space variation in the z-direction:
 \begin{equation}
 \bar{E} = \bar{E}_0 e^{-j\beta(\cos\phi_{x}x + \cos\phi_{y}y)}.e^{-j\beta(\cos\phi_{z}z)}
 \end{equation}
 
-Note that if we move in the x-y plane we have a phase variation which means the x-y plane is not a constant phase plane, this is visible from fig~\ref{wave in arbitrary direction}. But there is also a phase variation in the z-direction.
+Note that if we move in the x-y plane we have a phase variation which means the x-y plane is not a constant phase plane, this is visible from fig~\ref{fig:wave_in_arbitrary_direction}. But there is also a phase variation in the z-direction.
 
 So looking at the wave, what is the velocity with which the phase point moves in the z-direction?
 
-So we take the phase in the direction of z. thus, the effective phase constant which the wave sees in the z-direction is $\beta\cos\phi_{z}$.
+So we take the phase in the direction of z. thus, the effective phase constant that the wave sees in the z-direction is $\beta\cos\phi_{z}$.
 
 Wave phase constant in z-direction($\beta z$):
 \begin{equation}
@@ -187,7 +186,7 @@ Thus,
 \frac{\omega}{\beta}\times \frac{1}{\cos\phi_{z}} = \frac{v_0}{\cos\phi_{z}}
 \end{equation}
 
-Therefore, $v_0$ is the velocity of the wave in the direction perpendicular to the phase i.e the wave velocity in an unbound medium.
+Therefore, $v_0$ is the velocity of the wave in the direction perpendicular to the phase i.e. the wave velocity in an unbound medium.
 
 But the phase velocity of the wave in the z-direction is $\frac{v_0}{\cos\phi_{z}}$.
 
@@ -203,8 +202,8 @@ $v_{px}$, $v_{py}$, $v_{pz}$ $\geq$ $v_0$
 also when $\cos\phi_{x}$, $\cos\phi_{y}$, or $\cos\phi_{z}$ = 0, $v_p$ = $\infty$
 therefore, $\infty$ $\geq$ $v_{px}$, $v_{py}$, $v_{pz}$ $\geq$ $v_0$
 \end{center}
-Since we are talking about velocities greater than the intrinsic velocities, we know light is an electro-magnetic wave. And we know the intrinsic velocity of light will be the velocity of light $C$ i.e $v_0 = C$.
-But from physics we know that the velocity of any system cannot be greater than the velocity of light.
+Since we are talking about velocities greater than the intrinsic velocities, we know light is an electromagnetic wave. And we know the intrinsic velocity of light will be the velocity of light $C$ i.e. $v_0 = C$.
+But from physics, we know that the velocity of any system cannot be greater than the velocity of light.
 Does that mean we have found a mechanism that can transfer energy faster than the speed of light?
 No. This is because this velocity is not the velocity of any energy packet or physical point in space because the wave defines its velocity which is based on the phase fronts. This essentially gives the condition that $v_p$ $<$ $v_0$.
 
@@ -213,22 +212,22 @@ Re-examining it:
 \centering
 \includegraphics[width=.7\linewidth]{./graphics/phase_velocity_of_wave}
 \caption{}
-\label{wave with constant wave fonts in xy plane}
+\label{fig:wave_with_constant_wave_fonts_in_xy_plane}
 \end{figure}
 
-From fig\ref{wave with constant wave fonts in xy plane} we have a wave traveling in the x-z plane, with the constant wave fronts shown, by the time the wave travels between two points on its axis, the constant phase points (given by the entire phase fronts) moves between two points(A and B'), unless the wave is parallel to the constant wave fronts the distance moved by the front is always greater than that of the wave, while that happened the point A has not moved to the point B', rather it has measured from A to A', so the point that moved to B' was not A but rather it was from point B which has now moved to B'. So when the wave is moving a defined point (A) on the wave front, it only moves by a distance AA', however when measuring the phase velocities we simply measure the separation between the points on the z-axis and ask how much time was spent changing positions. So essentially we measure the distance, find how much phase change it has undergone and from there we can get the phase velocity.
+From fig\ref{fig:wave_with_constant_wave_fonts_in_xy_plane} we have a wave travelling in the x-z plane, with the constant wavefronts shown, by the time the wave travels between two points on its axis, the constant phase points (given by the entire phase fronts) moves between two points(A and B'), unless the wave is parallel to the constant wavefronts the distance moved by the front is always greater than that of the wave, while that happened the point A has not moved to the point B', rather it has measured from A to A', so the point that moved to B' was not A but rather it was from point B which has now moved to B'. So when the wave is moving a defined point (A) on the wavefront, it only moves by a distance AA', however when measuring the phase velocities we simply measure the separation between the points on the z-axis and ask how much time was spent changing positions. So essentially we measure the distance, find how much phase change it has undergone and from there we can get the phase velocity.
 
-So from this we can see that the phase velocity is not really giving us the velocity of a particular point on the phase line. In fact when we define the phase velocity the entire constant phase plane is behaving like a point, so we just take two points (but both points are representing the same phase) so if we find the same phase we say the distance with a constant phase point has moved from the first to the second point, this is the reason we get the velocity of a particular point on the phase front.
+So from this, we can see that the phase velocity is not really giving us the velocity of a particular point on the phase line. In fact when we define the phase velocity the entire constant phase plane is behaving like a point, so we just take two points (but both points are representing the same phase) so if we find the same phase we say the distance with a constant phase point has moved from the first to the second point, this is the reason we get the velocity of a particular point on the phase front.
 
-So the velocity, AB (whatever phase velocity we get) is not simply the the resolution of the velocity vector in 3-directions, because resolving the velocity in 3-directions will always make it less than the actual velocity but in this case we see that the components of the phase velocity in three directions $v_{px}$, $v_{py}$ and $v_{pz}$ are always greater than the velocity vector, so this is not a simple vector resolution of the velocity of the wave, in fact the phase velocities are calculated from the distance traveled by the constant phase point along the z-axis and that gives the velocity:
+So the velocity, AB (whatever phase velocity we get) is not simply the resolution of the velocity vector in 3-directions, because resolving the velocity in 3-directions will always make it less than the actual velocity but in this case, we see that the components of the phase velocity in three directions $v_{px}$, $v_{py}$ and $v_{pz}$ are always greater than the velocity vector, so this is not a simple vector resolution of the velocity of the wave, in fact, the phase velocities are calculated from the distance travelled by the constant phase point along the z-axis and that gives the velocity:
 \begin{dmath*}
 v_p = \frac{\text{Intrinsic Velocity}}{\text{Direction Cosines}}
 \end{dmath*}
-So as the wave become more and more perpendicular to the z-axis: meaning moving in the x direction, the phase front becomes parallel to the z-axis, at point A a small tilt shows that the point is moving very rapidly. So by a small tilt it would have moved by a large distance in the z-direction, that is the point has moved a small distance in the x-axis when the phase front is almost parallel to the z-axis, so what we find is that if the wave was moving along the x-axis and if the phase fronts were parallel to the z-axis, then for a small movement of the wave, the point moves by a very large distance. And if the wave was perfectly parallel to the z-axis the point moves from $-\infty$ to +$\infty$ even for infinitesimal movement of the wave in the x-direction.
+So as the wave becomes more and more perpendicular to the z-axis: meaning moving in the x direction, the phase front becomes parallel to the z-axis, at point A a small tilt shows that the point is moving very rapidly. So by a small tilt, it would have moved by a large distance in the z-direction, that is the point has moved a small distance in the x-axis when the phase front is almost parallel to the z-axis, what we find is that if the wave was moving along the x-axis and if the phase fronts were parallel to the z-axis, then for a small movement of the wave, the point moves by a very large distance. And if the wave was perfectly parallel to the z-axis the point moves from $-\infty$ to +$\infty$ even for infinitesimal movement of the wave in the x-direction.
 
-So when the phase velocity approaches infinity the wave move in the x-direction, so that the point vector for the wave is in the x-direction, there is no point moving in the z-direction.
+So when the phase velocity approaches infinity the wave move in the x-direction, so that the point vector for the wave is in the x-direction, and there is no point moving in the z-direction.
 As the phase velocity approaches infinity we might ask with what velocity does the energy travel in the z-direction.
-So in general we might ask a question if the wave is moving with a velocity $v_p$ in the z-direction, with what velocity is the energy moving in the z-direction.
+So in general we might ask a question \emph{if the wave is moving with a velocity $v_p$ in the z-direction, with what velocity is the energy moving in the z-direction?}
 And we say that the velocity in the AB' direction which is $v_0$ will be $v_0\times\cos\phi_{z}$, so the velocity with which the point A moves in the z-direction will be $v_0\cos\phi_{z}$ and if it is in the x-direction it will be $v_0\cos\phi_{x}$. So the velocity with which a given point on the phase front moves in the z-direction is called the \textbf{group velocity($v_g$)}
 
 \begin{center}
@@ -255,7 +254,7 @@ So we have a kind of dividing line:
 \caption{}
 \end{figure}
 
-Only in a situation where the wave is traveling in the x,y,z direction or if we find the velocity of the wave both $v_p$ and $v_g$ in the direction of wave motion then both $v_p$ and $v_p$ will be $v_{0}^2$.
+Only in a situation where the wave is travelling in the x,y,z direction or if we find the velocity of the wave both $v_p$ and $v_g$ in the direction of wave motion then both $v_p$ and $v_p$ will be $v_{0}^2$.
 \begin{equation}
 v_p v_g = v_{0}^2
 \end{equation}
