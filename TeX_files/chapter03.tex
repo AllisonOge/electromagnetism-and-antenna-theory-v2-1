@@ -396,7 +396,7 @@ V &= V^+e^{+\gamma l}+V^-e^{-\gamma l}
 I &= \frac{V^+}{Z_0}e^{+\gamma l}-\frac{V^-}{Z_0}e^{-\gamma l}
 \label{eqn:currentfromload}
 \end{align}
-Beyond this point all of our analysis will be done using the wave equations~\eqref{eqn:voltagefromload} and~\eqref{eqn:currentfromload}
+Beyond this point, all of our analysis will be done using the wave equations~\eqref{eqn:voltagefromload} and~\eqref{eqn:currentfromload}
 
 \section{The Reflection Coefficient}\index{reflection coefficient}
 At $l = 0$, $Z = Z_L$ since $Z_L$ terminates the transmission line at this point. Substituting $l = 0$ into Equations~\eqref{eqn:voltagefromload} and~\eqref{eqn:currentfromload},
@@ -416,13 +416,13 @@ Thus,
 \begin{equation}
 Z_L = Z_0 \left[\frac{V^+ + V^-}{V^+ - V^-} \right]
 \end{equation}
-It is clear from the equation that the load impedance is related to the characteristic impedance and also related to the amplitude of the forward and backward waves. We can simplifiy further by dividing the top and bottom by $V^+$, then
+It is clear from the equation that the load impedance is related to the characteristic impedance and also related to the amplitude of the forward and backward waves. We can simplify further by dividing the top and bottom by $V^+$, then
 \begin{dmath}
 Z_L = Z_0\left[ \frac{\frac{V^+ + V^-}{V^+}}{\frac{V^+ - V^-}{V^+}}\right]
 = Z_0\left[ \frac{1+ \frac{V^-}{V^+}}{1 - \frac{V^-}{V^+}}\right] 
 \label{eqn:impedatload}
 \end{dmath}
-Here we see that the absolute values of $V^+$ and $V^-$ do not matter, instead, the ratio $\frac{V^-}{V^+}$ is what's important. Hence we define a new parameter on which $Z_L$ depends. This parameter is known as the \emph{reflection coefficient}. It can be defined as the ratio of backward traveling wave to forward traveling wave on the transmission line.
+Here we see that the absolute values of $V^+$ and $V^-$ do not matter, instead, the ratio $\frac{V^-}{V^+}$ is what's important. Hence we define a new parameter on which $Z_L$ depends. This parameter is known as the \emph{reflection coefficient}. It can be defined as the ratio of a backward travelling wave to a forward travelling wave on the transmission line.
 
 The reflection coefficient is denoted by $\Gamma$\footnote{
 $\Gamma$ is capital Gamma, the third letter of the Greek alphabet.
@@ -488,13 +488,13 @@ The reflection coefficient in equation~\eqref{eqn:reflectioncoefficientatload} d
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex31}]
-With appropriate equation of amplitude variation along a transmission line, explain what is meant by Characteristic length.
+With an appropriate equation of amplitude variation along a transmission line, explain what is meant by Characteristic length.
 
 \Exercise[label={ex32}]
-In what unit is attenuation constant stated in most data sheets?
+In what unit is the attenuation constant stated in most data sheets?
 
 \Exercise[label={ex33}]
-Starting from the differential equation guilding transmission lines, derive the characteristic impedance relation. What does negative impedance imply from the backward voltage to current ratio?
+Starting from the differential equation building transmission lines, derive the characteristic impedance relation. What does negative impedance imply from the backward voltage to current ratio?
 
 \Exercise[label={ex34}]
 What are the physical significance of the propagation constant($\gamma$), attenuation constant($\alpha$) and phase constant($\beta$)?

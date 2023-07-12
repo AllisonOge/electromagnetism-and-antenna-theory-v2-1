@@ -43,7 +43,7 @@ Z_{0x}=\sqrt{RZ_0}
 \label{eqn:xteristicsimptransformer}
 \end{equation}
 Equation~\eqref{eqn:xteristicsimptransformer} implies that if we have a mismatch condition, we can input a matching transformer (an example is the \uppercase{balun}\footnote{
-A \uppercase{balun} is a type of electrical transformer used to connect a balanced transmission line, such as a twisted pair cable, to an unbalanced transmission line, such as a coaxial cable. The name \uppercase{balun} is short for \textquotedblleft\;balanced to unbalanced.\textquotedblright\;. It has a length $l=\frac{\lambda}{4}$, and a characteristic impedance $Z_{0x}$. \uppercase{Balun}s are commonly used in radio and television systems, as well as in data communication networks. They are available in a variety of designs, including ferrite-core \uppercase{balun}s, air-core \uppercase{balun}s, and transmission line \uppercase{balun}s.
+A \uppercase{balun} is a type of electrical transformer used to connect a balanced transmission line, such as a twisted pair cable, to an unbalanced transmission line, such as a coaxial cable. The name \uppercase{balun} is short for \textquotedblleft\;balanced to unbalanced.\textquotedblright. It has a length $l=\frac{\lambda}{4}$, and a characteristic impedance $Z_{0x}$. \uppercase{Balun}s are commonly used in radio and television systems, as well as in data communication networks. They are available in a variety of designs, including ferrite-core \uppercase{balun}s, air-core \uppercase{balun}s, and transmission line \uppercase{balun}s.
 }\index{balun}). Introducing this section of the transmission line, we will have a matched condition where R will appear as $ Z_0$ when seen from the input and $ Z_0$ will appear as R when seen from the output. Since the transmission line is lossless, there is a match on the transmission line from $ Z_0$ to R, therefore, we will see a maximum power transfer.
 This technique of matching impedance is known as the \textbf{Quarter Wavelength Transformer Technique}\index{quarter wavelength transformer technique} which derives its name from the fact that we have to travel a length which is equal to a quarter, that is, 1/4 of the wavelength $\lambda$. This matching transformer is also used for matching lumped circuits.
 
@@ -262,7 +262,7 @@ We normalize $Z_L=90-j25$ to get
 $\bar{Z}_L=1.8-j0.5$. Since stub and $Z_L$ are in parallel,
 we convert $\bar{Z}_L$ to its admittance value. $\bar{Y}_{L}$
 should be transformed from 
-$\bar{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies on the circle of constant conductance $g=1$. Draw a circle of constant VSWR with OP as radius. We get the point where this VSWR circle intercept the g=1 circle moving clockwise(towards the generator )from Q to M. The distance QM correspond to $L_1.\hspace{0.15cm} L_1=0.152\lambda-0.032\lambda=0.12\lambda$.
+$\bar{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies on the circle of constant conductance $g=1$. Draw a circle of constant VSWR with OP as the radius. We get the point where this VSWR circle intercept the g=1 circle moving clockwise(towards the generator )from Q to M. The distance QM corresponds to $L_1.\hspace{0.15cm} L_1=0.152\lambda-0.032\lambda=0.12\lambda$.
 
 Mirror M on the VSWR circle to get $1-jb1$. On the constant susceptance curve of $jb$, find where it intercepts the circle at $g=0$. This is the outermost circle. $R$ represent the pure susceptance value of $jb_1$. 
 \begin{figure}[h]
@@ -272,7 +272,7 @@ Mirror M on the VSWR circle to get $1-jb1$. On the constant susceptance curve of
 \label{fig:fig14}
 \end{figure}
 
-Hence we have to move from the short circuit (SC) end of the stub towards the generator to see this Susceptance. The distance $l_s$ is the movement from SC to -jb1 towards the generator and that distance represents the length of the stub. For admittance on the Smith chart right most side is the SC part and the leftmost part is the open circuit part. This is opposite to the convention in the impedance Smith chart.
+Hence we have to move from the short circuit (SC) end of the stub towards the generator to see this Susceptance. The distance $l_s$ is the movement from SC to -jb1 towards the generator and that distance represents the length of the stub. For admittance on the Smith chart, right most side is the SC part and the leftmost part is the open circuit part. This is opposite to the convention in the impedance Smith chart.
 
 At SC $l_{sc}=0.25\lambda$ moving towards the generator.At R, $l=0.402\lambda$,the distance $l_s=0.402-0.25=0.152\lambda$. Now we know the length of the stub and the location of the stub as well. These are some of the problems which can be solved easily with the help of the Smith chart. Using an analytic approach for the same process is an extremely tedious task. This example clearly demonstrates the use of a Smith chart for solving complex transmission line problems.
 \end{exmp}
@@ -333,14 +333,13 @@ For a load impedance, $Z_{L} = (100 + j100)\Omega$, and characteristic impedance
 \item Move 180\textdegree\; from the normalized impedance point on the constant VSWR circle to the normalized admittance $Y_{L}$
 \item Then move from point $Y_{L}$ by distance $l_{1}(\text{in this case } 0.4\lambda)$ clockwise(towards generator). Where the line meets the VSWR circle, mark the point and name it $Y_{d1}$.           
 \item Draw a rotated 270\textdegree\; circle of radius 1. \textbf{Note:} $\frac{3\lambda}{8}$ correspond to 270\textdegree\; rotation on the Smith Chart because $0.5\lambda$ correspond to 360\textdegree.
-\item At point $Y_{d1}$, move along the constant $g$ circle to intersect the rotated $g = 1$ circle. Mark the points of intersection E and D.
-\item Point E and D are $Y_{11}$                        
+\item At point $Y_{d1}$, move along the constant $g$ circle to intersect the rotated $g = 1$ circle. Mark the points of intersection E and D.  Point E and D are $Y_{11}$                        
 \item Solve for $Y_{s1}$ (Using either point E and D as $Y_{11}$). $Y_{s1}$ =  $Y_{11}$ -  $Y_{d1}$           
-\item Mark point $Y_{s1}$ on the Smith Chart, extend the point to the outermost circle and mark the point $l^{1}$ 
+\item Mark point $Y_{s1}$ on the Smith chart, extend the point to the outermost circle and mark the point $l^{1}$ 
 \item Moving from short circuit point to point $Y_{s1}$. Calculate the distance
 $ l_{s1} = 0.25 + l^{1} $                                    
 \item To get $l_{s2}$. With the radius from the centre to point E, draw a circle and with the radius from the centre to point D draw a circle
-\item Mark the $270\deg$ point of radius point E circle, where it meets with the unit resistance circle, mark the point and call it $Y_{d2}$. With radius from centre to point, D mark the $270\deg$ point, where it meets with the unit resistance circle and call it $Y_{d2}^{'}$ 
+\item Mark the 270\textdegree point of radius point E circle, where it meets with the unit resistance circle, mark the point and call it $Y_{d2}$. With radius from centre to point, D mark the $270\deg$ point, where it meets with the unit resistance circle and calls it $Y_{d2}^{'}$ 
 \item With point $Y_{d2}$ or $Y_{d2}^{'}$ we can then get $Y_{s2}$. Note, $Y_{22}=1$ thus, $Y_{s2}=Y_{22}-Y_{d2}^{'}$
 \item Mark the point $Y_{d2}$ on the Smith Chart and extend to the outermost circle. Mark the point $l^{11}$
 \item Measure the length from the short circuit point to the $l^{11}$ $Y_{d2} = 0.25 + l^{11}$
