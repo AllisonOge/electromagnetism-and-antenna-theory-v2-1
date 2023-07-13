@@ -7,7 +7,7 @@ Thank you for contributing to this project! You must fill out the information be
 e.g. it closes an ISSUE
 
 <!-- If there's an existing issue for your change, please replace the ISSUE above with a link to the issue.
-If there's _not_ an existing issue, please open one first to make it more likely that this update will be accepted: https://github.com/github/docs/issues/new/choose. -->
+If there's _not_ an existing issue, please open one first to make it more likely that this update will be accepted: https://github.com/AllisonOge/electromagnetism-and-antenna-theory-v2-1/issues/new/choose -->
 
 ### What's being changed (if available, include any code snippets, screenshots, or gifs):
 
