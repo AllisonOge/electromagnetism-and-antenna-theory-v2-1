@@ -1,50 +1,44 @@
 \chapter{Total Internal Reflection}\label{lec:lec32}
 
-In this chapter, we will discuss a special case of reflection across a dielectric boundary called Total Internal Reflection. We studied total internal reflection at high school level where it was understood that, if a ray is incident at an angle greater than the critical angle, the ray is completely reflected back into the same medium. However, this understanding is a rather superficial one. Here we do a detailed study of the phenomenon TOTAL INTERNAL REFLECTION.
+In this chapter, we will discuss a special case of reflection across a dielectric boundary called Total Internal Reflection. We studied total internal reflection at the high school level where it was understood that, if a ray is incident at an angle greater than the critical angle, the ray is completely reflected back into the same medium. However, this understanding is a rather superficial one. Here we do a detailed study of the phenomenon of TOTAL INTERNAL REFLECTION.
 
 \section{Snell's Law}
 From Snell's Law,
 \begin{align}
 \beta_1 \sin\theta_i = \beta_2 \sin\theta_t
-\label{equation1_Lec32}
+\label{eqn:eqn31_1}
 \end{align}
 where $\beta_1 and \beta_2$ are the phase constants in the two media. Recall;
 $$ \beta_{1} = \omega\sqrt{\mu_{1}\epsilon_{1}}$$
 $$ \beta_{2} = \omega\sqrt{\mu_{2}\epsilon_{2}}$$
 \begin{align*}
-\omega\sqrt{\mu_1\epsilon_{1}} \sin\theta_i = \omega\sqrt{\mu_2\epsilon_2}  \sin\theta_t
-\end{align*}
-\begin{center}
-or
-\end{center}
-\begin{align*}
-\sqrt{\mu_1\epsilon_{1}} \sin\theta_i = \sqrt{\mu_2\epsilon_2}  \sin\theta_t
+\omega\sqrt{\mu_1\epsilon_{1}} \sin\theta_i &= \omega\sqrt{\mu_2\epsilon_2}  \sin\theta_t\\
+&\text{or}\\
+\sqrt{\mu_1\epsilon_{1}} \sin\theta_i &= \sqrt{\mu_2\epsilon_2}  \sin\theta_t
 \end{align*}
 If the medium parameters are such that,
 \begin{align}
 \frac{\beta_1}{\beta_2}\sin\theta_i > 1
-\end{align}then there is no wave nature in medium 2 for which the angle $\sin\theta_t$ can propagate. It is more of an imaginary angle which lacks direction.
-And even though phase conditions in equation~\ref{equation1_Lec32} is satisfied, there is no physical angle $\theta_t$ for which
+\end{align}
+Then there is no wave nature in medium 2 for which the angle $\sin\theta_t$ can propagate. It is more of an imaginary angle which lacks direction. And even though phase conditions in equation~\ref{eqn:eqn31_1} is satisfied, there is no physical angle $\theta_t$ for which
 \begin{align}
 \sin\theta_t > 1
-\label{equation3_Lec32}
+\label{eqn:eqn32_3}
 \end{align}
 This poses a very interesting case. Now we require in our reflection co-efficient expression that the quantity
 \begin{align}
 \cos\theta_t = \sqrt{1-\sin^2\theta_t}
 \end{align}
-\begin{center}
 Substituting the expression for $\sin^{2}\theta_{t}$,
-\end{center}
 \begin{align*}
 \cos\theta_t = \sqrt{1-(\frac{\beta_1}{\beta_2}\sin\theta_i)^2}
 \end{align*}
 this leaves the quantity $1 - (\frac{\beta_1}{\beta_2}\sin\theta_i)^2$ always negative and thus, the quantity $\sqrt{1 - (\frac{\beta_1}{\beta_2}\sin\theta_i)^2}$ imaginary. So we make it positive to satisfy the medium parameter in which $\frac{\beta_1}{\beta_2}\sin\theta_i > 1$
 \begin{align}
 \cos\theta_t = \jmath\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}
-\label{equation5_Lec32}
+\label{eqn:eqn32_5}
 \end{align}
-Now again, we see that from equation~\ref{equation3_Lec32} and equation~\ref{equation5_Lec32} 
+Now again, we see that from equation~\ref{eqn:eqn32_3} and equation~\ref{eqn:eqn32_5} 
 that there is no physical angle $\theta_t$ for which the wave would be propagated.
 
 However for the angle $\theta_t$ and $\theta_i$ we would still have reflection and transmission coefficients, so we go back and substitute $\cos\theta_t$ in the reflection co-efficient expression.
@@ -54,24 +48,24 @@ Recall we had two cases of reflection coefficients.
 \end{align*}For the Perpendicular case:
 \begin{equation}
 \Gamma_\perp\ = \frac{\eta_2\cos\theta_i - \eta_1\cos\theta_t}{\eta_2\cos\theta_i + \eta_1\cos\theta_t}
-\label{equation6_Lec32}
+\label{eqn:eqn32_6}
 \end{equation}
 
 For the Parallel case:
 \begin{equation}
 \Gamma_\parallel = \frac{\eta_1\cos\theta_i - \eta_2\cos\theta_t}{\eta_1\cos\theta_i + \eta_2\cos\theta_t}
-\label{equation7_Lec32}
+\label{eqn:eqn32_7}
 \end{equation}
 Note: $\eta_1$ and $\eta_2$ are interchanged for both cases otherwise they are similar. 
 
-substituting equation~\ref{equation5_Lec32} in equation~\ref{equation7_Lec32},
+substituting equation~\ref{eqn:eqn32_5} in equation~\ref{eqn:eqn32_7},
 \begin{align}
 \Gamma_\parallel = \frac{\eta_1\cos\theta_i - \jmath\eta_2\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}}{\eta_1\cos\theta_i + \jmath\eta_2\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}}
-\label{equation8_Lec32}
+\label{eqn:eqn32_8}
 \end{align}
 Note: we would get the same expression for the perpendicular polarization case but with $\eta_1$ and $\eta_2$ interchanged. 
 
-What's important to note here is that the expression in equation~\ref{equation8_Lec32} is of the form
+What's important to note here is that the expression in equation~\ref{eqn:eqn32_8} is of the form
 \begin{equation}
 \frac{a - \jmath b}{a + \jmath b}
 \end{equation}
@@ -92,13 +86,13 @@ in terms of medium parameters
 \begin{equation*}
 \frac{\sqrt{\mu_1\epsilon_1}}{\sqrt{\mu_2\epsilon_2}}\sin\theta_i > 1
 \end{equation*}
-$\theta_i$ can attain a maximum value of $90^{o}$, therefore maximum value of $\sin\theta_i$ = $\sin$90 = 1, this means, for the above condition to be meant,
+$\theta_i$ can attain a maximum value of $90^{o}$, therefore the maximum value of $\sin\theta_i$ = $\sin$90 = 1, this means, for the above condition to be meant,
 \begin{equation}
 \sqrt{\mu_1\epsilon_1} > \sqrt{\mu_2\epsilon_2}
 \end{equation}
 So if $\sqrt{\mu_1\epsilon_1} > \sqrt{\mu_2\epsilon_2}$, then there is a possibility of total internal reflection.
 
- $\sqrt{\mu_1\epsilon_1} > \sqrt{\mu_2\epsilon_2}$ implies that, medium 1 is a denser medium compared to medium 2. So essentially, when the wave goes from a denser medium to a less dense medium, then there is a possibility of total internal reflection.
+$\sqrt{\mu_1\epsilon_1} > \sqrt{\mu_2\epsilon_2}$ implies that medium 1 is a denser medium compared to medium 2. So essentially, when the wave goes from a denser medium to a less dense medium, then there is a possibility of total internal reflection.
 
 For a pure dielectric(or non magnetic material) where, $\mu_1$ and $\mu_2$ are equal,
 \begin{equation*}
@@ -110,9 +104,9 @@ n_1 > n_2
 \end{align*}
 Where $n_1$ and $n_2$ are the refractive indexes of medium 1 and medium 2 respectively.
 
-Now the angle at which $\sin\theta_t = 1$ is called the CRITICAL ANGLE, beyond which if an incident wave is launched, there would be no transmitted wave in the second medium.
+Now the angle at which $\sin\theta_t = 1$ is called the CRITICAL ANGLE\index{critical angle}, beyond which if an incident wave is launched, there would be no transmitted wave in the second medium.
 
-This phenomenon is shown fig~\ref{critical_angle}.
+This phenomenon is shown Figure~\ref {critical_angle}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/critical_angle}
@@ -131,10 +125,10 @@ Or the critical angle
 \begin{align*}
 \theta_c = \sin^{-1}(\frac{n_2}{n_1}) 
 \end{align*}
-Now what we have not discussed however, is that, when the total internal reflection takes place, the wave which is reflected, undergoes a phase change at the interface. This phase change is a function of the medium parameters and the angle of incidence. So in general, we can say that by choosing appropriate parameters for the media, and the angle of incidence, we can generate an arbitrary phase difference between the incidence and the reflected wave. This would happen for both parallel and perpendicular polarization. However, the parallel and perpendicular polarization have $\eta_1$ and $\eta_2$
+Now what we have not discussed, however, is that, when the total internal reflection takes place, the wave which is reflected, undergoes a phase change at the interface. This phase change is a function of the medium parameters and the angle of incidence. So in general, we can say that by choosing appropriate parameters for the media, and the angle of incidence, we can generate an arbitrary phase difference between the incidence and the reflected wave. This would happen for both parallel and perpendicular polarization. However, the parallel and perpendicular polarization have $\eta_1$ and $\eta_2$
 interchanged between them. So a and b in $\frac{a - \jmath b}{b + \jmath b}$ are different for parallel and perpendicular polarizations. This means that the phase changes which the wave undergoes for the two polarizations are different.
 
-\item The wave undergoes a phase change at Total Internal Reflection ahe phase change is different for parallel and perpendicular polarizations.
+\item The wave undergoes a phase change at Total Internal Reflection the phase change is different for parallel and perpendicular polarizations.
 
 If we write out explicitly, the phase changes for parallel and perpendicular polarization, we have;
 \begin{equation}
@@ -157,47 +151,47 @@ From Snell's Law and keeping phase gradient same $\bar{E}_t$ is written out expl
 \begin{align}
 \bar{E}_t = E_te^{- \jmath x\beta_2\sin\theta_t - \jmath z\beta_2\cos\theta_t}
 \end{align}
-substituting for $\cos\theta_t$ from equation~\ref{equation5_Lec32}
-and $\sin\theta_t$ from equation~\ref{equation1_Lec32}
+substituting for $\cos\theta_t$ from equation~\ref{eqn:eqn32_5}
+and $\sin\theta_t$ from equation~\ref{eqn:eqn31_1}
 \begin{equation*}
 \bar{E}_t = E_te^{- {\jmath x\beta_1\sin\theta_i}  -  z \beta_2\sqrt{{(\frac{\beta_1}{\beta_2}\sin\theta_i)}^2 - 1}}
 \end{equation*}
 \begin{equation}
-	\bar{E}_t = E_te^{- {\jmath x\beta_1\sin\theta_i}  -  z \sqrt{{(\beta_1\sin\theta_i)}^2 - \beta_{2}^{2}}}
+\bar{E}_t = E_te^{- {\jmath x\beta_1\sin\theta_i}  -  z \sqrt{{(\beta_1\sin\theta_i)}^2 - \beta_{2}^{2}}}
 \end{equation}
 From the above equation,
 
 The amplitude term is:
 \begin{equation}
 e^{-z\sqrt{\beta_1^2\sin^2\theta_i - \beta_2^{2}}}
-\label{amplitude_term_total_internal_reflection}
+\label{eqn:amplitude_term_total_internal_reflection}
 \end{equation}
 and the phase term:
 \begin{equation}
 e^{- \jmath x\beta_1\sin\theta_i}
-\label{phase_term_total_internal_reflection}
+\label{eqn:phase_term_total_internal_reflection}
 \end{equation}
 From these equations, we see the field is exponentially dying down as a function of z and the phase varies as a function of x in medium 2.
 \end{enumerate}
-Now with total internal reflection, the travelling wave nature is only in the x-direction as the phase variation only occurs in the x-direction. So the fields are no longer travelling in z-direction.
+Now with total internal reflection, the travelling wave nature is only in the x-direction as the phase variation only occurs in the x-direction. So the fields are no longer travelling in the z-direction.
 
-Essentially, equation~\ref{amplitude_term_total_internal_reflection} gives decaying fields in the z direction and equation~\ref{phase_term_total_internal_reflection}  gives a travelling wave in x direction. This is depicted in figure~\ref{amplitude_decay_total_internal_reflection}
+Essentially, equation~\ref{eqn:amplitude_term_total_internal_reflection} gives decaying fields in the z direction and equation~\ref{eqn:phase_term_total_internal_reflection}  gives a travelling wave in the x direction. This is depicted in figure~\ref{fig:amplitude_decay_total_internal_reflection}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/amplitude_decay}
 \caption{Amplitude decay of fields in medium 2}
-\label{amplitude_decay_total_internal_reflection}
+\label{fig:amplitude_decay_total_internal_reflection}
 \end{figure}
 
-At angle $\theta_i = $ $\theta_c$, the term $e^{-z\sqrt{\beta_1^2\sin^2\theta_i - \beta_2^{2}}}$ reduces to $1$ so the amplitude of the field remains constant. Hence the field does not decay in medium 2. However as $\theta_{i}$ increases more and more beyond $\theta_{c}$, the decay becomes faster as shown in figure~\ref{amplitude_decay_total_internal_reflection}. 
-So  at the critical angle, the field essentially extends up to infinity at a constant amplitude and as the angle of incidence increases more and more beyond the critical angle, the field gets more and more confined towards the dielectric interface. The important observation is that, the field never goes to zero in medium 2 under any condition. The field is always non-zero in medium 2. Theoretically, no matter how small this amplitude is, it will extend up to infinity in the z direction as it gets closer and closer to zero but never reaches zero.
-So when total internal reflection takes place at the media interface, from what we learnt in high school, it was like the total power got reflected medium 1 and nothing existed in medium 2. There was no discussion at all as to what was the behaviour of the fields in medium 2 or the role medium 2 needed to play in total internal reflection. Once we had the critical condition for total internal reflection satisfied, we didn't bother about the point beyond the boundary into medium 2. But now we understand that, we cannot ignore the region of medium 2 beyond the boundary. The fields have to exist in the form shown in medium 2 for total internal reflection to take place, and they are as important as the fields in medium 1. The fields in medium 2 are required for us to satisfy the continuity equation at the boundary. It is these fields in medium 2 that supports the total internal reflection phenomenon. If any disturbance is created to these fields in medium 2, then the total internal reflection phenomenon is also disturbed and we cannot have total internal reflection. So to have a good total internal reflection phenomenon, we must have the field in medium 2 as confined to the interface as much as possible. That means we must launch a wave with an angle larger than the critical angle for as much as possible so that the field dies down rapidly in medium 2 as fast as possible and thus confined to a thickness z in medium 2 that is extremely small.
+At angle $\theta_i = $ $\theta_c$, the term $e^{-z\sqrt{\beta_1^2\sin^2\theta_i - \beta_2^{2}}}$ reduces to $1$ so the amplitude of the field remains constant. Hence the field does not decay in medium 2. However, as $\theta_{i}$ increases more and more beyond $\theta_{c}$, the decay becomes faster as shown in figure~\ref{fig:amplitude_decay_total_internal_reflection}. 
+So at the critical angle, the field essentially extends up to infinity at a constant amplitude and as the angle of incidence increases more and more beyond the critical angle, the field gets more and more confined towards the dielectric interface. The important observation is that the field never goes to zero in medium 2 under any condition. The field is always non-zero in medium 2. Theoretically, no matter how small this amplitude is, it will extend up to infinity in the z-direction as it gets closer and closer to zero but never reaches zero.
+So when total internal reflection takes place at the media interface, from what we learnt in high school, it was like the total power got reflected in medium 1 and nothing existed in medium 2. There was no discussion at all as to what was the behaviour of the fields in medium 2 or the role medium 2 needed to play in total internal reflection. Once we had the critical condition for total internal reflection satisfied, we didn't bother about the point beyond the boundary into medium 2. But now we understand that we cannot ignore the region of medium 2 beyond the boundary. The fields have to exist in the form shown in medium 2 for total internal reflection to take place, and they are as important as the fields in medium 1. The fields in medium 2 are required for us to satisfy the continuity equation at the boundary. It is these fields in medium 2 that support the total internal reflection phenomenon. If any disturbance is created to these fields in medium 2, then the total internal reflection phenomenon is also disturbed and we cannot have a total internal reflection. So to have a good total internal reflection phenomenon, we must have the field in medium 2 as confined to the interface as much as possible. That means we must launch a wave with an angle larger than the critical angle for as much as possible so that the field dies down rapidly in medium 2 as fast as possible and thus confined to a thickness z in medium 2 that is extremely small.
 
 Secondly, we must provide a certain region from the dielectric interface in medium 2 of a thickness where the fields in medium 2 are protected. If these two conditions are guaranteed, then we will have a total internal reflection phenomenon. Theoretically, unless we provide an infinite region in medium 2, and the fields properly protected, then we cannot have an ideal total internal reflection phenomenon.
 
 \section{Reactive Fields}
 
-We conclude that when total internal reflection takes place, the fields in medium 2 exists, and the transmission coefficient is not zero. When the total power is reflected, $|\Gamma| = 1$ but this doesn't mean that the transmission coefficient is zero because the transmission coefficient doesn't always mean that there is a power flow in medium 2. So as we have seen, the fields which are dying down in medium 2 are the ones which do not constitute power flow as the wave is not travelling inside the medium rather the wave is still travelling in the x direction along the dielectric interface. Thus there is no power flow in the z direction, but the fields exist. So we should clearly understand the difference between having fields and no power flow and having fields with power flow. You may have electric and magnetic fields and they may constitute power flow, as we have seen in earlier cases. But however, we might have a situation like this where we have electric and magnetic fields but there is no power flow. In the electrical circuit terminology, we can call these fields \textbf{ REACTIVE FIELDS}, as they have the energy stored in the transient phase when the field is being set up. We visualize it as when the wave is incident on the interface or boundary as the wave is being set up, there is some power flow into the second medium. That power flow gets stored in the second medium in the fields. Once these fields are set up in the steady state, no net power flows in the second medium and the power flow is essentially in medium 1. These fields in medium 2 are referred to as EVENESCENT FILEDS (reactive fields). They will exist in medium 2 without constituting any power flow. The power flow will exist in the interface in the direction of x. 
+We conclude that when total internal reflection takes place, the fields in medium 2 exist, and the transmission coefficient is not zero. When the total power is reflected, $|\Gamma| = 1$ but this doesn't mean that the transmission coefficient is zero because the transmission coefficient doesn't always mean that there is a power flow in medium 2. So as we have seen, the fields which are dying down in medium 2 are the ones which do not constitute power flow as the wave is not travelling inside the medium rather the wave is still travelling in the x direction along the dielectric interface. Thus there is no power flow in the z direction, but the fields exist. So we should clearly understand the difference between having fields and no power flow and having fields with power flow. You may have electric and magnetic fields and they may constitute power flow, as we have seen in earlier cases. But however, we might have a situation like this where we have electric and magnetic fields but there is no power flow. In the electrical circuit terminology, we can call these fields \textbf{ REACTIVE FIELDS}\index{reactive fields}, as they have the energy stored in the transient phase when the field is being set up. We visualize it as when the wave is incident on the interface or boundary as the wave is being set up, there is some power flow into the second medium. That power flow gets stored in the second medium in the fields. Once these fields are set up in the steady state, no net power flows in the second medium and the power flow is essentially in medium 1. These fields in medium 2 are referred to as EVENESCENT FILEDS (reactive fields). They will exist in medium 2 without constituting any power flow. The power flow will exist in the interface in the direction of x. 
 Now for medium 1, we had a wave incident on it and another wave which is reflected from the interface into medium 1. There is an arbitrary phase change at the point of incidence and reflection as shown below.
 \begin{figure}[h]
 \centering
@@ -227,16 +221,18 @@ e^{\jmath \beta_1 z\cos\theta_i} \}
 \end{equation*}
 
 Depending on the phase difference $\phi$, the term $e^{- \jmath \beta_1z\cos\theta_i} + e^{\jmath \phi}
-e^{\jmath \beta_1 z\cos\theta_i}$ is always going to create a constructive or destructive interference in the z direction. While the term $ e^{- \jmath \beta_1x\sin\theta_i}$ gives a travelling wave in the x direction.
+e^{\jmath \beta_1 z\cos\theta_i}$ is always going to create a constructive or destructive interference in the z-direction. While the term $ e^{- \jmath \beta_1x\sin\theta_i}$ gives a travelling wave in the x direction.
 
-So in medium 1 from the equation, we have a fully developed standing wave in z directions but a travelling wave in x direction. In medium 2 it was an exponentially decaying field and a travelling wave in the x direction with the same phase constant as in medium 1 travelling wave in the x direction. Now we can then plot the fields in the two media depending upon the phase of reflection $\phi$, so the field distribution is like a corrugated surface in medium 1 and a decaying field in medium 2. The constant phase plane is determined by $e^{- \jmath \beta_1x\sin\theta_i}$. So the constant phase plane is the yz plane. The constant amplitude plane is in the xy plane. So this complex amplitude distribution of the wave travels in the x direction with a phase constant $\beta_1\sin\theta_i$.
+So in medium 1 from the equation, we have a fully developed standing wave in the z direction but a travelling wave in the x direction. In medium 2 it was an exponentially decaying field and a travelling wave in the x direction with the same phase constant as in medium 1 travelling wave in the x direction. Now we can then plot the fields in the two media depending upon the phase of reflection $\phi$, so the field distribution is like a corrugated surface in medium 1 and a decaying field in medium 2. The constant phase plane is determined by $e^{- \jmath \beta_{1}x\sin\theta_i}$. So the constant phase plane is the yz plane. The constant amplitude plane is in the xy plane. So this complex amplitude distribution of the wave travels in the x direction with a phase constant $\beta_1\sin\theta_i$.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{./graphics/field_distribution_total_internal_reflection}
 \caption{Graph of field distribution}
 \end{figure}
 
-So whenever total internal reflection occurs, you have this complex distribution of amplitude in space, one side exponentially decaying fields, the other side standing wave kind of fields. This amplitude distribution travels in the x direction with a phase velocity in the x direction $v_{px} = \frac{\omega}{\beta_1\sin\theta_i}$. Now we may ask, what is the direction of net power flow? The fields in medium 2 does not constitute any wave, so no power flow in the z direction. With no power flow in the z direction in medium 2, there can be no power flow in the z direction in medium 1 also. Since if the power had come from medium 1 in the z direction, and the power can't flow in medium 2, the interface does not consume power since we are talking of a completely lossless medium. Hence whatever power came from the medium 1 incident on the boundary, essentially gets reflected back to give the standing wave shown in medium 1. This implies that, there is no power flow perpendicular to the interface  but there is a power flow along the interface since we have a travelling wave in the x direction. So when the total internal reflection phenomenon takes place, the net power flow is along the interface or in other words, the dielectric interface is capable of guiding electromagnetic energy.
+So whenever total internal reflection occurs, you have this complex distribution of amplitude in space, one side exponentially decaying fields, the other side standing wave kind of fields. This amplitude distribution travels in the x direction with a phase velocity in the x direction $v_{px} = \frac{\omega}{\beta_1\sin\theta_i}$.
+
+Now we may ask, \emph{what is the direction of net power flow?} The fields in medium 2 do not constitute any wave, so no power flow in the z-direction. With no power flow in the z direction in medium 2, there can be no power flow in the z direction in medium 1 also. Since if the power had come from medium 1 in the z direction, and the power can't flow in medium 2, the interface does not consume power since we are talking of a completely lossless medium. Hence whatever power came from the medium 1 incident on the boundary, essentially gets reflected back to give the standing wave shown in medium 1. This implies that there is no power flow perpendicular to the interface but there is a power flow along the interface since we have a travelling wave in the x direction. So when the total internal reflection phenomenon takes place, the net power flow is along the interface or in other words, the dielectric interface is capable of guiding electromagnetic energy.
 
 \section{Wave Guides}
 
@@ -244,9 +240,9 @@ So we can make use of a dielectric interface for guiding electromagnetic energy 
 then there is a total internal reflection in medium 1. The field in medium 2 will exponentially decay. Power flow will be along the interface.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{./graphics/optical_fibre}
-	\caption{Power flow in optical fibre structure}
+\centering
+\includegraphics[width=1\linewidth]{./graphics/optical_fibre}
+\caption{Power flow in optical fibre structure}
 \end{figure}
 
 So if we create some structure like this, it can carry electromagnetic energy over a long distance without any loss as such. Energy is confined in the region of $n_1$ and it will propagate along the interface as a result of total internal reflection. So total internal reflection has played an important role in modern optical communication and helped in the design of structures called optical fibres. 
