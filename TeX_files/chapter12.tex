@@ -4,7 +4,7 @@ In previous sections, we have dealt with other applications of transmission line
 As we know when the load impedance is equal to characteristic impedance $Z_0$, there is no reflection on the line, hence there is maximum power transfer. But this \textit{matching condition}\index{matching condition} is not always feasible. Thus, we need a module or device which will transform the load impedance to the characteristic impedance. This module is known as a \textbf{matching transformer unit}\index{matching transformer} as shown in figure~\ref{fig:fig7}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/fig7}
+\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/fig7}
 \caption{Matching Transformer unit}
 \label{fig:fig7}
 \end{figure} 
@@ -12,7 +12,7 @@ As we know when the load impedance is equal to characteristic impedance $Z_0$, t
 Let us suppose we want to convert the output impedance $Z$ with the matching unit (transformer) to the characteristic impedance $Z_0$, which is shown in figure~\ref{fig:fig7}. At the input (leftmost side), we should see a characteristic impedance $ Z_0$ and the module should be completely lossless (ideal) to allow maximum power transfer to load $Z$. First, let us discuss various methods by which different impedances can be matched to the characteristic impedance.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig8}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig8}
 \caption{Application of transformer}
 \label{fig:fig8}
 \end{figure}
@@ -25,7 +25,7 @@ On the Smith Chart, if we have an impedance which is resistive, \emph{how much c
 Hence, we find out $ Z_{0x}$ and the length of this introduced transmission line for which R can be matched with $ Z_0$. Resistive impedance lie on the horizontal axis of the Smith Chart, $Z > Z_0$ lies on the right and $Z < Z_0$ lies on the left of the Smith chart. So the question is, \emph{what should be the value of $Z_{0x}$ and length $l$, that will match the resistive impedance to the characteristic impedance $Z_0$?} From the Smith Chart, to transform from $R$ to another resistive value, we need to move by either $ \frac{\lambda}{4}$ or $ \frac{\lambda}{2}$. But a $\frac{\lambda}{2}$ movement brings us back to the same impedance and thus we don't use this value because it will transform the impedance to itself. A $\frac{\lambda}{4}$ movement on the other hand, will have a resistive impedance which is different from the original resistive impedance(that is, inverts itself), thus $l = \frac{\lambda}{4} $ will be most appropriate because at this length we will have a different resistive value.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/fig9}
+\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/fig9}
 \caption{The quarter wavelength transformer technique}
 \label{fig:fig9}
 \end{figure}
@@ -53,7 +53,7 @@ Now, we would like to find out \emph{can the technique (quarter wavelength trans
 We solve it by first transforming the complex normalized impedances to a real impedance. This is done by moving along the length of a transmission line. That means if you introduce some length of transmission line with characteristic impedance $ Z_0$, then the impedance seen at the other end is real if the length is such that you get a voltage (maximum or minimum) for that length.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig10}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig10}
 \caption{The quarter wavelength transformer technique for complex load $Z$}
 \label{fig:fig10}
 \end{figure}
@@ -67,7 +67,7 @@ The normalized impedance $ \bar{Z}$ is normalized with respect to characteristic
 } on the Smith Chart as shown in figure~\ref{fig:sinsmith}.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{./graphics/sinsmith}
+\includegraphics[scale=0.6]{\pathtopartone/graphics/sinsmith}
 \caption{ Simplified Smith chart for complex load Quarter wavelength transformer}
 \label{fig:sinsmith}
 \end{figure}
@@ -101,7 +101,7 @@ A load impedance $Z_{L}=(75-j35)\varOmega$ is to be matched to $50\varOmega$ usi
 We recall that the quarter wave transformer can match a resistive load impedance to the characteristic impedance (that is, two resistive impedances). However, the load impedance given is complex, so we use a section of a transmission line of length $l$ as shown in figure~\ref{fig;fighalfwave}, to first convert the impedance to a real value, from that point onward a quarter wave transformer can then be used for the matching.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./graphics/fighalfwave}
+\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/fighalfwave}
 \caption{Load Impedance Matching Design with Quarter Wavelength Trasfromer}
 \label{fig;fighalfwave}
 \end{figure}
@@ -109,7 +109,7 @@ We recall that the quarter wave transformer can match a resistive load impedance
 The length of the quarter wave transformer is $\frac{\lambda}{4}$ at XX' (see figure~\ref{fig:image}), $Z_L = (75-j35)\varOmega$ should be real.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/image}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/image}
 \caption{Quarter Wavelength Transformer Design}
 \label{fig:image}
 \end{figure}
@@ -121,7 +121,7 @@ Normalization is done using the characteristic Impedance of the section of the t
 Figure~\ref{fig:tosin} shows the Smith chart analysis. $\bar{Z}_L=1.5-j0.7$ is marked at \textbf{X} and the constant VSWR circle is drawn using \textbf{OX} as radius and it intersects the real axis at \textbf{P} and \textbf{Q}. If we move from \textbf{X} to \textbf{P} (\textbf{XP}) we get a resistive impedance corresponding to $r_\min$ and if we move from \textbf{X} through \textbf{P} to \textbf{Q} (\textbf{XPQ}), we get another resistive impedance corresponding to $r_\max$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/TOSIN}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/TOSIN}
 \caption{Quarter Wavelength Design\textemdash\;graphical analysis}
 \label{fig:tosin}
 \end{figure}
@@ -210,7 +210,7 @@ There are three (3) techniques for attaching a stub to the transmission line to 
 In this section, we will discuss the single stub matching technique in the \textit{parallel short circuit stub matching technique configuration}. Figure~\ref{fig:fig11} shows the structure of a single stub matching technique. Again, our aim is to find a real impedance at point A that is equal to the characteristic impedance, $Z_0$. The main transmission line with characteristics impedance $ Z_0$ is connected to load impedance $Z$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig11}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig11}
 \caption{Single stub matching technique with one auxiliary transmission line attached}
 \label{fig:fig11}
 \end{figure}
@@ -231,7 +231,7 @@ Hence, the normalized load admittance is
 Figure~\ref{fig:qwtch} shows the simplified Smith Chart for the single stub matching problem.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/qwtch}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/qwtch}
 \caption{Simplified Smith Chart for Single Stub Matching}
 \label{fig:qwtch}
 \end{figure}
@@ -252,7 +252,7 @@ Similarly, when the stub is connected in series, we use the same pattern but we 
 Design a single stub matching unit to match the load impedance shown in figure~\ref{fig:figw} to the characteristic impedance, $Z_0 = 50\varOmega$. Calculate for $l_s$ and $l_1$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/figw}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/figw}
 \caption{Single Stub Matching design}
 \label{fig:figw}
 \end{figure}
@@ -267,7 +267,7 @@ $\bar{Y}_{L}$=$g+jb$ to $1+jb_1$ hence it lies on the circle of constant conduct
 Mirror M on the VSWR circle to get $1-jb1$. On the constant susceptance curve of $jb$, find where it intercepts the circle at $g=0$. This is the outermost circle. $R$ represent the pure susceptance value of $jb_1$. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig14}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig14}
 \caption{Single Stub Matching Design\textemdash\;graphical analysis}
 \label{fig:fig14}
 \end{figure}
@@ -282,14 +282,14 @@ This technique involves the use of two (2) stubs. In this method, we change only
 %put footnote here and two figures(double stub(12.9) and Smith Chart(12.10))%
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/double_stub}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/double_stub}
 \caption{Double Stub Matching Technique with two auxiliary lines attached}
 \label{fig:fig12}
 \end{figure}
 From figure~\ref{fig:fig12}, starting from the load end, the initial admittance is $\bar{Y} = g + jb$. After a distance $l_l$ moving clockwise to point B (towards generator), at this point B\textsuperscript{\textemdash}, the admittance becomes $g_1 + jb'$ and when this is combined with the susceptance(or admittance) from stub 1, $-jb_1$, we get $g_1 +jb_1^{'}$ at B\textsuperscript{+}. When the admittance at B\textsuperscript{+} is further transformed along the length $3\frac{\lambda}{8}$(clockwise, towards the generator), we get $1 + jb_2$ at point C\textsuperscript{-}. When this is combined with the susceptance of stub 2 $-jb_2$, we get $1 + 0j$ beyond point C, C\textsuperscript{+}. As for the single-stub matching technique, we will solve the double-stub matching technique using the Smith Chart.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/dousmith}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/dousmith}
 \caption{Simplified Smith Chart for Double Stub Matching Technique}
 \label{fig:dousmith}
 \end{figure}
@@ -323,7 +323,7 @@ For a load impedance, $Z_{L} = (100 + j100)\Omega$, and characteristic impedance
 \end{dmath*}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/question1}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/question1}
 \caption{Worked Example}
 \label{fig:question1}
 \end{figure}
@@ -349,7 +349,7 @@ $ l_{s1} = 0.25 + l^{1} $
 \subsubsection{Three Stub Matching Technique}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/fig13}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig13}
 \caption{Three stub matching technique with three auxiliary lines attached}
 \label{fig:fig13}
 \end{figure}
@@ -398,7 +398,7 @@ Solution to exercise~\ref{ex124}
 Determine the values of $d$ and $l$ in the single stub matching setup shown in figure~\ref{fig:singlestubproblem}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{./graphics/Ex42}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/Ex42}
 \caption{Ex.~\ref{ex125}}
 \label{fig:singlestubproblem}
 \end{figure}
