@@ -1,5 +1,4 @@
 \documentclass[a4paper,10pt, two column]{book}
-
 % custom define a new command named "Comb" that takes two arguments and typesets a binomial coefficient.
 \usepackage[fleqn]{amsmath}
 \newcommand*{\Comb}[2]{{}^{#1}C_{#2}}
@@ -20,11 +19,10 @@
 \usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{breqn}
-\usepackage{pgfplots}
 \usepackage[abspath, parent]{currfile}
-% get absolute path to this directory
+% get the absolute path to the directory containing this file
 \makeatletter
-\edef\pathtopartone{\currfileabsdir/}% Store it in \pathtopartone
+\edef\pathtopartone{\currfileabsdir}% Store it in \pathtopartone
 \makeatother
 
 % custom set exercises and example packages. add dependencies
@@ -35,10 +33,6 @@
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
 \setlist[enumerate]{topsep=0pt,itemsep=0pt,partopsep=1ex,parsep=1ex}
-
-
-% Table Parameters
-\renewcommand{\arraystretch}{1.5}
 
 \usepackage{imakeidx}
 \makeindex

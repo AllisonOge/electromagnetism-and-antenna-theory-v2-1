@@ -44,7 +44,7 @@ Such a travelling wave exponentially decays with the attenuation constant $\alph
 Similarly, $V^-e^{-\alpha l}e^{-j\beta l}$ exponentially decays as we move towards the generator or exponentially grows as we move towards the load. Depending upon the value of the ratio of $V^-$ and $V^+$ which is the reflection coefficient at the load point, $\Gamma_L$ the two travelling waves propagating in opposite directions decay or grow exponentially as we move towards the generator. We recall from the lossless case that the amplitude of $\Gamma_L$ was the same at every very point on the transmission line, however, that is not true for the moderately lossy line because the amplitude of the reflected wave to the incident wave varies with $\alpha l$, as $\Gamma$ is now a function of location on the transmission line.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"\pathtopartone/graphics/moderately_lossy_TX_plot"}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/"moderately_lossy_TX_plot"}
 \caption{A plot of the attenuation of the forward and backward travelling waves of the moderately lossy line from the load point.}
 \end{figure}
 \begin{figure}[h]
@@ -75,7 +75,7 @@ Equation~\eqref{eqn:gammalossy} shows that the total phase at a distance $l$ is 
 The expression $|\Gamma_L|e^{j(\theta_L-2\beta l)}$ we have seen earlier in the complex gamma plane, traces a curve which is a circle. However, now there is the term $e^{-2\alpha l}$, the radius of the circle is reducing continuously and the expression $|\Gamma_L|e^{-2\alpha l}e^{j(\theta_L - 2\beta l)}$ essentially draws a spiral on the reflection coefficient plane as shown in figure~\ref{fig:lossygamma}(a).
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"\pathtopartone/graphics/lossy_gamma_temp"}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/"lossy_gamma_temp"}
 \caption{(a) A plot of the reflection coefficient on the $\Gamma$-plane. (b)Variation of the reflection coefficient along the transmission line towards the generator and the step value of $l = \frac{\lambda}{2}$ for $\Gamma(l)$ to approximate the spiral to a series of concentric circles.}
 \label{fig:lossygamma}
 \end{figure}
@@ -89,7 +89,7 @@ The process of analyzing moderately lossy lines using the Smith chart is hard wi
 A plot of these circles is shown in figure~\ref{fig:vswrlossy}, however, if we want to have a very accurate analysis then ideally we have to really draw this spiral on the Smith chart.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"\pathtopartone/graphics/concentricVSWRcircles"}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/concentricVSWRcircles}
 \caption{Series of concentric circles of reflection coefficient $\Gamma{(l)}$ for $l = \frac{\lambda}{2},\lambda, \frac{3\lambda}{2}$ after we apply the approximation.}
 \label{fig:vswrlossy}
 \end{figure}
@@ -100,7 +100,7 @@ The analytic calculation of the impedance on a lossy line is as general as we ha
 Here we would like to measure the characteristic impedance and the propagation constant which are the secondary constants. Normally for calculations of transmission lines, we generally do not estimate the primary constants rather we estimate the secondary constants. Assuming there is a setup which can measure an unknown impedance at an unknown frequency. Then we can measure the characteristic impedance of a moderately lossy line or a low loss line. This measurement can be done by conducting a short circuit and open circuit test of a section of a transmission line. Consider the length of the transmission line, $l$, one end of the transmission line is connected to the impedance measurement setup as shown in figure~\ref{fig:impmeasurement}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"\pathtopartone/graphics/impedance_measurement"}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/impedance_measurement}
 \caption{Impedance measurement setup}
 \label{fig:impmeasurement}
 \end{figure}
@@ -211,7 +211,7 @@ At this point, one may ask \emph{why are we estimating the velocity on the line?
 This is the method which we mentioned in the open or short circuit test. This is the most widely used test in practice for measuring the characteristic impedance and propagation constant of the line. Of course, there are certain practical difficulties when we try to apply the open circuit or short circuit to the end of the transmission line, even if you short the two conductors of a transmission line, there will always be some conductance at the end. If the two ends are left open for the open circuit test, there will be some fringing capacitance at the end of the line. So realizing a perfect open or short circuit at a very high frequency is not that straightforward. People make extra effort to develop modules called short circuit modules and open circuit modules which can be connected to the end of the line to realize a good open or short circuit.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{"\pathtopartone/graphics/Short circuit load"}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/"Short circuit load"}
 \caption{Open circuit and short circuit load}
 \end{figure}
 
