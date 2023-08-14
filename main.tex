@@ -19,10 +19,11 @@
 \usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{breqn}
-\usepackage[abspath, parent]{currfile}
+\usepackage{currfile-abspath}
+\getpwd
 % get the absolute path to the directory containing this file
 \makeatletter
-\edef\pathtopartone{\currfileabsdir}% Store it in \pathtopartone
+\edef\pathtopartone{\thepwd}% Store it in \pathtopartone
 \makeatother
 
 % custom set exercises and example packages. add dependencies
@@ -40,7 +41,7 @@
 \begin{document}
 
 \author{Nosa Bello}
-\title{ELECTROMAGNETISM AND ANTENNA THEORY}
+\title{ELECTROMAGNETICS WAVES AND ANTENNA THEORY}
 \date{\today}
 
 \frontmatter
