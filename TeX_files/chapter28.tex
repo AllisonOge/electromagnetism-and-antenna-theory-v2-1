@@ -1,9 +1,24 @@
 \chapter{Surface current and power loss in a conductor}\label{lec:lec28}
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt,  hidealllines=true]
+\section{Objectives}
+\begin{enumerate}[(i)]
+	\item Understand Surface Current Phenomenon.
+	\item Develop a comprehensive understanding of surface current density calculations by applying mathematical models, taking into          account variations in conductivity and exploring the exponential decay of electric fields within a conductor.
+	\item Grasp the concept of surface impedance as a crucial boundary parameter, and
+	understand its unit and significance in power calculations on conducting
+	surfaces.
+	\item Utilize circuit concepts to calculate power loss on the surface of a conductor,
+	finding the relationship between surface current density and resistance in thin
+	slabs.
+	\item Apply wave propagation concepts, including Poynting vectors, to understand how electromagnetic waves interact with the surface of conductors, leading to power
+	losses
+\end{enumerate}
+\end{mdframed}
+\subsection{}
 In our previous chapter, we talked about Power Flow in an electromagnetic wave and pointing vectors for electromagnetic waves. The Poynting vector tells us the density of power flow and its direction tells us the direction of the power at any location in space.
 
-In this chapter, we will talk about surface current and power loss in a conductor.
-
-We have always wondered how much power is lost in a conducting surface when an electromagnetic wave is incident on the conducting surface, the origin of surface current and if we really have surface current in practice and many more.
+In this chapter, we will talk about surface current and power loss in a conductor. We have always wondered how much power is lost in a conducting surface when an electromagnetic wave is incident on the conducting surface, the origin of surface current and if we really have surface current in practice and many more.
 
 Surface Current is essentially a phenomenon which lies on the surface of the medium. This is a phenomenon which is for ideal conducting surfaces.
 
@@ -12,21 +27,21 @@ We will begin this chapter with the volume current density inside a conductor. W
 We established that $\hat{n}$x$\hat{H}$ gives the direction of the surface current. $\hat{n}$x$\hat{H}$ gives us the direction which goes into the paper as shown in the figure~\ref{fig:direction_of_surface_current}
 \begin{figure}[h]
 \centering
-\textsc{\includegraphics[width=1\linewidth]{\pathtopartone/graphics/surface_current_direction}}
+\textsc{\includegraphics[width=1\linewidth]{graphics/surface_current_direction}}
 \caption{Direction of the surface current}
 \label{fig:direction_of_surface_current}
 \end{figure}
 
-This gives the linear surface density $\bar{J}$s we talked about when we dealt with boundary conditions. Now, if the surface current is flowing here, what is the driving mechanism for this surface current?
+This gives the linear \index{surface density}surface density $\bar{J}$s we talked about when we dealt with boundary conditions. Now, if the surface current is flowing here, what is the driving mechanism for this surface current?
 
-It is already established that this surface current phenomenon is associated with infinite conductivity. So if we take an ideal conductor, then maybe at some point if time, instantaneously, some electric fields existed in the medium and since it was a very short-lived phenomenon we had electric and magnetic fields together.
+It is already established that this surface current phenomenon is associated with infinite conductivity. So if we take an ideal conductor, then maybe at some point in time, instantaneously, some electric fields existed in the medium and since it was a very short-lived phenomenon we had electric and magnetic fields together.
 
-For the momentary existence of the electric field, it would put the charges into motion, which would constitute this current and since the conductivity is infinite, even if the electric field doesn't exist anymore when the charges are put in motion, the charges will keep moving for infinite time which constitutes a current. So when the conductivity is infinite, one may visualize that at some instant of time, some electric field induced motion to these charges. The charges were set in motion and they kept moving which is essentially the surface current and this is balanced by the magnetic field and $\hat{n}$x$\hat{H}$ essentially gave us that current density $\bar{J}$.
+For the \index{momentary}momentary existence of the electric field, it would put the charges into motion, which would constitute this current and since the conductivity is infinite, even if the electric field doesn't exist anymore when the charges are put in motion, the charges will keep moving for infinite time which constitutes a current. So when the conductivity is infinite, one may visualize that at some instant of time, some electric field induced motion to these charges. The charges were set in motion and they kept moving which is essentially the surface current and this is balanced by the magnetic field and $\hat{n}$x$\hat{H}$ essentially gave us that current density $\bar{J}$.
 
 So basically, there are two situations now; (i) When we have a tangential component of electric field on the conducting surface which is zero but there are no surface currents and (ii) when the tangential component of electric field is zero but there is surface current. So in both situations, we have the tangential component of an electric field to be zero for ideal conductors but in one case, we have surface current and in the other case, we may not have surface current. If we have a surface current, then it must be balanced by the magnetic field. So if we have a magnetic field tangential to the conducting boundary, then we will have surface current otherwise we will not have surface current. This is a hypothetical situation of when surface current is truly flowing on the surface. Now, we may be curious to see what happens if we take a good conductor, whether we can still make use of this concept called surface current or not. It is very clear that if we have a conductivity which is not infinite, then because of the electric field, there will always be a finite conduction current density inside the material of the conductor. Also, the skin depth will be of finite width, which implies that this phenomenon is no more a true surface phenomenon (which requires zero thickness for skin depth). From the diagram of the conductor shown below, let \textbf{z} \textgreater 0 represent the conductor.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/thin_sheet_conductor}
+\includegraphics[width=0.9\linewidth]{graphics/thin_sheet_conductor}
 \caption{Exponential decay of electric field inside a conductor}
 \label{fig:exponential_decay_of_E_in_conductor}
 \end{figure}	
@@ -113,7 +128,7 @@ Once we have the surface current density $\bar{J}$s, then we ask how much is the
 
 \begin{figure}
 \centering
-\textsc{\includegraphics[scale=0.35]{\pathtopartone/graphics/slab_parallel_to_conducting_surface}}
+\textsc{\includegraphics[scale=0.35]{graphics/slab_parallel_to_conducting_surface}}
 \caption{A thin slab layer of thickness dz parallel to the surface of the conductor }
 \end{figure}
 So if we take a thin slab parallel to the surface of the conductor, since we have a finite conduction current, we ask how much the power loss is in this thin slab. If we integrate over all depth z, we get the power loss per unit area on the surface of the conductor.
@@ -190,7 +205,7 @@ Essentially we have calculated the power loss by using the circuit concept that 
 
 \begin{figure}
 \centering
-\textsc{\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/power_flow}}
+\textsc{\includegraphics[width=0.9\linewidth]{graphics/power_flow}}
 \caption{Determination of the power loss using wave concept}
 \end{figure}
 
@@ -226,14 +241,31 @@ This expression is the same as we got for power loss using the surface impedance
 
 The power that is being lost inside the conductor is proportional to the conductivity from $P=\dfrac{1}{2}\lvert E_{0}\rvert^{2}\sqrt{\dfrac{\sigma}{2\omega\mu}}$.
 We are dealing with electromagnetic waves here, SO The higher the conductivity of the medium it propagates in, the more the power loss of this wave so that in a pure dielectric with $\sigma$=0, it will have no power loss in that medium. So, large $\sigma$ means a large part of the electromagnetic wave energy is taken by the medium (or lost to the medium). With high frequency, it losses less of its energy to the medium through which it propagates. So for an ideal conductor with $\sigma\longrightarrow\infty$, the EM wave losses all of its power to this conductor but with skin depth of nearly zero, all of this energy lost flow as pure surface current on this conductor without any Ohmic losses and the entire energy is reflected from the boundary.
-\footnote{
-\includegraphics[height=20mm]{\pathtopartone/graphics/footnotegm.jpg}
+% \footnote{
+% \includegraphics[height=20mm]{graphics/footnotegm.jpg}
 
-Guglielmo Marconi, 1st Marquis of Marconi (25 April 1874 - 20 July 1937) was an Italian inventor and electrical engineer known for his pioneering work on long-distance radio transmission and for his development of Marconi's law and a radio telegraph system. He is usually credited as the inventor of the radio
-}
+% Guglielmo Marconi, 1st Marquis of Marconi (25 April 1874 - 20 July 1937) was an Italian inventor and electrical engineer known for his pioneering work on long-distance radio transmission and for his development of Marconi's law and a radio telegraph system. He is usually credited as the inventor of the radio
+% }
 
 For an ideal conductor, there is no power going inside the conductor similarly when the frequency becomes large, there is no power going inside the conductor. What this means is that, for high conductivity or high frequency, there is a resistance to the penetration of the conductor, hence, the power does not go inside the conductor.
 
 This situation is similar to a lossy transmission line but however, in a lossy transmission line, the power gets lost in the heating of the line. In this case, the power is dying down rapidly but the power is not lost in the Ohmic loss because the power is not able to penetrate the layer. So for conductivity = $\infty$, no power penetrates the conductor so it gets reflected.
 
 In conclusion, when the conductivity is infinite, the wave does not penetrate the medium, there is no power loss and the entire energy is reflected from the boundary.
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt,  hidealllines=true]
+\section{Exercises}
+\begin{ExerciseList}
+	\Exercise[label={ex11}] Define surface current and discuss its characteristics, particularly in the context of ideal conducting surfaces.
+	\Exercise[label={ex11}] Explain the concept of volume current density inside a conductor, and how it relates to the Skin Depth in a good conductor.
+	\Exercise[label={ex11}] Describe how the direction of surface current is determined using the nˆ × Hˆ relationship, and illustrate it with a diagram.
+	\Exercise[label={ex11}] Discuss the conditions under which surface current is considered in ideal conducting surfaces, and its practical implications.
+	\Exercise[label={ex11}] Explain the relationship between the tangential component of the electric field and the existence of surface current.
+	\Exercise[label={ex11}] Explore the concept of surface current in good conductors, considering finite conductivity and the impact on conduction current density.
+	\Exercise[label={ex11}] Provide a step-by-step calculation of surface current density ($\bar{J}$s) based on the electric field and conductivity values.
+	\Exercise[label={ex11}] Define surface impedance and explain its significance in the context of power calculations on a conducting surface. Also, discuss its unit.
+	\Exercise[label={ex11}] Demonstrate how to calculate power loss per unit area on a conducting surface using the circuit concept, considering surface current density and resistance.
+	\Exercise[label={ex11}] Explain the alternative method of calculating power loss using the wave concept, particularly focusing on the Poynting vector and wave propagation inside the conductor.
+\end{ExerciseList}
+\end{mdframed}

@@ -1,7 +1,9 @@
 % In the previous chapter, we showed that voltage and current appear in the form of waves on transmission lines and that the properties of this travelling wave are governed by the propagation constant, $\gamma$. 
-Now, let us try to understand the physical significance of this complex quantity $\gamma$.
 
 \section{The complex quantity $\gamma$}\label{lec:lec3}
+
+Now, let us try to understand the physical significance of this complex quantity $\gamma$.
+
 From equation~\eqref{eqn:deqn}, we have established that $\gamma$ is given as
 \begin{dmath}
 \gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}
@@ -33,19 +35,11 @@ V^+ = \left|V^+\right|e^{j\phi} e^{-\gamma x}
 
 \subsection{The Phase constant}\index{phase constant}
 From the equation~\eqref{eqn:phasorforward}, we see that as the wave propagates i.e as the value of x increases, the quantity $\left|V^+\right|e^{-\alpha x}$ is exponentially decreasing while $e^{-\jmath\beta x}$ is the sinusoidal part that oscillates because according to \footnote{
-\includegraphics[scale=0.2]{\pathtopartone/graphics/euler}
+\includegraphics[scale=0.2]{graphics/euler}
+Leonhard Euler (1707 - 1783), swiss mathematician and physicist who made significant contributions to various branches of mathematics and introduced numerous concepts that are widely used today. He's work spanned diverse areas of mathematics, including calculus, number theory, graph theory, and differential equations.
+}
 
-Leonhard Euler (15 April 1707 - 18 September 1783). He was an 18th-century Swiss mathematician and physicist who made significant contributions to various branches of mathematics and introduced numerous concepts that are widely used today. He was born on April 15, 1707, in Basel, Switzerland, and spent the majority of his career in St. Petersburg, Berlin, and Basel.
-
-Euler's work spanned diverse areas of mathematics, including calculus, number theory, graph theory, and differential equations. He made groundbreaking contributions to each of these fields, revolutionizing the way mathematicians approached and solved problems. Euler's extraordinary output includes over 850 published papers, covering a vast range of mathematical topics.
-
-One of Euler's most famous achievements is Euler's formula, also known as Euler's identity or Euler's equation. The formula relates five fundamental mathematical constants: e (the base of natural logarithms), $\pi$ (pi, the ratio of a circle's circumference to its diameter), $i$ (the imaginary unit, which satisfies $i^2 = -1$), 1 (the multiplicative identity), and 0 (the additive identity). The formula can be written as:
-\begin{align*}
-e^(i\pi) + 1 = 0.
-\end{align*}
-
-Euler's formula connects exponential functions, complex numbers, and trigonometry in a profound way. It highlights the unexpected relationship between these seemingly unrelated mathematical concepts. The formula has been hailed as one of the most beautiful equations in mathematics due to its elegant simplicity and deep significance.
-}Euler's formula $e^{-\jmath\beta x} = \cos{\beta x} - \jmath \sin{ \beta x}$. Hence phase (spatial phase) is obtained from $e^{-\jmath\beta x}$.
+Euler's formula $e^{-\jmath\beta x} = \cos{\beta x} - \jmath \sin{ \beta x}$. Hence phase (spatial phase) is obtained from $e^{-\jmath\beta x}$.
 
 We now see that the equation~\eqref{eqn:gamma} has $\alpha$ that controls the amplitude of the wave as we move in the x-direction and $\beta$ that controls the phase of the wave along the transmission line. Hence,
 \begin{equation}
@@ -72,7 +66,7 @@ For most transmission line problems involving wave motion, $\lambda$ is not give
 Recall that amplitude varies as $\lvert V^+\rvert e^{-\alpha x}$ for the forward travelling wave as in equation~\eqref{eqn:solnv} so that we have maximum amplitude at $x = 0$. As x increases, the amplitude decreases exponentially with $\alpha x$. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/VversusXcurve}
+\includegraphics[width=0.7\linewidth]{graphics/VversusXcurve}
 \caption{The amplitude versus distance plot}
 \label{fig:VversusXcurve}
 \end{figure}
@@ -83,10 +77,11 @@ From figure~\ref{fig:VversusXcurve}, $\alpha$ is a parameter that measures how f
 \end{align*}
 
 If $\alpha$ = 1(Nepers/meter)\footnote{
-\includegraphics[scale=0.2]{\pathtopartone/graphics/johnnapier2}
+\includegraphics[scale=0.2]{graphics/johnnapier2}
+John Napier of Merchiston (1550 – 1617), Scottish mathematician, physicist, and astronomer. He is best known as the discoverer of logarithms, he also invented the so-called \textquotedblleft Napier's bones\textquotedblright
+}
 
-The unit's name is derived from the name of John Napier. John Napier of Merchiston (1550 – 4 April 1617); also signed as Neper, Nepair; nicknamed Marvellous Merchiston, was a Scottish landowner known as a mathematician, physicist, and astronomer. He is best known as the discoverer of logarithms, he also invented the so-called \textquotedblleft Napier's bones\textquotedblright
-}, then the voltage value will reduce from its initial value to $\frac{1}{e}$ for a distance x = 1 meter. So \emph{$\alpha$ relates the distance over which the amplitude drops to $\frac{1}{e}$ of its initial value}. This length at which we get $\frac{1}{e}$ is called the \emph{characteristic length}\index{characteristic length}. 
+, then the voltage value will reduce from its initial value to $\frac{1}{e}$ for a distance x = 1 meter. So \emph{$\alpha$ relates the distance over which the amplitude drops to $\frac{1}{e}$ of its initial value}. This length at which we get $\frac{1}{e}$ is called the \emph{characteristic length}\index{characteristic length}. 
 
 So, a distance $x = \frac{1}{\alpha}$ describes the effective travel distance in the transmission line beyond which the amplitude drops below $\frac{1}{e}$ of its initial value. Since the wave is reducing to $\frac{1}{e}$ of its initial value, the power of the wave also reduces. Taking the ratio of the initial amplitude and final amplitude after the effective travel distance we have,
 \begin{align*}
@@ -128,10 +123,10 @@ Recall that, $ \jmath \times \jmath = \sqrt{-1} \times \sqrt{-1} = (\sqrt{-1})^2
 We are now faced with the challenge of finding the square root of a complex number.
 
 To find the square root, we apply \footnote{
-\includegraphics[scale=0.3]{\pathtopartone/graphics/demoivre}
+\includegraphics[scale=0.3]{graphics/demoivre}
 
 Named after Abraham de Moivre (26 May 1667 – 27 November 1754). He was a French mathematician known for de Moivre's formula, a formula that links complex numbers and trigonometry, and for his work on the normal distribution and probability theory. He was a friend of Isaac Newton, Edmond Halley, and James Stirling.
-}DeMoivre's theorem. It states; 
+DeMoivre's theorem. It states; 
 \begin{equation*}
 Z^{\frac{1}{n}} = |Z|^{\frac{1}{n}}\angle\frac{\theta}{n}
 \end{equation*}
@@ -163,7 +158,7 @@ From previous example, say at x = 0, t = 0, V = 8.66V. Find the voltage at x = 1
 If the wave travels from right to left, find the voltage at B.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/TL}
+\includegraphics[width=1\linewidth]{graphics/TL}
 \caption{The transmission line showing points A and B}
 \label{fig:tl}
 \end{figure}
@@ -181,7 +176,7 @@ V(x,t) = \lvert V^+\rvert\cos(\phi + \omega t - \beta x)e^{-\alpha x}
 \end{align*}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig3.3}
+\includegraphics[width=1\linewidth]{graphics/fig3.3}
 \caption{Voltage versus distance with time}
 \end{figure}
 
@@ -231,7 +226,7 @@ Given that the wave in the previous example is travelling in the negative ${x}$ 
 \subsection*{Solution}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{\pathtopartone/graphics/Group98}
+\includegraphics[scale=0.5]{graphics/Group98}
 \caption{Solution for example \ref{exmp:forward}}
 \label{fig:group98}
 \end{figure}
@@ -299,8 +294,8 @@ So what we note here is, if we look at the transmission line with ${x=0}$ and ${
 \section{The Characteristic Impedance}\index{characteristic impedance}
 As derived in equations~\eqref{eqn:deltav} and~\eqref{eqn:deltai}
 \begin{align}
-\frac{dV}{dx} = -(R+\jmath\omega L)I\label{eqn:deltavlec3}\\
-\frac{dI}{dx} = -(G+\jmath\omega C)V\label{en:deltavlec3}
+\frac{dV}{dx} = (R+\jmath\omega L)I\label{eqn:deltavlec3}\\
+\frac{dI}{dx} = (G+\jmath\omega C)V\label{en:deltavlec3}
 \end{align}
 Also, the voltage wave solution derived in equation~\eqref{eqn:solnv} is given and the same can be written for the current wave equation as follows
 \begin{align*}
@@ -384,7 +379,7 @@ I &= \frac{V^+}{Z_0}e^{-\gamma x}-\frac{V^-}{Z_0}e^{+\gamma x}
 Up until now, we have not defined the boundary conditions of the transmission line, so let us discuss that in this section. We have two spatial locations on the transmission line, one at the generator and the other where an arbitrary load $Z_L$ is connected as shown in figure~\ref{fig:tlcircuit}.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{\pathtopartone/graphics/TX_load_and_source}
+\includegraphics[scale=0.45]{graphics/TX_load_and_source}
 \caption{The transmission line showing generator and load}
 \label{fig:tlcircuit}
 \end{figure}
@@ -485,6 +480,9 @@ Z_L - Z_0 &= (Z_0 + Z_L)\Gamma_L
 \end{equation}
 The reflection coefficient in equation~\eqref{eqn:reflectioncoefficientatload} decribes the ratio between reflected and incident voltage. \emph{It is a measure of how much energy is reflected from the transmission line and is related to the terminating impedance of the line and the characteristic impedance.}
 
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex31}]
@@ -499,12 +497,32 @@ Starting from the differential equation building transmission lines, derive the 
 \Exercise[label={ex34}]
 What are the physical significance of the propagation constant($\gamma$), attenuation constant($\alpha$) and phase constant($\beta$)?
 
-\Exercise[label={ex35}]
-Let $R = 0.4\varOmega$/m, $L = 0.3\mu$H/m, $C = 120$pF/m, $G = 0.08\varOmega$/m, and $f = 1$GHz. Calculate the propagation constant, attenuation constant and phase constant for this line.
-
-\Answer[ref={ex35}]
-(a) Propagation constant, $\gamma = 2 +\jmath 37.747$ (b)Attenuation constant, $\alpha = 2$ Nepers/m (17.36 dB/m) (c) Phase constant, $\beta = 37.747 $ rad/m.
-
 \Exercise[label={ex36}]
 From $ V = V^+e^{+\lambda l} + V^-e^{-\lambda l} $ and $ I = \frac{V^+}{Z_0}e^{+\lambda l} - \frac{V^-}{Z_0}e^{-\lambda l}$, show that $ \Gamma_L = \frac{Z_L - Z_0}{Z_L + Z_0} $.
+
+\Exercise[label={ex213}]
+Explain in details, how the characteristic impedance $Z_0$, governs energy flow on the transmission line.
+
+\Exercise[label={ex214}]
+When $Z_0$ is real, A forward traveling wave sees a positive resistance and a backward traveling wave sees a negative resistance, differentiate therefore  between“positive and negative resistance in this context”.
+
+\Exercise[label={ex215}]
+Show that the load impedance of a transmission line is related to the characteristic impedance and also related to the amplitude of the forward and backward wave.
+
+\Exercise[label={ex216}]
+Show mathematically that irrespective of the boundary condition of the transmission line, the forward traveling wave always sees an impedance equal to the characteristic impedance, while the backward traveling wave sees a negative of the characteristic impedance.
+
+\Exercise[label={ex217}]
+Explain the role the characteristics impedance of the transmission line play in the reflection coefficient.
+
+\Exercise[label={ex217}]
+Explain briefly, the influence of change in load impedance on the reflection coefficient.
+
+\Exercise[label={ex217}]
+What is the effect of the length of the transmission line on the reflection coefficient.
+
+\Exercise[label={ex217}]
+Define characteristic impedance.
 \end{ExerciseList}
+
+\end{mdframed}

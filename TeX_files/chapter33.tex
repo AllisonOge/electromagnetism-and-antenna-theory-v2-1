@@ -1,7 +1,22 @@
 \chapter{Polarization across Dielectric Interface}\label{lec:lec33}
-In the previous chapters, we have been investigating the behaviour of uniform plane waves across a dielectric media interface. We studied two cases which are the parallel and perpendicular polarization, and we saw the transmission and reflection across the dielectric boundary. We also investigated a special case called total internal reflection across a dielectric boundary. Now we are going to discuss another important aspect of electromagnetic waves called the \textbf{Polarization across dielectric interface}. 
 
-We consider a wave which is arbitrarily polarized i.e. the electric field vector makes an arbitrary angle with the plane of incidence and might also be varying as a function of time. We then see how the polarization changes when the wave is reflected from the dielectric interface. So what we are going to investigate now is that, if the incoming wave is coming with a certain polarization, what will be the polarization of the reflected wave and what will also be the polarization of the transmitted wave?
+\definecolor{lightblue}{RGB}{173, 216, 230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+    \section{Objectives}
+    \begin{enumerate}[label=\roman*., itemsep=0pt, topsep=0pt]
+        \item Understanding how arbitrary polarization of an electromagnetic wave across a dielectric interface can be decomposed into orthogonal polarizations, parallel and perpendicular to the plane of incidence.
+        \item Exploring how incident waves decomposed into parallel and perpendicular components reflect and transmit differently at dielectric boundaries.
+        \item Analyzing the effects of normal reflection and total internal reflection on the polarization state, particularly with linearly and circularly polarized incident waves.
+        \item Understanding Brewster's angle for parallel and perpendicular polarization, how it defines angles where reflected waves become linearly polarized or transmission occurs without reflection.
+        \item Utilizing dielectric interfaces to manipulate and change the state of polarization in electromagnetic waves, especially achieving linear polarization from arbitrarily polarized waves.
+    \end{enumerate}
+\end{mdframed}
+
+\section{Introduction}
+
+In the previous chapters, we have been investigating the behaviour of uniform plane waves across a dielectric media interface. We studied two cases which are the parallel and perpendicular polarization, and we saw the transmission and reflection across the dielectric boundary\index{dielectric boundary}. We also investigated a special case called total internal reflection\index{total internal reflection} across a dielectric boundary. Now we are going to discuss another important aspect of electromagnetic waves called the \textbf{Polarization across dielectric interface}. 
+
+We consider a wave which is arbitrarily polarized i.e. the electric field vector makes an arbitrary angle with the plane of incidence and might also be varying as a function of time. We then see how the polarization changes when the wave is reflected from the dielectric interface\index{dielectric interface}. So what we are going to investigate now is that, if the incoming wave is coming with a certain polarization, what will be the polarization of the reflected wave and what will also be the polarization of the transmitted wave?
 
 As we have seen earlier, any arbitrary state of polarization can be decomposed into two orthogonal polarizations. Similarly, in this case, we take two linear orthogonal polarizations. One is parallel to the plane of incidence and the other is perpendicular to the plane of incidence. This implies that when the wave is incident on the media interface, the electric field \textbf{$\bar{E}$} can be decomposed into \textbf{E}$_\parallel$\footnote{
 Parallel component of the polarized wave
@@ -19,7 +34,7 @@ An incident polarized wave \textbf{E$_i$} can be decomposed into two orthogonal 
 \textbf{E}_i = \textbf{E}_{i\parallel} + \textbf{E}_{i\perp} e^{j\phi}
 \label{equation1_Lec33}
 \end{equation}
-figure~\ref{fig:mcben} shows the two orthogonal components.	
+equation~\ref{fig:mcben} shows the two orthogonal components.	
 \subsection{Reflected Wave}
 Similarly, a reflected polarized wave \textbf{E$_r$} can be decomposed into two orthogonal components as shown in figure~\ref{fig:mcben1}. It can be represented in terms of reflection coefficient as shown in figure~\ref{fig:mcben2}
 \begin{equation}
@@ -28,8 +43,6 @@ Similarly, a reflected polarized wave \textbf{E$_r$} can be decomposed into two 
 \begin{equation}
 \textbf{E}_r = \Gamma_\parallel \textbf{E}_{i\parallel} + \Gamma_\perp \textbf{E}_{i\perp} e^{j\phi}
 \end{equation}	
-figure~\ref{fig:mcben} shows the two orthogonal components.
-
 \subsection{Transmitted Wave}
 A transmitted polarized wave \textbf{E$_t$} can be decomposed into two orthogonal components as shown in equation~\ref{eqn:equation4_Lec33}
 \begin{equation}
@@ -40,13 +53,12 @@ It can be represented in terms of the transmission coefficient;
 \begin{equation}
 \textbf{E}_t = \tau_\parallel \textbf{E}_{i\parallel} + \tau_\perp\textbf{E}_{i\perp} e^{j\phi}
 \end{equation}	
-figure~\ref{fig:mcben} shows the two orthogonal components.	
 
 \subsection{Combination of \textbf{E$_i$}, \textbf{E$_r$} and \textbf{E$_t$}}
 In combining the incident wave \textbf{E$_i$}, reflected wave \textbf{E$_r$} and transmitted wave \textbf{E$_t$}, we will get a wave structure as that shown in figure~\ref{fig:mcben}	
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/orthogonal_components}
+\includegraphics[width=1\linewidth]{graphics/orthogonal_components}
 \caption{Combination of \textbf{E$_i$}, \textbf{E$_r$} and \textbf{E$_t$}}
 \label{fig:mcben}
 \end{figure}
@@ -165,15 +177,17 @@ replacing $\theta_i$ with $\theta_{B\parallel}$
 
 \subsection{Perpendicular Polarization}
 Let's assume that the electric field was perpendicular to the plane of incidence as shown in figure~\ref{fig:mcben1} (Pointing out of the plane of the paper as indicated by the dot). Irrespective of variation in $\theta_i$,  \textbf{E}$_i$ will remain perpendicular to the plane of incidence and its amplitude is fixed. So when the continuity of the electric field is applied, we get a reflected and transmitted field. The sum of \textbf{E}$_i$ and \textbf{E}$_r$ must be equal to \textbf{E}$_t$ i.e. tangential component of the electric field must be continuous across the boundary. The amplitude of \textbf{E}$_i$, \textbf{E}$_r$ and \textbf{E}$_t$ don't depend on lunching angle $\theta_i$. Hence the reflected field \textbf{E}$_r$ will always be needed to satisfy the boundary condition at the interface.
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=.1\linewidth]{\pathtopartone/graphics/perpendicular_polarization4}
+\includegraphics[width=1\linewidth]{graphics/perpendicular_polarization4}
 \caption{Perpendicular polarization}
 \label{fig:mcben1}
 \end{figure}
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/No_reflection}
+\includegraphics[width=1\linewidth]{graphics/No_reflection}
 \caption{Parallel polarization}
 \label{fig:mcben2}
 \end{figure}	
@@ -184,17 +198,22 @@ For perpendicular polarization, this is not the case because the electric field 
 
 $\theta_{B\parallel}$ = $\tan^{-1}\left(\sqrt{\dfrac{\epsilon_2}{\epsilon_1}}\right)$ = $\tan^{-1}\left(\dfrac{\eta_2}{\eta_1}\right)$ were $\eta_2$ and $\eta_1$ are the refractive index of medium 2 and medium 1 respectively because $\dfrac{\eta_2}{\eta_1}$ = $\sqrt{\dfrac{\epsilon_2}{\epsilon_1}}$.
 
-Generally, for the dielectric media, we have the Brewster angle for parallel polarization. One can make use of this Brewster angle for converting an arbitrarily polarized wave to a linearly polarized wave. From the diagram below, the incident wave is arbitrarily polarized hence it would have perpendicular and parallel polarized components. At an incidence angle = $\theta_{B\parallel}$, the reflected wave is made out of a purely perpendicular polarized field \textbf{E}$_{r\perp}$ as the parallel polarized reflected wave will not exist. For the transmitted wave , the \textbf{E}$_{i\parallel}$ passes through since incidence angle is $\theta_{B\parallel}$. Some of the perpendicular components will pass through also as $\theta_{B\parallel}$ is not its polarizing angle of $\theta_{B\perp}$.
+Generally, for the dielectric media, we have the Brewster angle for parallel polarization. One can make use of this Brewster angle for converting an arbitrarily polarized wave to a linearly polarized wave. From the diagram below, the incident wave is arbitrarily polarized hence it would have perpendicular and parallel polarized components. At an incidence angle = $\theta_{B\parallel}$, the reflected wave is made out of a purely perpendicular polarized field \textbf{E}$_{r\perp}$ as the parallel polarized reflected wave will not exist. For the transmitted wave , the \textbf{E}$_{i\parallel}$ passes through since incidence angle is $\theta_{B\parallel}$. Some of the perpendicular components will pass through also as $\theta_{B\parallel}$ is not its polarizing angle\index{polarizing angle} of $\theta_{B\perp}$.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/No_parallel_reflected_wave}
-\caption{}
+\includegraphics[width=1\linewidth]{graphics/No_parallel_reflected_wave}
+\caption{Polarization Behavior at Brewster's Angle in Dielectric Media}
 \label{}
 \end{figure}
 
 Hence it is just like a normal wave incident at an angle. So the transmitted wave can in general be elliptically polarized since it has both parallel and perpendicular polarized components.
-So without worrying about the state of polarization of the incoming wave, whether linear, circular or elliptically polarized, if the wave is launched at the Brewster angle, then the reflected wave will have a polarization which is linear polarization and its orientation will be perpendicular to the plane of incidence. Hence for any arbitrarily polarized wave incident at the Brewster angle $\theta_{B\parallel}$, the reflected wave \textbf{E}$_{r\perp}$ points outward in the manner shown perpendicular to the plane of incidence. For this reason, $\theta_{B\parallel}$ is also called the \textbf{polarizing angle}. Since a wave launched at that angle has a reflected wave which is linearly polarized. The polarizing angle finds application in polarizing the light beams in lasers, ie if the polarization was arbitrary, we can always use the concept of Brewster angle to make sure the reflected wave is linearly polarized. 
+So without worrying about the state of polarization of the incoming wave, whether linear, circular or elliptically polarized, if the wave is launched at the Brewster angle, then the reflected wave will have a polarization which is linear polarization and its orientation will be perpendicular to the plane of incidence. Hence for any arbitrarily polarized wave incident at the Brewster angle $\theta_{B\parallel}$, the reflected wave \textbf{E}$_{r\perp}$ points outward in the manner shown perpendicular to the plane of incidence. For this reason, $\theta_{B\parallel}$ is also called the \textbf{polarizing angle}. Since a wave launched at that angle has a reflected wave which is linearly polarized. The polarizing angle finds application in polarizing the light beams in lasers, i.e. if the polarization was arbitrary, we can always use the concept of Brewster angle to make sure the reflected wave is linearly polarized. 
+
+\footnote{
+\includegraphics[height=20mm]{graphics/brewster}
+David Brewster, (1781–1868), Scottish physicist known for discovering Brewster's angle in optics. This angle describes how polarized light transmits through a medium without reflection. Brewster's contributions greatly advanced our understanding of light polarization and its behavior in different mediums.
+}
 
 So our conclusion from the discussion is that, by using the dielectric interfaces, one can change the state of polarization of electromagnetic waves. Though this has been shown here for optical beams, for other radio frequencies, one can also make use of this phenomenon for changing the state of polarization of electromagnetic waves.
 Later when we talk about reflection and refraction from conducting boundaries, we will consider how the state of polarization would be affected from the incident to the reflected wave.  We have seen for the light incident at Brewster angle, an arbitrary polarization gives a reflected light that is linearly polarized. In conducting boundaries, however, the case is a little simpler and we will observe an interesting phenomenon then. 
@@ -211,3 +230,30 @@ Now when a wave travels backwards from medium 2 to medium 1, the incident wave a
 In medium 1, the fields seen are a superposition of the incident and reflected waves. The incidence wave exponentially grows and the reflected wave exponentially decays as we go away from the interface. This case is identical to a lossy transmission line. As we go away from the interface or termination point in a transmission line, the reflected wave becomes weaker and weaker, the transmitted wave grows larger. So essentially as you go away from the interface into medium 1, we see a phenomenon equivalent to that of a travelling wave in a transmission line and when we come close to the boundary, we see some kind of standing wave behaviour. This is identical to what we had seen for a lossy transmission line.
 
 So in conclusion, the analysis of a lossy media interface where the conductivity is finite( it is not 0 or $\infty$), i.e. non of the media is an ideal conductor or dielectric, the problem can still be handled exactly in the same way as we did for the dielectric media interface. We can apply the same boundary conditions and the same expressions for the reflection and transmission coefficients. Then substituting appropriately for the intrinsic impedances for the two media, we can get the expressions for the reflection and transmission coefficients for a lossy media interface. 
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+\section{Exercises}
+\begin{ExerciseList}
+    \Exercise[label={ex11}]
+    How does the decomposition of an arbitrary polarization into parallel and perpendicular components assist in understanding the behavior of waves at dielectric interfaces?
+    \Exercise[label={ex11}]
+    Explain how the phase difference between the parallel and perpendicular components of a polarized wave affects its polarization after reflection and transmission across a dielectric boundary.
+    \Exercise[label={ex11}]
+    In what scenarios does a linearly polarized incident wave maintain its polarization after reflection? Contrast this with the outcomes during total internal reflection.
+    \Exercise[label={ex11}]
+    Describe the transformation of polarization for circularly polarized incident waves in normal reflection versus total internal reflection across a dielectric interface.
+    \Exercise[label={ex11}]
+    What role does Brewster's angle play in altering the state of polarization? Explain how it impacts incident waves and the resulting reflected waves at dielectric boundaries.
+    \Exercise[label={ex11}]
+    How does the Brewster angle aid in converting arbitrarily polarized waves into linearly polarized waves at a dielectric interface?
+    \Exercise[label={ex11}]
+    Discuss the significance of Brewster's angle in practical applications involving lasers and polarization of light beams.
+    \Exercise[label={ex11}]
+    Compare the polarization outcomes for dielectric interfaces with those for conducting boundaries. What notable differences exist in the behavior of the reflected waves?
+    \Exercise[label={ex11}]
+    Explain the influence of conductivity differences between two media on the reflected and transmitted waves at a general media boundary.
+    \Exercise[label={ex11}]
+    Why is it possible to apply boundary conditions for tangential components of electric and magnetic fields even when conductivity is neither zero nor infinity at a dielectric interface?
+\end{ExerciseList}
+\end{mdframed}

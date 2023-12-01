@@ -1,4 +1,13 @@
 \chapter{Maxwell's Equations in a source free, unbound, isotropic and homogeneous medium}\label{lec:lec21}
+ \textbf{OBJECTIVES}
+\begin{itemize}
+	\item To define unbound,isotropic and homogeneous medium.
+	\item To find the generalized forms for wave equation.
+	\item To be able to identify conditions of electric fields in a plane.
+	
+	
+\end{itemize}
+
 
 In the previous chapter, we discussed Maxwell's equations and the boundary conditions. Now we are going to investigate the solutions to Maxwell's equations.
 
@@ -12,7 +21,7 @@ Let us consider an unbound, isotropic, homogeneous region (no sources).
 \begin{enumerate}[(i)]
 \item \textbf{Unbound}: No boundary condition is to be applied.
 \item \textbf{Isotropic}: That is the permittivity and permeability are scalar quantities.
-\item \textbf{Homogeneous}: That is, the medium permittivity and permeability are not functions of space and time. 
+\item \textbf{Homogeneous}: That is, the medium permittivity and permeability are not functions of space and time.(where  in such a  medium,  $\mu $ and    $\epsilon  $  are    constant) 
 \end{enumerate}
 Thus, charge density $\rho=0$ and current density $\vec{J}=0$
 
@@ -28,6 +37,12 @@ So we can write Maxwell's equation as
 \begin{align}
 \nabla\times\vec{E}=\frac{-\vec{\partial B}}{\partial t}
 \end{align}
+
+\begin{align}
+	\nabla\times\vec{H}=\frac{\vec{\partial D}}{\partial t}J
+\end{align}
+
+where J=1(source free medium)
 
 \begin{align}
 \nabla\times\vec{H}=\frac{\vec{\partial D}}{\partial t}
@@ -46,7 +61,7 @@ if $\mu=\mu_{0}$ and $\epsilon=\epsilon_{0}$ we would get a solution correspondi
 
 Substituting $\vec{B}$ and 	$\vec{D}$ in equation 21.3 and 21.4
 \begin{align}
-\nabla\times\vec{E}=\frac{-\mu\vec{\partial H}}{\partial t}
+\nabla\times\vec{E}=\frac{-\vec{\partial B}}{\partial t}=\frac{-\mu\vec{\partial H}}{\partial t}
 \end{align}
 \begin{align}
 \nabla\times\vec{H}=\frac{\vec{\partial D}}{\partial t}=\frac{\epsilon\vec{\partial E}}{\partial t}
@@ -66,7 +81,7 @@ So far our earlier assumption when we differentiate a time-varying function of $
 $\frac{\partial}{\partial t} \equiv j\omega$, 
 $\frac{\partial^2}{\partial t^2} \equiv j\omega \bullet j\omega \equiv j^2\omega^2=-\omega^2$
 
-Therefore for time-harmonic case,
+Therefore for time-harmonic case and a source free medium
 \begin{align}
 \nabla\cdot\vec{D}=\nabla\cdot \epsilon \vec{E}=\epsilon \nabla\cdot\vec{E}=0
 \end{align}
@@ -79,7 +94,7 @@ Therefore for time-harmonic case,
 \begin{align}
 \nabla\times\vec{H}=j\omega\epsilon\vec{E}
 \end{align}
-The equation for an unbound, homogeneous medium is derived from general Maxwell's equation. Looking at the last two equations, the space derivative of the electric field is relative to the time derivative of the magnetic field, so essentially now we are looking for the solution of these four equations. If we look at $\nabla\times\vec{E}=-j\omega\mu\vec{H}$ and $\nabla\times\vec{H}=j\omega\mu\vec{E}$, $\nabla\times\vec{E}$ is dealing with the partial derivative of the electric field and is related to the time derivative $-j\omega\mu\vec{H}$ of the magnetic field. If we recall this equation is similar to what we had for Transmission Lines. For the transmission line equation replacing electric field by voltage and magnetic field by current, then for transmission lines, we derived the voltage equal to $-j\omega LI$. So $\mu$ which is permeability has unit H/m, electric field E has unit V/m, and H is A/m. So if we take the per meter out the E will be volts,$\mu$ will be H and it will be A. So $\nabla\times\vec{E}=-j\omega\mu\vec{H}$ is identical to the equation we got for transmission lines. Exactly similar thing happens in $\nabla\times\vec{H}=j\omega\mu\vec{E}$. That is the space derivation of electric current is related to $j\omega E$ which is like capacitance and current. $\nabla\times\vec{E}=-j\omega\mu\vec{H}$ and $\nabla\times\vec{H}=j\omega\mu\vec{E}$, are generalized forms of the equations we got for transmission lines. So here we are having a three-dimensional space. Also here we are having electric and magnetic fields which are not scalar as we had in transmission lines.
+The equation for an unbound, homogeneous medium is derived from general Maxwell's equation. Looking at the last two equations, the space derivative of the electric field is relative to the time derivative of the magnetic field, so essentially now we are looking for the solution of these four equations. If we look at $\nabla\times\vec{E}=-j\omega\mu\vec{H}$ and $\nabla\times\vec{H}=j\omega\mu\vec{E}$, $\nabla\times\vec{E}$ is dealing with the partial derivative of the electric field and is related to the time derivative $-j\omega\mu\vec{H}$ of the magnetic field. If we recall this equation is similar to what we had for (Transmission Lines). For the transmission line equation replacing electric field by voltage and magnetic field by current, then for transmission lines, we derived the voltage equal to $-j\omega LI$. So $\mu$ which is permeability has unit H/m, electric field E has unit V/m, and H is A/m. So if we take the per meter out the E will be volts,$\mu$ will be H and it will be A. So $\nabla\times\vec{E}=-j\omega\mu\vec{H}$ is identical to the equation we got for transmission lines. Exactly similar thing happens in $\nabla\times\vec{H}=j\omega\mu\vec{E}$. That is the space derivation of electric current is related to $j\omega E$ which is like capacitance and current. $\nabla\times\vec{E}=-j\omega\mu\vec{H}$ and $\nabla\times\vec{H}=j\omega\mu\vec{E}$, are generalized forms of the equations we got for transmission lines. So here we are having a three-dimensional space. Also here we are having electric and magnetic fields which are not scalar as we had in transmission lines.
 
 So we have these vector quantities $\nabla\times\vec{E}=-j\omega\mu\vec{H}$, which have a derivative in 3D space denoted by the $\nabla$ operator. So transmission lines case which we have discussed in a special case of this generalised 3D case. Also as we have found out when analyzing transmission lines. These solutions are coupled equations, so that the electric field $\vec{E}$ is related to the magnetic field and the magnetic field is related to the electric field.
 
@@ -137,6 +152,9 @@ The generalised form for wave equation gotten in the transmission line is
 \nabla^2\vec{H}=-\omega^2\mu\epsilon\vec{H}
 \end{align}
 
+The above equation is the general case of Ohms law,while Telegraphers equation is the specialised form of it
+
+
 So what we want to get is the solution to the set of equations that solve Maxwell's equations.
 
 We want to proceed from the simplest possible solutions and ask if the solution is consistent with Maxwell's equations.
@@ -169,9 +187,9 @@ $\vec{E}=\vec{K}=0$ Meaning no electric field at all, in other words, a uniform 
 Therefore uniform three-dimensional time-varying fields can not exist.
 
 \section{Case 2: the electric field is not uniform}
-Let us say the electric field ($\vec{E}$) is in all three-dimensional space but uniform in a plane and let us choose a coordinate plane in such a way that the field is oriented in the x-axis. Without losing a sense of generality, we have defined which way the coordinate system is and which direction the electric and magnetic fields are oriented. So we have the freedom to choose the coordinate system such that the x-axis is oriented in the direction of the electric field.
+Let us say the electric field ($\vec{E}$) is uniform in a plane,not  in all three-dimensional space but uniform in a plane and let us choose a coordinate plane in such a way that the field is oriented in the x-axis. Without losing a sense of generality, we have defined which way the coordinate system is and which direction the electric and magnetic fields are oriented. So we have the freedom to choose the coordinate system such that the x-axis is oriented in the direction of the electric field.
 
-i.e $\vec{E}={E_{0}}\hat{x}$
+i.e $\vec{E}={E_{0}}(x)\hat{x}$
 
 In this case, we are assuming that the electric field $\vec{E}$ is constant in the direction of the x-axis or a plane perpendicular to the x-axis, let us consider the former. For a variation of $\vec{E}$ in the yz plane and the other in the xz plane. $\vec{E}$ is uniform in xy plane or z plane. Now for variation in the yz or xz plane, let us use the xz plane only and say $\vec{E}$ is dependent only on x for variation instead of (x and z) to simplify the problem. So we have $\vec{E}={E_{0}(x)}\hat{x}$, if this is the solution.
 
@@ -246,7 +264,7 @@ We recall in the transmission line that $\alpha=0$, this represents a lossless t
 \end{align}
 The solution to this is easily written as
 
-$E_x(z)=E^+_xe^{-j\beta z}+E_xe^{j\beta z}$ This is similar to the transmission line for the simplest case of wave propagation in an unbound medium.
+$E_x(z)=E^+_xe^{-j\beta z}+E^-_xe^{j\beta z}$ This is similar to the transmission line for the simplest case of wave propagation in an unbound medium.
 We get an electric field which is a combination of $E_x^+$ and $E_x^-$ and we know from the transmission line earlier that $E_x^+$ $e^{-j\beta z}$ represents a forward travelling wave in the z-direction and $E_x^-$ $e^{-j\beta z}$ represents a backward travelling wave in the z-direction. So we get a solution for the electric field which is a combination of two travelling waves of amplitude $E_x^+$ and $E_x^-$ travelling in opposite directions in positive z-direction and negative z-direction.
 
 ADDENDUM: $E_0(x)\hat{x}$ and $E_0(z)\hat{x}$, why it exists for one and not the other using vector field plot to find where you get rotation $\nabla\times\vec{E}$.

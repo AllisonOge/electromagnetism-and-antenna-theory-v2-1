@@ -1,13 +1,24 @@
-Again, the concept of a low-loss transmission line is a more practical transmission line where $R\ll\omega L$, $G\ll\omega C $.
+% \chapter{VOLTAGE AND CURRENT VARIATION IN LOWLOSS TRANSMISSION LINE}
 
-Let us now study the conditions for treating the transmission line as low-loss at a particular frequency, the variation of voltage and current along a transmission line, the concept of voltage standing wave ratio (VSWR)\index{voltage standing wave ratio}, the condition for full reflection at the load end, the relationship between $R_{\max}$ and VSWR and also the relationship between $R_{\min}$ and VSWR.
+% \section{Objectives}
+% \definecolor{lightblue}{RGB}{173,216,230}
+% \begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+% At the end of this chapter, you should be able;
+% \begin{enumerate}[(i)]
+% \newline
+% \end{enumerate}
+% \end{mdframed}
 
-The propagation constant in equation~\eqref{eqn:lowlossgamma} given as follows states the conditions defined for a low-loss transmission line in terms of the primary constants (R, L, C and G) of the line.
+In practical transmission line, lowloss occur when $R\ll\omega L$, and $G\ll\omega C $.
+
+Let us now study the conditions for treating the transmission line as lowloss at a particular frequency, the variation of voltage and current along a transmission line, the concept of voltage standing wave ratio (VSWR)\index{voltage standing wave ratio}, the condition for full reflection at the load end, the relationship between $R_{\max}$ and VSWR and also the relationship between $R_{\min}$ and VSWR.
+
+The propagation constant in equation~\eqref{eqn:lowlossgamma} given as follows states the conditions defined for a lowloss transmission line in terms of the primary constants (R, L, C and G) of the line.
 \begin{equation}
 \gamma = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} +\jmath\omega\sqrt{LC}
 \label{eqn:lowlossgammalec5}
 \end{equation}
-To treat a line as a low-loss transmission line, one will have to express these conditions ($R\ll\omega L$ and $G\ll\omega C$) in terms of the secondary parameters ($\alpha$ and $\beta$) since these parameters are readily available on the datasheet. If we can establish a relationship between these parameters ($\alpha$ and $\beta $) for the low-loss nature of the line, then we can find out whether a particular line is low-loss at a particular frequency.
+To treat a line as a lowloss transmission line, one will have to express these conditions ($R\ll\omega L$ and $G\ll\omega C$) in terms of the secondary parameters ($\alpha$ and $\beta$) since these parameters are readily available on the datasheet. If we can establish a relationship between these parameters ($\alpha$ and $\beta $) for the lowloss nature of the line, then we can find out whether a particular line is lowloss at a particular frequency.
 
 The attenuation constant as derived in equation~\eqref{eqn:lowlossalpha} is
 \begin{equation}
@@ -18,7 +29,7 @@ And the phase constant remains the same as that of lossless transmission line
 \begin{equation}
 \beta = \omega\sqrt{LC}
 \end{equation}
-Since we have expressed equation~\eqref{eqn:lowlossgammalec5} in terms of primary constants, let us find out under what condition the transmission line can be treated as low-loss.
+Since we have expressed equation~\eqref{eqn:lowlossgammalec5} in terms of primary constants, let us find out under what condition the transmission line can be treated as lowloss.
 
 To do this we further simplify equation~\eqref{eqn:lowlossalphalec5} such that,
 \begin{align*}
@@ -39,11 +50,11 @@ The numerator and denominator of the first term is multiplied by $\sqrt{\frac{L}
 \footnotetext{
 The numerator and denominator is multiplied by $\omega$
 }
-Recall that for low-loss, $R\ll\omega L$ and $G\ll\omega C$, thus
+Recall that for lowloss, $R\ll\omega L$ and $G\ll\omega C$, thus
 \[\frac{R}{\omega L} \ll 1\textnormal{ and }\frac{G}{\omega C} \ll 1\]
 Therefore, $\frac{1}{2} \left(\frac{R}{\omega L} + \frac{G}{\omega C}\right) \ll 1$ and $\alpha = \beta \times \textnormal{something far smaller than 1}$.
 
-Hence, for a low-loss transmission line, $\alpha \ll \beta$ where $\beta = \frac{2 \pi}{\lambda}$.
+Hence, for a lowloss transmission line, $\alpha \ll \beta$ where $\beta = \frac{2 \pi}{\lambda}$.
 Considering a wave which travels a distance of one wavelength along the transmission line, its phase, $\beta$ becomes $2\pi$, that is, $\beta = 2 \pi$, then the amplitude of the wave varies by
 \begin{equation*}
 e^{-\alpha x} = e^{-\alpha\lambda}	
@@ -52,15 +63,15 @@ Where $\lambda = \frac{2\pi}{\beta}$
 \begin{equation*}
 e^{-\alpha x} = e^{-\alpha \dfrac{2 \pi}{\beta}}
 \end{equation*}
-Since for a low-loss transmission line $\alpha\ll\beta$, therefore the quantity $e^{-\alpha \frac{2 \pi}{\beta}} \approx 1$. Hence, amplitude reduction is very small as the original amplitude is close to the final amplitude. So, a line can be treated as a low-loss transmission line if the change in amplitude over one wavelength is negligibly small. Let negligibly small be 1 percent change from the original or starting amplitude. Then
+Since for a lowloss transmission line $\alpha\ll\beta$, therefore the quantity $e^{-\alpha \frac{2 \pi}{\beta}} \approx 1$. Hence, amplitude reduction is very small as the original amplitude is close to the final amplitude. So, a line can be treated as a lowloss transmission line if the change in amplitude over one wavelength is negligibly small. Let negligibly small be 1 percent change from the original or starting amplitude. Then
 \[\frac{\alpha 2 \pi}{\beta} \approx \frac{1}{100}, e^{-0.01} = 0.99005\textnormal{ of the initial value}\]
 The wave amplitude only reduces by $1-0.99005=0.00995$ or 1 per cent. That means the wave amplitude only reduces by 1 per cent after a distance of 1 wavelength.
 
-A line can be treated as a low-loss transmission line if $\alpha \ll \beta$ depending on the given frequency but if the frequency changes such that $\alpha \geq \beta$, the line cannot be treated as a low-loss transmission line.
+A line can be treated as a lowloss transmission line if $\alpha \ll \beta$ depending on the given frequency but if the frequency changes such that $\alpha \geq \beta$, the line cannot be treated as a lowloss transmission line.
 
 \begin{exmp}
-\subsubsection*{Analysis of a Low-Loss transmission line}\label{lec:lec5}
-Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G = 0$, what is the resistance of the transmission line so that the line can be treated as a low-loss transmission line given the frequency of operation as $100MHz$?
+\subsubsection*{Analysis of a Lowloss transmission line}\label{lec:lec5}
+Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G = 0$, what is the resistance of the transmission line so that the line can be treated as a lowloss transmission line given the frequency of operation as $100MHz$?
 
 \subsubsection*{Solution}
 \[L= 0.25\mu H/m, C= 100pF/m, G = 0\]
@@ -69,20 +80,12 @@ Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G
 \beta = 2\pi f\sqrt{LC}
 =2 \pi \times 10^8 \sqrt{(0.25 \times 10^{-6}) \times (100 \times 10^{-12})} = \pi rad/m
 \end{dmath*}
-For a low-loss transmission line, taking 1 percent of $\beta,
-\alpha= \frac{1}{100}\beta = \frac{\pi}{100}$.
+For a lowloss transmission line, taking 1 percent of $\beta,
+\alpha= \frac{1}{100}\beta = \frac{\pi}{100}$ \\.
 
-Also,
-\begin{equation*}
-\alpha = \beta\frac{1}{2} \left(\frac{R}{\omega L} + \frac{G}{\omega C}\right)
-\end{equation*}
-Given that, \(G=0\)
-\begin{equation*}
-\alpha = \beta\frac{1}{2} \left(\frac{R}{\omega L}\right)
-\end{equation*}
-Recall that $\beta = \omega\sqrt{LC} $, now we get:
+ Given that, \(G=0\)
 \begin{dmath*}
-\alpha = \frac{1}{2}\frac{R}{\omega L} \times \omega\sqrt{LC} = \frac{1}{2} R \sqrt \frac{LC}{L^{2}} = \frac{1}{2} R \sqrt \frac{C}{L}
+\alpha = \frac{1}{2} R \sqrt \frac{C}{L} + \frac{1}{2} G \sqrt \frac{L}{C} = \frac{1}{2} R \sqrt \frac{C}{L}
 \end{dmath*}
 \begin{equation*}
 \frac{\pi}{100} = \frac{1}{2} R \sqrt{\frac{100 \times 10^{(-12)}}{0.25 \times 10^{(-6)}}}
@@ -90,10 +93,10 @@ Recall that $\beta = \omega\sqrt{LC} $, now we get:
 \begin{equation*}
 R=\pi\Omega/m.
 \end{equation*}
-If $R \leq \pi\Omega/m$, the line is low-loss at $ f= 100MHz$. If the frequency changes, the line may not satisfy this low-loss condition, hence we have to check again.
+If $R \leq \pi\Omega/m$, the line is lowloss at $ f= 100MHz$. If the frequency changes, the line may not satisfy this lowloss condition, hence we have to check again.
 \end{exmp}
 
-Therefore, unless specifically told that a line is a lossy line, we are at liberty to treat the line as a lossless line since the phase constant as we have seen for lossy and lossless lines are the same. Also, the characteristics impedance of a low-loss line is almost real and the same as the characteristics impedance of a lossless line. Hence for all transmission line problems, we consider it lossless and thus, 
+Therefore, unless specifically told that a line is a lossy line, we are at liberty to treat the line as a lossless line since the phase constant as we have seen for lossy and lossless lines are the same. Also, the characteristics impedance of a lowloss line is almost real and the same as the characteristics impedance of a lossless line. Hence for all transmission line problems, we consider it lossless and thus, 
 \begin{align*}
 Z_0 = \sqrt{{\frac{\jmath\omega L}{\jmath\omega C}}} = \sqrt{\frac{L}{C}} = \textnormal{real}, \quad \quad \gamma= \jmath\beta = \jmath\omega\sqrt{LC}
 \end{align*}
@@ -108,7 +111,7 @@ I= \frac{V^+}{Z_0} e^{- \gamma x} - \frac{V^-}{Z_0} e^{\gamma x}
 \end{align}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/11111111}
+\includegraphics[width=0.9\linewidth]{graphics/11111111}
 \caption{Wave moving towards the Generator}
 \label{fig:11111111}
 \end{figure}
@@ -162,7 +165,7 @@ I(l) = \frac{V^+}{Z_0}e ^{j \beta l}( 1 - |\Gamma_L|e^{\jmath\phi_L} . e^{-\jmat
 As we move from load to generator, $l$ increases positively, making $\phi_L -2\beta l$ more and more negative. In the complex plane, when a phase gets more negative, it means we are moving in a clockwise direction as shown in figure~\ref{fig:473-drawings}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/"473 drawings"}
+\includegraphics[width=1\linewidth]{graphics/"473 drawings"}
 \caption{Clockwise and Anticlockwise movement of distance, $l$}
 \label{fig:473-drawings}
 \end{figure}
@@ -170,7 +173,7 @@ As we move from load to generator, $l$ increases positively, making $\phi_L -2\b
 So by moving towards the generator, the phase becomes more and more negative, while the amplitude of $|\Gamma_L|$ remains constant. The total voltage is scaled by the vector sum of the real term (1) and complex term $|\Gamma_L| e^{j(\phi_L -2 \beta l)}$. Hence, we have a summation of a real vector, whose magnitude is 1, plus a complex term as shown in figure~\ref{fig:kjhgfdwert}. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/Argand_Diagram}
+\includegraphics[width=1\linewidth]{graphics/Argand_Diagram}
 \caption{Variation of the $1 + |\Gamma_L| e^{j(\phi_L -2 \beta l)}$ term in the complex plane (Argand diagram)}
 \label{fig:kjhgfdwert}
 \end{figure}
@@ -194,7 +197,7 @@ Thus we have established that when $ e^{j(\phi_L - 2 \beta l)} = 1$, the voltage
 The maximum voltage and current does not occur at the same point on the transmission line, they are staggered in space. Whenever there is a maximum voltage, there is a minimum current and vice versa. So the standing wave of voltage and current are shifted with respect to each other in space on the transmission line as shown in figure~\ref{fig:asdfghjhgfdsa}. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/fig5.4modified}
+\includegraphics[width=0.7\linewidth]{graphics/fig5.4modified}
 \caption{Voltage and current variations for lossless transmission line in the direction of increasing $l$}
 \label{fig:asdfghjhgfdsa}
 \end{figure}
@@ -269,12 +272,12 @@ l_\max=\frac{(-1.14 + 2m\pi)\lambda}{4\pi}
 \end{align*}
 When $m = 1,2,3, \ldots\quad l_\max=0.41\lambda, 0.91\lambda, 1.41\lambda$ and so on.
 
-Similarly, to find the current maximum, let us recall that the current maximum occurs at a point where the voltage is minimum and vice versa. They are apart by a distance of $\frac{\lambda}{4}$, so the current maximum is at
+Similarly, to find the current minimum, let us recall that the current minimum occurs at a point where the voltage is minimum and vice versa. They are apart by a distance of $\frac{\lambda}{4}$, so the current maximum is at
 \[
 l_\max(\text{voltage})\pm \frac{\lambda}{4}
 \]
 
-Using the negative and positive sign will both give correct answers. Here, we will use the negative sign, that is, $l_\max-\frac{\lambda}{4}$. When $m = 1, 2, 3, \ldots$, therefore $|I|_\max$ occurs at $0.16\lambda , 0.66\lambda , 1.16\lambda$ and so on.
+Using the negative and positive sign will both give correct answers. Here, we will use the negative sign, that is, $l_\max-\frac{\lambda}{4}$. When $m = 1, 2, 3, \ldots$, therefore $|I|_\min$ occurs at $0.16\lambda , 0.66\lambda , 1.16\lambda$ and so on.
 \end{exmp}
 
 \section{Concept of Voltage Standing Wave Ratio (VSWR)}\index{voltage standing wave ratio}
@@ -307,7 +310,7 @@ Z_{\min}=\frac{|V_{\min}|}{|I_{\max}|}
 = R_{\min}=Z_0\left\{\frac{1-|\Gamma_L|}{1+|\Gamma_L|} \right\}
 \label{eqn:minimp}
 \end{dmath}
-Once load impedance, characteristic impedance $Z_0$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to equation~\eqref{eqn:maximp} and the lowest according to equation~\eqref{eqn:minimp}.
+Once load impedance, characteristic impedance $Z_0$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to equation~\eqref{eqn:maximp} and the highest according to equation~\eqref{eqn:minimp}.
 
 At high frequencies, with the knowledge of the voltage standing wave on the transmission line, the measurement of phase is very difficult and complicated. One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase not in a direct manner but rather an indirect one by measuring only the magnitude quantities. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time relationship between the two waves, the forward and backward wave. 
 
@@ -404,7 +407,7 @@ A $50\Omega$ transmission line is connected to a parallel combination of a $100\
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{\pathtopartone/graphics/d1}
+\includegraphics[width=\linewidth]{graphics/d1}
 \caption{Circuit diagram}
 \end{figure}
 
@@ -456,6 +459,8 @@ R_\min = \frac{50}{3} = 16.67\Omega
 \end{enumerate}
 \end{exmp}
 
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex51}]
@@ -469,5 +474,27 @@ A 600$\varOmega$ transmission line is 150m long operates at 400kHz with $\alpha 
 (a) $\Gamma_L = -0.2 + j0.4$ (b) $\Gamma(L) = -0.09 + j0.20$ (c) $Z(L) = 502.7\angle22.8^o\varOmega$ (d) $V(L) = 75.0\angle167.3^o$V (e) $|V|_\max = 85.5$V
 
 \Exercise[label={ex53}]
-Prove that the attenuation constant is comparable to the phase constant (that is $\alpha\approx\beta$) for a low-loss transmission line.
+Prove that the attenuation constant is comparable to the phase constant (that is $\alpha\approx\beta$) for a lowloss transmission line.
+
+\Exercise[label={ex54}]
+In a lossless transmission line, how does the absence of resistance impact the power transfer capability?
+
+\Exercise[label={ex55}]
+Calculate the characteristic impedance of a lossless transmission line with inductance \( L = 0.2 \, \text{mH/m} \) and capacitance \( C = 80 \, \text{nF/m} \).
+
+% \Exercise[label={ex56}]
+% What is the significance of the surge impedance loading in a lossless transmission line?
+
+\Exercise[label={ex57}]
+In a lossless transmission line, explain how the voltage and current vary along the line for a given signal frequency.
+
+\Exercise[label={ex58}]
+How does the absence of resistance in a lossless transmission line affect signal reflection at the line termination?
+
+\Exercise[label={ex59}]
+Calculate the wavelength of a signal with a frequency of 100 MHz propagating in a lossless transmission line with a velocity factor of 0.8.
+
+% \Exercise[label={ex60}]
+% Explain how the absence of resistive losses influences the phase velocity of signals in a lossless transmission line.
 \end{ExerciseList}
+\end{mdframed}

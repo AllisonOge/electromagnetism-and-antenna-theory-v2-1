@@ -1,11 +1,24 @@
 \chapter{Introduction to Electromagnetic Waves}\label{lec:lec1}
+	
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+\section{OBJECTIVES}
+The objective of this chapter is to:
+\begin{enumerate}[(i)]
+% \item Antennas and the different types of antennas their characteristics, such as radiation patterns, gain, and impedance.
+\item Discuss briefly several areas in which electromagnetic waves can be applied.
+\end{enumerate}
+\end{mdframed}
+
+\section{Electromagnetic waves}
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/transmission1}
+\includegraphics[width=1\linewidth]{graphics/transmission1}
 \caption{Overhead transmission line}
 \end{figure}
 
-The concept of electromagnetic waves has fascinated man for so many years that man has asked so many questions varying from \emph{\textquotedblleft Why do stars twinkle?\textquotedblright}, to \emph{\textquotedblleft Why do magnetic needles deflect?\textquotedblright}, and \emph{\textquotedblleft how does light travel from the sun when there is no medium between?\textquotedblright}
+The concept of electromagnetic waves has fascinated man for so many years that man has asked so many questions varying from \emph{\textquotedblleft Why do stars twinkle and plant do not?\textquotedblright}, to \emph{\textquotedblleft Why do magnetic needles deflect?\textquotedblright}, and \emph{\textquotedblleft how does light travel from the sun when there is no medium between?\textquotedblright}
 
 In modern-day, questions vary from \emph{\textquotedblleft how do we have tv reception?\textquotedblright} to \emph{\textquotedblleft how do we have radio stations operating\textquotedblright} to \emph{\textquotedblleft how does a mobile phone work?\textquotedblright} to \emph{\textquotedblleft why are certain things heated when they are kept inside a microwave?\textquotedblright}. All these phenomena revolve around the concept of electromagnetic waves.\footnote{The concept of electromagnetic waves is virtually applied in almost all advanced technology.}
 
@@ -38,7 +51,7 @@ see \autoref{lec:lec18} for a detailed explanation of Maxwell's equations
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/electromagneticspectrum}
+\includegraphics[width=1\linewidth]{graphics/electromagneticspectrum}
 \caption{The electromagnetic spectrum}
 \label{fig:electromagneticspectrum}
 \end{figure}
@@ -53,18 +66,18 @@ A question that comes to mind in electromagnetic wave transmission is \emph{\tex
 \subsection{Transmission Line}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.1]{\pathtopartone/graphics/transmission2}
+\includegraphics[scale=0.1]{graphics/transmission2}
 \caption{Power transmission line}
 \end{figure}
 
-In transmission lines, our main concern is how voltage and current would flow in a two-conductor system called a \textit{transmission line} and how losses occur during transmission \footnote{
+In transmission lines, our main concern is how voltage and current would flow in a two-conductor system called a \textit{transmission line} and how losses occur during transmission These lines maintain the integrity and efficiency of the signal by managing impedance, minimizing reflections and controlling the transfer of power along a line. Looking into losses in transmission lines; they arise from resistance in conductors, dielectric losses in insulating materials, radiation losses, skin effect, and proximity effect. They reduce the efficiency of energy transfer in the line emphasizing the need for careful design and material selection to minimize these losses.\footnote{
 When the frequency of a wave increases its wavelength decreases and when the wavelength of the wave is comparable to the length of the transmitting media (length of the wire) the losses along the wire become too significant to ignore.
 }.
 
 There are different types of transmission media and the application of this media is based on the frequency range of the signal.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/twistedpairs}
+\includegraphics[width=1\linewidth]{graphics/twistedpairs}
 \caption{Twisted pair of wires}
 \end{figure} 
 
@@ -72,29 +85,42 @@ There are different types of transmission media and the application of this medi
 They are point-to-point transmission lines\footnote{
 Connections between two nodes or endpoints
 } (it is a balanced transmission line having voltages $v^{+}$ and $v^{-}$ connected at its terminals). An example of the twisted pairs is the telephone wires; it is characterized by low data rate, high Electromagnetic Interference (EMI)\index{electromagnetic interference} and is lossy at radio frequencies.
+\subsubsection{Limitations of Twisted pairs}
+\textbf{Limited bandwidths:} suitable for moderate distances and bandwidths.  However, at higher frequencies, they experience more signal degradation and are limited in the amount of data they can effectively transmit.\newline
+\textbf{Susceptibility to interference:} Since they lack strong shielding, they are more prone to electromagnetic interference from near by cables or other electrical devices\newline
+\textbf{Attenuation:} Higher frequencies suffer more attenuation in twisted pairs, limiting their use for high speed and long distance transmissions.
 
 \subsubsection{Coaxial cable}
-For the coaxial cable, we have an example in the LAN (Local Area Network) cable; it characterizes data rates of up to a few Mbps, low EMI and moderate loss.
+For the coaxial cable, we have an example in the LAN (Local Area Network) cable; it characterizes data rates of up to a few Mbps, low EMI and moderate loss.\newline
+
+\textbf{Limitations of Coaxial cables}\newline
+1. Expensive to install for longer distances because of its thickness and stiffness\newline
+2. The fault point is difficult to find and it is inconvenient to deal with the accident in time.\newline
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{\pathtopartone/graphics/coaxialcable}
+\includegraphics[scale=0.5]{graphics/coaxialcable}
 \caption{Coaxial cable}
 \end{figure}
 
 \subsection{Waveguides}
 These are hollow circular or rectangular pipes and they are used when the frequency becomes high in other to reduce losses. 
 
-Inside the hollow metal conductor, an electromagnetic wave can propagate and here rigorous analysis of electromagnetic wave propagation is carried out to help find out what the field distribution would look like and how much energy loss will take place inside.
+Inside the hollow metal conductor, an electromagnetic wave can propagate and here rigorous analysis of electromagnetic wave propagation is carried out to help find out what the field distribution would look like and how much energy loss will take place inside.\newline
+
+\textbf{Limitations of waveguides} \newline
+1. It is very bulky in size and weight\newline
+2. It is not very economical\newline
+
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{\pathtopartone/graphics/waveguide2}
+\includegraphics[scale=0.5]{graphics/waveguide2}
 \caption{Waveguide\index{waveguide}}
 \end{figure}
 
 \subsection{Antennas}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{\pathtopartone/graphics/spcaceantenna}
+\includegraphics[scale=0.4]{graphics/spcaceantenna}
 \caption{Parabolic dish antenna}
 \label{fig:spaceantenna}
 \end{figure}
@@ -106,30 +132,36 @@ An antenna is a device that separately puts radiation in the desired direction. 
 Other more advanced antenna systems referred to as \textbf{smart antennas} can selectively steer the radiation in the desired direction. There are two types of smart antennas which are the \textbf{adaptive array} and \textbf{switched beam systems}.
 
 \subsubsection{Adaptive array\index{adaptive array antenna}}
-They steer the beam in the direction of the user/observer while simultaneously nulling interfering signals (see figure~\ref{fig:fh06_02}).
+Adaptive arrays also known as adaptive antenna arrays, are a type of antenna system that can dynamically adjust their radiation pattern response to changing signal conditions. They use advanced signal processing techniques to optimize signal reception and transmission, improving the overall performance of wireless communication systems.\newline
+They steer the beam in the direction of the user/observer while simultaneously nulling interfering signals. It’s like having a smart signal that can adapt to its surroundings.(see figure~\ref{fig:fh06_02}).
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.3]{\pathtopartone/graphics/fh06_02}
+\includegraphics[scale=0.2]{graphics/adaptive_arrays}
 \caption{Adaptive array system}
-\label{fig:fh06_02}
+\label{fig:adaptive_arrays}
 \end{figure}
 
+	\textbf{Limitations to adaptive array}\newline
+1. Sensitivity to number of directional noise\newline
+2. Decorrelation of the  jamming signal in the main channel with respect to the same signal in an auxiliary channel and multipath effects.
 \subsubsection{Switched beam antenna\index{switched beam antenna}}
 It has multiple beams (see figure~\ref{fig:switchedbeam}) which can be switched depending on the area an observer is situated so that a signal can be transmitted or received from that zone. Therefore, depending on the requirement of the system a beam is selected hence the name switched beam.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.7]{\pathtopartone/graphics/switchedbeam}
+\includegraphics[scale=0.7]{graphics/switchedbeam}
 \caption{Illustration of a switched beam antenna}
 \label{fig:switchedbeam}
-\end{figure} 
-
+\end{figure}
+ 
+	\textbf{Limitations to switched bean antenna}\newline
+1. They do not provide the precise beam steering capability of a phased array.
 
 \subsection{Satellite communication}\index{satellite communication}
 A satellite is an object that is placed above the earth's surface. There is a satellite station on the earth's surface usually called the earth station which transmits signals from the earth to satellites and also receives signals from satellites to the earth. With satellite communication there are certain frequency bands are assigned. Satellite communication is a point-to-multi-point system.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.2]{\pathtopartone/graphics/satellite}
+\includegraphics[scale=0.2]{graphics/satellite}
 \caption{Space satellite}
 \end{figure}
 
@@ -138,7 +170,7 @@ The whole propagation of the electromagnetic wave and proper placing of radiatio
 \subsection{Fiber optics communication}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{\pathtopartone/graphics/opticalfiber1}
+\includegraphics[scale=0.4]{graphics/opticalfiber1}
 \caption{Optical fiber}
 \label{fig:opticalfibre1}
 \end{figure}
@@ -149,7 +181,7 @@ Knowledge of electromagnetic waves is required to investigate the propagation of
 Wireless communication is used in cell phones and most modern systems like home entertainment systems using Bluetooth speakers, laptops using a wireless method to connect to routers and so on. All these work on the principle of electromagnetic waves.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.3]{\pathtopartone/graphics/Expert-support-for-wireless-communication-projects}
+\includegraphics[scale=0.3]{graphics/Expert-support-for-wireless-communication-projects}
 \caption{Wireless connection of devices}
 \end{figure}
 
@@ -157,7 +189,7 @@ Wireless communication is used in cell phones and most modern systems like home 
 In cellular communication, we have the base station from where the signals are transmitted, all users located inside are called a cell (see figure~\ref{fig:rrsadafig1}). Any mobile call made goes from the handset to the base station in that sector and then goes to the desired handset within the same sector or in another sector.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.3]{\pathtopartone/graphics/RR_sada_fig1}
+\includegraphics[scale=0.3]{graphics/RR_sada_fig1}
 \caption{Cellular communication}
 \label{fig:rrsadafig1}
 \end{figure}
@@ -167,7 +199,7 @@ It is observed that a cell phone user has signals from multiple paths all coming
 When there is constructive interference, a strong signal strength is observed and when the interference is destructive, a weak signal strength is observed. The gradual weakening of a signal due to destructive interference is called \textit{fading}\index{fading}. To understand fading phenomenon a good knowledge of electromagnetic waves is required. To avoid fading phenomena, antennas in mobile phones use \textit{sectioned radiation patterns}\index{sectioned radiation patterns}. This implies that the cell phone gets its signal from the base station directly while minimizing signals from paths not in the direction of the base station of the antenna. A good knowledge of electromagnetic waves is required to design such antennas.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{\pathtopartone/graphics/rod}
+\includegraphics[scale=0.4]{graphics/rod}
 \caption{Illustration of signal inference}
 \label{fig:rod}
 \end{figure}
@@ -176,7 +208,7 @@ When there is constructive interference, a strong signal strength is observed an
 In radar altimetry, electromagnetic waves are used for finding the distance of an object from its position in space to the antenna. The antenna is excited with an electromagnetic pulse and the dish beams parallel waves downwards. This beam is reflected from the earth's surface/target object back to the dish. The dish converges the received signal back to the antenna and processes it in the detector (see figure~\ref{fig:new}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/Azimuth_resolution}
+\includegraphics[width=1\linewidth]{graphics/Azimuth_resolution}
 \caption{Illustration of Azimuth resolution}
 \label{fig:new}
 \end{figure}
@@ -188,7 +220,7 @@ With radar systems, the distance travelled by the beam can be estimated and also
 \subsubsection{The monostatic radar equation}
 \begin{figure}[h]
 \centering
-\includegraphics[width=.8\linewidth]{\pathtopartone/graphics/new1}
+\includegraphics[width=.8\linewidth]{graphics/new1}
 \label{fig:new1}
 \caption{Illustration of the monostatic radar equation}
 \end{figure}
@@ -201,7 +233,7 @@ $P_{r}$ is the received power, $P_t$ is the transmitted power, $G$ is the antenn
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{\pathtopartone/graphics/radarlocator}
+\includegraphics[scale=0.5]{graphics/radarlocator}
 \caption{Radar locator}
 \label{fig:radarlocator}
 \end{figure}
@@ -216,9 +248,11 @@ The microwave beam is transmitted obliquely at right angles to the direction of 
 \subsubsection*{To measure the azimuth resolution}
 The SLAR is primarily a real aperture radar. This requires a reasonably large antenna for adequate angular resolution. The azimuth resolution, $ Ra $, is defined as
 
-\begin{center}
-$R_{a}=\frac{H \lambda}{D cos\theta}$
-\end{center}
+
+\begin{align}
+R_{a}=\frac{H \lambda}{D cos\theta}
+\end{align}
+
 $ H $ is the height of the antenna(height of the airplane)\\
 $ D $ is the geometric length of the antenna,\\
 $\lambda$ is the wavelength of the transmitted pulses, and\\
@@ -226,7 +260,7 @@ $\theta$ is the incidence angle
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.8\linewidth]{\pathtopartone/graphics/SLAR2}
+\includegraphics[width=.8\linewidth]{graphics/SLAR2}
 \caption{Diagram of the SLAR}
 \label{fig:slar2}
 \end{figure}
@@ -235,22 +269,17 @@ The equation shows, that increasing altitude decreases the azimuthal resolution 
 
 \subsubsection{To measure the cross-track resolution}
 At all ranges, the radar antenna measures the radial line of sight distance between the radar and each target on the surface. This is the slant range distance. The ground range distance is the true horizontal distance along the ground corresponding to each point measured in the slant range. The cross-track resolution, $R_{r}$, is defined as:  
-\begin{center}
-$R_{r}=\frac{c_{0} t_{p}}{2 sin\theta}$
-\end{center}
+\begin{align}
+R_{r}=\frac{c_{0} t_{p}}{2 sin\theta}
+\end{align}
 $c_{0}$ is the speed of light\\
 $t_{p}$ is the pulse duration of the transmitter and\\
 $\theta$ is the incidence angle
 
-\subsubsection{To measure the cross-track resolution}
-At all ranges, the radar antenna measures the radial line of sight distance between the radar and each target on the surface. This is the \textit{slant range}\index{slant range} distance. The ground range distance is the true horizontal distance along the ground corresponding to each point measured in the slant range. The \textit{cross-track resolution}\index{cross-track resolution}, $R_{r}$, is defined as:  
-\begin{dmath*}
-R_{r}=\frac{ct_{p}}{2\sin\theta}
-\end{dmath*}
-$c$ is the speed of light, $t_{p}$ is the pulse duration of the transmitter and $\theta$ is the incidence angle
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig 1.19(SLAR)}
+\includegraphics[width=1\linewidth]{graphics/fig 1.19(SLAR)}
 \caption{Diagram of the SLAR}
 \end{figure}
 
@@ -263,7 +292,7 @@ To improve the resolution in remote sensing, a technique called the \textit{synt
 To mitigate this, there is a technique where the antenna is small but the vehicle moves and as the vehicle moves, the reflection information is stored after all the refection information is collected from different locations, then data processing can be done to get an angular resolution which will correspond to the total distance travelled by the vehicle. This technique is known as the \textit{synthetic aperture radar}\index{synthetic aperture radar} (see figure~\ref{fig:sar2}).
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.35]{\pathtopartone/graphics/sar2}
+\includegraphics[scale=0.35]{graphics/sar2}
 \caption{Diagram illustrating the SAR}
 \label{fig:sar2}
 \end{figure}
@@ -283,7 +312,7 @@ To mitigate this, there is a technique where the antenna is small but the vehicl
 A typical radio telescope is shown in figure~\ref{fig:radiotelescope0} with a passive receiver. In this case, no signal is transmitted but the signal is received.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{\pathtopartone/graphics/Radio-Telescope-0}
+\includegraphics[scale=0.5]{graphics/Radio-Telescope-0}
 \caption{Radio telescope}
 \label{fig:radiotelescope0}
 \end{figure}
@@ -307,35 +336,64 @@ The figure below describes the whole concept of EMC, illustrating both causes(na
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.35]{\pathtopartone/graphics/634771461726914062}
+\includegraphics[scale=0.35]{graphics/634771461726914062}
 \caption{Electromagnetic Compatibility}
 \label{fig:634771461726914062}
 \end{figure}
 
 \newpage
-\section*{Exercises}
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+\section*{Exercises}	
 \begin{ExerciseList}
-\Exercise[label={ex11}]
-What is the difference between adaptive arrays and switched beam antennae?
-
-\Exercise[label={ex12}]
-What is Swath width in SLAR?
-
-\Exercise[label={ex13}]
-Explain the concept of fading in cellular communication.
-
-\Exercise[label={ex14}]
-If from 30MHz to 300MHz, the co-axial cable is used, and from 30GHz to 300GHz, the waveguide is used, what kind of transmission lines are used in the spectrum ranging from 300MHz to 30GHz?
-
-\Answer[ref={ex14}]
-Solution to exercise 4
-
-\Exercise[label={ex15}]
-For a SLAR with the following characteristics: $\lambda = 1cm$, $L = 3m$, $H = 6000m$,
-$\theta = 60\deg$, and pulse width = 100 ns. 
-Find the resolutions.
-
-\Answer[ref={ex15}]
-Solution to exercise 5
+	\Exercise[label={ex11}]
+	What is the difference between adaptive arrays and switched beam antennae?
+	
+	\Exercise[label={ex12}]
+	What is Swath width in SLAR?
+	
+	\Exercise[label={ex13}]
+	Explain the concept of fading in cellular communication.
+	
+	\Exercise[label={ex14}]
+	If from 30MHz to 300MHz, the co-axial cable is used, and from 30GHz to 300GHz, the waveguide is used, what kind of transmission lines are used in the spectrum ranging from 300MHz to 30GHz?
+	
+	
+	\Exercise[label={ex15}]
+	For a SLAR with the following characteristics: $\lambda = 1cm$, $L = 3m$, $H = 6000m$,
+	$\theta = 60\deg$, and pulse width = 100 ns. 
+	Find the resolutions.
+	
+	% \Exercise[label={ex16}]
+	% Amongst coaxial cables, waveguides and twisted pairs, which suffers the most losses and why?
+	
+	\Exercise[label={ex17}]
+	What is the basic working principle of an antenna?
+	
+	% \Exercise[label={ex18}]
+	% How does the size of an antenna affect its performance?
+	
+	\Exercise[label={ex19}]
+	What are the benefits of using adaptive arrays over switched beams in wireless communication?
+	
+	% \Exercise[label={ex20}]
+	% In the realm of remote sensing, How can we effectively differentiate between man made structures and natural features using radar data?
+	
+	% \Exercise[label={ex21}]
+	% When it comes to synthetic aperture radar (SAR) systems, what innovative techniques can we employ to mitigate the effect of speckle noise and enhance the quality of SAR imagery?
+	
+	
+	\Exercise[label={ex22}]
+	If  a SLAR system operates at a frequency of 5.6GHz and has a wave length of approximately 5.36cm, what is the maximum achievable range resolution?
+	\Answer 2.68cm.
+	
+	% \Exercise[label={ex23}]
+	% When it comes to interferometric synthetic aperture radar (SAR) techniques, what challenges do we face inaccurately measuring ground deformation and how can we over come them?
+	
+	
+	\Exercise[label={ex24}]
+	How does SLAR work to generate image of earth’s surface?
+	
 \end{ExerciseList}
-
+\end{mdframed}

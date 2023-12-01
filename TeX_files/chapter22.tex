@@ -1,4 +1,13 @@
 \chapter{The ratio of electric field to magnetic field}\label{lec:lec22}
+ \textbf{OBJECTIVES}
+\begin{itemize}
+	\item To establish the ratio of electric fields to magnetic fields.
+	\item To identify and explain intrinsic impedance.
+	\item To identify implications for antenna designs.
+	
+	
+\end{itemize}
+
 Previously we discussed the solution of Maxwell's equation in an unbound medium. We saw that the simplest solution which can exist in the unbound medium is an electric field that is constant in a plane parallel to the direction of the electric field vector or has a variation perpendicular to the direction of the electric field vector. so we assume in previous cases that the electric field was constant in the xy plane. Substituting \={E} in the wave equations, we had a one-dimensional equation $\dv[2]{E_x}{z}$ = $-\omega^2\mu\epsilon E_x$ which was identical to the transmission line equations. 
 
 Then $\frac{d^2E_x}{dz^2}$ + $\beta^2 E_x = 0$ which was a second order differential equation gave $E_x({z}) = E_x^{+}e^{-j\beta z} + E_x^{-}e^{j\beta z}$ as its general solution. This represented two wave traveling in opposite direction +z and -z with amplitude $E_x^{+}$ and $E_x^{-}$. Now we can substitute the solution of the electric field into any of Maxwell's equations to find out the relationship between the electric field and the magnetic field. So we can take the curl equation and substitute the electric field. The electric field is a function of z only, so that
@@ -11,10 +20,11 @@ $\frac{d}{dx}$ = $\frac{d}{dy}$ = 0.
 \begin{dmath*}
 \begin{vmatrix}
 $\^{x}$ & $\^{y}$ & $\^{z}$\\
-0 & 0 & \pdv{}{z} \\
+0 & 0 & \pdv{}{z}\\
 $$E_{x}(z)$$ & 0 & 0
 \end{vmatrix} =-j\omega\mu\vec{H} =-j\omega\mu[H_x\hat{x} + H_y\hat{y} + H_z\hat{z}]
 \end{dmath*}
+where $E_x$ has two components, $E_x^{+}$  $E_x^{-}$
 
 $H_x = H_z = 0$ and so we get only the \^{y} component.\\
 \\
@@ -39,6 +49,9 @@ similarly for backward travelling waves,
 \begin{dmath*}
 \frac{E_x^-}{H_y} = \frac{-w\mu}{\beta} = \frac{-w\mu}{w\sqrt{\mu\epsilon}} = {-\sqrt{\frac{\mu}{\epsilon}}}
 \end{dmath*}
+
+it was as if the power was being supplied backward toward the generator. So the negative sign was the reversal of the power flow
+
 Remember the units of $\frac{\mu}{\epsilon}$ = $\frac{H/m}{F/m}$ or $E_x^+$ has V/m and $H_y$ has A/m so that $\frac{\mu}{\epsilon}$ = $\frac{E_x^+}{H_y}$ has unit of impedance $\frac{V/m}{A/m}$ = $\frac{V}{A}$. So whatever the quantity ${\sqrt{\frac{\mu}{\epsilon}}}$ is, it is related to medium parameters of $\mu$ and $\epsilon$ and also has the unit of impedance. So this quantity is similar to what we have got for the transmission line which was characteristic impedance. Then we had the ratio of voltage to current for travelling waves which were characterized by the medium parameters. For wave propagation in 3d space, this property is referred to as INTRINSIC IMPEDANCE of the media denoted by eta $\eta$. $\eta$ = ${+\sqrt{\frac{\mu}{\epsilon}}}$. This quantity plays the same role in the 3d propagation as the characteristics impedance of a transmission line (which is in 1 dimension). So we have a characteristic impedance which is now decided by the medium parameters. If we take a specific case of the medium being free space, $\mu$ = $\mu_{o}$ and $\epsilon$ = $\epsilon_{o}$. So we substitute $\eta$ =$\sqrt{\frac{4\pi \times 10^-7}{\frac{1}{36\pi} \times 10^{-9}}}$, $\eta = 120\pi$ = $\eta_{o}$. So for free space $\eta_{o} = 120\pi$$\Omega$.
 
 When we discuss transmission lines, we saw the ratio of the voltage and current for a travelling wave is always equal to the characteristic impedance same statement we can make for a travelling wave in 3d space, is that for this wave, the ratio of the electric and magnetic field $\frac{E_x^{+}}{H_y}$ or $\frac{E_x^{-}}{H_y}$ is equal to the intrinsic impedance of the medium and for free space, this intrinsic impedance is 120$\pi\Omega$. If we look at a vacuum i.e. free space, the wave seems to see an impedance of $120\pi\Omega$. So a medium like a vacuum or free space appears like an impedance when the wave travels in the medium. Hence free space appears like resistance, which means if the wave travels in it, the wave is essentially delivering power to this medium. So from the perspective of the system generating this wave, it is as if the system is delivering power to space. So space appears like a resistance that consumes power from the system generating the waves. This is interesting because free space is a medium that has nothing in it, yet it appears like a resistance of a value of 377 Ohms. So when we get to discussions on Antennas, we see that space will be treated like an impedance of $377\Omega$ to which power is being delivered. So once we get the intrinsic impedance of a medium, the ratio of electric to the magnetic field is equal to the intrinsic impedance of the medium. This is true for both the forward and backward wave, but however for the backward travelling wave where $\frac{E_x^-}{H_y}$ = - $\sqrt{\frac{\mu}{\epsilon}}$, we recall that we had a similar situation for transmission line also that a backward travelling wave will see an impedance equal to a negative characteristics impedance. We understand that it was as if the power was being supplied backward toward the generator. So the negative sign was the reversal of the power flow and in this case, when we are talking about $E_x$ and $H_y$, we have a negative sign in $\frac{E_x^-}{H_y}$ = -$\sqrt{\frac{\mu}{\epsilon}}$ which also represents the flow of power backward. So for electric and magnetic fields which are perpendicular to each other, E in the x direction and H in the y direction (in this case), For forward travelling wave the ratio of $E_x^+$ to $H_y$ is equal to the intrinsic impedance and if the wave is travelling backward, the ratio is equal to the negative of the intrinsic impedance.
@@ -69,7 +82,7 @@ Now the magnetic field is not y oriented as the y component is zero.
 \end{dmath*}
 But	$H_y = H_z = 0$, hence,
 \begin{dmath*}
-H_x = \frac{1}{-j\omega\mu}\{\frac{-\partial y(z)}{\partial z}\} = \frac{1}{jw\mu}\{\frac{\delta y(z)}{\partial z}\}
+H_x = \frac{1}{-j\omega\mu}\{\frac{-\partial E_y(z)}{\partial z}\} = \frac{1}{jw\mu}\{\frac{\delta E_y(z)}{\partial z}\}
 \end{dmath*} 
 Recall,
 $E_y(z) = E_y^+ e^{-j\beta z} + E_y^- e^{+j\beta z}$
@@ -125,11 +138,11 @@ Since we are saying that the electric field can vary as a function of time and l
 This behaviour will be captured by a parameter called the POLARIZATION of wave. So we define the polarization of the wave as the direction of the electric field or if we treat the electric field like an arrow, the shape which the top of the electric field vector draws on a plane perpendicular to the direction of wave propagation as a function of time. Now we will investigate what is called polarization of uniform plane wave which is a variation of the direction of the electric field and its magnitude as a function of time.
 
 \section{WAVE POLARIZATION}
-This is a very important phenomenon in the sense that, any wave you consider will have a direction and magnitude of electric field which in general will vary as a function of time. So every wave will have what is called a state of polarization. Two things might happen when a wave is travelling that is, at any point in space, the electric field vector might change its direction, which we call polarization. Another possibility is that as the wave propagates, at a particular location, the electric field is the same, but as it moves the electric field might change direction. This phenomenon is not polarization, this phenomenon as we will see later is called Faraday's Rotation. So polarization is the orientation of an electric field as a function of time at a given point in space. From point to point, things might change. At a given point in space, we can say that the orientation of the electric field is the polarization of the wave or state of polarization of the wave. So any wave which is generated by a signal will always have a definite polarization. So when we look at this important concept of wave polarization carefully, we see that, since the electric field which propagates in the direction and varies in the xy plane can be oriented in any direction at any instant of time, so we can resolve the electric field into two components or we can generate any arbitrary electric field by a combination of two orthogonal fields; one in the x and the other in the y directions. So we can have $E_x$ and $E_y$ as shown below. 
+This is a very important phenomenon in the sense that, any wave you consider will have a direction and magnitude of electric field which in general will vary as a function of time. So every wave will have what is called a state of polarization. Two things might happen when a wave is travelling that is, at any point in space, the electric field vector might change its direction, which we call polarization. Another possibility is that as the wave propagates, at a particular location, the electric field is the same, but as it moves the electric field might change direction. This phenomenon is not polarization, this phenomenon as we will see later is called \textbf{Faraday's Rotation}. So polarization is the orientation of an electric field as a function of time at a given point in space. From point to point, things might change. At a given point in space, we can say that the orientation of the electric field is the polarization of the wave or state of polarization of the wave. So any wave which is generated by a signal will always have a definite polarization. So when we look at this important concept of wave polarization carefully, we see that, since the electric field which propagates in the direction and varies in the xy plane can be oriented in any direction at any instant of time, so we can resolve the electric field into two components or we can generate any arbitrary electric field by a combination of two orthogonal fields; one in the x and the other in the y directions. So we can have $E_x$ and $E_y$ as shown below. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/E_components}
+\includegraphics[width=1\linewidth]{graphics/E_components}
 \caption{electric field vector}
 \label{electric field vector components}
 \end{figure}

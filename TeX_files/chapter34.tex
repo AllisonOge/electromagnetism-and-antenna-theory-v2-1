@@ -1,8 +1,23 @@
 \chapter{Reflection from a Conducting Boundary}\label{lec:lec34}
+
+\definecolor{lightblue}{RGB}{173, 216, 230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+    \section{Objectives}
+    \begin{enumerate}[label=\roman*., itemsep=0pt, topsep=0pt]
+        \item Explain the phenomenon of reflection from a conducting boundary and its implications in guiding electromagnetic waves.
+        \item Apply boundary conditions for perpendicular polarization to derive the reflection coefficient for a conducting boundary.
+        \item Analyze the behavior of electric and magnetic fields in a dielectric medium upon reflection from a conducting boundary.
+        \item Interpret the concept of complex waves involving standing waves and traveling waves resulting from reflections.
+        \item Evaluate the utility of conducting boundaries in guiding electromagnetic energy and the principles underlying waveguides.
+    \end{enumerate}
+\end{mdframed}
+
+\section{Introduction}
+
 In this chapter, we will discuss the reflection of a uniform plane wave from a conducting boundary. This will lay a foundation for a structure called a \emph{Waveguide}. A waveguide is basically a linear structure that conveys or guides electromagnetic waves between its endpoints.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/"wave guides"}
+\includegraphics[width=1\linewidth]{graphics/"wave guides"}
 \caption{A waveguide}
 \end{figure}
 
@@ -13,7 +28,7 @@ The phenomenon of reflection from a conducting surface is considered in terms of
 \end{enumerate}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/dielectric_conductor_boundary}
+\includegraphics[width=1\linewidth]{graphics/dielectric_conductor_boundary}
 \caption{Conducting plane between two media}
 \label{fig:plane}
 \end{figure}
@@ -33,7 +48,7 @@ Taking the perpendicular polarization, $E_i$ and $E_r$ are oriented in the y dir
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1.02\linewidth]{\pathtopartone/graphics/perpendicular_polarization_at_dielectric_conductor_interface}
+\includegraphics[width=1.02\linewidth]{graphics/perpendicular_polarization_at_dielectric_conductor_interface}
 \caption{Magnetic Field}
 \label{fig:fields}
 \end{figure}
@@ -176,7 +191,7 @@ All of these fields travel in the positive z direction (they travel along the pl
 Now we can make some observations from the expressions which we got for the electric and magnetic fields. First, if we plot the amplitude of the electric field as a function of x when x is equal to 0 then the amplitude is zero, therefore, the electric field is zero. The same happens for the x component of the magnetic field $H_x$, when x is equal to zero the magnetic field will be 0. So whenever the electric field is zero, the x component of the magnetic field $H_x$ is also zero. It can therefore be deduced that the amplitude behaviour of $H_x$ and electric field $E_y$ is identical as a function of x. And the magnetic field component of $H_z$ is a cos function. That means it is shifted by a quarter cycle in the x direction. So whenever $H_x$ is zero, $H_z$ will be maximum and whenever $H_x$ is maximum, $H_z$ will be zero. The plot of the amplitude of the electric and magnetic fields is shown in figure~\ref{fig:amplitude}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/amplitude_of_electric_and_magnetic_fields.png}
+\includegraphics[width=1\linewidth]{graphics/amplitude_of_electric_and_magnetic_fields.png}
 \caption{Amplitude of electric and magnetic fields}
 \label{fig:amplitude}
 \end{figure}
@@ -200,4 +215,31 @@ So at this distance x from the plane, the electric field will be 0. This distanc
 
 Now, we know that the wave is traveling along the z direction so there must be a power flow in that direction. This essentially gives us the pointing vector in the z-direction. Note that there is no net power flow in the x direction. Hence, given that we have a conducting boundary, there will be no power flow through the boundary. So whatever power is incident on the boundary is reflected back to the source medium. The wave which is incident in a particular direction has components of propagation in the direction normal and parallel to the interface. The wave which is incident normal to the interface is completely reflected, hence, a standing wave is created. So there is no net power flow in the x direction. This implies that, given a conducting boundary, then the boundary can be used to guide a wave of energy along it, hence, the conducting boundary has the capability of guiding electromagnetic energy. So when a wave is launched at an arbitrary angle, the net power flow is always along the surface of the boundary interface. This is the principle used in making a waveguide. 
 
-So in a wave-guiding structure, the conducting boundaries are used so that the electromagnetic energy is guided along these boundaries. Later in this book, we will see that, in those planes where the electric field was $0$(given by location $x = \frac{m\lambda}{2cos\theta}$ away from the boundary), we can insert another conducting boundary without affecting the field distribution and thus create a structure that is bounded from both sides. Within this structure, electromagnetic energy can be trapped and hence we can have a net propagation of electromagnetic energy along the structure. This structure is called the \textbf{parallel plane waveguide}  and will be considered in the next section.
+So in a wave-guiding structure, the conducting boundaries are used so that the electromagnetic energy is guided along these boundaries. Later in this book, we will see that, in those planes where the electric field was $0$(given by location $x = \frac{m\lambda}{2cos\theta}$ away from the boundary), we can insert another conducting boundary without affecting the field distribution and thus create a structure that is bounded from both sides. Within this structure, electromagnetic energy can be trapped and hence we can have a net propagation of electromagnetic energy along the structure. This structure is called the \textbf{parallel plane waveguide}\index{parallel plane wave guide}  and will be considered in the next section.
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+\section{Exercises:}
+\begin{ExerciseList}
+    \Exercise[label={ex11}]
+    Explain the role of the infinite conductivity of a conductor in the reflection of electromagnetic waves from a conducting boundary.
+    \Exercise[label={ex11}]
+    How do the boundary conditions for perpendicular polarization differ between a dielectric-dielectric boundary and a dielectric-conductor boundary?
+    \Exercise[label={ex11}]
+    Discuss the significance of the reflection coefficient being -1 for a conducting boundary and its analogy to a short-circuited load in transmission line analysis.
+    \Exercise[label={ex11}]
+    Describe the field patterns generated when an electric field is completely reflected in a dielectric medium from a conducting boundary.
+    \Exercise[label={ex11}]
+    Illustrate the characteristics of the composite wave resulting from the incident and reflected waves at a conducting boundary.
+    \Exercise[label={ex11}]
+    Explain the behavior of electric and magnetic fields in the dielectric medium concerning standing and traveling wave components after reflection from a conducting boundary.
+    \Exercise[label={ex11}]
+    What role does the surface current play in the context of the tangential component of the magnetic field upon reflection from a conducting boundary?
+    \Exercise[label={ex11}]
+    Discuss the conditions where the electric field becomes zero and the implications for the magnetic field components in a dielectric medium after reflection.
+    \Exercise[label={ex11}]
+    Explain the absence of net power flow in the x-direction and the implications for power transmission in structures involving conducting boundaries.
+    \Exercise[label={ex11}]
+    Describe the principle behind creating a wave-guiding structure using conducting boundaries and its application in waveguide design.
+\end{ExerciseList}
+\end{mdframed}

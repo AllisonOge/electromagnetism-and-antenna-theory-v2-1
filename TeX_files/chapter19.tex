@@ -1,48 +1,64 @@
 \chapter{The Basic Laws To Maxwell's Equation (2)}\label{lec:lec19}
-In the last chapter, the mathematical equations of the physical laws of electromagnetism were established. These laws include; ampere's circuit law, Gauss law, and Faraday's law of electromagnetic induction. Compiling these laws in mathematical form gives \textbf{Maxwell's Equations}, and this compilation was done by Maxwell. In compiling these laws, Maxwell discovered some inconsistencies in the ampere's circuit law. This inconsistency was examined and modified. This would be discussed shortly.
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+	By the end of this chapter, the you should be able to:
+	\begin{enumerate}[(i)]
+			\item Explain the concept of continuity equation.
+			
+			\item Derive Maxwell's equation in it's differential and integral form.
+			
+			\item Explain the concept of surface charge and surface charge density. 
+			
+			\item Explain the concept of surface current and surface current density.
+		\end{enumerate}
+\end{mdframed}
+
+\section{INTRODUCTION}
+In the last chapter, the mathematical equations of the physical laws of electromagnetism were established. These laws include; ampere's circuit law, Gauss law, and \index{Faraday's law of electromagnetic induction}Faraday's law of electromagnetic induction. Compiling these laws in mathematical form gives \textbf{Maxwell's Equations}, and this compilation was done by Maxwell. In compiling these laws, Maxwell discovered some inconsistencies in the ampere's circuit law. This inconsistency was examined and modified. This would be discussed shortly.
 
 \section{Ampere Circuit Law Modification and Maxwell's Equations}
 \begin{figure}[h]
-\centering
-\includegraphics[width=.7\linewidth]{\pathtopartone/graphics/closedsurface}
-\caption{Conduction current density from a closed surface}
+	\centering
+	\includegraphics[width=.7\linewidth]{graphics/closedsurface}
+	\caption{Conduction current density from a closed surface}
 \end{figure}
 
-Consider a closed surface S of a certain volume V shown in Figure 19.1. Assuming the charges are distributed inside the surface, there is the possibility that the charges would leave the surface and when this happens, there would be a rate of change of charge. This means there will be current flow from the surface and hence a current density is distributed on the surface. The charges would leave in the form of current leading to a reduction in the net charge inside the surface.
+Consider a closed surface S of a certain volume V shown in Figure 6.1. Assuming the charges are distributed inside the surface, there is the possibility that the charges would leave the surface and when this happens, there would be a rate of change of charge. This means there will be current flow from the surface and hence a current density is distributed on the surface. The charges would leave in the form of current leading to a reduction in the net charge inside the surface.
 
-The concept of charge-current relation has been has been worked out and it also applies to the closed surface in Figure 19.1. The current produced on the surface would yield a surface current density. This current density is the vector field around the surface. Let's say we denote this current density of the surface with $\bar{J}$. If we take the divergence of $\bar{J}$, it would stand for the outflow of the electric vector field($\bar{J}$).
+The concept of charge-current relation has been worked out and it also applies to the closed surface in Figure 6.1. The current produced on the surface would yield a surface current density. This current density is the vector field around the surface. Let's say we denote this current density of the surface with $\bar{J}$. If we take the divergence of $\bar{J}$, it would stand for the outflow of the electric vector field($\bar{J}$).
 
 If we consider a small area on the closed surface S given by $d\bar{a}$, then the product of conduction current density $\bar{J}$ and the small area $d\bar{a}$ gives the outward current from the infinitesimally small area $d\bar{a}$. By summing over the entire surface(basically integrating), then we get the net outward current flow from the whole surface S.
 \begin{align*}
-\text{Net outward current}= \oiint\limits_S\bar{J}\cdot d\bar{a}
+	\text{Net outward current}= \oiint\limits_S\bar{J}\cdot d\bar{a}
 \end{align*},
-But as we know, the current is actually the rate of change of charge and since this current is coming out from the surface, it should be equal to the rate of charge from the total volume and since the current is coming outwards, the net charge must be decreasing inside the volume. So if the volume is said to have a charge density denoted by $\rho C/m^{3}$, then the net decrease or the rate of change of decrease of charge inside the volume is the same as the total current coming out from the surface. To get the total charge enclosed by the closed surface S, we get the integral of $\rho$ over the volume created by the closed surface.
+But as we know, the current is actually the rate of change of charge and since this current is coming out from the surface, it should be equal to the rate of charge from the total volume and since the current is coming outwards, the net charge must be decreasing inside the volume. So if the volume is said to have a charge density denoted by $\rho (C/m^{3})$, then the net decrease or the rate of change of decrease of charge inside the volume is the same as the total current coming out from the surface. To get the total charge enclosed by the closed surface S, we get the integral of $\rho$ over the volume created by the closed surface.
 \begin{align*}
-\text{Rate of charge decrease in volume}	= -\frac{\partial}{\partial t}\iiint \rho dv
+	\text{Rate of charge decrease in volume}	= -\frac{\partial}{\partial t}\iiint \rho dv
 \end{align*}
 So we get that;
 \begin{align*}
-\oiint\limits_S\bar{J}\cdot d\bar{a} = -\frac{\partial}{\partial t}\iiint\limits_V\rho dv
+	\oiint\limits_S\bar{J}\cdot d\bar{a} = -\frac{\partial}{\partial t}\iiint\limits_V\rho dv
 \end{align*}
 If we say volume is not changing with time, so that it is only $\rho$ that changes with time, we have that;
 \begin{align*}
-\oiint\limits_S\bar{J}\cdot d\bar{a} = -\iiint\limits_V\frac{\partial\rho}{\partial t}dv
+	\oiint\limits_S\bar{J}\cdot d\bar{a} = -\iiint\limits_V\frac{\partial\rho}{\partial t}dv
 \end{align*}
 We can convert a surface integral to a volume integral by using the divergence theorem. Establishing this, we get that;
 \begin{align*}
-\oiint\limits_S\bar{J}\cdot d\bar{a} = \iiint\limits_V(\nabla\cdot\bar{J})dv
+	\oiint\limits_S\bar{J}\cdot d\bar{a} = \iiint\limits_V(\nabla\cdot\bar{J})dv
 \end{align*}
 From this, we get that;
 \begin{align*}
-\iiint\limits_V(\nabla\cdot\bar{J})dv = -\iiint\limits_V\frac{\partial\rho}{\partial t}dv
+	\iiint\limits_V(\nabla\cdot\bar{J})dv = -\iiint\limits_V\frac{\partial\rho}{\partial t}dv
 \end{align*}
 this would give;
 \begin{align*}
-\iiint\limits_V(\nabla\cdot\bar{J} + \frac{\partial\rho}{\partial t} )dv = 0
+	\iiint\limits_V(\nabla\cdot\bar{J} + \frac{\partial\rho}{\partial t} )dv = 0
 \end{align*}
 and since this is the relation we have gotten in the equation above, it should be true for any arbitrary volume, so that the integral must be zero. Thus,
 \begin{align}
-\nabla\cdot\bar{J} = -\frac{\partial\rho}{\partial t}
+	\nabla\cdot\bar{J} = -\frac{\partial\rho}{\partial t}
 \end{align}
 This is called \textbf{Continuity Equation} and should be duly noted.
 
@@ -52,29 +68,36 @@ If the charges are not changing inside the volume(static case), then whatever ch
 
 We had earlier seen from the previous chapter, that from Ampere's circuit law, we get the relation $\nabla\times\bar{H}=\bar{J}$, that is, the curl of the magnetic field is equal to the conduction current density. If we apply vector operation on this without taking note of the physical aspects( that is the physical meaning of $\nabla\times\quad and\quad \nabla\cdot$), we can expand both sides of the 'Ampere's circuit law' relation to get;
 \begin{align}
-\nabla\cdot(\nabla\times\bar{H})=\nabla\cdot\bar{J}
+	\nabla\cdot(\nabla\times\bar{H})=\nabla\cdot\bar{J}
 \end{align}
 knowing that we can interchange $\nabla\times and \nabla\cdot$ then the relation becomes;
 \begin{align}
-\nabla\times(\nabla\cdot\bar{H})=\nabla\cdot\bar{J}
+	\nabla\times(\nabla\cdot\bar{H})=\nabla\cdot\bar{J}
 \end{align}
 but $\nabla\times\nabla\cdot\bar{H}$ is actually zero by identification. This imply that $\nabla\cdot\bar{J}=0$. So from Ampere's circuit law $\nabla\cdot\bar{J}=0$ while from the continuity equation $\nabla\cdot\bar{J}=-\frac{\partial\rho}{\partial t}$.
 
 The inconsistency arises from the fact that Ampere's circuit law does not satisfy the continuity equation. This was the difficulty that was encountered by Maxwell. He resolved this difficulty by introducing the concept of the \textbf{Displacement Current Density}. So what he said was that \textquotedblleft in the continuity relation $\nabla\cdot\bar{J}=-\frac{\partial\rho}{\partial t}$ replace $\rho$ from Gauss law with divergence of displacement vector $\bar{D}$\textquotedblright, that is $\rho=\nabla\cdot\bar{D}$. So we have;
 \begin{align}
-\nabla\cdot\bar{J}=-\frac{\partial}{\partial t}(\nabla\cdot\bar{D})
+	\nabla\cdot\bar{J}=-\frac{\partial}{\partial t}(\nabla\cdot\bar{D})
 \end{align}
 Interchanging space and time operators, we have;
 \begin{align}
-\nabla\cdot\bar{J}=-\nabla\cdot(\frac{\partial\bar{D}}{\partial t})\\
-\nabla\cdot\bar{J}+\nabla\cdot(\frac{\partial\bar{D}}{\partial t}) = 0
+	\nabla\cdot\bar{J}=-\nabla\cdot(\frac{\partial\bar{D}}{\partial t})\\
+	\nabla\cdot\bar{J}+\nabla\cdot(\frac{\partial\bar{D}}{\partial t}) = 0
 \end{align}
 we then integrate over the entire volume of the closed surface to get;
+where 
 \begin{align}
-\iiint\limits_V\nabla\cdot\bar{J}+\nabla\cdot(\frac{\partial\bar{D}}{\partial t})dv=
-\oiint\limits_S(\bar{J}+\frac{\partial\bar{D}}{\partial t})=0
+	\iiint\limits_V(\nabla\cdot\bar{J}) dv = \oiint\limits_S\bar{J}\cdot da
+\end{align} and
+\begin{align}
+	\nabla\cdot(\frac{\partial\bar{D}}{\partial t})dv = \oiint\limits_S(\frac{\partial\bar{D}}{\partial t})\cdot da
 \end{align}
-Equation 19.4 is gotten by the divergence theorem
+\begin{align}
+	\iiint\limits_V\nabla\cdot\bar{J}+\nabla\cdot(\frac{\partial\bar{D}}{\partial t})dv=
+	\oiint\limits_S(\bar{J}+\frac{\partial\bar{D}}{\partial t})=0
+\end{align}
+Equation 6.4 is gotten by the divergence theorem
 
 This surface integral implies that the current which is coming from the closed surface, S, is not only because of the \textquoteleft conduction current density\textquoteright $\bar{J}$ but also as a result of $\frac{\partial\bar{D}}{\partial t}$ which is the \textquoteleft Displacement Current Density\textquoteright. So for a homogenous equation, $\frac{\partial\bar{D}}{\partial t}$ has the same unit as current density. However, Displacement Current Density does not depend on the conductivity of the medium unlike conduction current density $\bar{J}$ that does. $\bar{J}$ is related to conductivity by ohms law $\bar{J}=\sigma\bar{E}$. However if $\sigma=0$, then we have only $\frac{\partial\bar{D}}{\partial t}$ from $\bar{J}+\frac{\partial\bar{D}}{\partial t}$ to play with. The quantity $\frac{\partial\bar{D}}{\partial t}$ is equal to some current and hence it is called Displacement Current Density. So $\frac{\partial\bar{D}}{\partial t}$ is the quantity that was introduced by Maxwell to satisfy the continuity equation.
 
@@ -84,49 +107,70 @@ So if we take the total current which is a combination of conduction current and
 Ampere's circuit law is thus modified with current being the sum of conduction current and displacement current.\\
 Amperes law is modified to;
 \begin{align}
-\nabla\times\bar{H}=\bar{J}+\frac{\partial\bar{D}}{\partial t}
+	\nabla\times\bar{H}=\bar{J}+\frac{\partial\bar{D}}{\partial t}
 \end{align}
 This essentially resolves the difficulty which was faced by Maxwell and this gives the complete description of the phenomenon of electro-magnetics. With these equations which we have gotten so far (that is Gauss's law of magnetic field, Faraday's law of electromagnetic induction and the modified amperes law), we have a complete set of equations which represent the static and time-varying electric and magnetic fields. These equations are called \textbf{Maxwell's Equations}. As we earlier mentioned, Maxwell's equations can be written in differential form or in integral form and depending on the suitability, the equations can be used in either form. Finally, we make a list of the four of Maxwell's Equations.
 \begin{table}[h]
-\caption{\textbf{Maxwell's Equations}}
-\centering
-\begin{tabular}{p{3cm} p{2cm} p{2cm}}
-\hline \\
-\textbf{Electromagnetic Laws} & \textbf{Differential form} & \textbf{Integral form} \\ [0.5ex]
-\hline \\
-Gauss laws; & $\nabla\cdot\bar{D}=\rho$ & $\oiint\limits_S\bar{D}\cdot d\bar{a}=\iiint\limits_V
-\rho dv$\\
-& $\nabla\cdot\bar{B}=0$ & $\oiint\limits_S\bar{B}d\bar{a}=0$\\
-\hline \\
-
-Faradays law; & $\nabla\times\bar{E}=-\frac{\partial\bar{B}}{\partial t}$ & $\oint\limits_C\bar{E}\cdot\bar{dl}=-\iint\limits_S\frac{\partial\bar{D}}{\partial t}\cdot d\bar{a}$ \\
-\hline \\
-Modified Amperes Law; &
-$\nabla\times\bar{H}=\bar{J}+\frac{\partial\bar{D}}{\partial t}$ & $\oint\limits_C\bar{H}\bar{dl}=\iint\limits_S(\bar{J}+\frac{\partial\bar{D}}{\partial t})\cdot d\bar{a}$ \\
-\hline
-\end{tabular}
+	\caption{\textbf{Maxwell's Equations}}
+	\centering
+	\begin{tabular}{p{3cm} p{2cm} p{2cm}}
+			\hline \\
+			\textbf{Electromagnetic Laws} & \textbf{Differential form} & \textbf{Integral form} \\ [0.5ex]
+			\hline \\
+			Gauss laws; & $\nabla\cdot\bar{D}=\rho$ & $\oiint\limits_S\bar{D}\cdot d\bar{a}=\iiint\limits_V
+			\rho dv$\\
+			& $\nabla\cdot\bar{B}=0$ & $\oiint\limits_S\bar{B}d\bar{a}=0$\\
+			\hline \\
+			
+			Faradays law; & $\nabla\times\bar{E}=-\frac{\partial\bar{B}}{\partial t}$ & $\oint\limits_C\bar{E}\cdot\bar{dl}=-\iint\limits_S\frac{\partial\bar{D}}{\partial t}\cdot d\bar{a}$ \\
+			\hline \\
+			Modified Amperes Law; &
+			$\nabla\times\bar{H}=\bar{J}+\frac{\partial\bar{D}}{\partial t}$ & $\oint\limits_C\bar{H}\bar{dl}=\iint\limits_S(\bar{J}+\frac{\partial\bar{D}}{\partial t})\cdot d\bar{a}$ \\
+			\hline
+		\end{tabular}
 \end{table}
 
-These are the set of equations which governs the total phenomenon of electro-magnetics for $static$ as well as $time$ $varying$ $fields$ so once we have these generalized equations, we can reduce the equation to get those for $Static$ $Fields$ by putting all time derivatives to zero. So depending on whether the `medium parameter' (permeability $\mu$, permittivity $\epsilon$) of the medium is varying as a function of space(inhomogeneous) or is constant as a function of space (homogeneous), we can get $\bar{D}=\epsilon\bar{E}$ and $\bar{B}=\mu\bar{H}$. So we can have various forms of these equations depending upon the condition applied to the medium; whether we are dealing with given electric fields, magnetic fields, or whatever parameters are associated with them. As we said, for static fields, the time-varying parameters become zero. Looking at Table 19.1, it essentially means that the equations with time derivatives become; $\nabla\times\bar{E}=0$ and $\nabla\times\bar{H}=\bar{J}$.
+These are the set of equations which governs the total phenomenon of electro-magnetics for $static$ as well as $time$ $varying$ $fields$ so once we have these generalized equations, we can reduce the equation to get those for $Static$ $Fields$ by putting all time derivatives to zero. So depending on whether the `medium parameter' (permeability $\mu$, permittivity $\epsilon$) of the medium is varying as a function of space(inhomogeneous) or is constant as a function of space (homogeneous), we can get $\bar{D}=\epsilon\bar{E}$ and $\bar{B}=\mu\bar{H}$. So we can have various forms of these equations depending upon the condition applied to the medium; whether we are dealing with given electric fields, magnetic fields, or whatever parameters are associated with them. As we said, for static fields, the time-varying parameters become zero. Looking at Table 6.1, it essentially means that the equations with time derivatives become; $\nabla\times\bar{E}=0$ and $\nabla\times\bar{H}=\bar{J}$.
 
 However in this part of the course, which is on Electromagnetic Waves, we are dealing with time-varying quantities only, and so all the quantities ($\rho,\bar{B},\bar{J},\bar{H}$ and so on), will be considered as time-varying. Later on, we will look for solutions to these equations of time-varying fields.
 
-As we mentioned earlier Maxwell's equations in differential form cannot be applied in a certain situation where a medium has a discontinuity. That means if we talk about media interfaces where medium properties suddenly change, like permittivity or permeability suddenly change, at those boundaries of abrupt change, the derivatives cannot be defined. So the differential form of Maxwell's equations is not useful in this situation. However, as we have mentioned the integral form is always useful and can be applied in any situation. However, if we apply the integral form to discrete media interfaces, we get relationships between the quantities $\bar{D}, \bar{B}, \bar{E}, \bar{H}$ in the two media just across the interface. That relationship is what we call the \emph{Boundary Condition}. The same set of equations in differential form gives what is called \emph{Point Relation} that is they are valid at every point in space. The equation in integral form when applied to discrete media interfaces gives what is called \emph{Boundary Condition}. However before we go into boundary condition, we will introduce the concept of surface current and surface charges.
+As we mentioned earlier Maxwell's equations in differential form cannot be applied in a certain situation where a medium has a discontinuity. That means if we talk about media interfaces where medium properties suddenly change, like permittivity or permeability suddenly change, at those boundaries of abrupt change, the derivatives cannot be defined. So the differential form of Maxwell's equations is not useful in this situation. However, as we have mentioned the integral form is always useful and can be applied in any situation. However, if we apply the integral form to discrete media interfaces, we get relationships between the quantities $\bar{D}, \bar{B}, \bar{E}, \bar{H}$ in the two media just across the interface. That relationship is what we call the \emph{Boundary Condition}\index{Boundary Condition}. The same set of equations in differential form gives what is called \emph{Point Relation}\index{Point Relation} that is they are valid at every point in space. The equation in integral form when applied to discrete media interfaces gives what is called \emph{Boundary Condition}\index{Boundary Condition}. However before we go into boundary condition, we will introduce the concept of surface current and surface charges.
+
+\section{Displacement Current Density}
+Now let us explain displacement current density using the circuit below;
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\linewidth]{graphics/111}
+	\caption{Model circuit to analyze displacement current density}
+	\label{fig:displacement current density}
+\end{figure} 
+From the figure above, closing the switch in the circuit containing a capacitor, ammeter, and voltage source, the charging process initiates. Initially, the capacitor is uncharged, and as the switch closes, electrons begin to accumulate on one plate, leaving the other plate positively charged. This charge separation creates an electric field between the capacitor plates.
+
+As the capacitor charges, the electric field intensifies, extending through the space between the plates. Crucially, this electric field is not static; it changes over time. The changing electric field induces what is known as \textbf{displacement current}. This displacement current arises from the rate of change of the electric field with respect to time, expressed by the equation
+\[
+J_d = \epsilon_0 \frac{\partial E}{\partial t}
+\]
+\begin{equation}\end{equation}
+where \(J_d\) is the displacement current density, \(\epsilon_0\) is the vacuum permittivity, and \(\frac{\partial E}{\partial t}\) represents the changing electric field.
+
+The concept of displacement current is a theoretical construct introduced by James Clerk Maxwell to maintain the consistency of his equations with the conservation of electric charge. It accounts for the dynamic nature of the electric field during the capacitor charging process, where the rate of change of the electric field induces a displacement current. This displacement current plays a vital role in the overall current dynamics within the circuit.
 
 \section{Concept of Surface Charges and Surface Current}
-\begin{figure}[h]
-\centering
-\includegraphics[width=.7\linewidth]{\pathtopartone/graphics/surfacecharge}
-\caption{Model for studying surface charge}
-\label{fig:surfacecharge}
-\end{figure} 
 
 \subsection{Surface Charge and Surface Charge Density}
-Let us look at a surface with thickness d, and a charge density $\rho$$C/m^{3}$ as shown in figure~\ref{fig:surfacecharge}. Considering unit area on the surface, with length 1 and width 1, so if a volume of the unit area on the surface of the sheet is considered, the total charge will be in this volume which is having a height d and area 1, is the charge density $\rho$ multiplied by the elemental volume.
+Let us look at a surface with thickness d, and a charge density $\rho$$C/m^{3}$ as shown in figure~\ref{fig:surfacecharge}. Considering unit area on the surface, with length 1 and width 1, so if a volume of the unit area on the surface of the sheet is considered, the total charge will be in this volume which is having a height d and area 1, this is the charge density $\rho$ multiplied by the elemental volume.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\linewidth]{graphics/surfacecharge}
+	\caption{Model for studying surface charge}
+	\label{fig:surfacecharge}
+\end{figure} 
 
 The total charge in the unit volume of the slab is;
 \begin{align*}
-=\rho\times(1\times 1\times d)=\rho d
+	=\rho\times(1\times 1\times d)=\rho d
 \end{align*}
 the unit is Coulombs C.
 
@@ -136,17 +180,17 @@ If we now reduce the thickness of this slab and go to a limit when \textbf{d} te
 So if we take the quantity $\rho d$ and take the limit when $d\rightarrow0$, we get a quantity which is charge distributed on the surface and thus there would be a charge density confined on the surface. The unit for $surface$ $charge$ $density$ $\rho_{s}$ is actually $C/m^{2}$ unlike $volume$ $charge$ $density$ $\rho$ ($C/m^{3}$).\\
 So we say that;
 \begin{align}
-\rho_{s}=\lim_{d\rightarrow0}\{\rho d\} 
+	\rho_{s}=\lim_{d\rightarrow0}\{\rho d\} 
 \end{align}
-This relation is called \textbf{Surface Charge Density}.
+This relation is called \textbf{Surface Charge Density}\index{Surface Charge Density}.
 
-So two things we note here, if we go from volume charge density $\rho$ to surface charge density $\rho_{s}$, when $d\rightarrow0$, the surface charge density $\rho_{s}$ is equal to infinite volume charge density($\rho\rightarrow\infty$). If that infinite volume charge density is confined to our thickness, that gives the distribution of charges on the surface. Later on, we would see that in situations like conducting boundaries, where the conductivity becomes infinite, you might get volume charge density which will be infinite and these charges here will truly be confined to the surface and at that time the concept of surface charge current density will be useful. So at the moment without getting into which media will have a surface charge density, we can say principally that when we have charges distributed truly on a surface with zero thickness, those charges are called surface charges. We can do a similar thing for the current also.
+So two things we note here, if we go from volume charge density\index{volume charge density} $\rho$ to surface charge density\index{surface charge density} $\rho_{s}$, when $d\rightarrow0$, the surface charge density $\rho_{s}$ is equal to infinite volume charge density($\rho\rightarrow\infty$). If that infinite volume charge density is confined to our thickness, that gives the distribution of charges on the surface. Later on, we would see that in situations like conducting boundaries, where the conductivity becomes infinite, you might get volume charge density which will be infinite and these charges here will truly be confined to the surface and at that time the concept of surface charge current density will be useful. So at the moment without getting into which media will have a surface charge density, we can say principally that when we have charges distributed truly on a surface with zero thickness, those charges are called \textit{surface charges}\index{surface charges}. We can do a similar thing for the current also.
 
 \subsection{Surface Current and Surface Current Density}
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/surfacecurrent}
-\caption{Model for studying surface current}
+	\centering
+	\includegraphics[width=0.7\linewidth]{graphics/surfacecurrent}
+	\caption{Model for studying surface current}
 \end{figure} 
 
 
@@ -155,7 +199,7 @@ This surface considered through which $\bar{J}$ flows has its direction parallel
 So we get that current flowing in the unit element is given by; $\bar{J}\times(d\times1)=\bar{J}d$. Again if we make $d\rightarrow0$ and $\bar{J}$ goes to infinity, you will have a current truly flowing on the surface and that current is the \textbf{surface current} $\bar{J}_{s}$. \\
 So essentially surface current is given by;
 \begin{align}
-\bar{J}_{s}=\lim_{d\rightarrow0}\{\bar{J}d\}
+	\bar{J}_{s}=\lim_{d\rightarrow0}\{\bar{J}d\}
 \end{align}
 
 
@@ -166,126 +210,213 @@ In all we are having quantities like charge density or volume charge density $\r
 
 \section{Problems}
 \begin{exmp}
-The volume charge density inside a hollow sphere is 
-\begin{align*}
-\rho=10e^{-20r} C/m^{3}.
-\end{align*}
-Find the total charge enclosed within the sphere. Also, find the electric flux density on the surface of the sphere for a radius of 2m.
-
-\subsubsection*{Solution}
-\begin{figure}[h]
-\centering
-%\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig194}
-\caption{spherical coordinate system}
-\end{figure} 
-
-The total charge enclosed in the sphere is;
-\begin{align*}
-Q=\iiint\limits_V\rho dv
-\end{align*}
-From Figure 19.4, 
-\begin{align*}
-dv &= dr\times(rsin\theta d\phi)\times rd\theta \\
-dv&=r^{2}sin\theta drd\theta d\phi\\
-\text{so}, Q&=\int^{2\pi}_{\phi=0}\int^{\pi}_{\theta=0}\int^{2}_{r=0} \rho r^{2}sin\theta drd\theta d\phi\\
-Q&= \int^{2\pi}_{\phi=0}d\phi\int^{\pi}_{\theta=0}sin\theta d\theta\int^{2}_{r=0}10e^{-20r}r^{2}dr
-\end{align*}
-integrating this would give the value of Q and so we get that;
-\begin{align*}
-Q=\frac{\pi}{100} C
-\end{align*}
-To find the electric flux density, we use Gauss law which states that the electric flux density over the entire area of the sphere is equal to the total charge enclosed. Since the surface is spherical, the charges are uniformly distributed in a spherically symmetric manner. So we can find it according to Gauss law;
-\begin{align*}
-4\pi r^{2}D&=Q=\frac{\pi}{100}\\
-D&=\frac{Q}{4\pi r^{2}}= 6.25\times10^{-4} C/m^{2}
-\end{align*}
+	The volume charge density inside a hollow sphere is 
+	\begin{align*}
+			\rho=10e^{-20r} C/m^{3}.
+		\end{align*}
+	Find the total charge enclosed within the sphere. Also, find the electric flux density on the surface of the sphere for a radius of 2m.
+	
+	\subsubsection*{Solution}
+	\begin{figure}[h]
+			\centering
+			\includegraphics[width=1\linewidth]{graphics/circleBobo}
+			\caption{spherical coordinate system}
+		\end{figure} 
+	
+	The total charge enclosed in the sphere is;
+	\begin{align*}
+			Q=\iiint\limits_V\rho dv
+		\end{align*}
+	From Figure 19.4, 
+	\begin{align*}
+			dv &= dr\times(rsin\theta d\phi)\times rd\theta \\
+			dv&=r^{2}sin\theta drd\theta d\phi\\
+			\text{so}, Q&=\int^{2\pi}_{\phi=0}\int^{\pi}_{\theta=0}\int^{2}_{r=0} \rho r^{2}sin\theta drd\theta d\phi\\
+			Q&= \int^{2\pi}_{\phi=0}d\phi\int^{\pi}_{\theta=0}sin\theta d\theta\int^{2}_{r=0}10e^{-20r}r^{2}dr
+		\end{align*}
+	integrating this would give the value of Q and so we get that;
+	\begin{align*}
+			Q=\frac{\pi}{100} C
+		\end{align*}
+	To find the electric flux density, we use Gauss law which states that the electric flux density over the entire area of the sphere is equal to the total charge enclosed. Since the surface is spherical, the charges are uniformly distributed in a spherically symmetric manner. So we can find it according to Gauss law;
+	\begin{align*}
+			4\pi r^{2}D&=Q=\frac{\pi}{100}\\
+			D&=\frac{Q}{4\pi r^{2}}= 6.25\times10^{-4} C/m^{2}
+		\end{align*}
 \end{exmp}
 
 \begin{exmp}
-The electric flux density is given as
-\begin{align*}
-\bar{D}=x^{3}\hat{x} + x^{2}y\hat{z}.
-\end{align*}
-Find the charge density inside a cube of side 2m placed at the origin with its side along the coordinate axes
-
-\subsubsection*{Solution}
-Here we use the differential form of Gauss law to find out first the charge density and then the charge enclosed inside the cube.\\
-\begin{align*}
-\text{using gauss law}; \nabla\cdot\bar{D}&=\rho\\
-\dfrac{\partial D_{x}}{\partial x}+\dfrac{\partial D_{y}}{\partial y}+\dfrac{\partial 
-D_{z}}{\partial z}&=\rho \\
-\end{align*}
-substituting $\bar{D}$ components, we have;
-\begin{align*}
-\rho= \dfrac{\partial}{\partial x}(x^{3})+ 0 +\dfrac{\partial }{\partial z}(x^{2}y)\\
-\rho=3x^{2} .
-\end{align*}
-To get the total charge enclosed Q, we take the volume integral of the charge density $\rho$
-\begin{dmath*}
-Q=\int_{-1}^{1}\int_{-1}^{1}\int_{-1}^{1}\rho dxdydz
-=\int_{-1}^{1}\int_{-1}^{1}\int_{-1}^{1}3x^{2}dxdydz
-=12\int_{-1}^{1}x^{2}dx= 12\frac{2}{3}
-= 8 C
-\end{dmath*}
-This could also be solved using the integral form of Gauss law.
+	The electric flux density is given as
+	\begin{align*}
+			\bar{D}=x^{3}\hat{x} + x^{2}y\hat{z}.
+		\end{align*}
+	Find the charge density inside a cube of side 2m placed at the origin with its side along the coordinate axes
+	
+	\subsubsection*{Solution}
+	
+	Here we use the differential form of Gauss law to find out first the charge density and then the charge enclosed inside the cube.\\
+	\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.9\linewidth]{graphics/fig150}
+			\caption{Model for electric field density inside a cube}
+		\end{figure}
+	
+	We have the following area 1,2,3,4,5,6 that makes up the closed surface that gives the volume of the cube. Again, we make use of Gauss law;
+	\begin{align*}
+			\oiint\limits_S\bar{D}\cdot d\bar{a} = \text{Charge enclosed}
+		\end{align*}
+	We denote $A_1,A_2,A_3,A_4,A_5 and A_6$ as the area element on the faces labelled 1,2,3,4,5 and 6 respectively. Since the centre of the sphere is the origin, with side length 2m, we have a +1 and -1 offset from the origin which is the cube centre.\\
+	
+	$dA_1 = dzdy, x= +1, dA_2 = dxdz, y= +1, dA_3 = dydz, x= -1, dA_4 = dxdy, z= +1, dA_5 = dxdz, y= -1, dA_6 = dxdy, z= -1 $\\
+	
+	$\oiint\limits_S\bar{D}\cdot d\bar{a}$ will be the sum total of all ${D}\cdot d\bar{a}$ for individual areas.
+	
+	Taking the outward normal as position for the volumes
+	
+	$A_1 = dzdyx=  A_2 = dxdzy= A_3 = dydz-x= -1, A_4 = dxdyz= A_5 = dxdz-y= A_6 = dxdy, $\\ with unit vector added to show the direction of the ones with outward normal unit vector $\hat{n}$ added
+	\begin{align*}
+			\iint\limits_S\bar{D}\cdot d\bar{a} = \iint\limits_{A1}\bar{D}\cdot d\bar{A_1} +\iint\limits_{A2}\bar{D}\cdot d\bar{A_2}+ \iint\limits_{A3}\bar{D}\cdot d\bar{A_3}+ 
+		\end{align*}
+	\begin{align*}
+			\iint\limits_{A4}\bar{D}\cdot d\bar{A_4}+ \iint\limits_{A5}\bar{D}\cdot d\bar{A_5}+ \iint\limits_{A6}\bar{D}\cdot d\bar{A_6}   
+		\end{align*}
+	\begin{align*}
+			=\iint\limits(x^3 \hat{x}+ x^2y\hat{z}).(dzdy\hat{x})|_{x=1}+
+		\end{align*}
+	\begin{align*}
+			\iint\limits(x^3 \hat{x}+ x^2y\hat{z}).(dxdz\hat{y})|_{y=1}+
+		\end{align*}
+	
+	\begin{align*}
+			\iint\limits(x^3 \hat{x}+ x^2y\hat{z}.(-dydz\hat{x})|_{x=-1}+
+		\end{align*}
+	\begin{align*}
+			\iint\limits(x^3 \hat{x}+ x^2y\hat{z}).(dxdy \hat{z})|_{z=1}+
+		\end{align*}
+	
+	\begin{align*}
+			\iint\limits(x^3 \hat{x}+ x^2y\hat{z}).(-dxdz\hat{y})|_{y=-1}+
+		\end{align*}
+	\begin{align*}
+			\iint\limits(x^3 \hat{x}+ x^2y\hat{z}).(-dxdy\hat{z})|_{z=-1} 
+		\end{align*}
+	
+	\begin{align*}
+			={\int\limits_{-1}^{1}\int\limits_{-1}^{1}}(\hat{x}+y\hat{z}).(dzdy\hat{x})+{\int\limits_{-1}^{1}\int\limits_{-1}^{1}}(x^3 \hat{x}+ x^2\hat{z}).(dxdz\hat{y})+
+		\end{align*}
+	\begin{align*}
+			{\int\limits_{-1}^{1}\int\limits_{-1}^{1}}( -\hat{x}+ y\hat{z}).(-dydz\hat{x})+
+			{\int\limits_{-1}^{1}\int\limits_{-1}^{1}}(x^3 \hat{x}+ x^2y\hat{z}).(dxdy \hat{z})+
+		\end{align*}
+	\begin{align*}
+			{\int\limits_{-1}^{1}\int\limits_{-1}^{1}}(x^3 \hat{x}- x^2\hat{z}).(-dxdz\hat{y})|
+			{\int\limits_{-1}^{1}\int\limits_{-1}^{1}}(x^3 \hat{x}+ x^2y\hat{z}).(-dxdy\hat{z})|
+		\end{align*}
+	\begin{align*}
+			={\int\limits_{-1}^{1}\int\limits_{-1}^{1}}dzdy + {\int\limits_{-1}^{1}\int\limits_{-1}^{1}}dydz +
+			{\int\limits_{-1}^{1}\int\limits_{-1}^{1}}x^2ydxdy +
+			{\int\limits_{-1}^{1}\int\limits_{-1}^{1}}-x^2ydxdy\\
+		\end{align*}
+	\begin{align*}
+			=4+4 = 8c
+		\end{align*}
+	
+	
+	
+	
+	SIMPLER METHOD	 
+	\begin{align*}
+			\text{using gauss law}; \nabla\cdot\bar{D}&=\rho\\
+			\dfrac{\partial D_{x}}{\partial x}+\dfrac{\partial D_{y}}{\partial y}+\dfrac{\partial 
+					D_{z}}{\partial z}&=\rho \\
+		\end{align*}
+	substituting $\bar{D}$ components, we have;
+	\begin{align*}
+			\rho= \dfrac{\partial}{\partial x}(x^{3})+ 0 +\dfrac{\partial }{\partial z}(x^{2}y)\\
+			\rho=3x^{2} .
+		\end{align*}
+	To get the total charge enclosed Q, we take the volume integral of the charge density $\rho$
+	\begin{dmath*}
+			Q=\int_{-1}^{1}\int_{-1}^{1}\int_{-1}^{1}\rho dxdydz
+			=\int_{-1}^{1}\int_{-1}^{1}\int_{-1}^{1}3x^{2}dxdydz
+			=12\int_{-1}^{1}x^{2}dx= 12\frac{2}{3}
+			= 8 C
+		\end{dmath*}
+	This could also be solved using the integral form of Gauss law.
 \end{exmp}
 
 \begin{exmp}
-In a conducting medium, the magnetic field is given as
-\begin{align*}
-\bar{H}=y^{2}z\hat{x}+2(x+1)yz\hat{y}-(x+1)z^{2}\hat{z}.
-\end{align*}
-Find the conduction current density at point (2,0,-1)m. Also find the current enclosed by a square loop y=1, $0<x<1$, $0<z<1$.
-\subsubsection*{Solution}
-\begin{figure}[h]
-\centering
-\includegraphics[width=.5\linewidth]{\pathtopartone/graphics/problem3b}
-\caption{Loop at y=1}
-\end{figure} 
-
-Here we will use amperes law(differential form) to solve for the conduction current density. Amperes law is given by;
-\begin{align*}
-\bar{J}=\nabla\times\bar{H}
-\end{align*}
-This is essentially the curl of $\bar{H}$ and is evaluated by solving for the determinant of the matrix formed by $\nabla$ and $\bar{J}$ .\\
-so we have that $\bar{J} =$
-\[
-\left|
-\begin{tabular}{c c c}
-$\hat{x}$ & $\hat{y}$ & $\hat{z}$\\
-$\frac{\partial}{\partial x}$ & $\frac{\partial}{\partial y}$ & $\frac{\partial}{\partial z}$\\
-$H_{x}$ & $H_{y}$ & $H_{z}$
-\end{tabular}
-\right|
-\]
-\begin{dmath*}
-\bar{J}= (\frac{\partial H_{z}}{\partial y}-\frac{\partial H_{y}}{\partial z})\hat{x}+ (\frac{\partial H_{x}}{\partial z}-\frac{\partial H_{z}}{\partial x})\hat{y}+ (\frac{\partial H_{y}}{\partial x}-\frac{\partial H_{x}}{\partial y})\hat{z}
-\end{dmath*}
-Solving, we get;
-\begin{align*}
-\bar{J}=-2(x+1)y\hat{x}+(y^{2}+z^{2})\hat{y}
-\end{align*}
-At location (2,0,-1) the conduction current density is;
-\begin{align*}
-\bar{J}=\hat{y}
-\end{align*}
-
-With conduction current density $\bar{J}$ known, we can now find out the current enclosed by a loop at y=1 by integrating $\bar{J}$ over the area of the loop. The conduction current density is perpendicular to the plane created by that loop.
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/problemXZplane}
-\caption{Direction of the conduction current in the XZ plane}
-\end{figure} 
-So looking at the XZ plane as shown in Figure 19.6, if we go by the right-hand rule, we have to go in an anti-clockwise direction to get the current flowing in that direction(perpendicular to the plane created by the loop).
-\begin{dmath*}
-I=\iint\bar{J}d\bar{a}=\iint\bar{J}\hat{y}dxdz
-=\int_{0}^{1}\int_{0}^{1}J_{y}dxdz
-=\int_{0}^{1}\int_{0}^{1}(y^{2}+z^{2})dxdz
-\end{dmath*}
-at y=1
-\begin{dmath*}
-I=\int_{0}^{1}\int_{0}^{1}(1+z^{2})dxdz
-= \frac{4}{3}A
-\end{dmath*}
+	In a conducting medium, the magnetic field is given as
+	\begin{align*}
+			\bar{H}=y^{2}z\hat{x}+2(x+1)yz\hat{y}-(x+1)z^{2}\hat{z}.
+		\end{align*}
+	Find the conduction current density at point (2,0,-1)m. Also find the current enclosed by a square loop y=1, $0<x<1$, $0<z<1$.
+	\subsubsection*{Solution}
+	\begin{figure}[h]
+			\centering
+			\includegraphics[width=1\linewidth]{graphics/problem3b}
+			\caption{Loop at y=1}
+		\end{figure} 
+	
+	Here we will use amperes law(differential form) to solve for the conduction current density. Amperes law is given by;
+	\begin{align*}
+			\bar{J}=\nabla\times\bar{H}
+		\end{align*}
+	This is essentially the curl of $\bar{H}$ and is evaluated by solving for the determinant of the matrix formed by $\nabla$ and $\bar{J}$ .\\
+	so we have that $\bar{J} =$
+	\[
+	\left|
+	\begin{tabular}{c c c}
+			$\hat{x}$ & $\hat{y}$ & $\hat{z}$\\
+			$\frac{\partial}{\partial x}$ & $\frac{\partial}{\partial y}$ & $\frac{\partial}{\partial z}$\\
+			$H_{x}$ & $H_{y}$ & $H_{z}$
+		\end{tabular}
+	\right|
+	\]
+	\begin{dmath*}
+			\bar{J}= (\frac{\partial H_{z}}{\partial y}-\frac{\partial H_{y}}{\partial z})\hat{x}+ (\frac{\partial H_{x}}{\partial z}-\frac{\partial H_{z}}{\partial x})\hat{y}+ (\frac{\partial H_{y}}{\partial x}-\frac{\partial H_{x}}{\partial y})\hat{z}
+		\end{dmath*}
+	Solving, we get;
+	\begin{align*}
+			\bar{J}=-2(x+1)y\hat{x}+(y^{2}+z^{2})\hat{y}
+		\end{align*}
+	At location (2,0,-1) the conduction current density is;
+	\begin{align*}
+			\bar{J}=\hat{y}
+		\end{align*}
+	
+	With conduction current density $\bar{J}$ known, we can now find out the current enclosed by a loop at y=1 by integrating $\bar{J}$ over the area of the loop. The conduction current density is perpendicular to the plane created by that loop.
+	\begin{figure}[h]
+			\centering
+			\includegraphics[width=1\linewidth]{graphics/problemXZplane}
+			\caption{Direction of the conduction current in the XZ plane}
+		\end{figure} 
+	So looking at the XZ plane as shown in Figure 19.6, if we go by the right-hand rule, we have to go in an anti-clockwise direction to get the current flowing in that direction(perpendicular to the plane created by the loop).
+	\begin{dmath*}
+			I=\iint\bar{J}d\bar{a}=\iint\bar{J}\hat{y}dxdz
+			=\int_{0}^{1}\int_{0}^{1}J_{y}dxdz
+			=\int_{0}^{1}\int_{0}^{1}(y^{2}+z^{2})dxdz
+		\end{dmath*}
+	at y=1
+	\begin{dmath*}
+			I=\int_{0}^{1}\int_{0}^{1}(1+z^{2})dxdz
+			= \frac{4}{3}A
+		\end{dmath*}
 \end{exmp}
 So these are some simple problems which essentially give you some feel on how to apply Maxwell's equations in real life, either with the differential form or integral form.
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+	\section{EXERCISE}
+	
+	\begin{ExerciseList}
+			\Exercise[label={ex11}]Explain the correction made by Maxwell to 		Ampere's Circuit Law.
+			\Exercise[label={ex12}] What is Displacement Current Density.
+			\Exercise[label={ex13}] Show that $\nabla\times\bar{H}=\bar{J}+\frac{\partial\bar{D}}{\partial t}$
+			\Exercise[label={ex14}] Explain the concept of Surface charge and surface charge density.
+			\Exercise[label={ex15}] Explain the concept of Surface current and surface current density.
+			\Exercise[label={ex16}] Explain displacement current
+			\Exercise[label={ex17}] A square loop of side length 2 m lies in the $yz$-plane. The loop carries a current of 5 A in the counterclockwise direction when viewed from the positive $x$-axis. Determine the magnetic field at the center of the loop using Ampere's Circuital Law.
+			\Exercise[label={ex17}] A long straight wire carries a current of 8 A along the positive $y$-axis. The position vector of a point in space is given by $\mathbf{r} = \begin{bmatrix} -2 \\ 4 \\ 1 \end{bmatrix}$ meters. Find the magnetic field at this point using Ampere's Circuital Law.
+		\end{ExerciseList}
+\end{mdframed}

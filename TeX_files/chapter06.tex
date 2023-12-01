@@ -5,37 +5,37 @@ Let us now study impedance transformation in a lossless transmission line and th
 \section{Impedance Transformation on a Lossless Transmission Line}\label{lec:lec6}
 Recall that, the impedance transformation relationship for any point is given as:
 \begin{align*}
-\footnotemark[1]Z(l) = Z_0\left\lbrace \frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0\cosh(\gamma l) + Z_L\sinh(\gamma l)}\right\rbrace 
+	\footnotemark[1]Z(l) = Z_0\left\lbrace \frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0\cosh(\gamma l) + Z_L\sinh(\gamma l)}\right\rbrace 
 \end{align*}
 \footnotetext[1]{$Z(l)$ is the impedance at any point on the line}
 \footnotetext[2]{$\bar{Z}(l)$ is the normalized impedance at any point on the line}
 \begin{align*}
-\footnotemark[2]\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_L\sinh(\gamma l) + \cosh(\gamma l)}\right\rbrace 
+	\footnotemark[2]\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_L\sinh(\gamma l) + \cosh(\gamma l)}\right\rbrace 
 \end{align*}
 if $\bar{Z_L} = 1$ that is, $Z_L = Z_0$ and $\bar{Z}(l) = 1 \rightarrow Z(l) = Z_0$
 
 For a lossless Transmission Line,$\gamma=j\beta$ where
 \begin{align*}
-\cosh\gamma l = \frac{e^{\gamma l} + e^{-\gamma l}}{2} \quad and \quad \sinh\gamma l = \frac{e^{\gamma l} - e^{-\gamma l}}{2}
+	\cosh\gamma l = \frac{e^{\gamma l} + e^{-\gamma l}}{2} \quad and \quad \sinh\gamma l = \frac{e^{\gamma l} - e^{-\gamma l}}{2}
 \end{align*}
 so,
 \begin{align*}
-\cosh\gamma l= \cosh(j\beta l)=\frac{e^{j \beta l} + e^{-j \beta l}}{2}=\cos(\beta l)
+	\cosh\gamma l= \cosh(j\beta l)=\frac{e^{j \beta l} + e^{-j \beta l}}{2}=\cos(\beta l)
 \end{align*}
 And
 \begin{dmath*}
-\sinh\gamma l=\sinh(j\beta l) = \frac{e^{j \beta l}-e^{-j\beta l}}{2} = j\left( \frac{e^{j\beta l}-e^{-j\beta l}}{2j}\right) =j\sin(\beta l)
+	\sinh\gamma l=\sinh(j\beta l) = \frac{e^{j \beta l}-e^{-j\beta l}}{2} = j\left( \frac{e^{j\beta l}-e^{-j\beta l}}{2j}\right) =j\sin(\beta l)
 \end{dmath*}
 
 Therefore impedance transformation relationship for a lossless transmission line is given as;
 \begin{equation}
-\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
-\label{eqn:implossless}
+	\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
+	\label{eqn:implossless}
 \end{equation}
 $Z_0$ is a real quantity for a lossless transmission line same as:
 \begin{equation}
-\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
-\label{eqn:implosslessnorm}
+	\bar{Z}(l) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L\sin(\beta l)}\right\rbrace
+	\label{eqn:implosslessnorm}
 \end{equation}
 With this impedance transformation relationship, we can establish some very important characteristics of the transmission line. When we move on a transmission line a distance of $\frac{\lambda}{2}$ (half wavelength), the voltage standing wave characteristics repeat themselves, so if we take a ratio of voltage and current at a certain location, we expect that this characteristic will repeat at $\frac{\lambda}{2}$.
 
@@ -48,29 +48,29 @@ Let's say at $l$ we have maximum or minimum impedance, then moving $l=\frac{\lam
 
 At location $l$, Impedance $= \bar{Z}(l)$,
 \begin{figure}[h]
-\centering
-\includegraphics[width=1.1\linewidth]{\pathtopartone/graphics/load_over_half_wavelength}
-\caption{Z($l$) over distance $\frac{\lambda}{2}$}
-\label{fig:astyuif}
+	\centering
+	\includegraphics[width=1.1\linewidth]{graphics/load_over_half_wavelength}
+	\caption{Z($l$) over distance $\frac{\lambda}{2}$}
+	\label{fig:astyuif}
 \end{figure}
 
 At location ${\left(l+\frac{\lambda}{2}\right)}$, Impedance $= \bar{Z}\left(l+\frac{\lambda}{2}\right)$ substituting ${\left(l+\frac{\lambda}{2}\right)}$ for $l$ in equation~\eqref{eqn:implossless}, we get: 
 \begin{align*}
-\bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L \cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\sin(\beta \left(l+\frac{\lambda}{2}\right))}{\cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\bar{Z}_L \sin(\beta \left(l+\frac{\lambda}{2}\right))}\right\rbrace 
+	\bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L \cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\sin(\beta \left(l+\frac{\lambda}{2}\right))}{\cos(\beta \left(l+\frac{\lambda}{2}\right)) + j\bar{Z}_L \sin(\beta \left(l+\frac{\lambda}{2}\right))}\right\rbrace 
 \end{align*}
 Since \footnote{$\beta$ represents phase constant}$\beta$ = $ \frac{2\pi}{\lambda}$, therefore,
 \begin{dmath*}
-\beta\left(l+\frac{\lambda}{2}\right)=\frac{2\pi}{\lambda}\left(l+\frac{\lambda}{2}\right)=\frac{2\pi}{\lambda}l+\pi=\beta l+\pi
+	\beta\left(l+\frac{\lambda}{2}\right)=\frac{2\pi}{\lambda}\left(l+\frac{\lambda}{2}\right)=\frac{2\pi}{\lambda}l+\pi=\beta l+\pi
 \end{dmath*}
 \begin{align*}
-\bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l+\pi) + j\sin(\beta l+\pi)}{\cos(\beta l+\pi) + j\bar{Z}_L\sin(\beta l+\pi)}\right\rbrace 
+	\bar{Z}\left(l+\frac{\lambda}{2}\right) = \left\lbrace \frac{\bar{Z}_L\cos(\beta l+\pi) + j\sin(\beta l+\pi)}{\cos(\beta l+\pi) + j\bar{Z}_L\sin(\beta l+\pi)}\right\rbrace 
 \end{align*}
 But 
 \[
 \cos(\beta l+\pi)=-\cos(\beta l)$ and $\sin(\beta l+\pi)=-\sin(\beta l)
 \] 
 \begin{dmath*}
-\bar{Z}\left(l+\frac{\lambda}{2}\right)=\left\lbrace \frac{-\bar{Z}_L \cos(\beta l) - j\sin(\beta l)}{-\cos(\beta l) - j\bar{Z}_L \sin(\beta l)}\right\rbrace = \left\lbrace \frac{\bar{Z}_L \cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L \sin(\beta l)}\right\rbrace\;\;\equiv\bar{Z}(l)
+	\bar{Z}\left(l+\frac{\lambda}{2}\right)=\left\lbrace \frac{-\bar{Z}_L \cos(\beta l) - j\sin(\beta l)}{-\cos(\beta l) - j\bar{Z}_L \sin(\beta l)}\right\rbrace = \left\lbrace \frac{\bar{Z}_L \cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}_L \sin(\beta l)}\right\rbrace\;\;\equiv\bar{Z}(l)
 \end{dmath*} 
 This is the same as the original formula obtained for $\bar{Z}(l)$.
 
@@ -85,23 +85,23 @@ At location $l, \textnormal{Impedance}=\bar{Z}(l)$.
 
 Then at location ${(l+\frac{\lambda}{4})}$, Impedance $=\bar{Z}(l+\frac{\lambda}{4})$. Substituting ${(l+\frac{\lambda}{4})}$ for $l$ in equation~\ref{eqn:implossless}, we get:
 \begin{align*}
-\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta (l+\frac{\lambda}{4})) + jsin(\beta (l+\frac{\lambda}{4}))}{\cos(\beta (l+\frac{\lambda}{4})) + j\bar{Z}(l)\sin(\beta (l+\frac{\lambda}{4}))}\right\rbrace 
+	\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta (l+\frac{\lambda}{4})) + jsin(\beta (l+\frac{\lambda}{4}))}{\cos(\beta (l+\frac{\lambda}{4})) + j\bar{Z}(l)\sin(\beta (l+\frac{\lambda}{4}))}\right\rbrace 
 \end{align*}
 Where 
 \begin{dmath*}
-\beta(l + \frac{\lambda}{4})=\beta l + \frac{2\pi}{\lambda} \cdot \frac{\lambda}{4} = \beta l + \frac{\pi}{2}
+	\beta(l + \frac{\lambda}{4})=\beta l + \frac{2\pi}{\lambda} \cdot \frac{\lambda}{4} = \beta l + \frac{\pi}{2}
 \end{dmath*}
 \begin{align*} 
-\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta l + \frac{\pi}{2}) + j\sin(\beta l + \frac{\pi}{2})}{\cos(\beta l + \frac{\pi}{2}) + j\bar{Z}(l)\sin(\beta l + \frac{\pi}{2})}\right\rbrace
+	\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{\bar{Z}(l)\cos(\beta l + \frac{\pi}{2}) + j\sin(\beta l + \frac{\pi}{2})}{\cos(\beta l + \frac{\pi}{2}) + j\bar{Z}(l)\sin(\beta l + \frac{\pi}{2})}\right\rbrace
 \end{align*}
 But $\cos(\beta l + \frac{\pi}{2})= -\sin(\beta l), \sin(\beta l+\frac{\pi}{2})=\cos(\beta l)$
 \begin{align*} 
-\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{-\bar{Z}(l)\sin(\beta l) + j\cos(\beta l)}{-\sin(\beta l) + j\bar{Z}(l) \cos(\beta l)}\right\rbrace
+	\bar{Z}\left(l+\frac{\lambda}{4}\right) = \left\lbrace \frac{-\bar{Z}(l)\sin(\beta l) + j\cos(\beta l)}{-\sin(\beta l) + j\bar{Z}(l) \cos(\beta l)}\right\rbrace
 \end{align*}
 \begin{dmath*}
-\bar{Z}\left(l+\frac{\lambda}{4}\right) =\frac{j}{j} \left\lbrace \frac{\cos(\beta l) + j\bar{Z}(l)\sin(\beta l)}{\bar{Z}(l)\cos(\beta l) + j\sin(\beta l)}\right\rbrace 
-= \frac{1}{\left\lbrace \frac{\bar{Z}(l)\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}(l)\sin(\beta l)}\right\rbrace} 
-=\frac{1}{\bar{Z}(l)}
+	\bar{Z}\left(l+\frac{\lambda}{4}\right) =\frac{j}{j} \left\lbrace \frac{\cos(\beta l) + j\bar{Z}(l)\sin(\beta l)}{\bar{Z}(l)\cos(\beta l) + j\sin(\beta l)}\right\rbrace 
+	= \frac{1}{\left\lbrace \frac{\bar{Z}(l)\cos(\beta l) + j\sin(\beta l)}{\cos(\beta l) + j\bar{Z}(l)\sin(\beta l)}\right\rbrace} 
+	=\frac{1}{\bar{Z}(l)}
 \end{dmath*}
 We can draw an observation that for every $\frac{\lambda}{4}$ distance moved, the normalized impedance inverts itself\footnote{Note the word \textbf{normalized}, it is not absolute impedance}. If the absolute impedance is inverted, it is \textbf{admittance}\index{admittance}. The normalized impedance does not have a unit, it is dimensionless. So if I have an impedance greater than $Z_0$ along a transmission line, after $\frac{\lambda}{4}$ distance, it becomes less than $Z_0$ because the normalized impedance is the inverse of the one at the previous location. So at $\frac{\lambda}{4}$ distance, impedance inverts after another $\frac{\lambda}{4}$ again it re-inverts becoming the original impedance, which is equivalent to repeating itself at $\frac{\lambda}{2}$ distance. 
 
@@ -110,7 +110,7 @@ Hence, when we talk about the periodicity of the impedance on the transmission l
 \subsection{The matching condition characteristics}
 If the transmission line is terminated by its characteristic impedance, then the impedance seen at every point on the transmission line is equal to the characteristic impedance. So if $Z_L=Z_0$. This implies that $\bar{Z}_L= \frac{Z_L}{Z_0}=1$. Then equation~\eqref{eqn:implossless} becomes:
 \begin{dmath*}
-\bar{Z}(l) = \left\lbrace\frac{\bar{Z}_L\cos\beta l + j\sin\beta l}{\cos\beta l + j\bar{Z}_L\sin\beta l}\right\rbrace = \left\lbrace \frac{\cos\beta l + j\sin\beta l}{\cos\beta l + jsin\beta l}\right\rbrace = 1
+	\bar{Z}(l) = \left\lbrace\frac{\bar{Z}_L\cos\beta l + j\sin\beta l}{\cos\beta l + j\bar{Z}_L\sin\beta l}\right\rbrace = \left\lbrace \frac{\cos\beta l + j\sin\beta l}{\cos\beta l + jsin\beta l}\right\rbrace = 1
 \end{dmath*}
 Therefore, irrespective of the length of the transmission line, if the line is terminated in its characteristic impedance, then the impedance seen at every point on the transmission line is equal to the characteristic impedance. This means that once a line is terminated in its characteristics impedance, there is no need to compute the impedance transformation on the line, we can use any length of transmission and the impedance will always be the same along the length of the line. 
 
@@ -118,49 +118,49 @@ $Z_L=Z_0$ that is, when the reflection coefficient is zero, there is no reflecte
 
 So these are the three very important characteristics of a lossless transmission line.
 \begin{enumerate}[(i)]
-\item Impedance transformation repeats at every $\frac{\lambda}{2}$ distances.
-\item Normalized impedance inverts at every $\frac{\lambda}{4}$ distance.
-\item Finally if the line is terminated in its characteristics impedance, the impedance seen at every point of the line is equal to the characteristics impedance.
+	\item Impedance transformation repeats at every $\frac{\lambda}{2}$ distances.
+	\item Normalized impedance inverts at every $\frac{\lambda}{4}$ distance.
+	\item Finally if the line is terminated in its characteristics impedance, the impedance seen at every point of the line is equal to the characteristics impedance.
 \end{enumerate}
 With this understanding of impedance transformation, now we can go to the power transfer calculation of the transmission line.
 
 \section{Power Transfer on Transmission Line}
 Initially, our idea was to transfer power from the generator to load effectively. In the lossless case, it should be that all generator power is completely transferred to the load. However, we have seen that if the impedance is not equal to the characteristic impedance, then there will always be a reflection on the transmission line and whatever energy the generator supplies, part of this energy will get reflected back to the generator. Now when we talk about matching condition\index{matching condition} or maximum power transfer condition\index{matching power transfer condition}, there are two cases to consider;
 \begin{enumerate}[(i)]
-\item When the power is generated by the generator, it should be maximally transferred to the load.
-\item When the reflected power comes back to the generator, the generator is not capable of absorbing power, so when the reflected power comes back with a different amplitude and phase, it negatively affects the generator's performance (destructive interference). So it is desirable that the generator should not see any power coming back at it.
+	\item When the power is generated by the generator, it should be maximally transferred to the load.
+	\item When the reflected power comes back to the generator, the generator is not capable of absorbing power, so when the reflected power comes back with a different amplitude and phase, it negatively affects the generator's performance (destructive interference). So it is desirable that the generator should not see any power coming back at it.
 \end{enumerate}
 For these two reasons that the generator power should be completely delivered to the load and that no reflected power should come back to the generator, we must make sure always that the impedance that the generator sees is always equal to the characteristic impedance. We will study these two issues later but let's study a general case and suppose we have a transmission line that is connected to a generator at one end and a load at the other end. Then, \emph{how much power will be delivered to the load?} Again using the voltage and current equation, we can write down power at the location of the load that is, the power delivered to the load will be given as follows.
 
 At load end, $L=0$ therefore, $e^{-2\beta (l)} = e^{-2\beta (0)}$
 \begin{align*}
-V(0) &= V^{+} \left\lbrace {1 + \Gamma_L e^{-2\beta(0)}}\right\rbrace\\ 
-&= V^{+}\left\lbrace 1 +\Gamma_L \right\rbrace\\
-I(0) &= \frac{V^{+}}{Z_0} \left\lbrace{1 - \Gamma_L e^{-2\beta(0)}}\right\rbrace\\ 
-&= \frac{V^{+}}{Z_0}\left\lbrace1 -\Gamma_L \right\rbrace
+	V(0) &= V^{+} \left\lbrace {1 + \Gamma_L e^{-2\beta(0)}}\right\rbrace\\ 
+	&= V^{+}\left\lbrace 1 +\Gamma_L \right\rbrace\\
+	I(0) &= \frac{V^{+}}{Z_0} \left\lbrace{1 - \Gamma_L e^{-2\beta(0)}}\right\rbrace\\ 
+	&= \frac{V^{+}}{Z_0}\left\lbrace1 -\Gamma_L \right\rbrace
 \end{align*}
 So from the general voltage and current relationship on the transmission line, we have found out the voltage and current values at the load end.
 
 $Z_0$ is real for a lossless line, thus the conjugate of the current equation at the load end is:
 \begin{align*}
-I^\ast (0) =\frac{V^{+ (\ast )}}{Z_0}\left\lbrace 1 -\Gamma_L \right\rbrace
+	I^\ast (0) =\frac{V^{+ (\ast )}}{Z_0}\left\lbrace 1 -\Gamma_L \right\rbrace
 \end{align*}
 
 Power delivered to load.
 \begin{dmath*}
-P = \frac{1}{2}\mathfrak{Re}\left\lbrace V(0) I^\ast(0) \right\rbrace= \frac{1}{2}\mathfrak{Re}\left\lbrace V^+(1+\Gamma_L) \times\frac{V^{+(\ast)}}{Z_0} (1-\Gamma_L)\right\rbrace
+	P = \frac{1}{2}\mathfrak{Re}\left\lbrace V(0) I^\ast(0) \right\rbrace= \frac{1}{2}\mathfrak{Re}\left\lbrace V^+(1+\Gamma_L) \times\frac{V^{+(\ast)}}{Z_0} (1-\Gamma_L)\right\rbrace
 \end{dmath*}
 \begin{equation}
-P = \frac{1}{2} \frac{|V^+|^2}{Z_0} \left\lbrace 1 -|\Gamma_L|^2 \right\rbrace\footnotemark
+	P = \frac{1}{2} \frac{|V^+|^2}{Z_0} \left\lbrace 1 -|\Gamma_L|^2 \right\rbrace\footnotemark
 \end{equation}
 \footnotetext{
-Given $V=a + jb \quad \quad V^\ast=a-jb$
-
-Then, $V\times V^\ast = (a + jb)(a-jb)= a^2-jab + jab +(jb)(-jb)=a^2 + b^2$
-
-$|V|= \sqrt{a^2 + b^2}$ thus, $|V|^2 = a^2 + b^2$
-
-This implies that $|V|^2 = V \times V^* $}
+	Given $V=a + jb \quad \quad V^\ast=a-jb$
+	
+	Then, $V\times V^\ast = (a + jb)(a-jb)= a^2-jab + jab +(jb)(-jb)=a^2 + b^2$
+	
+	$|V|= \sqrt{a^2 + b^2}$ thus, $|V|^2 = a^2 + b^2$
+	
+	This implies that $|V|^2 = V \times V^* $}
 $\Gamma_L$ is a real value since it is the absolute value taken here.
 
 Recall that,
@@ -171,147 +171,147 @@ Once load impedance is known, the reflection coefficient at the load end is know
 
 Power carried by forward wave: 
 \begin{align*}
-P_{\textnormal{for}} = \frac{1}{2} \frac{{|V|^+}^2}{Z_0}
+	P_{\textnormal{for}} = \frac{1}{2} \frac{{|V|^+}^2}{Z_0}
 \end{align*}
 When this gets to the load, part of the energy will get reflected back, and this backward travelling wave has amplitude $V^-$ which also sees characteristics impedance.
 
 The power carried by this wave:
 \begin{align*}
-P_{\textnormal{ref}} = \frac{1}{2}\frac{{|V^-|}^2}{Z_0}
+	P_{\textnormal{ref}} = \frac{1}{2}\frac{{|V^-|}^2}{Z_0}
 \end{align*}
 which is the power reflected by the load in the backward wave.
 
 Therefore,
 \begin{align*} 
-\textnormal{Power delivered to load}, P\\
-=& \textnormal{Power transferred to load}\\
-&- \textnormal{Power reflected}\\
-=& \frac{1}{2} \frac{{|V^+|}^2}{Z_0} -\frac{1}{2} \frac{{|V^-|}^2 }{Z_0}\\
-=& \frac{1}{2} \left\lbrace \frac{{|V^+| }^2}{Z_0} -\frac{ {|V^-|}^2 }{Z_0} \right\rbrace\\
-=& \frac{1}{2} \frac{{|V^+|}^2}{Z_0} \left\lbrace 1 - {
-\begin{vmatrix}
-\frac{V^-}{V^+}
-\end{vmatrix}^2}\right\rbrace
+	\textnormal{Power delivered to load}, P\\
+	=& \textnormal{Power transferred to load}\\
+	&- \textnormal{Power reflected}\\
+	=& \frac{1}{2} \frac{{|V^+|}^2}{Z_0} -\frac{1}{2} \frac{{|V^-|}^2 }{Z_0}\\
+	=& \frac{1}{2} \left\lbrace \frac{{|V^+| }^2}{Z_0} -\frac{ {|V^-|}^2 }{Z_0} \right\rbrace\\
+	=& \frac{1}{2} \frac{{|V^+|}^2}{Z_0} \left\lbrace 1 - {
+		\begin{vmatrix}
+			\frac{V^-}{V^+}
+		\end{vmatrix}^2}\right\rbrace
 \end{align*}
 Recall that $\Gamma_L =\frac{V^-}{V^+}$.
 \begin{align*}
-P_L=\frac{1}{2} \frac{{|V^+|}^2}{Z_0} \left\lbrace 1 - { \Gamma_L }^2 \right\rbrace.
+	P_L=\frac{1}{2} \frac{{|V^+|}^2}{Z_0} \left\lbrace 1 - { \Gamma_L }^2 \right\rbrace.
 \end{align*}
 So when we compute the power transfer on a transmission line, it is either done using the circuit theory concept or the wave theory concept. Thus we have found the real part that is, the power actually supplied to the load. One then asks \emph{how do we calculate for complex part or put differently, how do we compute the complex power at any location on the transmission line?}. 
 
 If we calculate the power flow along any point on the transmission line not necessarily at the load end, what will that indicate? To test that theory, let's get the voltage and current at any arbitrary location on the transmission line that is,
 \begin{align*} 
-V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace,\\ 
-I(l) = \frac{V^+}{Z_0} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
+	V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace,\\ 
+	I(l) = \frac{V^+}{Z_0} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
 \end{align*}
 Complex Power at location $l$ is thus given as:
 \begin{dmath*}
-P(l) = \frac{1}{2} (V I^\ast) 
-= \frac{1}{2} \left(V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace \right) \times \left(\frac{V^+}{Z_0} e^{-j\beta l} \left\lbrace 1 - \Gamma_L e^{j2\beta l} \right\rbrace\right)
-=\frac{1}{2} \frac{{|V^+|}^2}{Z_0} \left( 1 + \Gamma_L e^{-j2\beta l}\right)\left(1 - \Gamma e^{j2\beta l}\right)
-= \frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left(1 - \Gamma_L e^{j2\beta l} + \Gamma_L e^{-j2\beta l} - {|\Gamma_L|^2}\right)
-=\frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left\lbrace 1 - {|\Gamma_L|}^2 - \Gamma_L \left(e^{j2\beta l} - e^{-j2\beta l}\right)\right\rbrace
+	P(l) = \frac{1}{2} (V I^\ast) 
+	= \frac{1}{2} \left(V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace \right) \times \left(\frac{V^+}{Z_0} e^{-j\beta l} \left\lbrace 1 - \Gamma_L e^{j2\beta l} \right\rbrace\right)
+	=\frac{1}{2} \frac{{|V^+|}^2}{Z_0} \left( 1 + \Gamma_L e^{-j2\beta l}\right)\left(1 - \Gamma e^{j2\beta l}\right)
+	= \frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left(1 - \Gamma_L e^{j2\beta l} + \Gamma_L e^{-j2\beta l} - {|\Gamma_L|^2}\right)
+	=\frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left\lbrace 1 - {|\Gamma_L|}^2 - \Gamma_L \left(e^{j2\beta l} - e^{-j2\beta l}\right)\right\rbrace
 \end{dmath*}
 Recall, \( \jmath2\sin\theta = {e}^{\jmath\theta} - {e}^{\jmath\theta}\), so,
 \begin{dmath} 
-P(l) = \frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left\lbrace 1 - {|\Gamma_L|}^2 - j2\Gamma_L \sin(2\beta l)\right\rbrace
-= \frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left\lbrace 1 - {|\Gamma_L|}^2 - \mathfrak{Im}\lbrace\Gamma_L{e}^{-j2\beta l}\rbrace\right\rbrace
+	P(l) = \frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left\lbrace 1 - {|\Gamma_L|}^2 - j2\Gamma_L \sin(2\beta l)\right\rbrace
+	= \frac{1}{2} \frac{{|V^+|}^2}{Z_0}\left\lbrace 1 - {|\Gamma_L|}^2 - \mathfrak{Im}\lbrace\Gamma_L{e}^{-j2\beta l}\rbrace\right\rbrace
 \end{dmath}
 Thus, given the complex power, the real part is $1 - {|\Gamma_L}|^2$ which is the resistive power, and the imaginary part is $ j2\Gamma_L \sin(2\beta l) = \mathfrak{Im}\lbrace\Gamma_L{e}^{-j2\beta l}\rbrace$ which is the reactive power.
 
 Therefore, at any location of the transmission line, the power is complex, the interesting thing to note is that the resistive power at any point is equal to the power which we earlier calculated that is delivered to the load end. So for a lossless line, the resistive power at any point along the line is the same as the power which is delivered to the load\footnote{
-This can be explained with the line of thought that the resistive power finally gets to the load if the line is lossless since there is no absorption of power at any point along the line and so all the resistive power gets to the load because the load is the part where you have resistive component and power can be absorbed in that location.
+	This can be explained with the line of thought that the resistive power finally gets to the load if the line is lossless since there is no absorption of power at any point along the line and so all the resistive power gets to the load because the load is the part where you have resistive component and power can be absorbed in that location.
 }. Hence at any point on the transmission line, power transfer of the resistive part is completely delivered to the load and as such the resistive power which is the actual power flow should be independent of any location on the line.
 
 However, the reactive power is a function of $l$, which shows the energy stored at different locations along the transmission line. Now we have two parts when we calculate the power on a transmission line. \emph{There is a resistive power which is a measure of power flow that ultimately gets delivered to the load and the reactive power which measures the amount of energy storage at different locations along the line and depends on the value of voltage and current at that location.} Recall that the voltage and current equations are standing waves and thus the energy stored also varies at different locations along the transmission line. Therefore, in conclusion, the reactive power will vary at different locations across the line while the resistive power which is the power delivered to the load will be independent of the location of the transmission line.
 \begin{exmp}
-\subsubsection*{Power Flow on a Lossless Line}
-A generator with voltage $V_g = 300\angle0^o$V and internal resistance, $Z_g = 50\varOmega$ is connected to a load, $Z_L = 75\varOmega$ through a 50-$\varOmega$ lossless transmission line of length $l = 0.15\lambda$.
-\begin{enumerate}[(a)]
-\item Compute the input impedance of the line at the generator, $Z_{in}$.
-\item Compute the time-average power delivered to the line, $P_{in}$.
-\item Compute the time-average power delivered to the load, $P_L$. How does $P_{in}$ compare to $P_L$? Explain.
-\end{enumerate}
-
-\subsubsection*{Solution}
-\begin{figure}[h]
-\centering
-\includegraphics[width=1.2\linewidth]{\pathtopartone/graphics/power_problem}
-\caption{Circuit Diagram of Worked example}
-\label{fig:powerproblem}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/power_problem2}
-\caption{Transformed Circuit Diagram of Worked example}
-\label{fig:powerproblem2}
-\end{figure}
-
-From the transmission line shown in figure~\ref{fig:powerproblem}, to find $Z_{in}$ we will use the impedance transformation relation in equation~\eqref{eqn:implossless} such that
-\begin{dmath*}
-Z_{in} = Z_0\left[\frac{Z_L\cos\beta l + jZ_0\sin\beta l}{Z_0\cos\beta l + jZ_L\sin\beta l} \right]
-= 50\left[\frac{75\cos(0.3\pi) + j50\sin(0.3\pi)}{50\cos(0.3\pi) + j75\cos(0.3\pi)} \right]\footnotemark
-= (41.25 - j16.35)\varOmega
-\end{dmath*}
-\footnotetext{
-$\beta l = \frac{2\pi}{\lambda}\times 0.15\lambda = 0.3\pi$
-}
-The time-average power delivered to the line is the power at point AA' in figure~\ref{fig:powerproblem} which is given as
-\begin{dmath*}
-P_{in} = \frac{1}{2}\mathfrak{Re}\left\lbrace V_{in}I_{in}^*\right\rbrace
-\end{dmath*}
-The voltage and current at point AA' can be found using the voltage and current variations in a lossless transmission line from equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} but $|V^+|$ is not known. Instead, we turn to some circuit laws and analyze the transformed circuit shown in figure~\ref{fig:powerproblem2}\footnote{This approach will be dealt with appropriately in \autoref{sec:evalvplus}}.
-
-Thus we can determine $V_{in}$ and $I_{in}$ from the circuit diagram is figure~\ref{fig:powerproblem2} as
-\begin{align*}
-I_{in} &= \frac{V_g}{Z_g + Z_{in}} 
-= \frac{300\angle0^o}{50 + (41.25 - j16.35)}\\
-&= 3.24\angle10.16^oA\\
-V_{in} &= I_{in}Z_{in} = 3.24\angle10.16^o(41.25 - j16.35)\\
-&= 143.6\angle-11.46^oV
-\end{align*}
-
-Thus, the power delivered to the line is
-\begin{dmath*}
-P_{in} = \frac{1}{2}\mathfrak{Re}\lbrace V_{in}I_{in}^\ast\rbrace
-= \frac{1}{2}\mathfrak{Re}\lbrace 143.6\angle-11.46^o\times3.24\angle-10.16^o\rbrace
-=\frac{143.6\times3.24}{2}\cos(21.62^o)
-= 216W
-\end{dmath*}
-
-Now, let us determine the power delivered to the load end, $P_L$, given as
-\begin{dmath*}
-P_L = \frac{1}{2}\mathfrak{Re}\lbrace V_L I_L^\ast\rbrace
-\end{dmath*}
-\emph{How do we determine $V_L$ and $I_L$?} We can determine $V_L$ and $I_L$ using equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} where $l = 0$ such that we get
-\begin{align*}
-V(0) &= V_L = V^+\lbrace1 + \Gamma_L\rbrace\\
-I(0) &= I_L = \frac{V^+}{Z_0}\lbrace1 + \Gamma_L\rbrace
-\end{align*}
-So we need to evaluate $V^+$ using the same voltage equation but with $l = L = 0.15\lambda$, that is
-\begin{align*}
-V_{in} &= V^+e^{j\beta l}\lbrace1 + \Gamma_Le^{-2j\beta l}\rbrace\\
-V^+ &= \frac{V_{in}}{e^{j\beta l}\left(1+\left(\dfrac{Z_L - Z_0}{Z_L + Z_0}\right)e^{-2j\beta l}\right)}\\
-&=\frac{143.6\angle-11.46^o}{e^{j0.3\pi}\left(1 +\left(\dfrac{75 - 50}{75 + 50}\right)e^{-j0.6\pi}\right)}\\
-&= \frac{143.6\angle-11.46^o}{e^{j0.3\pi}\left( 1+0.2e^{-j0.6\pi}\right)}\\
-&= 150\angle-54^oV
-\end{align*}
-Thus the values for $V_L$ and $I_L$ are
-\begin{align*}
-V_L &= V^+\lbrace1 + \Gamma_L\rbrace = 150\angle-54^o(1 + 0.2)\\
-&= 180\angle-54^o V\\
-I_L &= \frac{V^+}{Z_0}\lbrace1 + \Gamma_L\rbrace = \frac{150\angle-54^o}{50}(1 - 0.2)\\
-&= 2.4\angle-54^oA
-\end{align*}
-
-Now we determine the power delivered to the load which is
-\begin{dmath*}
-P_L = \frac{1}{2}\mathfrak{Re}\lbrace V_L I_L^\ast\rbrace
-= \frac{1}{2}\mathfrak{Re}\lbrace 180\angle-54^o\times 2.4\angle54^o\rbrace
-= 216W
-\end{dmath*}
-
-We can see that $P_{in} = P_L$ is expected because the line is lossless so the input power should equal the delivered power at the load point.
+	\subsubsection*{Power Flow on a Lossless Line}
+	A generator with voltage $V_g = 300\angle0^o$V and internal resistance, $Z_g = 50\varOmega$ is connected to a load, $Z_L = 75\varOmega$ through a 50-$\varOmega$ lossless transmission line of length $l = 0.15\lambda$.
+	\begin{enumerate}[(a)]
+		\item Compute the input impedance of the line at the generator, $Z_{in}$.
+		\item Compute the time-average power delivered to the line, $P_{in}$.
+		\item Compute the time-average power delivered to the load, $P_L$. How does $P_{in}$ compare to $P_L$? Explain.
+	\end{enumerate}
+	
+	\subsubsection*{Solution}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.2\linewidth]{graphics/power_problem}
+		\caption{Circuit Diagram of Worked example}
+		\label{fig:powerproblem}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\linewidth]{graphics/power_problem2}
+		\caption{Transformed Circuit Diagram of Worked example}
+		\label{fig:powerproblem2}
+	\end{figure}
+	
+	From the transmission line shown in figure~\ref{fig:powerproblem}, to find $Z_{in}$ we will use the impedance transformation relation in equation~\eqref{eqn:implossless} such that
+	\begin{dmath*}
+		Z_{in} = Z_0\left[\frac{Z_L\cos\beta l + jZ_0\sin\beta l}{Z_0\cos\beta l + jZ_L\sin\beta l} \right]
+		= 50\left[\frac{75\cos(0.3\pi) + j50\sin(0.3\pi)}{50\cos(0.3\pi) + j75\cos(0.3\pi)} \right]\footnotemark
+		= (41.25 - j16.35)\varOmega
+	\end{dmath*}
+	\footnotetext{
+		$\beta l = \frac{2\pi}{\lambda}\times 0.15\lambda = 0.3\pi$
+	}
+	The time-average power delivered to the line is the power at point AA' in figure~\ref{fig:powerproblem} which is given as
+	\begin{dmath*}
+		P_{in} = \frac{1}{2}\mathfrak{Re}\left\lbrace V_{in}I_{in}^*\right\rbrace
+	\end{dmath*}
+	The voltage and current at point AA' can be found using the voltage and current variations in a lossless transmission line from equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} but $|V^+|$ is not known. Instead, we turn to some circuit laws and analyze the transformed circuit shown in figure~\ref{fig:powerproblem2}\footnote{This approach will be dealt with appropriately in \autoref{sec:evalvplus}}.
+	
+	Thus we can determine $V_{in}$ and $I_{in}$ from the circuit diagram is figure~\ref{fig:powerproblem2} as
+	\begin{align*}
+		I_{in} &= \frac{V_g}{Z_g + Z_{in}} 
+		= \frac{300\angle0^o}{50 + (41.25 - j16.35)}\\
+		&= 3.24\angle10.16^oA\\
+		V_{in} &= I_{in}Z_{in} = 3.24\angle10.16^o(41.25 - j16.35)\\
+		&= 143.6\angle-11.46^oV
+	\end{align*}
+	
+	Thus, the power delivered to the line is
+	\begin{dmath*}
+		P_{in} = \frac{1}{2}\mathfrak{Re}\lbrace V_{in}I_{in}^\ast\rbrace
+		= \frac{1}{2}\mathfrak{Re}\lbrace 143.6\angle-11.46^o\times3.24\angle-10.16^o\rbrace
+		=\frac{143.6\times3.24}{2}\cos(21.62^o)
+		= 216W
+	\end{dmath*}
+	
+	Now, let us determine the power delivered to the load end, $P_L$, given as
+	\begin{dmath*}
+		P_L = \frac{1}{2}\mathfrak{Re}\lbrace V_L I_L^\ast\rbrace
+	\end{dmath*}
+	\emph{How do we determine $V_L$ and $I_L$?} We can determine $V_L$ and $I_L$ using equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} where $l = 0$ such that we get
+	\begin{align*}
+		V(0) &= V_L = V^+\lbrace1 + \Gamma_L\rbrace\\
+		I(0) &= I_L = \frac{V^+}{Z_0}\lbrace1 + \Gamma_L\rbrace
+	\end{align*}
+	So we need to evaluate $V^+$ using the same voltage equation but with $l = L = 0.15\lambda$, that is
+	\begin{align*}
+		V_{in} &= V^+e^{j\beta l}\lbrace1 + \Gamma_Le^{-2j\beta l}\rbrace\\
+		V^+ &= \frac{V_{in}}{e^{j\beta l}\left(1+\left(\dfrac{Z_L - Z_0}{Z_L + Z_0}\right)e^{-2j\beta l}\right)}\\
+		&=\frac{143.6\angle-11.46^o}{e^{j0.3\pi}\left(1 +\left(\dfrac{75 - 50}{75 + 50}\right)e^{-j0.6\pi}\right)}\\
+		&= \frac{143.6\angle-11.46^o}{e^{j0.3\pi}\left( 1+0.2e^{-j0.6\pi}\right)}\\
+		&= 150\angle-54^oV
+	\end{align*}
+	Thus the values for $V_L$ and $I_L$ are
+	\begin{align*}
+		V_L &= V^+\lbrace1 + \Gamma_L\rbrace = 150\angle-54^o(1 + 0.2)\\
+		&= 180\angle-54^o V\\
+		I_L &= \frac{V^+}{Z_0}\lbrace1 + \Gamma_L\rbrace = \frac{150\angle-54^o}{50}(1 - 0.2)\\
+		&= 2.4\angle-54^oA
+	\end{align*}
+	
+	Now we determine the power delivered to the load which is
+	\begin{dmath*}
+		P_L = \frac{1}{2}\mathfrak{Re}\lbrace V_L I_L^\ast\rbrace
+		= \frac{1}{2}\mathfrak{Re}\lbrace 180\angle-54^o\times 2.4\angle54^o\rbrace
+		= 216W
+	\end{dmath*}
+	
+	We can see that $P_{in} = P_L$ is expected because the line is lossless so the input power should equal the delivered power at the load point.
 \end{exmp}
 
 \section{Evaluation of $\mathbf{V^{+}}$}\label{sec:evalvplus}
@@ -319,102 +319,137 @@ So far, our transmission line analysis (voltage and current equations, impedance
 
 Considering the circuit in figure~\ref{fig:qwerrtt}, $Z_L$ is transformed to $Z^{'}_L$, from position BB' to AA'. $Z^{'}_L$ is the impedance of the load as seen by the generator end. With $Z_L$ transformed to $Z^{'}_L$, the whole circuit is reduced to a lumped circuit as shown in figure~\ref{fig:qwerrtt}.
 \begin{figure}[h]
-\centering
-\includegraphics[width=1.1\linewidth]{\pathtopartone/graphics/load_transformation}
-\caption{Transformation of load impedance from $Z_L$ to $Z_{L}^'$}
-\label{fig:qwerrtt}
+	\centering
+	\includegraphics[width=1.1\linewidth]{graphics/load_transformation}
+	\caption{Transformation of load impedance from $Z_L$ to $Z_{L}^'$}
+	\label{fig:qwerrtt}
 \end{figure}
 
 Considering the lumped circuit, the voltage and current equations are\footnote{
-The voltage and current relations take the limit as the size of the circuit tends to zero so it is valid for any arbitrary frequency.
+	The voltage and current relations take the limit as the size of the circuit tends to zero so it is valid for any arbitrary frequency.
 }
 \begin{align}
-V_A &= \frac{Z^'_L}{Z^{'}_L + Z_s} . V_s\label{eqn:transimpvoltage}\\
-I_A &= \frac{V_A}{Z^{'}_L}\label{eqn:transimpcurrent}
+	V_A &= \frac{Z^'_L}{Z^{'}_L + Z_s} . V_s\label{eqn:transimpvoltage}\\
+	I_A &= \frac{V_A}{Z^{'}_L}\label{eqn:transimpcurrent}
 \end{align} 
 We can then determine the voltage and current at the transformed location using the transmission line equations, such that,
 \begin{align*} 
-V_A &= V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace\\
-I_A &= I(l) = \frac{V^+}{Z_0} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
+	V_A &= V(l) = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace\\
+	I_A &= I(l) = \frac{V^+}{Z_0} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
 \end{align*}
 So we know now the value of $V_A$ and $I_A$ from the lumped element side of view and the transmission line element side of view. We can equate the two to get,
 \begin{equation} 
-V_A = \frac{Z^{'}_L}{Z^{'}_L + Z_s} . V_s = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace\label{eqn:evaluatev+voltage}
+	V_A = \frac{Z^{'}_L}{Z^{'}_L + Z_s} . V_s = V^+ e^{j\beta l} \left\lbrace 1 + \Gamma_L e^{-j2\beta l} \right\rbrace\label{eqn:evaluatev+voltage}
 \end{equation}
 \begin{equation}
-I_A = \frac{V_A}{Z^{'}_L} = I(l) = \frac{V^+}{Z_0} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
-\label{eqn:evaluatev+current}
+	I_A = \frac{V_A}{Z^{'}_L} = I(l) = \frac{V^+}{Z_0} e^{j\beta l} \left\lbrace 1 - \Gamma_L e^{-j2\beta l} \right\rbrace
+	\label{eqn:evaluatev+current}
 \end{equation}
 So solving equation~\ref{eqn:evaluatev+current} making $V^{+}$ the subject of the formula, we get the expression of $V^+$ as follows. 
 \begin{equation} 
-V^+ = \frac{Z^{'}_L V_s e^{-j\beta l}}{(Z_S + Z^{'}_L)(1 + \Gamma_L e^{-j2\beta l })}, 
+	V^+ = \frac{Z^{'}_L V_s e^{-j\beta l}}{(Z_S + Z^{'}_L)(1 + \Gamma_L e^{-j2\beta l })}, 
 \end{equation}
 $\alpha, \beta, l, \Gamma_L$ and $Z_0$ are all known values, so now we have a known value for $V^+$.
 
 From here $V^+$ can be determined and then substituted into the power equation and so power delivered to the load can be calculated or power at any point along the line. This is a complete solution to voltage and current on the transmission line.
 
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \subsection*{Summary}
-Table~\ref{tab:transparams} shows the transmission line parameters for lossless and low-loss conditions that have been discussed and derived.
-\begin{table}[h]
-\caption[short]{Transmission line parameters for lossless and low-loss conditions}
-\label{tab:transparams}
-\begin{tabular}{l c l}
-{\bf Lossless}&  	$\leftrightarrow$ & {\bf Low-loss} \\ 
-$\alpha$ = 0 & & $\alpha = \dfrac{1}{2}R\sqrt{\frac{C}{L}} + \dfrac{1}{2}G\sqrt{\frac{C}{L}}$\\
-$\beta = \omega\sqrt{LC}$ & & $\beta = \omega\sqrt{LC}$\\
-$\gamma = j\beta$ & & $\gamma = \alpha + j\beta$\\
-$Z_0 = \sqrt{\frac{L}{C}}$ = real & & 	$Z_0 = \sqrt{\frac{L}{C}}\left(1 - j\frac{R}{2\omega L} - j\frac{G}{2\omega C}\right)$
-\end{tabular} 
-\end{table} 
 
-Other parameters that are derived are as follows and they apply equally to lossless and low-loss conditions.
+The table below shows the transmission line parameters for lossless and low-loss conditions that have been discussed and derived.
+
+\begin{minipage}{\textwidth}
+    \centering
+    \label{tab:transparams}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Lossless} & \textbf{Lowloss} \\ \hline
+        $\alpha = 0$ & $\alpha = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{C}{L}}$\\
+        $\beta = \omega\sqrt{LC}$ & $\beta = \omega\sqrt{LC}$\\
+        $\gamma = j\beta$ & $\gamma = \alpha + j\beta$\\
+        $Z_0 = \sqrt{\frac{L}{C}} =$ real & $Z_0 = \sqrt{\frac{L}{C}}\left(1 - j\frac{R}{2\omega L} - j\frac{G}{2\omega C}\right)$ \\
+        \hline
+    \end{tabular}
+\end{minipage}
+
 \begin{align*}
-\Gamma_L = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{\bar{Z_L} - 1}{\bar{Z_L} + 1} = \frac{V^-}{V^+}
+	\Gamma_L = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{\bar{Z_L} - 1}{\bar{Z_L} + 1} = \frac{V^-}{V^+}
 \end{align*}
 \begin{align*}
-\text{VSWR, }\rho = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
+	\text{VSWR, }\rho = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
 \end{align*}
 \begin{align*}
-R_\max &= Z_0 \left( \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}\right) = Z_0 \rho\\
-Z_\max &= \frac{|V_\max|}{|I_\min|}
+	R_\max &= Z_0 \left( \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}\right) = Z_0 \rho\\
+	Z_\max &= \frac{|V_\max|}{|I_\min|}
 \end{align*}
 \begin{align*}
-R_\min &= Z_0 \left(\frac{1 - |\Gamma_L|}{1 + |\Gamma_L|}\right) = \frac{Z_0}{\rho}\\
-Z_\min &= \frac{|V_\min|}{|I_\max|}
+	R_\min &= Z_0 \left(\frac{1 - |\Gamma_L|}{1 + |\Gamma_L|}\right) = \frac{Z_0}{\rho}\\
+	Z_\min &= \frac{|V_\min|}{|I_\max|}
 \end{align*}
 
 For Impedance transformation, we have
 \begin{align*}
-Z(l) &= Z_0\left\lbrace\frac{Z_L\cos\beta l + jZ_0\sin\beta l}{jZ_0\sin\beta l + Z_L\cos\beta l}\right\rbrace\\ 
-&= Z_0\left\lbrace\frac{Z_L\cosh\gamma l + Z_0\sinh\gamma l}{Z_0\cosh\gamma l + Z_L\sinh\gamma l}\right\rbrace
+	Z(l) &= Z_0\left\lbrace\frac{Z_L\cos\beta l + jZ_0\sin\beta l}{jZ_0\sin\beta l + Z_L\cos\beta l}\right\rbrace\\ 
+	&= Z_0\left\lbrace\frac{Z_L\cosh\gamma l + Z_0\sinh\gamma l}{Z_0\cosh\gamma l + Z_L\sinh\gamma l}\right\rbrace
 \end{align*}
 
 Lastly, the power flow equations
 \begin{dmath*}
-P_L = \frac{1}{2}\frac{|V^+|}{Z_0}\lbrace 1 - |\Gamma_L|^2\rbrace\quad\text{Real power}
+	P_L = \frac{1}{2}\frac{|V^+|}{Z_0}\lbrace 1 - |\Gamma_L|^2\rbrace\quad\text{Real power}
 \end{dmath*}
 \begin{dmath*}
-P(l) = \frac{1}{2}\frac{|V^+|}{Z_0}\lbrace 1 - |\Gamma_L|^2\rbrace - \mathfrak{Im}\lbrace \Gamma_L e^{- j2\beta l}\rbrace\quad\text{Complex power}
+	P(l) = \frac{1}{2}\frac{|V^+|}{Z_0}\lbrace 1 - |\Gamma_L|^2\rbrace - \mathfrak{Im}\lbrace \Gamma_L e^{- j2\beta l}\rbrace\quad\text{Complex power}
 \end{dmath*}
 \[
 V^+ = \frac{Z_L^{'}V_s e^{-j\beta l}}{(Z_s + Z_L^{'})(1 + \Gamma_L e^{-j2\beta l})}
 \]
+\end{mdframed}
 
+
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section*{Exercises}
 \begin{ExerciseList}
-\Exercise[label={ex61}]
-A 50$\Omega$ lossless transmission line is connected to a load of $50 + j50\Omega$. The maximum voltage measured on the line is 50V. Find the power delivered to the load and the peak voltage at the load end of the line.
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/antenna_power_problem}
-\caption{Antenna configuration for Ex.~\ref{ex62}}
-\label{fig:antennapowerproblem}
-\end{figure}
-\Answer[ref={ex61}]
-(a) $P_L = 9.55W$ (b) $|V_L| = 30.9$V
-
-\Exercise[label={ex62}]
-If the two-antenna configuration shown in figure~\ref{fig:antennapowerproblem} is connected to a generator with $V_g = 250\angle0^o$ and internal resistance $Z_g = 50\varOmega$, how much average power is delivered to each antenna?
-\Answer[ref={ex62}]
-The power delivered to each antenna is 76.68W
+	\Exercise[label={ex61}]
+	A 50$\Omega$ lossless transmission line is connected to a load of $50 + j50\Omega$. The maximum voltage measured on the line is 50V. Find the power delivered to the load and the peak voltage at the load end of the line.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\linewidth]{graphics/antenna_power_problem}
+		\caption{Antenna configuration for Ex.~\ref{ex62}}
+		\label{fig:antennapowerproblem}
+	\end{figure}
+	\Answer[ref={ex61}]
+	(a) $P_L = 9.55W$ (b) $|V_L| = 30.9$V
+	
+	\Exercise[label={ex62}]
+	If the two-antenna configuration shown in figure~\ref{fig:antennapowerproblem} is connected to a generator with $V_g = 250\angle0^o$ and internal resistance $Z_g = 50\varOmega$, how much average power is delivered to each antenna?
+	\Answer[ref={ex62}]
+	The power delivered to each antenna is 76.68W
+	
+	% \Exercise[label={ex63}]
+	% How does the presence of low losses in a transmission line impact the overall efficiency of power transfer?
+	
+	% \Exercise[label={ex64}]
+	% Explain the concept of attenuation in a low-loss transmission line and its significance in power transmission.
+	
+	% \Exercise[label={ex65}]
+	% In a low-loss transmission line, how do conductor materials influence power transfer efficiency?
+	
+	% \Exercise[label={ex66}]
+	% Calculate the power loss in a low-loss transmission line with a length of 150 km, a current of 1000 A, and a resistance of 0.1 ohms/km.
+	
+	% \Exercise[label={ex67}]
+	% Discuss the role of dielectric materials in minimizing losses and improving power transfer in low-loss transmission lines.
+	
+	% \Exercise[label={ex68}]
+	% How does skin effect influence power transfer efficiency in low-loss transmission lines at high frequencies?
+	
+	\Exercise[label={ex69}]
+	Explain the impact of frequency on power transfer capability in a low-loss transmission line.
+	
+	\Exercise[label={ex70}]
+	Calculate the voltage regulation for a low-loss transmission line with a sending-end voltage of 220 kV and a receiving-end voltage of 210 kV.
+ 
 \end{ExerciseList}
+\end{mdframed}

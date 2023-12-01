@@ -1,7 +1,7 @@
 \section{Concept of constant VSWR circle in lossless transmission line analysis}\label{lec:lec8}
-Previously, we developed a graphical tool by transforming the complex impedance of a transmission line into the gamma plane called the Smith chart. This we have seen as the superimposition of circles of constant resistance on the circles of constant reactance masked within the limit circle $|\Gamma| \leq 1$. Before we go into the use of the Smith chart for transmission line calculations, we develop one more set of circles called the constant VSWR circles and then superimpose it on the Smith chart.
+Previously, we developed a graphical tool by transforming the complex impedance of a transmission line into the gamma plane called the \textbf{Smith chart}. This we have seen as the superimposition of; circles of constant resistance on the circles of constant reactance, masked within the limit circle $|\Gamma| \leq 1$. Before we go into the use of the Smith chart for transmission line calculations, we develop one more set of circles called the constant VSWR circles \index{VSWR circles} and then superimpose it on the Smith chart.
 
-We know that:
+We know that for a lossless transmission line for which attenuation constant is zero,
 \begin{equation*}
 \Gamma(l) =\Gamma_L e^{-j2\beta{l}}
 \end{equation*}
@@ -21,12 +21,12 @@ VSWR, \rho = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
 \end{equation}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/lkjhgryn}
+\includegraphics[width=0.7\linewidth]{graphics/lkjhgryn}
 \caption{Constant VSWR Circle}
 \label{fig:lkjhgryn}
 \end{figure}
 
-Since $|\Gamma_L|$ is the same at any point on the circle, then the VSWR is the same for all points on the circle, hence we call the circle a constant VSWR circle. 
+Since $|\Gamma_L|$ is the same at any point on the circle, then the VSWR is the same for all points on the circle, hence we call the circle a \textbf{constant VSWR circle}. 
 % Note that while solving transmission line problems, we have to draw constant VSWR circles on the Smith chart so the Smith chart readily gives the constant resistance and reactance circles in the limit circle of $|\Gamma_L|\leq 1$.
 One should always note that the centre of all VSWR circles is the same as that of the origin of the complex gamma plane and the magnitude of the reflection coefficient is always less or equal to 1. A larger radius of $|\Gamma_L|$ gives more reflection coefficient with a lower impedance match and a smaller radius of $|\Gamma_L|$ gives a smaller magnitude of reflection coefficient and a better impedance match (see figure~\ref{fig:poiuyfd}).
 
@@ -35,15 +35,15 @@ When we say that we have better impedance matching on the Smith chart, visually 
 With the understanding of superimposing the constant VSWR circle on the Smith chart, we can therefore solve the transmission line problem.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.57\linewidth]{\pathtopartone/graphics/poiuyfd}
+\includegraphics[width=0.57\linewidth]{graphics/poiuyfd}
 \caption{Impedance matching with different constant VSWR circles}
 \label{fig:poiuyfd}
 \end{figure}
 
 \section{Transmission Line Analysis using Admittance}
-However, as we have said, you may have connections in transmission lines that are in the form of parallel connections and we know that from circuit analysis, anywhere we have parallel connections, it is easier to deal with admittances rather than impedances. Before now, we have been discussing load impedances and load characteristics impedance of transmission lines. However, if we have to make parallel connections on the transmission line, we represent the load as admittances and characteristics admittance before we carry out the analysis on the Smith chart. 
+However, as we have said, you may have connections in transmission lines that are in the form of parallel connections and we know that from circuit analysis, anywhere we have parallel connections, it is easier to deal with admittances rather than impedances. Before now, we have been discussing load impedances and load characteristics impedance of transmission lines. However, if we have to make parallel connections on the transmission line, we represent the load as admittances and characteristics admittance \index{characteristics admittance} before we carry out the analysis on the Smith chart. 
 
-Thus, in this section, we will determine how the Smith chart is used when we compute in terms of admittances. Since the Smith chart gives the normalized impedances of the transmission line, the same thing will be derived for admittances so we shall first define the normalized admittance of the transmission line and for that, we would require what is called the \emph{characteristic admittance}\index{characteristics admittance} of the line. The characteristic admittance is given in equation~\eqref{eqn:characteristicsadmit}
+Thus, in this section, we will determine how the Smith chart is used when we compute in terms of admittances. Since the Smith chart gives the normalized impedances of the transmission line, the same thing will be derived for admittances so we shall first define the normalized admittance of the transmission line and for that, we would require what is called the \emph{characteristic admittance}\index{characteristics admittance} of the line. The characteristic admittance \index{The characteristic admittance} is given in equation~\eqref{eqn:characteristicsadmit}
 \begin{equation}
 Y_0 = \frac{1}{Z_0}\label{eqn:characteristicsadmit}
 \end{equation}
@@ -53,9 +53,9 @@ Then, normalizing the admittance would yield
 \end{align*}
 The reflection co-efficient as derived in equation~\eqref{eqn:refcoefficientfromload07} is given as
 \begin{equation*}
-\Gamma = \frac{Z - Z_0}{Z + Z_0} 
+\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} 
 \end{equation*}
-To determine the reflection coefficient in terms of admittance we replace the impedance $Z$ and characteristics impedance are then expressed as the inverse of admittance $\frac{1}{Y}$ and inverse of the characteristics admittance $\frac{1}{Y_0}$ respectively.
+To determine the reflection coefficient in terms of admittance we replace the impedance $Z$ and characteristics impedance are then expressed as the inverse of admittance $\frac{1}{Y}$ and inverse of the characteristics admittance \index{characteristics admittance} $\frac{1}{Y_0}$ respectively.
 \begin{equation*}
 \Gamma = \frac{\frac{1}{Y} - \frac{1}{Y_0}}{\frac{1}{Y} + \frac{1}{Y_0}}
 \end{equation*}
@@ -71,12 +71,12 @@ As -1 is a phase change of $\pi, e^{j\pi} = \cos\pi + j\sin\pi = -1$
 \begin{equation}
 \Gamma = \frac{\bar{Y} - 1}{\bar{Y} + 1}e^{j\pi}
 \end{equation}
-So the reflection coefficient written in terms of normalized admittances is the same as the reflection coefficient written in terms of normalized impedance except for the 180\textdegree\; phase change.
+So the reflection coefficient written in terms of normalized admittances \index{normalized admittances} is the same as the reflection coefficient written in terms of normalized impedance except for the 180\textdegree\; phase change brought in by $e^{jn}$
 
 This implies that the same value is derived for the reflection coefficient when calculated using the normalized impedance or admittance except there is a phase shift of 180\textdegree\; that would be experienced on the transmission line. In other words, on the complex gamma plane of the Smith chart, the 180\textdegree\; phase shift will correspond to a rotation of 180\textdegree\; (see figure~\ref{fig:zstyuiou}). Essentially, the normalized impedance and admittance can be calculated in the same way except when carrying out calculations for normalized admittances, there is a rotation of 180\textdegree\; on the complex gamma plane otherwise, all other values and parameters remain unchanged.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{\pathtopartone/graphics/zstyuiou}
+\includegraphics[width=0.6\linewidth]{graphics/zstyuiou}
 \caption{Impedance equivalent of Admittance on the gamma plane}
 \label{fig:zstyuiou}
 \end{figure}
@@ -88,10 +88,10 @@ Hence as far as the constant VSWR circles are concerned, any point on the Smith 
 \bar{Y}=\frac{G + jB}{Y_0} = g + jb
 = \text{conductance} + j (\text{susceptance})
 \end{dmath*}
-If we interchange $r$ with $g$ and $x$ with $b$, then the circles through the point on the constant VSWR circle will be the \textbf{circle of constant conductance} and the \textbf{circle of constant susceptance} which are similar to the circle of constant resistance and circle of constant reactance except that they are rotated by 180\textdegree\;. This implies that our analysis with admittances will resemble one where every point on the Smith chart is flipped and so the clustered end goes to the left-hand side as shown in figure~\ref{fig:invertedsmithchart}.
+If we interchange \textbf{r} with \textbf{g} and \textbf{x}with \textbf{b}, then the circles through the point on the constant VSWR circle will be the \textbf{circle of constant conductance} and the \textbf{circle of constant susceptance} which are similar to the circle of constant resistance and circle of constant reactance except that they are rotated by 180\textdegree\;. This implies that our analysis with admittances will resemble one where every point on the Smith chart is flipped and so the clustered end goes to the left-hand side as shown in figure~\ref{fig:invertedsmithchart}.
 \begin{figure}[h]
 \centering
-\includegraphics*[width=0.7\linewidth]{\pathtopartone/graphics/inverted_smith_chart}
+\includegraphics*[width=0.7\linewidth]{graphics/inverted_smith_chart}
 \caption{Inverted Smith chart}\label{fig:invertedsmithchart}
 \end{figure}
 
@@ -100,7 +100,7 @@ Alternatively, we can keep the Smith chart orientation the same and rotate the c
 Hence, as long we are dealing with a normalized quantity, the impedance and admittance can be treated exactly the same way on the Smith chart. However, the normalized values of $g$ and $r$ or $b$ and $x$ have different meanings physically. But do they represent the same physical conditions? The answer is NO! For example, $r = 0; x = 0$, corresponds to a short circuit condition\textemdash\;the impedance is zero\textemdash\;however, if we take a normalized value of admittance with $g=0, b=0$ which represents admittance equal to zero, it is not a short circuit but an open circuit condition on the line. Therefore, the normalized values of impedances and admittances can be treated exactly the same way in calculations but not the same interpretations for the physical conditions. In summary, mathematically, $g = 0\quad, b = 0\Longrightarrow$ open circuit and $g = \infty, b = \infty \Longrightarrow$ short circuit. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/jnbkvfld}
+\includegraphics[width=1\linewidth]{graphics/jnbkvfld}
 \caption{Physical variation of impedance and admittance}
 \label{fig:jnbkvfld}
 \end{figure}
@@ -118,7 +118,7 @@ Let us consider the simplest problem we can think of for the transmission line. 
 \item Determine this point on the Smith chart, that is, $r+jx$ by identifying the constant resistance and reactance circle with the value $r$ and $x$ respectively and the point of intersection (see figure~\ref{fig:lfds}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/lfds}
+\includegraphics[width=0.7\linewidth]{graphics/lfds}
 \caption{Point of intersection of circles of constant resistance and reactance}
 \label{fig:lfds}
 \end{figure}
@@ -132,7 +132,7 @@ and phase angle, $\theta_L$.
 Similarly, for the admittance, let $\bar{Y} = g + jb$. We determine the point of intersection on the Smith chart the same way as that of impedance, however, to find out the complex reflection coefficient, maintaining the orientation, then the positive real axis is to the left. So the phase angle will be measured from the positive real axis as shown in figure~\ref{fig:kjhgfds}. We summarize the steps as follows.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/KJHGFDS}
+\includegraphics[width=0.7\linewidth]{graphics/KJHGFDS}
 \caption{Determining the reflection coefficient for admittance on a Smith chart}
 \label{fig:kjhgfds}
 \end{figure}
@@ -155,11 +155,11 @@ In another simple transmission line problem, let us suppose the magnitude of the
 \item Multiply the normalized impedance or admittance by the characteristic impedance or admittance to get the load impedance or admittance.
 \end{enumerate}
 
-\subsection{Impedance Transformation}
-A common problem in transmission lines is impedance transformation. We have shown how it is done analytically but \emph{how can we perform impedance transformation graphically?} 
+\subsection{Impedance Transformation\index{Impedance Transformation}}
+A common problem in transmission lines is impedance transformation. We have shown how it is done analytically but \emph{how can we perform impedance transformation} \index{impedance transformation} graphically? 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/wertuyuk}
+\includegraphics[width=0.7\linewidth]{graphics/wertuyuk}
 \caption{Tranformed impedance at distance $l$ from the load}
 \label{fig:wertuyuk}
 \end{figure}
@@ -167,7 +167,7 @@ A common problem in transmission lines is impedance transformation. We have show
 If the load impedance is given as shown in figure~\ref{fig:wertuyuk} and we are asked to find the reflection coefficient and load impedance at another point $l$ on the transmission line, that is, given $Z_L$ or $Y_L$, we are to find $Z_L$ or $Y_L$ at distance $l$ from the load. We will use a hypothetical sketch of the Smith chart shown in figure~\ref{fig:uytrewsxcvbj}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/uytrewsxcvbj}
+\includegraphics[width=0.9\linewidth]{graphics/uytrewsxcvbj}
 \caption{Points along the constant r and x Circles}
 \label{fig:uytrewsxcvbj}
 \end{figure}
@@ -185,7 +185,7 @@ The above analysis makes sense since one characteristic of the transmission line
 }. So we determine the corresponding $x\lambda$ for the value of $l$ moving clockwise along the VSWR from the point $\bar{Z}_L$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/mjhtre}
+\includegraphics[width=0.7\linewidth]{graphics/mjhtre}
 \caption{Tranformed impedance at distance $l$ from the load}
 \label{fig:mjhtre}
 \end{figure}
@@ -193,7 +193,7 @@ The above analysis makes sense since one characteristic of the transmission line
 \item Mark the new point on the Smith chart and determine the magnitude of the reflection coefficient and phase angle as shown in figure~\ref{fig:uyhbgjvkclxse} or the circle of constant resistance and circle of constant reactance to determine the normalized impedance at $l$, that is, $\bar{Z}_{l} = r + jx$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/uyhbgjvkclxse}
+\includegraphics[width=0.7\linewidth]{graphics/uyhbgjvkclxse}
 \caption{New phase angle after rotation}
 \label{fig:uyhbgjvkclxse}
 \end{figure}
@@ -206,7 +206,7 @@ A more general overview of a transmission problem is one where the impedance is 
 For admittance calculations, the same steps apply except in the sense of the position of the positive real axis (see figure~\ref{fig:dfyui}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/dfyui}
+\includegraphics[width=0.7\linewidth]{graphics/dfyui}
 \caption{Phase angle measurement with admittance Smith chart}
 \label{fig:dfyui}
 \end{figure}
@@ -222,23 +222,23 @@ and
 \begin{equation}
 \bar{R}_\min = r_\min = \frac{1}{\rho}
 \end{equation}
-Therefore, the maximum normalized resistance, $r_\max$ gives the VSWR, $\rho$. Similarly, on the left side of the VSWR circle on the Smith chart, we have $r_\min$. Hence $r_\min = \frac{1}{\rho}$. Thus, \emph{how do we determine the VSWR graphically?} On the real axis, we have only resistance and no reactance so points of intersection of the constant VSWR circle with the real axis give the maximum and minimum normalized resistance (see figure~\ref{fig:oijhgfdsa}). The reason why we call it the constant VSWR circle is that as determined in equation~\eqref{eqn:vswr}, it is given as $\frac{1 + |\Gamma|}{1 - |\Gamma|}$ which is constant for a lossless transmission line and these values of $r_\max$ and $r_\min$ can easily be deduced from the VSWR circles without a need to calculate. The VSWR is taken as the ratio of maximum impedance on the line to characteristics impedance.
+Therefore, the maximum normalized resistance maximum normalized resistance \index{maximum normalized resistance}, $r_\max$ gives the VSWR, $\rho$. Similarly, on the left side of the VSWR circle on the Smith chart, we have $r_\min$. Hence $r_\min = \frac{1}{\rho}$. Thus, \emph{how do we determine the VSWR graphically?} On the real axis, we have only resistance and no reactance so points of intersection of the constant VSWR circle with the real axis give the maximum and minimum normalized resistance (see figure~\ref{fig:oijhgfdsa}). The reason why we call it the constant VSWR circle is that as determined in equation~\eqref{eqn:vswr}, it is given as $\frac{1 + |\Gamma|}{1 - |\Gamma|}$ which is constant for a lossless transmission line and these values of $r_\max$ and $r_\min$ can easily be deduced from the VSWR circles without a need to calculate. The VSWR is taken as the ratio of maximum impedance on the line to characteristics impedance.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/oijhgfdsa}
+\includegraphics[width=0.7\linewidth]{graphics/oijhgfdsa}
 \caption{Maximum and Minimum Points of Resistance}
 \label{fig:oijhgfdsa}
 \end{figure}
 
-Hence, the maximum value of the normalized resistance gives VSWR. The maximum value of resistance in terms of normalized quantity is seen when the VSWR circle intersects the real axis on the right side. The rightmost side corresponds to the impedance which is $r_\max$ and the reactance for that is zero\textemdash\;$r_\max$ is nothing but $\rho$. Similarly, the minimum value which we see on the transmission line is $r_\min = \frac{1}{\rho}$. The minimum resistance which corresponds to the leftmost intercept on the real axis gives $\frac{1}{\rho}$. Thus once the load impedance or any other impedance is marked on the Smith chart and the constant VSWR circle is drawn, the calculation of the VSWR is straightforward same as the reflection coefficient and transformed/normalized impedance. It is just a matter of plotting and reading different values on a Smith chart.
+Hence, the maximum value of the normalized resistance gives VSWR. The maximum value of resistance \index{maximum value of resistance} in terms of normalized quantity is seen when the VSWR circle intersects the real axis on the right side. The rightmost side corresponds to the impedance which is $r_\max$ and the reactance for that is zero\textemdash\;$r_\max$ is nothing but $\rho$. Similarly, the minimum value which we see on the transmission line is $r_\min = \frac{1}{\rho}$. The minimum resistance which corresponds to the leftmost intercept on the real axis gives $\frac{1}{\rho}$. Thus once the load impedance or any other impedance is marked on the Smith chart and the constant VSWR circle is drawn, the calculation of the VSWR is straightforward same as the reflection coefficient and transformed/normalized impedance. It is just a matter of plotting and reading different values on a Smith chart.
 
-Next is to find out the locations of the minimum and maximum voltage and current on the transmission line. 
+Next is to find out the locations of the minimum and maximum voltage and current \index{minimum and maximum voltage and current} on the transmission line. 
 
-\subsection{Location of the minimum and maximum voltage and current}
-Suppose we want to find out the distance of current or voltage maximum at the load end of the transmission line. From our knowledge of transmission line, at the point of maximum voltage, we experience minimum current which gives $R_\max$ then at minimum voltage, we experience maximum current which gives $R_\min$ hence $R_\max$ corresponds to $V_\max$, $I_\min$ and $R_\min$ corresponds to $V_\min$, $I_\max$. To find out these locations from the load, we move from point, $Z_L$ to $r_\max$ and $r_\min$ as shown in figure~\ref{fig:lkjtresx}. The corresponding clockwise angles, $\theta_\max$ and $\theta_\min$, covered indicate the distances $l_\max$ and $l_\min$ towards the generator.
+\subsection{Location of the minimum and maximum voltage and current the minimum and maximum voltage and current \index{the minimum and maximum voltage and current}}
+Suppose we want to find out the distance of current or voltage maximum\index{voltage maximum} at the load end of the transmission line. From our knowledge of transmission line, at the point of maximum voltage, we experience minimum current which gives $R_\max$ then at minimum voltage\index{minimum voltage}, we experience maximum current which gives $R_\min$ hence $R_\max$ corresponds to $V_\max$, $I_\min$ and $R_\min$ corresponds to $V_\min$, $I_\max$. To find out these locations from the load, we move from point, $Z_L$ to $r_\max$ and $r_\min$ as shown in figure~\ref{fig:lkjtresx}. The corresponding clockwise angles, $\theta_\max$ and $\theta_\min$, covered indicate the distances $l_\max$ and $l_\min$ towards the generator.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/lkjtresx}
+\includegraphics[width=0.7\linewidth]{graphics/lkjtresx}
 \caption{Location of the maximum and minimum values of voltage and current}
 \label{fig:lkjtresx}
 \end{figure}
@@ -258,7 +258,7 @@ l = \frac{\theta_\min}{2\beta}
 \end{dmath}
 
 \begin{exmp}\label{exmp:locatepoints}
-\subsubsection*{Locate the points on the Smith chart}
+\subsubsection*{Location of points on the Smith chart}
 Locate the following points on the Smith chart (Take characteristic impedance, $Z_{0}$ = 50$\Omega$).
 
 \begin{enumerate}[(a)]
@@ -284,15 +284,15 @@ All impedances seen on the Smith chart are normalized impedances. Therefore, for
 &=0-j1.6
 \end{align*}
 
-To locate point A on the Smith chart, we first identify the constant resistance circle of $r = 1.0$. It is the circle that passes through the centre of the Smith chart from the right-hand side (see figure~\ref{fig:workedexample1}). Next, we identify the constant reactance circle of $x = 1.5$. Recall that the circles above the real axis passing through the centre are the inductive reactance, while the circles below the line are the capacitive reactance. Since the value $x = 1.5$ is positive, it should be the constant inductive reactance circle. The point of intersection of these circles represents the normalized impedance, A, $1 + j1.5$. The same steps apply when identifying points B and C on the Smith chart.
+To locate point A on the Smith chart, we first identify the \textbf{constant resistance circle} of $r = 1.0$. It is the circle that passes through the centre of the Smith chart from the right-hand side (see figure~\ref{fig:workedexample1}). Next, we identify the \textbf{constant reactance circle} of $x = 1.5$. Recall that the circles above the real axis passing through the centre are the \textbf{inductive reactance}, while the circles below the line are the \textbf{capacitive reactance}. Since the value $x = 1.5$ is positive, it should be the constant inductive reactance circle. The point of intersection of these circles represents the normalized impedance, $\bar{A}$ =  $1 + j1.5$. The same steps apply when identifying points B and C on the Smith chart.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{\pathtopartone/graphics/"Smith chart"}
+\includegraphics[width=1\linewidth]{graphics/"Smith chart"}
 \caption{Worked Example}
 \label{fig:workedexample1}
 \end{figure}
 
-To locate the point in (d) which is the reflection coefficient, the approach is quite different. First, we measure the length of the diameter of the constant resistance circle $r = 1.0$ and record its value. In our case, we measured $7.6cm$. Thus we can determine the radius of a reflection coefficient of magnitude, $0.3$, that is, by multiplying the length, $7.cm$ with the value of the reflection coefficient which is $0.3$, we will get a value, $2.28cm$. 
+To locate the point in (d) which is the reflection coefficient, the approach is quite different. First, we measure the length of the diameter of the constant resistance circle $r = 1.0$ and record its value. In our case, we measured $7.6cm$. Thus we can determine the radius of a reflection coefficient of magnitude, $0.3$, that is, by multiplying the length, $7.6cm$ with the value of the reflection coefficient which is $0.3$, we will get a value, $2.28cm$. 
 
 Next, we draw a circle of radius $2.28cm$ from the origin on the Smith chart (see figure~\ref{fig:workedexample1}). Note that the degree of rotation (circumference of the gamma plane\textemdash limit circle) is calibrated in both degrees and distance. To locate the corresponding phase, we look along the circumference showing \textquotedblleft ANGLE OF REFLECTION COEFFICIENT IN DEGREES\textquotedblright\; we will locate the angle 60\textdegree\; anticlockwise. Then draw a straight line through the centre of the plane to the located angle 60\textdegree\; on the Smith chart. The point of intersection of the circle and the line is the point, $\Gamma = 0.3\angle60^o$ on the Smith chart (see figure~\ref{fig:workedexample1}).
 
@@ -306,6 +306,8 @@ R_\min &= \frac{r_\min}{Z_0} = 0.75 \times 50\\
 \end{align*}
 \end{exmp}
 
+\definecolor{lightblue}{RGB}{173,216,230}
+\begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex81}] Locate the following points on the Smith chart for a 70-$\varOmega$ high frequency lossless line.
@@ -317,3 +319,4 @@ R_\min &= \frac{r_\min}{Z_0} = 0.75 \times 50\\
 \Answer[ref={ex81}]
 solution for exercise~\ref{ex81}
 \end{ExerciseList}
+\end{mdframed}
