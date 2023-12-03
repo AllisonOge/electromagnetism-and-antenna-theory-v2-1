@@ -1,13 +1,4 @@
-% \chapter{MAXIMUM POWER TRANSFER AND MATCHED CONDITION}
-
-
-% \definecolor{lightblue}{RGB}{173,216,230}
-% \begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
-% \section{Objectives}
-% At the end of this chapter, you should be able;
-% \begin{enumerate}[(i)]
-% \end{enumerate}
-% \end{mdframed}
+Our intention is always to deliver maximum energy to the load, we, therefore, want the reflection coefficient in Equation~\eqref{eqn:reflectioncoefficientatload} to be as small as possible. So we shall find the condition to deliver maximum power to the load i.e. no reflection on the transmission line.
 
 \section{Matched Condition of the Transmission Line}\label{lec:lec4}
 Equation~\eqref{eqn:reflectioncoefficientatload} can be further expressed as
@@ -15,17 +6,17 @@ Equation~\eqref{eqn:reflectioncoefficientatload} can be further expressed as
 \Gamma_L = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{V^-}{V^+}
 \end{align*}
 
-It can be observed that when $Z_L = Z_0$, then there is no reflection from the load and hence maximum power is delivered to the generator. That is
+It can be observed that when $Z_L = Z_0$, then there is no reflection from the load, and hence maximum power is delivered to the generator. That is
 \begin{align*}
 \Gamma_L = \frac{V^-}{V^+} = 0\ (\text{when }Z_L = Z_0.) 
 \end{align*}
-Although $Z_0$ cannot be located on the transmission line, it does govern\textbf{ power flow} in the transmission line. This condition that $Z_L = Z_0$ is called the \emph{matched condition}\index{matched condition} of the transmission line. The terminating impedance of the line is matched to the characteristic impedance. This condition is similar to the maximum power transfer theorem in a lumped circuit\textemdash\;where if the load impedance is equal to the conjugate of the generator impedance, maximum power is transferred from the generator to the load.
+Although $Z_0$ cannot be located on the transmission line, it does govern\textbf{ power flow} in the transmission line. This condition that $Z_L = Z_0$ is called the \emph{matched condition}\index{matched condition} of the transmission line. The terminating impedance of the line is matched to the characteristic impedance. This condition is similar to the maximum power transfer theorem in a lumped circuit\textemdash where if the load impedance is equal to the conjugate of the generator impedance, maximum power is transferred from the generator to the load.
 \begin{align*}
 Z_L = Z_0 \quad (\text{Matched Load Condition})
 \end{align*}
 As the wave moves along the line, it sees $Z_0$. At $Z_L$, it suddenly sees an impedance discontinuity from $Z_0$ to $Z_L$ which is like a \textbf{steep change} because of that part of the energy that tends to get reflected by the generator on the transmission line. So, for maximum power transfer, the terminating load impedance must be equal to the characteristics impedance otherwise, maximum power transfer will not take place and there will always be reflection.
 
-The reflection coefficient at any point on the transmission line from equation~\eqref{eqn:rfc} is given as:
+The reflection coefficient at any point on the transmission line from Equation~\eqref{eqn:rfc} is given as:
 \begin{align*}
 \Gamma{(l)} = \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}} = \frac{\text{Backward wave}}{\text{Forward wave}}
 \end{align*}
@@ -34,7 +25,7 @@ Therefore we can define the voltage and current equations at any point on the tr
 V(l) = V^+e^{\gamma l} + V^-e^{-\gamma l}\label{eqn:voltagefromloadchp4}\\
 I(l) =\frac{V^+}{Z_0} e^{\gamma l} - \frac{V^-}{Z_0}e^{-\gamma l}\label{eqn:currentfromloadchp4}
 \end{align}
-Dividing equation~\ref{eqn:voltagefromloadchp4} by $V^+e^{\gamma l}$
+Dividing Equation~\ref{eqn:voltagefromloadchp4} by $V^+e^{\gamma l}$
 \begin{dmath*}
 \frac{V(l)}{ V^+e^{\gamma l}} = 1 + \frac{ V^-e^{-\gamma l}}{ V^+e^{\gamma l}}\quad\text{But }\Gamma(l)\text{ = }\frac{ V^-e^{-\gamma l}}{ V^+e^{\gamma l}}
 = 1 + \Gamma(l)
@@ -44,10 +35,10 @@ Therefore the voltage equation becomes
 V(l) = V^+e^{\gamma l} (1 + \Gamma(l))
 \label{eqn:voltagelec4}
 \end{align}
-This gives the voltage at any point on the line. Similary, dividing equation~\ref{eqn:currentfromloadchp4} by $\frac{V^+}{Z_0} e^{\gamma l}$
+This gives the voltage at any point on the line. Similarly, dividing Equation~\ref{eqn:currentfromloadchp4} by $\frac{V^+}{Z_0} e^{\gamma l}$
 \begin{dmath*}
 \frac{I}{\frac{V^+}{Z_0} e^{\gamma l}} = 1 - \frac{\frac{V^-}{Z_0} e^{-\gamma l}}{\frac{V^+}{Z_0} e^{\gamma l}}
-= 1 - [\frac{V^-e^{-\gamma l}}{Z_0}] [\frac{Z_0}{V^+e^{\gamma l}}]
+= 1 - \left[\frac{V^-e^{-\gamma l}}{Z_0}\right]\left[\frac{Z_0}{V^+e^{\gamma l}}\right]
 = 1 - \frac{V^-e^{-\gamma l}}{V^+e^{\gamma l}}
 = 1 - \Gamma(l)
 \end{dmath*}
@@ -59,10 +50,10 @@ I(l) = \frac{V^+}{Z_0} e^{\gamma l} (1 - \Gamma(l))
 From lumped circuit analysis, we recall that $Z(l) = \frac{V(l)}{I(l)}$, thus, substituting equations~\eqref{eqn:voltagelec4} and~\eqref{eqn:currentlec4} we have
 \begin{align*}
 Z(l) &= \frac{V(l)}{I(l)}\\
-&= \frac{V^+e^{\gamma l} (1 + \Gamma(l))}{ \dfrac{V^+}{Z_0} e^{\gamma l} (1 - \Gamma(l))}
+&= \frac{V^+e^{\gamma l} (1 + \Gamma(l))}{ \frac{V^+}{Z_0} e^{\gamma l} (1 - \Gamma(l))}
 \end{align*}
 \begin{align*}
-	&= V^+e^{\gamma l}(1 + \Gamma(l)) \times \frac{Z_0}{V^+e^{\gamma l}(1 - \Gamma(l))}
+&= V^+e^{\gamma l}(1 + \Gamma(l)) \times \frac{Z_0}{V^+e^{\gamma l}(1 - \Gamma(l))}
 \end{align*}
 \begin{align*}
 \end{align*}
@@ -114,7 +105,7 @@ Before we proceed let us recall that
 \cosh(\gamma l) = \frac{e^{\gamma l} + e^{-\gamma l}}{2}\\
 2\cosh(\gamma l) = e^{\gamma l} + e^{-\gamma l}
 \end{align*}
- and
+and
 \begin{align*}
 \sinh(\gamma l) = \frac{e^{\gamma l} - e^{-\gamma l}}{2}\\
 2\sinh(\gamma l) = e^{\gamma l} - e^{-\gamma l}
@@ -135,7 +126,7 @@ $\frac{Z(l)}{Z_0} = \bar{Z}(l)$ and $\frac{Z_L}{Z_0} =\bar{Z}_L$ which are the n
 
 Therefore, dividing both sides by $Z_0$
 \begin{dmath}
-\frac{Z(l)}{Z_0} = \frac{Z_0}{Z_0}[\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}]\\
+\frac{Z(l)}{Z_0} = \frac{Z_0}{Z_0}\left[\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}\right]
 \end{dmath}
 \begin{align*}
 \bar{Z}(l) &= \left[\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}\right] \times \\ 
@@ -144,7 +135,7 @@ Therefore, dividing both sides by $Z_0$
 & \left[\frac{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}{Z_0}\right]
 \end{align*}
 \begin{dmath}
-= \frac{\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}}{\frac{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}{Z_0}}
+\bar{Z}_2 = \frac{\dfrac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}}{\dfrac{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}{Z_0}}
 =\frac{\frac{Z_L}{Z_0}\cosh(\gamma l) + \frac{Z_0}{Z_0}\sinh(\gamma l)}{\frac{Z_L}{Z_0}\sinh(\gamma l) + \frac{Z_0}{Z_0}\cosh(\gamma l)}
 = \frac{\frac{Z_L}{Z_0}\cosh(\gamma l) + \sinh(\gamma l)}{\frac{Z_L}{Z_0}\sinh(\gamma l) + \cosh(\gamma l)}
 = \frac{\bar{Z}_L\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_L\sinh(\gamma l) + \cosh(\gamma l)}\ \text{(normalized impedance)}
@@ -156,13 +147,13 @@ Once again we see that in transmission line calculation, the absolute impedance 
 
 We then see that characteristic impedance which is not located anywhere or seen anywhere is always governing the energy flow of the transmission line.
 
-Now if $\bar{Z}_L = 1$, then equation~\eqref{eqn:impnormalized} reduces to
+Now if $\bar{Z}_L = 1$, then Equation~\eqref{eqn:impnormalized} reduces to
 \begin{dmath*}
 \bar{Z}(l) = {\frac{\bar{Z}_L\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_L\sinh(\gamma l) + \cosh(\gamma l)}} = 1
 \end{dmath*}
 Recall,
 \[\frac{Z(l)}{Z_0} = \bar{Z}(l)\text{ and }\frac{Z_L}{Z_0} = \bar{Z}_L\]
-So, $\frac{Z(l)}{Z_0} = 1$ and $\frac{Z_L}{Z_0} = 1$ means the impedance at every point equal to $Z_0$, if $Z_L = Z_0$ therefore $Z(l) = Z_0$. So, in this matched condition\index{matched condition}, the impedance $Z(l)$ measured at any point no longer depend on the length of the line. If a line is terminated by its characteristic impedance, there is no need to factor in the length of the line as every point along the line has an impedance equal to the characteristic impedance and this takes away all the worry about the \textbf{line length}.
+So, $\frac{Z(l)}{Z_0} = 1$ and $\frac{Z_L}{Z_0} = 1$ means the impedance at every point equal to $Z_0$, if $Z_L = Z_0$ therefore $Z(l) = Z_0$. So, in this matched condition\index{matched condition}, the impedance $Z(l)$ measured at any point no longer depends on the length of the line. If a line is terminated by its characteristic impedance, there is no need to factor in the length of the line as every point along the line has an impedance equal to the characteristic impedance and this takes away all the worry about the \textbf{line length}.
 
 The relationship of impedance transform will help us give a proper definition of characteristics impedance $Z_0$ which we know was related to the primary constants of the transmission line.
 
@@ -170,14 +161,15 @@ Characteristic Impedance\index{characteristic impedance} \emph{is defined as tha
 
 At matched conditions, there is no reflected wave. With infinite line length, there can be no reflection as the incident wave never gets to the end to get reflected. Hence, the reflection is zero. However, reflection is zero when the line is terminated with the characteristic impedance. Hence, \emph{the characteristic impedance can also be defined as the input impedance measured with infinite line length}, since with infinite line length, we always have a forward wave and never a reflected wave.
 
-Now we can generalize the impedance transformation relationship. Till now, we have transformed impedance $Z_L$ which is at the load end to $Z(l)$. Nothing special about the load end other than we defining our origin to be at that point. So, the load point was used as our reference point. In general, given a transmission line as shown in figure~\ref{fig:1234}
+Now we can generalize the impedance transformation relationship. Till now, we have transformed impedance $Z_L$ which is at the load end to $Z(l)$. Nothing special about the load end other than we defining our origin to be at that point. So, the load point was used as our reference point. In general, given a transmission line as shown in Figure~\ref{fig:1234}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{graphics/1234}
+\includegraphics[scale=0.45]{\pathtopartone/graphics/1234}
 \caption{General representation of a transmission line}
 \label{fig:1234}
 \end{figure}
-recall from equation~\eqref{eqn:imp} that
+
+Recall from Equation~\eqref{eqn:imp} that
 \begin{align*}
 Z(l) = Z_0\left[\frac{Z_L\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_L\sinh(\gamma l) + Z_0\cosh(\gamma l)}\right]
 \end{align*}
@@ -188,21 +180,21 @@ Z_2 = Z_0\left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_1 \sinh(\gamma l
 \end{align}
 Dividing both sides by $Z_0$
 \begin{dmath*}
-	\frac{Z_2}{Z_0} = \frac{Z_0}{Z_0} \left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_1 \sinh(\gamma l) + Z_0 \cosh(\gamma l)}\right]
+\frac{Z_2}{Z_0} = \frac{Z_0}{Z_0} \left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_1 \sinh(\gamma l) + Z_0 \cosh(\gamma l)}\right]
 \end{dmath*}
 \begin{align*}
-	\bar{Z}(2) &= \left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}\right] \times \\ 
-	& \left[\frac{Z_0}{Z_1\sinh(\gamma l) + Z_0\cosh(\gamma l)}\right] \\\\
-	&= \left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}\right] \div \\
-	& \left[\frac{Z_1\sinh(\gamma l) + Z_0\cosh(\gamma l)}{Z_0}\right]
+\bar{Z}_2 &= \left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}\right] \times \\ 
+& \left[\frac{Z_0}{Z_1\sinh(\gamma l) + Z_0\cosh(\gamma l)}\right] \\\\
+&= \left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}\right] \div \\
+& \left[\frac{Z_1\sinh(\gamma l) + Z_0\cosh(\gamma l)}{Z_0}\right]
 \end{align*}
 \begin{dmath}
-	= \frac{\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}}{\frac{Z_1\sinh(\gamma l) + Z_0\cosh(\gamma l)}{Z_0}}
-	=\frac{\frac{Z_1}{Z_0}\cosh(\gamma l) + \frac{Z_0}{Z_0}\sinh(\gamma l)}{\frac{Z_1}{Z_0}\sinh(\gamma l) + \frac{Z_0}{Z_0}\cosh(\gamma l)}
-	= \frac{\frac{Z_1}{Z_0}\cosh(\gamma l) + \sinh(\gamma l)}{\frac{Z_1}{Z_0}\sinh(\gamma l) + \cosh(\gamma l)}
-	= \frac{\bar{Z}_1\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_1\sinh(\gamma l) + \cosh(\gamma l)}\ 
+= \frac{\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_0}}{\frac{Z_1\sinh(\gamma l) + Z_0\cosh(\gamma l)}{Z_0}}
+=\frac{\frac{Z_1}{Z_0}\cosh(\gamma l) + \frac{Z_0}{Z_0}\sinh(\gamma l)}{\frac{Z_1}{Z_0}\sinh(\gamma l) + \frac{Z_0}{Z_0}\cosh(\gamma l)}
+= \frac{\frac{Z_1}{Z_0}\cosh(\gamma l) + \sinh(\gamma l)}{\frac{Z_1}{Z_0}\sinh(\gamma l) + \cosh(\gamma l)}
+= \frac{\bar{Z}_1\cosh(\gamma l) + \sinh(\gamma l)}{\bar{Z}_1\sinh(\gamma l) + \cosh(\gamma l)}
 \end{dmath}
-From equation~\eqref{eqn:z2norm} we can also invert the relationship to get $Z_1$ from $Z_2$ by cross multiplying.
+From Equation~\eqref{eqn:z2norm}, we can also invert the relationship to get $Z_1$ from $Z_2$ by cross multiplying.
 \begin{align*}
 Z_2 = Z_0\left[\frac{Z_1\cosh(\gamma l) + Z_0\sinh(\gamma l)}{Z_1 \sinh(\gamma l) + Z_0 \cosh(\gamma l)}\right]
 \end{align*}
@@ -211,7 +203,7 @@ Z_2\left[Z_1\sinh(\gamma l) + Z_0\cosh(\gamma l)\right] = Z_0\left[Z_1\cosh(\gam
 \end{dmath*}
 \[Z_1Z_2\sinh(\gamma l) + Z_0Z_2\cosh(\gamma l) = Z_0Z_1\cosh(\gamma l) + Z_0^2\sinh(\gamma l)\]
 
-Collect like terms and factorise out $Z_1$ on the left and $Z_0$ on the right-hand side of the equation
+Collect like terms and factorize out $Z_1$ on the left and $Z_0$ on the right-hand side of the equation
 \begin{dmath*}
 Z_1Z_2\sinh(\gamma l) - Z_1Z_0\cosh(\gamma l) = Z_0^2\sinh(\gamma l) - Z_0Z_2\cosh(\gamma l)
 \end{dmath*}
@@ -223,7 +215,7 @@ Make $Z_1$ the subject of the formula
 Z_1 = Z_0\left[\frac{Z_0\sinh(\gamma l) - Z_2\cosh(\gamma l)}{Z_2\sinh(\gamma l) - Z_0\cosh(\gamma l)}\right]
 \label{eqn:z1norm}
 \end{align}
-Multiply the numerator and denominator of equation~\eqref{eqn:z1norm} by $-1$.
+Multiply the numerator and denominator of Equation~\eqref{eqn:z1norm} by $-1$.
 \begin{equation}
 Z_1 = Z_0\left[\frac{Z_2\cosh(\gamma l) - Z_0\sinh(\gamma l)}{Z_0\cosh(\gamma l) - Z_2\sinh(\gamma l)}\right]\footnotemark
 \label{eqn:z1norm2}
@@ -231,7 +223,7 @@ Z_1 = Z_0\left[\frac{Z_2\cosh(\gamma l) - Z_0\sinh(\gamma l)}{Z_0\cosh(\gamma l)
 \footnotetext{
 Recall, $\cosh-\gamma l = \cosh\gamma l$ and $\sinh-\gamma l = -\sinh-\gamma l$
 }
-So, equation~\eqref{eqn:z1norm2} can be used to transform impedance between $Z_1$ and $Z_2$ knowing the positive $l$ direction is from load towards the generator.
+So, Equation~\eqref{eqn:z1norm2} can be used to transform impedance between $Z_1$ and $Z_2$ knowing the positive $l$ direction is from load towards the generator.
 
 Now we go to a special case of the transmission lines.
 
@@ -241,21 +233,21 @@ In practice, we want to transfer maximum power from the generator to the load. H
 Once we have this condition in practice, then we can make some simplification to the transmission line problem and come up with an idea of what is called a \emph{lossless transmission line}\index{lossless transmission line} whose ideal loss is zero.
 
 \subsection{Propagation Constant of Lossless Transmission Line}
-The transmission line has four parameters $R, L, G$ and $C$ all in per unit length. $R$ and $G$ are ohmic values in the primary constants which is the resistance between the two ends of the conductors and the leakage current in the dielectric separating the two conductors respectively. Hence, power-losing elements exist because of the resistance and conductance. The inductance and capacitance exchange energy between themselves but do not result in any loss. Ideally, a line will be lossless if $R = G = 0$.
+The transmission line has four parameters $R, L, G$, and $C$ all in per unit length. $R$ and $G$ are ohmic values in the primary constants which are the resistance between the two ends of the conductors and the leakage current in the dielectric separating the two conductors respectively. Hence, power-losing elements exist because of the resistance and conductance. The inductance and capacitance exchange energy between themselves but do not result in any loss. Ideally, a line will be lossless if $R = G = 0$.
 
-Substituting $R$ and $G$ as zero in the propagation constant\index{propagation constant} from equation~\eqref{eqn:gamma} given as follows simplifies to,
+Substituting $R$ and $G$ as zero in the propagation constant\index{propagation constant} from Equation~\eqref{eqn:gamma} given as follows simplifies to,
 \begin{dmath*}
-\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}
-= \sqrt{(\jmath\omega L)(\jmath\omega C)}
-= \jmath\omega\sqrt{LC}
+\gamma = \sqrt{(R + j\omega L)(G + j\omega C)}
+= \sqrt{(j\omega L)(j\omega C)}
+= j\omega\sqrt{LC}
 \end{dmath*}
-Recall that the propagation constant is a complex quantity represented as,
+Recall that the propagation constant is a complex quantity represented as
 \begin{align*}
-\gamma = \alpha + \jmath\beta
+\gamma = \alpha + j\beta
 \end{align*} 
 Therefore,
 \begin{align*}
-\alpha + j\beta = \jmath\omega\sqrt{LC}
+\alpha + j\beta = j\omega\sqrt{LC}
 \end{align*}
 so,
 \begin{align*}
@@ -282,29 +274,29 @@ The velocity of the wave in the transmission line is related to the inductance a
 \subsection{Characterisitic Impedance Lossless Transmission Line}\index{characteristic impedance}
 We then calculate the characteristic impedance on a lossless transmission line which is given as,
 \begin{dmath*}
-Z_0 = \sqrt{\frac{R + \jmath\omega L}{G + \jmath\omega C}}
-= \sqrt{\frac{\jmath\omega L}{\jmath\omega C}}\quad\text{Since }R\text{ = }0\text{ and }G\text{ = }0
+Z_0 = \sqrt{\frac{R + j\omega L}{G + j\omega C}}
+= \sqrt{\frac{j\omega L}{j\omega C}}\quad\text{Since }R\text{ = }0\text{ and }G\text{ = }0
 = \sqrt{\frac{L}{C}} \quad\textnormal{(real quantity)}
 \end{dmath*}
-Therefore, for a lossless line, it can be observed that $Z_0$ is real. We do not have any ohmic resistance or conductance in the line and yet it is at this point we have a characteristic impedance that is real (that is, pure ohmic loss). Hence, the wave which travels forward or backwards always sees a characteristic impedance that is a real impedance like resistance. This makes sense since we have a line carrying only forward waves which will go forever and no energy is reflected. That is, power somewhere is going to get dumped at the load end. So if we have a real quantity for $Z_0$, it means that power is completely transferred to the line. It does not mean that power is lost in the line. So for a lossless line, if the impedance on the line is measured, something more like resistance will be measured.
+Therefore, for a lossless line, it can be observed that $Z_0$ is real. We do not have any ohmic resistance or conductance in the line and yet it is at this point we have a characteristic impedance that is real (that is, pure ohmic loss). Hence, the wave that travels forward or backward always sees a characteristic impedance that is a real impedance like resistance. This makes sense since we have a line carrying only forward waves which will go forever and no energy is reflected. That is, power somewhere is going to get dumped at the load end. So if we have a real quantity for $Z_0$, it means that power is completely transferred to the line. It does not mean that power is lost in the line. So for a lossless line, if the impedance on the line is measured, something more like resistance will be measured.
 
 Now, we go to a case where little loss is accepted in the transmission line and then find the derivations for $\gamma$ and $Z_0$.
 
-\section{Lowloss Transmission Line}\index{lowloss transmission line}
-$R\ll\omega L$, $G\ll\omega C$ are the two conditions for a lowloss transmission line. So we derive the propagation constant of this line.
+\section{Low-loss Transmission Line}\index{low-loss transmission line}
+$R\ll\omega L$ and $G\ll\omega C$ are the two conditions for a low-loss transmission line. So we derive the propagation constant of this line.
 
 \subsection{Propagation Constant of Lowloss Transmission Line}\index{propagation constant}
-Using equation~\eqref{eqn:gamma}, we have:
+Using Equation~\eqref{eqn:gamma}, we have:
 \begin{dmath}
-\gamma = \sqrt{(R + \jmath\omega L)(G + \jmath\omega C)}
-= \sqrt{{(\jmath\omega L)(\jmath\omega C)\left(1 + \frac{R}{\jmath\omega L}\right)\left(1 + \frac{G}{\jmath\omega C}\right)}}
-= \sqrt{{(\jmath\omega L)(\jmath\omega C)\left(1 - j\frac{R}{\omega L}\right)\left(1 - j\frac{G}{\omega C}\right)}}\footnotemark
+\gamma = \sqrt{(R + j\omega L)(G + j\omega C)}
+= \sqrt{{(j\omega L)(j\omega C)\left(1 + \frac{R}{j\omega L}\right)\left(1 + \frac{G}{j\omega C}\right)}}
+= \sqrt{{(j\omega L)(j\omega C)\left(1 - j\frac{R}{\omega L}\right)\left(1 - j\frac{G}{\omega C}\right)}}\footnotemark
 \label{eqn:lowlossgamma}
 \end{dmath}
 \footnotetext{
-Recall $\frac{1}{\jmath} = -\jmath$
+Recall $\frac{1}{j} = -j$
 }
-The expressions $\left(1 - j\frac{R}{\omega L}\right)^{\frac{1}{2}}$ and $\left(1 - j\frac{G}{\omega C}\right)^{\frac{1}{2}}$ in equation~\eqref{eqn:lowlossgamma} can be expressed as a power series. Recall from Binomial expansion the a power series with fraction power can be expressed as follows where $x$ is the fractional part.
+The expressions $\left(1 - j\frac{R}{\omega L}\right)^{\frac{1}{2}}$ and $\left(1 - j\frac{G}{\omega C}\right)^{\frac{1}{2}}$ in Equation~\eqref{eqn:lowlossgamma} can be expressed as a power series. Recall from Binomial expansion that a power series with fraction power can be expressed as follows where $x$ is the fractional part.
 \begin{dmath*}
 (1 + x)^{\frac{1}{2}} = \Comb{\frac{1}{2}}{0}(1)^{\frac{1}{2}}x^0 + \Comb{\frac{1}{2}}{1}(1)^{{\frac{1}{2}} - 1}x^1 + \ldots
 \end{dmath*}
@@ -320,64 +312,64 @@ Thus,
 and
 \[(1 - x)^{\frac{1}{2}} = 1 - \frac{1}{2}x + \ldots\]
 
-Hence from the equation~\eqref{eqn:lowlossgamma}
-\[jw\sqrt{LC}\left(1 - \jmath\frac{R}{wL}\right)^{\frac{1}{2}}\left(1 - \jmath\frac{G}{wC}\right)^{\frac{1}{2}}\]
-Let $x = \jmath\frac{R}{\omega L}$ and $x' = \jmath\frac{G}{\omega C}$
+Hence from the Equation~\eqref{eqn:lowlossgamma}
+\[jw\sqrt{LC}\left(1 - j\frac{R}{wL}\right)^{\frac{1}{2}}\left(1 - j\frac{G}{wC}\right)^{\frac{1}{2}}\]
+Let $x = j\frac{R}{\omega L}$ and $x' = j\frac{G}{\omega C}$
 \begin{dmath*}
-\left(1 - \frac{\jmath R}{\omega L}\right)^{\frac{1}{2}} = 1 - \frac{1}{2}\frac{\jmath G}{\omega C} + \ldots
+\left(1 - \frac{j R}{\omega L}\right)^{\frac{1}{2}} = 1 - \frac{1}{2}\frac{j G}{\omega C} + \ldots
 \end{dmath*}
 and
 \begin{dmath*}
-\left(1 - \frac{jG}{\omega C}\right)^{\frac{1}{2}} = 1 - \frac{1}{2}\frac{\jmath R}{\omega L} + \ldots 
+\left(1 - \frac{jG}{\omega C}\right)^{\frac{1}{2}} = 1 - \frac{1}{2}\frac{j R}{\omega L} + \ldots 
 \end{dmath*}
-Thus, equation~\eqref{eqn:lowlossgamma} becomes
+Thus, Equation~\eqref{eqn:lowlossgamma} becomes
 \begin{dmath*}
-\gamma = jw\sqrt{LC}\left(1 - \jmath \frac{R}{2\omega L} + \ldots\right)\left(1 - j\frac{G}{2\omega C} + \ldots\right) = jw\sqrt{LC} \left[1- \left(\frac{\jmath R}{2\omega L}\right) - \left(\frac{\jmath G}{2\omega C}\right) + \left(\frac{\jmath R}{2\omega L}\right)\left(\frac{\jmath G}{2\omega C}\right)\right]
+\gamma = jw\sqrt{LC}\left(1 - j \frac{R}{2\omega L} + \ldots\right)\left(1 - j\frac{G}{2\omega C} + \ldots\right) = jw\sqrt{LC} \left[1- \left(\frac{j R}{2\omega L}\right) - \left(\frac{j G}{2\omega C}\right) + \left(\frac{j R}{2\omega L}\right)\left(\frac{j G}{2\omega C}\right)\right]
 \end{dmath*}
-Recall that two combination terms were used earlier because of the complex variable $\frac{jR}{wL}$ and $\frac{\jmath G}{\omega C}$, the product of $\frac{\jmath R}{2\omega C}$ and $\frac{\jmath G}{2\omega L}$ tends to zero since $R \ll wL$ and $G \ll \omega C$ for a low loss transmission line.
+Recall that two combination terms were used earlier because of the complex variable $\frac{jR}{wL}$ and $\frac{j G}{\omega C}$, the product of $\frac{j R}{2\omega C}$ and $\frac{j G}{2\omega L}$ tends to zero since $R \ll wL$ and $G \ll \omega C$ for a low loss transmission line.
 
 Thus,
 \begin{dmath}  
-\gamma = \jmath\omega\sqrt{LC} \left[1- \frac{\jmath R}{2\omega L} - \frac{\jmath G}{2\omega C}\right] = \jmath\omega\sqrt{LC} - \jmath\frac{R}{2\omega L}\left(\jmath\omega\sqrt{LC}\right) - j\frac{G}{2\omega C}\left(\jmath\omega\sqrt{LC}\right)
+\gamma = j\omega\sqrt{LC} \left[1- \frac{j R}{2\omega L} - \frac{j G}{2\omega C}\right] = j\omega\sqrt{LC} - j\frac{R}{2\omega L}\left(j\omega\sqrt{LC}\right) - j\frac{G}{2\omega C}\left(j\omega\sqrt{LC}\right)
 \end{dmath}
 Expressing $L = \sqrt{L} \times \sqrt{L}$ and $C = \sqrt{C} \times \sqrt{C}$, we have
 \begin{dmath*}
-\gamma = \jmath\omega\sqrt{LC} + \frac{R\sqrt{L}\sqrt{C}}{2\sqrt{L}\sqrt{L}} + \frac{G\sqrt{L}\sqrt{C}}{2\sqrt{C}\sqrt{C}}
-= \jmath\omega\sqrt{LC} + \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} 
+\gamma = j\omega\sqrt{LC} + \frac{R\sqrt{L}\sqrt{C}}{2\sqrt{L}\sqrt{L}} + \frac{G\sqrt{L}\sqrt{C}}{2\sqrt{C}\sqrt{C}}
+= j\omega\sqrt{LC} + \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} 
 \end{dmath*}
 
 Recall that $\gamma = \alpha + j\beta$, therefore,
 \begin{align*}
-\jmath\omega\sqrt{LC} + \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} = \alpha + \jmath\beta
+j\omega\sqrt{LC} + \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} = \alpha + j\beta
 \end{align*}
 So,
 \begin{align}
 \alpha &= \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}}\label{eqn:lowlossalpha}\\
 \beta &= \omega\sqrt{LC}
 \end{align}
-Compared to the lossless transmission line where $\alpha = 0$, there is a value for the attenuation constant. Also, we have that $\beta = \omega\sqrt{LC}$ for both cases of lossless and lowloss, which means that the phase constant does not change when we introduce lowloss to the transmission line. Hence, if we are interested in only the phase constant for a lowloss line, it can be treated as a lossless transmission line. However, for a lowloss transmission line $\alpha \neq 0$, there is that small loss so that as one travels with the wave, amplitude reduces slowly at $e^{-\alpha}$.
+Compared to the lossless transmission line where $\alpha = 0$, there is a value for the attenuation constant. Also, we have that $\beta = \omega\sqrt{LC}$ for both cases of lossless and low-loss, which means that the phase constant does not change when we introduce low-loss to the transmission line. Hence, if we are interested in only the phase constant for a low-loss line, it can be treated as a lossless transmission line. However, for a low-loss transmission line $\alpha \neq 0$, there is that small loss so that as one travels with the wave, amplitude reduces slowly at $e^{-\alpha}$.
 
 \subsection{Characterisitic Impedance of Lowloss Transmission Line}\index{characteristic impedance}
-Recall, $Z_0 = \sqrt{\frac{L}{C}}$ for a lossless line, substituting it in equation~\eqref{eqn:lowlossalpha}, we have,
+Recall, $Z_0 = \sqrt{\frac{L}{C}}$ for a lossless line, substituting it in Equation~\eqref{eqn:lowlossalpha}, we have,
 \[\alpha = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}} = \frac{1}{2}\left(\frac{R}{Z_0} + GZ_0\right)\]
 Therefore,
-\[\gamma = \jmath\omega\sqrt{LC} + \frac{1}{2}\left(\frac{R}{Z_0} + GZ_0\right)\]
-So if $R$ and $G$ are known and $Z_0$ for the lossless line has been determined, we can use $\alpha = \frac{1}{2}(\frac{R}{Z_0} + GZ_0)$ to calculate $\alpha$ for the lowloss line.
+\[\gamma = j\omega\sqrt{LC} + \frac{1}{2}\left(\frac{R}{Z_0} + GZ_0\right)\]
+So if $R$ and $G$ are known and $Z_0$ for the lossless line has been determined, we can use $\alpha = \frac{1}{2}(\frac{R}{Z_0} + GZ_0)$ to calculate $\alpha$ for the low-loss line.
 \begin{align*}
-Z_0 = \sqrt{\frac{R + \jmath\omega L}{G + \jmath\omega C}} = \sqrt{\frac{\jmath\omega L(1 - \jmath\frac{R}{\omega L})}{\jmath\omega C(1 - \jmath\frac{G}{\omega C})}}
+Z_0 = \sqrt{\frac{R + j\omega L}{G + j\omega C}} = \sqrt{\frac{j\omega L(1 - j\frac{R}{\omega L})}{j\omega C(1 - j\frac{G}{\omega C})}}
 \end{align*}
 $j\omega$ will cancel out, leaving us with
 \begin{dmath*}
-Z_0 = \sqrt{\frac{L}{C}}\sqrt{\frac{1 - j\frac{R}{\omega L}}{1 - j\frac{G}{\omega C}}} =\sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{\omega L}\right)^{\frac{1}{2}}\left(1 - \jmath\frac{G}{\omega C}\right)^{-\frac{1}{2}} 
+Z_0 = \sqrt{\frac{L}{C}}\sqrt{\frac{1 - j\frac{R}{\omega L}}{1 - j\frac{G}{\omega C}}} =\sqrt{\frac{L}{C}}\left(1 - j\frac{R}{\omega L}\right)^{\frac{1}{2}}\left(1 - j\frac{G}{\omega C}\right)^{-\frac{1}{2}} 
 \end{dmath*}
 From Binomial expansion, we have that:
 \begin{align*}
-Z_0 = \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} + \ldots\right)\left(1 - \jmath\frac{G}{2\omega C} + \ldots\right)
+Z_0 = \sqrt{\frac{L}{C}}\left(1 - j\frac{R}{2\omega L} + \ldots\right)\left(1 - j\frac{G}{2\omega C} + \ldots\right)
 \end{align*}
 \begin{align*}
-= \sqrt{\frac{L}{C}}\left(1 - \jmath\frac{R}{2\omega L} - \jmath\frac{G}{2\omega C} + \text{\ldots (\it{smaller terms})}\right)
+= \sqrt{\frac{L}{C}}\left(1 - j\frac{R}{2\omega L} - j\frac{G}{2\omega C} + \text{\ldots (\it{smaller terms})}\right)
 \end{align*}
-The characteristic impedance is no more real but complex. Its real value is the same as that of a lossless line. We have a small imaginary part which implies the presence of losses in the transmission line.
+The characteristic impedance is no more real but complex. Its real value is the same as that of a lossless line. We have a small imaginary part that implies the presence of losses in the transmission line.
 
 From now on, when given a transmission line problem, we assume it to be lossless unless we are told specifically that the line is lossy.
 
@@ -395,16 +387,15 @@ Given a transmission line with primary constants, $R = 0.00259\varOmega/$m, $L =
 (a) $Z_0 = 600\angle-1.2^o\varOmega$ (b) $\gamma = 1.048\times10^{-4}\angle88.8^o/$m (c) $v = 2.998\times10^8$m/s and (d) $\lambda = 59.98$km.
 
 \Exercise[label={ex43}]
-Prove that for both a lossless and a lowloss transmission line, the phase constant remains the same while the attenuation constant changes.
+Prove that for both a lossless and a low-loss transmission line, the phase constant remains the same while the attenuation constant changes.
 
 \Exercise[label={ex44}]
-Consider a lowloss transmission line with a characteristic impedance ($Z_0$) of 50 ohms and a length ($l$) of 0.2 wavelengths at a frequency of 1 GHz. If the load impedance ($Z_L$) is 75 ohms, calculate the reflection coefficient ($\Gamma$) at the load and the voltage standing wave ratio (VSWR).
+Consider a low-loss transmission line with a characteristic impedance ($Z_0$) of 50 ohms and a length ($l$) of 0.2 wavelengths at a frequency of 1 GHz. If the load impedance ($Z_L$) is 75 ohms, calculate the reflection coefficient ($\Gamma$) at the load and the voltage standing wave ratio (VSWR).
 \Answer[ref={ex44}]
-Reflection coefficient=  0.2 \\
-VSWR= 1.5
+Reflection coefficient=  0.2, VSWR= 1.5
 
 \Exercise[label={ex45}]
-What is the required resistance, in ohms, for a transmission line to be considered a lowloss transmission line, with parameters $L=0.4\mu H/m$, $C=200pF/m$, $G=0$, and operating at a frequency of 150MHz?
+What is the required resistance, in ohms, for a transmission line to be considered a low-loss transmission line, with parameters $L=0.4\mu H/m$, $C=200pF/m$, $G=0$, and operating at a frequency of 150MHz?
 \Answer[ref={ex45}]
 7.55ohms per meters
 
@@ -416,7 +407,7 @@ Calculate the voltage and current traveling wave expressions along the transmiss
 Consider a lossless transmission line with a characteristic impedance of $Z_0=50\Omega$. The forward voltage wave is given by $V+(z,t)=100\cos(2\pi\times10^9t-\beta z)$, where $z$ is the distance along the transmission line, $t$ is time, and $\beta$ is the phase constant. The phase constant is related to the wavelength $\lambda$ by $\beta=\lambda2\pi$.
 (a)	Determine the maximum voltage on the transmission line.
 (b)	Find the maximum current on the transmission line.
-(c)	Calculate the minimum current  on the transmission line.
+(c)	Calculate the minimum current on the transmission line.
 (d)	Given that the load impedance ($Z_L$) is 75$\Omega$, calculate the Voltage Standing Wave Ratio (VSWR) on the transmission line.
 \Answer[ref={ex47}]
 (a) $V_{max} = 100V$ \\
