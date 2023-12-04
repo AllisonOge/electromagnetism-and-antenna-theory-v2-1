@@ -1,37 +1,26 @@
-% \chapter{VOLTAGE AND CURRENT VARIATION IN LOWLOSS TRANSMISSION LINE}
+In a practical transmission line, low-loss occurs when $R\ll\omega L$, and $G\ll\omega C $.
 
-% \section{Objectives}
-% \definecolor{lightblue}{RGB}{173,216,230}
-% \begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
-% At the end of this chapter, you should be able;
-% \begin{enumerate}[(i)]
-% \newline
-% \end{enumerate}
-% \end{mdframed}
+Let us now study the conditions for treating the transmission line as low-loss at a particular frequency, the variation of voltage and current along a transmission line, the concept of voltage standing wave ratio (VSWR)\index{voltage standing wave ratio}, the condition for full reflection at the load end, the relationship between $R_\max$ and VSWR and also the relationship between $R_\min$ and VSWR.
 
-In practical transmission line, lowloss occur when $R\ll\omega L$, and $G\ll\omega C $.
-
-Let us now study the conditions for treating the transmission line as lowloss at a particular frequency, the variation of voltage and current along a transmission line, the concept of voltage standing wave ratio (VSWR)\index{voltage standing wave ratio}, the condition for full reflection at the load end, the relationship between $R_{\max}$ and VSWR and also the relationship between $R_{\min}$ and VSWR.
-
-The propagation constant in equation~\eqref{eqn:lowlossgamma} given as follows states the conditions defined for a lowloss transmission line in terms of the primary constants (R, L, C and G) of the line.
+The propagation constant in Equation~\eqref{eqn:lowlossgamma} given as follows states the conditions defined for a low-loss transmission line in terms of the primary constants (R, L, C, and G) of the line.
 \begin{equation}
-\gamma = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} +\jmath\omega\sqrt{LC}
+\gamma = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{G}{2}\sqrt{\frac{L}{C}} +j\omega\sqrt{LC}
 \label{eqn:lowlossgammalec5}
 \end{equation}
-To treat a line as a lowloss transmission line, one will have to express these conditions ($R\ll\omega L$ and $G\ll\omega C$) in terms of the secondary parameters ($\alpha$ and $\beta$) since these parameters are readily available on the datasheet. If we can establish a relationship between these parameters ($\alpha$ and $\beta $) for the lowloss nature of the line, then we can find out whether a particular line is lowloss at a particular frequency.
+To treat a line as a low-loss transmission line, one will have to express these conditions ($R\ll\omega L$ and $G\ll\omega C$) in terms of the secondary parameters ($\alpha$ and $\beta$) since these parameters are readily available on the datasheet. If we can establish a relationship between these parameters ($\alpha$ and $\beta $) for the low-loss nature of the line, then we can find out whether a particular line is low-loss at a particular frequency.
 
-The attenuation constant as derived in equation~\eqref{eqn:lowlossalpha} is
+The attenuation constant as derived in Equation~\eqref{eqn:lowlossalpha} is
 \begin{equation}
 \alpha = \frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}}	
 \label{eqn:lowlossalphalec5}
 \end{equation}
-And the phase constant remains the same as that of lossless transmission line
+The phase constant remains the same as that of a lossless transmission line.
 \begin{equation}
 \beta = \omega\sqrt{LC}
 \end{equation}
-Since we have expressed equation~\eqref{eqn:lowlossgammalec5} in terms of primary constants, let us find out under what condition the transmission line can be treated as lowloss.
+Since we have expressed Equation~\eqref{eqn:lowlossgammalec5} in terms of primary constants, let us find out under what condition the transmission line can be treated as low-loss.
 
-To do this we further simplify equation~\eqref{eqn:lowlossalphalec5} such that,
+To do this we further simplify Equation~\eqref{eqn:lowlossalphalec5} such that,
 \begin{align*}
 \alpha &=\frac{1}{2}R\sqrt{\frac{C}{L}} + \frac{1}{2}G\sqrt{\frac{L}{C}}\\	
 &= \frac{1}{2} R \sqrt{\frac{C}{L}} \sqrt{\frac{L}{L}} + \frac{1}{2} G \sqrt{\frac{L}{C}} \sqrt{\frac{C}{C}}\footnotemark\\
@@ -45,17 +34,17 @@ But $\beta = \omega \sqrt{LC}$, so
 \alpha = \beta\frac{1}{2} \left(\frac{R}{\omega L} + \frac{G}{\omega C}\right)
 \end{equation}
 \footnotetext{
-The numerator and denominator of the first term is multiplied by $\sqrt{\frac{L}{L}}$ and the second term by $\sqrt{\frac{C}{C}}$,
+The numerator and denominator of the first term are multiplied by $\sqrt{\frac{L}{L}}$ and the second term by $\sqrt{\frac{C}{C}}$,
 }
 \footnotetext{
-The numerator and denominator is multiplied by $\omega$
+The numerator and denominator are multiplied by $\omega$
 }
-Recall that for lowloss, $R\ll\omega L$ and $G\ll\omega C$, thus
+Recall that for low-loss, $R\ll\omega L$ and $G\ll\omega C$, thus
 \[\frac{R}{\omega L} \ll 1\textnormal{ and }\frac{G}{\omega C} \ll 1\]
 Therefore, $\frac{1}{2} \left(\frac{R}{\omega L} + \frac{G}{\omega C}\right) \ll 1$ and $\alpha = \beta \times \textnormal{something far smaller than 1}$.
 
-Hence, for a lowloss transmission line, $\alpha \ll \beta$ where $\beta = \frac{2 \pi}{\lambda}$.
-Considering a wave which travels a distance of one wavelength along the transmission line, its phase, $\beta$ becomes $2\pi$, that is, $\beta = 2 \pi$, then the amplitude of the wave varies by
+Hence, for a low-loss transmission line, $\alpha \ll \beta$ where $\beta = \frac{2 \pi}{\lambda}$.
+Considering a wave that travels a distance of one wavelength along the transmission line, its phase, $\beta$ becomes $2\pi$, that is, $\beta = 2 \pi$, then the amplitude of the wave varies by
 \begin{equation*}
 e^{-\alpha x} = e^{-\alpha\lambda}	
 \end{equation*}
@@ -63,15 +52,15 @@ Where $\lambda = \frac{2\pi}{\beta}$
 \begin{equation*}
 e^{-\alpha x} = e^{-\alpha \dfrac{2 \pi}{\beta}}
 \end{equation*}
-Since for a lowloss transmission line $\alpha\ll\beta$, therefore the quantity $e^{-\alpha \frac{2 \pi}{\beta}} \approx 1$. Hence, amplitude reduction is very small as the original amplitude is close to the final amplitude. So, a line can be treated as a lowloss transmission line if the change in amplitude over one wavelength is negligibly small. Let negligibly small be 1 percent change from the original or starting amplitude. Then
+Since for a low-loss transmission line $\alpha\ll\beta$, therefore the quantity $e^{-\alpha \frac{2 \pi}{\beta}} \approx 1$. Hence, amplitude reduction is very small as the original amplitude is close to the final amplitude. So, a line can be treated as a low-loss transmission line if the change in amplitude over one wavelength is negligibly small. Let a negligibly small 1 percent change from the original or starting amplitude. Then
 \[\frac{\alpha 2 \pi}{\beta} \approx \frac{1}{100}, e^{-0.01} = 0.99005\textnormal{ of the initial value}\]
 The wave amplitude only reduces by $1-0.99005=0.00995$ or 1 per cent. That means the wave amplitude only reduces by 1 per cent after a distance of 1 wavelength.
 
-A line can be treated as a lowloss transmission line if $\alpha \ll \beta$ depending on the given frequency but if the frequency changes such that $\alpha \geq \beta$, the line cannot be treated as a lowloss transmission line.
+A line can be treated as a low-loss transmission line if $\alpha \ll \beta$ depending on the given frequency but if the frequency changes such that $\alpha \geq \beta$, the line cannot be treated as a low-loss transmission line.
 
 \begin{exmp}
-\subsubsection*{Analysis of a Lowloss transmission line}\label{lec:lec5}
-Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G = 0$, what is the resistance of the transmission line so that the line can be treated as a lowloss transmission line given the frequency of operation as $100MHz$?
+\subsubsection*{Analysis of a Low-loss transmission line}\label{lec:lec5}
+Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G = 0$, what is the resistance of the transmission line so that the line can be treated as a low-loss transmission line given the frequency of operation as $100MHz$?
 
 \subsubsection*{Solution}
 \[L= 0.25\mu H/m, C= 100pF/m, G = 0\]
@@ -80,7 +69,7 @@ Let's say we have a transmission line with $L = 0.25\mu H/m$, ${C= 100pF/m}$, $G
 \beta = 2\pi f\sqrt{LC}
 =2 \pi \times 10^8 \sqrt{(0.25 \times 10^{-6}) \times (100 \times 10^{-12})} = \pi rad/m
 \end{dmath*}
-For a lowloss transmission line, taking 1 percent of $\beta,
+For a low-loss transmission line, taking 1 percent of $\beta,
 \alpha= \frac{1}{100}\beta = \frac{\pi}{100}$ \\.
 
  Given that, \(G=0\)
@@ -93,12 +82,12 @@ For a lowloss transmission line, taking 1 percent of $\beta,
 \begin{equation*}
 R=\pi\Omega/m.
 \end{equation*}
-If $R \leq \pi\Omega/m$, the line is lowloss at $ f= 100MHz$. If the frequency changes, the line may not satisfy this lowloss condition, hence we have to check again.
+If $R \leq \pi\Omega/m$, the line is low-loss at $ f= 100MHz$. If the frequency changes, the line may not satisfy this low-loss condition, hence we have to check again.
 \end{exmp}
 
-Therefore, unless specifically told that a line is a lossy line, we are at liberty to treat the line as a lossless line since the phase constant as we have seen for lossy and lossless lines are the same. Also, the characteristics impedance of a lowloss line is almost real and the same as the characteristics impedance of a lossless line. Hence for all transmission line problems, we consider it lossless and thus, 
+Therefore, unless specifically told that a line is a lossy line, we are at liberty to treat the line as a lossless line since the phase constant as we have seen for lossy and lossless lines is the same. Also, the characteristics impedance of a low-loss line is almost real and the same as the characteristics impedance of a lossless line. Hence for all transmission line problems, we consider it lossless, and thus,
 \begin{align*}
-Z_0 = \sqrt{{\frac{\jmath\omega L}{\jmath\omega C}}} = \sqrt{\frac{L}{C}} = \textnormal{real}, \quad \quad \gamma= \jmath\beta = \jmath\omega\sqrt{LC}
+Z_0 = \sqrt{{\frac{j\omega L}{j\omega C}}} = \sqrt{\frac{L}{C}} = \textnormal{real}, \quad \quad \gamma= j\beta = j\omega\sqrt{LC}
 \end{align*}
 
 \section{Voltage And Current Variation on a Lossless Transmission Line}
@@ -111,12 +100,12 @@ I= \frac{V^+}{Z_0} e^{- \gamma x} - \frac{V^-}{Z_0} e^{\gamma x}
 \end{align}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{graphics/11111111}
+\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/11111111}
 \caption{Wave moving towards the Generator}
 \label{fig:11111111}
 \end{figure}
 
-For a lossless transmission line at any point $l$, substituting $\gamma = \jmath\beta$ and $x=-l$ into equation~\eqref{eqn:voltagefromloadlec5}, we have;
+For a lossless transmission line at any point $l$, substituting $\gamma = j\beta$ and $x=-l$ into Equation~\eqref{eqn:voltagefromloadlec5}, we have;
 \begin{align*}
 V(l) &= V^+ e^{j \beta l} + V^- e^{-j\beta l}\\
 \frac{V(l)}{ V^+ e^{j \beta l}} &= \left(1 +\frac{V^- e^{- j \beta l}}{V^+ e^{j \beta l}}\right)\footnotemark\\
@@ -131,49 +120,49 @@ V(l) = V^+ e^{j \beta l}(1 + \Gamma_L e^{-j 2 \beta l})\quad\text{where }\Gamma 
 \label{eqn:voltagefromloadlossless}
 \end{equation}
 
-Similarly, substituting $\gamma = j\beta$ and $x = -l$ into equation~\eqref{eqn:currentfromloadlec5}:
+Similarly, substituting $\gamma = j\beta$ and $x = -l$ into Equation~\eqref{eqn:currentfromloadlec5}:
 \begin{align*}
-I(l) &= \frac{V^+}{Z_0} e^{\jmath \beta l} - \frac{V^-}{Z_0} e^{-\jmath\beta l}\\
-\frac{I(l)}{\frac{V^+}{Z_0} e^{\jmath\beta l}} &= \left( 1- \frac{\frac{V^-}{Z_0} e^{-\jmath\beta l}}{\frac{V^+}{Z_0} e^{\jmath\beta l}}\right)\footnotemark\\
-\frac{I(l)}{\frac{V^+}{Z_0} e^{\jmath\beta l}} &= \left(1- \frac{V^-}{V^+}e^{-\jmath 2 \beta l}\right)
+I(l) &= \frac{V^+}{Z_0} e^{j \beta l} - \frac{V^-}{Z_0} e^{-j\beta l}\\
+\frac{I(l)}{\frac{V^+}{Z_0} e^{j\beta l}} &= \left( 1- \frac{\frac{V^-}{Z_0} e^{-j\beta l}}{\frac{V^+}{Z_0} e^{j\beta l}}\right)\footnotemark\\
+\frac{I(l)}{\frac{V^+}{Z_0} e^{j\beta l}} &= \left(1- \frac{V^-}{V^+}e^{-j 2 \beta l}\right)
 \end{align*}
 \footnotetext{
-The result is divided through by $\frac{V^+}{Z_0} e^{\jmath\beta l}$
+The result is divided through by $\frac{V^+}{Z_0} e^{j\beta l}$
 }
 Thus,
 \begin{equation}
 I(l) = \frac{V^+}{Z_0}e ^{j \beta l} \left( 1 - \Gamma_L e^{-j 2 \beta l}\right)\quad\text{where }\Gamma _L = \frac{V^-}{V^+}
 \label{eqn:currentfromloadlossless}
 \end{equation}
-From equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless}, $V = \mathfrak{f}( V^{+}, V^{-})$ and $I = \mathfrak{f}(I^{+}, I^{-})$ means $V$ and $I$ are a superposition of forward and backward travelling wave, which is then a \emph{standing wave}\index{standing wave}. Recall the reflection coefficient at the load end is given as
+From Equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless}, $V = \mathfrak{f}( V^{+}, V^{-})$ and $I = \mathfrak{f}(I^{+}, I^{-})$ means $V$ and $I$ are a superposition of forward and backward travelling wave, which is then a \emph{standing wave}\index{standing wave}. Recall the reflection coefficient at the load end is given as
 \begin{equation}
 \Gamma_L = |\Gamma_L|e^{j\phi_L}
 \label{eqn:refcoefficientfromload}
 \end{equation}
 where $\phi_L$ is the phase of the reflection coefficient at the load end. Then, we can write down the $V(l)$ and $I(l)$ explicitly in terms of the magnitude of the reflection coefficient and the phase.
 
-Therefore substituting equation~\eqref{eqn:refcoefficientfromload} into equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} respectively, we will get;
+Therefore substituting Equation~\eqref{eqn:refcoefficientfromload} into Equations~\eqref{eqn:voltagefromloadlossless} and~\eqref{eqn:currentfromloadlossless} respectively, we will get;
 \begin{dmath}
-V(l) = V^{+}e^{\jmath\beta l}(1 + |\Gamma_L|e^{j\phi_L} . e^{-j 2 \beta l})
-= V^{+}e^{\jmath\beta l}(1 + |\Gamma_L| e^{\jmath(\phi_L -2 \beta l)})
+V(l) = V^{+}e^{j\beta l}(1 + |\Gamma_L|e^{j\phi_L} . e^{-j 2 \beta l})
+= V^{+}e^{j\beta l}(1 + |\Gamma_L| e^{j(\phi_L -2 \beta l)})
 \end{dmath}
 And
 \begin{dmath}
-I(l) = \frac{V^+}{Z_0}e ^{j \beta l}( 1 - |\Gamma_L|e^{\jmath\phi_L} . e^{-\jmath 2\beta l})
+I(l) = \frac{V^+}{Z_0}e ^{j \beta l}( 1 - |\Gamma_L|e^{j\phi_L} . e^{-j 2\beta l})
 = \frac{V^+}{Z_0}e ^{j \beta l}( 1 -|\Gamma_L| e^{j(\phi_L -2 \beta l)})
 \end{dmath}
-As we move from load to generator, $l$ increases positively, making $\phi_L -2\beta l$ more and more negative. In the complex plane, when a phase gets more negative, it means we are moving in a clockwise direction as shown in figure~\ref{fig:473-drawings}.
+As we move from load to generator, $l$ increases positively, making $\phi_L -2\beta l$ more and more negative. In the complex plane, when a phase gets more negative, it means we are moving in a clockwise direction as shown in Figure~\ref{fig:473-drawings}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/"473 drawings"}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/"473 drawings"}
 \caption{Clockwise and Anticlockwise movement of distance, $l$}
 \label{fig:473-drawings}
 \end{figure}
 
-So by moving towards the generator, the phase becomes more and more negative, while the amplitude of $|\Gamma_L|$ remains constant. The total voltage is scaled by the vector sum of the real term (1) and complex term $|\Gamma_L| e^{j(\phi_L -2 \beta l)}$. Hence, we have a summation of a real vector, whose magnitude is 1, plus a complex term as shown in figure~\ref{fig:kjhgfdwert}. 
+So by moving towards the generator, the phase becomes more and more negative, while the amplitude of $|\Gamma_L|$ remains constant. The total voltage is scaled by the vector sum of the real term (1) and complex term $|\Gamma_L| e^{j(\phi_L -2 \beta l)}$. Hence, we have a summation of a real vector, whose magnitude is 1, plus a complex term as shown in Figure~\ref{fig:kjhgfdwert}. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/Argand_Diagram}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/Argand_Diagram}
 \caption{Variation of the $1 + |\Gamma_L| e^{j(\phi_L -2 \beta l)}$ term in the complex plane (Argand diagram)}
 \label{fig:kjhgfdwert}
 \end{figure}
@@ -182,33 +171,33 @@ The magnitude $1+|\Gamma_L| e^{j(\phi_L -2 \beta l)}$ varies as we move along th
 
 From the \footnote{
 Argand Diagram refers to a geometric plot of complex numbers as points $z = x + iy$ using the x-axis as the real axis and the y-axis as the imaginary axis. Such plots are named after Jean-Robert Argand (1768-1822), although they were first described by Norwegian-Danish land surveyor and mathematician Casper Wessel (1745-1818.)
-}Argand diagram in figure~\ref{fig:kjhgfdwert}, the dash line circle is the variation plot of the term $\lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}$ whose magnitude is $\lvert \Gamma_L\rvert$ and phase $\phi_L - 2 \beta l$. The term $\lvert 1 + \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ is the resolved vector of vector $1$ and vector $\lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}$. The same Argand diagram can be developed for the term $\lvert1 - \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ where the vector $\lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}$ points in the negative direction. 
+}Argand diagram in Figure~\ref{fig:kjhgfdwert}, the dashed line circle is the variation plot of the term $\lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}$ whose magnitude is $\lvert \Gamma_L\rvert$ and phase $\phi_L - 2 \beta l$. The term $\lvert 1 + \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ is the resolved vector of vector $1$ and vector $\lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}$. The same Argand diagram can be developed for the term $\lvert1 - \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ where the vector $\lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}$ points in the negative direction. 
 
-For even multiples of $\pi$, that is, $2n\pi$ where n is a positive integer then $\phi_L - 2\beta l = 2n\pi$ and $ e^{j(\phi_L - 2 \beta l)} = 1$. This is the maximum value of the resolved vector, that is, $1 + \lvert\Gamma_L\rvert$ and corresponds to point B in figure~\ref{fig:kjhgfdwert}.
+For even multiples of $\pi$, that is, $2n\pi$ where n is a positive integer then $\phi_L - 2\beta l = 2n\pi$ and $ e^{j(\phi_L - 2 \beta l)} = 1$. This is the maximum value of the resolved vector, that is, $1 + \lvert\Gamma_L\rvert$, and corresponds to point B in Figure~\ref{fig:kjhgfdwert}.
 
-For odd multiples of $\pi$, that is, $(2n + 1)\pi$, then $\phi_L - 2 \beta l=(2 n + 1)\pi$ and $e^{j (\phi_L - 2 \beta l)} = -1$. This is the minimum value of the resolved vector, that is, $1 - \lvert\Gamma_L\rvert$ and corresponds to point A in figure~\ref{fig:kjhgfdwert}. Similarly, $\lvert 1 - \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ resolves to a maximum at odd multiples of $\pi$ and a minimum at even multiples of $\pi$.
+For odd multiples of $\pi$, that is, $(2n + 1)\pi$, then $\phi_L - 2 \beta l=(2 n + 1)\pi$ and $e^{j (\phi_L - 2 \beta l)} = -1$. This is the minimum value of the resolved vector, that is, $1 - \lvert\Gamma_L\rvert$ and corresponds to point A in Figure~\ref{fig:kjhgfdwert}. Similarly, $\lvert 1 - \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ resolves to a maximum at odd multiples of $\pi$ and a minimum at even multiples of $\pi$.
 
 Thus, $\lvert 1 + \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ resolves to a maximum when $(\phi_L - 2\beta l) = 0, 2\pi, 4\pi, \ldots$ and $\lvert 1 + \lvert\Gamma_L\rvert e^{j (\phi_L - 2\beta l)}\rvert$ resolves to a minimum when $(\phi_L -2\beta l) = \pi, 3\pi, 5\pi \ldots$. This is the voltage term and implies the voltage is maximum when the phase equals even multiples of $\pi$ and minimum when the phase equals odd multiple of $\pi$.
 
 This is opposite to the behaviour of the current relationship with the term $1-|\Gamma_L| e^{j(\phi_L -2\beta l)}$. At odd multiples of $\pi$ we have a maximum and at even multiples of $\pi$ we have a minimum.
 
-Thus we have established that when $ e^{j(\phi_L - 2 \beta l)} = 1$, the voltage is maximum and the current is minimum and when $ e^{\jmath(\phi_L - 2 \beta l)} = -1$, the voltage is minimum and the current is maximum. So at the same location along the transmission line, maximum voltage corresponds to minimum current, and minimum voltage corresponds to maximum current. This is opposite to what we observed in a lumped circuit, where the maximum voltage point corresponds to maximum current and minimum voltage corresponds to minimum current.
+Thus we have established that when $ e^{j(\phi_L - 2 \beta l)} = 1$, the voltage is maximum and the current is minimum and when $ e^{j(\phi_L - 2 \beta l)} = -1$, the voltage is minimum and the current is maximum. So at the same location along the transmission line, maximum voltage corresponds to minimum current, and minimum voltage corresponds to maximum current. This is opposite to what we observed in a lumped circuit, where the maximum voltage point corresponds to the maximum current and the minimum voltage corresponds to the minimum current.
 
-The maximum voltage and current does not occur at the same point on the transmission line, they are staggered in space. Whenever there is a maximum voltage, there is a minimum current and vice versa. So the standing wave of voltage and current are shifted with respect to each other in space on the transmission line as shown in figure~\ref{fig:asdfghjhgfdsa}. 
+The maximum voltage and current do not occur at the same point on the transmission line, they are staggered in space. Whenever there is a maximum voltage, there is a minimum current, and vice versa. So the standing wave of voltage and current are shifted with respect to each other in space on the transmission line as shown in Figure~\ref{fig:asdfghjhgfdsa}. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{graphics/fig5.4modified}
+\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/fig5.4modified}
 \caption{Voltage and current variations for lossless transmission line in the direction of increasing $l$}
 \label{fig:asdfghjhgfdsa}
 \end{figure}
 
-The plot of the voltage and current variations in figure~\ref{fig:asdfghjhgfdsa} shown that maximum voltage corresponds to minimum current and minimum voltage corresponds to maximum current.
+The plot of the voltage and current variations in Figure~\ref{fig:asdfghjhgfdsa} shows that maximum voltage corresponds to minimum current and minimum voltage corresponds to maximum current.
 
 \begin{exmp}
 \subsubsection*{Maximum and Minimum voltage and current}
-A lossless transmission line has 75$\Omega$ characteristic impedance. The line is terminated in a load impedance of $50-j100\Omega$. The maximum voltage measured on the line is 100V.
+A lossless transmission line has a 75$\Omega$ characteristic impedance. The line is terminated in a load impedance of $50-j100\Omega$. The maximum voltage measured on the line is 100V.
 
-(a) Find the maximum and minimum current, and the minimum voltage on the line.
+(a) Find the maximum and minimum current and the minimum voltage on the line.
 
 (b) At what distance from the load are the voltage and the current maximum?
 
@@ -258,7 +247,7 @@ And we can determin the minimum voltage using either $|V|_\min=Z_0|I|_\min$ or $
 \subsubsection*{(b) Location of maximum voltage and current}
 Lastly, let us locate the distance from the load where the current and voltage are maximum. Let us note that when the two traveling waves have a constructive interference, we have a voltage maximum which corresponds to the current minimum. Also, when two traveling waves have a destructive interference, we have a voltage minimum which corresponds to the current maximum.
 
-Recall that the phase difference between the forward and the backward wave is given by $\phi_{L}-2\beta l$. If $\phi_{L}-2\beta l$ equals even multiples of $\pi$, the two waves will  have a constructive interference and the voltage will be maximum. Similarly, when $\phi_{L}-2\beta l$ equals odd multiples of $\pi$, the two waves will have a destructive interference and a voltage minimal will be observed. So mathematically, voltage maximum occurs at $\phi_{L}-2\beta l= \pm2m\pi$, where m is an integer quantity.
+Recall that the phase difference between the forward and the backward wave is given by $\phi_{L}-2\beta l$. If $\phi_{L}-2\beta l$ equals even multiples of $\pi$, the two waves will have constructive interference and the voltage will be maximum. Similarly, when $\phi_{L}-2\beta l$ equals odd multiples of $\pi$, the two waves will have destructive interference, and a voltage minimal will be observed. So mathematically, voltage maximum occurs at $\phi_{L}-2\beta l= \pm2m\pi$, where m is an integer quantity.
 \begin{align*}
 \phi_{L}-2\beta l_\max&=-2m\pi\\
 \text{Thus, }\quad2\beta l_\max&= \phi_{L}+2m\pi\\
@@ -277,7 +266,7 @@ Similarly, to find the current minimum, let us recall that the current minimum o
 l_\max(\text{voltage})\pm \frac{\lambda}{4}
 \]
 
-Using the negative and positive sign will both give correct answers. Here, we will use the negative sign, that is, $l_\max-\frac{\lambda}{4}$. When $m = 1, 2, 3, \ldots$, therefore $|I|_\min$ occurs at $0.16\lambda , 0.66\lambda , 1.16\lambda$ and so on.
+Using the negative and positive signs will both give correct answers. Here, we will use the negative sign, that is, $l_\max-\frac{\lambda}{4}$. When $m = 1, 2, 3, \ldots$, therefore $|I|_\min$ occurs at $0.16\lambda , 0.66\lambda , 1.16\lambda$ and so on.
 \end{exmp}
 
 \section{Concept of Voltage Standing Wave Ratio (VSWR)}\index{voltage standing wave ratio}
@@ -291,7 +280,7 @@ Therefore,
 \end{equation*}
 For maximum voltage, $\phi_L-2\beta l = \textnormal{Even multiples of }\pi$ that is $0, 2\pi, 4\pi, 6\pi,\ldots$. For minimum voltage, $\phi_L-2\beta l=\textnormal{Odd multiples of } \pi$ that is $\pi, 3\pi,\ 5\pi,\ \ldots$. Thus the euler formular 
 \[e^{j(\phi_L - 2 \beta l)} = \cos(\phi_L - 2 \beta l) + jsin(\phi_L - 2 \beta l)\]
-Since $\sin(\phi_L - 2 \beta l) = 0$ for all multiples of $\pi$ or $n\pi$, where n is positive integer, therefore the euler relation is real. So when a voltage is maximum or minimum, $\frac{V(l)}{I(l)} = Z_0 \times$ (real quantity).
+Since $\sin(\phi_L - 2 \beta l) = 0$ for all multiples of $\pi$ or $n\pi$, where n is a positive integer, therefore the Euler relation is real. So when a voltage is maximum or minimum, $\frac{V(l)}{I(l)} = Z_0 \times$ (real quantity).
 
 So irrespective of what the line is terminated with, at maximum voltage, the impedance at that point is always real. Even if the line is terminated with a complex impedance, the maximum voltage is always real. If we move to the point of maximum voltage, the impedance that will be measured at that point will always be real. Similarly, at the location where the voltage is minimum, the impedance will again be real.
 
@@ -310,7 +299,7 @@ Z_{\min}=\frac{|V_{\min}|}{|I_{\max}|}
 = R_{\min}=Z_0\left\{\frac{1-|\Gamma_L|}{1+|\Gamma_L|} \right\}
 \label{eqn:minimp}
 \end{dmath}
-Once load impedance, characteristic impedance $Z_0$ as well as the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to equation~\eqref{eqn:maximp} and the highest according to equation~\eqref{eqn:minimp}.
+Once load impedance, characteristic impedance $Z_0$ as well and the reflection coefficient $\Gamma_L$ are known, then we can calculate the maximum and minimum value of impedance that we see on the transmission line. As we move along the transmission line, the impedance will vary. However, there is a bound on the upper and lower value of this impedance; the lowest according to Equation~\eqref{eqn:maximp} and the highest according to Equation~\eqref{eqn:minimp}.
 
 At high frequencies, with the knowledge of the voltage standing wave on the transmission line, the measurement of phase is very difficult and complicated. One can measure the amplitude of a signal reliably but the measurement of phase is rather uncertain. So at high frequencies, we estimate the phase not in a direct manner but rather an indirect one by measuring only the magnitude quantities. As we have seen the phase of the signal in time gets translated into the space phase because the total phase we see on a wave is a combination of space and time relationship between the two waves, the forward and backward wave. 
 
@@ -318,7 +307,7 @@ These waves are related to the time phase and the space phase, $\omega t + \beta
 
 Then 
 \[\dfrac{V_{\max}}{V_{\min}}= VSWR, \rho\] 
-VSWR is a very important quantity because without carrying out phase measurements, we can measure this quantity on a transmission line. Recall that the reflection coefficient is a complex quantity, so a complete knowledge of the reflection coefficient is achieved when both its amplitude and phase are known. However, the quantity which we are defining is known as VSWR or \(\rho\) which is measured only by amplitude.
+VSWR is a very important quantity because without carrying out phase measurements, we can measure this quantity on a transmission line. Recall that the reflection coefficient is a complex quantity, so a complete knowledge of the reflection coefficient is achieved when both its amplitude and phase are known. However, the quantity that we are defining is known as VSWR or \(\rho\) which is measured only by amplitude.
 
 Therefore, by measuring the maximum and minimum values of the standing wave, we get;
 \begin{dmath*}
@@ -338,7 +327,7 @@ Recall that $Z_0$ is real for a lossless transmission line and $Z_L$ can be any 
 \begin{equation*}
 |\Gamma_L|\leq 1\quad (\textnormal{for a passive load})
 \end{equation*}
-What this means is that $|\Gamma_L|$ is the relative amplitude of the reflected wave with respect to the incident wave and its value no more than 1 implies that we do not have any energy source at the load point so the transmitted energy can only be reflected. Therefore, the amplitude of the reflected wave has to always be less than or equal to the amplitude of the incident wave.
+What this means is that $|\Gamma_L|$ is the relative amplitude of the reflected wave with respect to the incident wave and its value of no more than 1 implies that we do not have any energy source at the load point so the transmitted energy can only be reflected. Therefore, the amplitude of the reflected wave has to always be less than or equal to the amplitude of the incident wave.
 
 \subsection{Conditions for which $|\Gamma_L|=1$}
 \textbf{Case 1}: $Z_L=0$ (the line is short-circuited at the load end)
@@ -353,10 +342,10 @@ What this means is that $|\Gamma_L|$ is the relative amplitude of the reflected 
 &= \frac{1 -\frac{Z_0}{Z_L}}{1 + \frac{Z_0}{Z_L}} = \frac{1 - 0}{1 + 0} = 1\\
 \Rightarrow&|\Gamma_L| = 1
 \end{align*}
-\textbf{Case 3}: $Z_L = \jmath X$ (Pure reactance)
+\textbf{Case 3}: $Z_L = j X$ (Pure reactance)
 \begin{align*}
 \Gamma_L &= \frac{Z_L -Z_0}{Z_L + Z_0}\\
-&= \frac{\jmath X - Z_0}{\jmath X + Z_0} = \textnormal{complex}\\
+&= \frac{j X - Z_0}{j X + Z_0} = \textnormal{complex}\\
 \Rightarrow&|\Gamma_L| = 1
 \end{align*}
 So the three cases under which $|\Gamma_L|=1$ are
@@ -365,7 +354,7 @@ So the three cases under which $|\Gamma_L|=1$ are
 \item When the line is open-circuited.
 \item When the line is terminated in a pure reactance
 \end{enumerate}
-Since there is no energy-absorbing circuit at the load end of the line, short circuits, open circuits and ideal reactance cannot absorb power. So, whatever power the generator takes to the load end, it has no option but to return all the power in the reflected waveform.
+Since there is no energy-absorbing circuit at the load end of the line, short circuits, open circuits, and ideal reactance cannot absorb power. So, whatever power the generator takes to the load end, it has no option but to return all the power in the reflected waveform.
 \begin{align*}
 VSWR = \frac{1+|\Gamma_L|}{1-|\Gamma_L|}
 \end{align*}
@@ -373,11 +362,11 @@ The VSWR will always be greater than 1, the best case is $|\Gamma_L|=0$ (zero re
 
 So $1\leq\rho\leq\infty$, where $\rho=1$ represents no reflected wave on the transmission line that is, full power is transferred to the load and $\rho = \infty$ means so much reflection on the transmission line or less efficiency of power transfer to the load. So, every circuit design tries to make VSWR as close to 1 as possible. A higher value of VSWR indicates more mismatch on the transmission line or a higher value of the reflected wave on the transmission line.
 
-So VSWR is one of the most important quantities at high frequencies. When designing a circuit, we try to make sure the VSWR on the transmission line is close to one as possible, making sure the circuit is efficiently transferring power to the load end of the line. Once $\rho$ or VSWR is defined, we can relate it to the maximum and minimum impedance that can be seen on the transmission line.
+So VSWR is one of the most important quantities at high frequencies. When designing a circuit, we try to make sure the VSWR on the transmission line is as close to one as possible, making sure the circuit is efficiently transferring power to the load end of the line. Once $\rho$ or VSWR is defined, we can relate it to the maximum and minimum impedance that can be seen on the transmission line.
 
 \section{Maximum and Minimum Resistance}
-From equations~\eqref{eqn:maximp} and~\eqref{eqn:minimp}, we can express the maximum and minimum impedance in terms of $\rho$\footnote{
-Recall from equation~\eqref{eqn:vswr} that $\rho = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}$
+From Equations~\eqref{eqn:maximp} and~\eqref{eqn:minimp}, we can express the maximum and minimum impedance in terms of $\rho$\footnote{
+Recall from Equation~\eqref{eqn:vswr} that $\rho = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}$
 } such that
 \begin{dmath}
 R_{\max} = Z_0 \left(\frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}\right)
@@ -393,7 +382,7 @@ This implies that for any transmission line terminated with an arbitrary impedan
 
 We know that the impedance known at any point in a transmission line can always be transformed to any other point using the impedance transformation relation. Hence knowing the location at voltage maximum or minimum, since the impedance value is known there, then we can transform the impedance value towards the load to get the load impedance. This essentially opens up a measurement technique for unknown impedance.
 
-At high frequencies, if we have a complex impedance, its measurement is quite tedious because we cannot measure phase accurately. Now we have a mechanism for measuring the phase indirectly. As we have mentioned, the phase gets reflected into the standing wave pattern on the location of voltage maximum and minimum. So if we measure VSWR and the location of $V_{\max}$ and $V_{\min}$ we can always transform $R_{\max}$ or $R_{\min}$ to the location of the load which is nothing but the load impedance. So if we transform from the load impedance to the voltage maximum or minimum we would get $R_{\max}$ and $R_{\min}$. In summary, ig the location of $V_{\max}$ from the load is known and the value of impedance at that location, and the distance of the load from that point are also known, then the transformation of $R_{\max}$ or $R_{\min}$ to load end should give load impedance.
+At high frequencies, if we have a complex impedance, its measurement is quite tedious because we cannot measure phase accurately. Now we have a mechanism for measuring the phase indirectly. As we have mentioned, the phase gets reflected into the standing wave pattern on the location of voltage maximum and minimum. So if we measure VSWR and the location of $V_{\max}$ and $V_{\min}$ we can always transform $R_{\max}$ or $R_{\min}$ to the location of the load which is nothing but the load impedance. So if we transform from the load impedance to the voltage maximum or minimum we would get $R_{\max}$ and $R_{\min}$. In summary, if the location of $V_{\max}$ from the load is known and the value of impedance at that location, and the distance of the load from that point are also known, then the transformation of $R_{\max}$ or $R_{\min}$ to load end should give load impedance.
 
 When we discuss the application of transmission lines we will learn that this technique is used for measuring complex impedances. Then we will explicitly derive the expression for the unknown impedance which is terminated to a transmission line. 
 
@@ -401,13 +390,14 @@ When we discuss the application of transmission lines we will learn that this te
 \subsubsection*{Maximum and Minimum Resistance}
 A $50\Omega$ transmission line is connected to a parallel combination of a $100\Omega$ resistance and a 1nF capacitance.
 
-(a) Find the VSWR on the line at a frequency of 2MHz.
-
-(b) Find the maximum and minimum resistance seen on the line.
+\begin{enumerate}[(a)]
+\item Find the VSWR on the line at a frequency of 2MHz.
+\item Find the maximum and minimum resistance seen on the line.
+\end{enumerate}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{graphics/d1}
+\includegraphics[width=\linewidth]{\pathtopartone/graphics/d1}
 \caption{Circuit diagram}
 \end{figure}
 
@@ -433,7 +423,8 @@ Z_{L}=\frac{100}{1 + j1.2566}
 = 62.3\angle-51.5^o\Omega
 \end{dmath*}
 
-\item Next, we find the refection coefficient.\\
+\item Next, we find the reflection coefficient.
+
 Reflection coefficient at load point,
 \begin{dmath*}
 \Gamma_{L}=\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}
@@ -451,7 +442,7 @@ Now, we know the reflection coefficient, we can find out VSWR, $\rho$, given as;
 
 \item 
 \subsubsection*{(b) Maximum and Minimum Resistance}
-$R_\max$ and $R_\min$ can be calculated from equations~\eqref{eqn:maximprho} and~\eqref{eqn:minimprho} such that
+$R_\max$ and $R_\min$ can be calculated from Equations~\eqref{eqn:maximprho} and~\eqref{eqn:minimprho} such that
 \begin{align*}
 R_\max = 50 \times 3 = 150\Omega\\
 R_\min = \frac{50}{3} = 16.67\Omega
@@ -464,7 +455,7 @@ R_\min = \frac{50}{3} = 16.67\Omega
 \section*{Exercises}
 \begin{ExerciseList}
 \Exercise[label={ex51}]
-Measurements are made at 5kHz on a 0.5-mile long transmission line. The results show that the characteristic impedance is $94\angle-23.2^o$, the total attenuation is 0.06Nepers/mi and the phase shift between the input and output is 8\textdegree. Find the $R, L, G$ and $C$ per mile.
+Measurements are made at 5kHz on a 0.5-mile-long transmission line. The results show that the characteristic impedance is $94\angle-23.2^o$, the total attenuation is 0.06Nepers/mi and the phase shift between the input and output is 8\textdegree. Find the $R, L, G$ and $C$ per mile.
 \Answer[ref={ex51}]
 $R = 20.8\varOmega/$mi, $L = 630\mu H/$mi, $G = 0$, and $C = 0.103\mu F/$mi.
 
@@ -474,7 +465,7 @@ A 600$\varOmega$ transmission line is 150m long operates at 400kHz with $\alpha 
 (a) $\Gamma_L = -0.2 + j0.4$ (b) $\Gamma(L) = -0.09 + j0.20$ (c) $Z(L) = 502.7\angle22.8^o\varOmega$ (d) $V(L) = 75.0\angle167.3^o$V (e) $|V|_\max = 85.5$V
 
 \Exercise[label={ex53}]
-Prove that the attenuation constant is comparable to the phase constant (that is $\alpha\approx\beta$) for a lowloss transmission line.
+Prove that the attenuation constant is comparable to the phase constant (that is $\alpha\approx\beta$) for a low-loss transmission line.
 
 \Exercise[label={ex54}]
 In a lossless transmission line, how does the absence of resistance impact the power transfer capability?
