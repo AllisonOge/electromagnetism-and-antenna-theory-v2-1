@@ -1,16 +1,16 @@
 \chapter{Power Flow in an Electromagnetic Wave}\label{lec:lec27}
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt,  hidealllines=true]
 \section{Objectives}
 \begin{enumerate}[(i)]
-	\item To understand the power flow associated with electromagnetic fields from Maxwell's equations
-	\item The importance of poynting theorem in power flow
+\item To understand the power flow associated with electromagnetic fields from Maxwell's equations
+\item The importance of poynting theorem in power flow
 \end{enumerate}
 \end{mdframed}
-	\subsection{INTRODUCTION}
+\subsection{INTRODUCTION}
 Up till now, we have seen that a time-varying electric and magnetic field constitutes a wave phenomenon. Thus this wave requires some power or energy to flow. In this chapter, we look at the power flow associated with electromagnetic waves. We do some derivation starting with Maxwell's Equation and find out the power flow associated with a time-varying electromagnetic field.
 
- We have also investigated a wave which is called uniform plane wave i.e. a wave propagation in an unbound medium. However, in developing the power flow equations associated with electromagnetic waves, we would do a general analysis and not restrict our focus to uniform plane waves, at the end we find out the power flow associated with uniform plane waves which we have discussed in \autoref{lec:lec25} and \autoref{lec:lec26}. So whenever we are at the beginning of analysis in electromagnetics, we go back to Maxwell's Equations and find answers that are consistent with Maxwell's equation. The same thing we do have if we are asked the question,  \emph{``What power do we get for the power flow associated with an electromagnetic field?"}
+We have also investigated a wave which is called uniform plane wave i.e. a wave propagation in an unbound medium. However, in developing the power flow equations associated with electromagnetic waves, we would do a general analysis and not restrict our focus to uniform plane waves, at the end we find out the power flow associated with uniform plane waves which we have discussed in \autoref{lec:lec25} and \autoref{lec:lec26}. So whenever we are at the beginning of analysis in electromagnetics, we go back to Maxwell's Equations and find answers that are consistent with Maxwell's equation. The same thing we do have if we are asked the question,  \emph{``What power do we get for the power flow associated with an electromagnetic field?"}
 
 From Maxwell's Equation, we have;
 \begin{align}
@@ -102,7 +102,7 @@ While the term $-\int_{v}\sigma|\bar{E}|^{2}dv $ represents the total ohmic loss
 So if we have an amount of energy enclosed in a surface, these 3 total losses combined must be equal to the total outward energy going out from the closed surface (s). Since there is no other mechanism for energy consumption, from the law of conservation of energy, we get that $ \oint(\bar{E}\times\bar{H})\cdot\bar{da} $ must represent the net flow of energy coming out from the closed surface. So $ \oint(\bar{E}\times\bar{H})\cdot\bar{d}a $ (the net power outflow from a closed surface)  gives the net power flow of the electric and magnetic field from that closed surface. This is called \textbf{Poynting theorem}
 
 \footnote{
-\includegraphics[scale=0.04]{graphics/poynting}
+\includegraphics[scale=0.04]{\pathtopartone/graphics/poynting}
 John Henry Poynting, (1852-1914), English physicist, renowned for the Poynting vector, Poynting Effect, and Poynting's theorem. He taught physics at Mason Science College and later at the University of Birmingham until his passing.
 }
 
@@ -119,11 +119,11 @@ As we have seen earlier, we are interested only in the analysis of time-harmonic
 
 Now we define the general time-varying electric and magnetic fields which vary as a function of space and time as;
 
-$ \bar{E}=\bar{E_0} e^{\jmath\omega t+j\phi_{e}}$,
-$ \bar{H}=\bar{H_0} e^{\jmath\omega t+j\phi_{h}}$.
-We take the unit vector associated with $ \bar{E_0} $ and  $ \bar{H_0} $ as $ \hat{e} $ and $ \hat{h} $, so we remember that we are only taking either the real or the imaginary part of $ e^{\jmath\omega t} $ for simple analysis. It doesn't mean $ \bar{E} $ cannot be complex. But for simplicity,
-$ \bar{E}=\mathfrak{Re}(E_0e^{\jmath\omega t}e^{j\phi e} )\cdot\hat{e} $   
-$ \bar{H}=\mathfrak{Re}(H_0e^{\jmath\omega t}e^{j\phi h} )\cdot\hat{h} $ 
+$ \bar{E}=\bar{E_0} e^{j\omega t+j\phi_{e}}$,
+$ \bar{H}=\bar{H_0} e^{j\omega t+j\phi_{h}}$.
+We take the unit vector associated with $ \bar{E_0} $ and  $ \bar{H_0} $ as $ \hat{e} $ and $ \hat{h} $, so we remember that we are only taking either the real or the imaginary part of $ e^{j\omega t} $ for simple analysis. It doesn't mean $ \bar{E} $ cannot be complex. But for simplicity,
+$ \bar{E}=\mathfrak{Re}(E_0e^{j\omega t}e^{j\phi e} )\cdot\hat{e} $   
+$ \bar{H}=\mathfrak{Re}(H_0e^{j\omega t}e^{j\phi h} )\cdot\hat{h} $ 
 where  $ \hat{e} $ and $ \hat{h} $ 
 gives the unit vector of the electric and magnetic field, $ \phi_{e} $ and $ \phi_{h} $ are the phases of the electric and magnetic fields and $ E_0 $ and  $ H_0 $ are the amplitude of the electric and magnetic fields. So the real parts give an instantaneous value of the electric and magnetic field. Once this is known, we can find the Poynting vector at that instant in time.
 \begin{align*}
@@ -180,7 +180,7 @@ This is the concept regularly used in finding out the average power flow associa
 We can then apply this concept to a case of a uniform plane wave. So we may ask, \emph{how much power density does a uniform plane wave carry when it travels in a media?} In Uniform plane waves, electric and magnetic fields are perpendicular to each other. With $ \bar{E} $ and $ \bar{H} $ shown below
 \begin{figure}[h]
 \centering
-\textsc{\includegraphics[width=.7\linewidth]{graphics/cc}}
+\textsc{\includegraphics[width=.7\linewidth]{\pathtopartone/graphics/cc}}
 \caption{Direction of power flow of an electromagnetic wave}
 \end{figure}
 
@@ -247,20 +247,18 @@ Hence for a good conductor, we have,
 So by using the concept of Poynting vector, we can find out the average power flow of any medium and at any particular location in space.
 
 In the case of dielectric, it is straightforward because the intrinsic impedance is real. For a good conductor with finite conductivity, we go to the more general expression as the intrinsic impedance is complex.
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt,  hidealllines=true]
 \section{Exercises}
 \begin{ExerciseList}
-	\Exercise[label={ex11}] Explain the significance of Maxwell's Equations in the analysis of power flow associated with electromagnetic waves.
-	\Exercise[label={ex11}] Derive the expressions for power flow in electromagnetic waves using Maxwell's Equations.
-    \Exercise[label={ex11}] Define the Poynting vector and explain its significance in describing power flow associated with electromagnetic fields.
-	\Exercise[label={ex11}] Discuss the conditions under which power flow occurs, considering the relationship between electric and magnetic fields.
-	\Exercise[label={ex11}] Explain why time average power flow is considered more useful than instantaneous power flow in electromagnetic waves.
-	\Exercise[label={ex11}] Derive the expression for time average power flow associated with electric and magnetic fields in terms of the Poynting vector.
-	\Exercise[label={ex11}] Discuss the power flow associated with a uniform plane wave in an unbound medium
-	\Exercise[label={ex11}] Demonstrate how vector identities are applied to arrive at the expression 
-	\(E \times H = -\mu\left(\frac{\partial}{\partial t} \lvert H \rvert^2\right) - 2\epsilon\left(\frac{\partial}{\partial t} \lvert E \rvert^2\right) - E \cdot J\)
-	
-	
+\Exercise[label={ex271}] Explain the significance of Maxwell's Equations in the analysis of power flow associated with electromagnetic waves.
+\Exercise[label={ex272}] Derive the expressions for power flow in electromagnetic waves using Maxwell's Equations.
+\Exercise[label={ex273}] Define the Poynting vector and explain its significance in describing power flow associated with electromagnetic fields.
+\Exercise[label={ex274}] Discuss the conditions under which power flow occurs, considering the relationship between electric and magnetic fields.
+\Exercise[label={ex275}] Explain why time average power flow is considered more useful than instantaneous power flow in electromagnetic waves.
+\Exercise[label={ex276}] Derive the expression for time average power flow associated with electric and magnetic fields in terms of the Poynting vector.
+\Exercise[label={ex277}] Discuss the power flow associated with a uniform plane wave in an unbound medium
+\Exercise[label={ex278}] Demonstrate how vector identities are applied to arrive at the expression 
+\(E \times H = -\mu\left(\frac{\partial}{\partial t} \lvert H \rvert^2\right) - 2\epsilon\left(\frac{\partial}{\partial t} \lvert E \rvert^2\right) - E \cdot J\)
 \end{ExerciseList}
 \end{mdframed}

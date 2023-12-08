@@ -1,17 +1,17 @@
 \chapter{Introduction to Smith chart}\label{lec:lec7}
 
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
-    \subsection{\textbf{Objectives}}
-    At the end of this lecture, the student should have a full understanding of:
-    \begin{enumerate}[(i)]
-    \item Smith chart's characteristics using the constant reactance and resistance circles
-    \item Using the smith chart to solve transmission line analysis and impedance calculation
-    \item Using normalized impedance and admittance to analyze loads
-    \item identifying network parameters; maximum and minimum voltage and current, maximum  and minimum resistance using the VSWR circle
-    \item understand the concept of VSWR circle and movement along the transmission line  using the VSWR cirlce
-    \item Identifying the types of load from the standing wave pattern: purely reactive loads, purely resistive loads, inductive loads and capacitive loads
-    \end{enumerate}
+\subsection{\textbf{Objectives}}
+At the end of this lecture, the student should have a full understanding of:
+\begin{enumerate}[(i)]
+\item Smith chart's characteristics using the constant reactance and resistance circles
+\item Using the Smith chart to solve transmission line analysis and impedance calculation
+\item Using normalized impedance and admittance to analyze loads
+\item identifying network parameters; maximum and minimum voltage and current, maximum  and minimum resistance using the VSWR circle
+\item understand the concept of VSWR circle and movement along the transmission line  using the VSWR cirlce
+\item Identifying the types of load from the standing wave pattern: purely reactive loads, purely resistive loads, inductive loads and capacitive loads
+\end{enumerate}
 \end{mdframed}
 
 \vspace{0.7cm}{Previously, we were able to derive equations for different parameters for a transmission line such as;}
@@ -37,7 +37,7 @@ It is very important to understand that the graphical method does not give the v
 In this section, the basic idea is to take the impedance which is normalized with respect to characteristics impedance and do transformation of these impedance into the complex reflection coefficient plane called \textbf{GAMMA}-plane. By doing this then we can transform all impedance from impedance plane to reflection coefficient plane and then we see that this representation of impedances in the reflection coefficient plane makes the calculation much simpler than if we take impedances. The resistive part lies on the real and positive axis and the imaginary part can be positive or negative. Resistance is always real and positive, no negative resistances here. Positive reactance is for inductance and negative reactance for capacitance. So plotting impedance on the complex impedance plane, we get the the diagram below. We saw for the transmission line, what really matter is \index{normalized impedance}. Let us assume our transmission line is lossless. Then the characteristics impedance is a real quantity. All impedance are normalized to the characteristics impedance.
 \begin{figure}[h]
 \centering
-{\includegraphics[width=0.8\linewidth]{graphics/Z_plane1}}
+{\includegraphics[width=0.8\linewidth]{\pathtopartone/graphics/Z_plane1}}
 \caption{Absolute impedance on the complex $Z$-plane}
 \label{fig:mjhdj}
 \end{figure}
@@ -52,7 +52,7 @@ $Z_L$ is the absolute impedance. So our representation of the normalized impedan
 \end{equation*}
 Let us represent this expression graphically on the complex z-plane as shown in figure~\ref{fig:transline2}.
 \begin{figure}[h]
-\center\includegraphics[width=0.8\linewidth]{graphics/Zplane}
+\center\includegraphics[width=0.8\linewidth]{\pathtopartone/graphics/Zplane}
 \caption{Normalized impedance on the complex Z-plane}
 \label{fig:transline2}
 \end{figure}
@@ -62,7 +62,7 @@ From the figure~\ref{fig:transline2}, it is seen that the resistance \textbf{r} 
 Graphically, the statement is represented in the figure~\ref{fig:oigvbnkliu}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\linewidth]{graphics/oigvbnkliu}
+\includegraphics[width=0.6\linewidth]{\pathtopartone/graphics/oigvbnkliu}
 \caption{Representation of all passive loads on the complex Z- plane}
 \label{fig:oigvbnkliu}
 \end{figure}
@@ -92,7 +92,7 @@ Normalizing we have;
 With this transformation relationship, if the \textbf{normalized impedance} is known, we can find the \textbf{reflection coefficient} and vice versa. Hence in general, the reflection coefficient will have a real and imaginary part. It can be written in either rectangular or polar form. Let the real part of the reflection coefficient be denoted by u and the imaginary part by v. $\Gamma$ u + jv = $re^{j\theta}$ in polar form = $\Gamma$ = $\frac{1 + \gamma}{1-\Gamma}$. So transformation between normalized impedance and reflection coefficient is a one to one relationship. If we plot reflection coefficient for all passive load as we have seen earlier, for passive load, the magnitude of the reflection coefficient is always less than or equal to 1 At open or closed circuit $\Gamma$ = 1. For any other impedance, $\Gamma$ < 1. So if we plot the reflection coefficient into the complex reflection coefficient plane, what we called the complex gamma-plane, we have the right half $\bar{Z_L}$-plane mapping into a unit circle in the gamma-plane  as shown in figure~\ref{fig:oiuhgvcx}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1.05\linewidth]{graphics/plane_transform}
+\includegraphics[width=1.05\linewidth]{\pathtopartone/graphics/plane_transform}
 \caption{Z-Plane and Complex $\Gamma$-plane}
 \label{fig:oiuhgvcx}
 \end{figure}
@@ -182,7 +182,7 @@ So all point on the circle of constant resistance have same resistance value in 
 In order to visualize the plot of the circles of constant resistance we need to transform the limits of the values of $r$, the real part of normalized impedance $\bar{Z_L}$. The limits of $r$ are $[0, \infty]$ both inclusive and thus the corresponding values of the radius of these circles are $[1, 0]$. Plotting the circle for different values of $r$, we get the plot in figure~\ref{fig:ouytre}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/fig2.35}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/fig2.35}
 \caption{Plot of the Circles of Constant Resistance at the limits of the values of $r = 0$, $r = 1$ and at $r = \infty$}
 \label{fig:ouytre}
 \end{figure}
@@ -192,7 +192,7 @@ Let's plot for various values of $r$, by varying its value from 0 to $\infty$. A
 The complete plot of the circles of constant resistance for the values of increasing $r$ is shown in figure~\ref{fig:rghmgfcx}. It can be said that the centre shifts towards the right and the radius keeps reducing towards zero. At $r = \infty$, the centre is (1,0) and the radius is zero, which is denoted as a dot on the real axis at 1.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{graphics/const_resistance_circles}
+\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/const_resistance_circles}
 \caption{Plot of the circles of constant resistance for increasing values of $r$}
 \label{fig:rghmgfcx}
 \end{figure}
@@ -207,7 +207,7 @@ At $x = \pm\infty$, the centre from equation~\eqref{eqn:tranformedreactance} is 
 Figure~\ref{fig:uytrdbn} shows the plot of the circles of constant reactance.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/plot_of_const_reactance_circles}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/plot_of_const_reactance_circles}
 \caption{Plot of the circles of constant reactance at the limits $x = \pm\infty$ and $x = 0$ as well as inbetween.}
 \label{fig:uytrdbn}
 \end{figure}
@@ -217,13 +217,13 @@ As seen in figure 2.37, the centre always lies on a line $u = 1$ and as $x$ incr
 The superimposed plots of the constant resistance and constant reactance circles are thus shown in figures~\ref{fig:ijnbvcxw} and~\ref{fig:sddfghj}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1.1\linewidth]{graphics/const_resistance_reactance_circles}
+\includegraphics[width=1.1\linewidth]{\pathtopartone/graphics/const_resistance_reactance_circles}
 \caption{Plot of the two sets of circles superimposed}
 \label{fig:ijnbvcxw}
 \end{figure}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\linewidth]{graphics/relevant_region_SC}
+\includegraphics[width=0.8\linewidth]{\pathtopartone/graphics/relevant_region_SC}
 \caption{Masking of the superimposed set to relevant region}
 \label{fig:sddfghj}
 \end{figure}
@@ -243,12 +243,12 @@ Some of the observations we made are summarized as follows:
 \section{The Smith Chart\index{The Smith chart}}
 The superposition of the constant resistance circle and the constant reactance circle is now a coordinate system for impedance on the complex gamma-plane. This is called the \emph{Smith chart}\index{smith chart}\footnote{
 \centering
-\includegraphics[width=0.7\linewidth]{graphics/"smith_chart (2)"}
+\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/"smith_chart (2)"}
 \centering
 Figure 2.40: The Complete Smith Chart
 }\index{smith chart}. It was developed by PHILIP HAGAR SMITH
 \begin{figure}[h]
-\includegraphics[scale=0.09]{graphics/a21}
+\includegraphics[scale=0.09]{\pathtopartone/graphics/a21}
 
 
 Philip Hagar Smith (1905-1987), American electrical engineer known for creating the Smith Chart. While at Bell Telephone Labs after graduating from Tufts in 1928, he devised the chart to display and assess various complex impedance parameters, driven by his lifelong passion for graphical math representations. This interest in representing mathematical relationships in graphical form is what led to the invention of the Smith chart.
@@ -261,7 +261,7 @@ It is plotted on the complex reflection co-efficient plane in two dimensions and
 Figure~\ref{fig:473-drawingjhgfd} shows the simplified version that will allow us to mark out some important points.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{graphics/"473 drawingjhgfd"}
+\includegraphics[width=0.7\linewidth]{\pathtopartone/graphics/"473 drawingjhgfd"}
 \caption{A Simplified Smith Chart}
 \label{fig:473-drawingjhgfd}
 \end{figure}
@@ -273,21 +273,21 @@ Figure~\ref{fig:473-drawingjhgfd} shows the simplified version that will allow u
 
 \item At point B where the two sets of circles disintegrate into, corresponds to $r = \infty$ and $x = \pm\infty $ which is an open circuit.
 
-\item Any point between A and B on the outermost circle represents pure reactances because for these points, r = 0. Above the $u$ axis inside the limit circle, we have the inductive loads, and below the $u$ axis in the limit circle, we have the capacitive loads (it, therefore means we can tell what kind of load we have by where it lies on the smith chart).
+\item Any point between A and B on the outermost circle represents pure reactances because for these points, r = 0. Above the $u$ axis inside the limit circle, we have the inductive loads, and below the $u$ axis in the limit circle, we have the capacitive loads (it, therefore means we can tell what kind of load we have by where it lies on the Smith chart).
 
 \item At point C where $r = 0$ and $x = +1$, corresponds to purely reactance whose magnitude is equal to the \index{characteristic impedance} of the line.
 
 \item At point D where $r = 0$ and $x = -1$ represent a purely capacitive reactance whose magnitude is equal to the characteristic impedance of the line.
 
-\item The centre of the \index{limit circle} has one more special point M which is the origin of the smith chart of the gamma-plane is the intersection of $r = 1$ circle and $x = 0$ line.
+\item The centre of the \index{limit circle} has one more special point M which is the origin of the Smith chart of the gamma-plane is the intersection of $r = 1$ circle and $x = 0$ line.
 
-At M the impedance is equal to the characteristic impedance of the line and that is the point of greatest interest to us because that point represents the \textbf{matched condition} of the transmission line. So when the impedance lies on the centre of the smith chart, which correspond to the magnitude of the reflection coefficent, $r_L = 0$. This point represent the matched conditon of the transmission line
+At M the impedance is equal to the characteristic impedance of the line and that is the point of greatest interest to us because that point represents the \textbf{matched condition} of the transmission line. So when the impedance lies on the centre of the Smith chart, which correspond to the magnitude of the reflection coefficent, $r_L = 0$. This point represent the matched conditon of the transmission line
 \end{enumerate}
 These points if properly understood can be used to solve transmission line problems with ease.
 
 To solve transmission line problems using the Smith chart, it should be held such that the most clustered portion of the circle should be towards the right hand of the user because the real axis at the complex gamma-plane is in that direction and the complex imaginary plane is in the vertical direction. If done so then calculation on conversion from the complex reflection co-efficient plane to the impedance plane and vice versa can be done easily as well as marking of impedance points on the Smith chart to use to find co-ordinates of the point which gives the reflection co-efficient easily. In conclusion, the Smith chart is a handy tool for solving very complex \index{impedance transformation} problems.
 
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section*{Exercises}
 \begin{ExerciseList}
@@ -301,6 +301,6 @@ Why do we limit our analysis on the Smith chart to the limit circle?
 At what point in solving transmission line problems do we consider the wavelength's scale?
 
 \Exercise[label={ex34}]
-Prove mathematically, the one-to-one relationship that is involved in impedance transformation from the ${Z}$-plane to the $\Gamma$-plane.
+Prove mathematically, the one-to-one relationship that is involved in impedance transformation from the ${Z}$-plane to the $\Gamma$\textemdash\;plane.
 \end{ExerciseList}
 \end{mdframed}

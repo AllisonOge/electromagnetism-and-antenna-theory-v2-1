@@ -18,14 +18,14 @@ F_{x} & F_{y} & F_{z}
 
 \subsection{Divergence or Curl Producing Vector Fields}
 To add a bit of a feel, let us ask what kind of field will give you divergence or curl. We can draw a vector field shown below.
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{graphics/fig171}
 \caption{Horizontal Vector Field}
 \end{figure}
 
 Along the horizontal direction, the vectors are the same in magnitude and direction. Going down vertically across, the magnitude changes for 2 to 3 and 3 to 4. 1 to 2 and 4 to 5 remain the same. A small area \textbf{A} placed at the location shown, can create some kind of shear on the object depending on the strength of the vector through the top and bottom of \textbf{A}. \textbf{B} on the other hand will turn counterclockwise while \textbf{C} will turn clockwise as the force created by the arrow magnitude is more at the top for \textbf{C} compared to the bottom of \textbf{C} and more at the bottom of \textbf{B} compared to the top. Hence rotation is experienced in that region. If we however consider a field shown below. That is the field whose magnitude is changing in the \textbf{x} direction.
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{graphics/fig172}
 \caption{Changing Field Magnitude}
@@ -62,17 +62,17 @@ $\nabla^2 f= \nabla \cdot (\nabla f) =$ Divergence of gradient of the scalar fun
 %\centering
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig173}
+%\includegraphics[width=.4\linewidth]{graphics/fig173}
 %\label{fig:fig173}
 %\end{minipage}%
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig173b}
+%\includegraphics[width=.4\linewidth]{graphics/fig173b}
 %\label{fig:fig173b}
 %\end{minipage}
 %\begin{minipage}{.5\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig173c}
+%\includegraphics[width=.4\linewidth]{graphics/fig173c}
 %\label{fig:fig173c}
 %\end{minipage}%
 %\caption{line surface and volume integration}
@@ -107,7 +107,7 @@ Later we shall see that this operation will be required when solving the problem
 % insert image here
 When we do the integration along a path, it is called \textbf{Contour or Line Integration}, while integration over a surface we call \textbf{Surface Integration}. And since a surface is two-dimensional in nature, we have a double integral.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{graphics/fig17.3}
 \caption{line surface and volume integration}
@@ -120,7 +120,6 @@ We have important theorems which connect line integrals to surface integrals and
 It should be kept in mind however that integral is a Scalar quantity. Thus the final answer after integration will always be a Scalar quantity. We can define line, surface and volume integration if we take some vector $\bar{A}$ i.e. $\bar{A}$ is a vector field. 
 
 \subsection{Line Integral}
-
 The line integration around some path C is ${\displaystyle \int  \bar{A} \cdot \bar{dl}}$. If we integrate along the contour in the direction shown, $dl$ has both magnitude and direction. If the path is a closed path, or mathematically we say if the contour is a closed contour, we have a closed line integral $= {\displaystyle \oint  \bar{A} \cdot \bar{dl}}$.
 
 \begin{equation}
@@ -145,7 +144,7 @@ We can carry out a similar operation for the surface integral as having an area 
 
 Surface Integral =
 \begin{equation*}
-{   \iint \bar{A} \cdot d\bar{A}= \text{open surface} }
+\iint \bar{A} \cdot d\bar{A}= \text{open surface}
 \end{equation*}
 \begin{equation}
 \oiint \bar{A} \cdot d\bar{A} = \text{closed surface}
@@ -176,7 +175,7 @@ The third is the volume integral, if we have some function which is a Scalar $f$
 Now when we try to relate the different integrals, ie, the line integral to the surface integral and surface integral to a volume integral, essentially the vector fields are operated on by the DEL $\nabla$ operators, then there is a relationship between these del operated fields in the integration domain. So two important theorems essentially relate this i.e. they are called the \textbf{Divergence theorem} and the \textbf{Stokes theorem}.
 
 \subsection {Divergence Theorem}
-\This converts a surface integral for a vector field to a volume integral.textbf{This converts a surface integral for a vector field to a volume integral.} If we have a vector field $\bar{A}$, then the divergence theorem states that for a \textbf{closed surface}, we have that:
+This converts a surface integral for a vector field to a volume integral. \textbf{This converts a surface integral for a vector field to a volume integral.} If we have a vector field $\bar{A}$, then the divergence theorem states that for a \textbf{closed surface}, we have that:
 \begin{equation}
 \oiint \bar{A} \cdot \bar{da} = \iiint (\nabla \cdot \bar{A})dV
 \end{equation}
@@ -196,7 +195,7 @@ It converts a closed line integral to an open surface integral or vice-versa.
 Charles George Gabriel Stokes, 1st Baronet, 1819-1903, Irish physicist and mathematician at University of Cambridge, made contribution to Navier-Stokes equation and to physics, optics, polarization, and fluorescence.
 }
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{graphics/fig17.8}
 \caption{Stokes theorem}
@@ -206,25 +205,25 @@ Charles George Gabriel Stokes, 1st Baronet, 1819-1903, Irish physicist and mathe
 %\centering
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig176}
+%\includegraphics[width=.4\linewidth]{graphics/fig176}
 %\label{fig:fig176}
 %\end{minipage}%
 %\begin{minipage}{.25\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig176b}
+%\includegraphics[width=.4\linewidth]{graphics/fig176b}
 %\label{fig:fig176b}
 %\end{minipage}
 %\begin{minipage}{.5\textwidth}
 %\centering
-%\includegraphics[width=.4\linewidth]{\pathtopartone/graphics/fig176c}
+%\includegraphics[width=.4\linewidth]{graphics/fig176c}
 %\label{fig:fig176c}
 %\end{minipage}%
 %\caption{surface integral to volume integral conversion}
 %\end{figure}
 
-The surface shown is open and we have the boundary defined by contour $C$. Now we can have a small area with unit vector $\hat n$.
+The surface shown is open and we have the boundary defined by contour $C$. Now we can have a small area with unit vector $\hat{n}$.
 
-Then we can have the contour $C$ for which line integral was defined for vector $\bar{A}$. So \emph{how do we define the path $C$ with respect to $\hat{n}$?}. The convention is to follow the right-hand rule. If our contour as shown is going anticlockwise, then $\hat n$ goes outward, if it goes clockwise $\hat n$ goes inward.
+Then we can have the contour $C$ for which line integral was defined for vector $\bar{A}$. So \emph{how do we define the path $C$ with respect to $\hat{n}$?}. The convention is to follow the right-hand rule. If our contour as shown is going anticlockwise, then $\hat{n}$ goes outward, if it goes clockwise $\hat{n}$ goes inward.
 
 %Let us illustrate this better with a very clear diagram. 
 \begin{figure}
@@ -240,10 +239,8 @@ Note that the bottom of the surface is open as compared to when this was not the
 
 So this theorem can be used to convert a line integral to a surface integral or vice-versa.
 
-
-\definecolor{lightblue}{RGB}{173,216,230}
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
-\subsection{Summary}
+\subsection*{Summary}
 To summarize all these again, if we have a closed surface, the closed surface integral and the integral of the volume enclosed by that closed surface can be related by the divergence theorem.
 \begin{equation}
 \oiint \bar{A}\cdot\bar{dA} = \iiint_v(\nabla\cdot\bar{A})dV
@@ -270,94 +267,80 @@ For a given property change, the $\bar{E}$ changes, $\bar{D}$ remains the same, 
 However, we will be dealing with media that are homogenous and isotropic. This means that the dielectric constant of the medium, which we shall consider, has  $\varepsilon$ that is constant in space and does not change with direction. However, if  $\varepsilon$  was anisotropic, then  $\varepsilon$  becomes a $3\times 3$ matrix of  $\varepsilon$  multiplied by vector $\bar{E}$ . For isotropic medium  $\varepsilon$  is a scalar quantity. So for this course, we deal with the medium where  $\varepsilon$  is a scalar quantity.
 So in a homogeneous and isotropic medium,  $\bar{D}$ is a scalar version of  $\bar{E}$. Comparing  $\bar{D}$ and  $\bar{E}$, they have different magnitudes but with the same direction. However, if the medium were to be anisotropic,  $\varepsilon$ is a $3\times 3$ matrix and it rotates the vector  $\bar{E}$ and in general  $\bar{D}$ and  $\bar{E}$ are not in the same direction.
 
-\begin{figure}
+\begin{minipage}{1\linewidth}
 \centering
 \includegraphics[width=0.7\linewidth]{graphics/isotropicAniso}
-\caption{Isotropic and Anisotropic Medium}
-\end{figure}
+\captionof{figure}{Isotropic and Anisotropic Medium}
+\label{fig:isotropicAniso}
+\end{minipage}
 
 Now we have another quantity which is very useful that we have to define, the \emph{Electric Potential} of the field. The electric field is related to the electric  potential V (scalar ) by 
 $\bar{E}$= -$\nabla $ V.
 So if we know the potential at a point, we can take the gradient to get the electric field at that location. From here we get the unit of the electric field. So if we find the potential, the unit of V is Volts. The del operator is a differential spatial operator$\frac{d}{dx}$ ; i.e $\frac{1}{l} or\frac{1}{m}$ that gives unit of electric field, which is V/m. So this relation of finding out the electric field from the potential comes in very handy whenever we want to find the electric field in a general complex distribution of charges. If we find the electric field  $\bar{E}$ at a particular location and find the component of the electric field for each of the charges which are distributed in space, we carry out vector additions at that point for the electric fields. It is however easier to find the potential of the different charges and add them together. The negative gradient of that gives you the electric field. So these are the basic quantities for representing the electrostatic parameters; the electric field  $\bar{E}$ and the electric potential $V$.
 \end{mdframed}
 
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section{EXERCISES}
 \begin{ExerciseList}
-	\Exercise[label={ex171}] 
-	How is the divergence of a vector field expressed mathematically?
- \Exercise[label={ex172}] 
-		 How is the curl of a vector field expressed mathematically?
-	\Exercise[label={ex173}] 
-	 What is the Laplace operator? Also, what is its mathematical expression?
-	\Exercise[label={ex174}]  Integral operators have to do with the integration of the vector field. True/False
-%	\item Prove that $\nabla^2 \mathbf{F} = \nabla^2 F_x \mathbf{x} + \nabla^2 F_y \mathbf{y} + \nabla^2 F_z \mathbf{z}$
-		\Exercise[label={ex175}] 
-%	\textbf{Question:}
-	Explain the geometric interpretation of a surface integral and how it relates to the flux of a vector field through a surface.
-	
+\Exercise[label={ex171}] 
+How is the divergence of a vector field expressed mathematically?
+\Exercise[label={ex172}] 
+How is the curl of a vector field expressed mathematically?
+\Exercise[label={ex173}] 
+What is the Laplace operator? Also, what is its mathematical expression?
+\Exercise[label={ex174}]  Integral operators have to do with the integration of the vector field. True/False
+% \item Prove that $\nabla^2 \mathbf{F} = \nabla^2 F_x \mathbf{x} + \nabla^2 F_y \mathbf{y} + \nabla^2 F_z \mathbf{z}$
+\Exercise[label={ex175}]
+Explain the geometric interpretation of a surface integral and how it relates to the flux of a vector field through a surface.
 
-		\Exercise[label={ex176}] 
-%	\textbf{Question:}
-	State and explain the divergence theorem and its relationship to surface integrals.
-	
-%	
-%	\Exercise[label={ex177}] 
-%	How does the divergence theorem establish a connection between a volume integral and a surface integral involving a vector field?
-	
-	
 
-	
-	
-	\Exercise[label={ex178}] 
-	 Compare and contrast the physical interpretations of line integrals, surface integrals, and volume integrals. How do these integrals capture different aspects of a mathematical model, and in what scenarios would one choose volume integrals over the other types?
-	
-	
-	
-	\Exercise[label={ex179}] 
-	 What is the Divergence Theorem, and how does it establish a relationship between a volume integral and a surface integral involving a vector field?
-	
-	
-	
-	\Exercise[label={ex1710}] 
-	 Explain how the Divergence Theorem is used in electromagnetics, specifically in the context of electric flux and Gauss's Law.
-	
-	
-	% \Exercise[label={ex1711}] 
-	%  Discuss practical engineering scenarios where the Divergence Theorem is applied. How does it simplify problem-solving in fluid mechanics or heat transfer, for example?
-	
-	
-	\Exercise[label={ex1712}] 
-	Explain the statement and significance of Stokes' Theorem. How does it relate the circulation of a vector field around a closed curve to the behavior of the field on the surface enclosed by the curve?
-	 
-	  Use the Divergence Theorem to find the outward flux of \( \mathbf{F} \) across the boundary of the region.
-	  
-	  % 	\Exercise[label={ex1713}] 
-	  % What is the electric potential energy of two electrons separated by 5.0 mm? If the separation increases, does the potential energy decrease or increase?
-	  % \Answer
-	  % \[ u = 2.28 \times 10^{-19} \]
-	  
-	  % \Exercise[label={ex1714}] 
-	  % The electric field inside a non-conducting sphere of radius $R$ with charge spread uniformly throughout its volume is radially directed and has magnitude:
-	  % \[ E(r) = \frac{q}{4\pi\varepsilon_0 R^3} \]
-	  
-	 %  Taking $V=0$ at the center of the sphere, find the electric potential $V$ inside the sphere.
-	  
-	 
-	 % 	\Exercise[label={ex1715}] 
-	 %  Calculate the average magnitude of the electric field between two points with a potential difference of 150 V between them and are separated by a distance of 2.5 cm.
-	 % \Answer 6.0 x 10^3 v/m
-	  
-	  
-	  
-		% \Exercise[label={ex1716}] 
-	 %  An electric field is expressed as $\mathbf{E} = 2\mathbf{j} + 3\mathbf{j}$. Find the potential difference ($V_A - V_B$) between two points $A$ and $B$ whose position vectors are given by $\mathbf{r}_A = \mathbf{i} + 2\mathbf{j}$ and $\mathbf{r}_B = 2\mathbf{i} + \mathbf{j} + 3\mathbf{k}$.
-	 % \Answer V_a - V_b = -1 
-	  
-		% \Exercise[label={ex1717}] 
-	 %  For an isotropic radiator, the electric field intensity at a distance $R$ is measured as $3 \, \text{V/m}$. What will be the electric field intensity at a distance $3R$?
-	 % \Answer 1v/m.
+\Exercise[label={ex176}]
+State and explain the divergence theorem and its relationship to surface integrals.
 
-	  \end{ExerciseList}
+% \Exercise[label={ex177}] 
+% How does the divergence theorem establish a connection between a volume integral and a surface integral involving a vector field?
+
+\Exercise[label={ex178}] 
+Compare and contrast the physical interpretations of line integrals, surface integrals, and volume integrals. How do these integrals capture different aspects of a mathematical model, and in what scenarios would one choose volume integrals over the other types?
+
+
+\Exercise[label={ex179}] 
+What is the Divergence Theorem, and how does it establish a relationship between a volume integral and a surface integral involving a vector field?
+
+\Exercise[label={ex1710}] 
+Explain how the Divergence Theorem is used in electromagnetics, specifically in the context of electric flux and Gauss's Law.
+
+
+% \Exercise[label={ex1711}] 
+%  Discuss practical engineering scenarios where the Divergence Theorem is applied. How does it simplify problem-solving in fluid mechanics or heat transfer, for example?
+
+\Exercise[label={ex1712}] 
+Explain the statement and significance of Stokes' Theorem. How does it relate the circulation of a vector field around a closed curve to the behavior of the field on the surface enclosed by the curve?
+
+Use the Divergence Theorem to find the outward flux of \( \mathbf{F} \) across the boundary of the region.
+
+% 	\Exercise[label={ex1713}] 
+% What is the electric potential energy of two electrons separated by 5.0 mm? If the separation increases, does the potential energy decrease or increase?
+% \Answer
+% \[ u = 2.28 \times 10^{-19} \]
+
+% \Exercise[label={ex1714}] 
+% The electric field inside a non-conducting sphere of radius $R$ with charge spread uniformly throughout its volume is radially directed and has magnitude:
+% \[ E(r) = \frac{q}{4\pi\varepsilon_0 R^3} \]
+
+% Taking $V=0$ at the center of the sphere, find the electric potential $V$ inside the sphere.
+% \Exercise[label={ex1715}] 
+% Calculate the average magnitude of the electric field between two points with a potential difference of 150 V between them and are separated by a distance of 2.5 cm.
+% \Answer 6.0 x 10^3 v/m
+
+% \Exercise[label={ex1716}] 
+%  An electric field is expressed as $\mathbf{E} = 2\mathbf{j} + 3\mathbf{j}$. Find the potential difference ($V_A - V_B$) between two points $A$ and $B$ whose position vectors are given by $\mathbf{r}_A = \mathbf{i} + 2\mathbf{j}$ and $\mathbf{r}_B = 2\mathbf{i} + \mathbf{j} + 3\mathbf{k}$.
+% \Answer V_a - V_b = -1 
+
+% \Exercise[label={ex1717}] 
+%  For an isotropic radiator, the electric field intensity at a distance $R$ is measured as $3 \, \text{V/m}$. What will be the electric field intensity at a distance $3R$?
+% \Answer 1v/m.
+
+\end{ExerciseList}
 \end{mdframed}

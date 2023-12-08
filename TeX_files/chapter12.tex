@@ -210,7 +210,7 @@ There are three (3) techniques for attaching a stub to the transmission line to 
 In this section, we will discuss the single stub matching technique in the \textit{parallel short circuit stub matching technique configuration}. Figure~\ref{fig:fig11} shows the structure of a single stub matching technique. Again, our aim is to find a real impedance at point A that is equal to the characteristic impedance, $Z_0$. The main transmission line with characteristics impedance $ Z_0$ is connected to load impedance $Z$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{/graphics/mainLineStub}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/mainLineStub}
 \caption{Single stub matching technique with one auxiliary transmission line attached}
 \label{fig:mainLineStub}
 \end{figure}
@@ -252,7 +252,7 @@ Similarly, when the stub is connected in series, we use the same pattern but we 
 Design a single stub matching unit to match the load impedance shown in figure~\ref{fig:figw} to the characteristic impedance, $Z_0 = 50\varOmega$. Calculate for $l_s$ and $l_1$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/singleStubCalculation}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/singleStubCalculation}
 \caption{Single Stub Matching design}
 \label{fig:singleStubCalculation}
 \end{figure}
@@ -359,7 +359,7 @@ $ l_{s1} = 0.25 + l^{1} $
 From figure~\ref{fig:fig13}, if the matching is done with stub 2 and 1 and stub 3 is made an open circuit (so that the $ l_{s3}$ equals quarter wavelength, $\frac{\lambda}{4}$), we find that stub 2 and 3 makes the transformed impedance to lie in the forbidden region. So we disconnect stub 3 and make use of stubs 1 and 2. Depending on whether the transformed impedance lie within the forbidden region or not, we can make use of stub 1 and 2 or stub 2 and 3. The final solution for impedance matching is the three-stub technique. By using this method, all possible impedances can be matched without moving the location of the stub on the transmission line.
 
 In conclusion, we have dealt with the major application of transmission lines which is impedance matching in which we covered the different methods with which impedance can be matched. These are:
-\begin{enumerate}
+\begin{enumerate}[(i)]
 \item The quarter wavelength matching technique.
 \item Single stub matching technique.
 \item Double stub matching technique and
@@ -369,7 +369,6 @@ In conclusion, we have dealt with the major application of transmission lines wh
 In the end, we resolved that the triple stub matching technique is the best technique among all the techniques.
 
 
-\definecolor{lightblue}{RGB}{173,216,230}
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section*{Exercises}
 \begin{ExerciseList}
@@ -413,39 +412,26 @@ $Z_l$ = 125 + j40 ohms
 \Exercise[label={ex127}] 
 Find the short circuit length and the distance at which a series stub has got to be placed in order to match a transmission line of load admittance of 0.53 - j0.28 and characteristic impedance of 75 ohms. What type of matching is best applied for the above question? And draw the equivalent circuit diagram?
 \Answer[ref={ex128}]
-$L_s1$- SC = $0.420\lambda$
-$L_s2$ - SC = $0.096\lambda$
-\textbf{Single stub matching}
+$L_s1$- SC = $0.420\lambda$, $L_s2$ - SC = $0.096\lambda$, \textbf{Single stub matching}
 
 \Exercise[label={ex129}] 
 An experiment conducted by Bells lab by Engr. Hagar Smith showed that when a transmission line having the characteristic impedance of 50 ohms was used to transmit and electromagnetic wave at a frequency of 30MHz across a load or 105 + j70. The power delivered was insufficient due to an uneven matching conditions. By placing two stubs, where the first is at a distance of $0.1\lambda$ from the load, and the distance between the two stubs is $\lambda/8$.
-Find the:
-
-\begin{enumerate}
+Find the following:
+\begin{enumerate}[(i)]
 \item Open circuit length(s)
 \item Short circuit length(s)
 Considering that he can make use of any for his design to achieve maximum power transfer.
 \end{enumerate}
 
 \Answer[ref={ex129}]
-$L_{s1}{1}$ - OC = $0.348\lambda$
-$L_{s1}{1}$ - SC = $0.098\lambda$
-$L_{s1}{2}$ - OC = $0.153\lambda$
-$L_{s1}{2}$ - SC = $0.403\lambda$
-
-$L_{s2}{1}$ - OC = $0.366\lambda$
-$L_{s2}{1}$ - SC = $0.116\lambda$
-$L_{s2}{2}$ - OC = $0.200\lambda$
-$L_{s2}{2}$ - SC = $0.450\lambda$
+$L_{s1}{1} - \text{OC} = 0.348\lambda, L_{s1}{1} - \text{SC} = 0.098\lambda, L_{s1}{2} - \text{OC} = 0.153\lambda, L_{s1}{2} - \text{SC} = 0.403\lambda, L_{s2}{1} - \text{OC} = 0.366\lambda
+L_{s2}{1} - \text{SC} = 0.116\lambda, L_{s2}{2} - \text{OC} = 0.200\lambda, L_{s2}{2} - \text{SC} = 0.450\lambda$
 
 
-\Exercise[label={ex130}] 
-As a new engineer working for Intel incorporation, you know you have been assigned an immediate tax to work on an antenna design where your major role involves matching the impedance between the field line and the antenna. In order to avoid wave reflections from the transmission line having characteristic impedance of 55ohms across the antenna of impedance 80 + j70 ohms. If two shunt stubs are placed on the line where the distance between the load and the first stub is $0.1\lamda$ and the spacing circle is $3\lambda/8$. At what lengths are the stubs short circuited to have an equivalent matching condition across the line.
-\Answer[ref={ex130}]
-$L_{s1}{1}$ - SC = $0.232\lambda$
-$L_{s1}{2}$ - SC = $0.096\lambda$
-$L_{s1}{1}$ - SC = $0.376\lambda$
-$L_{s1}{2}$ - SC = $0.060\lambda$
+\Exercise[label={ex1310}] 
+As a new engineer working for Intel incorporation, you know you have been assigned an immediate tax to work on an antenna design where your major role involves matching the impedance between the field line and the antenna. In order to avoid wave reflections from the transmission line having characteristic impedance of 55ohms across the antenna of impedance 80 + j70 ohms. If two shunt stubs are placed on the line where the distance between the load and the first stub is $0.1\lambda$ and the spacing circle is $3\lambda/8$. At what lengths are the stubs short circuited to have an equivalent matching condition across the line.
+\Answer[ref={ex1310}]
+$L_{s1}{1} - \text{SC} = 0.232\lambda, L_{s1}{2} - \text{SC} = 0.096\lambda, L_{s1}{1} - \text{SC} = 0.376\lambda, L_{s1}{2} - \text{SC} = 0.060\lambda$
 
 \end{ExerciseList}
 \end{mdframed}

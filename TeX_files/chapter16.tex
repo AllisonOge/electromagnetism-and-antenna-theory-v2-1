@@ -1,15 +1,15 @@
 \chapter{Coordinate System and Vectors}\label{lec:lec16}
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section{Objectives}
 By the end of this chapter, the you should be able to:
 \begin{enumerate}[(i)]
-	\item   To introduce the concept of coordinate systems and their importance in electromagnetism. 
-	\item To explain the different types of \index{coordinate systems}coordinate systems, such as Cartesian, cylindrical, spherical, and others, and their properties, such as origin, axes, unit vectors\index{vectors}.
-	\item To demonstrate how to convert between different coordinate systems\index{coordinate systems} using transformation equations and matrices.
-	\item To show how to perform basic operations, such as dot product, cross product, gradient\index{gradient}, divergence\index{divergence}, and index{curl}, on scalar\index{scalar} and vector fields in different coordinate systems. 
-	\item To apply the basic \index{coordinate system} coordinate system operations to solve problems in electromagnetism.
-	\item To develop the skills and intuition to choose the most appropriate coordinate system for a given problem or situation in electromagnetism. 	
+\item   To introduce the concept of coordinate systems and their importance in electromagnetism. 
+\item To explain the different types of \index{coordinate systems}coordinate systems, such as Cartesian, cylindrical, spherical, and others, and their properties, such as origin, axes, unit vectors\index{vectors}.
+\item To demonstrate how to convert between different coordinate systems\index{coordinate systems} using transformation equations and matrices.
+\item To show how to perform basic operations, such as dot product, cross product, gradient\index{gradient}, divergence\index{divergence}, and index{curl}, on scalar\index{scalar} and vector fields in different coordinate systems. 
+\item To apply the basic \index{coordinate system} coordinate system operations to solve problems in electromagnetism.
+\item To develop the skills and intuition to choose the most appropriate coordinate system for a given problem or situation in electromagnetism. 	
 \end{enumerate}
 \end{mdframed}
 
@@ -28,14 +28,14 @@ The three major coordinate systems  used for vector representation in three-dime
 \subsection{Cartesian coordinate system}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/cartesian}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/cartesian}
 \caption{The Cartesian  coordinate system}
 \end{figure}
 
 Imagine if we have a three-dimensional unbound space, like a box, the three axes will be the three edges of the box x, y, and z in the sequence x to y to z. The coordinate of a point P in the {Cartesian}\footnote{The adjective \textgravedbl{Cartesian}\textacutedbl refers to the French mathematician and philosopher Rene Descartes (1596 - 1650), born in France, he published this idea in 1637, seventeenth century. He is considered the father of modern philosophy. Many other coordinate systems have been developed since Descartes, such as the polar, cylindrical and spherical coordinates.} coordinate system can be written as $\boldsymbol{P}(x, y, z)$.The \index{right-handed coordinate system} is the convention we follow when defining the axis.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/coordinateHandSystem}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/coordinateHandSystem}
 \caption{The right-hand coordinate system}
 \end{figure}
 
@@ -50,7 +50,7 @@ The three \index{vectors} $\mathbf{\bar{X}, \bar{Y}, \bar{Z}}$ are called the co
 \subsection{Cylindrical coordinate system}    
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/coordinatw}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/coordinatw}
 \caption{The cylindrical coordinate system}
 \end{figure} 
 
@@ -64,7 +64,7 @@ The one thing we note in the cylindrical coordinate system compared to the Carte
 \subsection{Spherical coordinate system}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/spherical1}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/spherical1}
 \caption{The spherical  coordinate system}
 \end{figure}
 
@@ -81,7 +81,7 @@ The spherical coordinate system has a special property, that is when the point c
 A vector is made up of a set of three components, so any vector can be represented by three components say (a,b,c) irrespective of the coordinate system we are using. Mathematically, this description of a vector is enough. However, when we go to the solution of physical problems of electromagnetic waves, we would like to visualize these vectors in three-dimensional space even though this is abstract. Electric field and magnetic field are very abstract concepts because we do not know how to visualize these quantities, so we have to give some physical picture of these vectors by representing three components (a,b,c).\textbf{The most commonly used convention for this is to represent a vector like an arrow}, the arrow is represented with a head and a tail. The arrow direction shows the direction of the vector and the length of the arrow is the magnitude of the vector in three-dimensional space. Suppose the arrow was going away from you or coming towards you, as it goes away from us, we see a circle and an \textgravedbl X \textacutedbl covering the span of the circle and if it comes towards us we see a dot at the centre of the circle. In the arrow representation of a vector, the circle's size denotes the vector's magnitude, and a small circle represents the small magnitude of the vector.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/arrowhead}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/arrowhead}
 \caption{The arrowhead representation of vector}
 \end{figure}
 
@@ -134,7 +134,7 @@ This is called a \index{vector product} because it gives another vector. We can 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.7\linewidth]{graphics/vector}
+\includegraphics[width=.7\linewidth]{\pathtopartone/graphics/vector}
 \caption{The representation of the cross product; $\bar{A} \times \bar{B}$ represents a vector which is perpendicular to the plane containing the vector $\bar{A}$ and $\bar{B}$. $\bar{A}$ and $\bar{B}$ are represented by two arrows, the cross-product vector will be a vector perpendicular to these two arrows.}
 \end{figure}
 
@@ -174,53 +174,53 @@ F_{x} & F_{y} & F_{z}
 The curl of a vector is a vector quantity whereas the divergence of a vector is a scalar quantity. Next, we will get the physical feel of these quantities of divergence and curl. It will become obvious if we want to capture those physical effects, then the appropriate concepts will be divergence and curls. Divergence and curl are the basic concepts applied to solve electromagnetic problems.
 \end{enumerate}
 
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section{Exercises}
 \begin{ExerciseList}
-	\Exercise[label={ex161}] 
-	In the description of a vector using arrow notation, the length of the arrow may represent what property of the vector?
-	
-	\Exercise[label={ex162}] 
-	What is the relationship between the direction of the cross product of vectors and the plane of vectors?
-	
-	\Exercise[label={ex163}] 
-	The outcome of the gradient of a scalar field is what quantity?
-	
-	\Exercise[label={ex164}] 
-	Contrast the outcome of the divergence of a vector field and the curl of a vector field. 
-	
-	\Exercise[label={ex165}] 
-	What are the basic importance of scalar and \index{vector products} in the basic concept applied to solve electromagnetic problems?  
-	
-	\Exercise[label={ex166}] 
-	If you switch on a torch and point it in any direction, what happens to the rays of light?
-	
-	\Exercise[label={ex167}] 
-	If $\bar{A} = 2\hat{x} + 3\hat{z}$ and $\bar{B} = 4\hat{x} - \hat{y} + 3\hat{z}$, find: 
-	(i) $\bar{A} \times \bar{B}$
-	(ii) $\bar{B} \times \bar{A}$  
-	\Answer
-	(i). 3$\hat{x}$+6$\hat{y}$-2$\hat{z}$
-	(ii).-3$\hat{x}$-6$\hat{y}$+2$\hat{z}$
-	\Exercise[label={ex168}] 
-	What is the gradient of the given scalar field: $F = \frac{\cos(5x)}{y}$
-	\Answer
-	$\nabla F = \frac{-5\sin(5x)}{y}\hat{x} - \frac{\cos(5x)}{y^2}\hat{y}$
+\Exercise[label={ex161}] 
+In the description of a vector using arrow notation, the length of the arrow may represent what property of the vector?
+
+\Exercise[label={ex162}] 
+What is the relationship between the direction of the cross product of vectors and the plane of vectors?
+
+\Exercise[label={ex163}] 
+The outcome of the gradient of a scalar field is what quantity?
+
+\Exercise[label={ex164}] 
+Contrast the outcome of the divergence of a vector field and the curl of a vector field. 
+
+\Exercise[label={ex165}] 
+What are the basic importance of scalar and \index{vector products} in the basic concept applied to solve electromagnetic problems?  
+
+\Exercise[label={ex166}] 
+If you switch on a torch and point it in any direction, what happens to the rays of light?
+
+\Exercise[label={ex167}] 
+If $\bar{A} = 2\hat{x} + 3\hat{z}$ and $\bar{B} = 4\hat{x} - \hat{y} + 3\hat{z}$, find: 
+(i) $\bar{A} \times \bar{B}$
+(ii) $\bar{B} \times \bar{A}$  
+\Answer
+(i). 3$\hat{x}$+6$\hat{y}$-2$\hat{z}$
+(ii).-3$\hat{x}$-6$\hat{y}$+2$\hat{z}$
+\Exercise[label={ex168}] 
+What is the gradient of the given scalar field: $F = \frac{\cos(5x)}{y}$
+\Answer[ref={ex168}]
+$\nabla F = \frac{-5\sin(5x)}{y}\hat{x} - \frac{\cos(5x)}{y^2}\hat{y}$
 
 
-	\Exercise[label={ex169}] 
-	A field is said to contain only magnitude, and we need to perform an operation on this field to produce a vector field. Carry out this analysis on this given field: $T = x^2yz^3 + xy^2z^2$.
-	\Answer
-	$\nabla T= (2xyz^3+y^2z^2)\hat{x}+(x^2z^3+2xyz^2)\hat{y}+(3x^2yz^2+2xy^2z)\hat{z}$
+\Exercise[label={ex169}] 
+A field is said to contain only magnitude, and we need to perform an operation on this field to produce a vector field. Carry out this analysis on this given field: $T = x^2yz^3 + xy^2z^2$.
+\Answer
+$\nabla T= (2xyz^3+y^2z^2)\hat{x}+(x^2z^3+2xyz^2)\hat{y}+(3x^2yz^2+2xy^2z)\hat{z}$
 
-	\Exercise[label={ex1610}] 
-	Check if the fields given below have a tendency to curl or diverge and write a brief discussion on what actually happens.
-	$\bar{P}$ = x$\sin$(2y)$\hat{x}$, $\bar{Q}$ = $e^{y}$$\cos$(z)$\hat{x}$ + $\sinh(x)$$\hat{y}$.
-	\Answer
-	(i).$\nabla$$\dot{\bar{P}}$=$\sin(2y)$$\hat{z}$
-	(ii).$\nabla$$\cross$$\bar{P}$= $2x\cos(2y)$$\hat{z}$
-	(iii).$\nabla$$\dot{\bar{Q}}$ = 0
-	(iv).$\nabla$$\cross$$\bar{Q}$= -$e^{y}$$\sin(z)$$\hat{y}$ + ($\cosh(x)$ - $ye^{y}$$\cos(z)$)$\hat{z}$
+\Exercise[label={ex1610}] 
+Check if the fields given below have a tendency to curl or diverge and write a brief discussion on what actually happens.
+$\bar{P}$ = x$\sin$(2y)$\hat{x}$, $\bar{Q}$ = $e^{y}$$\cos$(z)$\hat{x}$ + $\sinh(x)$$\hat{y}$.
+\Answer
+(i).$\nabla$$\dot{\bar{P}}$=$\sin(2y)$$\hat{z}$
+(ii).$\nabla$$\cross$$\bar{P}$= $2x\cos(2y)$$\hat{z}$
+(iii).$\nabla$$\dot{\bar{Q}}$ = 0
+(iv).$\nabla$$\cross$$\bar{Q}$= -$e^{y}$$\sin(z)$$\hat{y}$ + ($\cosh(x)$ - $ye^{y}$$\cos(z)$)$\hat{z}$
 \end{ExerciseList}
 \end{mdframed}

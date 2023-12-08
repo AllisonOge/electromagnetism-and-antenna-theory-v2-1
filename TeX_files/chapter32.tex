@@ -1,15 +1,14 @@
 \chapter{Total Internal Reflection}\label{lec:lec32}
 
-\definecolor{lightblue}{RGB}{173, 216, 230}
 \begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
-    \section{Objectives}
-    \begin{enumerate}[label=\roman*., itemsep=0pt, topsep=0pt]
-        \item Understand the conditions and implications of total internal reflection.
-        \item Analyze reflection coefficients and their relevance in different polarizations during total internal reflection.
-        \item Explain the behavior of fields in medium 2 and their role in total internal reflection.
-        \item Define reactive fields and their significance in the context of power flow during total internal reflection.
-        \item Describe the relationship between total internal reflection and guiding electromagnetic energy in wave guides.
-    \end{enumerate}
+\section{Objectives}
+\begin{enumerate}[(i)]
+\item Understand the conditions and implications of total internal reflection.
+\item Analyze reflection coefficients and their relevance in different polarizations during total internal reflection.
+\item Explain the behavior of fields in medium 2 and their role in total internal reflection.
+\item Define reactive fields and their significance in the context of power flow during total internal reflection.
+\item Describe the relationship between total internal reflection and guiding electromagnetic energy in wave guides.
+\end{enumerate}
 \end{mdframed}
 
 \section{Introduction}
@@ -49,7 +48,7 @@ Substituting the expression for $\sin^{2}\theta_{t}$,
 \end{align*}
 this leaves the quantity $1 - (\frac{\beta_1}{\beta_2}\sin\theta_i)^2$ always negative and thus, the quantity $\sqrt{1 - (\frac{\beta_1}{\beta_2}\sin\theta_i)^2}$ imaginary. So we make it positive to satisfy the medium parameter in which $\frac{\beta_1}{\beta_2}\sin\theta_i > 1$
 \begin{align}
-\cos\theta_t = \jmath\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}
+\cos\theta_t = j\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}
 \label{eqn:eqn32_5}
 \end{align}
 Now again, we see that from equation~\ref{eqn:eqn32_3} and equation~\ref{eqn:eqn32_5} 
@@ -74,18 +73,18 @@ Note: $\eta_1$ and $\eta_2$ are interchanged for both cases otherwise they are s
 
 substituting equation~\ref{eqn:eqn32_5} in equation~\ref{eqn:eqn32_7},
 \begin{align}
-\Gamma_\parallel = \frac{\eta_1\cos\theta_i - \jmath\eta_2\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}}{\eta_1\cos\theta_i + \jmath\eta_2\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}}
+\Gamma_\parallel = \frac{\eta_1\cos\theta_i - j\eta_2\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}}{\eta_1\cos\theta_i + j\eta_2\sqrt{(\frac{\beta_1}{\beta_2}\sin\theta_i)^2-1}}
 \label{eqn:eqn32_8}
 \end{align}
 Note: we would get the same expression for the perpendicular polarization case but with $\eta_1$ and $\eta_2$ interchanged. 
 
 What's important to note here is that the expression in equation~\ref{eqn:eqn32_8} is of the form
 \begin{equation}
-\frac{a - \jmath b}{a + \jmath b}
+\frac{a - j b}{a + j b}
 \end{equation}
 and as we know, expressions of the form always have a magnitude equal  to 1 at an angle $\angle-2\tan^-{1}(\frac{b}{a})$ that is:
 \begin{equation}
-\frac{a - \jmath b}{a + \jmath b} = 1\angle - 2\tan^{-1}(\frac{b}{a})
+\frac{a - j b}{a + j b} = 1\angle - 2\tan^{-1}(\frac{b}{a})
 \end{equation} 
 And since the modulus(or magnitude) of the reflection coefficient is 1, whatever power is incident on the media interface is totally reflected.
 So in this case, even though we have a dielectric boundary, the entire power is reflected back into medium 1 with a phase change given by $\angle-2\tan^-{1}(\frac{b}{a})$ and no power is transmitted into medium 2. Hence, this phenomenon is referred to as \textbf{Total internal reflection}.
@@ -123,7 +122,7 @@ Now the angle at which $\sin\theta_t = 1$ is called the CRITICAL ANGLE\index{cri
 This phenomenon is shown in Figure~\ref {critical_angle}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/critical_angle}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/critical_angle}
 \caption{Critical angle}
 \label{critical_angle}
 \end{figure}
@@ -140,7 +139,7 @@ Or the critical angle
 \theta_c = \sin^{-1}(\frac{n_2}{n_1}) 
 \end{align*}
 Now what we have not discussed, however, is that, when the total internal reflection takes place, the wave which is reflected, undergoes a phase change at the interface. This phase change is a function of the medium parameters and the angle of incidence. So in general, we can say that by choosing appropriate parameters for the media, and the angle of incidence, we can generate an arbitrary phase difference between the incidence and the reflected wave. This would happen for both parallel and perpendicular polarization. However, the parallel and perpendicular polarization have $\eta_1$ and $\eta_2$
-interchanged between them. So a and b in $\frac{a - \jmath b}{b + \jmath b}$ are different for parallel and perpendicular polarizations. This means that the phase changes which the wave undergoes for the two polarizations are different.
+interchanged between them. So a and b in $\frac{a - j b}{b + j b}$ are different for parallel and perpendicular polarizations. This means that the phase changes which the wave undergoes for the two polarizations are different.
 
 \item The wave undergoes a phase change at Total Internal Reflection the phase change is different for parallel and perpendicular polarizations.
 
@@ -159,19 +158,19 @@ Recall:
 
 The phase expression for a transmitted wave in medium 2 is
 \begin{equation*}
-\bar{E}_t = E_{t}e^{-\jmath \beta_2(x\sin\theta_t + z\cos\theta_t)}
+\bar{E}_t = E_{t}e^{-j \beta_2(x\sin\theta_t + z\cos\theta_t)}
 \end{equation*}
 From Snell's Law and keeping phase gradient same $\bar{E}_t$ is written out explicitly as:
 \begin{align}
-\bar{E}_t = E_te^{- \jmath x\beta_2\sin\theta_t - \jmath z\beta_2\cos\theta_t}
+\bar{E}_t = E_te^{- j x\beta_2\sin\theta_t - j z\beta_2\cos\theta_t}
 \end{align}
 substituting for $\cos\theta_t$ from equation~\ref{eqn:eqn32_5}
 and $\sin\theta_t$ from equation~\ref{eqn:eqn32_1}
 \begin{equation*}
-\bar{E}_t = E_te^{- {\jmath x\beta_1\sin\theta_i}  -  z \beta_2\sqrt{{(\frac{\beta_1}{\beta_2}\sin\theta_i)}^2 - 1}}
+\bar{E}_t = E_te^{- {j x\beta_1\sin\theta_i}  -  z \beta_2\sqrt{{(\frac{\beta_1}{\beta_2}\sin\theta_i)}^2 - 1}}
 \end{equation*}
 \begin{equation}
-\bar{E}_t = E_te^{- {\jmath x\beta_1\sin\theta_i}  -  z \sqrt{{(\beta_1\sin\theta_i)}^2 - \beta_{2}^{2}}}
+\bar{E}_t = E_te^{- {j x\beta_1\sin\theta_i}  -  z \sqrt{{(\beta_1\sin\theta_i)}^2 - \beta_{2}^{2}}}
 \end{equation}
 From the above equation,
 
@@ -182,7 +181,7 @@ e^{-z\sqrt{\beta_1^2\sin^2\theta_i - \beta_2^{2}}}
 \end{equation}
 and the phase term:
 \begin{equation}
-e^{- \jmath x\beta_1\sin\theta_i}
+e^{- j x\beta_1\sin\theta_i}
 \label{eqn:phase_term_total_internal_reflection}
 \end{equation}
 From these equations, we see the field is exponentially dying down as a function of z and the phase varies as a function of x in medium 2.
@@ -192,7 +191,7 @@ Now with total internal reflection, the travelling wave nature is only in the x-
 Essentially, equation~\ref{eqn:amplitude_term_total_internal_reflection} gives decaying fields in the z direction and equation~\ref{eqn:phase_term_total_internal_reflection}  gives a travelling wave in the x direction. This is depicted in figure~\ref{fig:amplitude_decay_total_internal_reflection}
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/amplitude_decay}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/amplitude_decay}
 \caption{Amplitude decay of fields in medium 2}
 \label{fig:amplitude_decay_total_internal_reflection}
 \end{figure}
@@ -209,38 +208,38 @@ We conclude that when total internal reflection takes place, the fields in mediu
 Now for medium 1, we had a wave incident on it and another wave which is reflected from the interface into medium 1. There is an arbitrary phase change at the point of incidence and reflection as shown below.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/amplitude_decay2}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/amplitude_decay2}
 \caption{Graph of incidence and reflection}
 \end{figure}
 
 For fields in medium 1;
 \begin{equation}
-E_i = E_i e^{- \jmath \beta_1(x\sin\theta_i + z\cos\theta_i)}
+E_i = E_i e^{- j \beta_1(x\sin\theta_i + z\cos\theta_i)}
 \end{equation}
 \begin{equation}
-E_r = E_r e^{- \jmath \beta_1(x\sin\theta_i - z\cos\theta_i)}
+E_r = E_r e^{- j \beta_1(x\sin\theta_i - z\cos\theta_i)}
 \end{equation}
 So the total electric field in medium 1 is given as;
 \begin{equation*}
 E = E_i + E_r
 \end{equation*}
 \begin{equation*}
-E =  E_i e^{- \jmath \beta_1(x\sin\theta_i + z\cos\theta_i)} + \textbf{E_r} e^{- \jmath \beta_1(x\sin\theta_i - z\cos\theta_i)}
+E =  E_i e^{- j \beta_1(x\sin\theta_i + z\cos\theta_i)} + E_r e^{- j \beta_1(x\sin\theta_i - z\cos\theta_i)}
 \end{equation*}
 Since the magnitude of the reflection coefficient is $1$,  $|E_{i}|$ = $|E_{r}|$ but with a phase difference. So we can say that, $E_{r} = E_{i}e^{j\phi}$.
 Hence,
 \begin{equation*}
-E = E_i e^{- \jmath \beta_1x\sin\theta_i}\{ e^{- \jmath \beta_1z\cos\theta_i} + e^{\jmath \phi}
-e^{\jmath \beta_1 z\cos\theta_i} \}
+E = E_i e^{- j \beta_1x\sin\theta_i}\{ e^{- j \beta_1z\cos\theta_i} + e^{j \phi}
+e^{j \beta_1 z\cos\theta_i} \}
 \end{equation*}
 
-Depending on the phase difference $\phi$, the term $e^{- \jmath \beta_1z\cos\theta_i} + e^{\jmath \phi}
-e^{\jmath \beta_1 z\cos\theta_i}$ is always going to create a constructive or destructive interference in the z-direction. While the term $ e^{- \jmath \beta_1x\sin\theta_i}$ gives a travelling wave in the x direction.
+Depending on the phase difference $\phi$, the term $e^{- j \beta_1z\cos\theta_i} + e^{j \phi}
+e^{j \beta_1 z\cos\theta_i}$ is always going to create a constructive or destructive interference in the z-direction. While the term $ e^{- j \beta_1x\sin\theta_i}$ gives a travelling wave in the x direction.
 
-So in medium 1 from the equation, we have a fully developed standing wave in the z direction but a travelling wave in the x direction. In medium 2 it was an exponentially decaying field and a travelling wave in the x direction with the same phase constant as in medium 1 travelling wave in the x direction. Now we can then plot the fields in the two media depending upon the phase of reflection $\phi$, so the field distribution is like a corrugated surface in medium 1 and a decaying field in medium 2. The constant phase plane is determined by $e^{- \jmath \beta_{1}x\sin\theta_i}$. So the constant phase plane is the yz plane. The constant amplitude plane is in the xy plane. So this complex amplitude distribution of the wave travels in the x direction with a phase constant $\beta_1\sin\theta_i$.
+So in medium 1 from the equation, we have a fully developed standing wave in the z direction but a travelling wave in the x direction. In medium 2 it was an exponentially decaying field and a travelling wave in the x direction with the same phase constant as in medium 1 travelling wave in the x direction. Now we can then plot the fields in the two media depending upon the phase of reflection $\phi$, so the field distribution is like a corrugated surface in medium 1 and a decaying field in medium 2. The constant phase plane is determined by $e^{- j \beta_{1}x\sin\theta_i}$. So the constant phase plane is the yz plane. The constant amplitude plane is in the xy plane. So this complex amplitude distribution of the wave travels in the x direction with a phase constant $\beta_1\sin\theta_i$.
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/mediumplane}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/mediumplane}
 \caption{Graph of field distribution}
 \label{fig:mediumplane}
 \end{figure}
@@ -256,36 +255,36 @@ then there is a total internal reflection in medium 1. The field in medium 2 wil
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\linewidth]{graphics/optical_fibre}
+\includegraphics[width=1\linewidth]{\pathtopartone/graphics/optical_fibre}
 \caption{Power flow in optical fibre structure}
 \label{fig:optical_fibre}
 \end{figure}
 
 So if we create some structure like this, it can carry electromagnetic energy over a long distance without any loss as such. Energy is confined in the region of $n_1$ and it will propagate along the interface as a result of total internal reflection. So total internal reflection has played an important role in modern optical communication and helped in the design of structures called optical fibres. 
 
-\definecolor{lightblue}{RGB}{173,216,230}
+
 \begin{mdframed}[ backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
 \section{Exercises:}
 \begin{ExerciseList}
-    \Exercise[label={ex11}]
-    Describe the mathematical conditions necessary for total internal reflection and explain the critical angle's role.
-    \Exercise[label={ex11}]
-    Derive the reflection coefficients for both perpendicular and parallel polarizations in total internal reflection.
-    \Exercise[label={ex11}]
-    How do phase changes differ between parallel and perpendicular polarizations during total internal reflection? Explain with equations.
-    \Exercise[label={ex11}]
-    Analyze the behavior of fields in medium 2 during total internal reflection and discuss their impact on the phenomenon.
-    \Exercise[label={ex11}]
-    Define reactive fields and their relationship to power flow in the context of total internal reflection. Provide examples.
-    \Exercise[label={ex11}]
-    Discuss the role of Snell's Law in determining the possibility of total internal reflection and its significance.
-    \Exercise[label={ex11}]
-    Compare and contrast the amplitude and phase distributions of waves in medium 1 and medium 2 during total internal reflection.
-    \Exercise[label={ex11}]
-    Explain the critical angle's significance in determining the behavior of transmitted waves during total internal reflection.
-    \Exercise[label={ex11}]
-    How does total internal reflection facilitate the guiding of electromagnetic energy in wave guides such as optical fibers? Discuss its practical applications.
-    \Exercise[label={ex11}]
-    Analyze the phase velocity in the x-direction and power flow along the interface during total internal reflection, elaborating on their relationships and implications.
+\Exercise[label={ex321}]
+Describe the mathematical conditions necessary for total internal reflection and explain the critical angle's role.
+\Exercise[label={ex322}]
+Derive the reflection coefficients for both perpendicular and parallel polarizations in total internal reflection.
+\Exercise[label={ex323}]
+How do phase changes differ between parallel and perpendicular polarizations during total internal reflection? Explain with equations.
+\Exercise[label={ex324}]
+Analyze the behavior of fields in medium 2 during total internal reflection and discuss their impact on the phenomenon.
+\Exercise[label={ex325}]
+Define reactive fields and their relationship to power flow in the context of total internal reflection. Provide examples.
+\Exercise[label={ex326}]
+Discuss the role of Snell's Law in determining the possibility of total internal reflection and its significance.
+\Exercise[label={ex327}]
+Compare and contrast the amplitude and phase distributions of waves in medium 1 and medium 2 during total internal reflection.
+\Exercise[label={ex328}]
+Explain the critical angle's significance in determining the behavior of transmitted waves during total internal reflection.
+\Exercise[label={ex329}]
+How does total internal reflection facilitate the guiding of electromagnetic energy in wave guides such as optical fibers? Discuss its practical applications.
+\Exercise[label={ex3210}]
+Analyze the phase velocity in the x-direction and power flow along the interface during total internal reflection, elaborating on their relationships and implications.
 \end{ExerciseList}
 \end{mdframed}
