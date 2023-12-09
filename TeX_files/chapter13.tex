@@ -1,5 +1,5 @@
 \section{Lossy Transmission Line}\label{lec:lec13}
-In previous sections, we have discussed the lossless and low-loss transmission lines. We have studied the characteristics of lossless transmission lines and have seen various applications of the lossless transmission line. In practice, however, as frequency increases, the loss increases and the line becomes very lossy. In this section, we will see briefly the characteristics of a lossy line.
+In previous sections, we have discussed the lossless and low-loss transmission lines. We have studied the characteristics of lossless transmission lines and have seen various applications of lossless transmission lines. In practice, however, as frequency increases, the loss increases and the line becomes very lossy. In this section, we will see briefly the characteristics of a lossy line.
 
 Obviously, if a line is very lossy then it is not a very efficient medium for transfer of power, so when we say a line is lossy in practice it is not very lossy but it is moderately lossy. Let us briefly examine the characteristic impedance and the propagation constant of a very lossy line, after which we will examine that of a moderately lossy line.
 
@@ -14,12 +14,12 @@ For this line, the characteristics impedance, $Z_0$ is given as
 Z_0 = \sqrt{\frac{R + j\omega L}{G + j\omega C}} \approx \sqrt{\frac{R}{G}}
 \label{eqn:xteristicsimplossy}
 \end{dmath}
-Equation~\eqref{eqn:xteristicsimplossy} is a real quantity. Similarly, the propagation constant given in equation~\eqref{eqn:propconstlossy} is also a real quantity.
+Equation~\eqref{eqn:xteristicsimplossy} is a real quantity. Similarly, the propagation constant given in Equation~\eqref{eqn:propconstlossy} is also a real quantity.
 \begin{align}
 \gamma = \sqrt{(R + j\omega L)(G + j\omega C)} \approx \sqrt{RG}
 \label{eqn:propconstlossy}
 \end{align}
-We observe that the characteristic impedance is real and the propagation constant is also real. Recall that when we studied the lossless transmission line the characteristic impedance was real, so looking at $Z_0$ does not tell you whether the line is very lossy or lossless. However, when we look at the propagation constant $\gamma$ for a lossless line, $\gamma$ was purely imaginary ($\alpha$ = 0 and $\gamma$ = j$\beta$) but for a very lossy line $\gamma$ is a real quantity($\beta$ = 0 and $\gamma$ = $\alpha$) which means there is no phase variation in space for whatever voltage or current variation we have on the transmission line. A lossy line does not represent the wave phenomena, so essentially the structure is not representing a medium which is carrying voltage or current waves. There is a voltage and current variation on the structure but it does not represent the wave phenomena instead you have a voltage that varies exponentially with the attenuation constant $\alpha$ = $\sqrt{RG}$ and there is no phase variation which implies no travelling wave.
+We observe that the characteristic impedance is real and the propagation constant is also real. Recall that when we studied the lossless transmission line the characteristic impedance was real, so looking at $Z_0$ does not tell you whether the line is very lossy or lossless. However, when we look at the propagation constant $\gamma$ for a lossless line, $\gamma$ was purely imaginary ($\alpha$ = 0 and $\gamma$ = j$\beta$) but for a very lossy line $\gamma$ is a real quantity($\beta$ = 0 and $\gamma$ = $\alpha$) which means there is no phase variation in space for whatever voltage or current variation we have on the transmission line. A lossy line does not represent the wave phenomena, so essentially the structure does not represent a medium which is carrying voltage or current waves. There is a voltage and current variation on the structure but it does not represent the wave phenomena instead you have a voltage that varies exponentially with the attenuation constant $\alpha$ = $\sqrt{RG}$ and there is no phase variation which implies no travelling wave.
 
 Obviously, we are not interested in this case we are investigating. Let us however consider the case where $R$ and $G$ are comparable to $\omega L$ and $\omega C$ and we refer to this transmission line as the moderately lossy line.
 
@@ -28,12 +28,12 @@ Obviously, we are not interested in this case we are investigating. Let us howev
 R \approx \omega L\\
 G \approx \omega C
 \end{align*}
-The propagation constant for the case of the moderately lossy line $\gamma$ is given in equation~\eqref{eqn:propconstmodloss} is a complex quantity.
+The propagation constant for the case of the moderately lossy line $\gamma$ is given in Equation~\eqref{eqn:propconstmodloss} is a complex quantity.
 \begin{align}
 \gamma = \alpha +j\beta
 \label{eqn:propconstmodloss}
 \end{align}
-Where $\alpha$ is comparable to $\beta$ since $R$ and $G$ are comparable to $\omega L$ and $\omega C$ respectively. From the voltage equation, we derived in equation~\eqref{eqn:voltagefromload} written as follows:
+Where $\alpha$ is comparable to $\beta$ since $R$ and $G$ are comparable to $\omega L$ and $\omega C$ respectively. From the voltage equation, we derived in Equation~\eqref{eqn:voltagefromload} written as follows:
 \begin{dmath*}
 V = V^+e^{\gamma l} + V^-e^{
 -\gamma l}\quad\text{substituting }\gamma\text{ = }\alpha + j\beta
@@ -41,7 +41,7 @@ V = V^+e^{\gamma l} + V^-e^{
 \end{dmath*}
 Such a travelling wave exponentially decays with the attenuation constant $\alpha$ and it has a phase constant $\beta$. Let us consider the forward travelling wave, $V^+e^{\alpha l}e^{j\beta l}$ we see that the wave exponentially grows towards the generator or in other words decays as we move towards the load.
 
-Similarly, $V^-e^{-\alpha l}e^{-j\beta l}$ exponentially decays as we move towards the generator or exponentially grows as we move towards the load. Depending upon the value of the ratio of $V^-$ and $V^+$ which is the reflection coefficient at the load point, $\Gamma_L$ the two travelling waves propagating in opposite directions decay or grow exponentially as we move towards the generator. We recall from the lossless case that the amplitude of $\Gamma_L$ was the same at every very point on the transmission line, however, that is not true for the moderately lossy line because the amplitude of the reflected wave to the incident wave varies with $\alpha l$, as $\Gamma$ is now a function of location on the transmission line.
+Similarly, $V^-e^{-\alpha l}e^{-j\beta l}$ exponentially decays as we move towards the generator or exponentially grows as we move towards the load. Depending upon the value of the ratio of $V^-$ and $V^+$ which is the reflection coefficient at the load point, $\Gamma_L$ the two travelling waves propagating in opposite directions decay or grow exponentially as we move towards the generator. We recall from the lossless case that the amplitude of $\Gamma_L$ was the same at every point on the transmission line, however, that is not true for the moderately lossy line because the amplitude of the reflected wave to the incident wave varies with $\alpha l$, as $\Gamma$ is now a function of location on the transmission line.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{\pathtopartone/graphics/"moderately_lossy_TX_plot"}
@@ -55,7 +55,7 @@ Similarly, $V^-e^{-\alpha l}e^{-j\beta l}$ exponentially decays as we move towar
 
 The incident wave exponentially decays as we move towards the load and depending on the load value there is a certain reflection coefficient at the load so the value of the reflected wave exponentially decays as we move towards the generator. So as we move to the generator the amplitude of the standing wave changes because, at the load end, the reflected wave dominates while at the generator end the incident wave dominates or the wave behaves more and more like a travelling wave instead of a standing wave.
 
-From a different view, it implies that if there is a large mismatch at the load side, as we move towards the generator the mismatch becomes weaker and the matching improves and we see an impedance at the generator end which is very close to the characteristic impedance $Z_0$ of the transmission line because only the forward travelling wave is seen at the generator end. We conclude that for a lossy line, irrespective of what the load impedance is, there will always be a matching seen at the generator. But this is not a very good situation, because the power which is supplied by the generator is not delivered to the load. A substantial amount of power has been lost in the transmission line. So many times in transmission line design, a deliberately lossy line is introduced so that even in any experiment we connect some arbitrary load and get some really strong reflections, at least these reflections will not go and damage the generator. So in this case the purpose certainly is not maximum power transfer but it is to protect the generator from any unwanted reflections.
+From a different view, it implies that if there is a large mismatch at the load side, as we move towards the generator the mismatch becomes weaker the matching improves and we see an impedance at the generator end which is very close to the characteristic impedance $Z_0$ of the transmission line because only the forward travelling wave is seen at the generator end. We conclude that for a lossy line, irrespective of what the load impedance is, there will always be a matching seen at the generator. But this is not a very good situation, because the power which is supplied by the generator is not delivered to the load. A substantial amount of power has been lost in the transmission line. So many times in transmission line design, a deliberately lossy line is introduced so that even in any experiment we connect some arbitrary load and get some really strong reflections, at least these reflections will not go and damage the generator. So in this case the purpose certainly is not maximum power transfer but it is to protect the generator from any unwanted reflections.
 
 \subsubsection{Using the Smith chart for lossy lines}
 Let us examine the effect of a lossy line on the reflection coefficient of the transmission line. For the lossy line, the expression for the reflection coefficient is given as;
@@ -72,7 +72,7 @@ Then,
 \end{dmath}
 Equation~\eqref{eqn:gammalossy} shows that the total phase at a distance $l$ is $(\theta_L - 2\beta l)$ and the amplitude of the reflection coefficient at location $l$ is $|\Gamma_L|e^{-2\alpha l}$. As we move towards the generator $l$ is positive and the amplitude of the reflection coefficient goes on reducing exponentially.
 
-The expression $|\Gamma_L|e^{j(\theta_L-2\beta l)}$ we have seen earlier in the complex gamma plane, traces a curve which is a circle. However, now there is the term $e^{-2\alpha l}$, the radius of the circle is reducing continuously and the expression $|\Gamma_L|e^{-2\alpha l}e^{j(\theta_L - 2\beta l)}$ essentially draws a spiral on the reflection coefficient plane as shown in figure~\ref{fig:lossygamma}(a).
+The expression $|\Gamma_L|e^{j(\theta_L-2\beta l)}$ we have seen earlier in the complex gamma plane, traces a curve which is a circle. However, now there is the term $e^{-2\alpha l}$, the radius of the circle is reducing continuously and the expression $|\Gamma_L|e^{-2\alpha l}e^{j(\theta_L - 2\beta l)}$ essentially draws a spiral on the reflection coefficient plane as shown in Figure~\ref{fig:lossygamma}(a).
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{\pathtopartone/graphics/reflectionCoeffcientPlot}
@@ -82,11 +82,11 @@ The expression $|\Gamma_L|e^{j(\theta_L-2\beta l)}$ we have seen earlier in the 
 
 The VSWR which we have used to measure the contribution of the reflected wave, is not meaningful in the case of a moderately lossy transmission line because it is no more characteristic of the load. It also has become a function of the transmission line characteristics, that is, the VSWR is a function of the length along the transmission line. Also, the standing wave expression is no longer a sinusoidal function and hence the separation between two adjacent minima is not exactly equal to $\frac{\lambda}{2}$. However, the separation is approximated to $\frac{\lambda}{2}$ because in practice most of the transmission lines have a loss which is reasonably small.
 
-The process of analyzing moderately lossy lines using the Smith chart is hard without software because the correct variations of the reflection coefficient or impedance variation need to be drawn. If the transmission line we are using has a small loss then we can approximate the spiral to a series of concentric circles. Each circle that follows is drawn after we move a distance of $\frac{\lambda}{2}$. From figure~\ref{fig:lossygamma}(b) we apply the approximation and a constant value of $\Gamma{(l)}$ is used for every $\frac{\lambda}{2}$ before correcting the magnitude of the reflection coefficient. The radii of the circles will differ by $\delta$ given by
+The process of analyzing moderately lossy lines using the Smith chart is hard without software because the correct variations of the reflection coefficient or impedance variation need to be drawn. If the transmission line we are using has a small loss then we can approximate the spiral to a series of concentric circles. Each circle that follows is drawn after we move a distance of $\frac{\lambda}{2}$. From Figure~\ref{fig:lossygamma}(b) we apply the approximation and a constant value of $\Gamma{(l)}$ is used for every $\frac{\lambda}{2}$ before correcting the magnitude of the reflection coefficient. The radii of the circles will differ by $\delta$ given by
 \begin{dmath*}
 \delta = \Delta \Gamma{(l)} = \Gamma_L(1 - e^{-2\alpha\cdot \frac{\lambda}{2}})
 \end{dmath*}
-A plot of these circles is shown in figure~\ref{fig:vswrlossy}, however, if we want to have a very accurate analysis then ideally we have to really draw this spiral on the Smith chart.
+A plot of these circles is shown in Figure~\ref{fig:vswrlossy}, however, if we want to have a very accurate analysis then ideally we have to really draw this spiral on the Smith chart.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{\pathtopartone/graphics/concentricVSWRcircles}
@@ -97,7 +97,7 @@ A plot of these circles is shown in figure~\ref{fig:vswrlossy}, however, if we w
 The analytic calculation of the impedance on a lossy line is as general as we have discussed earlier in the previous chapters. So those impedance transformation relationships using the hyperbolic cosines and sines are applicable for the calculation of the impedances on the transmission line. Therefore, with this minor modification to the analysis, the Smith chart can be used for moderately lossy transmission lines.
 
 \subsection{Characteristic Impedance and Propagation Constant measurement}
-Here we would like to measure the characteristic impedance and the propagation constant which are the secondary constants. Normally for calculations of transmission lines, we generally do not estimate the primary constants rather we estimate the secondary constants. Assuming there is a setup which can measure an unknown impedance at an unknown frequency. Then we can measure the characteristic impedance of a moderately lossy line or a low loss line. This measurement can be done by conducting a short circuit and open circuit test of a section of a transmission line. Consider the length of the transmission line, $l$, one end of the transmission line is connected to the impedance measurement setup as shown in figure~\ref{fig:impmeasurement}.
+Here we would like to measure the characteristic impedance and the propagation constant which are the secondary constants. Normally for calculations of transmission lines, we do not estimate the primary constants rather we estimate the secondary constants. Assuming there is a setup which can measure an unknown impedance at an unknown frequency. Then we can measure the characteristic impedance of a moderately lossy line or a low loss line. This measurement can be done by conducting a short circuit and open circuit test of a section of a transmission line. Consider the length of the transmission line, $l$, one end of the transmission line is connected to the impedance measurement setup as shown in Figure~\ref{fig:impmeasurement}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{\pathtopartone/graphics/impedance_measurement}
@@ -112,7 +112,7 @@ Z_{oc} = Z_0 \tanh\gamma l\label{eqn:zoclossy}
 \end{align}
 So with $l$ known, we can measure these impedances. We can get the expression for the characteristic impedance and the propagation constant as follows;
 
-Multiplying equation~\eqref{eqn:zsclossy} and~\eqref{eqn:zoclossy}, gives
+Multiplying Equation~\eqref{eqn:zsclossy} and~\eqref{eqn:zoclossy}, gives
 \begin{dmath*}
 Z_{sc}Z_{oc}
 = Z_0\tanh\gamma l Z_0\coth\gamma l
@@ -123,7 +123,7 @@ Therefore,
 Z_0 = \sqrt{Z_{oc}\cdot Z_{sc}}
 \label{eqn:xteristicsimplossy2}
 \end{equation}
-Also dividing equation~\eqref{eqn:zsclossy} by~\eqref{eqn:zoclossy} gives
+Also dividing Equation~\eqref{eqn:zsclossy} by~\eqref{eqn:zoclossy} gives
 \begin{dmath*}
 \frac{Z_{sc}}{Z_{oc}} = \frac{\tanh\gamma l}{\coth\gamma l} 
 = \tanh^2\gamma l
@@ -154,7 +154,7 @@ e^{2\alpha l}e^{j2\beta l} \equiv \Re e^{j\theta}
 \begin{align}
 \alpha = \frac{1}{2l}\ln\left|\frac{1 + A}{1 - A}\right|
 \end{align}
-Hence attenuation constant can be calculated once $A$ is known, where $A = \sqrt{\frac{Z_{sc}}{Z_{oc}}}$. Next we find $\beta$ from equation~\eqref{eqn:generaleqnimp}.
+Hence attenuation constant can be calculated once $A$ is known, where $A = \sqrt{\frac{Z_{sc}}{Z_{oc}}}$. Next we find $\beta$ from Equation~\eqref{eqn:generaleqnimp}.
 \begin{align*}
 e^{j2\beta l} = e^{j\theta}
 \end{align*}
@@ -182,7 +182,7 @@ At $f_2$,
 \beta_2 = \frac{1}{2l}(\theta + 2(m + 1)\pi)
 \label{eqn:betaf2}
 \end{equation}
-Subtracting equation~\eqref{eqn:betaf1} from~\eqref{eqn:betaf2}
+Subtracting Equation~\eqref{eqn:betaf1} from~\eqref{eqn:betaf2}
 \begin{dmath*}
 \beta_2 - \beta_1 = \frac{(m + 1)\pi}{l} - \frac{m\pi}{l}
 = \frac{\pi}{l}
@@ -197,7 +197,7 @@ $\beta_2$ and $\beta_1$ are related to the velocity or wavelength of the transmi
 v = 2l(f_2-f_1)
 \label{eqn:velocitylossy}
 \end{align}
-But $\beta = \frac{2\pi f}{v}$, so substituting equation~\eqref{eqn:velocitylossy} gives:
+But $\beta = \frac{2\pi f}{v}$, so substituting Equation~\eqref{eqn:velocitylossy} gives:
 \begin{align*}
 \beta = \frac{2\pi f}{2l(f_2 - f_1)}
 \end{align*}
