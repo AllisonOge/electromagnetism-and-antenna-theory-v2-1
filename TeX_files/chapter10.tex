@@ -157,32 +157,30 @@ Assuming we wound the inductor as shown in Figure~\ref{fig:group10diagram3} at h
 \end{figure}
 
 \textbf{As the frequency increases, the inductor starts having capacitive reactance.} It shows for a typical wire-wound inductor, the resonance frequency lies for distributed capacitances and inductances in the range of 100\textemdash\;200MHz. It means if we wound an inductor, beyond about a few 100MHz, the inductor will not exhibit its ideal characteristics, but rather that of a capacitor because we have already crossed the resonance frequency. So the effect of capacitance is more dominant compared to the inductance.
-\begin{dmath}
+\begin{dmath*}
 \frac{1}{X_{eqn}} = \frac{1}{X_C} + \frac{1}{X_L}
 = j\omega C + \frac{1}{j\omega L}
 = \frac{(j\omega C)(j\omega L) + 1}{j\omega L}
-\end{dmath}
-\begin{dmath}	
-X_{eqn} = \frac{j\omega L}{(j\omega C)(j\omega L) + 1} \\
-\text{({As f tends to 0, (j\omega C)(j\omega L) becomes far smaller than 1})} \\
-{\approx} \frac{j\omega L}{0 + 1}\\
-{\approx} {j\omega L}            
-\end{dmath}
-\begin{dmath}	
-X_{eqn} = \frac{j\omega L}{(j\omega C)(j\omega L) + 1} \\
-\text{({As f tends away from 0, (j\omega C)(j\omega L) becomes far larger than 1})} \\
-{\approx} \frac{j\omega L}{(j\omega C)(j\omega L)}\\
-{\approx} \frac{1}{j\omega C}\\
-\end{dmath}
+= \frac{j\omega L}{(j\omega C)(j\omega L) + 1}\newline
+\text{As f tends to 0, $(j\omega C)(j\omega L)\ll 1$}
+\approx\frac{j\omega L}{0 + 1}
+\approx j\omega L       
+\end{dmath*}
+Alternatively, the equivalent reactance as frequency increases is as follows:
+\begin{dmath*}	
+X_{eqn} = \frac{j\omega L}{(j\omega C)(j\omega L) + 1}\newline
+\text{As f tends away from 0, $(j\omega C)(j\omega L)\gg 1$}
+\approx\frac{j\omega L}{(j\omega C)(j\omega L)}
+\approx\frac{1}{j\omega C}
+\end{dmath*}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{\pathtopartone/graphics/Capacitivebehaviorathighfrequency}
+\includegraphics[width=.9\linewidth]{\pathtopartone/graphics/Capacitivebehaviorathighfrequency}
 \caption{Graph showing the Variation of Inductive reactance with frequency}
 \label{fig:Capacitivebehaviorathighfrequency}
 \end{figure}
 
-Similarly, suppose we take a capacitor at a low frequency, it will exhibit its ideal characteristics. As the frequency increases, the connecting leads or wires which have inductance start to predominate beyond certain frequencies, and the capacitor no longer exhibits its ideal characteristics (see Figure~\ref{fig:lowthenhighfrequency}).
-
+Similarly, suppose we take a capacitor at a low frequency, it will exhibit its ideal characteristics. As the frequency increases, the connecting leads or wires that have inductance start to predominate beyond certain frequencies, and the capacitor no longer exhibits its ideal characteristics (see Figure~\ref{fig:lowthenhighfrequency}).
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{\pathtopartone/graphics/lowthenhighfrequency}
@@ -190,36 +188,35 @@ Similarly, suppose we take a capacitor at a low frequency, it will exhibit its i
 \label{fig:lowthenhighfrequency}
 \end{figure}
 
-
 Hence we can reliably design an inductor at low frequencies. But at high frequencies, its reliability is very poor because the inductor is no longer ideal. Similarly, for a capacitor at high frequencies, \textbf{the inductance at the leads starts to predominate and the capacitor no longer exhibits its ideal characteristics.} \textbf{So at high frequencies, realizing a reactive element is not that easy because we do not have a reliable circuit element which will guarantee its use as a capacitor or inductor.} When the frequency is increasing, the wavelength becomes smaller as we have seen earlier. 
 
 However, if you consider a short or open circuit transmission line, the input impedance of these lines would behave like a reactance.
-
-\begin{dmath}
-{X_{eqn}} = {X_C} + {X_L}
+\begin{dmath*}
+X_{eqn} = {X_C} + {X_L}
 =  \frac{1}{j\omega C} + j\omega L
 = \frac{(j\omega C)(j\omega L) + 1}{j\omega C}
-\end{dmath}
-\begin{dmath}	
-X_{eqn} = \frac{(j\omega C)(j\omega L) + 1}{j\omega C}
-\text{({As f tends to 0, (j\omega C)(j\omega L) tends to zero})} 
-{\approx} \frac{0 + 1}{j\omega C} 
-{\approx} \frac{1}{j\omega C}
-\end{dmath}
-\begin{dmath}
-X_{eqn} = \frac{(j\omega C)(j\omega L) + 1}{j\omega C}
-\text{({As f tends away from 0, (j\omega C)(j\omega L) becomes far larger than 1})}
-{\approx} \frac{(j\omega C)(j\omega L)}{j\omega C}
-{\approx} {j\omega L}
-\end{dmath}
+\end{dmath*}
+\begin{dmath*}	
+X_{eqn} = \frac{(j\omega C)(j\omega L) + 1}{j\omega C}\newline
+\text{As f tends to 0, $(j\omega C)(j\omega L)$ tends to zero} 
+\approx\frac{0 + 1}{j\omega C}
+\approx\frac{1}{j\omega C}
+\end{dmath*}
+Alternatively, as the frequency increases, the equivalent reactance is calculated as follows:
+\begin{dmath*}
+X_{eqn} = \frac{(j\omega C)(j\omega L) + 1}{j\omega C}\newline
+\text{As f tends away from 0, $(j\omega C)(j\omega L) \ll 1$}
+\approx\frac{(j\omega C)(j\omega L)}{j\omega C}
+\approx j\omega L
+\end{dmath*}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.3]{\pathtopartone/graphics/capacitorVariation}
+\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/capacitorVariation}
 \caption{Graph showing the Variation of Capacitive reactance with frequency}
 \label{fig:capacitorVariation}
 \end{figure}
 
-So as the frequency increases and the wavelength gets smaller, the size of a section (a small lineal element) of a transmission line which can give you impedance will be reactive; this becomes more physically realizable. Two things have become clear when working with transmission
+So as the frequency increases and the wavelength gets smaller, the size of a section (a small lineal element) of a transmission line that can give you impedance will be reactive; this becomes more physically realizable. Two things have become clear when working with transmission
 lines and they are;
 \begin{enumerate}[(i)]
 \item The lumped circuits are becoming more difficult to realize at high frequencies.
@@ -238,7 +235,7 @@ The outermost circle has $r = 0$ and it implies that as we move along that circl
 Hence for an open or short circuit load, by using different lengths of transmission line, we can get different reactance at the input. Therefore, \emph{what should be the length of the transmission line, so that one gets a particular value of reactance at the input?}
 
 \subsubsection{Analytical approach of using transmission line as a circuit element}
-Analytically, $l$ is the distance towards the generator and recall that for a lossless transmission line which we assume unless stated otherwise.
+Analytically, $l$ is the distance towards the generator, and recall that for a lossless transmission line which we assume unless stated otherwise.
 
 Considering a short circuit load at the end of a transmission line, then using the impedance transformation relation,
 \begin{dmath}
@@ -292,7 +289,7 @@ The steps taken on the Smith chart as outlined as follows:
 Figure~\ref{fig:group10diagram7} shows the distances between the normalized impedance $\bar{Z}_{in}$ and the short circuit end and open circuit end respectively for an inductive reactance. Essentially we move away from the generator to reach the short circuit point, that we move from the point, \textbf{A}, till we reach, \textbf{B}. On the Smith Chart, clockwise movement is towards the generator and anticlockwise movement is away from the generator.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{\pathtopartone/graphics/group10diagram7}
+\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/group10diagram7}
 \caption{$ l_{SC} $ and $ l_{OC} $ for inductive reactance on the Smith Chart.}
 \label{fig:group10diagram7}
 \end{figure}
@@ -300,12 +297,12 @@ Figure~\ref{fig:group10diagram7} shows the distances between the normalized impe
 Similarly, to realize a capacitive reactance which will be located at the bottom half of the Smith chart for a start. Moving clockwise from short circuit point by no more than $\frac{\lambda}{4}$ we have inductive reactance, but beyond that point from $\frac{\lambda}{4}$ to $\frac{\lambda}{2}$ we have capacitive reactance (see Figure~\ref{fig:group10diagram9}).
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{\pathtopartone/graphics/group10diagram8}
+\includegraphics[width=0.9\linewidth]{\pathtopartone/graphics/group10diagram8}
 \caption{$ l_{SC} $ and $ l_{OC} $ for capacitive reactance on the Smith Chart}
 \label{fig:group10diagram9}
 \end{figure}
 
-Hence if the length lies within 0 and $ \frac{\lambda}{4} $ for a short-circuited line, we have inductive reactance while if the length lies from $ \frac{\lambda}{4} $ to $ \frac{\lambda}{2} $ we have capacitive reactance. Similarly for an open circuit line, if the length lies within 0 to $ \frac{\lambda}{4} $, we have capacitive reactance and if it lies within $ \frac{\lambda}{4} $ to $ \frac{\lambda}{2} $ we have inductive reactance. It can be written explicitly in the Figure~\ref{fig:group10diagram10}:
+Hence if the length lies within 0 and $ \frac{\lambda}{4} $ for a short-circuited line, we have inductive reactance while if the length lies from $ \frac{\lambda}{4} $ to $ \frac{\lambda}{2} $ we have capacitive reactance. Similarly for an open circuit line, if the length lies within 0 to $ \frac{\lambda}{4} $, we have capacitive reactance, and if it lies within $ \frac{\lambda}{4} $ to $ \frac{\lambda}{2} $ we have inductive reactance. It can be written explicitly in the Figure~\ref{fig:group10diagram10}:
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{\pathtopartone/graphics/group10diagram9}
@@ -351,12 +348,12 @@ It consists of an inductor and capacitor connected together. It is used for gene
 
 For a short circuit whose length is $ \frac{\lambda}{2} $, the impedance is equal to zero since the impedance repeats every $\frac{\lambda}{2}$. At $ \frac{\lambda}{4} $ the line will be an open circuit and the impedance will be $\infty$. When the frequency is such that the length is zero (0) or $ \frac{\lambda}{2} $ or $ \lambda $ we get zero impedance (see Figure~\ref{fig:group10diagram11}). However, if we go to the frequency for which the length is $ \frac{\lambda}{4} $, the impedance seen between the terminals of the lines is $\infty$ since it will appear like an open circuit.
 
-So for a given frequency as we change the line length, when the line length is $ 0, \frac{\lambda}{2}, \lambda $ we see impedances at X, Y and Z. At frequency for which the length is $ \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4} $ we see impedance at A, B and C\footnote{
+So for a given frequency as we change the line length, when the line length is $ 0, \frac{\lambda}{2}, \lambda $ we see impedances at X, Y, and Z. At frequency for which the length is $ \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4} $ we see impedance at A, B, and C\footnote{
 We are dealing with a short circuit for this analysis
-}. Starting from the short circuit (SC) point on the Smith chart $ \frac{\lambda}{4} $, $ \frac{3\lambda}{4} $, $ \frac{5\lambda}{4} $ movement will correspond to an open circuit or $ \infty $ impedance, hence A, B and C on the graph. Also, $ \frac{\lambda}{2} $, $ \lambda $, $ \frac{3\lambda}{2} $ will correspond to an SC point, which is the point we started from\footnote{
+}. Starting from the short circuit (SC) point on the Smith chart $ \frac{\lambda}{4} $, $ \frac{3\lambda}{4} $, $ \frac{5\lambda}{4} $ movement will correspond to an open circuit or $ \infty $ impedance, hence A, B, and C on the graph. Also, $ \frac{\lambda}{2} $, $ \lambda $, $ \frac{3\lambda}{2} $ will correspond to an SC point, which is the point we started from\footnote{
 Recall that a complete $ 2\pi $ movement correspond to $ \frac{\lambda}{2} $ on the Smith Chart
-}. Hence in the frequency range close to X, Y and Z, we have characteristics similar to that of a series LC circuit
-at resonance (see Figure~\ref{fig:group10diagram12}). However, in the vicinity of A, B and C the behaviour is similar to that of a parallel LC circuit at resonance (see Figure~\ref{fig:group10diagram13}). 
+}. Hence in the frequency range close to X, Y, and Z, we have characteristics similar to that of a series LC circuit
+at resonance (see Figure~\ref{fig:group10diagram12}). However, in the vicinity of A, B, and C the behaviour is similar to that of a parallel LC circuit at resonance (see Figure~\ref{fig:group10diagram13}). 
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{\pathtopartone/graphics/group10diagram11}
@@ -384,11 +381,11 @@ So a transmission line can behave like a series resonance circuit of a series LC
 
 For an open circuit whose length is $ \frac{\lambda}{2} $, the impedance is equal to infinity. At $ \frac{\lambda}{4} $ the line will be a short circuit and the impedance will be equal to zero. One side of that frequency will be capacitive that is, negative. So when the frequency is such that the length is zero (0) or $ \frac{\lambda}{2} $ or $ \lambda$ we get an impedance equal to infinity.
 % \begin{figure}[h]
-%	 \centering
-%	 \includegraphics[width=0.8\linewidth]{\pathtopartone/graphics/group10diagram13}
-%	 \caption{}
-%	 \label{fig:group10diagram15}
-%\end{figure}
+% \centering
+% \includegraphics[width=0.8\linewidth]{\pathtopartone/\pathtopartone/graphics/group10diagram13}
+% \caption{}
+% \label{fig:group10diagram15}
+% \end{figure}
 \begin{figure}[h]
 \centering
 \includegraphics[width=.8\linewidth]{\pathtopartone/graphics/group10diagram14}
@@ -397,7 +394,7 @@ For an open circuit whose length is $ \frac{\lambda}{2} $, the impedance is equa
 \end{figure}
 
 However, if we go to the frequency for which the length is $ \frac{\lambda}{4} $, the impedance seen between the terminals of the lines is zero. So for a given frequency as we change the line length, when the line
-length is $0, \frac{\lambda}{2}, \lambda $ we see impedances at A, B and C as shown in Figure~\ref{fig:group10diagram15}. At frequency for which the length is $ \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4}$ we are at X, Y and Z.
+length is $0, \frac{\lambda}{2}, \lambda $ we see impedances at A, B, and C as shown in Figure~\ref{fig:group10diagram15}. At frequency for which the length is $ \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4}$ we are at X, Y and Z.
 
 For an open circuit line for length around $\frac{\lambda}{2} $, the line will behave like a parallel resonant circuit because the input impedance will be at infinity. At about $ \frac{\lambda}{4} $, the line is like a short circuit and behaves like a series resonant circuit. If the length of the line is $ \frac{\lambda}{2} $ the line will behave like a parallel resonant circuit.
 So depending on whether a short circuit line or open circuit line is used, the series or parallel resonance circuit can be realized at different frequencies. So invariably, at high frequencies, the transmission line can be used for realizing circuit elements and series or parallel resonance circuits.
