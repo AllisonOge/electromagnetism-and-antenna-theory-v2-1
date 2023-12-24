@@ -235,7 +235,7 @@ E_T = \frac{-20cos\omega t}{4\pi\epsilon_o r^2}\hat{z}.\frac{1}{2} = \frac{-10co
 \end{align*}
 Now we know the total electric field, we can apply Maxwell's equation and find out the magnetic field due to the charges.
 \begin{align*}
-\bar{H} = \frac{-1}{\jmath\omega\mu_o}\nabla\times\bar{E}(differential form)
+\bar{H} = \frac{-1}{j\omega\mu_o}\nabla\times\bar{E}(differential form)
 \end{align*}
 and,
 \begin{align*}
@@ -245,18 +245,18 @@ or,
 \begin{align*}
 \bar{H} = \frac{-1}{\mu_o}\int(\nabla\times\bar{E})dt(integral form)
 \end{align*}
-Recall, $ e^{\jmath\omega t} = cos\omega t + \jmath sin\omega t $
+Recall, $ e^{j\omega t} = cos\omega t + j sin\omega t $
 \begin{align*}
-\bar{E} = \frac{-10}{4\pi\epsilon_o r^2}Re(e^{\jmath\omega t})
+\bar{E} = \frac{-10}{4\pi\epsilon_o r^2}Re(e^{j\omega t})
 \end{align*}
 \begin{align*}
 \bar{H} &= \frac{-1}{\mu_o}\int(\nabla\times\bar{E})dt = \frac{-1}{\mu_o}Re\nabla\times\int\bar{E}dt\\
-&= \frac{-1}{\mu_o}Re\nabla\times\int\frac{-10}{4\pi\epsilon_o r^2}e^{\jmath\omega t}dt\hat{z}
+&= \frac{-1}{\mu_o}Re\nabla\times\int\frac{-10}{4\pi\epsilon_o r^2}e^{j\omega t}dt\hat{z}
 \end{align*}
 \begin{dmath*}
-\bar{H} = \frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{\jmath\omega}Ke^{\jmath\omega t} \right]\hat{z}\quad with\quad K =\frac{-10}{4\pi\epsilon_o r^2}
-=\frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{\jmath\omega}(kcos\omega t + \jmath Ksin\omega t)\hat{z} \right]
-= \frac{-1}{\mu_o}\nabla\times Re\left(\frac{kcos\omega t}{\jmath\omega} + \frac{ksin\omega t}{\omega} \right)\hat{z}
+\bar{H} = \frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{j\omega}Ke^{j\omega t} \right]\hat{z}\quad with\quad K =\frac{-10}{4\pi\epsilon_o r^2}
+=\frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{j\omega}(kcos\omega t + j Ksin\omega t)\hat{z} \right]
+= \frac{-1}{\mu_o}\nabla\times Re\left(\frac{kcos\omega t}{j\omega} + \frac{ksin\omega t}{\omega} \right)\hat{z}
 = \frac{-1}{\mu_o} \nabla\times\left(\frac{ksin\omega t}{\omega} \right)\hat{z}
 = \frac{-1}{\mu_o\omega}\nabla\times\left(\frac{-10sin\omega t}{4\pi\epsilon_o r^2} \hat{z}\right)=\frac{-1}{\mu_o\omega}\begin{vmatrix}
 \hat{x} &\hat{y} &\hat{z}\\
