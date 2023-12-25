@@ -1,6 +1,12 @@
 \chapter{Boundary conditions}\label{lec:lec20}
+\textbf{OBJECTIVES}
+\begin{itemize}
+\item Using integral form of Maxwell's equation to establish the relationship between these parameters.
+\item To show the boundary across a dielectric - dielectric interface.
+\item To show the boundary condition across a dielectric - conductor interface.
+\end{itemize}
 
-At this point, we have quantities like charge density $\rho$\footnote[1]{$\rho$ is Rho, the 17th letter of the Greek alphabet}, volume density, conduction current density $\bar{J}$, displacement current density $\frac{\partial \bar{D}}{\partial t}$, surface charge density $\rho_s$ and then surface current density. So we can say these are the sources which are related to the fields (the electric and magnetic fields). In general, we can establish a relationship between these quantities which we can call the sources of the fields, and these relationships are called boundary conditions.
+As at this point, we have quantities like charge density $\rho$\footnote[1]{$\rho$ is Rho, the 17th letter of the Greek alphabet}, volume charge density, conduction current density $\bar{J}$, displacement current density $\frac{\partial \bar{D}}{\partial t}$, surface charge density $\rho_s$ and then surface current density. So we can say these are the sources which are related to the fields (the electric and magnetic fields). So in general, we can establish a relationship between these quantities which we can call the sources of the fields, and these relationships are called boundary conditions.
 
 \section{Boundary Conditions}
 
@@ -16,7 +22,7 @@ Let us say we have a media interface and the two sides have different material p
 \caption{A box in the boundary of two media.}
 \end{figure}
 
-According to Gauss's law, the total displacement coming out of the box is equal to the charges enclosed. If we make the thickness of the box shrink to zero. We will get a relationship between the displacement vector going in all directions as $d$ shrinks.  Let's say in medium 1 we have $D_{n1}$ and $D_{t1}$ as the normal and tangential components of the displacement vectors in medium 1 with respect to the surface of the box (Pillbox is the usual name). We have the figure below.
+According to Gauss's law, the total displacement coming out of the box is equal to the charges enclosed. If we make the thickness of the box shrink to zero. We will get a relationship between the displacement vector m both sides. The arrows show the displacement vector going in all directions as $d$ shrink.  Let's say in medium 1 we have $D_{n1}$ and $D_{t1}$ as the normal and tangential components of the displacement vectors in medium 1 with respect to the surface of the box (\textbf { Pillbox} is the usual name). We have the figure below.
 \begin{figure}[h]
 \centering
 \includegraphics[width=.7\linewidth]{\pathtopartone/graphics/diemedium2}
@@ -222,14 +228,14 @@ E_B &= \frac{-10cos\omega t}{4\pi\epsilon_o r^2}
 $E_A$ and $E_B$ are the same in magnitude and are resolved into $E_T$
 \begin{align*}
 E_T &= E_Asin\theta - E_Bsin\theta = \frac{20cos\omega t}{4\pi\epsilon_o r^2}sin\theta \\
-since \hspace{0.05in} \theta &= \frac{5}{10} = \frac{1}{2}, \quad \theta = \angle {30} \ or \ \frac{\pi}{6}
+sin \hspace{0.05in} \theta &= \frac{5}{10} = \frac{1}{2}, \quad \theta = \angle {30} \ or \ \frac{\pi}{6}
 \end{align*}
 \begin{align*}
 E_T = \frac{-20cos\omega t}{4\pi\epsilon_o r^2}\hat{z}.\frac{1}{2} = \frac{-10cos\omega t}{4\pi\epsilon_o r^2}\hat{z}
 \end{align*}
 Now we know the total electric field, we can apply Maxwell's equation and find out the magnetic field due to the charges.
 \begin{align*}
-\bar{H} = \frac{-1}{\jmath\omega\mu_o}\nabla\times\bar{E}
+\bar{H} = \frac{-1}{j\omega\mu_o}\nabla\times\bar{E}(differential form)
 \end{align*}
 and,
 \begin{align*}
@@ -237,20 +243,20 @@ and,
 \end{align*}
 or,
 \begin{align*}
-\bar{H} = \frac{-1}{\mu_o}\int(\nabla\times\bar{E})dt
+\bar{H} = \frac{-1}{\mu_o}\int(\nabla\times\bar{E})dt(integral form)
 \end{align*}
-Recall, $ e^{\jmath\omega t} = cos\omega t + \jmath sin\omega t $
+Recall, $ e^{j\omega t} = cos\omega t + j sin\omega t $
 \begin{align*}
-\bar{E} = \frac{-10}{4\pi\epsilon_o r^2}Re(e^{\jmath\omega t})
+\bar{E} = \frac{-10}{4\pi\epsilon_o r^2}Re(e^{j\omega t})
 \end{align*}
 \begin{align*}
 \bar{H} &= \frac{-1}{\mu_o}\int(\nabla\times\bar{E})dt = \frac{-1}{\mu_o}Re\nabla\times\int\bar{E}dt\\
-&= \frac{-1}{\mu_o}Re\nabla\times\int\frac{-10}{4\pi\epsilon_o r^2}e^{\jmath\omega t}dt\hat{z}
+&= \frac{-1}{\mu_o}Re\nabla\times\int\frac{-10}{4\pi\epsilon_o r^2}e^{j\omega t}dt\hat{z}
 \end{align*}
 \begin{dmath*}
-\bar{H} = \frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{\jmath\omega}Ke^{\jmath\omega t} \right]\hat{z}\quad with\quad K =\frac{-10}{4\pi\epsilon_o r^2}
-=\frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{\jmath\omega}(kcos\omega t + \jmath Ksin\omega t)\hat{z} \right]
-= \frac{-1}{\mu_o}\nabla\times Re\left(\frac{kcos\omega t}{\jmath\omega} + \frac{ksin\omega t}{\omega} \right)\hat{z}
+\bar{H} = \frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{j\omega}Ke^{j\omega t} \right]\hat{z}\quad with\quad K =\frac{-10}{4\pi\epsilon_o r^2}
+=\frac{-1}{\mu_o}\nabla\times Re\left[\frac{1}{j\omega}(kcos\omega t + j Ksin\omega t)\hat{z} \right]
+= \frac{-1}{\mu_o}\nabla\times Re\left(\frac{kcos\omega t}{j\omega} + \frac{ksin\omega t}{\omega} \right)\hat{z}
 = \frac{-1}{\mu_o} \nabla\times\left(\frac{ksin\omega t}{\omega} \right)\hat{z}
 = \frac{-1}{\mu_o\omega}\nabla\times\left(\frac{-10sin\omega t}{4\pi\epsilon_o r^2} \hat{z}\right)=\frac{-1}{\mu_o\omega}\begin{vmatrix}
 \hat{x} &\hat{y} &\hat{z}\\
@@ -280,7 +286,7 @@ so
 \begin{align*}
 \bar{H} &=  \frac{100\sqrt{3}sin\omega t}{40000\pi\epsilon_o\mu_o\omega}\hat{y}\\
 &= \frac{3sin\omega t}{400\sqrt{3}\pi\epsilon_o\mu_o\omega}\hat{y} \\
-&= \frac{3\sqrt{3}sin\omega t}{1200\pi\epsilon_o\mu_o\omega}\hat{y}
+&= \frac{3\sqrt{3}sin\omega t}{1200\pi\epsilon_o\mu_o\omega}\hat{y}  A/m
 \end{align*}
 \end{exmp}
 
@@ -290,7 +296,7 @@ Let us consider a problem based on the boundary conditions. The boundary conditi
 \begin{exmp}
 A medium has infinite conductivity for $Z<0$, and $E_r=5$, $\mu_r = 20$, $\sigma = 0$ for $Z>0$. If the electric field for $Z>0$ is given by 
 \begin{align*}
-\bar{E} = 10cos(3\times 10^8t - 10x)\hat{z}
+\bar{E} = 10cos(3\times 10^8t - 10x)\hat{z}  V/m
 \end{align*}
 Find the surface charge density and the surface current density at the location (2,3,0) at the time $t = 0.5nsec$.\\
 \subsubsection*{Solution}
@@ -355,3 +361,17 @@ Here's what we did. From the knowledge of the electric field, we found out the m
 
 For time-varying cases, one can specify either the electric field or the magnetic field near the conducting boundary or dielectric boundary and then by applying the same physical laws in the integral form and applying boundary conditions, we can get the quantities on the surface.
 
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt, hidealllines=true]
+\section*{Exercises}
+\begin{ExerciseList}
+\Exercise[label={ex201}] What is Boundary Condition?
+\Exercise[label={ex202}] State the difference between the differential form and the integral form of Maxwell's equation as it applies to boundary Conditions.
+\Exercise[label={ex203}] The integral form of Maxwell's equation is used for modelling discontinuous boundaries. True/False
+\Exercise[label={ex204}] For a dielectric-dielectric interface, state the four(4) boundary conditions.
+\Exercise[label={ex205}] For the question stated above, what are the necessary conditions for the equations to hold.
+\Exercise[label={ex206}]
+Using Maxwell's first equation, show that $Dn_1 - Dn_2 = \rho$ for a discontinuous boundary.
+
+\Exercise[label={ex207}] Using Maxwell's third equation(Ampere's Law), show that Et1 = Et2 for a discontinuous boundary.
+\end{ExerciseList}
+\end{mdframed}

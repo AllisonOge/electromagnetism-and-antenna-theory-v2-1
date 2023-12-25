@@ -1,5 +1,14 @@
 \chapter{Uniform Plane Wave in an arbitrary direction}\label{lec:lec29}
 
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt,  hidealllines=true]
+\section{Objectives}
+\begin{enumerate}[(i)]
+\item To understand how waves behave when they propagate in different directions and interact with different materials or obstacles.
+\item To understand analytical solutions in wave equation facilitating a deeper understanding of wave phenomena.
+\item To provide insights and solutions across various scientific and engineering disciplines in studying wave behavior over large distances.
+\end{enumerate}
+\end{mdframed}
+\section{}
 Prior to now, our discussion on plane wave propagation has been in an unbound medium, orienting our coordinate system such that the wave propagated was in the direction of one of the axes (the z-axis). This was done because an unbound medium is symmetric in all directions, regardless of the direction looked from, the medium appears the same.
 However, in a bound medium, the choice of the coordinate axis might affect the analysis algebraically.
 Essentially we select a coordinate system that will enable our analysis to be simple, doing this restricts the choice of coordinate axes. First, we would investigate the propagation of electromagnetic waves in a semi-finite medium (i.e. half of an unbound medium), then move on to a bound medium. However, before this analysis, we require a representation of electromagnetic waves travelling in an arbitrary direction with respect to the coordinate axis.
@@ -202,7 +211,7 @@ $v_{px}$, $v_{py}$, $v_{pz}$ $\geq$ $v_0$
 also when $\cos\phi_{x}$, $\cos\phi_{y}$, or $\cos\phi_{z}$ = 0, $v_p$ = $\infty$
 therefore, $\infty$ $\geq$ $v_{px}$, $v_{py}$, $v_{pz}$ $\geq$ $v_0$
 \end{center}
-Since we are talking about velocities greater than the intrinsic velocities, we know light is an electromagnetic wave. And we know the intrinsic velocity of light will be the velocity of light $C$ i.e. $v_0 = C$.
+Since we are talking about velocities greater than the intrinsic velocities, we know light is an \index{electromagnetic wave}electromagnetic wave. And we know the intrinsic velocity of light will be the velocity of light $C$ i.e. $v_0 = C$.
 But from physics, we know that the velocity of any system cannot be greater than the velocity of light.
 Does that mean we have found a mechanism that can transfer energy faster than the speed of light?
 No. This is because this velocity is not the velocity of any energy packet or physical point in space because the wave defines its velocity which is based on the phase fronts. This essentially gives the condition that $v_p$ $<$ $v_0$.
@@ -211,7 +220,7 @@ Re-examining it:
 \begin{figure}[h]
 \centering
 \includegraphics[width=.7\linewidth]{\pathtopartone/graphics/phase_velocity_of_wave}
-\caption{}
+\caption{Wave Propagation in the XZ plane}
 \label{fig:wave_with_constant_wave_fonts_in_xy_plane}
 \end{figure}
 
@@ -236,7 +245,6 @@ $v_{gz}$ = $v_0\cos\phi_{z}$
 \end{center}
 So since $\cos\phi_{z} < 1$, $v_g$(which is the velocity of a particular point)$\leq v_0$
 
-
 Group velocity in the following:
 \begin{enumerate}[(i)]
 \item x-direction:	$v_{gx}$ = $v_0\cos\phi_{x}$
@@ -251,7 +259,7 @@ So we have a kind of dividing line:
 \begin{figure}[h]
 \centering
 \includegraphics[width=.8\linewidth]{\pathtopartone/graphics/img3}
-\caption{}
+\caption{Group Velocity and Phase Velocity Domain Diagram}
 \end{figure}
 
 Only in a situation where the wave is travelling in the x,y,z direction or if we find the velocity of the wave both $v_p$ and $v_g$ in the direction of wave motion then both $v_p$ and $v_p$ will be $v_{0}^2$.
@@ -280,3 +288,23 @@ Wavelength in the following:
 = \frac{\lambda_0}{\cos\phi_{z}}
 \end{dmath*}
 \end{enumerate}
+
+\begin{mdframed}[backgroundcolor=lightblue, linewidth=1pt,  hidealllines=true]
+\section{Exercises}
+\begin{ExerciseList}
+\Exercise[label={ex291}] How does wave polarization impact the behavior of a uniform plane wave in transmission and reception?
+\Exercise[label={ex292}] A uniform plane wave exhibiting a reference polarization of z propagates away from the z-axis. Develop representations of this wave in ray-fixed and global cartesian coordinates?
+\Exercise[label={ex293}] Compare and contrast phase velocity and group velocity in the context of uniform plane waves?
+\Exercise[label={ex294}] Discuss the factors affecting the propagation of a uniform plane wave in different mediums?
+Consider a 30MHz uniform wave propagating in free space and given by the \textbf{E} field vector;
+$E = 5(a x + \sqrt{3} a y) \cos\left[6\pi \times 10^7 t - 0.05\pi(3x - \sqrt{3}y + 2z)\right]$
+\begin{enumerate}[(a)]
+\item Calculate for the phase constant 
+% \item  Find the wavelength in x-direction, y-direction and z-direction \Answer{13.33m, 23.10m, 20m}
+\item Find the phase velocity in the x-direction, y-direction and in the z-direction.
+\end{enumerate}
+\Answer[ref={ex294}]
+$4\times10^8 m/s,  6.93\times10^8 m/s,  6\times10^8 m/s.$
+\Exercise[label={ex295}] How does the propagation of a uniform plane wave differ when it travels in different directions?
+\end{ExerciseList}
+\end{mdframed}

@@ -1,25 +1,57 @@
-\documentclass[a4paper,10pt, two column]{book}
-% custom define a new command named "Comb" that takes two arguments and typesets a binomial coefficient.
+\documentclass[a4paper,10pt, twocolumn]{book}
+
+% Basic document formatting
+\usepackage[top=2.5cm,left=3.5cm,right=2.5cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times font
+
+% Mathematical typesetting
 \usepackage[fleqn]{amsmath}
 \newcommand*{\Comb}[2]{{}^{#1}C_{#2}}
-
-\usepackage[margin=1.5cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 \usepackage{amsfonts}
-\usepackage{diagbox}
 \usepackage{amssymb}
+\usepackage{physics}
+\usepackage{breqn}
+
+% Graphics and Figures
+\usepackage{graphicx}
+\usepackage{float}
+
+% Table-related packages
+\usepackage{diagbox}
+\usepackage{caption}
+
+% Symbols and Special characters
 \usepackage{wasysym}
 \usepackage{textcomp}
+
+% Font and styling
 \usepackage{times}
-\usepackage{physics}
-\usepackage{float}
-\usepackage{color}
-\usepackage{hyperref}
-\usepackage{xcolor}
 \usepackage{sectsty}
-\usepackage{breqn}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[Bjornstrup]{fncychap} % Chapter heading styles
+
+% Colors
+\usepackage{xcolor}
+\definecolor{lightblue}{RGB}{173,216,230}
+
+% Hyperlinks
+\usepackage{hyperref}
+
+% Page layout and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Code listings and file paths
+\usepackage{mdframed}
 \usepackage{currfile-abspath}
+
+% TikZ for drawings and diagrams
+\usepackage{tikz}
+
+
 \getpwd
 % get the absolute path to the directory containing this file
 \makeatletter
@@ -38,10 +70,11 @@
 \usepackage{imakeidx}
 \makeindex
 
+
 \begin{document}
 
 \author{Nosa Bello}
-\title{ELECTROMAGNETIC WAVES AND ANTENNA THEORY}
+\title{\color{blue}ELECTROMAGNETIC WAVES AND ANTENNA THEORY}
 \date{\today}
 
 \frontmatter
@@ -49,7 +82,7 @@
 \tableofcontents
 
 \chapter{Preface}
-Electromagnetism and Antenna Theory is a book developed out of dedication and passion for comprehensive and curated concepts in transmission lines, wave equations and the foundations of antenna theory. The book is a compilation and review of lectures for the courses \textit{Telecommunication Principle I} and \textit{Microwave Engineering} taught by Dr. Nosa Bello at the University of Benin, Nigeria. The book is a work in progress and will be updated as the course progresses. The book is divided into two parts. Part one covers transmission lines and the wave equation while part two covers waveguides and antenna theory. The book is written in \LaTeX\ and the source code is available on \href{https://github.com/allisonoge/electromagnetism-and-antenna-theory-v2.git}{GitHub}.
+Electromagnetics Waves and Antenna Theory is a book developed out of dedication and passion for comprehensive and curated concepts in transmission lines, wave equations, and the foundations of antenna theory. The book is a compilation and review of lectures for the courses \textit{Telecommunication Principle I} and \textit{Microwave Engineering} taught by Dr. Nosa Bello at the University of Benin, Nigeria. The book is a work in progress and will be updated as the course progresses. The book is divided into two parts. Part one covers transmission lines and the wave equation while part two covers waveguides and antenna theory. The book is written in \LaTeX\ and the source code is available on \href{https://github.com/allisonoge/electromagnetism-and-antenna-theory-v2.git}{GitHub}.
 
 \mainmatter
 
@@ -99,7 +132,9 @@ Electromagnetism and Antenna Theory is a book developed out of dedication and pa
 % bibliography, glossary and index would go here.
 \printindex
 
-% answers to exercises
-\shipoutAnswer
+\appendix
 
+% answers to exercises
+\chapter*{Answers to Exercises}
+\shipoutAnswer
 \end{document}
